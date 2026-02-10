@@ -1,41 +1,65 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Offerings", href: "#offerings" },
-  { label: "Membership", href: "#membership" },
-  { label: "Events", href: "#events" },
-  { label: "Community", href: "#community" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/", isRoute: true },
+  { label: "About", href: "/about", isRoute: true },
+  { label: "Offerings", href: "/#offerings", isRoute: false },
+  { label: "Membership", href: "/#membership", isRoute: false },
+  { label: "Events", href: "/#events", isRoute: false },
+  { label: "Community", href: "/#community", isRoute: false },
+  { label: "Contact", href: "/#contact", isRoute: false },
 ];
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const renderNavLink = (link: typeof navLinks[0], className: string, onClick?: () => void) => {
+    if (link.isRoute) {
+      return (
+        <Link
+          key={link.label}
+          to={link.href}
+          onClick={onClick}
+          className={className}
+        >
+          {link.label}
+        </Link>
+      );
+    }
+    // For hash links on same page
+    const isHome = location.pathname === "/";
+    const href = isHome ? link.href.replace("/", "") : link.href;
+    return (
+      <a
+        key={link.label}
+        href={href}
+        onClick={onClick}
+        className={className}
+      >
+        {link.label}
+      </a>
+    );
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-b border-primary/20">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-3 md:px-8">
-        <a href="#hero" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
           <span className="font-display text-lg font-bold text-primary-foreground tracking-wide hidden sm:inline">
             Temple Mother Earth
           </span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden lg:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-body text-sm text-primary-foreground/70 hover:text-primary transition-colors duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            renderNavLink(link, "font-body text-sm text-primary-foreground/70 hover:text-primary transition-colors duration-200")
+          )}
           <a
             href="https://integration.templemotherearth.org/auth"
             target="_blank"
@@ -45,7 +69,7 @@ const Navigation = () => {
             Member Login
           </a>
           <a
-            href="#events"
+            href="/#events"
             className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
             Book a Ceremony
@@ -65,16 +89,13 @@ const Navigation = () => {
       {/* Mobile menu */}
       {open && (
         <div className="lg:hidden bg-foreground/98 backdrop-blur-md border-t border-primary/10 px-6 py-6 space-y-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            renderNavLink(
+              link,
+              "block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors",
+              () => setOpen(false)
+            )
+          )}
           <a
             href="https://integration.templemotherearth.org/auth"
             target="_blank"
@@ -85,7 +106,7 @@ const Navigation = () => {
             Member Login
           </a>
           <a
-            href="#events"
+            href="/#events"
             onClick={() => setOpen(false)}
             className="block mt-4 rounded-lg bg-primary px-5 py-3 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
