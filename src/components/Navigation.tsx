@@ -6,9 +6,9 @@ const navLinks = [
   { label: "Home", href: "#hero" },
   { label: "About", href: "#about" },
   { label: "Offerings", href: "#offerings" },
-  { label: "Experiences", href: "#experiences" },
-  { label: "Community", href: "#community" },
+  { label: "Membership", href: "#membership" },
   { label: "Events", href: "#events" },
+  { label: "Community", href: "#community" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -26,7 +26,7 @@ const Navigation = () => {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -36,6 +36,14 @@ const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://integration.templemotherearth.org/auth"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border border-primary-foreground/30 px-4 py-2 font-body text-sm text-primary-foreground transition hover:bg-primary-foreground/10"
+          >
+            Member Login
+          </a>
           <a
             href="#events"
             className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
@@ -67,6 +75,15 @@ const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://integration.templemotherearth.org/auth"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors"
+          >
+            Member Login
+          </a>
           <a
             href="#events"
             onClick={() => setOpen(false)}

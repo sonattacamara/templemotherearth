@@ -1,5 +1,6 @@
-import { motion, type Easing } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { motion, type Easing, AnimatePresence } from "framer-motion";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -19,16 +20,84 @@ const stagger = {
 };
 
 const Index = () => {
+  const [showDonation, setShowDonation] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+
+      {/* ───── DONATION POPUP ───── */}
+      <AnimatePresence>
+        {showDonation && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-foreground/60 backdrop-blur-sm px-4"
+            onClick={() => setShowDonation(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-md rounded-2xl border border-border bg-background p-8 shadow-2xl"
+            >
+              <button
+                onClick={() => setShowDonation(false)}
+                className="absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+              <div className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <HandHeart className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="font-display text-2xl font-bold text-foreground">Support Our Mission</h3>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible donation
+                  helps us continue providing sacred ceremonies, healing spaces, and community support.
+                </p>
+                <div className="mt-6 grid grid-cols-3 gap-3">
+                  {["$25", "$50", "$100"].map((amount) => (
+                    <a
+                      key={amount}
+                      href={`mailto:AskUs@TempleMotherEarth.org?subject=Donation%20-%20${amount}&body=I%20would%20like%20to%20donate%20${amount}%20to%20Temple%20Mother%20Earth.`}
+                      className="rounded-lg border border-border bg-card py-3 font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/5"
+                    >
+                      {amount}
+                    </a>
+                  ))}
+                </div>
+                <a
+                  href="mailto:AskUs@TempleMotherEarth.org?subject=Donation%20Inquiry"
+                  className="mt-4 block rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  Make a Custom Donation
+                </a>
+                <p className="mt-4 text-xs text-muted-foreground">
+                  All donations are tax-deductible. EIN available upon request.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ───── FLOATING DONATE BUTTON ───── */}
+      <button
+        onClick={() => setShowDonation(true)}
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
+      >
+        <HandHeart className="h-4 w-4" />
+        Donate
+      </button>
 
       {/* ───── HERO ───── */}
       <section
         id="hero"
         className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
       >
-        {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
@@ -76,7 +145,6 @@ const Index = () => {
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
         <motion.div
           className="absolute bottom-8 z-10"
           animate={{ y: [0, 10, 0] }}
@@ -217,6 +285,72 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── MEMBERSHIP ───── */}
+      <section id="membership" className="bg-card px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Join the Sacred Circle
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            Become a Member
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+            Membership in Temple Mother Earth is an invitation to walk a sacred path alongside a community
+            of seekers devoted to healing, growth, and spiritual awakening. As a member, you gain access
+            to exclusive ceremonies, integration tools, and our members-only community.
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-3">
+            <div className="rounded-2xl border border-border bg-background p-8 text-center">
+              <ShieldCheck className="mx-auto h-10 w-10 text-primary" />
+              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Sacred Access</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Exclusive access to Earth Medicine ceremonies, private gatherings, and members-only events in Washington, DC and beyond.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background p-8 text-center">
+              <Sparkles className="mx-auto h-10 w-10 text-primary" />
+              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Integration & Wellness</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Access our Integration & Wellness platform — your companion for expanded consciousness with AI guidance, daily rituals, and personalized plans.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background p-8 text-center">
+              <Heart className="mx-auto h-10 w-10 text-primary" />
+              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Community Circle</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Join a circle of sovereign beings walking the path together — peer support, shared wisdom, and lifelong connections.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://integration.templemotherearth.org/auth"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+            >
+              Sign Up for Membership
+            </a>
+            <a
+              href="https://integration.templemotherearth.org/auth?mode=signin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-border px-8 py-3.5 font-body text-sm font-semibold text-foreground transition hover:bg-accent"
+            >
+              Member Login
+            </a>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* ───── ARE YOU READY? (CTA) ───── */}
       <section id="community" className="relative overflow-hidden px-4 py-24 md:py-32">
         <div
@@ -279,7 +413,6 @@ const Index = () => {
             Reserve your space and step into the sacred.
           </motion.p>
 
-          {/* Eventbrite embed placeholder */}
           <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-background p-8 md:p-12">
             <p className="font-body text-muted-foreground">
               Events are managed through Eventbrite for secure booking.
@@ -327,8 +460,8 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground">Email</h3>
-                <a href="mailto:templemotherearth@gmail.com" className="mt-2 block text-primary hover:underline">
-                  templemotherearth@gmail.com
+                <a href="mailto:AskUs@TempleMotherEarth.org" className="mt-2 block text-primary hover:underline">
+                  AskUs@TempleMotherEarth.org
                 </a>
               </div>
               <div>
@@ -352,14 +485,24 @@ const Index = () => {
                   </a>
                 </div>
               </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-foreground">Members Portal</h3>
+                <a
+                  href="https://integration.templemotherearth.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-primary hover:underline"
+                >
+                  Integration & Wellness Platform →
+                </a>
+              </div>
             </div>
 
-            {/* Simple inquiry form */}
             <form
               className="space-y-4 rounded-2xl border border-border bg-card p-6"
               onSubmit={(e) => {
                 e.preventDefault();
-                window.open("mailto:templemotherearth@gmail.com", "_blank");
+                window.open("mailto:AskUs@TempleMotherEarth.org", "_blank");
               }}
             >
               <input
@@ -402,13 +545,22 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
               <a href="#about" className="hover:text-primary transition-colors">About</a>
               <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
+              <a href="#membership" className="hover:text-primary transition-colors">Membership</a>
               <a href="#events" className="hover:text-primary transition-colors">Events</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+              <a
+                href="https://integration.templemotherearth.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                Members Portal
+              </a>
             </div>
           </div>
           <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
             <p className="font-body text-xs text-primary-foreground/40">
-              © {new Date().getFullYear()} Temple Mother Earth. A faith-based organization recognized under IRC Sec. 508(c)(1)(A). All rights reserved.
+              © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
             </p>
           </div>
         </div>
