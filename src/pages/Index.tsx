@@ -1,92 +1,417 @@
+import { motion, type Easing } from "framer-motion";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight } from "lucide-react";
+import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
+import heroBg from "@/assets/hero-bg.jpg";
+import ceremonyImg from "@/assets/ceremony.jpg";
+import retreatImg from "@/assets/retreat.jpg";
+import communityImg from "@/assets/community.jpg";
+
+const ease: Easing = [0.25, 0.1, 0.25, 1];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.15 } },
+};
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-foreground via-foreground/95 to-foreground/85 px-4 text-center">
-        <img
-          src={logo}
-          alt="Temple Mother Earth logo"
-          className="mb-8 h-48 w-48 rounded-full object-cover shadow-2xl md:h-64 md:w-64"
+      <Navigation />
+
+      {/* ───── HERO ───── */}
+      <section
+        id="hero"
+        className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
+      >
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <h1 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl">
-          Temple Mother Earth
-        </h1>
-        <p className="mt-4 max-w-xl text-lg text-primary-foreground/70 md:text-xl">
-          A sacred sanctuary for healing, spiritual growth, and community rooted in the wisdom of Mother Earth.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="#about"
-            className="rounded-lg bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+        <div className="absolute inset-0 bg-foreground/70" />
+
+        <motion.div
+          className="relative z-10 max-w-3xl"
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+        >
+          <motion.img
+            variants={fadeUp}
+            src={logo}
+            alt="Temple Mother Earth"
+            className="mx-auto mb-8 h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-primary/30 md:h-44 md:w-44"
+          />
+          <motion.h1
+            variants={fadeUp}
+            className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
           >
-            Explore Our Mission
-          </a>
-          <a
-            href="#offerings"
-            className="rounded-lg border border-primary-foreground/30 px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
+            Temple Mother Earth
+          </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75 md:text-xl"
           >
-            Our Offerings
-          </a>
-        </div>
+            You have arrived. A sacred sanctuary where seekers unite to awaken, heal, and transform
+            through the divine wisdom of Earth Medicine and the God within.
+          </motion.p>
+          <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
+            <a
+              href="#offerings"
+              className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
+            >
+              Discover Your Path
+            </a>
+            <a
+              href="#events"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
+            >
+              Upcoming Ceremonies
+            </a>
+          </motion.div>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 z-10"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <ArrowRight className="h-6 w-6 rotate-90 text-primary-foreground/40" />
+        </motion.div>
       </section>
 
-      {/* About */}
-      <section id="about" className="px-4 py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-            Rooted in Earth. Guided by Spirit.
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            Temple Mother Earth is a spiritual sanctuary dedicated to ancestral healing, 
-            plant medicine ceremonies, yoga, meditation, and community wellness. We honor 
-            the sacred traditions of the Earth and create a space where all seekers can 
-            reconnect with their divine purpose.
-          </p>
-        </div>
+      {/* ───── ABOUT / SOVEREIGNTY ───── */}
+      <section id="about" className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-3xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            A Space for All Who Seek
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+            You Are a Sovereign Being
+          </motion.h2>
+          <motion.div variants={fadeUp} className="mx-auto mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              At Temple Mother Earth, we honor the God within you. You are not a man. You are not a woman.
+              You are not black or white. You are a sovereign being — a divine essence having a human experience.
+              We came here to have an experience, and this is your sacred invitation to live it fully.
+            </p>
+            <p>
+              We are an inclusive community where all are welcome. Through sacred practices, ancient wisdom,
+              and connection to Earth Medicine, we create a space for you to reconnect with your spiritual essence,
+              to heal, and to align with your highest self.
+            </p>
+          </motion.div>
+        </motion.div>
       </section>
 
-      {/* Offerings */}
-      <section id="offerings" className="bg-card px-4 py-24">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="mb-16 text-center font-display text-3xl font-bold text-card-foreground md:text-4xl">
+      {/* ───── OFFERINGS ───── */}
+      <section id="offerings" className="bg-card px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Sacred Offerings
-          </h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            What Awaits You
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+            From our Washington, DC sanctuary to sacred destinations across the globe, Temple Mother Earth
+            offers pathways for deep healing, connection, and transformation.
+          </motion.p>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
             {[
               {
-                title: "Healing Ceremonies",
-                desc: "Sacred plant medicine and ancestral healing rituals guided by experienced practitioners.",
+                icon: Flame,
+                title: "Earth Medicine Ceremonies",
+                desc: "Sacred rituals guided by experienced practitioners honoring Kambo, Hapé, and ancient Earth Medicine traditions. Held locally in Washington, DC.",
+                img: ceremonyImg,
               },
               {
-                title: "Yoga & Meditation",
-                desc: "Daily practices to align body, mind, and spirit in our dedicated temple space.",
+                icon: Globe,
+                title: "International Retreats",
+                desc: "Journey with us to breathtaking locations worldwide for immersive experiences that blend cultural richness with deep spiritual practice.",
+                img: retreatImg,
               },
               {
-                title: "Community Gatherings",
-                desc: "Workshops, drum circles, and seasonal celebrations honoring Earth's rhythms.",
+                icon: Users,
+                title: "Traveling Ceremonies",
+                desc: "We come to you. Invite Temple Mother Earth to hold personalized ceremonies in your community, tailored to your unique path and intentions.",
+                img: communityImg,
               },
             ].map((item) => (
-              <div
+              <motion.div
                 key={item.title}
-                className="rounded-xl border border-border bg-background p-8 text-center transition hover:shadow-lg"
+                variants={fadeUp}
+                className="group overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-all hover:shadow-xl"
               >
-                <h3 className="font-display text-xl font-semibold text-foreground">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-muted-foreground">{item.desc}</p>
-              </div>
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                  <item.icon className="absolute bottom-4 left-4 h-8 w-8 text-primary" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-foreground px-4 py-12 text-center text-primary-foreground/60">
-        <p className="font-body text-sm">
-          © {new Date().getFullYear()} Temple Mother Earth. All rights reserved.
-        </p>
+      {/* ───── WHAT YOU WILL EXPERIENCE ───── */}
+      <section className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            The Journey
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+            What You Will Experience
+          </motion.h2>
+
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Heart, title: "Healing & Transformation", desc: "Release old wounds, rediscover your inner power, and step into clarity and purpose." },
+              { icon: Users, title: "Connection & Belonging", desc: "Join a circle of kindred spirits who honor your journey and support your growth." },
+              { icon: Leaf, title: "Earth Medicine Alignment", desc: "Immerse in practices that harmonize body, mind, and spirit with the sacred rhythms of the Earth." },
+              { icon: Sun, title: "Spiritual Awakening", desc: "Reconnect with the God within and live in harmony with your soul's calling." },
+            ].map((item) => (
+              <motion.div key={item.title} variants={fadeUp} className="text-center">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <item.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="mt-5 font-display text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ───── ARE YOU READY? (CTA) ───── */}
+      <section id="community" className="relative overflow-hidden px-4 py-24 md:py-32">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${communityImg})` }}
+        />
+        <div className="absolute inset-0 bg-foreground/80" />
+
+        <motion.div
+          className="relative z-10 mx-auto max-w-3xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
+            Are You Ready to Answer the Call?
+          </motion.h2>
+          <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-xl space-y-4 text-lg text-primary-foreground/75">
+            <p>The Earth is calling you to remember who you are. To honor the divine within. To step into your highest purpose.</p>
+            <p>
+              Whether you are taking your first steps on the spiritual path or are deeply rooted in your practices,
+              Temple Mother Earth welcomes you with open arms and an open heart.
+            </p>
+          </motion.div>
+          <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
+            <a
+              href="#events"
+              className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+            >
+              Join a Ceremony
+            </a>
+            <a
+              href="#contact"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
+            >
+              Connect With Us
+            </a>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* ───── UPCOMING EVENTS (Eventbrite) ───── */}
+      <section id="events" className="bg-card px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Sacred Gatherings
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            Upcoming Ceremonies & Events
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
+            Explore our upcoming Earth Medicine ceremonies, community gatherings, and international retreats.
+            Reserve your space and step into the sacred.
+          </motion.p>
+
+          {/* Eventbrite embed placeholder */}
+          <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-background p-8 md:p-12">
+            <p className="font-body text-muted-foreground">
+              Events are managed through Eventbrite for secure booking.
+            </p>
+            <a
+              href="https://www.eventbrite.com/o/temple-mother-earth-83633883498"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+            >
+              View All Events on Eventbrite
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* ───── CONTACT ───── */}
+      <section id="contact" className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-4xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.div variants={fadeUp} className="text-center">
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              Reach Out
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+              Connect With Us
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
+              You don't have to walk this path alone. Reach out to learn more about our offerings
+              or discuss how we can bring the sacred into your life.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-2">
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-display text-lg font-semibold text-foreground">Visit Our Temple</h3>
+                <p className="mt-2 text-muted-foreground">2415 32nd St SE<br />Washington, DC</p>
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-foreground">Email</h3>
+                <a href="mailto:templemotherearth@gmail.com" className="mt-2 block text-primary hover:underline">
+                  templemotherearth@gmail.com
+                </a>
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-foreground">Follow Us</h3>
+                <div className="mt-2 flex gap-4">
+                  <a
+                    href="https://www.instagram.com/templemotherearth/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.facebook.com/TempleMotherEarth/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Facebook
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Simple inquiry form */}
+            <form
+              className="space-y-4 rounded-2xl border border-border bg-card p-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.open("mailto:templemotherearth@gmail.com", "_blank");
+              }}
+            >
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                required
+              />
+              <textarea
+                placeholder="How can we support your journey?"
+                rows={4}
+                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                required
+              />
+              <button
+                type="submit"
+                className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+              >
+                Send Message
+              </button>
+            </form>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* ───── FOOTER ───── */}
+      <footer className="bg-foreground px-4 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+            <div className="flex items-center gap-3">
+              <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
+              <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
+              <a href="#about" className="hover:text-primary transition-colors">About</a>
+              <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
+              <a href="#events" className="hover:text-primary transition-colors">Events</a>
+              <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
+            <p className="font-body text-xs text-primary-foreground/40">
+              © {new Date().getFullYear()} Temple Mother Earth. A faith-based organization recognized under IRC Sec. 508(c)(1)(A). All rights reserved.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
