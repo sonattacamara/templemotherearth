@@ -3,6 +3,7 @@ import { Check, Crown, Flame, Heart, Leaf, Shield, Sparkles, Star, Users } from 
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
+import ctaFooterImg from "@/assets/cta-footer.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -53,12 +54,11 @@ const tiers = [
     period: "/month",
     icon: Crown,
     highlight: true,
-    description: "Walk the sacred path with enhanced access, personal guidance, and meaningful retreat benefits.",
+    description: "Deepen your commitment with quarterly ceremony access, personal guidance, and priority community benefits.",
     benefits: [
       "Everything in Devotee",
-      "1 complimentary ceremony per month",
+      "1 Earth Medicine ceremony per quarter included",
       "Quarterly 1-on-1 spiritual consultation",
-      "25% off international retreats",
       "Private community circle access",
       "Exclusive merchandise & sacred tools",
       "Priority access to traveling ceremonies",
@@ -70,16 +70,15 @@ const tiers = [
     period: "/month",
     icon: Star,
     highlight: false,
-    description: "The highest level of commitment to the temple. Unlimited access, personal mentorship, and sacred stewardship.",
+    description: "The highest level of commitment. Your monthly contribution secures your spot at a local retreat weekend each quarter, plus personal mentorship and sacred stewardship.",
     benefits: [
       "Everything in Guardian",
-      "Unlimited ceremony access",
+      "1 local retreat weekend per quarter included",
       "Monthly 1-on-1 with Dr. Sonatta or King James",
-      "Complimentary annual retreat spot",
-      "40% off all additional retreats",
       "Sacred elder recognition & advisory role",
       "Exclusive elder gatherings & dinners",
       "Full access to members-only store",
+      "Priority booking for all events",
     ],
   },
 ];
@@ -326,7 +325,7 @@ const Membership = () => {
       <section className="relative overflow-hidden px-4 py-20 md:py-28">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${communityImg})` }}
+          style={{ backgroundImage: `url(${ctaFooterImg})` }}
         />
         <div className="absolute inset-0 bg-foreground/80" />
 
