@@ -489,10 +489,12 @@ const Index = () => {
               Begin Your Journey
             </Link>
             <a
-              href="#contact"
+              href="https://integration.templemotherearth.org/auth"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
-              Connect With Us
+              Member Login
             </a>
           </motion.div>
         </motion.div>
