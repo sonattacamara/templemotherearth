@@ -521,7 +521,7 @@ const Index = () => {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-12">
-            <div className="mx-auto max-w-xl rounded-xl border border-primary/20 bg-primary/5 p-5 mb-6">
+            <div className="mx-auto max-w-xl rounded-xl border border-primary/20 bg-primary/5 p-5 mb-8">
               <p className="font-display text-base font-semibold text-foreground text-center">Important Information</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
@@ -541,22 +541,36 @@ const Index = () => {
                 Family-friendly exceptions: Soulful Sundays, Community Day, and Cacao Ceremony are open to all ages.
               </p>
             </div>
-            <p className="font-body text-muted-foreground">
-              Offerings are managed through Eventbrite for secure booking.
-            </p>
-            <a
-              href="https://www.eventbrite.com/o/29347213477#events"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
-            >
-              View All of Our Offerings
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <p className="mt-4 text-xs text-muted-foreground">
-              Questions? Email us at{" "}
-              <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
-            </p>
+
+            {/* Eventbrite Embedded Calendar Widget */}
+            <div className="w-full overflow-hidden rounded-xl">
+              <iframe
+                src="https://www.eventbrite.com/o/29347213477"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                className="w-full rounded-xl border-0"
+                title="Temple Mother Earth Events Calendar"
+                loading="lazy"
+                allow="payment"
+              />
+            </div>
+
+            <div className="mt-8 flex flex-col items-center gap-4">
+              <a
+                href="https://www.eventbrite.com/o/29347213477#events"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+              >
+                View All of Our Offerings
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <p className="text-xs text-muted-foreground">
+                Questions? Email us at{" "}
+                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
+              </p>
+            </div>
           </motion.div>
         </motion.div>
       </section>
