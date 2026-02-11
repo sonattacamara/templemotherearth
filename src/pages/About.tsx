@@ -9,6 +9,7 @@ import founderJames from "@/assets/founder-james.jpg";
 import facilitatorDebra from "@/assets/facilitator-debra.jpg";
 import facilitatorSpencer from "@/assets/facilitator-spencer.jpg";
 import facilitator3 from "@/assets/facilitator-3.jpg";
+import facilitatorSamira from "@/assets/facilitator-samira.jpg";
 import facilitator4 from "@/assets/facilitator-4.jpg";
 import logo from "@/assets/logo.png";
 
@@ -397,10 +398,10 @@ const About = () => {
                 desc: "A multi-medium artist from Prince George's County rooted in creativity and healing. Through poetry, plant medicine and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Healing & Reflection Circle — inviting men to slow down, soften, and be held.",
               },
               {
-                name: "Isabella Reyes",
+                name: "Samira Davis",
                 role: "Herbalist & Earth Medicine Keeper",
-                img: facilitator3,
-                desc: "Traditional herbalist and Earth Medicine practitioner with deep knowledge of sacred plant allies and their healing properties.",
+                img: facilitatorSamira,
+                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding seekers toward holistic healing through the Earth's abundant pharmacy.",
               },
               {
                 name: "Mama Adjua",
