@@ -70,11 +70,10 @@ const tiers = [
     period: "/month",
     icon: Star,
     highlight: false,
-    description: "The highest level of sacred commitment. Your monthly contribution secures one local immersion weekend each quarter, plus personal mentorship and elder stewardship.",
+    description: "The highest level of sacred commitment. Your monthly contribution secures one local immersion weekend each quarter, plus elder stewardship within the community.",
     benefits: [
       "Everything in Guardian",
       "1 local immersion weekend per quarter included",
-      "Monthly 1-on-1 with Dr. Sonatta or King James",
       "Sacred elder recognition & advisory role",
       "Exclusive elder gatherings & dinners",
       "Full access to members-only store",
