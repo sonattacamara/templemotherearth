@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { motion, type Easing, AnimatePresence } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
+import sacredSpace from "@/assets/sacred-space.jpg";
+import communityImg from "@/assets/community.jpg";
 import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
@@ -16,6 +18,11 @@ const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8, ease } },
 };
 
 const stagger = {
@@ -59,6 +66,35 @@ const offerings = [
   },
 ];
 
+/* ── Journey Stage Marker ── */
+const JourneyStage = ({ number, label }: { number: string; label: string }) => (
+  <motion.div
+    variants={fadeIn}
+    className="flex flex-col items-center gap-2 mb-6"
+  >
+    <div className="flex items-center gap-3">
+      <div className="h-px w-8 bg-primary/30 hidden sm:block" />
+      <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary">
+        {number}
+      </span>
+      <div className="h-px w-8 bg-primary/30 hidden sm:block" />
+    </div>
+    <span className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+      {label}
+    </span>
+  </motion.div>
+);
+
+/* ── Vertical Journey Connector ── */
+const JourneyConnector = () => (
+  <div className="flex justify-center py-4">
+    <div className="flex flex-col items-center gap-1">
+      <div className="h-8 w-px bg-gradient-to-b from-transparent via-primary/40 to-primary/20" />
+      <Compass className="h-4 w-4 text-primary/40 animate-pulse" />
+      <div className="h-8 w-px bg-gradient-to-b from-primary/20 via-primary/40 to-transparent" />
+    </div>
+  </div>
+);
 
 const Index = () => {
   const [showDonation, setShowDonation] = useState(false);
@@ -123,7 +159,9 @@ const Index = () => {
         Keep the Temple Sustainable
       </button>
 
-      {/* ───── HERO ───── */}
+      {/* ═══════════════════════════════════════════
+          STAGE I — THE CALL
+          ═══════════════════════════════════════════ */}
       <section
         id="hero"
         className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
@@ -140,6 +178,11 @@ const Index = () => {
           animate="visible"
           variants={stagger}
         >
+          <motion.div variants={fadeUp} className="mb-4">
+            <span className="inline-block font-body text-[10px] font-bold uppercase tracking-[0.4em] text-primary/80 border border-primary/30 rounded-full px-4 py-1.5">
+              Your Journey Begins Here
+            </span>
+          </motion.div>
           <motion.img
             variants={fadeUp}
             src={logo}
@@ -161,17 +204,17 @@ const Index = () => {
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="#offerings"
+              href="#awakening"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
             >
-              Discover Your Path
+              Begin the Journey
             </a>
-            <a
-              href="#events"
+            <Link
+              to="/ceremony-intake"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
-              Upcoming Ceremonies
-            </a>
+              I'm Ready — Start Intake
+            </Link>
           </motion.div>
         </motion.div>
 
@@ -184,38 +227,58 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* ───── ABOUT / SOVEREIGNTY ───── */}
-      <section id="about" className="px-4 py-24 md:py-32">
+      <JourneyConnector />
+
+      {/* ═══════════════════════════════════════════
+          STAGE II — THE AWAKENING
+          ═══════════════════════════════════════════ */}
+      <section id="awakening" className="px-4 py-24 md:py-32">
         <motion.div
-          className="mx-auto max-w-3xl text-center"
+          className="mx-auto max-w-4xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={stagger}
         >
-          <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            A Space for All Who Seek
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+          <JourneyStage number="Stage I" label="The Awakening" />
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
             You Are a Sovereign Being
           </motion.h2>
-          <motion.div variants={fadeUp} className="mx-auto mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              You're not a man. You're not a woman. You're not black. You're not white.
-              You are a sovereign being — a divine essence having a human experience.
-              At Temple Mother Earth, we honor the God within you.
-              We came here to have an experience, and this is your sacred invitation to live it fully.
-            </p>
-            <p>
-              We are an inclusive community where all are welcome. Through sacred practices, ancient wisdom,
-              and connection to Earth Medicine, we create a space for you to reconnect with your spiritual essence,
-              to heal, and to align with your highest self.
-            </p>
+          <motion.div variants={fadeUp} className="mt-10 grid gap-10 md:grid-cols-2 items-center">
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+              <p>
+                You're not a man. You're not a woman. You're not black. You're not white.
+                You are a sovereign being — a divine essence having a human experience.
+                At Temple Mother Earth, we honor the God within you.
+              </p>
+              <p>
+                We came here to have an experience, and this is your sacred invitation to live it fully.
+                We are an inclusive community where all are welcome.
+              </p>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={sacredSpace}
+                alt="Sacred space at Temple Mother Earth"
+                className="w-full h-80 object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="font-display text-sm font-semibold text-primary-foreground italic">
+                  "Through sacred practices and connection to Earth Medicine, we create a space for you to reconnect with your spiritual essence."
+                </p>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* ───── OFFERINGS ───── */}
+      <JourneyConnector />
+
+      {/* ═══════════════════════════════════════════
+          STAGE III — CHOOSE YOUR PATH
+          ═══════════════════════════════════════════ */}
       <section id="offerings" className="bg-card px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-6xl"
@@ -224,15 +287,13 @@ const Index = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Sacred Offerings
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
-            What Awaits You
+          <JourneyStage number="Stage II" label="Choose Your Path" />
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            Sacred Offerings Await
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            From our Washington, DC sanctuary to sacred destinations across the globe, Temple Mother Earth
-            offers pathways for deep healing, connection, and transformation.
+            Every seeker's journey is unique. From our Washington, DC sanctuary to sacred destinations
+            across the globe — choose the path that calls to your spirit.
           </motion.p>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -253,7 +314,7 @@ const Index = () => {
                     <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                      Learn More <ArrowRight className="h-3.5 w-3.5" />
+                      Walk This Path <ArrowRight className="h-3.5 w-3.5" />
                     </span>
                   </div>
                 </>
@@ -285,7 +346,11 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* ───── WHAT YOU WILL EXPERIENCE ───── */}
+      <JourneyConnector />
+
+      {/* ═══════════════════════════════════════════
+          STAGE IV — THE TRANSFORMATION
+          ═══════════════════════════════════════════ */}
       <section className="px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-5xl"
@@ -294,22 +359,23 @@ const Index = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            The Journey
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+          <JourneyStage number="Stage III" label="The Transformation" />
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
             What You Will Experience
           </motion.h2>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Heart, title: "Healing & Transformation", desc: "Release old wounds, rediscover your inner power, and step into clarity and purpose." },
-              { icon: Users, title: "Connection & Belonging", desc: "Join a circle of kindred spirits who honor your journey and support your growth." },
+              { icon: Heart, title: "Healing & Release", desc: "Release old wounds, rediscover your inner power, and step into clarity and purpose." },
+              { icon: Users, title: "Sacred Connection", desc: "Join a circle of kindred spirits who honor your journey and support your growth." },
               { icon: Leaf, title: "Earth Medicine Alignment", desc: "Immerse in practices that harmonize body, mind, and spirit with the sacred rhythms of the Earth." },
               { icon: Sun, title: "Spiritual Awakening", desc: "Reconnect with the God within and live in harmony with your soul's calling." },
-            ].map((item) => (
-              <motion.div key={item.title} variants={fadeUp} className="text-center">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            ].map((item, i) => (
+              <motion.div key={item.title} variants={fadeUp} className="relative text-center group">
+                <div className="absolute -top-3 -right-3 font-display text-5xl font-bold text-primary/10 select-none">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
                   <item.icon className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">{item.title}</h3>
@@ -320,49 +386,46 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* ───── MEMBERSHIP ───── */}
-      <section id="membership" className="bg-card px-4 py-24 md:py-32">
+      <JourneyConnector />
+
+      {/* ═══════════════════════════════════════════
+          STAGE V — JOIN THE CIRCLE
+          ═══════════════════════════════════════════ */}
+      <section id="membership" className="relative overflow-hidden px-4 py-24 md:py-32">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${communityImg})` }}
+        />
+        <div className="absolute inset-0 bg-foreground/85" />
+
         <motion.div
-          className="mx-auto max-w-5xl"
+          className="relative z-10 mx-auto max-w-5xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Join the Sacred Circle
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+          <JourneyStage number="Stage IV" label="Join the Circle" />
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-primary-foreground md:text-5xl">
             Become a Member
           </motion.h2>
-          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
             Membership in Temple Mother Earth is an invitation to walk a sacred path alongside a community
-            of seekers devoted to healing, growth, and spiritual awakening. As a member, you gain access
-            to exclusive ceremonies, integration tools, and our members-only community.
+            of seekers devoted to healing, growth, and spiritual awakening.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-background p-8 text-center">
-              <ShieldCheck className="mx-auto h-10 w-10 text-primary" />
-              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Sacred Access</h3>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Exclusive access to Earth Medicine ceremonies, private gatherings, and members-only events in Washington, DC and beyond.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-background p-8 text-center">
-              <Sparkles className="mx-auto h-10 w-10 text-primary" />
-              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Integration & Wellness</h3>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Access our Integration & Wellness platform — your companion for expanded consciousness with AI guidance, daily rituals, and personalized plans.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-background p-8 text-center">
-              <Heart className="mx-auto h-10 w-10 text-primary" />
-              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">Community Circle</h3>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Join a circle of sovereign beings walking the path together — peer support, shared wisdom, and lifelong connections.
-              </p>
-            </div>
+            {[
+              { icon: ShieldCheck, title: "Sacred Access", desc: "Exclusive access to Earth Medicine ceremonies, private gatherings, and members-only events." },
+              { icon: Sparkles, title: "Integration & Wellness", desc: "Your companion for expanded consciousness with AI guidance, daily rituals, and personalized plans." },
+              { icon: Heart, title: "Community Circle", desc: "A circle of sovereign beings walking the path together — peer support and lifelong connections." },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-primary-foreground/10 bg-foreground/40 backdrop-blur-sm p-8 text-center">
+                <item.icon className="mx-auto h-10 w-10 text-primary" />
+                <h3 className="mt-4 font-display text-lg font-semibold text-primary-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm text-primary-foreground/60">{item.desc}</p>
+              </div>
+            ))}
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap items-center justify-center gap-4">
@@ -376,7 +439,7 @@ const Index = () => {
               href="https://integration.templemotherearth.org/auth?mode=signin"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-xl border border-border px-8 py-3.5 font-body text-sm font-semibold text-foreground transition hover:bg-accent"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
               Member Login
             </a>
@@ -384,7 +447,11 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* ───── WHAT ARE YOU SEEKING? (CTA) ───── */}
+      <JourneyConnector />
+
+      {/* ═══════════════════════════════════════════
+          STAGE VI — THE INVITATION
+          ═══════════════════════════════════════════ */}
       <section id="community" className="relative overflow-hidden px-4 py-24 md:py-32">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -399,6 +466,7 @@ const Index = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={stagger}
         >
+          <JourneyStage number="Stage V" label="The Invitation" />
           <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
             What Are You Seeking?
           </motion.h2>
@@ -410,8 +478,7 @@ const Index = () => {
             </p>
             <p>
               You don't have to have it figured out. You just have to be willing to show up.
-              Temple Mother Earth is here to meet you exactly where you are — with sacred ceremony,
-              a community that sees you, and the ancient wisdom of Earth Medicine.
+              Temple Mother Earth is here to meet you exactly where you are.
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
@@ -431,6 +498,7 @@ const Index = () => {
         </motion.div>
       </section>
 
+      <JourneyConnector />
 
       {/* ───── UPCOMING EVENTS (Eventbrite) ───── */}
       <section id="events" className="px-4 py-24 md:py-32">
@@ -593,7 +661,7 @@ const Index = () => {
               <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
             </Link>
             <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
-              <a href="#about" className="hover:text-primary transition-colors">About</a>
+              <a href="#awakening" className="hover:text-primary transition-colors">About</a>
               <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
               <a href="#membership" className="hover:text-primary transition-colors">Membership</a>
               <a href="#events" className="hover:text-primary transition-colors">Events</a>
