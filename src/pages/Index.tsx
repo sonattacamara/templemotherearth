@@ -53,30 +53,21 @@ const Index = () => {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                   <HandHeart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-foreground">Support Our Mission</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground">Keep the Temple Sustainable</h3>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible donation
-                  helps us continue providing sacred ceremonies, healing spaces, and community support.
+                  through the PayPal Giving Fund helps us continue providing sacred ceremonies, healing spaces, and community support.
                 </p>
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  {["$25", "$50", "$100"].map((amount) => (
-                    <a
-                      key={amount}
-                      href={`mailto:AskUs@TempleMotherEarth.org?subject=Donation%20-%20${amount}&body=I%20would%20like%20to%20donate%20${amount}%20to%20Temple%20Mother%20Earth.`}
-                      className="rounded-lg border border-border bg-card py-3 font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/5"
-                    >
-                      {amount}
-                    </a>
-                  ))}
-                </div>
                 <a
-                  href="mailto:AskUs@TempleMotherEarth.org?subject=Donation%20Inquiry"
+                  href="https://www.paypal.com/fundraiser/charity/5670665"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-4 block rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
                 >
-                  Make a Custom Donation
+                  Donate Now via PayPal Giving Fund
                 </a>
                 <p className="mt-4 text-xs text-muted-foreground">
-                  All donations are tax-deductible. EIN available upon request.
+                  All donations are tax-deductible through the PayPal Giving Fund. 501(c)(3) nonprofit.
                 </p>
               </div>
             </motion.div>
@@ -89,8 +80,8 @@ const Index = () => {
         onClick={() => setShowDonation(true)}
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
       >
-        <HandHeart className="h-4 w-4" />
-        Donate
+        <Leaf className="h-4 w-4" />
+        Keep the Temple Sustainable
       </button>
 
       {/* ───── HERO ───── */}
@@ -171,8 +162,9 @@ const Index = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="mx-auto mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
-              At Temple Mother Earth, we honor the God within you. You are not a man. You are not a woman.
-              You are not black or white. You are a sovereign being — a divine essence having a human experience.
+              You're not a man. You're not a woman. You're not black. You're not white.
+              You are a sovereign being — a divine essence having a human experience.
+              At Temple Mother Earth, we honor the God within you.
               We came here to have an experience, and this is your sacred invitation to live it fully.
             </p>
             <p>
@@ -204,7 +196,7 @@ const Index = () => {
             offers pathways for deep healing, connection, and transformation.
           </motion.p>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: Flame,
@@ -223,6 +215,12 @@ const Index = () => {
                 title: "Traveling Ceremonies",
                 desc: "We come to you. Invite Temple Mother Earth to hold personalized ceremonies in your community, tailored to your unique path and intentions.",
                 img: communityImg,
+              },
+              {
+                icon: Heart,
+                title: "1-on-1 / Private Ceremonies",
+                desc: "Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey, held in a private and sacred setting.",
+                img: ceremonyImg,
               },
             ].map((item) => (
               <motion.div
@@ -418,7 +416,7 @@ const Index = () => {
               Events are managed through Eventbrite for secure booking.
             </p>
             <a
-              href="https://www.eventbrite.com/o/temple-mother-earth-83633883498"
+              href="https://www.eventbrite.com/cc/temple-mother-earth-ceremonies-3992189"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
