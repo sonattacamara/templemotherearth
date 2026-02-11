@@ -330,12 +330,10 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://integration.templemotherearth.org/auth"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/membership"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
-              Sign Up for Membership
+              Explore Membership Tiers
             </a>
             <a
               href="https://integration.templemotherearth.org/auth?mode=signin"

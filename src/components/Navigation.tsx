@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Home", href: "/", isRoute: true },
   { label: "About", href: "/about", isRoute: true },
   { label: "Offerings", href: "/#offerings", isRoute: false },
-  { label: "Membership", href: "/#membership", isRoute: false },
+  { label: "Membership", href: "/membership", isRoute: true },
   { label: "Events", href: "/#events", isRoute: false },
   { label: "Community", href: "/#community", isRoute: false },
   { label: "Contact", href: "/#contact", isRoute: false },
