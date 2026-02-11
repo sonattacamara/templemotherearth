@@ -453,6 +453,26 @@ const Index = () => {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-12">
+            <div className="mx-auto max-w-xl rounded-xl border border-primary/20 bg-primary/5 p-5 mb-6">
+              <p className="font-display text-base font-semibold text-foreground text-center">Important Information</p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <span>All Earth Medicine ceremonies are for individuals <strong className="text-foreground">aged 21 and older</strong>.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <span>Membership in Temple Mother Earth is required to attend ceremonies. <Link to="/membership" className="text-primary hover:underline">Learn more about membership →</Link></span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <span>All participants must complete a <Link to="/ceremony-intake" className="text-primary hover:underline">sacred intake form</Link> prior to attending.</span>
+                </li>
+              </ul>
+              <p className="mt-3 text-xs text-muted-foreground text-center italic">
+                Family-friendly exceptions: Soulful Sundays, Community Day, and Cacao Ceremony are open to all ages.
+              </p>
+            </div>
             <p className="font-body text-muted-foreground">
               Events are managed through Eventbrite for secure booking.
             </p>
@@ -465,6 +485,10 @@ const Index = () => {
               View All of Our Offerings
               <ArrowRight className="h-4 w-4" />
             </a>
+            <p className="mt-4 text-xs text-muted-foreground">
+              Questions? Email us at{" "}
+              <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
+            </p>
           </motion.div>
         </motion.div>
       </section>
