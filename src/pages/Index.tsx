@@ -4,7 +4,7 @@ import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHea
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg-new.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
 import communityImg from "@/assets/community.jpg";
@@ -39,6 +39,7 @@ const offerings = [
     img: offeringCeremony,
     link: "https://www.eventbrite.com/o/29347213477#events",
     isExternal: true,
+    cta: "Enter the Ceremony",
   },
   {
     icon: Globe,
@@ -47,6 +48,7 @@ const offerings = [
     img: offeringRetreat,
     link: "/retreats-inquiry",
     isExternal: false,
+    cta: "Explore Retreats",
   },
   {
     icon: Users,
@@ -55,6 +57,7 @@ const offerings = [
     img: offeringTraveling,
     link: "/traveling-ceremonies",
     isExternal: false,
+    cta: "Bring Us to You",
   },
   {
     icon: Heart,
@@ -63,6 +66,7 @@ const offerings = [
     img: offeringPrivate,
     link: "/private-ceremonies",
     isExternal: false,
+    cta: "Book a Private Session",
   },
 ];
 
@@ -314,7 +318,7 @@ const Index = () => {
                     <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                      Walk This Path <ArrowRight className="h-3.5 w-3.5" />
+                      {item.cta} <ArrowRight className="h-3.5 w-3.5" />
                     </span>
                   </div>
                 </>

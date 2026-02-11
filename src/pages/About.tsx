@@ -165,56 +165,76 @@ const About = () => {
         >
           <motion.div variants={fadeUp} className="text-center">
             <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              What We Stand For
+              Our Values
             </p>
             <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
-              Our Sacred Values
+              The Principles That Guide Our Sacred Work
             </h2>
           </motion.div>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 space-y-8">
             {[
               {
-                icon: Shield,
-                title: "Sovereignty",
-                desc: "You are not a man. You are not a woman. You are not black or white. You are a sovereign being — a divine essence having a human experience. We honor this truth above all.",
+                icon: Leaf,
+                label: "Value 1",
+                title: "Reverence for the Earth & the Sacred",
+                desc: "At Temple Mother Earth, we honor the Earth as our first teacher, our medicine, and our guide. Every ceremony, circle, and gathering begins with a deep acknowledgment of the land, the elements, and the unseen forces that support our lives. We believe that healing happens when we return to harmony with nature and with the God within.",
+                detail: "Our work is built on humility, respect, and gratitude — honoring the sacred lineages, teachings, and Earth medicines that make our healing possible.",
               },
               {
-                icon: Leaf,
-                title: "Earth Medicine",
-                desc: "We honor the sacred gifts of the Earth — Kambo, Hapé, and other ancestral medicines — as divine tools for healing, transformation, and spiritual alignment.",
+                icon: Shield,
+                label: "Value 2",
+                title: "Sovereignty & Personal Empowerment",
+                desc: "We honor each person as a sovereign being with the right to choose their path, their pace, and their truth. Our role is never to impose belief systems or identities but to help individuals reconnect with their inner wisdom.",
+                detail: "In our spaces, you are not defined by gender, race, titles, or labels. You are a spirit having a human experience. Sovereignty means remembering your power, your voice, and your ability to shape your life with intention and clarity.",
               },
               {
                 icon: Users,
-                title: "Radical Inclusivity",
-                desc: "Our temple doors are open to all seekers regardless of background. We intentionally move beyond labels of gender, race, or status. All are welcome in this sacred circle.",
+                label: "Value 3",
+                title: "Community, Connection & Collective Healing",
+                desc: "Our community is at the heart of everything we do. We believe that healing deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
+                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we heal in relationship, not in isolation.",
               },
               {
                 icon: Heart,
-                title: "Personal Responsibility",
-                desc: "You are the only person responsible for your own healing. We provide the sacred tools, the wisdom, and the space — but the journey is yours to walk.",
+                label: "Value 4",
+                title: "Integrity, Ethics & Sacred Responsibility",
+                desc: "We hold our work with the highest level of responsibility. This includes ethical sourcing of Earth medicines, honoring Indigenous and ancestral traditions, upholding safety protocols in every ceremony, and providing consistent preparation and integration support.",
+                detail: "Integrity guides every decision we make. We do not take shortcuts, we do not rush transformation, and we do not engage in practices that compromise the sanctity of this work. Everything is held with intention, transparency, and respect for Spirit.",
               },
               {
                 icon: Sparkles,
-                title: "The God Within",
-                desc: "We worship and connect to the Divine through connection with the higher self. The answers you seek have always been within you. We help you remember.",
+                label: "Value 5",
+                title: "Emotional Maturity & Inner Accountability",
+                desc: "Healing requires courage, honesty, and a willingness to take responsibility for one's own path. We support individuals in developing emotional intelligence, communication skills, self-awareness, and the capacity to navigate life with clarity.",
+                detail: "We believe emotional maturity is a spiritual practice — a way of aligning our actions with our highest self. Every offering, from ceremonies to classes, is designed to help people return to their inner truth with integrity and compassion.",
               },
               {
                 icon: Globe,
-                title: "Indigenous Reciprocity",
-                desc: "We honor the ancestral traditions and indigenous wisdom keepers who carry this sacred knowledge. We give back generously and maintain ethical partnerships with indigenous communities.",
+                label: "Value 6",
+                title: "Inclusivity, Belonging & Universal Humanity",
+                desc: "Temple Mother Earth is an inclusive community where all people are welcome. We do not see you as a category — not male or female, not Black or white, not labels or roles. We recognize you as a human being, a divine soul, and a carrier of wisdom and purpose.",
+                detail: "",
               },
             ].map((value) => (
               <motion.div
                 key={value.title}
                 variants={fadeUp}
-                className="rounded-2xl border border-border bg-card p-6 transition hover:shadow-lg"
+                className="rounded-2xl border border-border bg-card p-8 transition hover:shadow-lg"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                  <value.icon className="h-6 w-6 text-primary" />
+                <div className="flex items-start gap-5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <value.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-body text-xs font-bold uppercase tracking-[0.2em] text-primary">{value.label}</p>
+                    <h3 className="mt-1 font-display text-xl font-semibold text-foreground">{value.title}</h3>
+                    <p className="mt-3 leading-relaxed text-muted-foreground">{value.desc}</p>
+                    {value.detail && (
+                      <p className="mt-3 leading-relaxed text-muted-foreground">{value.detail}</p>
+                    )}
+                  </div>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{value.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{value.desc}</p>
               </motion.div>
             ))}
           </div>
