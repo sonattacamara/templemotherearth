@@ -69,7 +69,9 @@ const Navigation = () => {
             Member Login
           </a>
           <a
-            href="/#events"
+            href="https://www.eventbrite.com/cc/temple-mother-earth-ceremonies-3992189"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
             Book a Ceremony
@@ -106,7 +108,9 @@ const Navigation = () => {
             Member Login
           </a>
           <a
-            href="/#events"
+            href="https://www.eventbrite.com/cc/temple-mother-earth-ceremonies-3992189"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="block mt-4 rounded-lg bg-primary px-5 py-3 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
