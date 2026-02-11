@@ -43,9 +43,9 @@ const tiers = [
       "Everything in Seeker",
       "Priority ceremony registration",
       "Monthly integration circle (virtual)",
-      "10% off all ceremonies & retreats",
       "Access to Integration & Wellness platform",
       "Members-only content library",
+      "Access to members-only store",
     ],
   },
   {
@@ -54,7 +54,7 @@ const tiers = [
     period: "/month",
     icon: Crown,
     highlight: true,
-    description: "Deepen your commitment with quarterly ceremony access, personal guidance, and priority community benefits.",
+    description: "Walk deeper into the sacred path. Your monthly commitment secures one Earth Medicine ceremony each quarter — your seat at the altar is reserved.",
     benefits: [
       "Everything in Devotee",
       "1 Earth Medicine ceremony per quarter included",
@@ -70,10 +70,10 @@ const tiers = [
     period: "/month",
     icon: Star,
     highlight: false,
-    description: "The highest level of commitment. Your monthly contribution secures your spot at a local retreat weekend each quarter, plus personal mentorship and sacred stewardship.",
+    description: "The highest level of sacred commitment. Your monthly contribution secures one local immersion weekend each quarter, plus personal mentorship and elder stewardship.",
     benefits: [
       "Everything in Guardian",
-      "1 local retreat weekend per quarter included",
+      "1 local immersion weekend per quarter included",
       "Monthly 1-on-1 with Dr. Sonatta or King James",
       "Sacred elder recognition & advisory role",
       "Exclusive elder gatherings & dinners",
