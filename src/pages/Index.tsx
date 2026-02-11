@@ -618,6 +618,23 @@ const Index = () => {
                 </div>
               </div>
               <div>
+                <h3 className="font-display text-lg font-semibold text-card-foreground">Community Circles</h3>
+                <div className="mt-2 flex flex-col gap-2">
+                  <a href="https://bit.ly/MensIntegration" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Men's Integration Circle →</a>
+                  <a href="https://bit.ly/WombmanIntegration" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Wombmen's Integration Circle →</a>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-card-foreground">Support the Temple</h3>
+                <div className="mt-2 flex flex-col gap-2">
+                  <a href="http://bit.ly/TempleGoogleReview" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                    <Star className="h-4 w-4 text-primary" /> Leave a Google Review
+                  </a>
+                  <a href="http://bit.ly/TempleAmazonWishList" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Amazon Wishlist →</a>
+                  <a href="https://bit.ly/TemplePhotosVideos" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Share Photos & Videos →</a>
+                </div>
+              </div>
+              <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Members Portal</h3>
                 <a
                   href="https://integration.templemotherearth.org/"
@@ -680,6 +697,9 @@ const Index = () => {
               <a href="#membership" className="hover:text-primary transition-colors">Membership</a>
               <a href="#upcoming-offerings" className="hover:text-primary transition-colors">Upcoming</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+              <Link to="/volunteer" className="hover:text-primary transition-colors">Volunteer</Link>
+              <Link to="/preparation" className="hover:text-primary transition-colors">Preparation</Link>
+              <Link to="/conduct" className="hover:text-primary transition-colors">Conduct</Link>
               <a
                 href="https://integration.templemotherearth.org/"
                 target="_blank"
