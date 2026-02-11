@@ -11,6 +11,7 @@ import facilitatorSpencer from "@/assets/facilitator-spencer.jpg";
 import facilitator3 from "@/assets/facilitator-3.jpg";
 import facilitatorSamira from "@/assets/facilitator-samira.jpg";
 import facilitatorGeorge from "@/assets/facilitator-george.jpg";
+import facilitatorJala from "@/assets/facilitator-jala.jpg";
 import facilitator4 from "@/assets/facilitator-4.jpg";
 import logo from "@/assets/logo.png";
 
@@ -409,6 +410,12 @@ const About = () => {
                 role: "Spiritual Elder & High Priest",
                 img: facilitatorGeorge,
                 desc: "A shaman, priest, physician, and scholar warrior, Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides seekers toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.",
+              },
+              {
+                name: "Jala Johnson",
+                role: "Wellness Space Curator & Sound Healing Practitioner",
+                img: facilitatorJala,
+                desc: "Jala Johnson of Metamorphosis Mind 801 is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, retreats, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
               {
                 name: "Mama Adjua",
