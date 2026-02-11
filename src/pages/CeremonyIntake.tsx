@@ -128,13 +128,20 @@ const CeremonyIntake = () => {
             variants={fadeUp}
             className="font-display text-3xl font-bold text-foreground md:text-5xl"
           >
-            Book a Sacred Ceremony
+            Begin Your Journey
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             Your safety and sacred experience are our highest priority. This intake process helps our
             facilitators prepare the most supportive environment for your healing journey. Whether
-            you're a first-time seeker or experienced practitioner, this screening ensures everyone
-            sits in ceremony with the care they deserve.
+            you're a first-time seeker or experienced practitioner, every person who sits in ceremony
+            completes this sacred screening — it is how we honor the medicine, protect our community,
+            and ensure that each seeker receives the care they deserve.
+          </motion.p>
+          <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
+            As a 501(c)(3) religious organization operating under the Religious Freedom Restoration Act (RFRA),
+            Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of
+            Earth Medicine ceremonies. This intake is required by our organizational protocols and serves as
+            your formal entry into our sacred ceremonial space.
           </motion.p>
         </motion.div>
       </section>
@@ -366,12 +373,26 @@ const CeremonyIntake = () => {
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Sacred Agreement & Waiver</h3>
 
+              {/* Statement of Beliefs */}
+              <div className="rounded-lg border border-primary/20 bg-primary/5 p-4 text-sm text-foreground space-y-3">
+                <p className="font-semibold font-display text-base">Our Statement of Beliefs</p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• We believe that the Earth is sacred and that her medicines — Kambo, Hapé, Cacao, and sacred plant allies — are divine gifts given to humanity for healing, spiritual growth, and reconnection with the Creator within.</li>
+                  <li>• We believe that every human being is a sovereign being — a divine essence having a human experience — and that each person carries the God within.</li>
+                  <li>• We believe in the power of ceremony as a sincere religious exercise, practiced in community with intention, reverence, and accountability.</li>
+                  <li>• We believe that healing is a personal responsibility and that Earth Medicine, when used sacramentally, is a pathway to spiritual awakening, not a substitute for medical care.</li>
+                  <li>• We believe in ethical reciprocity with indigenous wisdom keepers who carry these ancestral traditions, and we honor their lineages through partnership and giving back.</li>
+                  <li>• We believe in radical inclusivity — welcoming all seekers regardless of race, gender, background, or status — while remaining rooted in the BIPOC community that founded this temple.</li>
+                </ul>
+              </div>
+
               <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
                 <p className="font-semibold text-foreground">Religious Freedom Restoration Act (RFRA) Declaration</p>
                 <p>
                   Temple Mother Earth is a 501(c)(3) nonprofit religious organization. Our sacramental use of Earth Medicine
                   is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies,
-                  you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community.
+                  you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community
+                  that holds the beliefs stated above.
                 </p>
                 <p className="font-semibold text-foreground">Assumption of Risk & Liability Waiver</p>
                 <p>
@@ -388,7 +409,7 @@ const CeremonyIntake = () => {
 
               <label className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
                 <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData.rfrAgreement} onChange={(e) => update("rfrAgreement", e.target.checked)} />
-                <span>I acknowledge and agree to the RFRA declaration and understand the religious context of these ceremonies. *</span>
+                <span>I have read and affirm the Statement of Beliefs. I acknowledge the RFRA declaration and understand the religious context of these ceremonies. *</span>
               </label>
 
               <label className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
