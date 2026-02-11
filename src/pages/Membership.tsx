@@ -244,7 +244,11 @@ const Membership = () => {
                 </ul>
 
                 <a
-                  href="https://integration.templemotherearth.org/auth"
+                  href={
+                    tier.price === "Free"
+                      ? "https://integration.templemotherearth.org/auth"
+                      : `https://integration.templemotherearth.org/auth?tier=${encodeURIComponent(tier.name.toLowerCase())}`
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`mt-8 block rounded-xl py-3.5 text-center font-body text-sm font-semibold transition ${
@@ -253,7 +257,7 @@ const Membership = () => {
                       : "border border-border text-foreground hover:border-primary hover:bg-primary/5"
                   }`}
                 >
-                  {tier.price === "Free" ? "Join for Free" : `Get Started — ${tier.price}/mo`}
+                  {tier.price === "Free" ? "Join as Seeker — Free" : `Choose ${tier.name} — ${tier.price}/mo`}
                 </a>
               </motion.div>
             ))}
@@ -379,7 +383,7 @@ const Membership = () => {
               <a href="/" className="hover:text-primary transition-colors">Home</a>
               <a href="/about" className="hover:text-primary transition-colors">About</a>
               <a href="/membership" className="hover:text-primary transition-colors">Membership</a>
-              <a href="/#events" className="hover:text-primary transition-colors">Events</a>
+              <a href="/#offerings" className="hover:text-primary transition-colors">Offerings</a>
               <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
             </div>
           </div>

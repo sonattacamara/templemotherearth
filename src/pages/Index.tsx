@@ -500,8 +500,8 @@ const Index = () => {
 
       <JourneyConnector />
 
-      {/* ───── UPCOMING EVENTS (Eventbrite) ───── */}
-      <section id="events" className="px-4 py-24 md:py-32">
+      {/* ───── UPCOMING OFFERINGS (Eventbrite) ───── */}
+      <section id="upcoming-offerings" className="px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -513,7 +513,7 @@ const Index = () => {
             Sacred Gatherings
           </motion.p>
           <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
-            Upcoming Ceremonies & Events
+            Upcoming Ceremonies & Offerings
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
             Explore our upcoming Earth Medicine ceremonies, community gatherings, and international retreats.
@@ -542,7 +542,7 @@ const Index = () => {
               </p>
             </div>
             <p className="font-body text-muted-foreground">
-              Events are managed through Eventbrite for secure booking.
+              Offerings are managed through Eventbrite for secure booking.
             </p>
             <a
               href="https://www.eventbrite.com/o/29347213477#events"
@@ -664,7 +664,7 @@ const Index = () => {
               <a href="#awakening" className="hover:text-primary transition-colors">About</a>
               <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
               <a href="#membership" className="hover:text-primary transition-colors">Membership</a>
-              <a href="#events" className="hover:text-primary transition-colors">Events</a>
+              <a href="#upcoming-offerings" className="hover:text-primary transition-colors">Offerings</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
               <a
                 href="https://integration.templemotherearth.org/"
