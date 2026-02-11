@@ -4,9 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { label: "Home", href: "/", isRoute: true },
   { label: "About", href: "/about", isRoute: true },
   { label: "Offerings", href: "/#offerings", isRoute: false },
+  { label: "Book a Ceremony", href: "/ceremony-intake", isRoute: true },
   { label: "Membership", href: "/membership", isRoute: true },
   { label: "Events", href: "/#events", isRoute: false },
   { label: "Community", href: "/#community", isRoute: false },
@@ -68,14 +68,12 @@ const Navigation = () => {
           >
             Member Login
           </a>
-          <a
-            href="https://www.eventbrite.com/cc/temple-mother-earth-ceremonies-3992189"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/ceremony-intake"
             className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
             Book a Ceremony
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -107,15 +105,13 @@ const Navigation = () => {
           >
             Member Login
           </a>
-          <a
-            href="https://www.eventbrite.com/cc/temple-mother-earth-ceremonies-3992189"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/ceremony-intake"
             onClick={() => setOpen(false)}
             className="block mt-4 rounded-lg bg-primary px-5 py-3 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
             Book a Ceremony
-          </a>
+          </Link>
         </div>
       )}
     </nav>
