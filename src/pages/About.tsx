@@ -7,7 +7,7 @@ import sacredSpace from "@/assets/sacred-space.jpg";
 import founderSonatta from "@/assets/founder-sonatta.jpg";
 import founderJames from "@/assets/founder-james.jpg";
 import facilitatorDebra from "@/assets/facilitator-debra.jpg";
-import facilitator2 from "@/assets/facilitator-2.jpg";
+import facilitatorSpencer from "@/assets/facilitator-spencer.jpg";
 import facilitator3 from "@/assets/facilitator-3.jpg";
 import facilitator4 from "@/assets/facilitator-4.jpg";
 import logo from "@/assets/logo.png";
@@ -391,10 +391,10 @@ const About = () => {
                 desc: "Certified yoga instructor and sound therapist devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
               },
               {
-                name: "Kwame Davis",
-                role: "Meditation & Integration Guide",
-                img: facilitator2,
-                desc: "Meditation teacher and integration specialist helping participants ground their ceremonial experiences into daily life.",
+                name: "Walter Spencer",
+                role: "Poet & Facilitator",
+                img: facilitatorSpencer,
+                desc: "A multi-medium artist from Prince George's County rooted in creativity and healing. Through poetry, plant medicine and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Healing & Reflection Circle — inviting men to slow down, soften, and be held.",
               },
               {
                 name: "Isabella Reyes",
