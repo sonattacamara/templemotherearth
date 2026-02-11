@@ -1,5 +1,5 @@
 import { motion, type Easing } from "framer-motion";
-import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft } from "lucide-react";
+import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import aboutHero from "@/assets/about-hero.jpg";
@@ -8,11 +8,10 @@ import founderSonatta from "@/assets/founder-sonatta.jpg";
 import founderJames from "@/assets/founder-james.jpg";
 import facilitatorDebra from "@/assets/facilitator-debra.jpg";
 import facilitatorSpencer from "@/assets/facilitator-spencer.jpg";
-import facilitator3 from "@/assets/facilitator-3.jpg";
 import facilitatorSamira from "@/assets/facilitator-samira.jpg";
-import facilitatorGeorge from "@/assets/facilitator-george.jpg";
+import facilitatorGeorge from "@/assets/facilitator-george-new.jpg";
 import facilitatorJala from "@/assets/facilitator-jala.jpg";
-import facilitator4 from "@/assets/facilitator-4.jpg";
+import communityAbout from "@/assets/community-about.jpg";
 import logo from "@/assets/logo.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -51,9 +50,8 @@ const About = () => {
             Our Story
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Temple Mother Earth was born from a calling — a deep, ancestral pull to create a sacred space
-            where sovereign beings can reconnect with the Earth, honor the God within, and walk the path
-            of healing together.
+            Born during the pandemic, when the world was closing its doors, Temple Mother Earth opened ours — 
+            bringing community together to heal with Mother Earth when it was needed most.
           </motion.p>
         </motion.div>
       </section>
@@ -77,15 +75,17 @@ const About = () => {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Temple Mother Earth is a sacred sanctuary dedicated to ancestral healing, Earth Medicine ceremonies,
-                  yoga, meditation, and community wellness. Founded in Washington, DC by Dr. Sonatta Camara and King James,
-                  we honor the sacred traditions of the Earth and create a space where all seekers can reconnect with their
-                  divine purpose.
+                  In 2020, when the pandemic brought the world to a standstill and fear kept people isolated 
+                  behind closed doors, Dr. Sonatta Camara and King James made a radical choice: they opened 
+                  their doors. What began as intimate healing circles during the darkest days of the pandemic 
+                  grew into Temple Mother Earth — a sacred sanctuary where sovereign beings come to reconnect 
+                  with the Earth, honor the God within, and walk the path of healing together.
                 </p>
                 <p>
-                  We are guided by the belief that the Earth is our temple, and every sovereign being who walks upon her
-                  carries the divine within. Our work bridges ancient Earth Medicine traditions with modern healing practices,
-                  serving our local DC community while extending our reach through international retreats and traveling ceremonies.
+                  Founded by and for people of the African diaspora while welcoming all sovereign beings who 
+                  resonate with our mission, Temple Mother Earth bridges ancient Earth Medicine traditions with 
+                  modern healing practices. From our Washington, DC sanctuary, we serve our local community 
+                  and extend our reach through international retreats and traveling ceremonies.
                 </p>
               </div>
             </motion.div>
@@ -97,7 +97,7 @@ const About = () => {
                 loading="lazy"
               />
               <div className="absolute -bottom-4 -right-4 rounded-xl bg-primary px-6 py-3 shadow-lg">
-                <p className="font-display text-sm font-bold text-primary-foreground">Est. Washington, DC</p>
+                <p className="font-display text-sm font-bold text-primary-foreground">Est. 2020 · Washington, DC</p>
               </div>
             </motion.div>
           </div>
@@ -129,11 +129,11 @@ const About = () => {
               </div>
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Our Mission</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                To be in continuous ethical partnership with indigenous wisdom keepers while facilitating
-                sacred Earth Medicine ceremonies and experiential learning for those seeking to heal from trauma,
-                reconnect with their divine essence, and spiritually evolve their way of life through
-                reconnection with Mother Earth. We serve our Washington, DC community and beyond through
-                local ceremonies, international retreats, and traveling sacred experiences.
+                To create a sacred space for healing and reconnecting with indigenous ways, centered on 
+                universal sovereignty and Mother Earth. We maintain continuous ethical partnership with 
+                indigenous wisdom keepers while facilitating sacred Earth Medicine ceremonies and 
+                experiential learning for those seeking to heal from trauma, reconnect with their divine 
+                essence, and spiritually evolve through reconnection with Mother Earth.
               </p>
             </motion.div>
 
@@ -143,11 +143,11 @@ const About = () => {
               </div>
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Our Vision</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                A world where every soul has access to sacred healing spaces and Earth Medicine traditions.
-                Where the wisdom of the ancestors is honored, preserved, and shared with those who seek it.
-                Where communities gather in circle, rooted in love and sovereignty, to remember the divine truth
-                that lives within each of us. We envision Temple Mother Earth as a beacon for seekers worldwide —
-                a living testament to the power of the Earth to heal, transform, and awaken.
+                A world where every soul has access to sacred healing spaces and Earth Medicine traditions. 
+                Where the wisdom of the ancestors is honored, preserved, and shared with those who seek it. 
+                Where communities gather in circle, rooted in love and sovereignty, to remember the divine 
+                truth that lives within each of us. We envision Temple Mother Earth as a beacon for seekers 
+                worldwide — a living testament to the power of the Earth to heal, transform, and awaken.
               </p>
             </motion.div>
           </div>
@@ -241,43 +241,124 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* ───── OUR COMMUNITY ───── */}
+      {/* ───── THE FIVE AGREEMENTS ───── */}
       <section className="bg-card px-4 py-24 md:py-32">
         <motion.div
-          className="mx-auto max-w-3xl text-center"
+          className="mx-auto max-w-4xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+        >
+          <motion.div variants={fadeUp} className="text-center">
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              Our Guiding Wisdom
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
+              The Five Agreements
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-muted-foreground">
+              Rooted in the Toltec wisdom tradition, the Five Agreements guide how we walk through 
+              the world and show up in community. We honor these principles as a foundation 
+              for personal integrity, emotional maturity, and sacred living.
+            </p>
+          </motion.div>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                number: "1",
+                title: "Be Impeccable with Your Word",
+                desc: "Speak with integrity. Say only what you mean. Use the power of your word in the direction of truth and love.",
+              },
+              {
+                number: "2",
+                title: "Don't Take Anything Personally",
+                desc: "Nothing others do is because of you. What others say and do is a projection of their own reality, their own dream.",
+              },
+              {
+                number: "3",
+                title: "Don't Make Assumptions",
+                desc: "Find the courage to ask questions and express what you really want. Communicate clearly to avoid misunderstandings and drama.",
+              },
+              {
+                number: "4",
+                title: "Always Do Your Best",
+                desc: "Your best will change from moment to moment. Under any circumstance, simply do your best and you will avoid self-judgment and regret.",
+              },
+              {
+                number: "5",
+                title: "Be Skeptical, But Learn to Listen",
+                desc: "Don't believe yourself or anybody else blindly. Use the power of doubt to question everything — but then listen with intent. The truth will reveal itself.",
+              },
+            ].map((agreement) => (
+              <motion.div
+                key={agreement.number}
+                variants={fadeUp}
+                className="rounded-2xl border border-border bg-background p-6 transition hover:shadow-lg"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <span className="font-display text-lg font-bold text-primary">{agreement.number}</span>
+                  </div>
+                  <BookOpen className="h-5 w-5 text-primary/50" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-foreground">{agreement.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{agreement.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p variants={fadeUp} className="mt-10 text-center text-sm text-muted-foreground italic">
+            Based on the wisdom of Don Miguel Ruiz and Don Jose Ruiz — "The Fifth Agreement"
+          </motion.p>
+        </motion.div>
+      </section>
+
+      {/* ───── OUR COMMUNITY ───── */}
+      <section className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-4xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={stagger}
         >
-          <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Our Community
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
-            A Sacred Circle of Sovereign Beings
-          </motion.h2>
-          <motion.div variants={fadeUp} className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              Temple Mother Earth is proudly rooted in the BIPOC community. We were founded by and for people
-              of the African diaspora, while welcoming all sovereign beings who resonate with our mission.
-              Our community is radically inclusive — intentionally moving beyond labels of gender, race, or status.
-            </p>
-            <p>
-              As it says upon our temple door: <em className="font-semibold text-foreground">"You are not a man.
-              You are not a woman. You are not black. You are not white. You are a sovereign being,
-              and we came here to have an experience."</em>
-            </p>
-            <p>
-              We believe in the power of circle — the ancient practice of gathering together in sacred space
-              to share, heal, and grow. Every ceremony, every gathering, every retreat is an invitation to
-              step deeper into your truth and walk alongside others who honor the same call.
-            </p>
-          </motion.div>
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <motion.div variants={fadeUp}>
+              <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                Our Community
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-4xl">
+                A Sacred Circle of Sovereign Beings
+              </h2>
+              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Temple Mother Earth is proudly rooted in the BIPOC community. We were founded by and for people
+                  of the African diaspora, while welcoming all sovereign beings who resonate with our mission.
+                  Our community is radically inclusive — intentionally moving beyond labels of gender, race, or status.
+                </p>
+                <p>
+                  As it says upon our temple door: <em className="font-semibold text-foreground">"You are not a man.
+                  You are not a woman. You are not black. You are not white. You are a sovereign being,
+                  and we came here to have an experience."</em>
+                </p>
+              </div>
+            </motion.div>
+            <motion.div variants={fadeUp}>
+              <img
+                src={communityAbout}
+                alt="Temple Mother Earth community circle"
+                className="rounded-2xl shadow-xl"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 
       {/* ───── FOUNDERS ───── */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="bg-card px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
@@ -289,7 +370,7 @@ const About = () => {
             <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Our Founders
             </p>
-            <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
               The Visionaries Behind the Temple
             </h2>
           </motion.div>
@@ -384,7 +465,7 @@ const About = () => {
       </section>
 
       {/* ───── FACILITATORS ───── */}
-      <section className="bg-card px-4 py-24 md:py-32">
+      <section className="px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
@@ -396,7 +477,7 @@ const About = () => {
             <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Our Sacred Circle
             </p>
-            <h2 className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
               Meet Our Facilitators
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
@@ -405,7 +486,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: "Debra Owens",
@@ -437,17 +518,11 @@ const About = () => {
                 img: facilitatorJala,
                 desc: "Jala Johnson of Metamorphosis Mind 801 is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, retreats, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
-              {
-                name: "Mama Adjua",
-                role: "Elder & Spiritual Counselor",
-                img: facilitator4,
-                desc: "Community elder and spiritual counselor offering ancestral wisdom, guidance, and the warmth of a grandmother's love.",
-              },
             ].map((person) => (
               <motion.div
                 key={person.name}
                 variants={fadeUp}
-                className="group overflow-hidden rounded-2xl border border-border bg-background transition hover:shadow-lg"
+                className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:shadow-lg"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -471,8 +546,8 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* ───── PERSONAL RESPONSIBILITY (Ankara inspired) ───── */}
-      <section className="px-4 py-24 md:py-32">
+      {/* ───── YOU ARE YOUR OWN HEALER ───── */}
+      <section className="bg-card px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-3xl text-center"
           initial="hidden"
@@ -483,19 +558,21 @@ const About = () => {
           <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Our Message to You
           </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
             You Are Your Own Healer
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
-              You are the only person responsible for your own healing. There is refined elegance in
-              meeting your own needs with the assistance of Earth Medicine, while laying a solid foundation
-              with all the resources you have been given. Healing is a lifestyle and a continuous journey.
+              The Divine resides within you. Whether you call it God, Source, Universe, Spirit, 
+              the Most High, the Creator, the Ancestors, the Great Mystery, Jah, Allah, Yahweh, 
+              Brahman, the Sacred, or simply Love — that infinite intelligence lives within your 
+              very being. You have always had the power to connect to it.
             </p>
             <p>
               At Temple Mother Earth, we are human beings dedicated to providing space for YOU to do
               your OWN work with sacred tools, wisdom, guidance, and practices. This is not a magic cure
-              or a quick fix — it is called medicine for a specific reason.
+              or a quick fix — it is called medicine for a specific reason. Healing is a lifestyle 
+              and a continuous journey.
             </p>
             <p className="font-display text-xl font-semibold text-foreground italic">
               "Find your way back home to the wisdom and divine intelligence that exists within your entire being.

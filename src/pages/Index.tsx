@@ -135,8 +135,8 @@ const Index = () => {
               </div>
               <h3 className="font-display text-xl font-bold text-foreground">Keep the Temple Sustainable</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible donation
-                helps us continue to serve seekers, preserve Earth Medicine traditions, and grow our sacred community.
+                Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible offerings & tithes
+                help us continue to serve seekers, preserve Earth Medicine traditions, and grow our sacred community.
               </p>
               <a
                 href={PAYPAL_DONATE_URL}
@@ -144,7 +144,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="mt-6 inline-block rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
               >
-                Donate via PayPal
+                Offerings & Tithes
               </a>
               <p className="mt-3 text-xs text-muted-foreground">
                 You'll be redirected to PayPal's secure donation page.
@@ -160,7 +160,7 @@ const Index = () => {
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
       >
         <Leaf className="h-4 w-4" />
-        Keep the Temple Sustainable
+        Offerings & Tithes
       </button>
 
       {/* ═══════════════════════════════════════════
@@ -246,18 +246,20 @@ const Index = () => {
         >
           <JourneyStage number="Stage I" label="The Awakening" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
-            You Are a Sovereign Being
+            You Are Your Own Healer
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-10 grid gap-10 md:grid-cols-2 items-center">
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                You're not a man. You're not a woman. You're not black. You're not white.
-                You are a sovereign being — a divine essence having a human experience.
-                At Temple Mother Earth, we honor the God within you.
+                The Divine resides within you. Whether you call it God, Source, Universe, Spirit, 
+                the Most High, the Creator, the Ancestors, the Great Mystery, Jah, Allah, Yahweh, 
+                Brahman, the Sacred, or simply Love — that infinite intelligence lives within your 
+                very being. You have always had the power to connect to it.
               </p>
               <p>
-                We came here to have an experience, and this is your sacred invitation to live it fully.
-                We are an inclusive community where all are welcome.
+                At Temple Mother Earth, we don't heal you — we hold sacred space for you to remember 
+                that you are your own healer. Through Earth Medicine, ceremony, and community, 
+                we help you reconnect with the divine wisdom that has always been yours.
               </p>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
@@ -270,7 +272,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="font-display text-sm font-semibold text-primary-foreground italic">
-                  "Through sacred practices and connection to Earth Medicine, we create a space for you to reconnect with your spiritual essence."
+                  "Find your way back home to the wisdom and divine intelligence that exists within your entire being. You are your own healer and savior."
                 </p>
               </div>
             </div>
