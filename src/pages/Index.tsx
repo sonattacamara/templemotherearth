@@ -620,10 +620,11 @@ const Index = () => {
                 </div>
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-card-foreground">Community Circles</h3>
+              <h3 className="font-display text-lg font-semibold text-card-foreground">Community Circles</h3>
+                <p className="mt-1 text-xs text-muted-foreground italic">Download the <a href="https://telegram.org/apps" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Telegram app</a> to join our community circles.</p>
                 <div className="mt-2 flex flex-col gap-2">
-                  <a href="https://bit.ly/MensIntegration" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Men's Integration Circle →</a>
-                  <a href="https://bit.ly/WombmanIntegration" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Wombmen's Integration Circle →</a>
+                  <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Men's Integration Circle →</a>
+                  <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Wombmen's Integration Circle →</a>
                 </div>
               </div>
               <div>

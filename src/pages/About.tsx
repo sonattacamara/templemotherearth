@@ -10,6 +10,7 @@ import facilitatorDebra from "@/assets/facilitator-debra.jpg";
 import facilitatorSpencer from "@/assets/facilitator-spencer.jpg";
 import facilitator3 from "@/assets/facilitator-3.jpg";
 import facilitatorSamira from "@/assets/facilitator-samira.jpg";
+import facilitatorGeorge from "@/assets/facilitator-george.jpg";
 import facilitator4 from "@/assets/facilitator-4.jpg";
 import logo from "@/assets/logo.png";
 
@@ -402,6 +403,12 @@ const About = () => {
                 role: "Herbalist & Earth Medicine Keeper",
                 img: facilitatorSamira,
                 desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding seekers toward holistic healing through the Earth's abundant pharmacy.",
+              },
+              {
+                name: "Dr. George Xavier Love, Jr.",
+                role: "Spiritual Elder & High Priest",
+                img: facilitatorGeorge,
+                desc: "A shaman, priest, physician, and scholar warrior, Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides seekers toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.",
               },
               {
                 name: "Mama Adjua",
