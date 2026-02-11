@@ -1,5 +1,6 @@
 import { motion, type Easing } from "framer-motion";
 import { Check, Crown, Flame, Heart, Leaf, Shield, Sparkles, Star, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
@@ -243,14 +244,12 @@ const Membership = () => {
                   ))}
                 </ul>
 
-                <a
-                  href={
+                <Link
+                  to={
                     tier.price === "Free"
-                      ? "https://integration.templemotherearth.org/auth"
-                      : `https://integration.templemotherearth.org/auth?tier=${encodeURIComponent(tier.name.toLowerCase())}`
+                      ? "/portal"
+                      : `/portal?tier=${encodeURIComponent(tier.name.toLowerCase())}`
                   }
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className={`mt-8 block rounded-xl py-3.5 text-center font-body text-sm font-semibold transition ${
                     tier.highlight
                       ? "bg-primary text-primary-foreground shadow-lg hover:bg-primary/80"
@@ -258,7 +257,7 @@ const Membership = () => {
                   }`}
                 >
                   {tier.price === "Free" ? "Join as Seeker — Free" : `Choose ${tier.name} — ${tier.price}/mo`}
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -353,14 +352,12 @@ const Membership = () => {
             sovereignty, and spiritual awakening.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
-              href="https://integration.templemotherearth.org/auth"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/portal"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
               Become a Member
-            </a>
+            </Link>
             <a
               href="/#contact"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"

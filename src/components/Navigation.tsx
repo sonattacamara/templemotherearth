@@ -58,14 +58,12 @@ const Navigation = () => {
           {navLinks.map((link) =>
             renderNavLink(link, "font-body text-sm text-primary-foreground/70 hover:text-primary transition-colors duration-200")
           )}
-          <a
-            href="https://integration.templemotherearth.org/auth"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/portal"
             className="rounded-lg border border-primary-foreground/30 px-4 py-2 font-body text-sm text-primary-foreground transition hover:bg-primary-foreground/10"
           >
             Member Login
-          </a>
+          </Link>
           <Link
             to="/ceremony-intake"
             className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
@@ -94,15 +92,13 @@ const Navigation = () => {
               () => setOpen(false)
             )
           )}
-          <a
-            href="https://integration.templemotherearth.org/auth"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/portal"
             onClick={() => setOpen(false)}
             className="block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors"
           >
             Member Login
-          </a>
+          </Link>
           <Link
             to="/ceremony-intake"
             onClick={() => setOpen(false)}

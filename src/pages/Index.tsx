@@ -160,7 +160,7 @@ const Index = () => {
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
       >
         <Leaf className="h-4 w-4" />
-        Offerings & Tithes
+        Donation
       </button>
 
       {/* ═══════════════════════════════════════════
@@ -441,14 +441,12 @@ const Index = () => {
             >
               Explore Membership Tiers
             </Link>
-            <a
-              href="https://integration.templemotherearth.org/auth?mode=signin"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/portal"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
               Member Login
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </section>
@@ -494,14 +492,12 @@ const Index = () => {
             >
               Begin Your Journey
             </Link>
-            <a
-              href="https://integration.templemotherearth.org/auth"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/portal"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
               Member Login
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </section>
@@ -571,15 +567,6 @@ const Index = () => {
             </div>
 
             <div className="mt-8 flex flex-col items-center gap-4">
-              <a
-                href="https://www.eventbrite.com/o/29347213477#events"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
-              >
-                View All of Our Offerings
-                <ArrowRight className="h-4 w-4" />
-              </a>
               <p className="text-xs text-muted-foreground">
                 Questions? Email us at{" "}
                 <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
@@ -632,11 +619,13 @@ const Index = () => {
                 </div>
               </div>
               <div>
-              <h3 className="font-display text-lg font-semibold text-card-foreground">Community Circles</h3>
+               <h3 className="font-display text-lg font-semibold text-card-foreground">Community Circles</h3>
                 <p className="mt-1 text-xs text-muted-foreground italic">Download the <a href="https://telegram.org/apps" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Telegram app</a> to join our community circles.</p>
                 <div className="mt-2 flex flex-col gap-2">
+                  <a href="https://web.telegram.org/k/#@templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🌍 Public Community Chat →</a>
                   <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Men's Integration Circle →</a>
                   <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Wombmen's Integration Circle →</a>
+                  <p className="text-xs text-muted-foreground/60 italic mt-1">Private circles are for members only</p>
                 </div>
               </div>
               <div>
@@ -651,14 +640,12 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Members Portal</h3>
-                <a
-                  href="https://integration.templemotherearth.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/portal"
                   className="mt-2 block text-primary hover:underline"
                 >
                   Integration & Wellness Platform →
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -715,14 +702,9 @@ const Index = () => {
               <Link to="/volunteer" className="hover:text-primary transition-colors">Volunteer</Link>
               <Link to="/preparation" className="hover:text-primary transition-colors">Preparation</Link>
               <Link to="/conduct" className="hover:text-primary transition-colors">Conduct</Link>
-              <a
-                href="https://integration.templemotherearth.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
+              <Link to="/portal" className="hover:text-primary transition-colors">
                 Members Portal
-              </a>
+              </Link>
             </div>
           </div>
           <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
