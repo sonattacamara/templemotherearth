@@ -63,10 +63,27 @@ const RetreatsInquiry = () => {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
-            <h3 className="font-display text-xl font-bold text-foreground">🇲🇽 Mexico: Life's Best Yes Retreat</h3>
-            <p className="mt-2 text-muted-foreground">October 31 – November 5, 2026</p>
-            <p className="mt-2 text-sm text-muted-foreground">Details and pricing coming soon. Submit your interest below to be the first to know.</p>
+          <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
+            <h3 className="font-display text-xl font-bold text-foreground">🇲🇽 Life's Best Yes Retreat — Sayulita, Mexico</h3>
+            <p className="mt-2 text-lg text-muted-foreground">October 31 – November 5, 2026</p>
+            <div className="mx-auto mt-4 max-w-xl space-y-3 text-sm text-muted-foreground text-left">
+              <p>
+                Join Temple Mother Earth in the vibrant coastal village of <strong className="text-foreground">Sayulita, Mexico</strong> for 
+                six transformative days of deep healing, Earth Medicine ceremony, and soul-level restoration.
+              </p>
+              <p>
+                This retreat is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
+                stored trauma from the body, and reclaim your natural state of peace. Through guided breathwork, 
+                body napping (deep somatic rest), movement practices, and sacred ceremony, you'll learn to 
+                <strong className="text-foreground">return your body to its healing baseline</strong> — not just during the retreat, but as a 
+                way of life.
+              </p>
+              <p>
+                Immerse yourself in Sayulita's lush jungle landscapes, Pacific Ocean energy, and rich Mexican 
+                culture while being held in a sacred container by our experienced facilitators.
+              </p>
+            </div>
+            <p className="mt-4 text-sm text-muted-foreground italic">Details and pricing coming soon. Submit your interest below to be the first to know.</p>
           </div>
         </div>
       </section>
