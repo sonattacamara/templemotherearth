@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { motion, type Easing, AnimatePresence } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
-import ceremonyImg from "@/assets/ceremony.jpg";
-import retreatImg from "@/assets/retreat.jpg";
 import communityImg from "@/assets/community.jpg";
+import offeringCeremony from "@/assets/offering-ceremony.jpg";
+import offeringRetreat from "@/assets/offering-retreat.jpg";
+import offeringTraveling from "@/assets/offering-traveling.jpg";
+import offeringPrivate from "@/assets/offering-private.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -59,7 +62,7 @@ const Index = () => {
                   through the PayPal Giving Fund helps us continue providing sacred ceremonies, healing spaces, and community support.
                 </p>
                 <a
-                  href="https://www.paypal.com/fundraiser/charity/5670665"
+                  href="https://www.paypal.com/donate?token=LRyF8sgpoxzE0fJco2m6v1OI0lEDJgWB0rvfvtUK8vmV_nDILBg3wlAsTTTGiCXJ86h3sJV6Jx4ALdJZovpT-44Pzqq&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 block rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
@@ -202,25 +205,25 @@ const Index = () => {
                 icon: Flame,
                 title: "Earth Medicine Ceremonies",
                 desc: "Sacred rituals guided by experienced practitioners honoring Kambo, Hapé, and ancient Earth Medicine traditions. Held locally in Washington, DC.",
-                img: ceremonyImg,
+                img: offeringCeremony,
               },
               {
                 icon: Globe,
                 title: "International Retreats",
                 desc: "Journey with us to breathtaking locations worldwide for immersive experiences that blend cultural richness with deep spiritual practice.",
-                img: retreatImg,
+                img: offeringRetreat,
               },
               {
                 icon: Users,
                 title: "Traveling Ceremonies",
                 desc: "We come to you. Invite Temple Mother Earth to hold personalized ceremonies in your community, tailored to your unique path and intentions.",
-                img: communityImg,
+                img: offeringTraveling,
               },
               {
                 icon: Heart,
                 title: "1-on-1 / Private Ceremonies",
                 desc: "Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey, held in a private and sacred setting.",
-                img: ceremonyImg,
+                img: offeringPrivate,
               },
             ].map((item) => (
               <motion.div
@@ -373,12 +376,12 @@ const Index = () => {
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="#events"
+            <Link
+              to="/ceremony-intake"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
-              Join a Ceremony
-            </a>
+              Book a Ceremony
+            </Link>
             <a
               href="#contact"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
@@ -462,23 +465,12 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground">Follow Us</h3>
-                <div className="mt-2 flex gap-4">
-                  <a
-                    href="https://www.instagram.com/templemotherearth/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href="https://www.facebook.com/TempleMotherEarth/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Facebook
-                  </a>
+                <div className="mt-2 flex flex-wrap gap-4">
+                  <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
+                  <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Facebook</a>
+                  <a href="https://x.com/TempleMother" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">X</a>
+                  <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Telegram</a>
+                  <a href="https://discord.gg/qBKfvBjRcc" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Discord</a>
                 </div>
               </div>
               <div>
