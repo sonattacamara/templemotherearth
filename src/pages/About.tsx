@@ -322,21 +322,29 @@ const About = () => {
               </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  King James is a ceremony facilitator, spiritual counselor, and co-founder of Temple Mother Earth
-                  whose powerful presence anchors every gathering in groundedness and sacred intention. His journey
-                  into Earth Medicine was catalyzed by a deep desire to break generational cycles of trauma
-                  and reconnect with ancestral wisdom.
+                   King James is a retired United States Air Force veteran, master beekeeper, accomplished martial artist,
+                   Master Mason, ceremony facilitator, and co-founder of Temple Mother Earth. His military service
+                   instilled a warrior's discipline and unwavering commitment to service — qualities he now channels
+                   into holding sacred space for healing and transformation.
                 </p>
                 <p>
-                  James brings a warrior's heart and a healer's touch to his work. He holds space with unwavering
-                  strength and compassion, guiding participants through Earth Medicine ceremonies with a depth
-                  of care that honors both the sacred traditions and each individual's unique path.
+                   James specializes in working with veterans and individuals navigating PTSD, drawing from his own
+                   journey of healing through Earth Medicine to guide others through their darkest chapters. His deep
+                   understanding of the veteran experience — the invisible wounds, the isolation, the search for purpose
+                   after service — makes him a uniquely powerful facilitator for those who have served.
                 </p>
                 <p>
-                  As the operational force behind Temple Mother Earth, James oversees community engagement,
-                  retreat coordination, and the expansion of TOME's traveling ceremony program. His vision
-                  is to bring sacred healing to communities that have been historically underserved,
-                  ensuring that Earth Medicine is accessible to all who seek it.
+                   As a master beekeeper, James embodies the sacred relationship between humanity and the natural world,
+                   tending to the pollinators that sustain Mother Earth. His practice of martial arts cultivates the
+                   balance of strength and stillness that defines his ceremonial presence. As a Master Mason, he carries
+                   forward ancient traditions of brotherhood, spiritual architecture, and moral foundation.
+                </p>
+                <p>
+                   As the operational force behind Temple Mother Earth, James oversees community engagement,
+                   retreat coordination, and the expansion of TOME's traveling ceremony program. His vision
+                   is to bring sacred healing to communities that have been historically underserved — especially
+                   fellow veterans and those carrying the weight of trauma — ensuring that Earth Medicine
+                   is accessible to all who seek it.
                 </p>
               </div>
             </div>
