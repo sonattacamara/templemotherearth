@@ -664,7 +664,7 @@ const Index = () => {
               <a href="#awakening" className="hover:text-primary transition-colors">About</a>
               <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
               <a href="#membership" className="hover:text-primary transition-colors">Membership</a>
-              <a href="#upcoming-offerings" className="hover:text-primary transition-colors">Offerings</a>
+              <a href="#upcoming-offerings" className="hover:text-primary transition-colors">Upcoming</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
               <a
                 href="https://integration.templemotherearth.org/"

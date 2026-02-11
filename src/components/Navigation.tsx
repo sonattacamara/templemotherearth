@@ -7,7 +7,6 @@ const navLinks = [
   { label: "About", href: "/about", isRoute: true },
   { label: "Offerings", href: "/#offerings", isRoute: false },
   { label: "Membership", href: "/membership", isRoute: true },
-  { label: "Offerings", href: "/#offerings", isRoute: false },
   { label: "Community", href: "/#community", isRoute: false },
   { label: "Contact", href: "/#contact", isRoute: false },
 ];
