@@ -3,6 +3,7 @@ import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft } from "lucide-r
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import aboutHero from "@/assets/about-hero.jpg";
+import sacredSpace from "@/assets/sacred-space.jpg";
 import founderSonatta from "@/assets/founder-sonatta.jpg";
 import founderJames from "@/assets/founder-james.jpg";
 import facilitator1 from "@/assets/facilitator-1.jpg";
@@ -87,7 +88,7 @@ const About = () => {
             </motion.div>
             <motion.div variants={fadeUp} className="relative">
               <img
-                src={aboutHero}
+                src={sacredSpace}
                 alt="Temple Mother Earth sacred space"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing, AnimatePresence } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, Calendar } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
@@ -59,29 +59,6 @@ const offerings = [
   },
 ];
 
-const weeklySchedule = [
-  { day: "Monday", events: [
-    { name: "Mindful Dose Co-working Space", link: "https://bit.ly/MMicrodoseMondays" },
-    { name: "Integration Circle Potluck", link: "https://bit.ly/TMEPotluck" },
-  ]},
-  { day: "Tuesday", events: [
-    { name: "Online Meditation", link: "https://bit.ly/VirtualMahaYoga" },
-  ]},
-  { day: "Thursday", events: [
-    { name: "Hapé Circle", link: "https://bit.ly/HapeCircle" },
-    { name: "Game Night", link: "https://bit.ly/CommunityGameNight" },
-  ]},
-  { day: "Friday", events: [
-    { name: "Freedom Fridays", link: "https://bit.ly/FreedomFridaysEvent" },
-  ]},
-  { day: "Saturday", events: [
-    { name: "Community Healing Day", link: "https://bit.ly/CommunityHealingDay" },
-  ]},
-  { day: "Sunday", events: [
-    { name: "Kambo Ceremony", link: "https://Kingkambo.com" },
-    { name: "Family Soulful Sundays", link: "https://bit.ly/FamilySoulfulSundays" },
-  ]},
-];
 
 const Index = () => {
   const [showDonation, setShowDonation] = useState(false);
@@ -105,31 +82,33 @@ const Index = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-lg rounded-2xl border border-border bg-background shadow-2xl overflow-hidden"
-              style={{ height: "80vh", maxHeight: "700px" }}
+              className="relative w-full max-w-md rounded-2xl border border-border bg-background shadow-2xl p-8 text-center"
             >
               <button
                 onClick={() => setShowDonation(false)}
-                className="absolute right-3 top-3 z-10 rounded-full bg-background/80 p-1.5 text-muted-foreground hover:text-foreground transition-colors"
+                className="absolute right-3 top-3 rounded-full bg-background/80 p-1.5 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
-              <div className="p-6 text-center border-b border-border">
-                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                  <HandHeart className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-display text-xl font-bold text-foreground">Keep the Temple Sustainable</h3>
-                <p className="mt-2 text-xs text-muted-foreground">
-                  Temple Mother Earth is a 501(c)(3) nonprofit. Your tax-deductible donation helps us continue.
-                </p>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                <HandHeart className="h-7 w-7 text-primary" />
               </div>
-              <iframe
-                src={PAYPAL_DONATE_URL}
-                title="Donate via PayPal"
-                className="w-full border-0"
-                style={{ height: "calc(100% - 120px)" }}
-                allow="payment"
-              />
+              <h3 className="font-display text-xl font-bold text-foreground">Keep the Temple Sustainable</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible donation
+                helps us continue to serve seekers, preserve Earth Medicine traditions, and grow our sacred community.
+              </p>
+              <a
+                href={PAYPAL_DONATE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+              >
+                Donate via PayPal
+              </a>
+              <p className="mt-3 text-xs text-muted-foreground">
+                You'll be redirected to PayPal's secure donation page.
+              </p>
             </motion.div>
           </motion.div>
         )}
@@ -452,50 +431,6 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* ───── WEEKLY RHYTHM ───── */}
-      <section className="bg-card px-4 py-24 md:py-32">
-        <motion.div
-          className="mx-auto max-w-5xl"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={stagger}
-        >
-          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Monthly Offerings
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
-            Our Weekly Rhythm
-          </motion.h2>
-          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            From meditation to ceremony, from co-working to community healing — there's a gathering for every seeker, every week.
-          </motion.p>
-
-          <motion.div variants={fadeUp} className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {weeklySchedule.map((day) => (
-              <div key={day.day} className="rounded-xl border border-border bg-background p-5">
-                <div className="flex items-center gap-2 mb-3">
-                  <Calendar className="h-4 w-4 text-primary" />
-                  <h3 className="font-display text-base font-semibold text-foreground">{day.day}</h3>
-                </div>
-                <div className="space-y-2">
-                  {day.events.map((event) => (
-                    <a
-                      key={event.name}
-                      href={event.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {event.name} →
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
 
       {/* ───── UPCOMING EVENTS (Eventbrite) ───── */}
       <section id="events" className="px-4 py-24 md:py-32">
@@ -527,7 +462,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
-              View All Events on Eventbrite
+              View All of Our Offerings
               <ArrowRight className="h-4 w-4" />
             </a>
           </motion.div>
@@ -573,9 +508,7 @@ const Index = () => {
                 <div className="mt-2 flex flex-wrap gap-4">
                   <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
                   <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Facebook</a>
-                  <a href="https://x.com/TempleMother" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">X</a>
                   <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Telegram</a>
-                  <a href="https://discord.gg/qBKfvBjRcc" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Discord</a>
                 </div>
               </div>
               <div>

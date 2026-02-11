@@ -71,7 +71,7 @@ const Navigation = () => {
             to="/ceremony-intake"
             className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
-            Book a Ceremony
+            Begin Your Journey
           </Link>
         </div>
 
@@ -109,7 +109,7 @@ const Navigation = () => {
             onClick={() => setOpen(false)}
             className="block mt-4 rounded-lg bg-primary px-5 py-3 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
-            Book a Ceremony
+            Begin Your Journey
           </Link>
         </div>
       )}
