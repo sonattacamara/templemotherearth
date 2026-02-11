@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 
@@ -9,10 +10,7 @@ const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
 };
-
-const stagger = {
-  visible: { transition: { staggerChildren: 0.12 } },
-};
+const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const CONTRAINDICATED_MEDICATIONS = [
   { key: "ssri", label: "SSRIs (Selective Serotonin Reuptake Inhibitors) — e.g., Prozac, Zoloft, Lexapro, Celexa, Paxil" },
@@ -31,80 +29,181 @@ const CONTRAINDICATED_MEDICATIONS = [
   { key: "herbsSupplements", label: "5-HTP, St. John's Wort, or other serotonergic supplements" },
 ];
 
+const MEDICAL_CONDITIONS = {
+  "Heart & Circulation": [
+    "Heart disease or heart condition", "High blood pressure", "Low blood pressure",
+    "Blood clotting disorder", "History of stroke", "History of aneurysm",
+  ],
+  "Neurological": [
+    "Seizure disorder or epilepsy", "History of traumatic brain injury", "Chronic migraines",
+  ],
+  "Organ Health": [
+    "Liver disease or liver condition", "Kidney disease", "Diabetes Type 1", "Diabetes Type 2", "Thyroid condition",
+  ],
+  "Mental Health": [
+    "Schizophrenia or schizoaffective disorder", "Bipolar disorder", "History of psychosis",
+    "Severe anxiety or panic disorder", "PTSD", "Active eating disorder", "Personality disorder diagnosis",
+  ],
+  "Respiratory": ["Asthma", "Chronic respiratory condition", "Sleep apnea"],
+  "Immune & Other": [
+    "Autoimmune disorder", "Cancer (active or in remission)", "HIV/AIDS", "Hepatitis", "Chronic pain condition",
+  ],
+  "Reproductive": ["Currently pregnant or possibility of pregnancy", "Currently breastfeeding"],
+  "Other": ["Recent surgery within last 6 months", "Silicone implants (breast, cosmetic, etc.)", "None of the above"],
+};
+
+const FLAGGED_CONDITIONS = [
+  "Schizophrenia or schizoaffective disorder", "Bipolar disorder", "History of psychosis",
+  "Seizure disorder or epilepsy", "Currently pregnant or possibility of pregnancy",
+  "History of aneurysm", "History of stroke",
+];
+
+const EARTH_MEDICINES = [
+  "Ayahuasca", "Kambo", "5-MeO-DMT (Bufo/Sapo)", "Psilocybin (mushrooms)",
+  "San Pedro / Huachuma", "Iboga / Ibogaine", "Hapé", "Cacao (ceremonial)",
+  "Sweat Lodge", "Cannabis in ceremony", "Other", "None - this will be my first experience",
+];
+
+const RECENT_SUBSTANCES = [
+  "Alcohol", "Cannabis/Marijuana", "Caffeine (excessive)", "Energy drinks",
+  "Recreational drugs", "Prescription sleep aids", "None of the above",
+];
+
 const CeremonyIntake = () => {
   const [step, setStep] = useState(1);
+  const [isFlagged, setIsFlagged] = useState(false);
+
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    dob: "",
-    emergencyName: "",
-    emergencyPhone: "",
-    emergencyRelation: "",
-    ceremonyType: "",
-    experienceLevel: "",
-    intentions: "",
-    heartCondition: false,
-    pregnant: false,
-    seizures: false,
-    diabetes: false,
-    highBloodPressure: false,
-    liverKidney: false,
-    mentalHealthHistory: "",
-    ptsd: false,
-    bipolar: false,
-    psychosis: false,
-    // Contraindicated medications
-    ssri: false,
-    snri: false,
-    maoi: false,
-    tca: false,
-    lithium: false,
-    benzodiazepines: false,
-    antipsychotics: false,
-    stimulants: false,
-    bloodThinners: false,
-    bloodPressureMeds: false,
-    opioids: false,
-    immunosuppressants: false,
-    sleepAids: false,
-    herbsSupplements: false,
+    fullName: "", email: "", phone: "", dob: "",
+    emergencyName: "", emergencyPhone: "", emergencyRelation: "",
+    ceremonyType: "", experienceLevel: "", intentions: "",
+    // Medications
+    takingMedications: "", medicationsList: "",
+    takingPsychMeds: "", psychMedsList: "",
+    recentPsychMeds: "", recentPsychMedsDetails: "",
+    takingBloodThinners: "", takingImmunosuppressants: "",
+    // Contraindicated meds
+    ...Object.fromEntries(CONTRAINDICATED_MEDICATIONS.map(m => [m.key, false])),
     medicationDetails: "",
     currentMedications: "",
-    allergies: "",
-    lastMealTime: "",
-    dietaryRestrictions: "",
-    spiritualGoals: "",
-    rfrAgreement: false,
-    liabilityWaiver: false,
-    truthfulness: false,
+    // Medical conditions
+    selectedConditions: [] as string[],
+    conditionDetails: "",
+    // Mental health
+    psychiatricHospital: "", psychiatricHospitalDetails: "",
+    suicidalIdeation: "", suicidalIdeationDetails: "",
+    psychoticEpisodes: "", psychoticEpisodesDetails: "",
+    inTherapy: "", therapistName: "",
+    recentTrauma: "", recentTraumaDetails: "",
+    emotionalStability: 5,
+    // Substance use
+    recreationalDrugs: "", recreationalDrugsDetails: "",
+    consumeAlcohol: "", alcoholFrequency: "",
+    useCannabis: "", cannabisFrequency: "",
+    substanceAbuseTreatment: "", substanceAbuseTreatmentDetails: "",
+    recentPsychedelics: "", recentPsychedelicsDetails: "",
+    recentSubstances: [] as string[],
+    // Allergies & Physical
+    hasAllergies: "", allergiesList: "",
+    frogAllergy: "",
+    foodSensitivities: "", foodSensitivitiesDetails: "",
+    weight: "", heightFeet: "", heightInches: "",
+    hasFasted: "", fastDuration: "",
+    mobilityLimitations: "", mobilityDetails: "",
+    difficultyFloor: "",
+    // Prev ceremony
+    ceremonyExperienceLevel: "",
+    previousMedicines: [] as string[],
+    previousMedicineOther: "",
+    previousExperienceDetails: "",
+    adverseReaction: "", adverseReactionDetails: "",
+    // Kambo-specific
+    hadKamboBefore: "", kamboTimes: "", lastKamboDate: "",
+    kamboSurgery: "", kamboPacemaker: "", kamboStroke: "",
+    kamboAddisons: "", kamboClotting: "", kamboTransplant: "",
+    kamboImplants: "", kamboWaterFast: "", kamboBufo28: "",
+    // Intentions & support
+    ceremonyIntention: "", seekingHealing: "",
+    integrationSupport: "",
+    howHeard: "", howHeardOther: "",
+    facilitatorNotes: "",
+    // Waivers
+    rfrAgreement: false, liabilityWaiver: false, truthfulness: false,
+    confidentiality: false, preparationCompliance: false, emergencyAuth: false,
   });
 
-  const update = (field: string, value: string | boolean) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+  const update = (field: string, value: any) => setFormData((prev) => ({ ...prev, [field]: value }));
+  const toggleArrayItem = (field: string, item: string) => {
+    const arr = formData[field as keyof typeof formData] as string[];
+    if (item === "None of the above" || item === "None - this will be my first experience") {
+      update(field, arr.includes(item) ? [] : [item]);
+    } else {
+      const filtered = arr.filter(i => i !== "None of the above" && i !== "None - this will be my first experience");
+      update(field, filtered.includes(item) ? filtered.filter(i => i !== item) : [...filtered, item]);
+    }
   };
 
   const hasFlaggedMedication = CONTRAINDICATED_MEDICATIONS.some(
     (med) => formData[med.key as keyof typeof formData] === true
+  ) || formData.takingPsychMeds === "yes" || formData.recentPsychMeds === "yes";
+
+  const hasFlaggedCondition = formData.selectedConditions.some(c => FLAGGED_CONDITIONS.includes(c));
+  const isHealthFlagged = hasFlaggedMedication || hasFlaggedCondition;
+
+  // Kambo-specific flags
+  const isKambo = formData.ceremonyType === "Kambo Ceremony";
+  const kamboFlagged = isKambo && (
+    formData.kamboSurgery === "yes" || formData.kamboPacemaker === "yes" ||
+    formData.kamboStroke === "yes" || formData.kamboAddisons === "yes" ||
+    formData.kamboClotting === "yes" || formData.kamboTransplant === "yes" ||
+    formData.kamboImplants === "yes" || formData.kamboBufo28 === "yes"
   );
+
+  const totalFlagged = isHealthFlagged || kamboFlagged;
 
   const canProceed = () => {
     if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob;
     if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
     if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions;
-    if (step === 4) return true;
-    if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness;
+    if (step === 4) return !totalFlagged;
+    if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth;
     return false;
   };
 
-  const handleSubmit = () => {
-    window.open("https://www.eventbrite.com/o/29347213477#events", "_blank");
-    setStep(6);
-  };
+  const handleSubmit = () => setStep(6);
 
-  const inputClass =
-    "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
+  const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
   const checkboxClass = "mr-3 h-4 w-4 rounded border-input accent-primary";
+  const radioYesNo = (field: string, value: string) => (
+    <div className="flex gap-4 mt-1">
+      {["yes", "no"].map(v => (
+        <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
+          <input type="radio" name={field} className={checkboxClass} checked={value === v} onChange={() => update(field, v)} />
+          {v === "yes" ? "Yes" : "No"}
+        </label>
+      ))}
+    </div>
+  );
+
+  const consultationAlert = (
+    <div className="rounded-lg border-2 border-accent bg-accent/20 p-5 text-sm space-y-3">
+      <p className="font-semibold text-accent-foreground text-base">
+        🙏 Thank you for your honesty.
+      </p>
+      <p className="text-muted-foreground">
+        Based on your responses, a private pre-ceremony consultation with our Sacred Earth Medicine Keeper is required before you can participate. This is for your safety and wellbeing. Please click below to schedule your consultation.
+      </p>
+      <a
+        href="mailto:info@templemotherearth.org?subject=Pre-Ceremony%20Consultation%20Request&body=I%20completed%20the%20Sacred%20Intake%20form%20and%20was%20flagged%20for%20a%20pre-ceremony%20consultation.%20Please%20contact%20me%20to%20schedule."
+        className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+      >
+        <Mail className="h-4 w-4" /> Schedule Consultation
+      </a>
+      <p className="text-xs text-muted-foreground">
+        If you believe this flag was triggered in error, please email us directly at info@templemotherearth.org
+      </p>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -112,36 +211,14 @@ const CeremonyIntake = () => {
 
       {/* Hero */}
       <section className="relative flex items-center justify-center px-4 pt-32 pb-16 md:pt-40 md:pb-24">
-        <motion.div
-          className="mx-auto max-w-3xl text-center"
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-        >
-          <motion.img
-            variants={fadeUp}
-            src={logo}
-            alt="Temple Mother Earth"
-            className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/30"
-          />
-          <motion.h1
-            variants={fadeUp}
-            className="font-display text-3xl font-bold text-foreground md:text-5xl"
-          >
-            Begin Your Journey
-          </motion.h1>
+        <motion.div className="mx-auto max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
+          <motion.img variants={fadeUp} src={logo} alt="Temple Mother Earth" className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/30" />
+          <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-foreground md:text-5xl">Begin Your Journey</motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Your safety and sacred experience are our highest priority. This intake process helps our
-            facilitators prepare the most supportive environment for your healing journey. Whether
-            you're a first-time seeker or experienced practitioner, every person who sits in ceremony
-            completes this sacred screening — it is how we honor the medicine, protect our community,
-            and ensure that each seeker receives the care they deserve.
+            Your safety and sacred experience are our highest priority. This intake process helps our facilitators prepare the most supportive environment for your healing journey.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
-            As a 501(c)(3) religious organization operating under the Religious Freedom Restoration Act (RFRA),
-            Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of
-            Earth Medicine ceremonies. This intake is required by our organizational protocols and serves as
-            your formal entry into our sacred ceremonial space.
+            As a 501(c)(3) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
           </motion.p>
         </motion.div>
       </section>
@@ -149,9 +226,7 @@ const CeremonyIntake = () => {
       {/* Why This Matters */}
       <section className="bg-card px-4 py-16">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center font-display text-2xl font-bold text-card-foreground md:text-3xl">
-            Why We Ask These Questions
-          </h2>
+          <h2 className="text-center font-display text-2xl font-bold text-card-foreground md:text-3xl">Why We Ask These Questions</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: ShieldCheck, title: "Your Safety", desc: "Earth Medicine works powerfully with the body. We screen for contraindications to keep you safe." },
@@ -174,19 +249,8 @@ const CeremonyIntake = () => {
         <div className="mx-auto max-w-2xl">
           <div className="flex items-center justify-between text-xs font-body text-muted-foreground">
             {["Personal Info", "Emergency Contact", "Ceremony Selection", "Health Screening", "Agreement"].map((label, i) => (
-              <div
-                key={label}
-                className={`flex flex-col items-center gap-1 ${i + 1 <= step ? "text-primary" : ""}`}
-              >
-                <div
-                  className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold ${
-                    i + 1 < step
-                      ? "bg-primary text-primary-foreground"
-                      : i + 1 === step
-                      ? "border-2 border-primary text-primary"
-                      : "border border-input text-muted-foreground"
-                  }`}
-                >
+              <div key={label} className={`flex flex-col items-center gap-1 ${i + 1 <= step ? "text-primary" : ""}`}>
+                <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold ${i + 1 < step ? "bg-primary text-primary-foreground" : i + 1 === step ? "border-2 border-primary text-primary" : "border border-input text-muted-foreground"}`}>
                   {i + 1 < step ? <CheckCircle2 className="h-4 w-4" /> : i + 1}
                 </div>
                 <span className="hidden sm:block text-center">{label}</span>
@@ -194,10 +258,7 @@ const CeremonyIntake = () => {
             ))}
           </div>
           <div className="mt-4 h-2 rounded-full bg-muted">
-            <div
-              className="h-2 rounded-full bg-primary transition-all duration-500"
-              style={{ width: `${((step - 1) / 4) * 100}%` }}
-            />
+            <div className="h-2 rounded-full bg-primary transition-all duration-500" style={{ width: `${((step - 1) / 4) * 100}%` }} />
           </div>
         </div>
       </section>
@@ -205,47 +266,44 @@ const CeremonyIntake = () => {
       {/* Form */}
       <section className="px-4 pb-24">
         <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
+
+          {/* Step 1: Personal Info */}
           {step === 1 && (
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Personal Information</h3>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Full Legal Name *</label>
-                <input className={inputClass} placeholder="Full Legal Name" value={formData.fullName} onChange={(e) => update("fullName", e.target.value)} required />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Email Address *</label>
-                <input className={inputClass} type="email" placeholder="Email Address" value={formData.email} onChange={(e) => update("email", e.target.value)} required />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Phone Number *</label>
-                <input className={inputClass} type="tel" placeholder="Phone Number" value={formData.phone} onChange={(e) => update("phone", e.target.value)} required />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Date of Birth *</label>
-                <input className={inputClass} type="date" value={formData.dob} onChange={(e) => update("dob", e.target.value)} required />
-              </div>
+              {[
+                { field: "fullName", label: "Full Legal Name *", type: "text", placeholder: "Full Legal Name" },
+                { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
+                { field: "phone", label: "Phone Number *", type: "tel", placeholder: "Phone Number" },
+                { field: "dob", label: "Date of Birth *", type: "date", placeholder: "" },
+              ].map(f => (
+                <div key={f.field}>
+                  <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
+                  <input className={inputClass} type={f.type} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                </div>
+              ))}
             </div>
           )}
 
+          {/* Step 2: Emergency Contact */}
           {step === 2 && (
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Emergency Contact</h3>
               <p className="text-sm text-muted-foreground">This person will be contacted only in the event of an emergency during ceremony.</p>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Emergency Contact Name *</label>
-                <input className={inputClass} placeholder="Emergency Contact Name" value={formData.emergencyName} onChange={(e) => update("emergencyName", e.target.value)} required />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Emergency Contact Phone *</label>
-                <input className={inputClass} type="tel" placeholder="Emergency Contact Phone" value={formData.emergencyPhone} onChange={(e) => update("emergencyPhone", e.target.value)} required />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Relationship to You *</label>
-                <input className={inputClass} placeholder="Relationship to You" value={formData.emergencyRelation} onChange={(e) => update("emergencyRelation", e.target.value)} required />
-              </div>
+              {[
+                { field: "emergencyName", label: "Emergency Contact Name *", placeholder: "Emergency Contact Name" },
+                { field: "emergencyPhone", label: "Emergency Contact Phone *", placeholder: "Emergency Contact Phone", type: "tel" },
+                { field: "emergencyRelation", label: "Relationship to You *", placeholder: "Relationship to You" },
+              ].map(f => (
+                <div key={f.field}>
+                  <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
+                  <input className={inputClass} type={(f as any).type || "text"} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                </div>
+              ))}
             </div>
           )}
 
+          {/* Step 3: Ceremony Selection */}
           {step === 3 && (
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Ceremony Selection</h3>
@@ -274,101 +332,389 @@ const CeremonyIntake = () => {
             </div>
           )}
 
+          {/* Step 4: Health Screening (Comprehensive) */}
           {step === 4 && (
-            <div className="space-y-5">
+            <div className="space-y-8">
               <h3 className="font-display text-xl font-bold text-card-foreground">Health & Medical Screening</h3>
-              <div className="rounded-lg bg-destructive/10 p-4 text-sm text-destructive">
-                <strong>Important:</strong> Please answer honestly. Certain medical conditions and medications can create dangerous — even life-threatening — interactions with Earth Medicine. Your transparency protects your life.
+
+              {/* Critical Warning Banner */}
+              <div className="rounded-lg bg-destructive/15 border border-destructive/30 p-4 text-sm text-destructive">
+                <strong>⚠️ IMPORTANT:</strong> Please answer ALL health questions honestly and completely. Withholding medical information can be life-threatening. All information is kept strictly confidential.
               </div>
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">Do you have any of the following conditions?</label>
-                {[
-                  { key: "heartCondition", label: "Heart condition or cardiovascular disease" },
-                  { key: "pregnant", label: "Currently pregnant or breastfeeding" },
-                  { key: "seizures", label: "History of seizures or epilepsy" },
-                  { key: "diabetes", label: "Diabetes (Type 1 or 2)" },
-                  { key: "highBloodPressure", label: "High blood pressure (uncontrolled)" },
-                  { key: "liverKidney", label: "Liver or kidney disease" },
-                ].map((item) => (
-                  <label key={item.key} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
-                    <input type="checkbox" className={checkboxClass} checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, e.target.checked)} />
-                    {item.label}
-                  </label>
-                ))}
-              </div>
+              {/* Current Medications */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Current Medications</h4>
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">Mental Health History</label>
-                {[
-                  { key: "ptsd", label: "PTSD or C-PTSD" },
-                  { key: "bipolar", label: "Bipolar Disorder" },
-                  { key: "psychosis", label: "History of Psychosis or Schizophrenia" },
-                ].map((item) => (
-                  <label key={item.key} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
-                    <input type="checkbox" className={checkboxClass} checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, e.target.checked)} />
-                    {item.label}
-                  </label>
-                ))}
-                <textarea className={inputClass + " mt-2 min-h-[80px] resize-none"} placeholder="Please share any additional mental health context that would help our facilitators support you..." value={formData.mentalHealthHistory} onChange={(e) => update("mentalHealthHistory", e.target.value)} />
-              </div>
-
-              <div>
-                <label className="mb-2 block text-sm font-medium text-foreground">
-                  Contraindicated Medications — Are you currently taking any of the following?
-                </label>
-                <div className="rounded-lg bg-destructive/10 p-3 text-sm text-destructive mb-3">
-                  ⚠️ <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions when combined with Earth Medicine. You may need to taper off under medical supervision before ceremony. <strong>Do not stop any medication without consulting your doctor.</strong>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you currently taking any medications? *</label>
+                  {radioYesNo("takingMedications", formData.takingMedications)}
+                  {formData.takingMedications === "yes" && (
+                    <textarea className={inputClass + " mt-2 min-h-[80px] resize-none"} placeholder="List ALL current medications including prescription, over-the-counter, and supplements with dosages" value={formData.medicationsList} onChange={(e) => update("medicationsList", e.target.value)} />
+                  )}
                 </div>
-                <div className="space-y-2 max-h-64 overflow-y-auto rounded-lg border border-border p-3">
-                  {CONTRAINDICATED_MEDICATIONS.map((med) => (
-                    <label key={med.key} className="flex items-start gap-2 text-sm text-foreground cursor-pointer">
-                      <input
-                        type="checkbox"
-                        className="mt-0.5 h-4 w-4 rounded border-input accent-primary"
-                        checked={formData[med.key as keyof typeof formData] as boolean}
-                        onChange={(e) => update(med.key, e.target.checked)}
-                      />
-                      <span>{med.label}</span>
-                    </label>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you currently taking any SSRIs, SNRIs, MAOIs, lithium, anti-psychotics, or psychiatric medications? *</label>
+                  {radioYesNo("takingPsychMeds", formData.takingPsychMeds)}
+                  {formData.takingPsychMeds === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please list the specific psychiatric medications and dosages" value={formData.psychMedsList} onChange={(e) => update("psychMedsList", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you taken any psychiatric medications in the last 30 days? *</label>
+                  {radioYesNo("recentPsychMeds", formData.recentPsychMeds)}
+                  {formData.recentPsychMeds === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Which medications and when did you stop?" value={formData.recentPsychMedsDetails} onChange={(e) => update("recentPsychMedsDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you currently taking any blood thinners or heart medications? *</label>
+                  {radioYesNo("takingBloodThinners", formData.takingBloodThinners)}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you currently taking any immunosuppressant medications? *</label>
+                  {radioYesNo("takingImmunosuppressants", formData.takingImmunosuppressants)}
+                </div>
+
+                {/* Contraindicated Medications Checklist */}
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-foreground">Contraindicated Medications — Are you currently taking any of the following?</label>
+                  <div className="rounded-lg bg-destructive/10 p-3 text-sm text-destructive mb-3">
+                    ⚠️ <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions. <strong>Do not stop any medication without consulting your doctor.</strong>
+                  </div>
+                  <div className="space-y-2 max-h-64 overflow-y-auto rounded-lg border border-border p-3">
+                    {CONTRAINDICATED_MEDICATIONS.map((med) => (
+                      <label key={med.key} className="flex items-start gap-2 text-sm text-foreground cursor-pointer">
+                        <input type="checkbox" className="mt-0.5 h-4 w-4 rounded border-input accent-primary" checked={formData[med.key as keyof typeof formData] as boolean} onChange={(e) => update(med.key, (e.target as HTMLInputElement).checked)} />
+                        <span>{med.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                  {hasFlaggedMedication && (
+                    <textarea className={inputClass + " mt-3 min-h-[80px] resize-none"} placeholder="Please list the specific medications, dosages, how long you've been taking them, and when you last took them..." value={formData.medicationDetails} onChange={(e) => update("medicationDetails", e.target.value)} />
+                  )}
+                </div>
+              </div>
+
+              {/* Medical Conditions */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Medical Conditions</h4>
+                <p className="text-sm text-muted-foreground">Check ALL conditions that apply to you, past or present:</p>
+                {Object.entries(MEDICAL_CONDITIONS).map(([category, conditions]) => (
+                  <div key={category}>
+                    <p className="text-sm font-semibold text-foreground mt-3 mb-1">{category.toUpperCase()}</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                      {conditions.map(c => (
+                        <label key={c} className="flex items-center text-sm text-foreground cursor-pointer py-0.5">
+                          <input type="checkbox" className={checkboxClass} checked={formData.selectedConditions.includes(c)} onChange={() => toggleArrayItem("selectedConditions", c)} />
+                          {c}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Please describe any conditions you checked above or any other medical conditions not listed (optional)" value={formData.conditionDetails} onChange={(e) => update("conditionDetails", e.target.value)} />
+              </div>
+
+              {/* Mental Health History */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Mental Health History</h4>
+
+                {[
+                  { field: "psychiatricHospital", details: "psychiatricHospitalDetails", q: "Have you ever been hospitalized for psychiatric reasons? *", placeholder: "Please briefly describe" },
+                  { field: "suicidalIdeation", details: "suicidalIdeationDetails", q: "Have you ever experienced suicidal ideation or suicide attempts? *", placeholder: "Please briefly describe and indicate if this is current" },
+                  { field: "psychoticEpisodes", details: "psychoticEpisodesDetails", q: "Have you ever experienced psychotic episodes, hallucinations, or delusions outside of a ceremony setting? *", placeholder: "Please describe" },
+                  { field: "inTherapy", details: "therapistName", q: "Are you currently in therapy or under the care of a mental health professional? *", placeholder: "Name of therapist or provider (optional)" },
+                  { field: "recentTrauma", details: "recentTraumaDetails", q: "Have you experienced any major emotional trauma in the last 6 months? *", placeholder: "Please briefly describe" },
+                ].map(item => (
+                  <div key={item.field}>
+                    <label className="block text-sm font-medium text-foreground">{item.q}</label>
+                    {radioYesNo(item.field, formData[item.field as keyof typeof formData] as string)}
+                    {formData[item.field as keyof typeof formData] === "yes" && (
+                      <input className={inputClass + " mt-2"} placeholder={item.placeholder} value={formData[item.details as keyof typeof formData] as string} onChange={(e) => update(item.details, e.target.value)} />
+                    )}
+                  </div>
+                ))}
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">On a scale of 1-10, how would you rate your current emotional stability? *</label>
+                  <p className="text-xs text-muted-foreground">1 = Very unstable · 10 = Very stable</p>
+                  <div className="flex items-center gap-3 mt-2">
+                    <input type="range" min={1} max={10} value={formData.emotionalStability} onChange={(e) => update("emotionalStability", parseInt(e.target.value))} className="flex-1 accent-primary" />
+                    <span className="text-lg font-semibold text-primary w-8 text-center">{formData.emotionalStability}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Substance Use */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Substance Use</h4>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you currently use any recreational drugs or substances? *</label>
+                  {radioYesNo("recreationalDrugs", formData.recreationalDrugs)}
+                  {formData.recreationalDrugs === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please specify substances and frequency of use" value={formData.recreationalDrugsDetails} onChange={(e) => update("recreationalDrugsDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you consume alcohol? *</label>
+                  {radioYesNo("consumeAlcohol", formData.consumeAlcohol)}
+                  {formData.consumeAlcohol === "yes" && (
+                    <select className={inputClass + " mt-2"} value={formData.alcoholFrequency} onChange={(e) => update("alcoholFrequency", e.target.value)}>
+                      <option value="">How often?</option>
+                      {["Daily", "Several times per week", "Weekly", "Occasionally", "Rarely"].map(o => <option key={o} value={o}>{o}</option>)}
+                    </select>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you use cannabis/marijuana? *</label>
+                  {radioYesNo("useCannabis", formData.useCannabis)}
+                  {formData.useCannabis === "yes" && (
+                    <select className={inputClass + " mt-2"} value={formData.cannabisFrequency} onChange={(e) => update("cannabisFrequency", e.target.value)}>
+                      <option value="">How often?</option>
+                      {["Daily", "Several times per week", "Weekly", "Occasionally", "Rarely"].map(o => <option key={o} value={o}>{o}</option>)}
+                    </select>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you ever been in treatment for substance abuse or addiction? *</label>
+                  {radioYesNo("substanceAbuseTreatment", formData.substanceAbuseTreatment)}
+                  {formData.substanceAbuseTreatment === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please briefly describe" value={formData.substanceAbuseTreatmentDetails} onChange={(e) => update("substanceAbuseTreatmentDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you used any psychedelics or plant medicines in the last 30 days? *</label>
+                  {radioYesNo("recentPsychedelics", formData.recentPsychedelics)}
+                  {formData.recentPsychedelics === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please specify which medicine(s) and the date(s)" value={formData.recentPsychedelicsDetails} onChange={(e) => update("recentPsychedelicsDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you consumed any of the following in the last 48 hours? (Check all that apply) *</label>
+                  <div className="mt-2 space-y-1">
+                    {RECENT_SUBSTANCES.map(s => (
+                      <label key={s} className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="checkbox" className={checkboxClass} checked={formData.recentSubstances.includes(s)} onChange={() => toggleArrayItem("recentSubstances", s)} />
+                        {s}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Allergies & Physical Health */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Allergies & Physical Health</h4>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have any known allergies? *</label>
+                  {radioYesNo("hasAllergies", formData.hasAllergies)}
+                  {formData.hasAllergies === "yes" && (
+                    <textarea className={inputClass + " mt-2 min-h-[60px] resize-none"} placeholder="List all allergies (medications, foods, environmental, latex, etc.)" value={formData.allergiesList} onChange={(e) => update("allergiesList", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you allergic to tree frogs, amphibian secretions, or frog peptides? *</label>
+                  <p className="text-xs text-muted-foreground">This is specifically important for Kambo ceremonies</p>
+                  {radioYesNo("frogAllergy", formData.frogAllergy)}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have any food sensitivities or dietary restrictions? *</label>
+                  {radioYesNo("foodSensitivities", formData.foodSensitivities)}
+                  {formData.foodSensitivities === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please describe" value={formData.foodSensitivitiesDetails} onChange={(e) => update("foodSensitivitiesDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="mb-1 block text-sm font-medium text-foreground">Current weight (lbs) *</label>
+                    <input className={inputClass} type="number" placeholder="Weight" value={formData.weight} onChange={(e) => update("weight", e.target.value)} />
+                  </div>
+                  <div>
+                    <label className="mb-1 block text-sm font-medium text-foreground">Height *</label>
+                    <div className="flex gap-2">
+                      <select className={inputClass} value={formData.heightFeet} onChange={(e) => update("heightFeet", e.target.value)}>
+                        <option value="">Feet</option>
+                        {[4,5,6,7].map(f => <option key={f} value={f}>{f}'</option>)}
+                      </select>
+                      <select className={inputClass} value={formData.heightInches} onChange={(e) => update("heightInches", e.target.value)}>
+                        <option value="">Inches</option>
+                        {Array.from({length:12},(_,i)=>i).map(i => <option key={i} value={i}>{i}"</option>)}
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you fasted before (water fast, juice fast, dry fast)? *</label>
+                  {radioYesNo("hasFasted", formData.hasFasted)}
+                  {formData.hasFasted === "yes" && (
+                    <select className={inputClass + " mt-2"} value={formData.fastDuration} onChange={(e) => update("fastDuration", e.target.value)}>
+                      <option value="">Longest fast duration</option>
+                      {["1 day", "2-3 days", "4-7 days", "7+ days"].map(o => <option key={o} value={o}>{o}</option>)}
+                    </select>
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have any mobility limitations, chronic pain, or physical disabilities? *</label>
+                  {radioYesNo("mobilityLimitations", formData.mobilityLimitations)}
+                  {formData.mobilityLimitations === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please describe" value={formData.mobilityDetails} onChange={(e) => update("mobilityDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have any difficulty sitting on the floor for extended periods? *</label>
+                  {radioYesNo("difficultyFloor", formData.difficultyFloor)}
+                </div>
+              </div>
+
+              {/* Previous Ceremony Experience */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Previous Ceremony Experience</h4>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you participated in plant medicine or earth medicine ceremonies before? *</label>
+                  <select className={inputClass + " mt-1"} value={formData.ceremonyExperienceLevel} onChange={(e) => update("ceremonyExperienceLevel", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["This is my first time", "1-3 times", "4-10 times", "10+ times"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Which earth medicines have you worked with? (Select all that apply)</label>
+                  <div className="mt-2 space-y-1">
+                    {EARTH_MEDICINES.map(m => (
+                      <label key={m} className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="checkbox" className={checkboxClass} checked={formData.previousMedicines.includes(m)} onChange={() => toggleArrayItem("previousMedicines", m)} />
+                        {m}
+                      </label>
+                    ))}
+                  </div>
+                  {formData.previousMedicines.includes("Other") && (
+                    <input className={inputClass + " mt-2"} placeholder="Please specify" value={formData.previousMedicineOther} onChange={(e) => update("previousMedicineOther", e.target.value)} />
+                  )}
+                </div>
+
+                <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="If you have previous ceremony experience, briefly describe your experiences and any difficult reactions you had (optional)" value={formData.previousExperienceDetails} onChange={(e) => update("previousExperienceDetails", e.target.value)} />
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Have you ever had a difficult, challenging, or adverse reaction during a ceremony? *</label>
+                  {radioYesNo("adverseReaction", formData.adverseReaction)}
+                  {formData.adverseReaction === "yes" && (
+                    <textarea className={inputClass + " mt-2 min-h-[60px] resize-none"} placeholder="Please describe what happened and how it was resolved" value={formData.adverseReactionDetails} onChange={(e) => update("adverseReactionDetails", e.target.value)} />
+                  )}
+                </div>
+              </div>
+
+              {/* Kambo-Specific Screening */}
+              {isKambo && (
+                <div className="space-y-4">
+                  <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Kambo-Specific Safety Screening</h4>
+                  <p className="text-sm text-muted-foreground">Kambo is a powerful earth medicine that requires additional safety screening. Please answer these questions carefully.</p>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground">Have you had Kambo before? *</label>
+                    {radioYesNo("hadKamboBefore", formData.hadKamboBefore)}
+                    {formData.hadKamboBefore === "yes" && (
+                      <div className="mt-2 flex gap-3">
+                        <select className={inputClass} value={formData.kamboTimes} onChange={(e) => update("kamboTimes", e.target.value)}>
+                          <option value="">How many times?</option>
+                          {["1", "2-5", "6-10", "10+"].map(o => <option key={o} value={o}>{o}</option>)}
+                        </select>
+                        <input className={inputClass} type="date" placeholder="Last session date" value={formData.lastKamboDate} onChange={(e) => update("lastKamboDate", e.target.value)} />
+                      </div>
+                    )}
+                  </div>
+
+                  {[
+                    { field: "kamboSurgery", q: "Have you had any surgery in the last 6 months?" },
+                    { field: "kamboPacemaker", q: "Do you have a pacemaker or any heart implant?" },
+                    { field: "kamboStroke", q: "Have you ever had a stroke or brain hemorrhage?" },
+                    { field: "kamboAddisons", q: "Do you have Addison's disease?" },
+                    { field: "kamboClotting", q: "Do you have any blood clotting disorders (e.g., Factor V Leiden)?" },
+                    { field: "kamboTransplant", q: "Have you had any organ transplants?" },
+                    { field: "kamboImplants", q: "Do you have any silicone implants (breast implants, cosmetic fillers, etc.)?" },
+                    { field: "kamboWaterFast", q: "Are you currently on a water fast or have you been fasting for more than 24 hours?" },
+                    { field: "kamboBufo28", q: "Have you consumed any Bufo/5-MeO-DMT in the last 28 days?" },
+                  ].map(item => (
+                    <div key={item.field}>
+                      <label className="block text-sm font-medium text-foreground">{item.q} *</label>
+                      {radioYesNo(item.field, formData[item.field as keyof typeof formData] as string)}
+                    </div>
                   ))}
                 </div>
-                {hasFlaggedMedication && (
-                  <div className="mt-3 space-y-2">
-                    <div className="rounded-lg bg-accent p-3 text-sm text-accent-foreground">
-                      You've indicated you're taking one or more contraindicated medications. Please provide details below so our facilitators can assess safety and guide you on next steps.
+              )}
+
+              {/* Intentions & Support */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Intentions & Support</h4>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">What is your intention for this ceremony or healing experience? *</label>
+                  <p className="text-xs text-muted-foreground">There is no wrong answer. Share what is calling you to this work.</p>
+                  <textarea className={inputClass + " mt-1 min-h-[80px] resize-none"} placeholder="Share your intention..." value={formData.ceremonyIntention} onChange={(e) => update("ceremonyIntention", e.target.value)} />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Is there anything specific you are seeking healing for? (Physical, emotional, spiritual, relational)</label>
+                  <textarea className={inputClass + " mt-1 min-h-[60px] resize-none"} placeholder="Optional" value={formData.seekingHealing} onChange={(e) => update("seekingHealing", e.target.value)} />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have integration support in place after your ceremony? *</label>
+                  <p className="text-xs text-muted-foreground">(therapist, coach, support group, trusted friend/family)</p>
+                  {radioYesNo("integrationSupport", formData.integrationSupport)}
+                  {formData.integrationSupport === "no" && (
+                    <div className="mt-2 rounded-lg bg-primary/10 p-3 text-sm text-primary">
+                      We offer integration circles and support. We will connect you with resources after your ceremony.
                     </div>
-                    <textarea
-                      className={inputClass + " min-h-[80px] resize-none"}
-                      placeholder="Please list the specific medications, dosages, how long you've been taking them, and when you last took them..."
-                      value={formData.medicationDetails}
-                      onChange={(e) => update("medicationDetails", e.target.value)}
-                      required
-                    />
-                  </div>
-                )}
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">How did you hear about Temple Mother Earth? *</label>
+                  <select className={inputClass + " mt-1"} value={formData.howHeard} onChange={(e) => update("howHeard", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["Instagram", "Facebook", "Friend or family referral", "Google search", "Eventbrite", "Ayahuasca Advisor", "RootSeller", "Return member", "Community event", "Other"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                  {formData.howHeard === "Other" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please specify" value={formData.howHeardOther} onChange={(e) => update("howHeardOther", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Is there anything else the facilitators should know to support you safely and lovingly during ceremony?</label>
+                  <textarea className={inputClass + " mt-1 min-h-[60px] resize-none"} placeholder="Optional" value={formData.facilitatorNotes} onChange={(e) => update("facilitatorNotes", e.target.value)} />
+                </div>
               </div>
 
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Other current medications not listed above</label>
-                <input className={inputClass} placeholder="List any other medications you are currently taking" value={formData.currentMedications} onChange={(e) => update("currentMedications", e.target.value)} />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Known allergies</label>
-                <input className={inputClass} placeholder="List any known allergies" value={formData.allergies} onChange={(e) => update("allergies", e.target.value)} />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Dietary restrictions</label>
-                <input className={inputClass} placeholder="Dietary restrictions" value={formData.dietaryRestrictions} onChange={(e) => update("dietaryRestrictions", e.target.value)} />
-              </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">Spiritual goals & what you hope to receive</label>
-                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Share your spiritual intentions, what brought you to Earth Medicine, and what you hope to carry forward..." value={formData.spiritualGoals} onChange={(e) => update("spiritualGoals", e.target.value)} />
-              </div>
+              {/* Safety Flagging */}
+              {totalFlagged ? consultationAlert : (
+                <div className="rounded-lg bg-primary/10 border border-primary/30 p-4 flex items-center gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                  <p className="text-sm text-foreground font-medium">Health screening complete. You may proceed to the Sacred Agreement.</p>
+                </div>
+              )}
             </div>
           )}
 
+          {/* Step 5: Sacred Agreement & Waiver */}
           {step === 5 && (
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Sacred Agreement & Waiver</h3>
@@ -386,66 +732,75 @@ const CeremonyIntake = () => {
                 </ul>
               </div>
 
+              {/* RFRA & Liability */}
               <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
                 <p className="font-semibold text-foreground">Religious Freedom Restoration Act (RFRA) Declaration</p>
-                <p>
-                  Temple Mother Earth is a 501(c)(3) nonprofit religious organization. Our sacramental use of Earth Medicine
-                  is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies,
-                  you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community
-                  that holds the beliefs stated above.
-                </p>
+                <p>Temple Mother Earth is a 501(c)(3) nonprofit religious organization. Our sacramental use of Earth Medicine is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies, you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community that holds the beliefs stated above.</p>
                 <p className="font-semibold text-foreground">Assumption of Risk & Liability Waiver</p>
-                <p>
-                  I understand that participation in Earth Medicine ceremonies carries inherent risks. I voluntarily assume all risks
-                  associated with my participation. I release Temple Mother Earth, its facilitators, staff, and volunteers from any
-                  and all liability arising from my participation in ceremonies, retreats, and related activities.
-                </p>
-                <p>
-                  I understand that Earth Medicine is not a substitute for professional medical care and that I am encouraged to
-                  continue working with my healthcare providers. I acknowledge that my healing journey is my own responsibility,
-                  and that the facilitators serve as guides in a sacred ceremonial context protected under RFRA.
-                </p>
+                <p>I understand that participation in Earth Medicine ceremonies carries inherent risks. I voluntarily assume all risks associated with my participation. I release Temple Mother Earth, its facilitators, staff, and volunteers from any and all liability arising from my participation in ceremonies, retreats, and related activities.</p>
+                <p>I understand that Earth Medicine is not a substitute for professional medical care and that I am encouraged to continue working with my healthcare providers.</p>
               </div>
 
-              <label className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
-                <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData.rfrAgreement} onChange={(e) => update("rfrAgreement", e.target.checked)} />
-                <span>I have read and affirm the Statement of Beliefs. I acknowledge the RFRA declaration and understand the religious context of these ceremonies. *</span>
-              </label>
+              {/* Additional Waiver Sections */}
+              <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
+                <p className="font-semibold text-foreground">Confidentiality Agreement</p>
+                <p>I agree to maintain the confidentiality of all participants, facilitators, and ceremony details at Temple Mother Earth. I will not share names, personal stories, photographs, or identifying details of others without their explicit written consent.</p>
 
-              <label className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
-                <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData.liabilityWaiver} onChange={(e) => update("liabilityWaiver", e.target.checked)} />
-                <span>I voluntarily assume all risks and release Temple Mother Earth from liability. I understand that my healing journey is my own responsibility, and I take full ownership of my experience within this sacred ceremonial context. *</span>
-              </label>
+                <p className="font-semibold text-foreground">Media & Recording Policy</p>
+                <p>I understand that photography, video recording, and audio recording are strictly prohibited during all ceremonies unless explicitly authorized by Temple Mother Earth leadership. Violation of this policy may result in removal from ceremony without refund.</p>
 
-              <label className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
-                <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData.truthfulness} onChange={(e) => update("truthfulness", e.target.checked)} />
-                <span>I certify that all information provided is truthful and complete. I understand that withholding medical information could endanger my life. *</span>
-              </label>
+                <p className="font-semibold text-foreground">Substance Compliance</p>
+                <p>I confirm that I have followed all pre-ceremony dietary and substance guidelines provided to me. I have not consumed alcohol within 48 hours of this ceremony, and I have disclosed all substances currently in my system. I understand that failure to comply may result in being unable to participate for my own safety.</p>
+
+                <p className="font-semibold text-foreground">Emergency Medical Authorization</p>
+                <p>In the event of a medical emergency during ceremony, I authorize Temple Mother Earth staff to contact emergency medical services (911) on my behalf and to share relevant medical information from this intake form with emergency responders to ensure my safety.</p>
+              </div>
+
+              {/* All checkboxes */}
+              {[
+                { key: "rfrAgreement", label: "I have read and affirm the Statement of Beliefs. I acknowledge the RFRA declaration and understand the religious context of these ceremonies. *" },
+                { key: "liabilityWaiver", label: "I voluntarily assume all risks and release Temple Mother Earth from liability. I understand that my healing journey is my own responsibility. *" },
+                { key: "truthfulness", label: "I certify that all information provided is truthful and complete. I understand that withholding medical information could endanger my life. *" },
+                { key: "confidentiality", label: "I agree to maintain the confidentiality of all ceremony participants, facilitators, and ceremony details. *" },
+                { key: "preparationCompliance", label: "I confirm I have followed all pre-ceremony preparation guidelines provided to me. *" },
+                { key: "emergencyAuth", label: "I authorize emergency medical services to be contacted on my behalf if needed during ceremony. *" },
+              ].map(item => (
+                <label key={item.key} className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
+                  <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, (e.target as HTMLInputElement).checked)} />
+                  <span>{item.label}</span>
+                </label>
+              ))}
             </div>
           )}
 
+          {/* Step 6: Thank You */}
           {step === 6 && (
             <div className="text-center py-8">
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
-              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">
-                Thank You, Sacred Seeker
-              </h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Seeker</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Your intake has been submitted. You've been redirected to our Eventbrite page to select and book your ceremony date.
-                Our facilitators will review your screening and reach out if they need any additional information.
+                Your Sacred Intake has been submitted successfully. Our facilitators will review your screening and reach out if they need any additional information. You are now ready to enter the ceremony.
               </p>
               <p className="mt-4 text-sm text-muted-foreground">
                 Questions? Email us at{" "}
-                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">
-                  AskUs@TempleMotherEarth.org
-                </a>
+                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
               </p>
-              <a
-                href="/"
-                className="mt-8 inline-block rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-              >
-                Return Home
-              </a>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://www.eventbrite.com/o/29347213477#events"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  Enter the Ceremony <ArrowRight className="h-4 w-4" />
+                </a>
+                <Link
+                  to="/"
+                  className="inline-flex items-center justify-center rounded-xl border border-input px-8 py-3 font-body text-sm font-semibold text-foreground transition hover:bg-accent"
+                >
+                  Return Home
+                </Link>
+              </div>
             </div>
           )}
 
@@ -453,29 +808,14 @@ const CeremonyIntake = () => {
           {step <= 5 && (
             <div className="mt-8 flex items-center justify-between">
               {step > 1 ? (
-                <button
-                  onClick={() => setStep(step - 1)}
-                  className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent"
-                >
-                  Back
-                </button>
-              ) : (
-                <div />
-              )}
+                <button onClick={() => setStep(step - 1)} className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent">Back</button>
+              ) : <div />}
               {step < 5 ? (
-                <button
-                  onClick={() => canProceed() && setStep(step + 1)}
-                  disabled={!canProceed()}
-                  className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
+                <button onClick={() => canProceed() && setStep(step + 1)} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
                   Continue <ArrowRight className="h-4 w-4" />
                 </button>
               ) : (
-                <button
-                  onClick={handleSubmit}
-                  disabled={!canProceed()}
-                  className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
+                <button onClick={handleSubmit} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
                   Complete Sacred Intake <ArrowRight className="h-4 w-4" />
                 </button>
               )}
@@ -484,12 +824,9 @@ const CeremonyIntake = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
-          </p>
+          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.</p>
         </div>
       </footer>
     </div>
