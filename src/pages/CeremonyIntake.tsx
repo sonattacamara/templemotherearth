@@ -244,7 +244,7 @@ const CeremonyIntake = () => {
               <h3 className="font-display text-xl font-bold text-card-foreground">Ceremony Selection</h3>
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Which ceremony are you seeking? *</label>
-                {["Kambo Healing Ceremony", "Hapé Circle", "Khukau Sacred Plant Ceremony", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
+                {["Kambo Ceremony", "Hapé Circle", "Sacred Plant Ceremony", "Cacao Ceremony", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="ceremonyType" className={checkboxClass} checked={formData.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} />
                     {opt}
@@ -455,7 +455,7 @@ const CeremonyIntake = () => {
                   disabled={!canProceed()}
                   className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
-                  Submit & Book Ceremony <ArrowRight className="h-4 w-4" />
+                  Complete Sacred Intake <ArrowRight className="h-4 w-4" />
                 </button>
               )}
             </div>

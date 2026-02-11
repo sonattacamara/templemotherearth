@@ -6,7 +6,6 @@ import logo from "@/assets/logo.png";
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
   { label: "Offerings", href: "/#offerings", isRoute: false },
-  { label: "Book a Ceremony", href: "/ceremony-intake", isRoute: true },
   { label: "Membership", href: "/membership", isRoute: true },
   { label: "Events", href: "/#events", isRoute: false },
   { label: "Community", href: "/#community", isRoute: false },
