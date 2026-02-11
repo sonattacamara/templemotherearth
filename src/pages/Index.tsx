@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
-import communityImg from "@/assets/community.jpg";
+import ctaFooterImg from "@/assets/cta-footer.jpg";
 import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
@@ -21,6 +21,67 @@ const fadeUp = {
 const stagger = {
   visible: { transition: { staggerChildren: 0.15 } },
 };
+
+const PAYPAL_DONATE_URL = "https://www.paypal.com/donate?token=LRyF8sgpoxzE0fJco2m6v1OI0lEDJgWB0rvfvtUK8vmV_nDILBg3wlAsTTTGiCXJ86h3sJV6Jx4ALdJZovpT-44Pzqq&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9";
+
+const offerings = [
+  {
+    icon: Flame,
+    title: "Earth Medicine Ceremonies",
+    desc: "Sacred rituals guided by experienced practitioners honoring Kambo, Hapé, and ancient Earth Medicine traditions. Held locally in Washington, DC.",
+    img: offeringCeremony,
+    link: "https://www.eventbrite.com/o/29347213477#events",
+    isExternal: true,
+  },
+  {
+    icon: Globe,
+    title: "International Retreats",
+    desc: "Journey with us to breathtaking locations worldwide for immersive experiences that blend cultural richness with deep spiritual practice.",
+    img: offeringRetreat,
+    link: "/retreats-inquiry",
+    isExternal: false,
+  },
+  {
+    icon: Users,
+    title: "Traveling Ceremonies",
+    desc: "We come to you. Invite Temple Mother Earth to hold personalized ceremonies in your community, tailored to your unique path and intentions.",
+    img: offeringTraveling,
+    link: "/traveling-ceremonies",
+    isExternal: false,
+  },
+  {
+    icon: Heart,
+    title: "1-on-1 / Private Ceremonies",
+    desc: "Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey, held in a private and sacred setting.",
+    img: offeringPrivate,
+    link: "/private-ceremonies",
+    isExternal: false,
+  },
+];
+
+const weeklySchedule = [
+  { day: "Monday", events: [
+    { name: "Mindful Dose Co-working Space", link: "https://bit.ly/MMicrodoseMondays" },
+    { name: "Integration Circle Potluck", link: "https://bit.ly/TMEPotluck" },
+  ]},
+  { day: "Tuesday", events: [
+    { name: "Online Meditation", link: "https://bit.ly/VirtualMahaYoga" },
+  ]},
+  { day: "Thursday", events: [
+    { name: "Hapé Circle", link: "https://bit.ly/HapeCircle" },
+    { name: "Game Night", link: "https://bit.ly/CommunityGameNight" },
+  ]},
+  { day: "Friday", events: [
+    { name: "Freedom Fridays", link: "https://bit.ly/FreedomFridaysEvent" },
+  ]},
+  { day: "Saturday", events: [
+    { name: "Community Healing Day", link: "https://bit.ly/CommunityHealingDay" },
+  ]},
+  { day: "Sunday", events: [
+    { name: "Kambo Ceremony", link: "https://Kingkambo.com" },
+    { name: "Family Soulful Sundays", link: "https://bit.ly/FamilySoulfulSundays" },
+  ]},
+];
 
 const Index = () => {
   const [showDonation, setShowDonation] = useState(false);
@@ -44,35 +105,31 @@ const Index = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md rounded-2xl border border-border bg-background p-8 shadow-2xl"
+              className="relative w-full max-w-lg rounded-2xl border border-border bg-background shadow-2xl overflow-hidden"
+              style={{ height: "80vh", maxHeight: "700px" }}
             >
               <button
                 onClick={() => setShowDonation(false)}
-                className="absolute right-4 top-4 text-muted-foreground hover:text-foreground transition-colors"
+                className="absolute right-3 top-3 z-10 rounded-full bg-background/80 p-1.5 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
-              <div className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                  <HandHeart className="h-8 w-8 text-primary" />
+              <div className="p-6 text-center border-b border-border">
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                  <HandHeart className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-foreground">Keep the Temple Sustainable</h3>
-                <p className="mt-3 text-sm text-muted-foreground">
-                  Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible donation
-                  through the PayPal Giving Fund helps us continue providing sacred ceremonies, healing spaces, and community support.
-                </p>
-                <a
-                  href="https://www.paypal.com/donate?token=LRyF8sgpoxzE0fJco2m6v1OI0lEDJgWB0rvfvtUK8vmV_nDILBg3wlAsTTTGiCXJ86h3sJV6Jx4ALdJZovpT-44Pzqq&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 block rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-                >
-                  Donate Now via PayPal Giving Fund
-                </a>
-                <p className="mt-4 text-xs text-muted-foreground">
-                  All donations are tax-deductible through the PayPal Giving Fund. 501(c)(3) nonprofit.
+                <h3 className="font-display text-xl font-bold text-foreground">Keep the Temple Sustainable</h3>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Temple Mother Earth is a 501(c)(3) nonprofit. Your tax-deductible donation helps us continue.
                 </p>
               </div>
+              <iframe
+                src={PAYPAL_DONATE_URL}
+                title="Donate via PayPal"
+                className="w-full border-0"
+                style={{ height: "calc(100% - 120px)" }}
+                allow="payment"
+              />
             </motion.div>
           </motion.div>
         )}
@@ -200,53 +257,51 @@ const Index = () => {
           </motion.p>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: Flame,
-                title: "Earth Medicine Ceremonies",
-                desc: "Sacred rituals guided by experienced practitioners honoring Kambo, Hapé, and ancient Earth Medicine traditions. Held locally in Washington, DC.",
-                img: offeringCeremony,
-              },
-              {
-                icon: Globe,
-                title: "International Retreats",
-                desc: "Journey with us to breathtaking locations worldwide for immersive experiences that blend cultural richness with deep spiritual practice.",
-                img: offeringRetreat,
-              },
-              {
-                icon: Users,
-                title: "Traveling Ceremonies",
-                desc: "We come to you. Invite Temple Mother Earth to hold personalized ceremonies in your community, tailored to your unique path and intentions.",
-                img: offeringTraveling,
-              },
-              {
-                icon: Heart,
-                title: "1-on-1 / Private Ceremonies",
-                desc: "Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey, held in a private and sacred setting.",
-                img: offeringPrivate,
-              },
-            ].map((item) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUp}
-                className="group overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-all hover:shadow-xl"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
-                  <item.icon className="absolute bottom-4 left-4 h-8 w-8 text-primary" />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            {offerings.map((item) => {
+              const CardContent = (
+                <>
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
+                    <item.icon className="absolute bottom-4 left-4 h-8 w-8 text-primary" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl font-semibold text-foreground">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                      Learn More <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                </>
+              );
+
+              return item.isExternal ? (
+                <motion.a
+                  key={item.title}
+                  variants={fadeUp}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-all hover:shadow-xl cursor-pointer"
+                >
+                  {CardContent}
+                </motion.a>
+              ) : (
+                <motion.div key={item.title} variants={fadeUp}>
+                  <Link
+                    to={item.link}
+                    className="group block overflow-hidden rounded-2xl border border-border bg-background shadow-sm transition-all hover:shadow-xl"
+                  >
+                    {CardContent}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </section>
@@ -332,12 +387,12 @@ const Index = () => {
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="/membership"
+            <Link
+              to="/membership"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
               Explore Membership Tiers
-            </a>
+            </Link>
             <a
               href="https://integration.templemotherearth.org/auth?mode=signin"
               target="_blank"
@@ -350,11 +405,11 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* ───── ARE YOU READY? (CTA) ───── */}
+      {/* ───── WHAT ARE YOU SEEKING? (CTA) ───── */}
       <section id="community" className="relative overflow-hidden px-4 py-24 md:py-32">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${communityImg})` }}
+          style={{ backgroundImage: `url(${ctaFooterImg})` }}
         />
         <div className="absolute inset-0 bg-foreground/80" />
 
@@ -366,13 +421,18 @@ const Index = () => {
           variants={stagger}
         >
           <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            Are You Ready to Answer the Call?
+            What Are You Seeking?
           </motion.h2>
           <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-xl space-y-4 text-lg text-primary-foreground/75">
-            <p>The Earth is calling you to remember who you are. To honor the divine within. To step into your highest purpose.</p>
             <p>
-              Whether you are taking your first steps on the spiritual path or are deeply rooted in your practices,
-              Temple Mother Earth welcomes you with open arms and an open heart.
+              Maybe you're carrying something heavy — grief, trauma, unanswered questions about who you truly are.
+              Maybe you feel disconnected from your purpose, your body, your spirit. Maybe you've tried everything
+              else and something deep within is calling you toward a different kind of healing.
+            </p>
+            <p>
+              You don't have to have it figured out. You just have to be willing to show up.
+              Temple Mother Earth is here to meet you exactly where you are — with sacred ceremony,
+              a community that sees you, and the ancient wisdom of Earth Medicine.
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
@@ -380,7 +440,7 @@ const Index = () => {
               to="/ceremony-intake"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
-              Book a Ceremony
+              Begin Your Journey
             </Link>
             <a
               href="#contact"
@@ -392,8 +452,53 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── WEEKLY RHYTHM ───── */}
+      <section className="bg-card px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Monthly Offerings
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            Our Weekly Rhythm
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+            From meditation to ceremony, from co-working to community healing — there's a gathering for every seeker, every week.
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {weeklySchedule.map((day) => (
+              <div key={day.day} className="rounded-xl border border-border bg-background p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <Calendar className="h-4 w-4 text-primary" />
+                  <h3 className="font-display text-base font-semibold text-foreground">{day.day}</h3>
+                </div>
+                <div className="space-y-2">
+                  {day.events.map((event) => (
+                    <a
+                      key={event.name}
+                      href={event.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {event.name} →
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* ───── UPCOMING EVENTS (Eventbrite) ───── */}
-      <section id="events" className="bg-card px-4 py-24 md:py-32">
+      <section id="events" className="px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -404,7 +509,7 @@ const Index = () => {
           <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Sacred Gatherings
           </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
             Upcoming Ceremonies & Events
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
@@ -412,12 +517,12 @@ const Index = () => {
             Reserve your space and step into the sacred.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-background p-8 md:p-12">
+          <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-12">
             <p className="font-body text-muted-foreground">
               Events are managed through Eventbrite for secure booking.
             </p>
             <a
-              href="https://www.eventbrite.com/cc/temple-mother-earth-ceremonies-3992189"
+              href="https://www.eventbrite.com/o/29347213477#events"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
@@ -430,7 +535,7 @@ const Index = () => {
       </section>
 
       {/* ───── CONTACT ───── */}
-      <section id="contact" className="px-4 py-24 md:py-32">
+      <section id="contact" className="bg-card px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"
@@ -442,7 +547,7 @@ const Index = () => {
             <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Reach Out
             </p>
-            <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
               Connect With Us
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
@@ -454,17 +559,17 @@ const Index = () => {
           <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-2">
             <div className="space-y-6">
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">Visit Our Temple</h3>
+                <h3 className="font-display text-lg font-semibold text-card-foreground">Visit Our Temple</h3>
                 <p className="mt-2 text-muted-foreground">2415 32nd St SE<br />Washington, DC</p>
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">Email</h3>
+                <h3 className="font-display text-lg font-semibold text-card-foreground">Email</h3>
                 <a href="mailto:AskUs@TempleMotherEarth.org" className="mt-2 block text-primary hover:underline">
                   AskUs@TempleMotherEarth.org
                 </a>
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">Follow Us</h3>
+                <h3 className="font-display text-lg font-semibold text-card-foreground">Follow Us</h3>
                 <div className="mt-2 flex flex-wrap gap-4">
                   <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
                   <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Facebook</a>
@@ -474,7 +579,7 @@ const Index = () => {
                 </div>
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">Members Portal</h3>
+                <h3 className="font-display text-lg font-semibold text-card-foreground">Members Portal</h3>
                 <a
                   href="https://integration.templemotherearth.org/"
                   target="_blank"
@@ -487,7 +592,7 @@ const Index = () => {
             </div>
 
             <form
-              className="space-y-4 rounded-2xl border border-border bg-card p-6"
+              className="space-y-4 rounded-2xl border border-border bg-background p-6"
               onSubmit={(e) => {
                 e.preventDefault();
                 window.open("mailto:AskUs@TempleMotherEarth.org", "_blank");
@@ -526,10 +631,10 @@ const Index = () => {
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
               <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
-            </div>
+            </Link>
             <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
               <a href="#about" className="hover:text-primary transition-colors">About</a>
               <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
