@@ -6,7 +6,7 @@ import aboutHero from "@/assets/about-hero.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
 import founderSonatta from "@/assets/founder-sonatta.jpg";
 import founderJames from "@/assets/founder-james.jpg";
-import facilitator1 from "@/assets/facilitator-1.jpg";
+import facilitatorDebra from "@/assets/facilitator-debra.jpg";
 import facilitator2 from "@/assets/facilitator-2.jpg";
 import facilitator3 from "@/assets/facilitator-3.jpg";
 import facilitator4 from "@/assets/facilitator-4.jpg";
@@ -385,10 +385,10 @@ const About = () => {
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Amara Johnson",
-                role: "Yoga & Breathwork Guide",
-                img: facilitator1,
-                desc: "Certified yoga instructor and breathwork facilitator specializing in somatic healing and body-centered spiritual practices.",
+                name: "Debra Owens",
+                role: "Yoga & Sound Therapy Guide",
+                img: facilitatorDebra,
+                desc: "Certified yoga instructor and sound therapist devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
               },
               {
                 name: "Kwame Davis",
