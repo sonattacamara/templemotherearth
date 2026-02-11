@@ -544,18 +544,24 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Eventbrite Embedded Calendar Widget */}
-            <div className="w-full overflow-hidden rounded-xl">
-              <iframe
-                src="https://www.eventbrite.com/o/29347213477"
-                width="100%"
-                height="600"
-                frameBorder="0"
-                className="w-full rounded-xl border-0"
-                title="Temple Mother Earth Events Calendar"
-                loading="lazy"
-                allow="payment"
-              />
+            {/* Eventbrite Embedded Widget */}
+            <div className="w-full overflow-hidden rounded-xl bg-card/50 border border-primary/10 p-8 text-center">
+              <div className="flex flex-col items-center gap-4">
+                <Flame className="h-10 w-10 text-primary" />
+                <h3 className="font-display text-xl font-semibold text-foreground">Browse Our Upcoming Ceremonies</h3>
+                <p className="text-muted-foreground max-w-md">
+                  View our full calendar of Earth Medicine ceremonies, community gatherings, and sacred events on Eventbrite.
+                </p>
+                <a
+                  href="https://www.eventbrite.com/o/29347213477#events"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+                >
+                  View Ceremonies Calendar
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
 
             <div className="mt-8 flex flex-col items-center gap-4">
@@ -630,7 +636,7 @@ const Index = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Support the Temple</h3>
                 <div className="mt-2 flex flex-col gap-2">
-                  <a href="http://bit.ly/TempleGoogleReview" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                  <a href="https://www.google.com/search?sca_esv=b1aa0ebf47929ca9&rlz=1CDGOYI_enUS1105US1105&hl=en-US&sxsrf=ANbL-n7Zuzk2-DFNhAsOfo8ugT-wYJ_Wow:1770826746416&q=temple+of+mother+earth+reviews&uds=ALYpb_kMVwOwDZyOU_-hei8qutnOLtqji1D_QYa-uv2_cGtwJ_yq-vEdM0_pBa4ftxanMQTEw8pqG5P1j6vjs4wuV-EizInVTlAHBvhbJX_gwNa5WMuWrA9JS-OnXpWuJCawFgpFoq1HscB59EuBX5pv_sdg3cW-3_e2EjSPSjxUJ-nCWWP-D6-Pd0OumXpM87onxplSGrLvPk37WVwBXHMJUYc1wt-t-MpND4kfFlAC-YiVdikuLieNrJwwiG4QrTSzCVCsLT8ckzpOJOcjcn9PnjgPIqO2RowfnVHhgK_BlO3c8dB7Cwa4kWB1RYHEa9FqJWMNlV9HNRWyyISBy69iKvs23FPyxU3remaY_fPXsnvOPNGa-MUIl5M55krZffobrRDn20BMVgQkHcKKlbrhpjvJFduaVBux3KlcWpgNc7Zlmxb2HwYJEsr0AmXDyBudQy34tAE_7BrCUyxkXvJuXaRHggQHw9DNr3H6fV1RVykGMyG91nvcZzC-R8DDVm437-lgZZFpytmNj-XuAcm5HB9TxOXVKPr5IioXI2Ek4C98CCCQ0fw5Nu-IVAKXydZS0esu1_KITPaeKvq4-4Uc3Gdh7H9H4oVI7BJp9XRcQbIzq2foQJ4&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQZdqYy5vjml0waax1nkNammOw8Wx_tiuUspNReZ4g7mGGqsMx_MYNc5FlKrZU1gcLCcuh9HLDyE9bkuO-it9RAAQyGdlZCHd_inE4ryoBOXagaw8g%3D%3D&sa=X&ved=2ahUKEwjK6rbZ69GSAxWDGFkFHXBxCpEQk8gLegQIHRAB&ictx=1" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
                     <Star className="h-4 w-4 text-primary" /> Leave a Google Review
                   </a>
                   <a href="http://bit.ly/TempleAmazonWishList" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Amazon Wishlist →</a>
