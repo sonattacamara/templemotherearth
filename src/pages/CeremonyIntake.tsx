@@ -223,8 +223,28 @@ const CeremonyIntake = () => {
     }
   };
 
-  const handleSubmit = () => {
-    if (validateStep()) setStep(6);
+  const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1";
+
+  const handleSubmit = async () => {
+    if (!validateStep()) return;
+
+    // Send form data to GHL webhook
+    try {
+      await fetch(GHL_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          submittedAt: new Date().toISOString(),
+          source: "temple-mother-earth-sacred-intake",
+        }),
+      });
+    } catch (err) {
+      // Silent fail — don't block the user from seeing confirmation
+      console.error("Webhook submission error:", err);
+    }
+
+    setStep(6);
   };
 
   const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";

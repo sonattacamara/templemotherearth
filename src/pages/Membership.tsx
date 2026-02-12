@@ -354,7 +354,7 @@ const Membership = () => {
           </motion.p>
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              to="/portal"
+              to="/membership"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
               Become a Member
