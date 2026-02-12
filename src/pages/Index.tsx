@@ -43,12 +43,12 @@ const offerings = [
   },
   {
     icon: Globe,
-    title: "International Retreats",
+    title: "International Immersions",
     desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
     img: offeringRetreat,
     link: "/retreats-inquiry",
     isExternal: false,
-    cta: "Explore Retreats",
+    cta: "Explore Immersions",
   },
   {
     icon: Users,
@@ -309,8 +309,8 @@ const Index = () => {
             in respect, prayer, reciprocity, and the remembrance that every human being carries the divine within.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-            Whether you are seeking healing, renewal, grounding, or expansion, Earth Medicine opens a path
-            of transformation that is both ancient and deeply personal. This category honors the sacred
+             Whether you are seeking healing, renewal, grounding, or expansion, Earth Medicine opens a path
+            of transformation that is both ancient and deeply personal. This sacred work honors the timeless
             relationship between humans and the Earth, offering safe containers for those ready to step
             into a deeper level of their journey.
           </motion.p>
@@ -438,7 +438,7 @@ const Index = () => {
           <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-3">
             {[
               { icon: ShieldCheck, title: "Exclusive Teachings & Workshops", desc: "Exclusive plant medicine teachings, workshops, and monthly live Q&A sessions with facilitators." },
-              { icon: Sparkles, title: "Private Community Forum", desc: "A private community forum for sharing, support, and early access to retreats and ceremonies." },
+              { icon: Sparkles, title: "Private Community Forum", desc: "A private community forum for sharing, support, and early access to immersions and ceremonies." },
               { icon: Heart, title: "Stay Connected", desc: "Join our mailing list to stay informed about upcoming events, ceremonies, and resources." },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl border border-primary-foreground/10 bg-foreground/40 backdrop-blur-sm p-8 text-center">
@@ -535,7 +535,7 @@ const Index = () => {
             Upcoming Ceremonies & Offerings
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
-            Explore our upcoming Earth Medicine ceremonies, community gatherings, and international retreats.
+             Explore our upcoming Earth Medicine ceremonies, community gatherings, and international immersions.
             Reserve your space and step into the sacred.
           </motion.p>
 
@@ -613,6 +613,28 @@ const Index = () => {
             </p>
           </motion.div>
 
+          {/* Newsletter Signup */}
+          <motion.div variants={fadeUp} className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
+            <h3 className="font-display text-xl font-bold text-card-foreground">Sacred Wisdom & Updates</h3>
+            <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
+              Join our mailing list to stay informed about upcoming offerings, ceremonies, and sacred resources we'd love to share with you.
+            </p>
+            <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); }}>
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="flex-1 rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                required
+              />
+              <button
+                type="submit"
+                className="rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </motion.div>
+
           <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-2">
             <div className="space-y-6">
               <div>
@@ -630,14 +652,14 @@ const Index = () => {
                 <div className="mt-2 flex flex-wrap gap-4">
                   <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
                   <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Facebook</a>
-                  <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Telegram</a>
+                  <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@TempleMotherEarth 🌍</a>
                 </div>
               </div>
               <div>
                <h3 className="font-display text-lg font-semibold text-card-foreground">Community Circles</h3>
                 <p className="mt-1 text-xs text-muted-foreground italic">Download the <a href="https://telegram.org/apps" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Telegram app</a> to join our community circles.</p>
                 <div className="mt-2 flex flex-col gap-2">
-                  <a href="https://web.telegram.org/k/#@templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🌍 Public Community Chat →</a>
+                  <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🌍 Public Community Chat →</a>
                   <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Men's Integration Circle →</a>
                   <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Wombmen's Integration Circle →</a>
                   <p className="text-xs text-muted-foreground/60 italic mt-1">Private circles are for members only</p>

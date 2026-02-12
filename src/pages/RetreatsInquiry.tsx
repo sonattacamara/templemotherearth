@@ -37,7 +37,7 @@ const RetreatsInquiry = () => {
             <Globe className="h-8 w-8 text-primary" />
           </motion.div>
           <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            International Retreats
+            International Immersions
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Journey with Temple Mother Earth to breathtaking destinations for immersive healing experiences
@@ -52,7 +52,7 @@ const RetreatsInquiry = () => {
           <div className="grid gap-8 md:grid-cols-3">
             {[
               { icon: MapPin, title: "Sacred Destinations", desc: "We travel to locations chosen for their spiritual energy and cultural significance — from Mexico to West Africa and beyond." },
-              { icon: Calendar, title: "Immersive Experience", desc: "Multi-day retreats include Earth Medicine ceremonies, integration circles, cultural activities, nourishing meals, and community bonding." },
+              { icon: Calendar, title: "Immersive Experience", desc: "Multi-day immersions include Earth Medicine ceremonies, integration circles, cultural activities, nourishing meals, and community bonding." },
               { icon: Users, title: "Intimate Groups", desc: "Small group sizes ensure personalized attention from our facilitators and a deeply supportive container for your journey." },
             ].map((item) => (
               <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">
@@ -64,7 +64,7 @@ const RetreatsInquiry = () => {
           </div>
 
           <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
-            <h3 className="font-display text-xl font-bold text-foreground">🇲🇽 Life's Best Yes Retreat — Sayulita, Mexico</h3>
+            <h3 className="font-display text-xl font-bold text-foreground">🇲🇽 Life's Best Yes Immersion — Sayulita, Mexico</h3>
             <p className="mt-2 text-lg text-muted-foreground">October 31 – November 5, 2026</p>
             <div className="mx-auto mt-4 max-w-xl space-y-3 text-sm text-muted-foreground text-left">
               <p>
@@ -72,10 +72,10 @@ const RetreatsInquiry = () => {
                 six transformative days of deep healing, Earth Medicine ceremony, and soul-level restoration.
               </p>
               <p>
-                This retreat is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
+                This immersion is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
                 stored trauma from the body, and reclaim your natural state of peace. Through guided breathwork, 
                 body napping (deep somatic rest), movement practices, and sacred ceremony, you'll learn to 
-                <strong className="text-foreground">return your body to its healing baseline</strong> — not just during the retreat, but as a 
+                <strong className="text-foreground">return your body to its healing baseline</strong> — not just during the immersion, but as a 
                 way of life.
               </p>
               <p>
@@ -97,16 +97,16 @@ const RetreatsInquiry = () => {
                 Express Your Interest
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
-                Fill out this form and our team will reach out with retreat details, pricing, and preparation guidelines.
-                All retreat participants will also need to complete a medical intake before ceremony.
+                Fill out this form and our team will reach out with immersion details, pricing, and preparation guidelines.
+                All immersion participants will also need to complete a medical intake before ceremony.
               </p>
               <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-foreground">Which retreat interests you? *</label>
-                  {["Mexico: Life's Best Yes Retreat (Oct 31 – Nov 5, 2026)", "Future retreats — notify me of upcoming destinations", "Both — I want to attend Mexico and future retreats"].map((opt) => (
+                  <label className="mb-2 block text-sm font-medium text-foreground">Which immersion interests you? *</label>
+                  {["Mexico: Life's Best Yes Immersion (Oct 31 – Nov 5, 2026)", "Future immersions — notify me of upcoming destinations", "Both — I want to attend Mexico and future immersions"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="retreatInterest" className="mr-3 h-4 w-4 accent-primary" checked={form.retreatInterest === opt} onChange={() => update("retreatInterest", opt)} required />
                       {opt}
@@ -135,9 +135,9 @@ const RetreatsInquiry = () => {
           ) : (
             <div className="text-center py-12">
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
-              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Seeker</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred One</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Your retreat interest has been received. Our team will reach out with details, pricing, and next steps. 
+                Your immersion interest has been received. Our team will reach out with details, pricing, and next steps. 
                 Keep an eye on your email!
               </p>
               <Link to="/" className="mt-8 inline-block rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80">
