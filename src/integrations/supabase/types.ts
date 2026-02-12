@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      form_submissions: {
+        Row: {
+          created_at: string
+          form_name: string
+          id: string
+          metadata: Json | null
+        }
+        Insert: {
+          created_at?: string
+          form_name: string
+          id?: string
+          metadata?: Json | null
+        }
+        Update: {
+          created_at?: string
+          form_name?: string
+          id?: string
+          metadata?: Json | null
+        }
+        Relationships: []
+      }
+      page_views: {
+        Row: {
+          created_at: string
+          id: string
+          path: string
+          referrer: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          path: string
+          referrer?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          path?: string
+          referrer?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

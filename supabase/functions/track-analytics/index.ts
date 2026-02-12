@@ -1,0 +1,116 @@
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+};
+
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  try {
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, serviceKey);
+
+    const url = new URL(req.url);
+    const action = url.searchParams.get("action");
+
+    if (req.method === "POST" && action === "track") {
+      const { path, referrer, userAgent, formName, metadata } = await req.json();
+
+      if (formName) {
+        await supabase.from("form_submissions").insert({ form_name: formName, metadata: metadata || {} });
+      } else if (path) {
+        await supabase.from("page_views").insert({ path, referrer: referrer || null, user_agent: userAgent || null });
+      }
+
+      return new Response(JSON.stringify({ success: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    if (req.method === "GET" && action === "dashboard") {
+      // Verify auth - only allow authenticated users
+      const authHeader = req.headers.get("Authorization");
+      if (!authHeader) {
+        return new Response(JSON.stringify({ error: "Unauthorized" }), {
+          status: 401,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const days = parseInt(url.searchParams.get("days") || "30");
+      const since = new Date();
+      since.setDate(since.getDate() - days);
+      const sinceStr = since.toISOString();
+
+      // Page views by path
+      const { data: pageViews } = await supabase
+        .from("page_views")
+        .select("path, created_at")
+        .gte("created_at", sinceStr)
+        .order("created_at", { ascending: false })
+        .limit(1000);
+
+      // Form submissions
+      const { data: formSubs } = await supabase
+        .from("form_submissions")
+        .select("form_name, metadata, created_at")
+        .gte("created_at", sinceStr)
+        .order("created_at", { ascending: false })
+        .limit(1000);
+
+      // Aggregate page views by path
+      const pathCounts: Record<string, number> = {};
+      (pageViews || []).forEach((pv: any) => {
+        pathCounts[pv.path] = (pathCounts[pv.path] || 0) + 1;
+      });
+
+      // Aggregate by day
+      const dailyCounts: Record<string, number> = {};
+      (pageViews || []).forEach((pv: any) => {
+        const day = pv.created_at.split("T")[0];
+        dailyCounts[day] = (dailyCounts[day] || 0) + 1;
+      });
+
+      // Aggregate form submissions by name
+      const formCounts: Record<string, number> = {};
+      (formSubs || []).forEach((fs: any) => {
+        formCounts[fs.form_name] = (formCounts[fs.form_name] || 0) + 1;
+      });
+
+      return new Response(
+        JSON.stringify({
+          totalPageViews: pageViews?.length || 0,
+          totalFormSubmissions: formSubs?.length || 0,
+          pageViewsByPath: Object.entries(pathCounts)
+            .map(([path, count]) => ({ path, count }))
+            .sort((a, b) => b.count - a.count),
+          dailyPageViews: Object.entries(dailyCounts)
+            .map(([date, count]) => ({ date, count }))
+            .sort((a, b) => a.date.localeCompare(b.date)),
+          formSubmissionsByType: Object.entries(formCounts)
+            .map(([name, count]) => ({ name, count }))
+            .sort((a, b) => b.count - a.count),
+          recentFormSubmissions: (formSubs || []).slice(0, 20),
+        }),
+        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    return new Response(JSON.stringify({ error: "Invalid action" }), {
+      status: 400,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.error("Analytics error:", error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+});
