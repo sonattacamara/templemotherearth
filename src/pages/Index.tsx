@@ -3,6 +3,7 @@ import { motion, type Easing, AnimatePresence } from "framer-motion";
 import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
+import SEOHead from "@/components/SEOHead";
 import { usePageTracking } from "@/hooks/useAnalytics";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
@@ -108,6 +109,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead path="/" />
       <Navigation />
 
       {/* ───── DONATION POPUP ───── */}

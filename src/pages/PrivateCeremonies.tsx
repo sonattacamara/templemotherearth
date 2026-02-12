@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { Heart, ArrowRight, CheckCircle2, Shield, Sparkles, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import offeringPrivate from "@/assets/offering-private.jpg";
 
@@ -25,6 +26,7 @@ const PrivateCeremonies = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Private Ceremonies" description="Experience deeply personal sacred sessions designed around your unique intentions. Book a private Earth Medicine ceremony with Temple Mother Earth." path="/private-ceremonies" />
       <Navigation />
 
       {/* Hero */}

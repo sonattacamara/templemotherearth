@@ -1,6 +1,7 @@
 import { motion, type Easing } from "framer-motion";
 import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import aboutHero from "@/assets/about-hero.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
@@ -28,6 +29,7 @@ const stagger = {
 const About = () => {
   return (
     <div id="top" className="min-h-screen bg-background">
+      <SEOHead title="About Us" description="Learn about Temple Mother Earth's origin story, mission, founders, and facilitators. A sacred sanctuary for healing in Washington, DC." path="/about" />
       <Navigation />
 
       {/* ───── HERO ───── */}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { Users, ArrowRight, CheckCircle2, MapPin, Shield, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
 
@@ -25,6 +26,7 @@ const TravelingCeremonies = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Traveling Ceremonies" description="Bring Temple Mother Earth's sacred ceremonies to your community. Request a traveling ceremony for your group, retreat center, or private gathering." path="/traveling-ceremonies" />
       <Navigation />
 
       {/* Hero */}

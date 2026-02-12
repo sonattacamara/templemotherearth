@@ -3,6 +3,7 @@ import { motion, type Easing } from "framer-motion";
 import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail } from "lucide-react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 
@@ -283,6 +284,7 @@ const CeremonyIntake = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Sacred Intake Form" description="Complete the mandatory Sacred Intake Form for Temple Mother Earth ceremonies. Health screening, waiver agreements, and ceremony preparation." path="/ceremony-intake" />
       <Navigation />
 
       {/* Hero */}

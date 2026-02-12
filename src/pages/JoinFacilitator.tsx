@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Sparkles, ArrowRight, CheckCircle2, Shield, Heart, Users } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import sacredSpace from "@/assets/sacred-space.jpg";
 
@@ -25,6 +26,7 @@ const JoinFacilitator = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Become a Facilitator" description="Apply to become a facilitator at Temple Mother Earth. Share your healing gifts and guide sacred ceremonies in our community." path="/join-facilitator" />
       <Navigation />
 
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">

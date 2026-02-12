@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Heart, Users, Leaf, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import communityImg from "@/assets/community.jpg";
 
@@ -24,6 +25,7 @@ const Volunteer = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Volunteer" description="Join the Temple Mother Earth volunteer team. Support our sacred ceremonies, community events, and healing mission in Washington, DC." path="/volunteer" />
       <Navigation />
 
       {/* Hero */}
