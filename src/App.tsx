@@ -20,6 +20,7 @@ import Conduct from "./pages/Conduct";
 import MemberAuth from "./pages/MemberAuth";
 import MemberEducation from "./pages/MemberEducation";
 import NotFound from "./pages/NotFound";
+import Analytics from "./pages/Analytics";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/conduct" element={<Conduct />} />
             <Route path="/member/auth" element={<MemberAuth />} />
             <Route path="/member/education" element={<MemberEducation />} />
+            <Route path="/analytics" element={<Analytics />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

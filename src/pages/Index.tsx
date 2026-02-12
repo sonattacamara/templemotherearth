@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, type Easing, AnimatePresence } from "framer-motion";
 import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
+import { usePageTracking } from "@/hooks/useAnalytics";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -101,6 +103,7 @@ const JourneyConnector = () => (
 );
 
 const Index = () => {
+  usePageTracking();
   const [showDonation, setShowDonation] = useState(false);
 
   return (
@@ -679,7 +682,7 @@ const Index = () => {
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
           <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -689,8 +692,11 @@ const Index = () => {
             What Our Community Says
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
-            Read heartfelt testimonials from members of our sacred community.
+            Heartfelt reflections from members of our sacred community.
           </motion.p>
+
+          <GoogleReviewsWidget />
+
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="https://search.google.com/local/writereview?placeid=ChIJk2t0xBm3t4kRVVrcT6hzUkQ"
@@ -699,7 +705,7 @@ const Index = () => {
               className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
               <Star className="h-4 w-4" />
-              Read & Leave a Google Review
+              Leave a Google Review
             </a>
           </motion.div>
         </motion.div>
