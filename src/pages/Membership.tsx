@@ -102,7 +102,7 @@ const values = [
   {
     icon: Users,
     title: "Lifelong Connection",
-    desc: "Build deep, lasting bonds with kindred spirits through ceremonies, retreats, community circles, and shared sacred experiences.",
+    desc: "Build deep, lasting bonds with kindred spirits through ceremonies, immersions, community circles, and shared sacred experiences.",
   },
 ];
 

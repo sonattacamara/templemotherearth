@@ -215,7 +215,7 @@ const CeremonyIntake = () => {
           <motion.img variants={fadeUp} src={logo} alt="Temple Mother Earth" className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/30" />
           <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-foreground md:text-5xl">Begin Your Journey</motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Your safety and sacred experience are our highest priority. This intake process helps our facilitators prepare the most supportive environment for your healing journey.
+            Your safety and sacred experience are our highest priority. This intake process helps our facilitators prepare the most supportive sacred journey for your healing.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
             As a 501(c)(3) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
@@ -309,7 +309,7 @@ const CeremonyIntake = () => {
               <h3 className="font-display text-xl font-bold text-card-foreground">Ceremony Selection</h3>
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Which ceremony are you seeking? *</label>
-                {["Kambo Ceremony", "Hapé Circle", "Sacred Plant Ceremony", "Cacao Ceremony", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
+                {["Kambo Ceremony", "Hapé Circle", "Sacred Mother Earth Ceremony", "Cacao Ceremony", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="ceremonyType" className={checkboxClass} checked={formData.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} />
                     {opt}
@@ -737,7 +737,7 @@ const CeremonyIntake = () => {
                 <p className="font-semibold text-foreground">Religious Freedom Restoration Act (RFRA) Declaration</p>
                 <p>Temple Mother Earth is a 501(c)(3) nonprofit religious organization. Our sacramental use of Earth Medicine is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies, you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community that holds the beliefs stated above.</p>
                 <p className="font-semibold text-foreground">Assumption of Risk & Liability Waiver</p>
-                <p>I understand that participation in Earth Medicine ceremonies carries inherent risks. I voluntarily assume all risks associated with my participation. I release Temple Mother Earth, its facilitators, staff, and volunteers from any and all liability arising from my participation in ceremonies, retreats, and related activities.</p>
+                <p>I understand that participation in Earth Medicine ceremonies carries inherent risks. I voluntarily assume all risks associated with my participation. I release Temple Mother Earth, its facilitators, staff, and volunteers from any and all liability arising from my participation in ceremonies, immersions, and related activities.</p>
                 <p>I understand that Earth Medicine is not a substitute for professional medical care and that I am encouraged to continue working with my healthcare providers.</p>
               </div>
 

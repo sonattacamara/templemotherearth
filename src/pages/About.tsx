@@ -85,7 +85,7 @@ const About = () => {
                   Founded by and for people of the African diaspora while welcoming all sovereign beings who 
                   resonate with our mission, Temple Mother Earth bridges ancient Earth Medicine traditions with 
                   modern healing practices. From our Washington, DC sanctuary, we serve our local community 
-                  and extend our reach through international retreats and traveling ceremonies.
+                  and extend our reach through international immersions and traveling ceremonies.
                 </p>
               </div>
             </motion.div>
@@ -154,7 +154,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Providing Safe, Sacred Spaces for Healing & Transformation</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  We are committed to offering grounded, ethical, and spiritually aligned environments for ceremony, emotional work, and inner exploration. Whether in Washington, D.C. or during our international retreats, every gathering is held with reverence, prayer, and deep respect for the sacred lineages that inform our work.
+                  We are committed to offering grounded, ethical, and spiritually aligned environments for ceremony, emotional work, and inner exploration. Whether in Washington, D.C. or during our international immersions, every gathering is held with reverence, prayer, and deep respect for the sacred lineages that inform our work.
                 </p>
                 <p>
                   Our mission is to ensure that anyone who steps through our doors feels safe, supported, and honored in their healing process. We prioritize trauma awareness, cultural integrity, emotional maturity, and responsible Earth medicine practices.
@@ -184,7 +184,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Supporting Global Awakening Through Earth Medicine & Ancient Wisdom</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  Our mission extends beyond our physical location. We partner with aligned organizations, stewards, and facilitators to bring sacred Earth medicine work to retreat settings around the world. We honor the traditions that carry these medicines and remain committed to ethical sourcing, cultural respect, and reciprocal relationships with Indigenous teachers and sacred lands.
+                  Our mission extends beyond our physical location. We partner with aligned organizations, stewards, and facilitators to bring sacred Earth medicine work to immersion settings around the world. We honor the traditions that carry these medicines and remain committed to ethical sourcing, cultural respect, and reciprocal relationships with Indigenous teachers and sacred lands.
                 </p>
                 <p className="font-semibold text-foreground">
                   Our mission is simple but powerful: to support humanity's evolution by helping people reconnect with the Earth, with Spirit, and with the truth of who they are.
@@ -464,6 +464,9 @@ const About = () => {
               <h3 className="font-display text-2xl font-bold text-foreground md:text-3xl">
                 King James
               </h3>
+              <p className="mt-2 font-body text-sm font-semibold uppercase tracking-wider text-primary">
+                Co-Founder & Ceremony Facilitator
+              </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                    King James is a retired United States Air Force veteran, master beekeeper, accomplished martial artist,
@@ -485,7 +488,7 @@ const About = () => {
                 </p>
                 <p>
                    As the operational force behind Temple Mother Earth, James oversees community engagement,
-                   retreat coordination, and the expansion of TOME's veterans transformation program. His vision
+                   immersion coordination, and the expansion of TOME's veterans transformation program. His vision
                    is to bring sacred healing to communities that have been historically underserved — especially
                    fellow veterans and those carrying the weight of trauma — ensuring that Earth Medicine
                    is accessible to all who seek it.
@@ -557,7 +560,7 @@ const About = () => {
                 name: "Jala Johnson",
                 role: "Creator of Metamorphosis Mind 801 · Sound Healing Practitioner",
                 img: facilitatorJala,
-                desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, retreats, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
+                desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, immersions, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
             ].map((person) => (
               <motion.div

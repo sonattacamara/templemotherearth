@@ -80,7 +80,7 @@ const PrivateCeremonies = () => {
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">What type of ceremony are you seeking? *</label>
-                  {["Kambo Healing Ceremony", "Hapé Session", "Khukau Sacred Plant Ceremony", "Not sure — I'd like guidance from a facilitator"].map((opt) => (
+                  {["Kambo Healing Ceremony", "Hapé Session", "Sacred Mother Earth Ceremony", "Not sure — I'd like guidance from a facilitator"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="ceremonyType" className="mr-3 h-4 w-4 accent-primary" checked={form.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} required />
                       {opt}
@@ -109,7 +109,7 @@ const PrivateCeremonies = () => {
           ) : (
             <div className="text-center py-12">
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
-              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Seeker</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred One</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
                 Your private ceremony request has been received. A facilitator will reach out to discuss your journey, answer questions, and schedule your ceremony.
               </p>

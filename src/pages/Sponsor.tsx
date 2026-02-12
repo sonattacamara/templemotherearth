@@ -47,7 +47,7 @@ const Sponsor = () => {
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
             { icon: Shield, title: "Ceremony Sponsorship", desc: "Fund ceremonies for community members who may not have the financial means to participate in healing experiences." },
-            { icon: Star, title: "Event Sponsorship", desc: "Sponsor community days, retreats, yoga sessions, and other sacred gatherings that bring people together." },
+            { icon: Star, title: "Event Sponsorship", desc: "Sponsor community days, immersions, yoga sessions, and other sacred gatherings that bring people together." },
             { icon: Users, title: "Temple Sponsorship", desc: "Support the ongoing maintenance and growth of our DC sanctuary — a sacred space for the entire community." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">
