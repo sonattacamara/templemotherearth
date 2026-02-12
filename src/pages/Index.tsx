@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, type Easing, AnimatePresence } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass, Calendar } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import SEOHead from "@/components/SEOHead";
@@ -210,7 +210,7 @@ const Index = () => {
             variants={fadeUp}
             className="mx-auto mt-2 max-w-md text-base font-semibold text-primary/90 md:text-lg italic"
           >
-            A Temple of Higher Consciousness
+            A Sanctuary of Higher Consciousness
           </motion.p>
           <motion.p
             variants={fadeUp}
@@ -770,9 +770,9 @@ const Index = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Follow Us</h3>
                 <div className="mt-2 flex flex-wrap gap-4">
-                   <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">📸 Instagram</a>
-                   <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">👥 Facebook</a>
-                   <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">✈️ Telegram</a>
+                   <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Instagram className="h-4 w-4" /> @templemotherearth</a>
+                   <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Facebook className="h-4 w-4" /> Temple Mother Earth</a>
+                   <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Send className="h-4 w-4" /> @templemotherearth</a>
                 </div>
               </div>
               <div>
@@ -780,7 +780,7 @@ const Index = () => {
                 <p className="mt-1 text-xs text-muted-foreground italic">Download the <a href="https://telegram.org/apps" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Telegram app</a> to join our community circles.</p>
                 <div className="mt-3 flex flex-col gap-3">
                   <div>
-                    <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🌍 Public Community Chat →</a>
+                    <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Send className="h-3.5 w-3.5 text-primary" /> Public Community Chat →</a>
                     <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Open community announcements, event updates, and general Temple conversation.</p>
                   </div>
                   <div>
@@ -869,8 +869,8 @@ const Index = () => {
                 <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary-foreground/60 hover:text-primary transition-colors">AskUs@TempleMotherEarth.org</a>
                 <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
                 <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
-                <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Instagram</a>
-                <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Facebook</a>
+                <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors inline-flex items-center gap-1.5"><Instagram className="h-3.5 w-3.5" /> Instagram</a>
+                <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors inline-flex items-center gap-1.5"><Facebook className="h-3.5 w-3.5" /> Facebook</a>
               </div>
             </div>
           </div>
