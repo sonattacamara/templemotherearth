@@ -424,27 +424,35 @@ const Index = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <JourneyStage number="Stage IV" label="Join the Circle" />
+          <JourneyStage number="Stage IV" label="Your Pathway" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            Become a Member
+            We Built Community. Now We Build Sovereignty.
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
-            At Temple Mother Earth, community is at the heart of everything we do. We honor the sacred
-            practice of gathering in circle, sharing wisdom, and walking this path together. Whether through
-            ceremonies, integration circles, or sacred service, we invite you to be part of a movement
-            of deep healing, connection, and empowerment.
+            Temple Mother Earth is evolving into a structured, threshold-based sanctuary.
+            Nervous system sovereignty, embodied practice, and intentional progression — 
+            each step earned, not purchased. This is depth over volume.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-3">
+          {/* Pathway Steps */}
+          <motion.div variants={fadeUp} className="mt-12 flex flex-col items-center gap-0 sm:flex-row sm:justify-center sm:gap-0">
             {[
-              { icon: ShieldCheck, title: "Exclusive Teachings & Workshops", desc: "Exclusive plant medicine teachings, workshops, and monthly live Q&A sessions with facilitators." },
-              { icon: Sparkles, title: "Private Community Forum", desc: "A private community forum for sharing, support, and early access to immersions and ceremonies." },
-              { icon: Heart, title: "Stay Connected", desc: "Join our mailing list to stay informed about upcoming events, ceremonies, and resources." },
-            ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-primary-foreground/10 bg-foreground/40 backdrop-blur-sm p-8 text-center">
-                <item.icon className="mx-auto h-10 w-10 text-primary" />
-                <h3 className="mt-4 font-display text-lg font-semibold text-primary-foreground">{item.title}</h3>
-                <p className="mt-3 text-sm text-primary-foreground/60">{item.desc}</p>
+              { label: "Belong", price: "$50/mo", icon: Leaf },
+              { label: "Train", price: "$150/mo", icon: Flame },
+              { label: "Prepare", price: "$275/mo", icon: ShieldCheck },
+              { label: "Embody", price: "$500/mo", icon: Star },
+            ].map((step, i, arr) => (
+              <div key={step.label} className="flex items-center">
+                <div className="flex flex-col items-center text-center w-28">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 border-2 border-primary/40">
+                    <step.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <p className="mt-3 font-display text-sm font-bold text-primary-foreground">{step.label}</p>
+                  <p className="mt-1 text-[11px] text-primary-foreground/60">{step.price}</p>
+                </div>
+                {i < arr.length - 1 && (
+                  <ArrowRight className="h-5 w-5 text-primary/50 mx-1 hidden sm:block" />
+                )}
               </div>
             ))}
           </motion.div>
@@ -454,7 +462,7 @@ const Index = () => {
               to="/membership"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
             >
-              Explore Membership Tiers
+              Explore Your Pathway
             </Link>
             <Link
               to="/portal"
@@ -675,9 +683,9 @@ const Index = () => {
 
           {/* Newsletter Signup */}
           <motion.div variants={fadeUp} className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
-            <h3 className="font-display text-xl font-bold text-card-foreground">Sacred Wisdom & Updates</h3>
+            <h3 className="font-display text-xl font-bold text-card-foreground">Receive Temple Transmissions</h3>
             <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
-              Join our mailing list to stay informed about upcoming offerings, ceremonies, and sacred resources we'd love to share with you.
+              Philosophy, preparation guidance, pathway maps, and invitations — delivered with intention to your inbox.
             </p>
             <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); }}>
               <input
@@ -690,7 +698,7 @@ const Index = () => {
                 type="submit"
                 className="rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 whitespace-nowrap"
               >
-                Subscribe
+                Receive Transmissions
               </button>
             </form>
           </motion.div>
