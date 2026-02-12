@@ -35,7 +35,7 @@ const offerings = [
   {
     icon: Flame,
     title: "Earth Medicine Ceremonies",
-    desc: "Sacred rituals guided by experienced practitioners honoring Kambo, Hapé, and ancient Earth Medicine traditions. Held locally in Washington, DC.",
+    desc: "Step into ancient rituals that awaken your soul and align with the sacred rhythms of nature.",
     img: offeringCeremony,
     link: "https://www.eventbrite.com/o/29347213477#events",
     isExternal: true,
@@ -44,7 +44,7 @@ const offerings = [
   {
     icon: Globe,
     title: "International Retreats",
-    desc: "Journey with us to breathtaking locations worldwide for immersive experiences that blend cultural richness with deep spiritual practice.",
+    desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
     img: offeringRetreat,
     link: "/retreats-inquiry",
     isExternal: false,
@@ -53,7 +53,7 @@ const offerings = [
   {
     icon: Users,
     title: "Traveling Ceremonies",
-    desc: "We come to you. Invite Temple Mother Earth to hold personalized ceremonies in your community, tailored to your unique path and intentions.",
+    desc: "Invite the sacred to your community with ceremonies tailored to your unique path.",
     img: offeringTraveling,
     link: "/traveling-ceremonies",
     isExternal: false,
@@ -62,7 +62,7 @@ const offerings = [
   {
     icon: Heart,
     title: "1-on-1 / Private Ceremonies",
-    desc: "Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey, held in a private and sacred setting.",
+    desc: "Find your circle of seekers, healers, and visionaries who share your passion for transformation through personalized sacred sessions.",
     img: offeringPrivate,
     link: "/private-ceremonies",
     isExternal: false,
@@ -193,18 +193,24 @@ const Index = () => {
             alt="Temple Mother Earth"
             className="mx-auto mb-8 h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-primary/30 md:h-44 md:w-44"
           />
-          <motion.h1
+           <motion.h1
             variants={fadeUp}
             className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
           >
-            Temple Mother Earth
+            Welcome to Temple Mother Earth
           </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            className="mx-auto mt-2 max-w-md text-base font-semibold text-primary/90 md:text-lg italic"
+          >
+            A Temple of Higher Consciousness
+          </motion.p>
           <motion.p
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75 md:text-xl"
           >
-            You have arrived. A sacred sanctuary where seekers unite to awaken, heal, and transform
-            through the divine wisdom of Earth Medicine and the God within.
+            Your soul has led you here in this now moment. Whether you are here to remember, reconnect,
+            or rise into your highest purpose, you are home.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
@@ -298,8 +304,15 @@ const Index = () => {
             Sacred Offerings Await
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            Every seeker's journey is unique. From our Washington, DC sanctuary to sacred destinations
-            across the globe — choose the path that calls to your spirit.
+            At Temple Mother Earth, our Earth Medicine Ceremonies invite you to reconnect with the wisdom,
+            intelligence, and unconditional love woven into the natural world. These ceremonies are grounded
+            in respect, prayer, reciprocity, and the remembrance that every human being carries the divine within.
+          </motion.p>
+          <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+            Whether you are seeking healing, renewal, grounding, or expansion, Earth Medicine opens a path
+            of transformation that is both ancient and deeply personal. This category honors the sacred
+            relationship between humans and the Earth, offering safe containers for seekers ready to step
+            into a deeper level of their journey.
           </motion.p>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -372,10 +385,10 @@ const Index = () => {
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Heart, title: "Healing & Release", desc: "Release old wounds, rediscover your inner power, and step into clarity and purpose." },
-              { icon: Users, title: "Sacred Connection", desc: "Join a circle of kindred spirits who honor your journey and support your growth." },
-              { icon: Leaf, title: "Earth Medicine Alignment", desc: "Immerse in practices that harmonize body, mind, and spirit with the sacred rhythms of the Earth." },
-              { icon: Sun, title: "Spiritual Awakening", desc: "Reconnect with the God within and live in harmony with your soul's calling." },
+              { icon: Heart, title: "Healing & Growth", desc: "Feel the weight of the past dissolve as you step into your power, guided by the rhythms of the Earth and the sacred within." },
+              { icon: Users, title: "Connection to Spirit & Earth", desc: "Rediscover the sacred within yourself and the divine rhythms of nature." },
+              { icon: Leaf, title: "A Global Circle of Support", desc: "Be uplifted by like-minded souls in ceremonies and gatherings designed for your awakening." },
+              { icon: Sun, title: "A Thriving Community", desc: "Find your circle of seekers, healers, and visionaries who share your passion for transformation." },
             ].map((item, i) => (
               <motion.div key={item.title} variants={fadeUp} className="relative text-center group">
                 <div className="absolute -top-3 -right-3 font-display text-5xl font-bold text-primary/10 select-none">
@@ -416,15 +429,17 @@ const Index = () => {
             Become a Member
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
-            Membership in Temple Mother Earth is an invitation to walk a sacred path alongside a community
-            of seekers devoted to healing, growth, and spiritual awakening.
+            At Temple Mother Earth, community is at the heart of everything we do. We honor the sacred
+            practice of gathering in circle, sharing wisdom, and walking this path together. Whether through
+            ceremonies, integration circles, or sacred service, we invite you to be part of a movement
+            of deep healing, connection, and empowerment.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-3">
             {[
-              { icon: ShieldCheck, title: "Sacred Access", desc: "Exclusive access to Earth Medicine ceremonies, private gatherings, and members-only events." },
-              { icon: Sparkles, title: "Integration & Wellness", desc: "Your companion for expanded consciousness with AI guidance, daily rituals, and personalized plans." },
-              { icon: Heart, title: "Community Circle", desc: "A circle of sovereign beings walking the path together — peer support and lifelong connections." },
+              { icon: ShieldCheck, title: "Exclusive Teachings & Workshops", desc: "Exclusive plant medicine teachings, workshops, and monthly live Q&A sessions with facilitators." },
+              { icon: Sparkles, title: "Private Community Forum", desc: "A private community forum for sharing, support, and early access to retreats and ceremonies." },
+              { icon: Heart, title: "Stay Connected", desc: "Join our mailing list to stay informed about upcoming events, ceremonies, and resources." },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl border border-primary-foreground/10 bg-foreground/40 backdrop-blur-sm p-8 text-center">
                 <item.icon className="mx-auto h-10 w-10 text-primary" />
@@ -700,6 +715,7 @@ const Index = () => {
               <a href="#upcoming-offerings" className="hover:text-primary transition-colors">Upcoming</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
               <Link to="/volunteer" className="hover:text-primary transition-colors">Volunteer</Link>
+              <Link to="/join-facilitator" className="hover:text-primary transition-colors">Join as Facilitator</Link>
               <Link to="/preparation" className="hover:text-primary transition-colors">Preparation</Link>
               <Link to="/conduct" className="hover:text-primary transition-colors">Conduct</Link>
               <Link to="/portal" className="hover:text-primary transition-colors">
