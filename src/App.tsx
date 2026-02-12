@@ -22,6 +22,7 @@ import MemberAuth from "./pages/MemberAuth";
 import MemberEducation from "./pages/MemberEducation";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
