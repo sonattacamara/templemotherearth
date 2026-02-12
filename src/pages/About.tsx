@@ -122,33 +122,74 @@ const About = () => {
             </h2>
           </motion.div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
+          <motion.div variants={fadeUp} className="mt-12 text-center">
+            <p className="font-display text-xl font-semibold text-primary italic md:text-2xl">
+              Honoring the Sacred. Awakening the Sovereign. Returning to the Truth Within.
+            </p>
+          </motion.div>
+
+          <div className="mt-16 space-y-12">
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Heart className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Our Mission</h3>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                To create a sacred space for healing and reconnecting with indigenous ways, centered on 
-                universal sovereignty and Mother Earth. We maintain continuous ethical partnership with 
-                indigenous wisdom keepers while facilitating sacred Earth Medicine ceremonies and 
-                experiential learning for those seeking to heal from trauma, reconnect with their divine 
-                essence, and spiritually evolve through reconnection with Mother Earth.
-              </p>
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Restoring the Sacred Within Every Person</h3>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
+                <p>
+                  The mission of Temple Mother Earth is to guide individuals back to the place where true healing begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
+                </p>
+                <p>
+                  Our work is to help people reconnect with this inner truth through sacred Earth medicine, spiritual practice, and intentional self-discovery.
+                </p>
+                <p>
+                  Healing is not about fixing what is broken; it is about remembering what has always been whole. Our mission is to create spaces where this remembrance becomes possible.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <Shield className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Providing Safe, Sacred Spaces for Healing & Transformation</h3>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
+                <p>
+                  We are committed to offering grounded, ethical, and spiritually aligned environments for ceremony, emotional work, and inner exploration. Whether in Washington, D.C. or during our international retreats, every gathering is held with reverence, prayer, and deep respect for the sacred lineages that inform our work.
+                </p>
+                <p>
+                  Our mission is to ensure that anyone who steps through our doors feels safe, supported, and honored in their healing process. We prioritize trauma awareness, cultural integrity, emotional maturity, and responsible Earth medicine practices.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Building Community Through Connection & Consciousness</h3>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
+                <p>
+                  At Temple Mother Earth, we know that healing does not happen in isolation — it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
+                </p>
+                <p>
+                  We hold a vision of community built on respect, compassion, sovereignty, and shared awakening.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Globe className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Our Vision</h3>
-              <p className="mt-4 leading-relaxed text-muted-foreground">
-                A world where every soul has access to sacred healing spaces and Earth Medicine traditions. 
-                Where the wisdom of the ancestors is honored, preserved, and shared with those who seek it. 
-                Where communities gather in circle, rooted in love and sovereignty, to remember the divine 
-                truth that lives within each of us. We envision Temple Mother Earth as a beacon for seekers 
-                worldwide — a living testament to the power of the Earth to heal, transform, and awaken.
-              </p>
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Supporting Global Awakening Through Earth Medicine & Ancient Wisdom</h3>
+              <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
+                <p>
+                  Our mission extends beyond our physical location. We partner with aligned organizations, stewards, and facilitators to bring sacred Earth medicine work to retreat settings around the world. We honor the traditions that carry these medicines and remain committed to ethical sourcing, cultural respect, and reciprocal relationships with Indigenous teachers and sacred lands.
+                </p>
+                <p className="font-semibold text-foreground">
+                  Our mission is simple but powerful: to support humanity's evolution by helping people reconnect with the Earth, with Spirit, and with the truth of who they are.
+                </p>
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -603,6 +644,8 @@ const About = () => {
               <Link to="/" className="hover:text-primary transition-colors">Home</Link>
               <Link to="/about" className="hover:text-primary transition-colors">About</Link>
               <a href="https://www.eventbrite.com/o/temple-mother-earth-83633883498" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Events</a>
+              <Link to="/volunteer" className="hover:text-primary transition-colors">Volunteer</Link>
+              <Link to="/join-facilitator" className="hover:text-primary transition-colors">Join as Facilitator</Link>
               <a href="mailto:AskUs@TempleMotherEarth.org" className="hover:text-primary transition-colors">Contact</a>
             </div>
           </div>
