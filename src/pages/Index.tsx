@@ -591,6 +591,66 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── INSTAGRAM FEED ───── */}
+      <section id="instagram" className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Follow Our Journey
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+            @templemotherearth
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
+            Stay connected with our community through sacred moments, ceremonies, and gatherings shared on Instagram.
+          </motion.p>
+          <motion.div variants={fadeUp} className="mt-10">
+            <div className="elfsight-app-e589de6f-7e8e-4fa2-80f2-553e2635ade9" data-elfsight-app-lazy></div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      <JourneyConnector />
+
+      {/* ───── GOOGLE REVIEWS ───── */}
+      <section id="reviews" className="bg-card px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Community Voices
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
+            What Our Community Says
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
+            Read heartfelt testimonials from members of our sacred community.
+          </motion.p>
+          <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
+            <a
+              href="https://www.google.com/search?q=Temple+of+Mother+Earth&ludocid=4773705032292068357&lsig=AB86z5WhQt6Le_XFK7QZfBYgfHkw#lkt=LocalPoiReviews&lpg=cid:CgIgAQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+            >
+              <Star className="h-4 w-4" />
+              Read & Leave a Google Review
+            </a>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      <JourneyConnector />
+
       {/* ───── CONTACT ───── */}
       <section id="contact" className="bg-card px-4 py-24 md:py-32">
         <motion.div
