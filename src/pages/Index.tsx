@@ -197,7 +197,9 @@ const Index = () => {
             variants={fadeUp}
             className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
           >
-            Welcome to Temple Mother Earth
+            Welcome to
+            <br />
+            Temple Mother Earth
           </motion.h1>
           <motion.p
             variants={fadeUp}
@@ -215,21 +217,21 @@ const Index = () => {
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="#offerings"
-              className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               See All Experiences
             </a>
             <a
               href="#awakening"
-              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               Begin the Journey
             </a>
             <Link
               to="/ceremony-intake"
-              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              I'm Ready
+              I'm Ready to Heal
             </Link>
           </motion.div>
         </motion.div>
@@ -310,12 +312,12 @@ const Index = () => {
               Temple Mother Earth — a sacred sanctuary where sovereign beings reconnect with the Earth, honor the divine within, 
               and walk the path of healing together.
             </p>
-            <Link
-              to="/about"
+            <a
+              href="/about#top"
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
             >
               Read Our Full Story <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </section>
@@ -697,7 +699,7 @@ const Index = () => {
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="https://www.google.com/search?q=Temple+of+Mother+Earth&ludocid=4773705032292068357&lsig=AB86z5WhQt6Le_XFK7QZfBYgfHkw#lkt=LocalPoiReviews&lpg=cid:CgIgAQ=="
+              href="https://search.google.com/local/writereview?placeid=ChIJk2t0xBm3t4kRVVrcT6hzUkQ"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
@@ -739,7 +741,7 @@ const Index = () => {
             <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
               Philosophy, preparation guidance, pathway maps, and invitations — delivered with intention to your inbox.
             </p>
-            <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); }}>
+            <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); const form = e.target as HTMLFormElement; const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value; if (email) { fetch("https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, source: "temple_transmissions" }) }).then(() => { form.reset(); alert("Welcome! You've been added to Temple Transmissions."); }).catch(() => { alert("Something went wrong. Please try again."); }); } }}>
               <input
                 type="email"
                 placeholder="Your email address"
@@ -770,9 +772,9 @@ const Index = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Follow Us</h3>
                 <div className="mt-2 flex flex-wrap gap-4">
-                  <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
-                  <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Facebook</a>
-                  <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">@TempleMotherEarth 🌍</a>
+                   <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">📸 Instagram</a>
+                   <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">👥 Facebook</a>
+                   <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">✈️ Telegram</a>
                 </div>
               </div>
               <div>
@@ -801,11 +803,11 @@ const Index = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Support the Temple</h3>
                 <div className="mt-2 flex flex-col gap-2">
-                  <a href="https://www.google.com/search?q=Temple+of+Mother+Earth&ludocid=4773705032292068357&lsig=AB86z5WhQt6Le_XFK7QZfBYgfHkw#lkt=LocalPoiReviews&lpg=cid:CgIgAQ==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                  <a href="https://search.google.com/local/writereview?placeid=ChIJk2t0xBm3t4kRVVrcT6hzUkQ" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
                     <Star className="h-4 w-4 text-primary" /> Leave a Google Review
                   </a>
-                  <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Amazon Wishlist →</a>
-                  <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Share Photos & Videos →</a>
+                   <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🎁 Amazon Wishlist →</a>
+                   <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">📷 Share Photos & Videos →</a>
                 </div>
               </div>
               <div>
