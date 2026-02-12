@@ -60,16 +60,24 @@ const Navigation = () => {
 
           <Link
             to="/portal"
-            className="rounded-lg border border-primary-foreground/30 px-4 py-2 font-body text-sm text-primary-foreground transition hover:bg-primary-foreground/10"
+            className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
           >
             Member Login
           </Link>
           <Link
             to="/ceremony-intake"
-            className="rounded-lg bg-primary px-5 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+            className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
           >
             Begin Your Journey
           </Link>
+          <a
+            href="https://www.eventbrite.com/o/29347213477#events"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
+          >
+            Enter the Ceremony
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -103,10 +111,19 @@ const Navigation = () => {
           <Link
             to="/ceremony-intake"
             onClick={() => setOpen(false)}
-            className="block mt-4 rounded-lg bg-primary px-5 py-3 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+            className="block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors"
           >
             Begin Your Journey
           </Link>
+          <a
+            href="https://www.eventbrite.com/o/29347213477#events"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block mt-4 rounded-lg bg-secondary px-5 py-3 text-center font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
+          >
+            Enter the Ceremony
+          </a>
         </div>
       )}
     </nav>

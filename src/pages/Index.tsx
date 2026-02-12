@@ -219,19 +219,19 @@ const Index = () => {
               href="#offerings"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              See All Experiences
+              Explore Our Experiences
             </a>
             <a
               href="#awakening"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              Begin the Journey
+              Discover Your Path
             </a>
             <Link
               to="/ceremony-intake"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              I'm Ready to Heal
+              I'm Ready
             </Link>
           </motion.div>
         </motion.div>
