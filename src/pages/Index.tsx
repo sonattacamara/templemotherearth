@@ -460,24 +460,25 @@ const Index = () => {
         >
           <JourneyStage number="Stage IV" label="Your Pathway" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            We Built Community. Now We Build Sovereignty.
+            Your Sacred Community Awaits
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
-            Temple Mother Earth is evolving into a structured, threshold-based sanctuary.
-            Nervous system sovereignty, embodied practice, and intentional progression — 
-            each step earned, not purchased. This is depth over volume.
+            Temple Mother Earth is a home for sovereign beings walking the path of healing, 
+            growth, and remembrance. Whether you're just beginning to explore or ready to 
+            deepen your practice, there is a place for you here.
           </motion.p>
 
           {/* Pathway Steps */}
           <motion.div variants={fadeUp} className="mt-12 flex flex-col items-center gap-0 sm:flex-row sm:justify-center sm:gap-0">
             {[
+              { label: "Welcome", price: "Free", icon: Heart },
               { label: "Belong", price: "$50/mo", icon: Leaf },
               { label: "Train", price: "$150/mo", icon: Flame },
               { label: "Prepare", price: "$275/mo", icon: ShieldCheck },
               { label: "Embody", price: "$500/mo", icon: Star },
             ].map((step, i, arr) => (
               <div key={step.label} className="flex items-center">
-                <div className="flex flex-col items-center text-center w-28">
+                <div className="flex flex-col items-center text-center w-24">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 border-2 border-primary/40">
                     <step.icon className="h-6 w-6 text-primary" />
                   </div>
@@ -529,17 +530,30 @@ const Index = () => {
         >
           <JourneyStage number="Stage V" label="The Invitation" />
           <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            What Are You Seeking?
+            Does This Sound Like You?
           </motion.h2>
-          <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-xl space-y-4 text-lg text-primary-foreground/75">
-            <p>
-              Maybe you're carrying something heavy — grief, trauma, unanswered questions about who you truly are.
-              Maybe you feel disconnected from your purpose, your body, your spirit. Maybe you've tried everything
-              else and something deep within is calling you toward a different kind of healing.
-            </p>
-            <p>
-              You don't have to have it figured out. You just have to be willing to show up.
-              Temple Mother Earth is here to meet you exactly where you are.
+          <motion.div variants={fadeUp} className="mx-auto mt-10 max-w-xl text-left">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                { emoji: "💔", text: "You're carrying grief, loss, or pain that won't seem to lift" },
+                { emoji: "🌫️", text: "You feel disconnected from your purpose or your sense of self" },
+                { emoji: "😰", text: "Anxiety, stress, or overwhelm have become your daily companion" },
+                { emoji: "🔄", text: "You keep repeating the same cycles and patterns" },
+                { emoji: "🙏", text: "You're longing for spiritual connection but don't know where to start" },
+                { emoji: "🏠", text: "You're searching for a community that truly sees and accepts you" },
+                { emoji: "💫", text: "Something deep within is calling you toward a different kind of healing" },
+                { emoji: "🌱", text: "You're ready to grow but need a safe space to do it" },
+              ].map((item) => (
+                <div key={item.text} className="flex items-start gap-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 p-4">
+                  <span className="text-xl shrink-0">{item.emoji}</span>
+                  <p className="text-sm leading-relaxed text-primary-foreground/80">{item.text}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-center text-lg text-primary-foreground/75 italic">
+              You don't have to have it all figured out. You just have to be willing to show up.
+              <br />
+              <span className="font-semibold text-primary-foreground">Temple Mother Earth is here to meet you exactly where you are.</span>
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
@@ -604,22 +618,27 @@ const Index = () => {
             </div>
 
             {/* Eventbrite Embedded Widget */}
-            <div className="w-full overflow-hidden rounded-xl bg-card/50 border border-primary/10 p-8 text-center">
-              <div className="flex flex-col items-center gap-4">
-                <Flame className="h-10 w-10 text-primary" />
-                <h3 className="font-display text-xl font-semibold text-foreground">Browse Our Upcoming Ceremonies</h3>
-                <p className="text-muted-foreground max-w-md">
-                  View our full calendar of Earth Medicine ceremonies, community gatherings, and sacred events on Eventbrite.
+            <div className="w-full overflow-hidden rounded-xl border border-primary/10">
+              <iframe
+                src="https://www.eventbrite.com/o/29347213477"
+                title="Temple Mother Earth Ceremonies & Events"
+                className="w-full border-0"
+                style={{ minHeight: "600px" }}
+                loading="lazy"
+                allow="payment"
+              />
+              <div className="bg-card/50 p-4 text-center border-t border-primary/10">
+                <p className="text-xs text-muted-foreground">
+                  Having trouble viewing?{" "}
+                  <a
+                    href="https://www.eventbrite.com/o/29347213477#events"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Open ceremonies calendar in a new window →
+                  </a>
                 </p>
-                <a
-                  href="https://www.eventbrite.com/o/29347213477#events"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
-                >
-                  View Ceremonies Calendar
-                  <ArrowRight className="h-4 w-4" />
-                </a>
               </div>
             </div>
 
