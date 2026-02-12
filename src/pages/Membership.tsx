@@ -301,7 +301,7 @@ const Membership = () => {
           {/* Sequential Tier Stages */}
           <div className="mt-16">
             {tiers.map((tier, i) => (
-              <div key={tier.name}>
+              <div key={tier.name} id={tier.name.toLowerCase().replace(/\s+/g, '-')}>
                 {i > 0 && <ThresholdDivider label="Next Threshold" />}
                 <motion.div
                   variants={fadeUp}

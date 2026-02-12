@@ -495,10 +495,10 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 flex justify-center">
             <Link
-              to="/membership"
+              to="/membership#environment-collective"
               className="rounded-xl bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground shadow-lg transition hover:bg-primary hover:text-primary-foreground"
             >
-              Explore Your Pathway
+              Discover Your Path
             </Link>
           </motion.div>
         </motion.div>
@@ -815,38 +815,6 @@ const Index = () => {
               </div>
             </div>
 
-            <form
-              className="space-y-4 rounded-2xl border border-border bg-background p-6"
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.open("mailto:AskUs@TempleMotherEarth.org", "_blank");
-              }}
-            >
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              />
-              <textarea
-                placeholder="How can we support your journey?"
-                rows={4}
-                className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-              >
-                Send Message
-              </button>
-            </form>
           </motion.div>
         </motion.div>
       </section>
