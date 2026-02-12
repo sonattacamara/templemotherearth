@@ -27,7 +27,7 @@ const stagger = {
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div id="top" className="min-h-screen bg-background">
       <Navigation />
 
       {/* ───── HERO ───── */}
@@ -82,8 +82,7 @@ const About = () => {
                   with the Earth, honor the God within, and walk the path of healing together.
                 </p>
                 <p>
-                  Founded by and for people of the African diaspora while welcoming all sovereign beings who 
-                  resonate with our mission, Temple Mother Earth bridges ancient Earth Medicine traditions with 
+               Founded by and for people who are looking for higher states of consciousness, who want to end their own pain and suffering, who are ready for tapping into the God within them, to create love and abundance in all things. Temple Mother Earth bridges ancient Earth Medicine traditions with 
                   modern healing practices. From our Washington, DC sanctuary, we serve our local community 
                   and extend our reach through international immersions and traveling ceremonies.
                 </p>
@@ -296,16 +295,16 @@ const About = () => {
               Our Guiding Wisdom
             </p>
             <h2 className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
-              The Five Agreements
+              The Four Agreements
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-muted-foreground">
-              Rooted in the Toltec wisdom tradition, the Five Agreements guide how we walk through 
+              Rooted in the Toltec wisdom tradition, the Four Agreements guide how we walk through 
               the world and show up in community. We honor these principles as a foundation 
               for personal integrity, emotional maturity, and sacred living.
             </p>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {[
               {
                 number: "1",
@@ -327,11 +326,6 @@ const About = () => {
                 title: "Always Do Your Best",
                 desc: "Your best will change from moment to moment. Under any circumstance, simply do your best and you will avoid self-judgment and regret.",
               },
-              {
-                number: "5",
-                title: "Be Skeptical, But Learn to Listen",
-                desc: "Don't believe yourself or anybody else blindly. Use the power of doubt to question everything — but then listen with intent. The truth will reveal itself.",
-              },
             ].map((agreement) => (
               <motion.div
                 key={agreement.number}
@@ -351,12 +345,59 @@ const About = () => {
           </div>
 
           <motion.p variants={fadeUp} className="mt-10 text-center text-sm text-muted-foreground italic">
-            Based on the wisdom of Don Miguel Ruiz and Don Jose Ruiz — "The Fifth Agreement"
+            Based on the wisdom of Don Miguel Ruiz — "The Four Agreements"
           </motion.p>
         </motion.div>
       </section>
 
-      {/* ───── OUR COMMUNITY ───── */}
+      {/* ───── STATEMENT OF BELIEFS ───── */}
+      <section className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-4xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+        >
+          <motion.div variants={fadeUp} className="text-center">
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              Our Foundation
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+              Statement of Beliefs
+            </h2>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-12 space-y-6 text-muted-foreground leading-relaxed">
+            <div className="rounded-2xl border border-border bg-card p-8 space-y-4">
+              <p>
+                We believe that the Earth is sacred, alive, and a source of medicine, wisdom, and spiritual sustenance 
+                for all human beings. We believe that the Creator — known by many names across cultures — has placed 
+                within every person a divine spark, an inner intelligence, and the innate capacity for healing and transformation.
+              </p>
+              <p>
+                We believe that Earth Medicine ceremonies — including but not limited to Kambo, Hapé, Cacao, and Sacred Plant 
+                ceremonies — are sacramental practices that connect the human spirit to the divine, to nature, and to the 
+                truth within. These practices are central to our religious and spiritual expression.
+              </p>
+              <p>
+                We believe in the sovereignty of every individual to choose their spiritual path, to seek healing through 
+                sacred traditions, and to gather in community for prayer, ceremony, and collective awakening.
+              </p>
+              <p>
+                We believe that healing is not about fixing what is broken — it is about remembering what has always been whole. 
+                Our ceremonies and gatherings are held with reverence, prayer, safety, and deep respect for the ancestral 
+                and indigenous lineages that carry these sacred traditions.
+              </p>
+              <p className="text-sm text-muted-foreground/80 italic">
+                Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom 
+                Restoration Act (RFRA) and the First Amendment of the United States Constitution.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
       <section className="px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-4xl"
@@ -375,8 +416,8 @@ const About = () => {
               </h2>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Temple Mother Earth is proudly rooted in the BIPOC community. We were founded by and for people
-                  of the African diaspora, while welcoming all sovereign beings who resonate with our mission.
+               Temple Mother Earth is proudly rooted in the BIPOC community. We were founded by and for people
+                  who are seeking higher states of consciousness and lasting transformation, while welcoming all sovereign beings who resonate with our mission.
                   Our community is radically inclusive — intentionally moving beyond labels of gender, race, or status.
                 </p>
                 <p>
@@ -428,14 +469,14 @@ const About = () => {
             </div>
             <div>
               <h3 className="font-display text-2xl font-bold text-foreground md:text-3xl">
-               PhD Dr. Sonatta Camara
+               Dr. Sonatta Camara, PhD
               </h3>
               <p className="mt-2 font-body text-sm font-semibold uppercase tracking-wider text-primary">
                 Co-Founder & Spiritual Director
               </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  PhD Dr. Sonatta Camara is a visionary educator and spiritual guide whose lineage traces
+                  Dr. Sonatta Camara, PhD is a visionary educator and spiritual guide whose lineage traces
                   to West Africa — Guinea — and Cairo, Egypt, where East meets West, shaping the foundation
                   of who she is. Her journey into Earth Medicine began as a personal quest for reconnection
                   and quickly evolved into a sacred calling. With a background that bridges academia and
@@ -449,7 +490,14 @@ const About = () => {
                   love, and transformation.
                 </p>
                 <p>
-                  Dr. Camara is passionate about making Earth Medicine accessible to the BIPOC community and
+                  Through her own healing journey, Dr. Camara discovered the transformative power of self-regulating 
+                  the nervous system — a practice she now brings to the many women, especially executives and high-achievers, 
+                  who carry the invisible weight of stress, burnout, and disconnection. Her mission is rooted in the 
+                  understanding that when we learn to regulate our own systems, we unlock a deeper capacity for joy, 
+                  purpose, and authentic leadership.
+                </p>
+                <p>
+                  Dr. Camara is passionate about making Earth Medicine accessible and
                   ensuring that indigenous wisdom traditions are honored and preserved. Under her leadership,
                   Temple Mother Earth has grown from a local gathering space into a sanctuary that serves
                   individuals across the nation and internationally.
@@ -469,8 +517,8 @@ const About = () => {
               </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                   King James is a retired United States Air Force veteran, master beekeeper, accomplished martial artist,
-                   Master Mason, ceremony facilitator, and co-founder of Temple Mother Earth. His military service
+                   King James is a retired United States Air Force veteran, accomplished martial artist,
+                   ceremony facilitator, and co-founder of Temple Mother Earth. His military service
                    instilled a warrior's discipline and unwavering commitment to service — qualities he now channels
                    into holding sacred space for healing and transformation.
                 </p>
@@ -488,7 +536,7 @@ const About = () => {
                 </p>
                 <p>
                    As the operational force behind Temple Mother Earth, James oversees community engagement,
-                   immersion coordination, and the expansion of TOME's veterans transformation program. His vision
+                   immersion coordination, and the expansion of Temple Mother Earth's Veterans Transformation Program. His vision
                    is to bring sacred healing to communities that have been historically underserved — especially
                    fellow veterans and those carrying the weight of trauma — ensuring that Earth Medicine
                    is accessible to all who seek it.

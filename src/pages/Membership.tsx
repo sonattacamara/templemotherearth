@@ -89,7 +89,7 @@ const tiers = [
       "Community announcements & event calendar",
       "Monthly live teaching",
       "Introductory resource library",
-      "Ability to attend experiences à la carte",
+      "Ability to attend individual experiences",
     ],
     stripeKey: "community_rhythm" as const,
     isFree: false,
@@ -161,7 +161,7 @@ const Membership = () => {
 
   const handleCheckout = async (stripeKey: keyof typeof MEMBERSHIP_TIERS) => {
     if (!user) {
-      toast({ title: "Sign in required", description: "Please sign in or create an account to subscribe.", variant: "destructive" });
+      window.location.href = "/member/auth?redirect=/membership";
       return;
     }
     setLoadingTier(stripeKey);
@@ -354,7 +354,7 @@ const Membership = () => {
                   {/* CTA */}
                   {tier.isFree ? (
                     <Link
-                      to="/member-auth"
+                      to="/member/auth"
                       className="mt-8 w-full rounded-xl border border-primary/30 bg-primary/5 py-3.5 text-center font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/10 flex items-center justify-center gap-2"
                     >
                       Join for Free
