@@ -70,14 +70,12 @@ const Navigation = () => {
           >
             Begin Your Journey
           </Link>
-          <a
-            href="https://www.eventbrite.com/o/29347213477#events"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/portal"
             className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
           >
-            Enter the Ceremony
-          </a>
+            Enter the Portal
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -115,15 +113,13 @@ const Navigation = () => {
           >
             Begin Your Journey
           </Link>
-          <a
-            href="https://www.eventbrite.com/o/29347213477#events"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/portal"
             onClick={() => setOpen(false)}
             className="block mt-4 rounded-lg bg-secondary px-5 py-3 text-center font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
           >
-            Enter the Ceremony
-          </a>
+            Enter the Portal
+          </Link>
         </div>
       )}
     </nav>
