@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, type Easing, AnimatePresence } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, X, Sparkles, HandHeart, ShieldCheck, MapPin, Star, Eye, Compass, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { usePageTracking } from "@/hooks/useAnalytics";
@@ -615,29 +615,25 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Eventbrite Embedded Widget */}
-            <div className="w-full overflow-hidden rounded-xl border border-primary/10">
-              <iframe
-                src="https://www.eventbrite.com/o/29347213477"
-                title="Temple Mother Earth Ceremonies & Events"
-                className="w-full border-0"
-                style={{ minHeight: "600px" }}
-                loading="lazy"
-                allow="payment"
-              />
-              <div className="bg-card/50 p-4 text-center border-t border-primary/10">
-                <p className="text-xs text-muted-foreground">
-                  Having trouble viewing?{" "}
-                  <a
-                    href="https://www.eventbrite.com/o/29347213477#events"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    Open ceremonies calendar in a new window →
-                  </a>
-                </p>
+            {/* Eventbrite CTA */}
+            <div className="w-full rounded-xl border border-primary/10 bg-card/30 p-8 text-center space-y-6">
+              <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <Calendar className="h-8 w-8 text-primary" />
               </div>
+              <h3 className="font-display text-xl font-bold text-foreground">
+                Browse Upcoming Ceremonies
+              </h3>
+              <p className="mx-auto max-w-md text-sm text-muted-foreground">
+                View our full calendar of Earth Medicine ceremonies, community gatherings, and sacred experiences on Eventbrite.
+              </p>
+              <a
+                href="https://www.eventbrite.com/o/29347213477#events"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 shadow-lg"
+              >
+                View All Upcoming Ceremonies →
+              </a>
             </div>
 
             <div className="mt-8 flex flex-col items-center gap-4">
