@@ -1,6 +1,7 @@
 import { motion, type Easing } from "framer-motion";
 import { Shield, AlertTriangle, Leaf, Heart, Sun, Droplets, Apple, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import ceremonyImg from "@/assets/offering-ceremony.jpg";
 
@@ -14,6 +15,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const Preparation = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Ceremony Preparation" description="Prepare for your Earth Medicine ceremony at Temple Mother Earth. Diet, fasting, hydration, and mental preparation guidelines." path="/preparation" />
       <Navigation />
 
       {/* Hero */}

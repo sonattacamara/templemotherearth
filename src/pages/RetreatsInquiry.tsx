@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
@@ -26,6 +27,7 @@ const RetreatsInquiry = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="International Immersions" description="Travel to sacred spaces around the world with Temple Mother Earth. Inquire about our international retreat experiences and immersive healing journeys." path="/retreats-inquiry" />
       <Navigation />
 
       {/* Hero */}

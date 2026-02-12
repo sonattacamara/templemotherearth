@@ -4,6 +4,7 @@ import { Check, ArrowDown, Flame, Heart, Leaf, Shield, Sparkles, Star, Users, Lo
 import { Link, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
+import SEOHead from "@/components/SEOHead";
 import { toast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
@@ -183,6 +184,7 @@ const Membership = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Membership" description="Join Temple Mother Earth's sacred community. Explore membership tiers from Welcome Circle (free) to Temple Immersion Path, each offering a deeper level of commitment and transformation." path="/membership" />
       <Navigation />
 
       {/* ───── HERO ───── */}

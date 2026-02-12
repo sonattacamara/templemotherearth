@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { HandHeart, ArrowRight, CheckCircle2, Shield, Star, Users } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import communityImg from "@/assets/community.jpg";
 
@@ -24,6 +25,7 @@ const Sponsor = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Sponsor" description="Support Temple Mother Earth through sponsorship. Help sustain our 501(c)(3) nonprofit mission of sacred healing and community in Washington, DC." path="/sponsor" />
       <Navigation />
 
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">

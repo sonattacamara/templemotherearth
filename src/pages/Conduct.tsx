@@ -1,6 +1,7 @@
 import { motion, type Easing } from "framer-motion";
 import { Shield, Heart, Users, Eye, AlertTriangle, HandHeart } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import sacredSpace from "@/assets/sacred-space.jpg";
 
@@ -14,6 +15,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const Conduct = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Code of Conduct" description="Temple Mother Earth's code of conduct for ceremonies and community gatherings. Safety, respect, and sacred space guidelines." path="/conduct" />
       <Navigation />
 
       {/* Hero */}
