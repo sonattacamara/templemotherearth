@@ -493,33 +493,13 @@ const Index = () => {
             ))}
           </motion.div>
 
-          <motion.div variants={fadeUp} className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <motion.div variants={fadeUp} className="mt-12 flex justify-center">
             <Link
               to="/membership"
-              className="rounded-xl bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground shadow-lg transition hover:bg-primary"
+              className="rounded-xl bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground shadow-lg transition hover:bg-primary hover:text-primary-foreground"
             >
               Explore Your Pathway
             </Link>
-            <Link
-              to="/portal"
-              className="rounded-xl bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground shadow-lg transition hover:bg-primary"
-            >
-              Member Login
-            </Link>
-            <Link
-              to="/ceremony-intake"
-              className="rounded-xl bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground shadow-lg transition hover:bg-primary"
-            >
-              Begin Your Journey
-            </Link>
-            <a
-              href="https://www.eventbrite.com/o/29347213477#events"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground shadow-lg transition hover:bg-primary"
-            >
-              Enter the Ceremony
-            </a>
           </motion.div>
         </motion.div>
       </section>
