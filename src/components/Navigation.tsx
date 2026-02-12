@@ -66,7 +66,7 @@ const Navigation = () => {
           </Link>
           <Link
             to="/ceremony-intake"
-            className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
+            className="rounded-lg bg-primary px-4 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
           >
             Begin Your Journey
           </Link>
