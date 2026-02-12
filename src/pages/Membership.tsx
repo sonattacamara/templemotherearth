@@ -67,7 +67,7 @@ const tiers = [
     commitment: "30-day introduction",
     philosophy: "This is where it all begins. Experience the warmth of our community, get to know our philosophy, and feel if this space resonates with your spirit. No commitment — just an open door.",
     includes: [
-      "Member portal access for 30 days",
+      "Limited integration portal access for 30 days",
       "Community announcements & event calendar",
       "Introductory resource library",
       "Access to one live community gathering",
@@ -104,7 +104,7 @@ const tiers = [
     philosophy: "For those ready to build a daily practice. This container supports your nervous system, strengthens your body-mind connection, and helps you cultivate the inner resilience that lasting transformation requires.",
     includes: [
       "Everything in Community Rhythm",
-      "Weekly live virtual Qi Gong",
+      "Live virtual Qi Gong (Monday–Friday)",
       "Replay library access",
       "Monthly embodiment workshop",
       "Practice tracker & streak counter",
