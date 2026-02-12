@@ -428,29 +428,31 @@ const About = () => {
             </div>
             <div>
               <h3 className="font-display text-2xl font-bold text-foreground md:text-3xl">
-                Dr. Sonatta Camara
+               PhD Dr. Sonatta Camara
               </h3>
               <p className="mt-2 font-body text-sm font-semibold uppercase tracking-wider text-primary">
                 Co-Founder & Spiritual Director
               </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Dr. Sonatta Camara is a visionary healer, educator, and spiritual guide whose journey into
-                  Earth Medicine began as a personal quest for healing and quickly evolved into a sacred calling.
-                  With a background that bridges academia and ancestral wisdom, Dr. Camara brings a unique
-                  depth to her work as co-founder and spiritual director of Temple Mother Earth.
+                  PhD Dr. Sonatta Camara is a visionary educator and spiritual guide whose lineage traces
+                  to West Africa — Guinea — and Cairo, Egypt, where East meets West, shaping the foundation
+                  of who she is. Her journey into Earth Medicine began as a personal quest for reconnection
+                  and quickly evolved into a sacred calling. With a background that bridges academia and
+                  ancestral wisdom, Dr. Camara brings a unique depth to her work as co-founder and spiritual
+                  director of Temple Mother Earth.
                 </p>
                 <p>
-                  Her approach to healing is rooted in the understanding that we are sovereign beings — divine
-                  essences having a human experience. She guides seekers through sacred ceremonies including
+                  Her approach is rooted in the understanding that we are sovereign beings — divine
+                  essences having a human experience. She guides individuals through sacred ceremonies including
                   Kambo, Hapé, and other Earth Medicine traditions, creating containers of profound safety,
                   love, and transformation.
                 </p>
                 <p>
                   Dr. Camara is passionate about making Earth Medicine accessible to the BIPOC community and
                   ensuring that indigenous wisdom traditions are honored and preserved. Under her leadership,
-                  Temple Mother Earth has grown from a local healing space into a sanctuary that serves
-                  seekers across the nation and internationally.
+                  Temple Mother Earth has grown from a local gathering space into a sanctuary that serves
+                  individuals across the nation and internationally.
                 </p>
               </div>
             </div>
@@ -462,9 +464,6 @@ const About = () => {
               <h3 className="font-display text-2xl font-bold text-foreground md:text-3xl">
                 King James
               </h3>
-              <p className="mt-2 font-body text-sm font-semibold uppercase tracking-wider text-primary">
-                Co-Founder & Ceremony Facilitator
-              </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                    King James is a retired United States Air Force veteran, master beekeeper, accomplished martial artist,
@@ -486,7 +485,7 @@ const About = () => {
                 </p>
                 <p>
                    As the operational force behind Temple Mother Earth, James oversees community engagement,
-                   retreat coordination, and the expansion of TOME's traveling ceremony program. His vision
+                   retreat coordination, and the expansion of TOME's veterans transformation program. His vision
                    is to bring sacred healing to communities that have been historically underserved — especially
                    fellow veterans and those carrying the weight of trauma — ensuring that Earth Medicine
                    is accessible to all who seek it.
@@ -523,7 +522,7 @@ const About = () => {
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
               Our facilitators are experienced practitioners who walk the path of Earth Medicine with integrity,
-              compassion, and deep reverence for the sacred traditions we honor.
+              compassion, and deep reverence for the sacred traditions we honor. Each brings a unique gift to our community.
             </p>
           </motion.div>
 
@@ -545,19 +544,20 @@ const About = () => {
                 name: "Samira Davis",
                 role: "Herbalist & Earth Medicine Keeper",
                 img: facilitatorSamira,
-                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding seekers toward holistic healing through the Earth's abundant pharmacy.",
+                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding individuals toward holistic healing through the Earth's abundant pharmacy.",
               },
               {
                 name: "Dr. George Xavier Love, Jr.",
                 role: "Spiritual Elder & High Priest",
                 img: facilitatorGeorge,
-                desc: "A shaman, priest, physician, and scholar warrior, Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides seekers toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.",
+                desc: "A shaman, priest, physician, and scholar warrior, Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides individuals toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.",
+                website: "https://loveqigong.com",
               },
               {
                 name: "Jala Johnson",
-                role: "Wellness Space Curator & Sound Healing Practitioner",
+                role: "Creator of Metamorphosis Mind 801 · Sound Healing Practitioner",
                 img: facilitatorJala,
-                desc: "Jala Johnson of Metamorphosis Mind 801 is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, retreats, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
+                desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, retreats, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
             ].map((person) => (
               <motion.div
@@ -565,11 +565,11 @@ const About = () => {
                 variants={fadeUp}
                 className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:shadow-lg"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <img
                     src={person.img}
                     alt={person.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
@@ -580,6 +580,11 @@ const About = () => {
                     {person.role}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{person.desc}</p>
+                  {"website" in person && (person as any).website && (
+                    <a href={(person as any).website} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm text-primary hover:underline">
+                      {(person as any).website.replace("https://", "")} →
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

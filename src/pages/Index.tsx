@@ -62,7 +62,7 @@ const offerings = [
   {
     icon: Heart,
     title: "1-on-1 / Private Ceremonies",
-    desc: "Find your circle of seekers, healers, and visionaries who share your passion for transformation through personalized sacred sessions.",
+    desc: "Experience deeply personal sacred sessions designed around your unique intentions, needs, and path of transformation.",
     img: offeringPrivate,
     link: "/private-ceremonies",
     isExternal: false,
@@ -136,7 +136,7 @@ const Index = () => {
               <h3 className="font-display text-xl font-bold text-foreground">Keep the Temple Sustainable</h3>
               <p className="mt-3 text-sm text-muted-foreground">
                 Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible offerings & tithes
-                help us continue to serve seekers, preserve Earth Medicine traditions, and grow our sacred community.
+                help us continue to serve our community, preserve Earth Medicine traditions, and grow our sacred family.
               </p>
               <a
                 href={PAYPAL_DONATE_URL}
@@ -311,7 +311,7 @@ const Index = () => {
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
             Whether you are seeking healing, renewal, grounding, or expansion, Earth Medicine opens a path
             of transformation that is both ancient and deeply personal. This category honors the sacred
-            relationship between humans and the Earth, offering safe containers for seekers ready to step
+            relationship between humans and the Earth, offering safe containers for those ready to step
             into a deeper level of their journey.
           </motion.p>
 
@@ -388,7 +388,7 @@ const Index = () => {
               { icon: Heart, title: "Healing & Growth", desc: "Feel the weight of the past dissolve as you step into your power, guided by the rhythms of the Earth and the sacred within." },
               { icon: Users, title: "Connection to Spirit & Earth", desc: "Rediscover the sacred within yourself and the divine rhythms of nature." },
               { icon: Leaf, title: "A Global Circle of Support", desc: "Be uplifted by like-minded souls in ceremonies and gatherings designed for your awakening." },
-              { icon: Sun, title: "A Thriving Community", desc: "Find your circle of seekers, healers, and visionaries who share your passion for transformation." },
+              { icon: Sun, title: "A Thriving Community", desc: "Find your circle of kindred spirits, practitioners, and visionaries who share your passion for transformation." },
             ].map((item, i) => (
               <motion.div key={item.title} variants={fadeUp} className="relative text-center group">
                 <div className="absolute -top-3 -right-3 font-display text-5xl font-bold text-primary/10 select-none">

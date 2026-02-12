@@ -24,7 +24,7 @@ const tiers = [
     period: "",
     icon: Leaf,
     highlight: false,
-    description: "Begin your journey with our community. Access foundational resources and connect with fellow seekers.",
+    description: "Begin your journey with our community. Access foundational resources and connect with like-minded individuals.",
     benefits: [
       "Access to community newsletter",
       "Introductory Earth Medicine resources",
@@ -102,7 +102,7 @@ const values = [
   {
     icon: Users,
     title: "Lifelong Connection",
-    desc: "Build deep, lasting bonds with fellow seekers through ceremonies, retreats, community circles, and shared sacred experiences.",
+    desc: "Build deep, lasting bonds with kindred spirits through ceremonies, retreats, community circles, and shared sacred experiences.",
   },
 ];
 
@@ -141,7 +141,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75"
           >
-            Walk the sacred path alongside a community of seekers devoted to healing, growth, 
+            Walk the sacred path alongside a community devoted to healing, growth, 
             and spiritual awakening. Choose the level that resonates with your journey.
           </motion.p>
         </motion.div>
