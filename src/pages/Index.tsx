@@ -471,19 +471,18 @@ const Index = () => {
           {/* Pathway Steps */}
           <motion.div variants={fadeUp} className="mt-12 flex flex-col items-center gap-0 sm:flex-row sm:justify-center sm:gap-0">
             {[
-              { label: "Welcome", price: "Free", icon: Heart },
-              { label: "Belong", price: "$50/mo", icon: Leaf },
-              { label: "Train", price: "$150/mo", icon: Flame },
-              { label: "Prepare", price: "$275/mo", icon: ShieldCheck },
-              { label: "Embody", price: "$500/mo", icon: Star },
+              { label: "Welcome", icon: Heart },
+              { label: "Belong", icon: Leaf },
+              { label: "Train", icon: Flame },
+              { label: "Prepare", icon: ShieldCheck },
+              { label: "Embody", icon: Star },
             ].map((step, i, arr) => (
               <div key={step.label} className="flex items-center">
-                <div className="flex flex-col items-center text-center w-24">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 border-2 border-primary/40">
+                <div className="flex flex-col items-center text-center w-24 group cursor-pointer">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary/40 transition-colors group-hover:bg-primary/20">
                     <step.icon className="h-6 w-6 text-primary" />
                   </div>
                   <p className="mt-3 font-display text-sm font-bold text-primary-foreground">{step.label}</p>
-                  <p className="mt-1 text-[11px] text-primary-foreground/60">{step.price}</p>
                 </div>
                 {i < arr.length - 1 && (
                   <ArrowRight className="h-5 w-5 text-primary/50 mx-1 hidden sm:block" />
