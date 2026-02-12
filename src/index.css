@@ -99,3 +99,9 @@
     font-family: 'Playfair Display', serif;
   }
 }
+
+/* Hide Elfsight free widget branding */
+.elfsight-app-common .eapps-widget-toolbar,
+a[href*="elfsight.com"] {
+  display: none !important;
+}
