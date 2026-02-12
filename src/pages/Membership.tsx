@@ -59,21 +59,40 @@ const ThresholdDivider = ({ label }: { label?: string }) => (
 
 const tiers = [
   {
+    identity: "Welcome",
+    name: "Welcome Circle",
+    price: "Free",
+    period: "",
+    icon: Heart,
+    commitment: "30-day introduction",
+    philosophy: "This is where it all begins. Experience the warmth of our community, get to know our philosophy, and feel if this space resonates with your spirit. No commitment — just an open door.",
+    includes: [
+      "Member portal access for 30 days",
+      "Community announcements & event calendar",
+      "Introductory resource library",
+      "Access to one live community gathering",
+      "Temple Transmissions email series",
+    ],
+    stripeKey: null,
+    isFree: true,
+  },
+  {
     identity: "Belong",
     name: "Community Rhythm",
     price: "$50",
     period: "/month",
     icon: Leaf,
     commitment: "",
-    philosophy: "Safety and community. This is where you feel the tone, understand the philosophy, and discern your alignment with the Temple.",
+    philosophy: "You've felt the resonance. Now stay connected. This is your ongoing home within the Temple — where you deepen your understanding, stay informed, and grow at your own pace.",
     includes: [
-      "Member portal access",
+      "Full member portal access",
       "Community announcements & event calendar",
       "Monthly live teaching",
       "Introductory resource library",
-      "Ability to purchase experiences à la carte",
+      "Ability to attend experiences à la carte",
     ],
     stripeKey: "community_rhythm" as const,
+    isFree: false,
   },
   {
     identity: "Train",
@@ -82,7 +101,7 @@ const tiers = [
     period: "/month",
     icon: Flame,
     commitment: "",
-    philosophy: "Embodiment and nervous system strengthening. Without regulation, intensity becomes addiction. This tier builds the capacity required for deeper work.",
+    philosophy: "For those ready to build a daily practice. This container supports your nervous system, strengthens your body-mind connection, and helps you cultivate the inner resilience that lasting transformation requires.",
     includes: [
       "Everything in Community Rhythm",
       "Weekly live virtual Qi Gong",
@@ -92,6 +111,7 @@ const tiers = [
       "Nervous system check-ins & journal prompts",
     ],
     stripeKey: "environment_collective" as const,
+    isFree: false,
   },
   {
     identity: "Prepare",
@@ -99,17 +119,18 @@ const tiers = [
     price: "$275",
     period: "/month",
     icon: Shield,
-    commitment: "3-month minimum commitment",
-    philosophy: "Psychological readiness and responsibility. After three consecutive months, you become eligible for one full-day ceremony — capacity-based, intake required. This is structured preparation, not casual access.",
+    commitment: "3-month journey",
+    philosophy: "A guided container of preparation for those who feel called to deeper ceremonial work. After three months of practice, you become eligible for a full-day ceremony — when you feel ready and your facilitators agree.",
     includes: [
       "Everything in Environment Collective",
-      "Structured 3-month preparation container",
-      "Readiness assessment",
+      "Guided 3-month preparation container",
+      "Readiness conversation with facilitator",
       "Monthly integration call",
       "Priority ceremony registration",
-      "30-day post-experience integration container",
+      "30-day post-experience integration support",
     ],
     stripeKey: "preparation_path" as const,
+    isFree: false,
   },
   {
     identity: "Embody",
@@ -117,18 +138,19 @@ const tiers = [
     price: "$500",
     period: "/month",
     icon: Star,
-    commitment: "3-month minimum commitment",
-    philosophy: "Leadership and integration into life. After three consecutive months, you become eligible for one quarterly immersion. Limited seats. Full integration support and Inner Circle access.",
+    commitment: "3-month journey",
+    philosophy: "For those walking the path of deep integration and service. After three months of practice and preparation, you become eligible for quarterly immersions. This is where healing becomes a way of life.",
     includes: [
       "Everything in Preparation Path",
       "Quarterly immersion eligibility",
-      "Pre-immersion readiness review",
+      "Pre-immersion readiness conversation",
       "Post-immersion 30-day integration",
-      "Quarterly 1:1 call",
+      "Quarterly 1:1 call with facilitator",
       "Early access to all experiences",
-      "Inner Circle access",
+      "Inner Circle community access",
     ],
     stripeKey: "temple_immersion" as const,
+    isFree: false,
   },
 ];
 
@@ -181,23 +203,23 @@ const Membership = () => {
             variants={fadeUp}
             className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-primary/80"
           >
-            A New Season
+            A Sacred Invitation
           </motion.p>
           <motion.h1
             variants={fadeUp}
             className="mt-6 font-display text-4xl font-bold text-primary-foreground md:text-6xl leading-tight"
           >
-            We Built Community.
+            You Belong Here.
             <br />
-            Now We Build Sovereignty.
+            Come As You Are.
           </motion.h1>
           <motion.p
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-lg leading-relaxed text-primary-foreground/70"
           >
-            For five years, the Temple held space generously. That season cultivated community, 
-            tested what works, and taught us what lasts. Growth requires structure. 
-            This is not monetization — this is maturation.
+            Temple Mother Earth was born from a simple truth: healing happens in community.
+            Whether you're taking your first step or deepening a lifelong practice, 
+            there is a home for you here.
           </motion.p>
         </motion.div>
       </section>
@@ -215,25 +237,26 @@ const Membership = () => {
             variants={fadeUp}
             className="font-display text-2xl font-bold text-foreground md:text-3xl"
           >
-            Why Readiness, Not Access
+            Why We Hold Space This Way
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-10 space-y-8 text-base leading-relaxed text-muted-foreground">
             <p>
-              Intensity without integration does not create lasting change. Community without container leads to diffusion. 
-              Altered states without regulation create dependency.
+              Real transformation isn't something you can rush. It asks for presence, practice, and 
+              a safe container to hold what arises. That's why we've created a pathway — not to limit access, 
+              but to honor the depth of this sacred work and ensure everyone who walks it is truly supported.
             </p>
             <p>
-              The Temple is evolving from open circle to structured sanctuary — 
-              from access-first to readiness-first, from event-centered to integration-centered.
+              Every stage of this journey is designed with love, intention, and deep care for your 
+              nervous system, your spirit, and your unique path of healing.
             </p>
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-14 grid gap-6 sm:grid-cols-2">
             {[
-              { icon: Shield, title: "Nervous System Sovereignty", desc: "Without regulation, intensity becomes addiction. Without containment, insight becomes confusion." },
-              { icon: Heart, title: "Integration Over Intensity", desc: "Without integration, peak experiences fade. Every experience is held in a container — preparation before, integration after." },
-              { icon: Sparkles, title: "Threshold Over Transaction", desc: "When someone crosses a threshold, they choose consciously, commit, and take responsibility." },
-              { icon: Users, title: "Depth Over Volume", desc: "We are not building a large audience. We are cultivating a deep, intentional community of sovereign beings." },
+              { icon: Shield, title: "Safety & Nervous System Care", desc: "Your body knows what it needs. We create spaces where your nervous system can feel safe enough to heal, release, and integrate at your own pace." },
+              { icon: Heart, title: "Integration & Wholeness", desc: "Every experience is held in a container of care — preparation before, integration after — so insights become lasting transformation, not fleeting moments." },
+              { icon: Sparkles, title: "Intentional & Sacred", desc: "Each step on this path is a conscious choice. We honor that by ensuring you feel informed, supported, and never rushed." },
+              { icon: Users, title: "Community & Connection", desc: "Healing doesn't happen in isolation. You are surrounded by kindred spirits who see you, hold space for you, and walk alongside you." },
             ].map((v) => (
               <div key={v.title} className="rounded-2xl border border-border bg-card p-6 text-left">
                 <v.icon className="h-6 w-6 text-primary" />
@@ -258,20 +281,21 @@ const Membership = () => {
             variants={fadeUp}
             className="text-center font-body text-xs font-semibold uppercase tracking-[0.3em] text-primary/80"
           >
-            The Pathway
+            Your Journey
           </motion.p>
           <motion.h2
             variants={fadeUp}
             className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-4xl"
           >
-            Belong → Train → Prepare → Embody
+            Welcome → Belong → Train → Prepare → Embody
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="mx-auto mt-6 max-w-lg text-center text-muted-foreground"
           >
-            Each stage is intentional. This is not hierarchical — it is sequential. 
-            You don't skip ahead. You build the capacity to hold what's next.
+            There's no rush, no pressure, and no wrong place to start. 
+            Each stage unfolds naturally as you grow. Move at your own pace — 
+            we're here every step of the way.
           </motion.p>
 
           {/* Sequential Tier Stages */}
@@ -328,17 +352,26 @@ const Membership = () => {
                   </ul>
 
                   {/* CTA */}
-                  <button
-                    onClick={() => handleCheckout(tier.stripeKey)}
-                    disabled={loadingTier === tier.stripeKey}
-                    className="mt-8 w-full rounded-xl border border-primary/30 bg-primary/5 py-3.5 text-center font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/10 disabled:opacity-50 flex items-center justify-center gap-2"
-                  >
-                    {loadingTier === tier.stripeKey ? (
-                      <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</>
-                    ) : (
-                      <>Begin — {tier.price}/mo</>
-                    )}
-                  </button>
+                  {tier.isFree ? (
+                    <Link
+                      to="/member-auth"
+                      className="mt-8 w-full rounded-xl border border-primary/30 bg-primary/5 py-3.5 text-center font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/10 flex items-center justify-center gap-2"
+                    >
+                      Join for Free
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => handleCheckout(tier.stripeKey!)}
+                      disabled={loadingTier === tier.stripeKey}
+                      className="mt-8 w-full rounded-xl border border-primary/30 bg-primary/5 py-3.5 text-center font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/10 disabled:opacity-50 flex items-center justify-center gap-2"
+                    >
+                      {loadingTier === tier.stripeKey ? (
+                        <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</>
+                      ) : (
+                        <>Begin — {tier.price}/mo</>
+                      )}
+                    </button>
+                  )}
                 </motion.div>
               </div>
             ))}
@@ -348,7 +381,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mt-12 text-center text-sm text-muted-foreground"
           >
-            All memberships support Temple Mother Earth's 501(c)(3) nonprofit mission.
+            Your membership supports Temple Mother Earth's 501(c)(3) nonprofit mission — keeping sacred space alive for all.
           </motion.p>
         </motion.div>
       </section>
@@ -366,34 +399,34 @@ const Membership = () => {
             variants={fadeUp}
             className="text-center font-display text-2xl font-bold text-foreground md:text-3xl"
           >
-            Questions
+            Common Questions
           </motion.h2>
 
           <div className="mt-12 space-y-6">
             {[
               {
-                q: "Why the shift from free access?",
-                a: "For five years we built community generously. That season taught us that intensity without integration does not create lasting change. Structure creates sovereignty. This evolution ensures every individual who walks this path is truly supported.",
+                q: "Is there really a free option?",
+                a: "Yes! Our Welcome Circle gives you 30 days to explore the Temple, attend a community gathering, and feel whether this space is right for you. No payment required — just an open heart.",
               },
               {
-                q: "Can I access ceremonies without preparation?",
-                a: "No. All Earth Medicine ceremonies require active membership at the Preparation Path tier or above, plus completion of the Sacred Intake form. Readiness is not optional — it is the foundation of safe and transformative work.",
+                q: "How does ceremony preparation work?",
+                a: "Earth Medicine ceremonies are deeply sacred and require preparation for your safety and wellbeing. After three months in the Preparation Path, you'll have a conversation with a facilitator to ensure you feel truly ready. This isn't a test — it's a caring check-in to support your experience.",
               },
               {
-                q: "What is the 3-month commitment?",
-                a: "Tiers 3 and 4 require three consecutive months before ceremony or immersion eligibility. This threshold is intentional — crossing it means you chose consciously, committed, and took responsibility.",
+                q: "What is the 3-month journey?",
+                a: "The Preparation Path and Temple Immersion Path include a 3-month guided container. This time allows your nervous system to build the capacity for deeper work. Think of it as tending a garden — you plant seeds, nurture them, and trust the timing of the bloom.",
               },
               {
-                q: "Can I move between tiers?",
-                a: "You can step forward at any time. If you step into Preparation Path or Temple Immersion Path, the 3-month preparation clock begins at that point. Stepping back takes effect at the start of your next billing cycle.",
+                q: "Can I change my membership level?",
+                a: "Absolutely. You can move forward whenever you feel called. If you step into the Preparation Path or Temple Immersion Path, the 3-month journey begins from that point. You can also adjust at any time — changes take effect at your next billing cycle.",
               },
               {
-                q: "Are payments tax-deductible?",
-                a: "Temple Mother Earth is a 501(c)(3) nonprofit. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. Consult your tax advisor.",
+                q: "Are contributions tax-deductible?",
+                a: "Temple Mother Earth is a 501(c)(3) nonprofit. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. We recommend consulting your tax advisor.",
               },
               {
-                q: "What about altered states?",
-                a: "Altered states are not removed. They are repositioned — not as the center, but as tools accessed through readiness, preparation, and integration. They are not marketed as escape. They are held as rites.",
+                q: "What if I'm not sure where to start?",
+                a: "Start with the Welcome Circle — it's free and gives you space to explore without any pressure. You can also email us at AskUs@TempleMotherEarth.org and we'll help you find the right fit for where you are right now.",
               },
             ].map((item) => (
               <motion.div
@@ -428,15 +461,15 @@ const Membership = () => {
             variants={fadeUp}
             className="font-display text-3xl font-bold text-primary-foreground md:text-4xl leading-tight"
           >
-            Ready to Cross the Threshold?
+            Your Journey Starts with a Single Step
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="mt-6 text-base text-primary-foreground/70 leading-relaxed"
           >
-            This is not about access. This is about readiness.
+            You don't need to have it all figured out.
             <br />
-            Begin your pathway. Build the capacity to hold what's next.
+            You just need to be willing to begin. We'll walk with you.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
