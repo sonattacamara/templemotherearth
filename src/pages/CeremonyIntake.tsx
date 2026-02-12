@@ -349,7 +349,6 @@ const CeremonyIntake = () => {
               {[
                 { field: "emergencyName", label: "Emergency Contact Name *", placeholder: "Emergency Contact Name" },
                 { field: "emergencyPhone", label: "Emergency Contact Phone *", placeholder: "Emergency Contact Phone", type: "tel" },
-                { field: "emergencyRelation", label: "Relationship to You *", placeholder: "Relationship to You" },
               ].map(f => (
                 <div key={f.field}>
                   <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
@@ -357,6 +356,26 @@ const CeremonyIntake = () => {
                   {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
                 </div>
               ))}
+              <div>
+                <label className="mb-1 block text-sm font-medium text-foreground">Relationship to You *</label>
+                <select
+                  className={`${inputClass} ${validationErrors.emergencyRelation ? "ring-2 ring-destructive border-destructive" : ""}`}
+                  value={formData.emergencyRelation}
+                  onChange={(e) => update("emergencyRelation", e.target.value)}
+                  required
+                >
+                  <option value="">Select relationship...</option>
+                  <option value="Spouse/Partner">Spouse/Partner</option>
+                  <option value="Parent">Parent</option>
+                  <option value="Sibling">Sibling</option>
+                  <option value="Child">Child</option>
+                  <option value="Friend">Friend</option>
+                  <option value="Other Family Member">Other Family Member</option>
+                  <option value="Caregiver">Caregiver</option>
+                  <option value="Other">Other</option>
+                </select>
+                {validationErrors.emergencyRelation && <p className="mt-1 text-xs text-destructive">{validationErrors.emergencyRelation}</p>}
+              </div>
             </div>
           )}
 
