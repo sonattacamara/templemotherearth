@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { z } from "zod";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
@@ -69,9 +70,34 @@ const RECENT_SUBSTANCES = [
   "Recreational drugs", "Prescription sleep aids", "None of the above",
 ];
 
+// Zod validation schemas per step
+const step1Schema = z.object({
+  fullName: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Please enter a valid email address").max(255),
+  phone: z.string().trim().min(7, "Please enter a valid phone number").max(20, "Phone number is too long").regex(/^[\d\s\-\+\(\)]+$/, "Phone number contains invalid characters"),
+  dob: z.string().min(1, "Date of birth is required").refine((val) => {
+    const date = new Date(val);
+    const age = (Date.now() - date.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+    return age >= 18;
+  }, "You must be at least 18 years old"),
+});
+
+const step2Schema = z.object({
+  emergencyName: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
+  emergencyPhone: z.string().trim().min(7, "Please enter a valid phone number").max(20).regex(/^[\d\s\-\+\(\)]+$/, "Phone number contains invalid characters"),
+  emergencyRelation: z.string().trim().min(1, "Relationship is required"),
+});
+
+const step3Schema = z.object({
+  ceremonyType: z.string().min(1, "Please select a ceremony type"),
+  experienceLevel: z.string().min(1, "Please select your experience level"),
+  intentions: z.string().trim().min(10, "Please share a bit more about your intentions").max(2000, "Intentions must be less than 2000 characters"),
+});
+
 const CeremonyIntake = () => {
   const [step, setStep] = useState(1);
   const [isFlagged, setIsFlagged] = useState(false);
+  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
   const [formData, setFormData] = useState({
     fullName: "", email: "", phone: "", dob: "",
@@ -161,6 +187,27 @@ const CeremonyIntake = () => {
 
   const totalFlagged = isHealthFlagged || kamboFlagged;
 
+  const validateStep = () => {
+    setValidationErrors({});
+    try {
+      if (step === 1) {
+        step1Schema.parse({ fullName: formData.fullName, email: formData.email, phone: formData.phone, dob: formData.dob });
+      } else if (step === 2) {
+        step2Schema.parse({ emergencyName: formData.emergencyName, emergencyPhone: formData.emergencyPhone, emergencyRelation: formData.emergencyRelation });
+      } else if (step === 3) {
+        step3Schema.parse({ ceremonyType: formData.ceremonyType, experienceLevel: formData.experienceLevel, intentions: formData.intentions });
+      }
+      return true;
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        const errors: Record<string, string> = {};
+        err.errors.forEach((e) => { if (e.path[0]) errors[e.path[0] as string] = e.message; });
+        setValidationErrors(errors);
+      }
+      return false;
+    }
+  };
+
   const canProceed = () => {
     if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob;
     if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
@@ -170,7 +217,15 @@ const CeremonyIntake = () => {
     return false;
   };
 
-  const handleSubmit = () => setStep(6);
+  const handleNext = () => {
+    if (validateStep()) {
+      setStep(step + 1);
+    }
+  };
+
+  const handleSubmit = () => {
+    if (validateStep()) setStep(6);
+  };
 
   const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
   const checkboxClass = "mr-3 h-4 w-4 rounded border-input accent-primary";
@@ -279,7 +334,8 @@ const CeremonyIntake = () => {
               ].map(f => (
                 <div key={f.field}>
                   <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
-                  <input className={inputClass} type={f.type} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                  <input className={`${inputClass} ${validationErrors[f.field] ? "ring-2 ring-destructive border-destructive" : ""}`} type={f.type} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                  {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
                 </div>
               ))}
             </div>
@@ -297,7 +353,8 @@ const CeremonyIntake = () => {
               ].map(f => (
                 <div key={f.field}>
                   <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
-                  <input className={inputClass} type={(f as any).type || "text"} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                  <input className={`${inputClass} ${validationErrors[f.field] ? "ring-2 ring-destructive border-destructive" : ""}`} type={(f as any).type || "text"} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                  {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
                 </div>
               ))}
             </div>
@@ -808,10 +865,10 @@ const CeremonyIntake = () => {
           {step <= 5 && (
             <div className="mt-8 flex items-center justify-between">
               {step > 1 ? (
-                <button onClick={() => setStep(step - 1)} className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent">Back</button>
+                <button onClick={() => { setValidationErrors({}); setStep(step - 1); }} className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent">Back</button>
               ) : <div />}
               {step < 5 ? (
-                <button onClick={() => canProceed() && setStep(step + 1)} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                <button onClick={handleNext} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
                   Continue <ArrowRight className="h-4 w-4" />
                 </button>
               ) : (
