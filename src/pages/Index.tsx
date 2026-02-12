@@ -668,11 +668,11 @@ const Index = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Support the Temple</h3>
                 <div className="mt-2 flex flex-col gap-2">
-                  <a href="https://www.google.com/search?sca_esv=b1aa0ebf47929ca9&rlz=1CDGOYI_enUS1105US1105&hl=en-US&sxsrf=ANbL-n7Zuzk2-DFNhAsOfo8ugT-wYJ_Wow:1770826746416&q=temple+of+mother+earth+reviews&uds=ALYpb_kMVwOwDZyOU_-hei8qutnOLtqji1D_QYa-uv2_cGtwJ_yq-vEdM0_pBa4ftxanMQTEw8pqG5P1j6vjs4wuV-EizInVTlAHBvhbJX_gwNa5WMuWrA9JS-OnXpWuJCawFgpFoq1HscB59EuBX5pv_sdg3cW-3_e2EjSPSjxUJ-nCWWP-D6-Pd0OumXpM87onxplSGrLvPk37WVwBXHMJUYc1wt-t-MpND4kfFlAC-YiVdikuLieNrJwwiG4QrTSzCVCsLT8ckzpOJOcjcn9PnjgPIqO2RowfnVHhgK_BlO3c8dB7Cwa4kWB1RYHEa9FqJWMNlV9HNRWyyISBy69iKvs23FPyxU3remaY_fPXsnvOPNGa-MUIl5M55krZffobrRDn20BMVgQkHcKKlbrhpjvJFduaVBux3KlcWpgNc7Zlmxb2HwYJEsr0AmXDyBudQy34tAE_7BrCUyxkXvJuXaRHggQHw9DNr3H6fV1RVykGMyG91nvcZzC-R8DDVm437-lgZZFpytmNj-XuAcm5HB9TxOXVKPr5IioXI2Ek4C98CCCQ0fw5Nu-IVAKXydZS0esu1_KITPaeKvq4-4Uc3Gdh7H9H4oVI7BJp9XRcQbIzq2foQJ4&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQZdqYy5vjml0waax1nkNammOw8Wx_tiuUspNReZ4g7mGGqsMx_MYNc5FlKrZU1gcLCcuh9HLDyE9bkuO-it9RAAQyGdlZCHd_inE4ryoBOXagaw8g%3D%3D&sa=X&ved=2ahUKEwjK6rbZ69GSAxWDGFkFHXBxCpEQk8gLegQIHRAB&ictx=1" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                  <a href="https://www.google.com/search?q=Temple+of+Mother+Earth&ludocid=4773705032292068357&lsig=AB86z5WhQt6Le_XFK7QZfBYgfHkw#lkt=LocalPoiReviews&lpg=cid:CgIgAQ==" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
                     <Star className="h-4 w-4 text-primary" /> Leave a Google Review
                   </a>
-                  <a href="http://bit.ly/TempleAmazonWishList" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Amazon Wishlist →</a>
-                  <a href="https://bit.ly/TemplePhotosVideos" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Share Photos & Videos →</a>
+                  <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Amazon Wishlist →</a>
+                  <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Share Photos & Videos →</a>
                 </div>
               </div>
               <div>

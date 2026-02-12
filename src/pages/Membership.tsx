@@ -31,6 +31,7 @@ const tiers = [
       "Community forum access",
       "Event announcements & early notifications",
       "Digital welcome guide",
+      "Access to Integration & Wellness platform",
     ],
   },
   {
@@ -38,7 +39,7 @@ const tiers = [
     price: "$49",
     period: "/month",
     icon: Flame,
-    highlight: false,
+    highlight: true,
     description: "Deepen your practice with regular ceremony access, integration support, and exclusive community gatherings.",
     benefits: [
       "Everything in Seeker",
@@ -51,10 +52,10 @@ const tiers = [
   },
   {
     name: "Guardian",
-    price: "$197",
+    price: "$249",
     period: "/month",
     icon: Crown,
-    highlight: true,
+    highlight: false,
     description: "Walk deeper into the sacred path. Your monthly commitment secures one Earth Medicine ceremony each quarter — your seat at the altar is reserved.",
     benefits: [
       "Everything in Devotee",
@@ -67,7 +68,7 @@ const tiers = [
   },
   {
     name: "Steward",
-    price: "$333",
+    price: "$449",
     period: "/month",
     icon: Star,
     highlight: false,
