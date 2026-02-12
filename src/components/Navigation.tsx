@@ -1,18 +1,26 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
-  { label: "Offerings", href: "/#offerings", isRoute: false },
+  { label: "Experiences", href: "/#offerings", isRoute: false },
   { label: "Membership", href: "/membership", isRoute: true },
   { label: "Community", href: "/#community", isRoute: false },
-  { label: "Contact", href: "/#contact", isRoute: false },
+];
+
+const getInvolvedLinks = [
+  { label: "Volunteer", href: "/volunteer" },
+  { label: "Join as Facilitator", href: "/join-facilitator" },
+  { label: "Become a Sponsor", href: "/sponsor" },
+  { label: "Ceremony Preparation", href: "/preparation" },
+  { label: "Code of Conduct", href: "/conduct" },
 ];
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
 
   const renderNavLink = (link: typeof navLinks[0], className: string, onClick?: () => void) => {
@@ -28,7 +36,6 @@ const Navigation = () => {
         </Link>
       );
     }
-    // For hash links on same page
     const isHome = location.pathname === "/";
     const href = isHome ? link.href.replace("/", "") : link.href;
     return (
@@ -58,6 +65,32 @@ const Navigation = () => {
           {navLinks.map((link) =>
             renderNavLink(link, "font-body text-sm text-primary-foreground/70 hover:text-primary transition-colors duration-200")
           )}
+          
+          {/* Get Involved Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+          >
+            <button className="font-body text-sm text-primary-foreground/70 hover:text-primary transition-colors duration-200 flex items-center gap-1">
+              Get Involved <ChevronDown className="h-3.5 w-3.5" />
+            </button>
+            {dropdownOpen && (
+              <div className="absolute top-full left-0 mt-1 w-52 rounded-lg border border-primary/20 bg-foreground/98 backdrop-blur-md shadow-xl py-2">
+                {getInvolvedLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="block px-4 py-2.5 text-sm text-primary-foreground/70 hover:text-primary hover:bg-primary/5 transition-colors"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           <Link
             to="/portal"
             className="rounded-lg border border-primary-foreground/30 px-4 py-2 font-body text-sm text-primary-foreground transition hover:bg-primary-foreground/10"
@@ -92,6 +125,22 @@ const Navigation = () => {
               () => setOpen(false)
             )
           )}
+          
+          {/* Get Involved section in mobile */}
+          <div className="border-t border-primary/10 pt-4 mt-4">
+            <p className="font-body text-xs font-bold uppercase tracking-wider text-primary mb-3">Get Involved</p>
+            {getInvolvedLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setOpen(false)}
+                className="block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors py-1.5"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
           <Link
             to="/portal"
             onClick={() => setOpen(false)}

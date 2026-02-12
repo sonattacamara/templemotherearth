@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Check, ArrowDown, Flame, Heart, Leaf, Shield, Sparkles, Star, Users, Lock } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Check, ArrowDown, Flame, Heart, Leaf, Shield, Sparkles, Star, Users, Lock, Loader2 } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
@@ -129,6 +133,32 @@ const tiers = [
 ];
 
 const Membership = () => {
+  const { user } = useAuth();
+  const [searchParams] = useSearchParams();
+  const [loadingTier, setLoadingTier] = useState<string | null>(null);
+
+  const handleCheckout = async (stripeKey: keyof typeof MEMBERSHIP_TIERS) => {
+    if (!user) {
+      toast({ title: "Sign in required", description: "Please sign in or create an account to subscribe.", variant: "destructive" });
+      return;
+    }
+    setLoadingTier(stripeKey);
+    try {
+      const priceId = MEMBERSHIP_TIERS[stripeKey].price_id;
+      const { data, error } = await supabase.functions.invoke("create-checkout", {
+        body: { priceId },
+      });
+      if (error) throw error;
+      if (data?.url) {
+        window.open(data.url, "_blank");
+      }
+    } catch (err: any) {
+      toast({ title: "Error", description: err.message || "Could not start checkout", variant: "destructive" });
+    } finally {
+      setLoadingTier(null);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -298,12 +328,17 @@ const Membership = () => {
                   </ul>
 
                   {/* CTA */}
-                  <Link
-                    to={`/portal?tier=${encodeURIComponent(tier.stripeKey)}`}
-                    className="mt-8 block rounded-xl border border-primary/30 bg-primary/5 py-3.5 text-center font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/10"
+                  <button
+                    onClick={() => handleCheckout(tier.stripeKey)}
+                    disabled={loadingTier === tier.stripeKey}
+                    className="mt-8 w-full rounded-xl border border-primary/30 bg-primary/5 py-3.5 text-center font-body text-sm font-semibold text-foreground transition hover:border-primary hover:bg-primary/10 disabled:opacity-50 flex items-center justify-center gap-2"
                   >
-                    Begin — {tier.price}/mo
-                  </Link>
+                    {loadingTier === tier.stripeKey ? (
+                      <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</>
+                    ) : (
+                      <>Begin — {tier.price}/mo</>
+                    )}
+                  </button>
                 </motion.div>
               </div>
             ))}
@@ -424,23 +459,54 @@ const Membership = () => {
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
-              <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
+          <div className="grid gap-10 md:grid-cols-4">
+            <div>
+              <Link to="/" className="flex items-center gap-3">
+                <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
+                <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
+              </Link>
+              <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
+                A 501(c)(3) nonprofit sanctuary for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
+              </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
-              <a href="/" className="hover:text-primary transition-colors">Home</a>
-              <a href="/about" className="hover:text-primary transition-colors">About</a>
-              <a href="/membership" className="hover:text-primary transition-colors">Membership</a>
-              <a href="/#offerings" className="hover:text-primary transition-colors">Experiences</a>
-              <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Experiences</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="https://www.eventbrite.com/o/29347213477#events" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Earth Medicine Ceremonies</a>
+                <Link to="/retreats-inquiry" className="text-primary-foreground/60 hover:text-primary transition-colors">International Immersions</Link>
+                <Link to="/traveling-ceremonies" className="text-primary-foreground/60 hover:text-primary transition-colors">Traveling Ceremonies</Link>
+                <Link to="/private-ceremonies" className="text-primary-foreground/60 hover:text-primary transition-colors">Private Sessions</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Get Involved</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <Link to="/volunteer" className="text-primary-foreground/60 hover:text-primary transition-colors">Volunteer</Link>
+                <Link to="/join-facilitator" className="text-primary-foreground/60 hover:text-primary transition-colors">Join as Facilitator</Link>
+                <Link to="/sponsor" className="text-primary-foreground/60 hover:text-primary transition-colors">Become a Sponsor</Link>
+                <Link to="/preparation" className="text-primary-foreground/60 hover:text-primary transition-colors">Ceremony Preparation</Link>
+                <Link to="/conduct" className="text-primary-foreground/60 hover:text-primary transition-colors">Code of Conduct</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Connect</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary-foreground/60 hover:text-primary transition-colors">AskUs@TempleMotherEarth.org</a>
+                <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
+                <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
+                <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Instagram</a>
+              </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
-            <p className="font-body text-xs text-primary-foreground/40">
-              © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
-            </p>
+          <div className="mt-12 border-t border-primary-foreground/10 pt-8">
+            <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+              <p className="font-body text-xs text-primary-foreground/40">
+                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+              </p>
+              <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
+                Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.
+              </p>
+            </div>
           </div>
         </div>
       </footer>

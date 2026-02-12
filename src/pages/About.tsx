@@ -643,24 +643,56 @@ const About = () => {
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
-              <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
+          <div className="grid gap-10 md:grid-cols-4">
+            <div>
+              <Link to="/" className="flex items-center gap-3">
+                <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
+                <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
+              </Link>
+              <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
+                A 501(c)(3) nonprofit sanctuary for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
+              </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
-              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-primary transition-colors">About</Link>
-              <a href="https://www.eventbrite.com/o/temple-mother-earth-83633883498" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Events</a>
-              <Link to="/volunteer" className="hover:text-primary transition-colors">Volunteer</Link>
-              <Link to="/join-facilitator" className="hover:text-primary transition-colors">Join as Facilitator</Link>
-              <a href="mailto:AskUs@TempleMotherEarth.org" className="hover:text-primary transition-colors">Contact</a>
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Experiences</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="https://www.eventbrite.com/o/29347213477#events" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Earth Medicine Ceremonies</a>
+                <Link to="/retreats-inquiry" className="text-primary-foreground/60 hover:text-primary transition-colors">International Immersions</Link>
+                <Link to="/traveling-ceremonies" className="text-primary-foreground/60 hover:text-primary transition-colors">Traveling Ceremonies</Link>
+                <Link to="/private-ceremonies" className="text-primary-foreground/60 hover:text-primary transition-colors">Private Sessions</Link>
+                <Link to="/membership" className="text-primary-foreground/60 hover:text-primary transition-colors">Membership Pathway</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Get Involved</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <Link to="/volunteer" className="text-primary-foreground/60 hover:text-primary transition-colors">Volunteer</Link>
+                <Link to="/join-facilitator" className="text-primary-foreground/60 hover:text-primary transition-colors">Join as Facilitator</Link>
+                <Link to="/sponsor" className="text-primary-foreground/60 hover:text-primary transition-colors">Become a Sponsor</Link>
+                <Link to="/preparation" className="text-primary-foreground/60 hover:text-primary transition-colors">Ceremony Preparation</Link>
+                <Link to="/conduct" className="text-primary-foreground/60 hover:text-primary transition-colors">Code of Conduct</Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Connect</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary-foreground/60 hover:text-primary transition-colors">AskUs@TempleMotherEarth.org</a>
+                <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
+                <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
+                <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Facebook</a>
+              </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
-            <p className="font-body text-xs text-primary-foreground/40">
-              © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
-            </p>
+          <div className="mt-12 border-t border-primary-foreground/10 pt-8">
+            <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+              <p className="font-body text-xs text-primary-foreground/40">
+                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+              </p>
+              <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
+                Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.
+              </p>
+            </div>
           </div>
         </div>
       </footer>

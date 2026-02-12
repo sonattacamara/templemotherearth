@@ -214,8 +214,14 @@ const Index = () => {
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
-              href="#awakening"
+              href="#offerings"
               className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
+            >
+              See All Experiences
+            </a>
+            <a
+              href="#awakening"
+              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
               Begin the Journey
             </a>
@@ -223,7 +229,7 @@ const Index = () => {
               to="/ceremony-intake"
               className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
             >
-              I'm Ready — Start Intake
+              I'm Ready
             </Link>
           </motion.div>
         </motion.div>
@@ -286,6 +292,34 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── ORIGIN STORY EXCERPT ───── */}
+      <section className="px-4 py-16 md:py-20">
+        <motion.div
+          className="mx-auto max-w-3xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.div variants={fadeUp} className="rounded-2xl border border-primary/15 bg-card p-8 md:p-10">
+            <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">Our Origin</p>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              In 2020, when the pandemic brought the world to a standstill and fear kept people isolated behind closed doors, 
+              <span className="font-semibold text-foreground"> we opened ours</span>. There was a great need for community, healing, 
+              and connection to the God within. What began as intimate healing circles during the darkest days of COVID grew into 
+              Temple Mother Earth — a sacred sanctuary where sovereign beings reconnect with the Earth, honor the divine within, 
+              and walk the path of healing together.
+            </p>
+            <Link
+              to="/about"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+            >
+              Read Our Full Story <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </motion.div>
+        </motion.div>
+      </section>
+
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
@@ -301,11 +335,11 @@ const Index = () => {
         >
           <JourneyStage number="Stage II" label="Choose Your Path" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
-            Sacred Offerings Await
+            Sacred Experiences Await
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
             At Temple Mother Earth, our Earth Medicine Ceremonies invite you to reconnect with the wisdom,
-            intelligence, and unconditional love woven into the natural world. These ceremonies are grounded
+            intelligence, and unconditional love woven into the natural world. These experiences are grounded
             in respect, prayer, reciprocity, and the remembrance that every human being carries the divine within.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
@@ -806,30 +840,64 @@ const Index = () => {
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-            <Link to="/" className="flex items-center gap-3">
-              <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
-              <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
-            </Link>
-            <div className="flex flex-wrap justify-center gap-6 font-body text-sm text-primary-foreground/60">
-              <a href="#awakening" className="hover:text-primary transition-colors">About</a>
-              <a href="#offerings" className="hover:text-primary transition-colors">Offerings</a>
-              <a href="#membership" className="hover:text-primary transition-colors">Membership</a>
-              <a href="#upcoming-offerings" className="hover:text-primary transition-colors">Upcoming</a>
-              <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-              <Link to="/volunteer" className="hover:text-primary transition-colors">Volunteer</Link>
-              <Link to="/join-facilitator" className="hover:text-primary transition-colors">Join as Facilitator</Link>
-              <Link to="/preparation" className="hover:text-primary transition-colors">Preparation</Link>
-              <Link to="/conduct" className="hover:text-primary transition-colors">Conduct</Link>
-              <Link to="/portal" className="hover:text-primary transition-colors">
-                Members Portal
+          <div className="grid gap-10 md:grid-cols-4">
+            {/* Brand */}
+            <div>
+              <Link to="/" className="flex items-center gap-3">
+                <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
+                <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
+              <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
+                A 501(c)(3) nonprofit sanctuary for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
+              </p>
+            </div>
+
+            {/* Experiences */}
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Experiences</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="https://www.eventbrite.com/o/29347213477#events" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Earth Medicine Ceremonies</a>
+                <Link to="/retreats-inquiry" className="text-primary-foreground/60 hover:text-primary transition-colors">International Immersions</Link>
+                <Link to="/traveling-ceremonies" className="text-primary-foreground/60 hover:text-primary transition-colors">Traveling Ceremonies</Link>
+                <Link to="/private-ceremonies" className="text-primary-foreground/60 hover:text-primary transition-colors">Private Sessions</Link>
+                <Link to="/membership" className="text-primary-foreground/60 hover:text-primary transition-colors">Membership Pathway</Link>
+              </div>
+            </div>
+
+            {/* Get Involved */}
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Get Involved</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <Link to="/volunteer" className="text-primary-foreground/60 hover:text-primary transition-colors">Volunteer</Link>
+                <Link to="/join-facilitator" className="text-primary-foreground/60 hover:text-primary transition-colors">Join as Facilitator</Link>
+                <Link to="/sponsor" className="text-primary-foreground/60 hover:text-primary transition-colors">Become a Sponsor</Link>
+                <Link to="/preparation" className="text-primary-foreground/60 hover:text-primary transition-colors">Ceremony Preparation</Link>
+                <Link to="/conduct" className="text-primary-foreground/60 hover:text-primary transition-colors">Code of Conduct</Link>
+              </div>
+            </div>
+
+            {/* Connect */}
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Connect</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary-foreground/60 hover:text-primary transition-colors">AskUs@TempleMotherEarth.org</a>
+                <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
+                <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
+                <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Facebook</a>
+              </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-primary-foreground/10 pt-8 text-center">
-            <p className="font-body text-xs text-primary-foreground/40">
-              © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
-            </p>
+
+          <div className="mt-12 border-t border-primary-foreground/10 pt-8">
+            <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+              <p className="font-body text-xs text-primary-foreground/40">
+                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+              </p>
+              <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
+                Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
