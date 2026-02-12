@@ -249,11 +249,12 @@ const CeremonyIntake = () => {
 
   const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
   const checkboxClass = "mr-3 h-4 w-4 rounded border-input accent-primary";
+  const radioClass = "mr-3 h-4 w-4 appearance-none rounded-full border-2 border-muted-foreground/40 transition-all cursor-pointer checked:border-primary checked:bg-primary checked:shadow-[inset_0_0_0_2px_hsl(var(--background))] hover:border-primary";
   const radioYesNo = (field: string, value: string) => (
     <div className="flex gap-4 mt-1">
       {["yes", "no"].map(v => (
         <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
-          <input type="radio" name={field} className={checkboxClass} checked={value === v} onChange={() => update(field, v)} />
+          <input type="radio" name={field} className={radioClass} checked={value === v} onChange={() => update(field, v)} />
           {v === "yes" ? "Yes" : "No"}
         </label>
       ))}
@@ -407,7 +408,7 @@ const CeremonyIntake = () => {
                 <label className="mb-2 block text-sm font-medium text-foreground">Which ceremony are you seeking? *</label>
                 {["Kambo Ceremony", "Hapé Circle", "Sacred Mother Earth Ceremony", "Cacao Ceremony", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
-                    <input type="radio" name="ceremonyType" className={checkboxClass} checked={formData.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} />
+                    <input type="radio" name="ceremonyType" className={radioClass} checked={formData.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} />
                     {opt}
                   </label>
                 ))}
@@ -416,7 +417,7 @@ const CeremonyIntake = () => {
                 <label className="mb-2 block text-sm font-medium text-foreground">Experience Level *</label>
                 {["First time — I'm new to Earth Medicine", "I've participated in 1-3 ceremonies", "Experienced — I've sat in many ceremonies", "Practitioner / Facilitator"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
-                    <input type="radio" name="experienceLevel" className={checkboxClass} checked={formData.experienceLevel === opt} onChange={() => update("experienceLevel", opt)} />
+                    <input type="radio" name="experienceLevel" className={radioClass} checked={formData.experienceLevel === opt} onChange={() => update("experienceLevel", opt)} />
                     {opt}
                   </label>
                 ))}
