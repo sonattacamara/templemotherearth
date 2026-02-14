@@ -696,17 +696,6 @@ const Index = () => {
 
           <GoogleReviewsWidget />
 
-          <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="https://www.google.com/maps/place/Temple+Mother+Earth,+2415+32nd+St+SE,+Washington,+DC+20020/@38.854,-76.965,17z/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
-            >
-              <Star className="h-4 w-4" />
-              Leave a Google Review
-            </a>
-          </motion.div>
         </motion.div>
       </section>
 
@@ -802,7 +791,7 @@ const Index = () => {
               <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Support the Temple</h3>
                 <div className="mt-2 flex flex-col gap-2">
-                  <a href="https://www.google.com/maps/place/Temple+Mother+Earth,+2415+32nd+St+SE,+Washington,+DC+20020/@38.854,-76.965,17z/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
+                  <a href="https://www.google.com/search?q=Temple+Mother+Earth+Reviews" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
                     <Star className="h-4 w-4 text-primary" /> Leave a Google Review
                   </a>
                    <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🎁 Amazon Wishlist →</a>
