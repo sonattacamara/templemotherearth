@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "@/hooks/use-toast";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
@@ -490,6 +491,8 @@ const Membership = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <EventbriteCTA />
 
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">

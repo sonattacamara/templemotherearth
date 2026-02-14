@@ -3,6 +3,7 @@ import { HandHeart, ArrowRight, CheckCircle2, Shield, Star, Users } from "lucide
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import communityImg from "@/assets/community.jpg";
 
@@ -105,6 +106,8 @@ const Sponsor = () => {
           )}
         </div>
       </section>
+
+      <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">

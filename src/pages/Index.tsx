@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import SEOHead from "@/components/SEOHead";
 import { usePageTracking } from "@/hooks/useAnalytics";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -822,6 +823,8 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <EventbriteCTA />
 
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">

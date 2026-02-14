@@ -4,6 +4,7 @@ import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, 
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
@@ -918,6 +919,8 @@ const CeremonyIntake = () => {
           )}
         </div>
       </section>
+
+      <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">

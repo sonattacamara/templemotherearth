@@ -3,6 +3,7 @@ import { motion, type Easing } from "framer-motion";
 import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
@@ -180,6 +181,8 @@ const RetreatsInquiry = () => {
           )}
         </div>
       </section>
+
+      <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
