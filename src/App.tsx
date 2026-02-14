@@ -22,6 +22,7 @@ import MemberAuth from "./pages/MemberAuth";
 import MemberEducation from "./pages/MemberEducation";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
+import ValentinesDay from "./pages/ValentinesDay";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/member/auth" element={<MemberAuth />} />
             <Route path="/member/education" element={<MemberEducation />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/valentines-day" element={<ValentinesDay />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
