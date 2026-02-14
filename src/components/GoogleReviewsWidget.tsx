@@ -154,16 +154,16 @@ const GoogleReviewsWidget = () => {
         ))}
       </div>
 
-      {/* Leave a review on Google link */}
-      <motion.div variants={fadeUp} className="flex justify-center">
+      {/* Leave a review on Google CTA */}
+      <motion.div variants={fadeUp} className="mt-10 flex justify-center">
         <a
           href="https://www.google.com/search?q=Temple+Mother+Earth+Reviews"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
         >
-          <ExternalLink className="h-3.5 w-3.5" />
-          Leave a Review on Google
+          <Star className="h-4 w-4" />
+          Leave a Google Review
         </a>
       </motion.div>
     </div>
