@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
+import { supabase } from "@/integrations/supabase/client";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -224,25 +225,20 @@ const CeremonyIntake = () => {
     }
   };
 
-  const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1";
-
   const handleSubmit = async () => {
     if (!validateStep()) return;
 
-    // Send form data to GHL webhook
+    // Submit via edge function with server-side validation
     try {
-      await fetch(GHL_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          submittedAt: new Date().toISOString(),
-          source: "temple-mother-earth-sacred-intake",
-        }),
+      const { error } = await supabase.functions.invoke('submit-intake', {
+        body: formData,
       });
+      if (error) {
+        console.error("Intake submission error:", error);
+      }
     } catch (err) {
       // Silent fail — don't block the user from seeing confirmation
-      console.error("Webhook submission error:", err);
+      console.error("Submission error:", err);
     }
 
     setStep(6);

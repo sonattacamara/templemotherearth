@@ -14,7 +14,7 @@ const fadeUp = {
 };
 const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
-const ADMIN_EMAILS = ["askus@templemotherearth.org", "admin@templemotherearth.org"];
+// Admin check is now enforced server-side via RLS + user_roles table
 
 const CHART_COLORS = [
   "hsl(var(--primary))",
@@ -62,8 +62,19 @@ const Analytics = () => {
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [days, setDays] = useState(30);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [roleChecked, setRoleChecked] = useState(false);
 
-  const isAdmin = user?.email && ADMIN_EMAILS.includes(user.email.toLowerCase());
+  // Check admin role from user_roles table
+  useEffect(() => {
+    if (!user) { setRoleChecked(true); return; }
+    const checkRole = async () => {
+      const { data: roles } = await supabase.from("user_roles" as any).select("role").eq("user_id", user.id).eq("role", "admin");
+      setIsAdmin(Array.isArray(roles) && roles.length > 0);
+      setRoleChecked(true);
+    };
+    checkRole();
+  }, [user]);
 
   useEffect(() => {
     if (!user || !isAdmin) return;
@@ -140,7 +151,7 @@ const Analytics = () => {
     fetchData();
   }, [user, isAdmin, days]);
 
-  if (authLoading) {
+  if (authLoading || !roleChecked) {
     return (
       <div className="min-h-screen bg-background">
         <Navigation />
