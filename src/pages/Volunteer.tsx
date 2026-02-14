@@ -3,6 +3,7 @@ import { Heart, Users, Leaf, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import communityImg from "@/assets/community.jpg";
 
@@ -109,6 +110,8 @@ const Volunteer = () => {
           )}
         </div>
       </section>
+
+      <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">

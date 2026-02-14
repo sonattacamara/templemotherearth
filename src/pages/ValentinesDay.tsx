@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Heart, Sparkles, BookOpen, Flame, Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import valentineHero from "@/assets/valentine-hero.jpg";
 import valentineLove from "@/assets/valentine-love.jpg";
@@ -315,6 +316,8 @@ const ValentinesDay = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <EventbriteCTA />
 
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-12 text-center">

@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import aboutHero from "@/assets/about-hero.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
@@ -689,6 +690,8 @@ const About = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <EventbriteCTA />
 
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">

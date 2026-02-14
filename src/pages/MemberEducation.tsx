@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { BookOpen, Play, Shield, Heart, Leaf, AlertTriangle, ChevronDown, ChevronUp, LogOut, ArrowLeft } from "lucide-react";
 import { Link, Navigate } from "react-router-dom";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -335,6 +336,8 @@ const MemberEducation = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">

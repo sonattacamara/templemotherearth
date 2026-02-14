@@ -3,6 +3,7 @@ import { motion, type Easing } from "framer-motion";
 import { Heart, ArrowRight, CheckCircle2, Shield, Sparkles, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import offeringPrivate from "@/assets/offering-private.jpg";
 
@@ -122,6 +123,8 @@ const PrivateCeremonies = () => {
           )}
         </div>
       </section>
+
+      <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
