@@ -157,7 +157,7 @@ const GoogleReviewsWidget = () => {
       {/* Leave a review on Google link */}
       <motion.div variants={fadeUp} className="flex justify-center">
         <a
-          href="https://search.google.com/local/writereview?placeid=ChIJk2t0xBm3t4kRVVrcT6hzUkQ"
+          href="https://www.google.com/maps/place/Temple+Mother+Earth,+2415+32nd+St+SE,+Washington,+DC+20020/@38.854,-76.965,17z/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
