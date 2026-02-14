@@ -70,12 +70,14 @@ const Navigation = () => {
           >
             Begin Your Journey
           </Link>
-          <Link
-            to="/portal"
+          <a
+            href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
           >
             Enter the Portal
-          </Link>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -113,13 +115,15 @@ const Navigation = () => {
           >
             Begin Your Journey
           </Link>
-          <Link
-            to="/portal"
+          <a
+            href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
             className="block mt-4 rounded-lg bg-secondary px-5 py-3 text-center font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
           >
             Enter the Portal
-          </Link>
+          </a>
         </div>
       )}
     </nav>
