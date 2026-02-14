@@ -16,6 +16,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const MemberAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
@@ -23,7 +24,7 @@ const MemberAuth = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
-  const { signIn, signUp } = useAuth();
+  const { signIn, signUp, resetPassword } = useAuth();
   const navigate = useNavigate();
 
   const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
@@ -33,6 +34,14 @@ const MemberAuth = () => {
     setError("");
     setSuccess("");
     setLoading(true);
+
+    if (isForgotPassword) {
+      const { error } = await resetPassword(email);
+      if (error) setError(error.message);
+      else setSuccess("Password reset email sent. Check your inbox and follow the link to reset your password.");
+      setLoading(false);
+      return;
+    }
 
     if (isLogin) {
       const { error } = await signIn(email, password);
@@ -65,15 +74,15 @@ const MemberAuth = () => {
           <motion.div variants={fadeUp} className="text-center mb-8">
             <img src={logo} alt="Temple Mother Earth" className="mx-auto h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/20" />
             <h1 className="mt-4 font-display text-2xl font-bold text-foreground">
-              {isLogin ? "Member Login" : "Create Your Account"}
+              {isForgotPassword ? "Reset Your Password" : isLogin ? "Member Login" : "Create Your Account"}
             </h1>
             <p className="mt-2 text-sm text-muted-foreground">
-              {isLogin ? "Welcome back to the Temple." : "Join our sacred community."}
+              {isForgotPassword ? "Enter your email and we'll send you a reset link." : isLogin ? "Welcome back to the Temple." : "Join our sacred community."}
             </p>
           </motion.div>
 
           <motion.form variants={fadeUp} className="space-y-4 rounded-2xl border border-border bg-card p-8" onSubmit={handleSubmit}>
-            {!isLogin && (
+            {!isLogin && !isForgotPassword && (
               <input
                 className={inputClass}
                 placeholder="Full Name"
@@ -90,24 +99,26 @@ const MemberAuth = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <div className="relative">
-              <input
-                className={inputClass}
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                minLength={6}
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-              >
-                {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              </button>
-            </div>
+            {!isForgotPassword && (
+              <div className="relative">
+                <input
+                  className={inputClass}
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  minLength={6}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                </button>
+              </div>
+            )}
 
             {error && <p className="text-sm text-destructive">{error}</p>}
             {success && <p className="text-sm text-primary">{success}</p>}
@@ -117,20 +128,44 @@ const MemberAuth = () => {
               disabled={loading}
               className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50"
             >
-              {loading ? "Please wait..." : isLogin ? "Sign In" : "Create Account"}
+              {loading ? "Please wait..." : isForgotPassword ? "Send Reset Link" : isLogin ? "Sign In" : "Create Account"}
               <ArrowRight className="h-4 w-4" />
             </button>
 
-            <p className="text-center text-sm text-muted-foreground">
-              {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-              <button
-                type="button"
-                onClick={() => { setIsLogin(!isLogin); setError(""); setSuccess(""); }}
-                className="text-primary hover:underline font-semibold"
-              >
-                {isLogin ? "Sign Up" : "Sign In"}
-              </button>
-            </p>
+            {isLogin && !isForgotPassword && (
+              <p className="text-center">
+                <button
+                  type="button"
+                  onClick={() => { setIsForgotPassword(true); setError(""); setSuccess(""); }}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Forgot your password?
+                </button>
+              </p>
+            )}
+
+            {isForgotPassword ? (
+              <p className="text-center">
+                <button
+                  type="button"
+                  onClick={() => { setIsForgotPassword(false); setError(""); setSuccess(""); }}
+                  className="text-sm text-primary hover:underline font-semibold"
+                >
+                  ← Back to Sign In
+                </button>
+              </p>
+            ) : (
+              <p className="text-center text-sm text-muted-foreground">
+                {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
+                <button
+                  type="button"
+                  onClick={() => { setIsLogin(!isLogin); setError(""); setSuccess(""); }}
+                  className="text-primary hover:underline font-semibold"
+                >
+                  {isLogin ? "Sign Up" : "Sign In"}
+                </button>
+              </p>
+            )}
           </motion.form>
         </motion.div>
       </section>
