@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ArrowRight, Eye, EyeOff, ExternalLink, ArrowLeft, LogOut } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import { useAuth } from "@/hooks/useAuth";
 import logo from "@/assets/logo.png";
@@ -208,6 +209,16 @@ const MemberPortal = () => {
           </motion.form>
         </motion.div>
       </section>
+
+      <EventbriteCTA />
+
+      <footer className="bg-foreground px-4 py-12">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="font-body text-xs text-primary-foreground/40">
+            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
