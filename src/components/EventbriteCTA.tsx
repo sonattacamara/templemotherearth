@@ -6,10 +6,10 @@ const EventbriteCTA = () => (
   <section className="bg-primary px-4 py-10">
     <div className="mx-auto max-w-3xl text-center">
       <h2 className="font-display text-2xl font-bold text-primary-foreground md:text-3xl">
-        Join the Portal
+        Welcome Home
       </h2>
       <p className="mx-auto mt-3 max-w-lg text-sm text-primary-foreground/75">
-        Browse upcoming ceremonies, immersions, and community gatherings — and reserve your seat.
+        Come and join us — browse upcoming ceremonies, immersions, and community gatherings.
       </p>
       <a
         href={EVENTBRITE_URL}
