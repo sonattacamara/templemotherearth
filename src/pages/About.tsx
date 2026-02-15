@@ -731,6 +731,7 @@ const About = () => {
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
                 
                 <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
+                <Link to="/contact" className="text-primary-foreground/60 hover:text-primary transition-colors">Contact Us</Link>
                 <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
                 <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Instagram</a>
                 <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Facebook</a>

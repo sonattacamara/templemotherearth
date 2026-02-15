@@ -208,6 +208,7 @@ const Contact = () => {
         </p>
         <div className="mt-4 flex justify-center gap-6 text-sm text-primary-foreground/50">
           <Link to="/about" className="hover:text-primary transition-colors">About</Link>
+          <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
           <Link to="/membership" className="hover:text-primary transition-colors">Membership</Link>
           <Link to="/conduct" className="hover:text-primary transition-colors">Code of Conduct</Link>
           <Link to="/preparation" className="hover:text-primary transition-colors">Preparation</Link>
