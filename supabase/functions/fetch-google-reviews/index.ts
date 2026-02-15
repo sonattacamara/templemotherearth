@@ -16,7 +16,17 @@ serve(async (req) => {
       throw new Error("GOOGLE_PLACES_API_KEY is not configured");
     }
 
-    const placeId = "ChIJk2t0xBm3t4kRVVrcT6hzUkQ";
+    // Dynamically find the Place ID using Find Place endpoint
+    const findUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Temple+Mother+Earth&inputtype=textquery&fields=place_id&locationbias=circle:50000@38.85,-76.93&key=${apiKey}`;
+    const findRes = await fetch(findUrl);
+    const findData = await findRes.json();
+
+    if (findData.status !== "OK" || !findData.candidates?.length) {
+      throw new Error(`Could not find Place ID: ${findData.status} - ${findData.error_message || "No candidates found"}`);
+    }
+
+    const placeId = findData.candidates[0].place_id;
+    console.log("Resolved Place ID:", placeId);
 
     // Use Places API (New) for place details with reviews
     const url = `https://places.googleapis.com/v1/places/${placeId}?fields=displayName,rating,userRatingCount,reviews&key=${apiKey}`;
