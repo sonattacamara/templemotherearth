@@ -619,13 +619,17 @@ const About = () => {
                 variants={fadeUp}
                 className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:shadow-lg"
               >
-                <div className="relative h-72 overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   <img
                     src={person.img}
                     alt={person.name}
                     className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                      person.name === "Samira Davis" || person.name === "Walter Spencer"
-                        ? "object-center"
+                      person.name === "Samira Davis"
+                        ? "object-[center_30%]"
+                        : person.name === "Walter Spencer"
+                        ? "object-[center_35%]"
+                        : person.name === "Jala Johnson"
+                        ? "object-[center_70%]"
                         : "object-top"
                     }`}
                     loading="lazy"
