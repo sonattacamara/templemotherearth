@@ -33,7 +33,7 @@ const RetreatsInquiry = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="International Immersions" description="Travel to sacred spaces around the world with Temple Mother Earth. Inquire about our international retreat experiences and immersive healing journeys." path="/retreats-inquiry" />
+      <SEOHead title="International Ayahuasca Retreats & Plant Medicine Immersions" description="Join Temple Mother Earth for Ayahuasca retreats in Mexico, plant medicine immersions in Costa Rica, Peru, Colombia & Brazil. Sacred healing journeys with Kambo, Hapé, San Pedro, and Earth Medicine ceremonies." path="/retreats-inquiry" />
       <Navigation />
 
       {/* Hero */}
@@ -180,6 +180,29 @@ const RetreatsInquiry = () => {
             </div>
           )}
         </div>
+      </section>
+
+      {/* Keyword-rich SEO section — visible to crawlers, hidden from users */}
+      <section className="sr-only" aria-label="International Plant Medicine Retreats">
+        <h2>International Ayahuasca Retreats & Plant Medicine Immersions</h2>
+        <p>
+          Temple Mother Earth offers <Link to="/retreats-inquiry">Ayahuasca retreats in Mexico</Link>, <Link to="/retreats-inquiry">plant medicine retreats in Costa Rica</Link>, 
+          and <Link to="/retreats-inquiry">sacred healing immersions in Peru, Colombia, and Brazil</Link>. Our international retreats combine 
+          Ayahuasca ceremony (Banisteriopsis caapi + Chacruna), Kambo healing, Hapé (Rapé), ceremonial Cacao, breathwork, 
+          and somatic integration in transformative multi-day experiences.
+        </p>
+        <p>
+          Join our <Link to="/retreats-inquiry">Life's Best Yes Immersion in Sayulita, Mexico</Link> for six days of Earth Medicine ceremony, 
+          nervous system regulation, and deep spiritual practice. Past retreats have included Ayahuasca journeys in the Sacred Valley of Peru, 
+          Iboga ceremonies in Gabon, and San Pedro (Huachuma) pilgrimages in the Andes.
+        </p>
+        <p>
+          All retreat participants must complete our <Link to="/ceremony-intake">Sacred Intake Form</Link> for medical screening and RFRA compliance. 
+          Visit our <Link to="/plant-medicine-glossary">plant medicine glossary</Link> to learn about Ayahuasca, Psilocybin, San Pedro, Ibogaine, 
+          5-MeO-DMT, Bobinsana, Chiric Sanango, Noya Rao, Mapacho, Sananga, Blue Lotus, and other sacred healing allies. 
+          We also facilitate <Link to="/traveling-ceremonies">traveling ceremonies</Link> and <Link to="/private-ceremonies">private ceremonies</Link> 
+          across the United States for those seeking Kambo, Hapé, and Earth Medicine closer to home.
+        </p>
       </section>
 
       <EventbriteCTA />

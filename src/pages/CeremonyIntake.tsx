@@ -281,7 +281,7 @@ const CeremonyIntake = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Sacred Intake Form" description="Complete the mandatory Sacred Intake Form for Temple Mother Earth ceremonies. Health screening, waiver agreements, and ceremony preparation." path="/ceremony-intake" />
+      <SEOHead title="Sacred Intake Form — Ayahuasca, Kambo & Earth Medicine Ceremonies" description="Complete the Sacred Intake Form for Ayahuasca, Kambo, Hapé, and Cacao ceremonies at Temple Mother Earth. Medical screening, RFRA compliance, and personalized ceremony preparation in Washington DC and internationally." path="/ceremony-intake" />
       <Navigation />
 
       {/* Hero */}
@@ -917,6 +917,29 @@ const CeremonyIntake = () => {
             </div>
           )}
         </div>
+      </section>
+
+      {/* Keyword-rich SEO section — visible to crawlers, hidden from users */}
+      <section className="sr-only" aria-label="Earth Medicine Ceremony Information">
+        <h2>Sacred Earth Medicine Ceremonies at Temple Mother Earth</h2>
+        <p>
+          Temple Mother Earth facilitates sacred <Link to="/ceremony-intake">Ayahuasca ceremonies</Link>, <Link to="/ceremony-intake">Kambo healing ceremonies</Link>, 
+          <Link to="/ceremony-intake">Hapé (Rapé) ceremonies</Link>, and <Link to="/ceremony-intake">ceremonial Cacao circles</Link> in the Washington DC metropolitan area. 
+          Our experienced facilitators guide participants through transformative experiences with Ayahuasca (Banisteriopsis caapi), 
+          Psilocybin mushrooms, San Pedro (Huachuma), 5-MeO-DMT (Bufo Alvarius), and other sacred plant medicines.
+        </p>
+        <p>
+          We also offer <Link to="/retreats-inquiry">international Ayahuasca retreats in Mexico</Link>, <Link to="/retreats-inquiry">plant medicine immersions in Costa Rica</Link>, 
+          and <Link to="/retreats-inquiry">healing retreats in Peru, Colombia, and Brazil</Link>. Our <Link to="/traveling-ceremonies">traveling ceremony program</Link> brings 
+          Kambo, Hapé, and Earth Medicine ceremonies to communities across the United States.
+        </p>
+        <p>
+          Whether you seek Ayahuasca ceremony near Washington DC, Kambo detox healing, Iboga therapy, San Pedro ceremony, 
+          psilocybin-assisted healing, or sacred plant medicine retreats internationally, Temple Mother Earth provides 
+          safe, legally compliant facilitation under the Religious Freedom Restoration Act (RFRA). 
+          Explore our <Link to="/plant-medicine-glossary">complete plant medicine glossary</Link> to learn about 
+          Bobinsana, Chiric Sanango, Mapacho, Sananga, Blue Lotus, Kava, and dozens more traditional healing allies.
+        </p>
       </section>
 
       <EventbriteCTA />
