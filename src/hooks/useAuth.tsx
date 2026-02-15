@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const signUp = async (email: string, password: string, fullName: string) => {
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -44,6 +44,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         data: { full_name: fullName },
       },
     });
+
+    // Trigger welcome email via GHL webhook
+    if (!error && data?.user) {
+      supabase.functions.invoke("send-welcome-email", {
+        body: { email, full_name: fullName, user_id: data.user.id },
+      }).catch(console.error);
+    }
+
     return { error: error as Error | null };
   };
 
