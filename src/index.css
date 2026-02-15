@@ -101,20 +101,13 @@
 }
 
 /* Hide Elfsight free widget branding */
-.elfsight-app-common .eapps-widget-toolbar,
-a[href*="elfsight.com"],
 .eapps-widget-toolbar,
-[class*="eapps"] a[href*="elfsight"],
-.eapps-Instagram-feed-posts-grid + div,
-div[class*="elfsight"] > div:last-child:not([class*="posts"]),
-.elfsight-app-common > div:last-child a,
+.elfsight-app-common .eapps-widget-toolbar,
+a[href*="elfsight.com"]:not([class*="eapps-Instagram"]),
 a[title*="Free Instagram"],
 a[title*="free Instagram"],
-div[class*="elfsight"] a[href*="elfsight"],
-[class*="eapps"] > div:last-child,
-a[href*="elfsight.com"][class],
-div[data-elfsight-app-lazy] ~ a,
-div[data-elfsight-app-lazy] + a {
+div[data-elfsight-app-lazy] ~ a[href*="elfsight"],
+div[data-elfsight-app-lazy] + a[href*="elfsight"] {
   display: none !important;
   height: 0 !important;
   overflow: hidden !important;
