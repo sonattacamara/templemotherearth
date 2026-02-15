@@ -1,11 +1,33 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Leaf, X, HandHeart } from "lucide-react";
+import { Leaf, X, HandHeart, Heart, Shield, Sparkles } from "lucide-react";
 
 const PAYPAL_DONATE_URL = "https://www.paypal.com/donate?token=NXLlyiujSJagIrl9uk8qrPC1eutuXlYi84XbzMEIMVb1EasE5b-TxfSz6XcEwmtr_Bk0lXZ-X6ph23t-qhv_9x_2VK8&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9";
 
+const labelMap: Record<string, { label: string; icon: typeof Leaf }> = {
+  "/": { label: "Offerings & Tithes", icon: Leaf },
+  "/about": { label: "Sustain the Temple", icon: Heart },
+  "/veterans-transformation-program": { label: "Support a Warrior", icon: Shield },
+  "/membership": { label: "Plant a Seed", icon: Sparkles },
+  "/sponsor": { label: "Give Today", icon: HandHeart },
+  "/ceremony-intake": { label: "Sow Into Healing", icon: Heart },
+  "/volunteer": { label: "Give Back", icon: HandHeart },
+  "/contact": { label: "Support Our Mission", icon: Heart },
+  "/retreats-inquiry": { label: "Fuel the Journey", icon: Sparkles },
+  "/traveling-ceremonies": { label: "Carry the Light", icon: Sparkles },
+  "/private-ceremonies": { label: "Honor the Sacred", icon: Leaf },
+  "/preparation": { label: "Plant a Seed", icon: Leaf },
+  "/conduct": { label: "Sustain the Temple", icon: Heart },
+  "/plant-medicine-glossary": { label: "Support the Mission", icon: Leaf },
+};
+
+const defaultLabel = { label: "Offerings & Tithes", icon: Leaf };
+
 const DonationButton = () => {
   const [showDonation, setShowDonation] = useState(false);
+  const location = useLocation();
+  const { label, icon: Icon } = labelMap[location.pathname] || defaultLabel;
 
   return (
     <>
@@ -59,8 +81,8 @@ const DonationButton = () => {
         onClick={() => setShowDonation(true)}
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
       >
-        <Leaf className="h-4 w-4" />
-        Donation
+        <Icon className="h-4 w-4" />
+        {label}
       </button>
     </>
   );
