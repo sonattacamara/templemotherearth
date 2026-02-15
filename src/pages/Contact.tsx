@@ -184,15 +184,79 @@ const Contact = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeUp}
-            className="mt-12 rounded-2xl border border-border bg-card/60 p-8 text-center"
+            variants={stagger}
+            className="mt-12 rounded-2xl border border-border bg-card/60 p-8 md:p-10"
           >
-            <h3 className="font-display text-xl font-bold text-foreground">
-              Join Our Community Circles
-            </h3>
-            <p className="font-body mt-3 text-muted-foreground leading-relaxed max-w-lg mx-auto">
-              For real-time conversations and community support, connect with us on Telegram where our facilitators and members gather in sacred circle.
-            </p>
+            <motion.div variants={fadeUp} className="text-center mb-8">
+              <h3 className="font-display text-2xl font-bold text-foreground">
+                Community Circles
+              </h3>
+              <p className="font-body mt-3 text-muted-foreground leading-relaxed max-w-lg mx-auto">
+                Download the Telegram app to join our community circles.
+              </p>
+            </motion.div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <motion.a
+                variants={fadeUp}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
+              >
+                <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
+                  Public Community Chat →
+                </span>
+                <span className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Open community announcements, event updates, and general Temple conversation.
+                </span>
+              </motion.a>
+
+              <motion.a
+                variants={fadeUp}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
+              >
+                <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
+                  🔥 Men's Integration Circle →
+                </span>
+                <span className="font-body text-sm text-muted-foreground leading-relaxed">
+                  A private brotherhood space for reflection, accountability, and healing through "The Cove."
+                </span>
+              </motion.a>
+
+              <motion.a
+                variants={fadeUp}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
+              >
+                <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
+                  🌙 Wombmen's Integration Circle →
+                </span>
+                <span className="font-body text-sm text-muted-foreground leading-relaxed">
+                  A sacred sisterhood space for emotional processing, embodiment practices, and mutual support.
+                </span>
+              </motion.a>
+
+              <motion.a
+                variants={fadeUp}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
+              >
+                <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
+                  🌿 The Forest Team →
+                </span>
+                <span className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Our volunteer and support crew — land stewardship, event setup, and hands-on service to the Temple.
+                </span>
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </section>
