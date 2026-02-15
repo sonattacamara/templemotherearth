@@ -520,7 +520,7 @@ const About = () => {
               </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                   King James is a native Washingtonian, born and raised in the DC area. A retired United States Air Force veteran, accomplished martial artist,
+                   King James is a native Washingtonian, born and raised in the DC area. A retired United States Air Force veteran, accomplished black belt martial artist,
                    ceremony facilitator, and co-founder of Temple Mother Earth, his military service
                    instilled a warrior's discipline and unwavering commitment to service — qualities he now channels
                    into holding sacred space for healing and transformation.

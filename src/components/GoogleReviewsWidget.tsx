@@ -47,6 +47,27 @@ const FALLBACK_REVIEWS: Review[] = [
     relativeTime: "3 months ago",
     profilePhoto: "",
   },
+  {
+    author: "Danielle R.",
+    rating: 5,
+    text: "The Kambo ceremony was transformative. King James and the team guided me through with such care and expertise. I've never felt so held in a healing space.",
+    relativeTime: "3 months ago",
+    profilePhoto: "",
+  },
+  {
+    author: "Terrence W.",
+    rating: 5,
+    text: "As a veteran, finding Temple Mother Earth was a turning point. The medicine work here gave me tools to process what years of therapy couldn't touch. Forever grateful.",
+    relativeTime: "4 months ago",
+    profilePhoto: "",
+  },
+  {
+    author: "Sasha L.",
+    rating: 5,
+    text: "Beautiful, intentional, and deeply healing. Dr. Sonatta and the entire team create an environment of absolute safety and love. This is the real deal.",
+    relativeTime: "5 months ago",
+    profilePhoto: "",
+  },
 ];
 
 const FALLBACK_DATA: ReviewsData = {
@@ -124,7 +145,7 @@ const GoogleReviewsWidget = () => {
 
       {/* Review cards */}
       <div className="grid gap-6 md:grid-cols-3">
-        {data.reviews.slice(0, 6).map((review, i) => (
+      {data.reviews.slice(0, 6).map((review, i) => (
           <motion.div
             key={i}
             variants={fadeUp}
