@@ -82,8 +82,8 @@ const RetreatsInquiry = () => {
               <p>
                 This immersion is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
                 stored trauma from the body, and reclaim your natural state of peace. Through guided breathwork, 
-                body napping (deep somatic rest), movement practices, and sacred ceremony, you'll learn to 
-                <strong className="text-foreground">return your body to its healing baseline</strong> — not just during the immersion, but as a 
+                body napping (deep somatic rest), movement practices, and sacred ceremony, you'll learn to{" "}
+                <strong className="text-foreground">return your body to its healing baseline</strong> — not just during the immersion, but as a
                 way of life.
               </p>
               <p>

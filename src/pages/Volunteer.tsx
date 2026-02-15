@@ -64,6 +64,41 @@ const Volunteer = () => {
         </div>
       </section>
 
+      {/* Sacred Energy Exchange */}
+      <section className="bg-card px-4 py-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+            <Leaf className="h-7 w-7 text-primary" />
+          </div>
+          <h2 className="font-display text-2xl font-bold text-card-foreground md:text-3xl">
+            Sacred Energy Exchange
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            At Temple Mother Earth, we believe that everyone deserves access to healing — regardless of financial means.
+            We practice <strong className="text-foreground">Sacred Energy Exchange</strong>, a reciprocal model where volunteers
+            contribute their time, energy, and skills to sustain the Temple, and in return, earn credits toward
+            sacred ceremony participation.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Whether it's tending the grounds, supporting events, preparing meals, or lending your professional skills —
+            your energy is valued and honored. By exchanging energy in service to the community, you open the door to
+            your own healing journey. No one is turned away.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              { title: "Serve", desc: "Volunteer your time and energy in areas that align with your gifts." },
+              { title: "Earn Credits", desc: "Your hours are tracked and converted into ceremony credits." },
+              { title: "Heal", desc: "Use your credits to participate in sacred ceremonies and immersions." },
+            ].map((item) => (
+              <div key={item.title} className="rounded-xl border border-border bg-background p-5">
+                <h3 className="font-display text-base font-semibold text-foreground">{item.title}</h3>
+                <p className="mt-1.5 text-xs text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Form */}
       <section className="bg-card px-4 py-16">
         <div className="mx-auto max-w-2xl">
