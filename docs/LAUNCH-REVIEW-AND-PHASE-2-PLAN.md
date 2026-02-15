@@ -199,6 +199,7 @@
 | 15 | **Mobile PWA** | Make the site installable as a phone app | Medium |
 | 16 | **OG Image** | Create a proper branded social share image (1200x630) | Easy |
 | 17 | **Temple Store** | E-commerce integration (Square POS or Shopify) for merchandise, herbs, etc. | Hard |
+| 18 | **Veteran Video Testimonials** | Collect and embed video testimonials from veteran program participants on the Veterans Transformation page | Medium |
 
 ---
 
