@@ -115,7 +115,7 @@ First-time participants typically receive 3–5 points. Experienced practitioner
 
 **Important:** All participants at Temple Mother Earth must complete a full medical intake form before receiving Kambo. This ensures your safety is our highest priority.
 
-If you are unsure whether Kambo is safe for you, please email us at AskUs@TempleMotherEarth.org for a pre-ceremony consultation.`,
+If you are unsure whether Kambo is safe for you, please reach out through our community circles on Telegram for a pre-ceremony consultation.`,
   },
   {
     id: "integration",

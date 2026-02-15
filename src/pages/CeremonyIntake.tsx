@@ -878,8 +878,7 @@ const CeremonyIntake = () => {
                 Your Sacred Intake has been submitted successfully. Our facilitators will review your screening and reach out if they need any additional information. You are now ready to enter the ceremony.
               </p>
               <p className="mt-4 text-sm text-muted-foreground">
-                Questions? Email us at{" "}
-                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
+                Questions? Reach out through our community circles on Telegram.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <a
