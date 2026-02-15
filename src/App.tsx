@@ -27,6 +27,7 @@ import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
 import VeteransTransformation from "./pages/VeteransTransformation";
 import ScrollToTop from "@/components/ScrollToTop";
+import DonationButton from "@/components/DonationButton";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <DonationButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
