@@ -199,7 +199,7 @@ const Contact = () => {
             <div className="grid gap-4 sm:grid-cols-2">
               <motion.a
                 variants={fadeUp}
-                href="#"
+                href="https://t.me/templemotherearth"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
@@ -214,7 +214,7 @@ const Contact = () => {
 
               <motion.a
                 variants={fadeUp}
-                href="#"
+                href="https://t.me/MensFellowship"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
@@ -229,7 +229,7 @@ const Contact = () => {
 
               <motion.a
                 variants={fadeUp}
-                href="#"
+                href="https://t.me/+12lOyLI8QH01NzYx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
@@ -244,7 +244,7 @@ const Contact = () => {
 
               <motion.a
                 variants={fadeUp}
-                href="#"
+                href="https://t.me/+WaG5DTz0HJYzNGNh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
