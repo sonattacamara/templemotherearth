@@ -17,7 +17,7 @@ const EventbriteCTA = () => (
         rel="noopener noreferrer"
         className="mt-6 inline-flex items-center gap-2 rounded-xl bg-background px-8 py-3.5 font-body text-sm font-semibold text-foreground shadow-lg transition hover:bg-background/90"
       >
-        Explore Experiences on Eventbrite <ArrowRight className="h-4 w-4" />
+        Enter the Sacred Space <ArrowRight className="h-4 w-4" />
       </a>
     </div>
   </section>

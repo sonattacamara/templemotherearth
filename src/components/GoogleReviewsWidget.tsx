@@ -157,7 +157,7 @@ const GoogleReviewsWidget = () => {
       {/* Leave a review on Google CTA */}
       <motion.div variants={fadeUp} className="mt-10 flex justify-center">
         <a
-          href="https://www.google.com/search?q=Temple+Mother+Earth+Reviews"
+          href="https://search.google.com/local/writereview?placeid=ChIJk2t0xBm3t4kRVVrcT6hzUkQ"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
