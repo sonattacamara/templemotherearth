@@ -647,7 +647,7 @@ const VeteransTransformation = () => {
           </motion.div>
           <motion.div variants={fadeUp} className="mt-8">
             <a
-              href="https://www.paypal.com"
+              href="https://www.paypal.com/donate?token=NXLlyiujSJagIrl9uk8qrPC1eutuXlYi84XbzMEIMVb1EasE5b-TxfSz6XcEwmtr_Bk0lXZ-X6ph23t-qhv_9x_2VK8&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg bg-[#556B2F] px-8 py-4 font-body font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg"
@@ -718,11 +718,18 @@ const VeteransTransformation = () => {
               </div>
 
               <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Branch of Service *</label>
-                <select required value={formData.branch} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]">
-                  <option value="" className="bg-[#1A1A1A]">Select your branch</option>
-                  {branches.map((b) => <option key={b} value={b} className="bg-[#1A1A1A]">{b}</option>)}
-                </select>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Branch of Service *</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {branches.map((b) => (
+                    <label key={b} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.branch === b ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.branch === b && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{b}</span>
+                      <input type="radio" name="branch" value={b} checked={formData.branch === b} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="sr-only" required />
+                    </label>
+                  ))}
+                </div>
                 {formData.branch === "Other" && (
                   <input type="text" value={formData.branchOther} onChange={(e) => setFormData({ ...formData, branchOther: e.target.value })} className="mt-2 w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Please specify your branch..." />
                 )}
