@@ -119,17 +119,22 @@ const VeteransTransformation = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     branch: "",
+    branchOther: "",
     serviceEra: "",
+    serviceEraOther: "",
     yearsOfService: "",
     dischargeType: "",
     deployments: "",
     struggles: [] as string[],
+    strugglesOther: "",
     currentSupport: [] as string[],
+    currentSupportOther: "",
     currentMedications: "",
     plantMedicineExperience: "",
     programInterest: "",
     contactMethod: "",
     hearAbout: "",
+    hearAboutOther: "",
     hasSpouseInterest: "",
     emergencyName: "",
     emergencyPhone: "",
@@ -718,6 +723,9 @@ const VeteransTransformation = () => {
                   <option value="" className="bg-[#1A1A1A]">Select your branch</option>
                   {branches.map((b) => <option key={b} value={b} className="bg-[#1A1A1A]">{b}</option>)}
                 </select>
+                {formData.branch === "Other" && (
+                  <input type="text" value={formData.branchOther} onChange={(e) => setFormData({ ...formData, branchOther: e.target.value })} className="mt-2 w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Please specify your branch..." />
+                )}
               </div>
 
               <div>
@@ -733,6 +741,9 @@ const VeteransTransformation = () => {
                     </label>
                   ))}
                 </div>
+                {formData.serviceEra === "Other" && (
+                  <input type="text" value={formData.serviceEraOther} onChange={(e) => setFormData({ ...formData, serviceEraOther: e.target.value })} className="mt-2 w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Please specify your service era..." />
+                )}
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -780,6 +791,9 @@ const VeteransTransformation = () => {
                     </label>
                   ))}
                 </div>
+                {formData.struggles.includes("Other") && (
+                  <input type="text" value={formData.strugglesOther} onChange={(e) => setFormData({ ...formData, strugglesOther: e.target.value })} className="mt-2 w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Please describe what you are carrying..." />
+                )}
               </div>
 
               <div>
@@ -795,6 +809,9 @@ const VeteransTransformation = () => {
                     </label>
                   ))}
                 </div>
+                {formData.currentSupport.includes("Other") && (
+                  <input type="text" value={formData.currentSupportOther} onChange={(e) => setFormData({ ...formData, currentSupportOther: e.target.value })} className="mt-2 w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Please describe your support system..." />
+                )}
               </div>
 
               <div>
@@ -883,6 +900,9 @@ const VeteransTransformation = () => {
                     </label>
                   ))}
                 </div>
+                {formData.hearAbout === "Other" && (
+                  <input type="text" value={formData.hearAboutOther} onChange={(e) => setFormData({ ...formData, hearAboutOther: e.target.value })} className="mt-2 w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Please tell us how you found us..." />
+                )}
               </div>
 
               <div>
