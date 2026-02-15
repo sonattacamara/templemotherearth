@@ -3,6 +3,7 @@ import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import aboutHero from "@/assets/about-hero.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
@@ -698,6 +699,14 @@ const About = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <DonationCTA
+        variant="dark"
+        eyebrow="Sustain the Temple"
+        headline="Help Us Continue This Sacred Work"
+        body="Your generosity sustains a living sanctuary — funding ceremonies, facilitator training, and community access for those who need it most."
+        buttonLabel="Support the Temple"
+      />
 
       <EventbriteCTA />
 

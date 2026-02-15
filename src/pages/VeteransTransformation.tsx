@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import DonationCTA from "@/components/DonationCTA";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Heart, Brain, Users, Phone, MessageCircle, ChevronDown, ChevronUp, AlertTriangle, Leaf, Zap, Sun, Sparkles, Target } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -962,6 +963,14 @@ const VeteransTransformation = () => {
           </p>
         </div>
       </footer>
+
+      <DonationCTA
+        variant="olive"
+        eyebrow="No Warrior Left Behind"
+        headline="Send a Veteran Into Healing"
+        body="Your contribution directly funds a veteran's transformation weekend — covering ceremony, lodging, meals, and aftercare. Every dollar goes to a warrior who gave everything for this country."
+        buttonLabel="Sponsor a Veteran"
+      />
 
       {/* JSON-LD Structured Data */}
       <script

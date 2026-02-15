@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "@/hooks/use-toast";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
@@ -491,6 +492,13 @@ const Membership = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <DonationCTA
+        eyebrow="Beyond Membership"
+        headline="Plant a Seed of Abundance"
+        body="Not ready for membership? A one-time gift still makes a powerful difference — funding scholarships, community days, and sacred gatherings."
+        buttonLabel="Plant a Seed"
+      />
 
       <EventbriteCTA />
 

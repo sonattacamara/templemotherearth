@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import communityImg from "@/assets/community.jpg";
 
@@ -106,6 +107,13 @@ const Sponsor = () => {
           )}
         </div>
       </section>
+
+      <DonationCTA
+        eyebrow="Make an Immediate Impact"
+        headline="Give Today, Change a Life Tomorrow"
+        body="While we process your sponsorship inquiry, you can make an immediate impact with a one-time tax-deductible donation."
+        buttonLabel="Give Today"
+      />
 
       <EventbriteCTA />
 

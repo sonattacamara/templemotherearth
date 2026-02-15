@@ -6,6 +6,7 @@ import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import SEOHead from "@/components/SEOHead";
 import { usePageTracking } from "@/hooks/useAnalytics";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -748,6 +749,13 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <DonationCTA
+        eyebrow="Sustain the Sacred"
+        headline="Your Offerings Keep the Temple Alive"
+        body="As a 501(c)(3) nonprofit, every tax-deductible gift sustains ceremonies, community programs, and sacred spaces for kindred spirits everywhere."
+        buttonLabel="Offerings & Tithes"
+      />
 
       <EventbriteCTA />
 
