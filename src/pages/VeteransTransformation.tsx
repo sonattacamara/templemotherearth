@@ -71,18 +71,18 @@ const kamboFears = [
 
 /* ─── Transformation Phases ─── */
 const phases = [
-  { phase: "Phase 1", name: "Purification", offering: "Kambo Ceremony", addresses: "Physical toxins, pharmaceutical buildup, immune system reset", benefit: "Clears the body so deeper healing can take root", icon: <Leaf className="h-8 w-8" /> },
-  { phase: "Phase 2", name: "Nervous System Reset", offering: "Hapé (Sacred Snuff)", addresses: "Grounding, mental clarity, energetic clearing", benefit: "Calms hypervigilance, centers the mind", icon: <Brain className="h-8 w-8" /> },
-  { phase: "Phase 3", name: "Deep Healing", offering: "Ayahuasca Ceremony", addresses: "Root trauma, PTSD, emotional wounds, spiritual disconnection", benefit: "Accesses the amygdala where combat trauma is stored", icon: <Heart className="h-8 w-8" /> },
-  { phase: "Phase 4", name: "Ego Reset", offering: "5-MeO-DMT (Toad Medicine)", addresses: "Ego dissolution, existential healing, spiritual awakening", benefit: "For veterans ready to release identity attachment to warrior role", icon: <Sun className="h-8 w-8" /> },
-  { phase: "Phase 5", name: "Integration", offering: "Microdose Program + Integration Circles", addresses: "Ongoing neuroplasticity, sustained healing, community", benefit: "Builds new neural pathways, prevents relapse into old patterns", icon: <Sparkles className="h-8 w-8" /> },
+  { phase: "Phase 1", name: "Purification", offering: "Kambo Ceremony", addresses: "Physical toxins, pharmaceutical buildup, immune system reset", benefit: "Clears the body so deeper healing can take root. Like clearing a weapon before maintenance — you strip it down first.", icon: <Leaf className="h-8 w-8" /> },
+  { phase: "Phase 2", name: "Nervous System Reset", offering: "Hapé (Sacred Snuff)", addresses: "Grounding, mental clarity, energetic clearing", benefit: "Downregulates your threat-detection system. Takes you off high alert so you can actually rest.", icon: <Brain className="h-8 w-8" /> },
+  { phase: "Phase 3", name: "Deep Healing", offering: "Sacred Earth Medicine Ceremony", addresses: "Root trauma, PTSD, emotional wounds, spiritual disconnection", benefit: "Goes where talk therapy cannot reach — into the places your body locked the mission away.", icon: <Heart className="h-8 w-8" /> },
+  { phase: "Phase 4", name: "Spiritual Reset", offering: "Sacred Earth Medicine Ceremony", addresses: "Identity healing, existential restoration, spiritual reconnection", benefit: "Helps you remember who you were before the uniform — and who you are becoming after.", icon: <Sun className="h-8 w-8" /> },
+  { phase: "Phase 5", name: "Integration", offering: "Integration Circles & Ongoing Support", addresses: "Sustained healing, community accountability, new patterns", benefit: "You do not get dropped back into the world alone. We build your support network — your new unit.", icon: <Sparkles className="h-8 w-8" /> },
 ];
 
 /* ─── Weekend Schedule ─── */
 const schedule = [
   { day: "Friday", morning: "Arrival, intake, safety briefing, intention setting", afternoon: "Kambo Session 1: Purification", evening: "Rest, hydration, community fire circle" },
   { day: "Saturday", morning: "Kambo Session 2: Deeper Cleanse", afternoon: "Integration talk, breathwork, nature immersion", evening: "Hapé ceremony for grounding" },
-  { day: "Sunday", morning: "Kambo Session 3: Final Release", afternoon: "Optional 5-MeO-DMT ceremony (qualified participants)", evening: "Closing circle, aftercare plan, departure" },
+  { day: "Sunday", morning: "Kambo Session 3: Final Release", afternoon: "Optional sacred earth medicine ceremony (qualified participants)", evening: "Closing circle, aftercare plan, departure" },
 ];
 
 /* ─── FAQ ─── */
@@ -143,7 +143,7 @@ const VeteransTransformation = () => {
     <div className="min-h-screen bg-[#1A1A1A]">
       <SEOHead
         title="Veterans Transformation Program | Kambo Healing for PTSD, Chronic Pain & Military Trauma"
-        description="Veterans: when the VA, the pills, and talk therapy have not been enough, discover sacred Kambo healing and plant medicine ceremonies designed for warriors. Non-psychedelic. Veteran-led. RFRA protected."
+        description="Veterans: when the VA, the pills, and talk therapy have not been enough, discover sacred earth medicine ceremonies designed for warriors. Non-psychedelic entry point. Veteran-led. RFRA protected. Begin your transformation."
         path="/veterans-transformation-program"
       />
       <Navigation />
@@ -191,7 +191,7 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.7 }}
             className="mx-auto mt-8 max-w-2xl font-body text-lg text-white/80 leading-relaxed"
           >
-            When the VA, the pills, and the therapy sessions have not been enough, there is an ancient path to healing your body, mind, and spirit. Temple Mother Earth's Veterans Transformation Program uses sacred Kambo medicine and plant-based healing to help warriors reclaim their lives.
+            When the VA, the pills, and the therapy sessions have not been enough — there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Real healing.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -465,12 +465,8 @@ const VeteransTransformation = () => {
 
           <motion.div variants={fadeUp} className="mt-8">
             <p className="font-body text-[#2F4F4F]/60 italic">
-              Your story starts here. Video testimonial space reserved for veterans who wish to share their transformation journey.
+              Your story starts here. If you have walked this path and want to share your experience to help a fellow warrior, reach out to our team.
             </p>
-            {/* Video embed placeholder */}
-            <div className="mt-6 mx-auto max-w-2xl aspect-video rounded-xl bg-[#2F4F4F]/10 border-2 border-dashed border-[#556B2F]/30 flex items-center justify-center">
-              <p className="font-body text-[#2F4F4F]/40 text-sm">Video testimonials coming soon</p>
-            </div>
           </motion.div>
         </motion.div>
       </section>
