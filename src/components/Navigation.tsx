@@ -6,6 +6,7 @@ import logo from "@/assets/logo.png";
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
   { label: "Experiences", href: "/#offerings", isRoute: false },
+  { label: "Veterans", href: "/veterans-transformation-program", isRoute: true },
   { label: "Membership", href: "/membership", isRoute: true },
   { label: "Community", href: "/#community", isRoute: false },
 ];
