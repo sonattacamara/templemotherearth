@@ -627,9 +627,9 @@ const About = () => {
                       person.name === "Samira Davis"
                         ? "object-[center_30%]"
                         : person.name === "Walter Spencer"
-                        ? "object-[center_35%]"
+                        ? "object-[center_45%]"
                         : person.name === "Jala Johnson"
-                        ? "object-[center_70%]"
+                        ? "object-[center_55%]"
                         : "object-top"
                     }`}
                     loading="lazy"
