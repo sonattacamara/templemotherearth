@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Send, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
@@ -43,10 +44,22 @@ const Contact = () => {
       return;
     }
     setIsSubmitting(true);
-    // Simulate submission – replace with real endpoint later
-    await new Promise((r) => setTimeout(r, 1200));
-    toast.success("Your message has been sent. We'll be in touch soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-contact", {
+        body: formData,
+      });
+      if (error) throw error;
+      if (data?.error) {
+        toast.error(data.error);
+        setIsSubmitting(false);
+        return;
+      }
+      toast.success("Your message has been sent. We'll be in touch soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast.error("Something went wrong. Please try again.");
+    }
     setIsSubmitting(false);
   };
 
