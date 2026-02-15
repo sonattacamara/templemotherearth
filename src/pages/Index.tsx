@@ -75,21 +75,16 @@ const offerings = [
 ];
 
 /* ── Journey Stage Marker ── */
-const JourneyStage = ({ number, label }: { number: string; label: string }) => (
+const JourneyStage = ({ label }: { number?: string; label: string }) => (
   <motion.div
     variants={fadeIn}
-    className="flex flex-col items-center gap-2 mb-6"
+    className="flex items-center justify-center gap-3 mb-6"
   >
-    <div className="flex items-center gap-3">
-      <div className="h-px w-8 bg-primary/30 hidden sm:block" />
-      <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary">
-        {number}
-      </span>
-      <div className="h-px w-8 bg-primary/30 hidden sm:block" />
-    </div>
-    <span className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+    <div className="h-px w-8 bg-primary/30 hidden sm:block" />
+    <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary">
       {label}
     </span>
+    <div className="h-px w-8 bg-primary/30 hidden sm:block" />
   </motion.div>
 );
 
@@ -264,7 +259,7 @@ const Index = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={stagger}
         >
-          <JourneyStage number="Stage I" label="The Awakening" />
+          <JourneyStage label="The Awakening" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
             You Are Your Own Healer
           </motion.h2>
@@ -341,7 +336,7 @@ const Index = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <JourneyStage number="Stage II" label="Choose Your Path" />
+          <JourneyStage label="Choose Your Path" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
             Sacred Experiences Await
           </motion.h2>
@@ -420,7 +415,7 @@ const Index = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <JourneyStage number="Stage III" label="The Transformation" />
+          <JourneyStage label="The Transformation" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
             What You Will Experience
           </motion.h2>
@@ -466,7 +461,7 @@ const Index = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
         >
-          <JourneyStage number="Stage IV" label="Your Pathway" />
+          <JourneyStage label="Your Sacred Community" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-primary-foreground md:text-5xl">
             Your Sacred Community Awaits
           </motion.h2>
@@ -529,7 +524,7 @@ const Index = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={stagger}
         >
-          <JourneyStage number="Stage V" label="The Invitation" />
+          <JourneyStage label="The Invitation" />
           <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
             Does This Sound Like You?
           </motion.h2>
