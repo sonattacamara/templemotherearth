@@ -102,18 +102,37 @@ const faqs = [
 /* ─── Branches ─── */
 const branches = ["U.S. Army", "U.S. Navy", "U.S. Air Force", "U.S. Marine Corps", "U.S. Coast Guard", "U.S. Space Force", "National Guard", "Reserves", "Other"];
 
-const struggles = ["PTSD", "Chronic Pain", "Substance Dependence", "Suicidal Thoughts", "TBI / Brain Injury", "Relationship Issues", "Loss of Purpose", "Anxiety / Depression", "Other"];
+const struggles = ["PTSD", "Chronic Pain", "Substance Dependence", "Suicidal Thoughts", "TBI / Brain Injury", "Relationship Issues", "Loss of Purpose", "Anxiety / Depression", "Sleep Disorders / Insomnia", "Anger / Emotional Dysregulation", "Moral Injury", "Other"];
+
+const serviceEras = ["Post-9/11 (2001–Present)", "Gulf War (1990–2001)", "Cold War (1947–1991)", "Vietnam Era", "Other"];
+
+const dischargeTypes = ["Honorable", "General (Under Honorable)", "Other Than Honorable", "Medical", "Retired", "Currently Serving", "Prefer Not to Say"];
+
+const currentSupport = ["VA Healthcare", "Private Therapist", "Support Group", "Medication Management", "Faith-Based Counseling", "None Currently", "Other"];
+
+const hearAbout = ["Google Search", "Social Media", "Another Veteran", "Podcast", "Therapist / Counselor Referral", "VA / Military Organization", "Other"];
+
+const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset Weekend ($1,497)", "Full Transformation Pathway", "Not Sure — Help Me Decide"];
 
 const VeteransTransformation = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     branch: "",
+    serviceEra: "",
     yearsOfService: "",
+    dischargeType: "",
+    deployments: "",
     struggles: [] as string[],
+    currentSupport: [] as string[],
     currentMedications: "",
     plantMedicineExperience: "",
+    programInterest: "",
     contactMethod: "",
+    hearAbout: "",
+    hasSpouseInterest: "",
+    emergencyName: "",
+    emergencyPhone: "",
     additionalInfo: "",
     email: "",
     phone: "",
@@ -151,12 +170,12 @@ const VeteransTransformation = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleStruggleToggle = (s: string) => {
+  const handleCheckboxToggle = (field: "struggles" | "currentSupport", value: string) => {
     setFormData((prev) => ({
       ...prev,
-      struggles: prev.struggles.includes(s)
-        ? prev.struggles.filter((x) => x !== s)
-        : [...prev.struggles, s],
+      [field]: (prev[field] as string[]).includes(value)
+        ? (prev[field] as string[]).filter((x) => x !== value)
+        : [...(prev[field] as string[]), value],
     }));
   };
 
@@ -663,170 +682,235 @@ const VeteransTransformation = () => {
               </p>
             </motion.div>
           ) : (
-            <motion.form variants={fadeUp} onSubmit={handleSubmit} className="space-y-6">
-              {/* Full Name */}
-              <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Full Name *</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                  placeholder="Your full name"
-                />
+            <motion.form variants={fadeUp} onSubmit={handleSubmit} className="space-y-8">
+
+              {/* ── Section: Personal Info ── */}
+              <div className="space-y-1 mb-2">
+                <h3 className="font-display text-lg font-bold text-[#B8860B]">Personal Information</h3>
+                <p className="font-body text-xs text-[#F5F0E6]/40">All fields marked * are required</p>
               </div>
 
-              {/* Email & Phone */}
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Full Name *</label>
+                <input type="text" required value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your full name" />
+              </div>
+
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Email *</label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                    placeholder="email@example.com"
-                  />
+                  <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="email@example.com" />
                 </div>
                 <div>
-                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Phone</label>
-                  <input
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                    placeholder="(555) 123-4567"
-                  />
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Phone *</label>
+                  <input type="tel" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="(555) 123-4567" />
                 </div>
               </div>
 
-              {/* Branch of Service */}
+              {/* ── Section: Service History ── */}
+              <div className="pt-4 border-t border-[#556B2F]/20">
+                <h3 className="font-display text-lg font-bold text-[#B8860B] mb-1">Service History</h3>
+                <p className="font-body text-xs text-[#F5F0E6]/40 mb-4">Help us understand your background</p>
+              </div>
+
               <div>
                 <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Branch of Service *</label>
-                <select
-                  required
-                  value={formData.branch}
-                  onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
-                  className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                >
+                <select required value={formData.branch} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]">
                   <option value="" className="bg-[#1A1A1A]">Select your branch</option>
-                  {branches.map((b) => (
-                    <option key={b} value={b} className="bg-[#1A1A1A]">{b}</option>
-                  ))}
+                  {branches.map((b) => <option key={b} value={b} className="bg-[#1A1A1A]">{b}</option>)}
                 </select>
               </div>
 
-              {/* Years of Service */}
               <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Years of Service</label>
-                <input
-                  type="text"
-                  value={formData.yearsOfService}
-                  onChange={(e) => setFormData({ ...formData, yearsOfService: e.target.value })}
-                  className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                  placeholder="e.g., 8 years"
-                />
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Service Era</label>
+                <div className="space-y-2">
+                  {serviceEras.map((era) => (
+                    <label key={era} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.serviceEra === era ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.serviceEra === era && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{era}</span>
+                      <input type="radio" name="serviceEra" value={era} checked={formData.serviceEra === era} onChange={(e) => setFormData({ ...formData, serviceEra: e.target.value })} className="sr-only" />
+                    </label>
+                  ))}
+                </div>
               </div>
 
-              {/* Primary Struggles */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Years of Service</label>
+                  <input type="text" value={formData.yearsOfService} onChange={(e) => setFormData({ ...formData, yearsOfService: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="e.g., 8 years" />
+                </div>
+                <div>
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Number of Deployments</label>
+                  <input type="text" value={formData.deployments} onChange={(e) => setFormData({ ...formData, deployments: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="e.g., 3" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Discharge Status</label>
+                <div className="grid grid-cols-2 gap-2">
+                  {dischargeTypes.map((dt) => (
+                    <label key={dt} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.dischargeType === dt ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.dischargeType === dt && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{dt}</span>
+                      <input type="radio" name="dischargeType" value={dt} checked={formData.dischargeType === dt} onChange={(e) => setFormData({ ...formData, dischargeType: e.target.value })} className="sr-only" />
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* ── Section: What You Are Carrying ── */}
+              <div className="pt-4 border-t border-[#556B2F]/20">
+                <h3 className="font-display text-lg font-bold text-[#B8860B] mb-1">What You Are Carrying</h3>
+                <p className="font-body text-xs text-[#F5F0E6]/40 mb-4">No judgment. Just understanding. Select everything that applies.</p>
+              </div>
+
               <div>
                 <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Primary Struggles (select all that apply)</label>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                   {struggles.map((s) => (
-                    <button
-                      key={s}
-                      type="button"
-                      onClick={() => handleStruggleToggle(s)}
-                      className={`rounded-lg border px-3 py-2 font-body text-sm transition ${
-                        formData.struggles.includes(s)
-                          ? "border-[#B8860B] bg-[#B8860B]/20 text-[#B8860B]"
-                          : "border-[#556B2F]/30 text-[#F5F0E6]/60 hover:border-[#556B2F]/60"
-                      }`}
-                    >
-                      {s}
-                    </button>
+                    <label key={s} className="flex items-center gap-2 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded border-2 flex items-center justify-center transition flex-shrink-0 ${formData.struggles.includes(s) ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.struggles.includes(s) && <span className="text-white text-xs font-bold">✓</span>}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{s}</span>
+                      <input type="checkbox" checked={formData.struggles.includes(s)} onChange={() => handleCheckboxToggle("struggles", s)} className="sr-only" />
+                    </label>
                   ))}
                 </div>
               </div>
 
-              {/* Current Medications */}
               <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Current Medications</label>
-                <textarea
-                  value={formData.currentMedications}
-                  onChange={(e) => setFormData({ ...formData, currentMedications: e.target.value })}
-                  rows={2}
-                  className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                  placeholder="List any current medications..."
-                />
-              </div>
-
-              {/* Plant Medicine Experience */}
-              <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Have you ever used plant medicine before?</label>
-                <div className="flex gap-4">
-                  {["Yes", "No"].map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => setFormData({ ...formData, plantMedicineExperience: opt })}
-                      className={`rounded-lg border px-6 py-2 font-body text-sm transition ${
-                        formData.plantMedicineExperience === opt
-                          ? "border-[#B8860B] bg-[#B8860B]/20 text-[#B8860B]"
-                          : "border-[#556B2F]/30 text-[#F5F0E6]/60 hover:border-[#556B2F]/60"
-                      }`}
-                    >
-                      {opt}
-                    </button>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Current Support Systems (select all that apply)</label>
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                  {currentSupport.map((cs) => (
+                    <label key={cs} className="flex items-center gap-2 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded border-2 flex items-center justify-center transition flex-shrink-0 ${formData.currentSupport.includes(cs) ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.currentSupport.includes(cs) && <span className="text-white text-xs font-bold">✓</span>}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{cs}</span>
+                      <input type="checkbox" checked={formData.currentSupport.includes(cs)} onChange={() => handleCheckboxToggle("currentSupport", cs)} className="sr-only" />
+                    </label>
                   ))}
                 </div>
               </div>
 
-              {/* Contact Method */}
               <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Preferred Contact Method</label>
-                <div className="flex gap-4">
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Current Medications (if any)</label>
+                <textarea value={formData.currentMedications} onChange={(e) => setFormData({ ...formData, currentMedications: e.target.value })} rows={2} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Include prescriptions, supplements, or anything you take regularly..." />
+              </div>
+
+              {/* ── Section: Program Interest ── */}
+              <div className="pt-4 border-t border-[#556B2F]/20">
+                <h3 className="font-display text-lg font-bold text-[#B8860B] mb-1">Your Path Forward</h3>
+                <p className="font-body text-xs text-[#F5F0E6]/40 mb-4">Tell us what interests you so we can guide you to the right starting point.</p>
+              </div>
+
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Which program interests you? *</label>
+                <div className="space-y-2">
+                  {programInterest.map((pi) => (
+                    <label key={pi} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.programInterest === pi ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.programInterest === pi && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{pi}</span>
+                      <input type="radio" name="programInterest" value={pi} checked={formData.programInterest === pi} onChange={(e) => setFormData({ ...formData, programInterest: e.target.value })} className="sr-only" />
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Have you ever worked with sacred earth medicine before?</label>
+                <div className="flex gap-6">
+                  {["Yes", "No", "Unsure"].map((opt) => (
+                    <label key={opt} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.plantMedicineExperience === opt ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.plantMedicineExperience === opt && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{opt}</span>
+                      <input type="radio" name="plantMedicine" value={opt} checked={formData.plantMedicineExperience === opt} onChange={(e) => setFormData({ ...formData, plantMedicineExperience: e.target.value })} className="sr-only" />
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Would your spouse or partner like to participate?</label>
+                <div className="flex gap-6">
+                  {["Yes", "No", "Maybe"].map((opt) => (
+                    <label key={opt} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.hasSpouseInterest === opt ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.hasSpouseInterest === opt && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{opt}</span>
+                      <input type="radio" name="spouseInterest" value={opt} checked={formData.hasSpouseInterest === opt} onChange={(e) => setFormData({ ...formData, hasSpouseInterest: e.target.value })} className="sr-only" />
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* ── Section: Emergency & Logistics ── */}
+              <div className="pt-4 border-t border-[#556B2F]/20">
+                <h3 className="font-display text-lg font-bold text-[#B8860B] mb-1">Emergency Contact & Logistics</h3>
+                <p className="font-body text-xs text-[#F5F0E6]/40 mb-4">For your safety during any ceremony or retreat</p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Emergency Contact Name</label>
+                  <input type="text" value={formData.emergencyName} onChange={(e) => setFormData({ ...formData, emergencyName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Name of someone we can contact" />
+                </div>
+                <div>
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Emergency Contact Phone</label>
+                  <input type="tel" value={formData.emergencyPhone} onChange={(e) => setFormData({ ...formData, emergencyPhone: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="(555) 123-4567" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">How did you hear about us?</label>
+                <div className="grid grid-cols-2 gap-2">
+                  {hearAbout.map((h) => (
+                    <label key={h} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.hearAbout === h ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.hearAbout === h && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{h}</span>
+                      <input type="radio" name="hearAbout" value={h} checked={formData.hearAbout === h} onChange={(e) => setFormData({ ...formData, hearAbout: e.target.value })} className="sr-only" />
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-3">Preferred Contact Method</label>
+                <div className="flex gap-6">
                   {["Phone", "Email", "Text"].map((opt) => (
-                    <button
-                      key={opt}
-                      type="button"
-                      onClick={() => setFormData({ ...formData, contactMethod: opt })}
-                      className={`rounded-lg border px-6 py-2 font-body text-sm transition ${
-                        formData.contactMethod === opt
-                          ? "border-[#B8860B] bg-[#B8860B]/20 text-[#B8860B]"
-                          : "border-[#556B2F]/30 text-[#F5F0E6]/60 hover:border-[#556B2F]/60"
-                      }`}
-                    >
-                      {opt}
-                    </button>
+                    <label key={opt} className="flex items-center gap-3 cursor-pointer group">
+                      <span className={`h-5 w-5 rounded-full border-2 flex items-center justify-center transition ${formData.contactMethod === opt ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
+                        {formData.contactMethod === opt && <span className="h-2 w-2 rounded-full bg-white" />}
+                      </span>
+                      <span className="font-body text-sm text-[#F5F0E6]/80">{opt}</span>
+                      <input type="radio" name="contactMethod" value={opt} checked={formData.contactMethod === opt} onChange={(e) => setFormData({ ...formData, contactMethod: e.target.value })} className="sr-only" />
+                    </label>
                   ))}
                 </div>
               </div>
 
-              {/* Additional Info */}
               <div>
                 <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Anything else you want us to know?</label>
-                <textarea
-                  value={formData.additionalInfo}
-                  onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
-                  rows={3}
-                  className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]"
-                  placeholder="Share anything that feels important..."
-                />
+                <textarea value={formData.additionalInfo} onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })} rows={3} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your story matters. Share whatever feels right — we are listening." />
               </div>
 
-              <button
-                type="submit"
-                disabled={submitting}
-                className="w-full rounded-lg bg-[#556B2F] py-4 font-body text-base font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg disabled:opacity-50"
-              >
+              <button type="submit" disabled={submitting} className="w-full rounded-lg bg-[#556B2F] py-4 font-body text-base font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg disabled:opacity-50">
                 {submitting ? "Submitting..." : "Begin Your Transformation"}
               </button>
 
               <p className="text-center font-body text-xs text-[#F5F0E6]/40">
-                Your information is confidential and sacred. We will never share your details.
+                Your information is confidential and sacred. We will never share your details. If you are in crisis, call <a href="tel:988" className="text-[#B8860B] underline">988, press 1</a>.
               </p>
             </motion.form>
           )}
