@@ -25,6 +25,7 @@ import Analytics from "./pages/Analytics";
 import ValentinesDay from "./pages/ValentinesDay";
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
+import VeteransTransformation from "./pages/VeteransTransformation";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/valentines-day" element={<ValentinesDay />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
+            <Route path="/veterans-transformation-program" element={<VeteransTransformation />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
