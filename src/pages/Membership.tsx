@@ -429,7 +429,7 @@ const Membership = () => {
               },
               {
                 q: "What if I'm not sure where to start?",
-                a: "Start with the Welcome Circle — it's free and gives you space to explore without any pressure. You can also email us at AskUs@TempleMotherEarth.org and we'll help you find the right fit for where you are right now.",
+                a: "Start with the Welcome Circle — it's free and gives you space to explore without any pressure. Join our community circles and we'll help you find the right fit for where you are right now.",
               },
             ].map((item) => (
               <motion.div
@@ -529,7 +529,7 @@ const Membership = () => {
             <div>
               <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Connect</h4>
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
-                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary-foreground/60 hover:text-primary transition-colors">AskUs@TempleMotherEarth.org</a>
+                
                 <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
                 <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
                 <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Instagram</a>

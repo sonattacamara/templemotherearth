@@ -636,8 +636,7 @@ const Index = () => {
 
             <div className="mt-8 flex flex-col items-center gap-4">
               <p className="text-xs text-muted-foreground">
-                Questions? Email us at{" "}
-                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
+                Questions? Reach out to us through our community circles below.
               </p>
             </div>
           </motion.div>
@@ -743,16 +742,6 @@ const Index = () => {
            <motion.div variants={fadeUp} className="mt-12 grid gap-8 md:grid-cols-2">
             <div className="space-y-6">
               <div>
-                <h3 className="font-display text-lg font-semibold text-card-foreground">Visit Our Temple</h3>
-                <p className="mt-2 text-muted-foreground">2415 32nd St SE<br />Washington, DC</p>
-              </div>
-              <div>
-                <h3 className="font-display text-lg font-semibold text-card-foreground">Email</h3>
-                <a href="mailto:AskUs@TempleMotherEarth.org" className="mt-2 block text-primary hover:underline">
-                  AskUs@TempleMotherEarth.org
-                </a>
-              </div>
-              <div>
                 <h3 className="font-display text-lg font-semibold text-card-foreground">Follow Us</h3>
                 <div className="mt-2 flex flex-wrap gap-4">
                    <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Instagram className="h-4 w-4" /> @templemotherearth</a>
@@ -854,7 +843,7 @@ const Index = () => {
             <div>
               <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Connect</h4>
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
-                <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary-foreground/60 hover:text-primary transition-colors">AskUs@TempleMotherEarth.org</a>
+                
                 <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
                 <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
                 <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors inline-flex items-center gap-1.5"><Instagram className="h-3.5 w-3.5" /> Instagram</a>

@@ -116,8 +116,7 @@ const Conduct = () => {
                     is non-negotiable.
                   </p>
                   <p className="mt-3 text-sm text-muted-foreground">
-                    Questions or concerns? Contact us at{" "}
-                    <a href="mailto:AskUs@TempleMotherEarth.org" className="text-primary hover:underline">AskUs@TempleMotherEarth.org</a>
+                    Questions or concerns? Reach out through our community circles on Telegram.
                   </p>
                 </div>
               </div>
