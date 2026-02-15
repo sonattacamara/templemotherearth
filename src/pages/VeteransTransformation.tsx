@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Heart, Brain, Users, Phone, MessageCircle, ChevronDown, ChevronUp, AlertTriangle, Leaf, Zap, Sun, Sparkles, Target } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
@@ -62,7 +62,7 @@ const painPoints = [
 
 /* ─── Kambo Fears Table ─── */
 const kamboFears = [
-  { fear: "\"I do not want to trip or hallucinate\"", reality: "Kambo is non-psychoactive. Full mental clarity throughout." },
+  { fear: "\"I do not want to trip or hallucinate\"", reality: "Kambo does not alter your mind. Full mental clarity throughout. You stay sharp." },
   { fear: "\"I need to stay in control\"", reality: "You are conscious and present the entire time. No loss of agency." },
   { fear: "\"I have been on meds for years\"", reality: "Kambo helps purge pharmaceutical buildup. Many report mental clarity." },
   { fear: "\"My body is destroyed\"", reality: "Kambo peptides address inflammation, chronic pain, and immune dysfunction." },
@@ -88,15 +88,15 @@ const schedule = [
 /* ─── FAQ ─── */
 const faqs = [
   { q: "Is Kambo safe for veterans on VA medications?", a: "We require a comprehensive pre-screening process that evaluates all current medications and health conditions. Our intake process is designed to identify any contraindications. Certain medications may require a washout period. Your safety is our first priority — we will be transparent about what is and is not appropriate for your specific situation." },
-  { q: "Will I lose control or hallucinate?", a: "No. Kambo is non-psychoactive. You maintain full consciousness and mental clarity throughout the entire process. This is a physical purification, not a psychedelic experience. You will be aware, present, and in control at all times." },
+  { q: "Will I lose control or hallucinate?", a: "No. Kambo does not alter your state of mind. You maintain full consciousness and mental clarity throughout the entire process. This is a physical purification. You will be aware, present, and in control at all times — the same tactical awareness you are used to." },
   { q: "Is this legal?", a: "Temple Mother Earth operates as a 508(c)(1)(A) church under the Religious Freedom Restoration Act (RFRA). Our ceremonies are conducted as bona fide religious practices protected under the First Amendment. Kambo itself is not a controlled substance." },
-  { q: "I have TBI. Is this safe for me?", a: "Pre-screening is required for all participants, especially those with TBI. We are transparent about what conditions require additional medical clearance. We work with each veteran individually to determine the safest approach to their healing journey." },
+  { q: "I have TBI. Is this safe for me?", a: "Pre-screening is required for all participants, especially those with TBI. We are transparent about what conditions require additional medical clearance. We work with each veteran individually to determine the safest approach." },
   { q: "Do you accept VA benefits or insurance?", a: "Currently, our ceremonies are not covered by VA benefits or insurance. However, we offer a Veteran Scholarship Fund and flexible payment plans. No warrior will be turned away for inability to pay." },
-  { q: "What if I am in crisis right now?", a: "Please call the Veterans Crisis Line immediately: dial 988, press 1. You can also chat at VeteransCrisisLine.net or text 838255. When you are ready for the next step in your healing, we are here." },
-  { q: "Can I bring my spouse or partner?", a: "Yes. We understand that military service impacts entire families. We offer couples ceremonies and encourage partners to participate in the healing journey when appropriate." },
-  { q: "What if I have never done anything like this?", a: "Most of our veterans had not either. Our program is designed to be first-timer friendly. Kambo is the ideal starting point precisely because it is not psychedelic — you stay in full control the entire time." },
-  { q: "How is this different from the VA?", a: "Our approach is personalized, sacred, and community-based. We work on root causes, not just symptoms. One transformative weekend can accomplish what years of conventional treatment could not. You are not a number here — you are a warrior worthy of real healing." },
-  { q: "What does a typical Kambo session involve?", a: "A Kambo session lasts approximately 20 to 40 minutes. Small points are applied to the skin, and the secretion of the Giant Monkey Frog is administered. You will experience a powerful physical purge that cleanses toxins from your body. The entire process is held in sacred, supportive space by trained facilitators." },
+  { q: "What if I am in crisis right now?", a: "Please call the Veterans Crisis Line immediately: dial 988, press 1. You can also chat at VeteransCrisisLine.net or text 838255. When you are ready for the next step, we are here." },
+  { q: "Can I bring my spouse or partner?", a: "Affirmative. We understand that military service impacts entire families. We offer couples ceremonies and encourage partners to participate when appropriate. Your family has been carrying this too." },
+  { q: "What if I have never done anything like this?", a: "Most of our veterans had not either. This program is built for first-timers. Kambo is the ideal starting point — you stay fully aware and in control the entire time. No surprises." },
+  { q: "How is this different from the VA?", a: "Our approach is personalized, sacred, and community-based. We work on root causes, not just symptoms. One transformative weekend can accomplish what years of conventional treatment could not. You are not a number here — you are a warrior who deserves to come home to yourself." },
+  { q: "What does a typical Kambo session involve?", a: "A Kambo session lasts approximately 20 to 40 minutes. Small points are applied to the skin, and the secretion of the Giant Monkey Frog is administered. You will experience a powerful physical purge that cleanses toxins from your body. The entire process is held in sacred, supportive space by trained facilitators. Think of it as a system reboot." },
 ];
 
 /* ─── Branches ─── */
@@ -120,6 +120,36 @@ const VeteransTransformation = () => {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const sectionAnchors = [
+    { id: "hero", label: "Home" },
+    { id: "problem", label: "Your Story" },
+    { id: "kambo", label: "Kambo" },
+    { id: "pathway", label: "The Path" },
+    { id: "weekend", label: "Weekend" },
+    { id: "voices", label: "Voices" },
+    { id: "faq", label: "FAQ" },
+    { id: "apply", label: "Apply" },
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
+    );
+    sectionAnchors.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
   const handleStruggleToggle = (s: string) => {
     setFormData((prev) => ({
@@ -141,9 +171,40 @@ const VeteransTransformation = () => {
 
   return (
     <div className="min-h-screen bg-[#1A1A1A]">
+      {/* ═══════ FLOATING SIDEBAR NAV ═══════ */}
+      <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-start gap-1">
+        {sectionAnchors.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={`group flex items-center gap-3 py-1.5 transition-all duration-300`}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            <span
+              className={`block rounded-full transition-all duration-300 ${
+                activeSection === id
+                  ? "h-3 w-3 bg-[#B8860B] shadow-[0_0_8px_rgba(184,134,11,0.5)]"
+                  : "h-2 w-2 bg-white/30 group-hover:bg-white/60"
+              }`}
+            />
+            <span
+              className={`font-body text-xs uppercase tracking-wider transition-all duration-300 ${
+                activeSection === id
+                  ? "text-[#B8860B] opacity-100 translate-x-0"
+                  : "text-white/0 group-hover:text-white/70 -translate-x-2 group-hover:translate-x-0"
+              }`}
+            >
+              {label}
+            </span>
+          </a>
+        ))}
+      </nav>
       <SEOHead
         title="Veterans Transformation Program | Kambo Healing for PTSD, Chronic Pain & Military Trauma"
-        description="Veterans: when the VA, the pills, and talk therapy have not been enough, discover sacred earth medicine ceremonies designed for warriors. Non-psychedelic entry point. Veteran-led. RFRA protected. Begin your transformation."
+        description="Veterans: when the VA, the pills, and talk therapy have not been enough, discover sacred earth medicine ceremonies designed for warriors. Veteran-led. RFRA protected. Ancient medicine for the modern warrior."
         path="/veterans-transformation-program"
       />
       <Navigation />
@@ -162,7 +223,7 @@ const VeteransTransformation = () => {
       </div>
 
       {/* ═══════ HERO ═══════ */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImg} alt="Silhouette of a warrior at sunrise in the forest" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/70 via-[#1A1A1A]/50 to-[#1A1A1A]" />
@@ -191,7 +252,7 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.7 }}
             className="mx-auto mt-8 max-w-2xl font-body text-lg text-white/80 leading-relaxed"
           >
-            When the VA, the pills, and the therapy sessions have not been enough — there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Real healing.
+            When the VA, the pills, and the therapy sessions have not been enough — there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Ancient medicine for the modern warrior.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -229,7 +290,7 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ THE PROBLEM ═══════ */}
-      <section className="bg-[#1A1A1A] px-4 py-24 md:py-32">
+      <section id="problem" className="bg-[#1A1A1A] px-4 py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -273,7 +334,7 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ WHAT IS KAMBO ═══════ */}
-      <section className="bg-[#F5F0E6] px-4 py-24 md:py-32">
+      <section id="kambo" className="bg-[#F5F0E6] px-4 py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -282,7 +343,7 @@ const VeteransTransformation = () => {
           className="mx-auto max-w-6xl"
         >
           <motion.div variants={fadeUp} className="text-center mb-16">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#556B2F]">Non-Psychedelic Healing for Veterans</p>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#556B2F]">Sacred Earth Medicine for Veterans</p>
             <h2 className="mt-4 font-display text-3xl font-bold text-[#2F4F4F] md:text-5xl">
               Kambo: The Warrior's Medicine That Heals What Pills Cannot
             </h2>
@@ -290,7 +351,7 @@ const VeteransTransformation = () => {
 
           <motion.div variants={fadeUp} className="mx-auto max-w-3xl space-y-6 font-body text-[#2F4F4F]/80 leading-relaxed">
             <p>
-              Kambo is <strong>not psychedelic</strong>. You will not hallucinate. You will not lose control. For someone trained to maintain tactical awareness, this matters.
+              Kambo does <strong>not alter your state of mind</strong>. You will not hallucinate. You will not lose control. For someone trained to maintain tactical awareness, this matters.
             </p>
             <p>
               It is a physical purification from the secretion of the Giant Monkey Frog (<em>Phyllomedusa bicolor</em>), used by Amazonian warriors for centuries to sharpen their senses before hunts.
@@ -332,7 +393,7 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ TRANSFORMATION PATHWAY ═══════ */}
-      <section className="bg-[#2F4F4F] px-4 py-24 md:py-32">
+      <section id="pathway" className="bg-[#2F4F4F] px-4 py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -383,7 +444,7 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ RELAX & RESET WEEKEND ═══════ */}
-      <section className="bg-[#1A1A1A] px-4 py-24 md:py-32">
+      <section id="weekend" className="bg-[#1A1A1A] px-4 py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -438,7 +499,7 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="bg-[#F5F0E6] px-4 py-24 md:py-32">
+      <section id="voices" className="bg-[#F5F0E6] px-4 py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -458,7 +519,7 @@ const VeteransTransformation = () => {
             className="mt-12 rounded-xl bg-white border border-[#556B2F]/20 p-8 md:p-12"
           >
             <p className="font-display text-xl italic text-[#2F4F4F] leading-relaxed md:text-2xl">
-              "Kambo pulls issues out by the root. Since it is not a psychedelic, it can be an excellent medicine for someone on the fence about natural remedies."
+              "Kambo pulls issues out by the root. It can be an excellent medicine for someone looking for something beyond what the system has offered them."
             </p>
             <footer className="mt-6 font-body text-sm text-[#556B2F]">— Veteran Community Member</footer>
           </motion.blockquote>
@@ -472,7 +533,7 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ FAQ ═══════ */}
-      <section className="bg-[#2F4F4F] px-4 py-24 md:py-32">
+      <section id="faq" className="bg-[#2F4F4F] px-4 py-24 md:py-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
