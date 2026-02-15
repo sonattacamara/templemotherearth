@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import DonationCTA from "@/components/DonationCTA";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -275,6 +276,14 @@ const Contact = () => {
       </section>
 
       {/* ───── GLOBAL CTA ───── */}
+      <DonationCTA
+        variant="dark"
+        eyebrow="Support Our Mission"
+        headline="Walk With Us on This Journey"
+        body="Your tax-deductible contribution helps Temple Mother Earth continue to serve our community with sacred healing, education, and outreach."
+        buttonLabel="Support Our Mission"
+      />
+
       <EventbriteCTA />
 
       {/* ───── FOOTER ───── */}
