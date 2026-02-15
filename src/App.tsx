@@ -24,6 +24,7 @@ import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
 import ValentinesDay from "./pages/ValentinesDay";
 import Contact from "./pages/Contact";
+import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/valentines-day" element={<ValentinesDay />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
