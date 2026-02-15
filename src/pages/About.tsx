@@ -623,7 +623,11 @@ const About = () => {
                   <img
                     src={person.img}
                     alt={person.name}
-                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                      person.name === "Samira Davis" || person.name === "Walter Spencer"
+                        ? "object-center"
+                        : "object-top"
+                    }`}
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
