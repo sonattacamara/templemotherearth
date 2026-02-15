@@ -5,6 +5,7 @@ import { z } from "zod";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
@@ -941,6 +942,13 @@ const CeremonyIntake = () => {
           Bobinsana, Chiric Sanango, Mapacho, Sananga, Blue Lotus, Kava, and dozens more traditional healing allies.
         </p>
       </section>
+
+      <DonationCTA
+        eyebrow="Gift the Journey to Someone Else"
+        headline="Help Someone Else Experience Healing"
+        body="If you would like to donate so that someone who may not have the financial means can experience the transformative power of sacred ceremony, your generous contribution makes that possible."
+        buttonLabel="Gift a Journey"
+      />
 
       <EventbriteCTA />
 
