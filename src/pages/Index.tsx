@@ -873,6 +873,35 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* ───── SEO: Plant Medicine Knowledge Base (visually hidden, crawlable) ───── */}
+      <section className="sr-only" aria-label="Plant Medicine Knowledge Base">
+        <h2>Sacred Plant Medicines & Earth Medicines at Temple Mother Earth</h2>
+        <article>
+          <h3>Entheogenic & Psychoactive Plant Medicines</h3>
+          <p>Temple Mother Earth honors the ancient traditions of plant medicine healing. Our ceremonies and retreats work with powerful Earth Medicines including Ayahuasca (Banisteriopsis caapi vine with Psychotria viridis chacruna or Diplopterys cabrerana chaliponga), a DMT-containing brew from the Amazon used for deep spiritual healing and visionary experiences. We recognize the sacred traditions of Peyote (Hikuri, Lophophora williamsii), San Pedro (Huachuma, Echinopsis pachanoi) mescaline-containing cacti, Psilocybin mushrooms (Psilocybe cubensis, Psilocybe semilanceata, Psilocybe azurescens), Iboga and Ibogaine (Tabernanthe iboga) from the Bwiti tradition of Gabon, Salvia divinorum used by Mazatec healers, sacred Cannabis (Cannabis sativa and indica) used in Rastafari, Hindu, and Sufi traditions, Morning Glory (Ololiuqui, Turbina corymbosa, Ipomoea tricolor), Hawaiian Baby Woodrose (Argyreia nervosa), Jurema (Mimosa hostilis, Mimosa tenuiflora) used in Brazilian Jurema Sagrada traditions, Syrian Rue (Harmal, Peganum harmala) used as an ayahuasca analog, Yopo and Cohoba (Anadenanthera peregrina), and Cebil (Vilca, Anadenanthera colubrina) from Andean traditions.</p>
+        </article>
+        <article>
+          <h3>Master Plant Teachers & Amazonian Dieta Plants</h3>
+          <p>Our facilitators are experienced in the Amazonian plant dieta tradition, working alongside sacred teacher plants including Tobacco and Mapacho (Nicotiana rustica) the grandfather plant, Bobinsana (Calliandra angustifolia) for heart-opening, Chiric Sanango (Brunfelsia grandiflora) for emotional healing and courage, Ajo Sacha (Mansoa alliacea) garlic vine for spiritual cleansing and protection, Piñón Colorado (Jatropha gossypiifolia) for purification, Chullachaki Caspi (Tovomita) for grounding and strength, Noya Rao the luminescent Tree of Light, Camalonga (Thevetia peruviana) for dreams and visionary work, and Uchu Sanango (Tabernaemontana sananho) for emotional and physical healing.</p>
+        </article>
+        <article>
+          <h3>Cleansing & Purgative Plant Medicines</h3>
+          <p>Temple Mother Earth offers Kambo ceremony (Phyllomedusa bicolor giant monkey tree frog secretion) for physical detox, emotional clearing, and spiritual purification. We facilitate Hapé and Rapé ceremonies using sacred tobacco-based snuff blended with tree ashes and medicinal plants. Our practitioners work with Sananga eye drops (Tabernaemontana undulata) for spiritual vision and energetic clearing, Guayusa (Ilex guayusa) Amazonian tea for dream work and alertness, ceremonial grade Cacao (Theobroma cacao) for heart-opening ceremonies, and Sassafras (Sassafras albidum) for traditional cleansing.</p>
+        </article>
+        <article>
+          <h3>Traditional Healing & Medicinal Plant Allies</h3>
+          <p>Our healing practices honor Blue Lotus (Nymphaea caerulea) used in ancient Egyptian ceremony, Mugwort (Artemisia vulgaris) for dream enhancement and feminine medicine, Damiana (Turnera diffusa) for heart and sensual medicine, Passionflower (Passiflora incarnata) for calming, Kava (Piper methysticum) Pacific Island ceremonial relaxant, Kratom (Mitragyna speciosa) Southeast Asian medicine, Wormwood (Artemisia absinthium) for cleansing, Calamus Root (Sweet Flag, Acorus calamus) for clarity and purification, Coca Leaf (Erythroxylum coca) sacred plant of the Andes, Khat (Catha edulis) East African tradition, and Betel Nut (Areca catechu) Southeast Asian ceremonial stimulant.</p>
+        </article>
+        <article>
+          <h3>Sacred Fungi & Medicinal Mushrooms</h3>
+          <p>We honor the Fungi Kingdom including Psilocybin species, Amanita Muscaria (fly agaric) used in Siberian shamanic traditions, and functional medicinal mushrooms Reishi, Lion's Mane, Chaga, Cordyceps, and Turkey Tail for holistic healing support and consciousness expansion.</p>
+        </article>
+        <article>
+          <h3>Find Plant Medicine Ceremonies Near You</h3>
+          <p>Temple Mother Earth offers plant medicine ceremonies, ayahuasca retreats, Kambo healing, shamanic ceremonies, and spiritual retreats in Washington DC, the DMV area, and at international retreat locations. Whether you are searching for ayahuasca ceremony near me, Kambo ceremony near me, plant medicine retreat, healing ceremony, spiritual retreat, psychedelic ceremony, shamanic healing, holistic healing, alternative medicine, energy healing, or a sacred healing sanctuary, Temple Mother Earth welcomes you home. We serve communities across the United States, Mexico, Costa Rica, Peru, Colombia, and Brazil with transformational plant medicine experiences, integration circles, and community wellness programs.</p>
+        </article>
+      </section>
     </div>
   );
 };
