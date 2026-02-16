@@ -590,6 +590,21 @@ const CeremonyIntake = () => {
               <div className="space-y-4">
                 <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Mental Health History</h4>
 
+                {/* Crisis Resource Inline Callout */}
+                <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-4">
+                  <p className="text-sm font-semibold text-foreground">
+                    If you are currently in crisis or experiencing suicidal thoughts:
+                  </p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    <a href="tel:988" className="font-bold text-destructive underline">Call or text 988</a>
+                    {" · "}
+                    Text HOME to <a href="sms:741741?body=HOME" className="font-bold text-destructive underline">741741</a>
+                    {" · "}
+                    Veterans: <a href="tel:988" className="font-bold text-destructive underline">988, press 1</a>
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">Free, confidential, 24/7 support.</p>
+                </div>
+
                 {[
                   { field: "psychiatricHospital", details: "psychiatricHospitalDetails", q: "Have you ever been hospitalized for psychiatric reasons? *", placeholder: "Please briefly describe" },
                   { field: "suicidalIdeation", details: "suicidalIdeationDetails", q: "Have you ever experienced suicidal ideation or suicide attempts? *", placeholder: "Please briefly describe and indicate if this is current" },
