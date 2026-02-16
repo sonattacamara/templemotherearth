@@ -55,7 +55,7 @@ const MemberAuth = () => {
       if (error) {
         setError(error.message);
       } else {
-        setSuccess("Please check your email to verify your account before logging in.");
+        navigate("/member/education");
       }
     }
     setLoading(false);
