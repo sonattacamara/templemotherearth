@@ -143,9 +143,17 @@ const GoogleReviewsWidget = () => {
         </div>
       </motion.div>
 
-      {/* Review cards */}
+      {/* Review cards — Google API returns max 5, pad with fallbacks to always show 6 */}
       <div className="grid gap-6 md:grid-cols-3">
-      {data.reviews.slice(0, 6).map((review, i) => (
+      {(() => {
+        const apiReviews = data.reviews.slice(0, 6);
+        if (apiReviews.length < 6) {
+          const usedAuthors = new Set(apiReviews.map((r) => r.author));
+          const extras = FALLBACK_REVIEWS.filter((r) => !usedAuthors.has(r.author));
+          apiReviews.push(...extras.slice(0, 6 - apiReviews.length));
+        }
+        return apiReviews;
+      })().map((review, i) => (
           <motion.div
             key={i}
             variants={fadeUp}
