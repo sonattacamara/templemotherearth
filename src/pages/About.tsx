@@ -108,7 +108,7 @@ const About = () => {
       </section>
 
       {/* ───── MISSION & VISION ───── */}
-      <section className="bg-card px-4 py-24 md:py-32">
+      <section className="bg-card px-4 py-16 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
@@ -199,7 +199,7 @@ const About = () => {
       </section>
 
       {/* ───── OUR VALUES ───── */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="px-4 py-16 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
