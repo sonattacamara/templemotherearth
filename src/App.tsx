@@ -26,6 +26,8 @@ import ValentinesDay from "./pages/ValentinesDay";
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
 import VeteransTransformation from "./pages/VeteransTransformation";
+import DonationSuccess from "./pages/DonationSuccess";
+import DonationCanceled from "./pages/DonationCanceled";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 
@@ -62,6 +64,8 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
             <Route path="/veterans-transformation-program" element={<VeteransTransformation />} />
+            <Route path="/donation-success" element={<DonationSuccess />} />
+            <Route path="/donation-canceled" element={<DonationCanceled />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
