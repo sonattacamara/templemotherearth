@@ -648,7 +648,7 @@ const VeteransTransformation = () => {
           </motion.div>
           <motion.div variants={fadeUp} className="mt-8">
             <a
-              href="https://www.paypal.com/donate?token=NXLlyiujSJagIrl9uk8qrPC1eutuXlYi84XbzMEIMVb1EasE5b-TxfSz6XcEwmtr_Bk0lXZ-X6ph23t-qhv_9x_2VK8&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9"
+              href="https://www.paypal.com/donate?campaign_id=R877JP38Q4F8S"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-lg bg-[#556B2F] px-8 py-4 font-body font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg"
