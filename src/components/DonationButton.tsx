@@ -5,6 +5,12 @@ import { Leaf, X, HandHeart, Heart, Shield, Sparkles } from "lucide-react";
 
 const PAYPAL_DONATE_URL = "https://www.paypal.com/donate?token=NXLlyiujSJagIrl9uk8qrPC1eutuXlYi84XbzMEIMVb1EasE5b-TxfSz6XcEwmtr_Bk0lXZ-X6ph23t-qhv_9x_2VK8&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9";
 
+const VETERAN_PAYPAL_URL = "https://www.paypal.com/donate?campaign_id=R877JP38Q4F8S";
+
+const urlMap: Record<string, string> = {
+  "/veterans-transformation-program": VETERAN_PAYPAL_URL,
+};
+
 const labelMap: Record<string, { label: string; icon: typeof Leaf }> = {
   "/": { label: "Offerings & Tithes", icon: Leaf },
   "/about": { label: "Sustain the Temple", icon: Heart },
@@ -28,6 +34,7 @@ const DonationButton = () => {
   const [showDonation, setShowDonation] = useState(false);
   const location = useLocation();
   const { label, icon: Icon } = labelMap[location.pathname] || defaultLabel;
+  const donateUrl = urlMap[location.pathname] || PAYPAL_DONATE_URL;
 
   return (
     <>
@@ -62,7 +69,7 @@ const DonationButton = () => {
                 help us continue to serve our community, preserve Earth Medicine traditions, and grow our sacred family.
               </p>
               <a
-                href={PAYPAL_DONATE_URL}
+                href={donateUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-block rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
