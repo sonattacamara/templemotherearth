@@ -23,7 +23,10 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
   const dobDate = new Date(dob);
   if (isNaN(dobDate.getTime())) return "Invalid date of birth";
   const age = (Date.now() - dobDate.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
-  if (age < 18) return "Must be at least 18 years old";
+  if (age < 21) return "Must be at least 21 years old";
+
+  const cityState = String(data.cityState || "").trim();
+  if (cityState.length < 2 || cityState.length > 200) return "City/state of residence is required";
 
   // Step 2: Emergency contact
   const emergencyName = String(data.emergencyName || "").trim();
@@ -47,7 +50,8 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
 
   // Step 5: Required agreements
   if (!data.rfrAgreement || !data.liabilityWaiver || !data.truthfulness || 
-      !data.confidentiality || !data.preparationCompliance || !data.emergencyAuth) {
+      !data.confidentiality || !data.preparationCompliance || !data.emergencyAuth ||
+      !data.communityGuidelines || !data.eligibilityStatement || !data.ageConfirmation21) {
     return "All agreements must be accepted";
   }
 
