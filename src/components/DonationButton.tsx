@@ -7,8 +7,11 @@ const PAYPAL_DONATE_URL = "https://www.paypal.com/donate?token=NXLlyiujSJagIrl9u
 
 const VETERAN_PAYPAL_URL = "https://www.paypal.com/donate?campaign_id=R877JP38Q4F8S";
 
+const CEREMONY_PAYPAL_URL = "https://www.paypal.com/donate?campaign_id=733MK2T3UK5LS";
+
 const urlMap: Record<string, string> = {
   "/veterans-transformation-program": VETERAN_PAYPAL_URL,
+  "/ceremony-intake": CEREMONY_PAYPAL_URL,
 };
 
 interface PageConfig {
