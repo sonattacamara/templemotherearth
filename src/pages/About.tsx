@@ -14,6 +14,7 @@ import facilitatorSpencer from "@/assets/facilitator-spencer.jpg";
 import facilitatorSamira from "@/assets/facilitator-samira.jpg";
 import facilitatorGeorge from "@/assets/facilitator-george-new.jpg";
 import facilitatorJala from "@/assets/facilitator-jala.jpg";
+import facilitatorRama from "@/assets/facilitator-rama.jpg";
 import communityAbout from "@/assets/community-about.jpg";
 import logo from "@/assets/logo.png";
 
@@ -613,6 +614,12 @@ const About = () => {
                 role: "Creator of Metamorphosis Mind 801 · Sound Healing Practitioner",
                 img: facilitatorJala,
                 desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, immersions, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
+              },
+              {
+                name: "Rama",
+                role: "Healer, Facilitator & Transpersonal Psychology Scholar",
+                img: facilitatorRama,
+                desc: "Equity and inclusion are at the core of Rama's work. Guided by Traditional Amazonian wisdom, he has trained with respected indigenous masters from the Shipibo-Conibo and Quechua-Lamista lineages, thoughtfully integrating ancient teachings into modern healing practices. A Volunteer Supervisor with the Fireside Project and MAPS MDMA-assisted Therapy Training graduate, Rama is currently pursuing a Ph.D. in transpersonal psychology. Through his work, he empowers others to heal, awaken, and step fully into their highest potential.",
               },
             ].map((person) => (
               <motion.div
