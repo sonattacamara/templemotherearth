@@ -970,6 +970,7 @@ const VeteransTransformation = () => {
         headline="Send a Veteran Into Healing"
         body="Your contribution directly funds a veteran's transformation weekend — covering ceremony, lodging, meals, and aftercare. Every dollar goes to a warrior who gave everything for this country."
         buttonLabel="Sponsor a Veteran"
+        donateUrl="https://www.paypal.com/donate?campaign_id=R877JP38Q4F8S"
       />
 
       {/* JSON-LD Structured Data */}

@@ -15,6 +15,8 @@ export interface DonationCTAProps {
   buttonLabel?: string;
   /** Visual variant */
   variant?: "light" | "dark" | "olive";
+  /** Override default PayPal donation URL */
+  donateUrl?: string;
 }
 
 const variantStyles = {
@@ -53,7 +55,9 @@ const DonationCTA = ({
   body,
   buttonLabel = "Give Today",
   variant = "light",
+  donateUrl,
 }: DonationCTAProps) => {
+  const finalUrl = donateUrl || PAYPAL_DONATE_URL;
   const [showDisclosure, setShowDisclosure] = useState(false);
   const s = variantStyles[variant];
 
@@ -78,7 +82,7 @@ const DonationCTA = ({
 
         <div className="mt-8 flex flex-col items-center gap-3">
           <a
-            href={PAYPAL_DONATE_URL}
+            href={finalUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 rounded-xl px-8 py-3.5 font-body text-sm font-semibold shadow-lg transition ${s.button}`}
