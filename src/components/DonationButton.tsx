@@ -12,6 +12,7 @@ const CEREMONY_PAYPAL_URL = "https://www.paypal.com/donate?campaign_id=733MK2T3U
 const urlMap: Record<string, string> = {
   "/veterans-transformation-program": VETERAN_PAYPAL_URL,
   "/ceremony-intake": CEREMONY_PAYPAL_URL,
+  "/donate/ceremony": CEREMONY_PAYPAL_URL,
 };
 
 interface PageConfig {
@@ -29,6 +30,7 @@ const pageConfig: Record<string, PageConfig> = {
   "/membership": { label: "Plant a Seed", icon: Sparkles, modalHeading: "Plant a Seed of Growth", modalBody: "Your offering nurtures the Temple's membership community, funding sacred gatherings and educational resources for our growing family.", modalButton: "Plant a Seed" },
   "/sponsor": { label: "Give Today", icon: HandHeart, modalHeading: "Give Today", modalBody: "Your generous sponsorship fuels the Temple's programs, ceremonies, and community outreach. Every contribution makes a difference.", modalButton: "Give Today" },
   "/ceremony-intake": { label: "Sow Into Healing", icon: Heart, modalHeading: "Sow Into Healing", modalBody: "Your gift helps fund ceremony scholarships for those who cannot afford the journey on their own. You are planting seeds of transformation.", modalButton: "Sow Into Healing" },
+  "/donate/ceremony": { label: "Gift a Journey", icon: Heart, modalHeading: "Gift a Journey", modalBody: "Your gift helps fund ceremony scholarships for those who cannot afford the journey on their own. You are planting seeds of transformation.", modalButton: "Gift a Journey" },
   "/volunteer": { label: "Give Back", icon: HandHeart, modalHeading: "Give Back to the Temple", modalBody: "Your financial offering complements the gift of your time, helping sustain the sacred space where volunteers serve.", modalButton: "Give Back" },
   "/contact": { label: "Support Our Mission", icon: Heart, modalHeading: "Support Our Mission", modalBody: "Your tax-deductible contribution helps us continue serving our community and preserving Earth Medicine traditions.", modalButton: "Support Our Mission" },
   "/retreats-inquiry": { label: "Fuel the Journey", icon: Sparkles, modalHeading: "Fuel the Journey", modalBody: "Your offering helps fund immersion experiences and scholarship programs for those called to deeper healing.", modalButton: "Fuel the Journey" },

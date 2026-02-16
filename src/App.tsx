@@ -28,6 +28,7 @@ import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
 import VeteransTransformation from "./pages/VeteransTransformation";
 import DonationSuccess from "./pages/DonationSuccess";
 import DonationCanceled from "./pages/DonationCanceled";
+import CeremonyDonate from "./pages/CeremonyDonate";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 
@@ -66,6 +67,7 @@ const App = () => (
             <Route path="/veterans-transformation-program" element={<VeteransTransformation />} />
             <Route path="/donation-success" element={<DonationSuccess />} />
             <Route path="/donation-canceled" element={<DonationCanceled />} />
+            <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
