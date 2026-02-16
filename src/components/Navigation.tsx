@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 import logo from "@/assets/logo.png";
+
+const EXTERNAL_PORTAL = "https://integration.templemotherearth.org/auth";
 
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
@@ -11,10 +14,13 @@ const navLinks = [
   { label: "Community", href: "/#community", isRoute: false },
 ];
 
-
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { user } = useAuth();
+
+  const portalHref = user ? "/portal" : EXTERNAL_PORTAL;
+  const portalIsExternal = !user;
 
   const renderNavLink = (link: typeof navLinks[0], className: string, onClick?: () => void) => {
     if (link.isRoute) {
@@ -43,6 +49,27 @@ const Navigation = () => {
     );
   };
 
+  const PortalLink = ({ className, onClick }: { className: string; onClick?: () => void }) => {
+    if (portalIsExternal) {
+      return (
+        <a
+          href={EXTERNAL_PORTAL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClick}
+          className={className}
+        >
+          Integration Portal
+        </a>
+      );
+    }
+    return (
+      <Link to="/portal" onClick={onClick} className={className}>
+        Integration Portal
+      </Link>
+    );
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md border-b border-primary/20">
       <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-3 md:px-8">
@@ -59,12 +86,9 @@ const Navigation = () => {
             renderNavLink(link, "font-body text-sm text-primary-foreground/70 hover:text-primary transition-colors duration-200")
           )}
 
-          <Link
-            to="/portal"
+          <PortalLink
             className="rounded-lg bg-secondary px-4 py-2 font-body text-sm font-semibold text-secondary-foreground transition hover:bg-primary hover:text-primary-foreground"
-          >
-            Member Login
-          </Link>
+          />
           <Link
             to="/ceremony-intake"
             className="rounded-lg bg-primary px-4 py-2 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
@@ -102,13 +126,10 @@ const Navigation = () => {
             )
           )}
 
-          <Link
-            to="/portal"
-            onClick={() => setOpen(false)}
+          <PortalLink
             className="block font-body text-base text-primary-foreground/80 hover:text-primary transition-colors"
-          >
-            Member Login
-          </Link>
+            onClick={() => setOpen(false)}
+          />
           <Link
             to="/ceremony-intake"
             onClick={() => setOpen(false)}

@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import { useAuth } from "@/hooks/useAuth";
 import PortalAuthForm from "@/components/portal/PortalAuthForm";
-import PortalHeader from "@/components/portal/PortalHeader";
+import PortalQuickAccess from "@/components/portal/PortalQuickAccess";
 import PortalHowItWorks from "@/components/portal/PortalHowItWorks";
 import PortalToolsGrid from "@/components/portal/PortalToolsGrid";
 import PortalPathway from "@/components/portal/PortalPathway";
@@ -26,7 +26,7 @@ const MemberPortal = () => {
     return (
       <div className="min-h-screen bg-background">
         <Navigation />
-        <PortalHeader />
+        <PortalQuickAccess />
         <PortalHowItWorks />
         <PortalToolsGrid />
         <PortalPathway />
