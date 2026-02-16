@@ -2,7 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   BookOpen, Calendar, Shield, Heart, MessageCircle, Star,
-  ArrowRight, ExternalLink,
+  ArrowRight, ExternalLink, Smartphone,
 } from "lucide-react";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -114,6 +114,49 @@ const PortalToolsGrid = () => (
           </motion.div>
         ))}
       </div>
+
+      {/* Install on Phone instruction */}
+      <motion.div variants={fadeUp} className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
+        <div className="flex items-start gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
+            <Smartphone className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h3 className="font-display text-base font-semibold text-foreground">
+              Add the Integration Portal to Your Phone
+            </h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Access your daily tools instantly — no app store needed.
+            </p>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-xl border border-border bg-card p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">iPhone (Safari)</p>
+                <ol className="space-y-1.5 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">1.</span> Open <a href="https://integration.templemotherearth.org/auth" className="text-primary underline" target="_blank" rel="noopener noreferrer">integration.templemotherearth.org</a> in Safari</li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">2.</span> Tap the <strong className="text-foreground">Share</strong> button (square with arrow)</li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">3.</span> Scroll down and tap <strong className="text-foreground">"Add to Home Screen"</strong></li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">4.</span> Tap <strong className="text-foreground">"Add"</strong> — done!</li>
+                </ol>
+              </div>
+
+              <div className="rounded-xl border border-border bg-card p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Android (Chrome)</p>
+                <ol className="space-y-1.5 text-sm text-muted-foreground">
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">1.</span> Open <a href="https://integration.templemotherearth.org/auth" className="text-primary underline" target="_blank" rel="noopener noreferrer">integration.templemotherearth.org</a> in Chrome</li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">2.</span> Tap the <strong className="text-foreground">three-dot menu</strong> (top right)</li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">3.</span> Tap <strong className="text-foreground">"Add to Home screen"</strong></li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">4.</span> Tap <strong className="text-foreground">"Add"</strong> — done!</li>
+                </ol>
+              </div>
+            </div>
+
+            <p className="mt-4 text-xs text-muted-foreground">
+              Once added, the portal opens like a native app — full screen, fast, and always at your fingertips. 🙏
+            </p>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   </section>
 );
