@@ -184,7 +184,7 @@ const GoogleReviewsWidget = () => {
       </div>
 
       {/* Leave a review on Google CTA */}
-      <motion.div variants={fadeUp} className="mt-10 flex justify-center">
+      <motion.div variants={fadeUp} className="mt-10 flex flex-wrap items-center justify-center gap-4">
         <a
           href="https://www.google.com/search?newwindow=1&sca_esv=06faacce940c986e&rlz=1C5AJCO_enUS1200US1201&sxsrf=ANbL-n5H64gCyqp_8kwjThHtatPyFj9mJA:1771123156801&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQZdqYy5vjml0waax1nkNalfy6Vc0WUFl0oieZgIQ3lF9w_G8Ask2th5JyCqMdsOettVShT2V45zC8nPoWtLSiFmLHzelbwOgitq8c_L2BnnJbcTmA%3D%3D&q=Temple+Mother+Earth+Reviews&sa=X&ved=2ahUKEwjxgfX0u9qSAxW3L1kFHYxEGnYQ0bkNegQIOhAH&biw=1581&bih=886"
           target="_blank"
@@ -193,6 +193,15 @@ const GoogleReviewsWidget = () => {
         >
           <Star className="h-4 w-4" />
           Leave a Google Review
+        </a>
+        <a
+          href="https://www.google.com/search?newwindow=1&sca_esv=06faacce940c986e&rlz=1C5AJCO_enUS1200US1201&sxsrf=ANbL-n5H64gCyqp_8kwjThHtatPyFj9mJA:1771123156801&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQZdqYy5vjml0waax1nkNalfy6Vc0WUFl0oieZgIQ3lF9w_G8Ask2th5JyCqMdsOettVShT2V45zC8nPoWtLSiFmLHzelbwOgitq8c_L2BnnJbcTmA%3D%3D&q=Temple+Mother+Earth+Reviews&sa=X&ved=2ahUKEwjxgfX0u9qSAxW3L1kFHYxEGnYQ0bkNegQIOhAH&biw=1581&bih=886"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl border border-border px-8 py-3.5 font-body text-sm font-semibold text-card-foreground transition hover:bg-muted"
+        >
+          <ExternalLink className="h-4 w-4" />
+          View All Google Reviews
         </a>
       </motion.div>
     </div>
