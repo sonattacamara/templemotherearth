@@ -948,6 +948,7 @@ const CeremonyIntake = () => {
         headline="Help Someone Else Experience Healing"
         body="If you would like to donate so that someone who may not have the financial means can experience the transformative power of sacred ceremony, your generous contribution makes that possible."
         buttonLabel="Gift a Journey"
+        donateUrl="https://www.paypal.com/donate?campaign_id=733MK2T3UK5LS"
       />
 
       <EventbriteCTA />
