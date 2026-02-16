@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { motion, type Easing } from "framer-motion";
 import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -675,7 +676,7 @@ const Index = () => {
             <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
               Philosophy, preparation guidance, pathway maps, and invitations — delivered with intention to your inbox.
             </p>
-            <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); const form = e.target as HTMLFormElement; const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value; if (email) { fetch("https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, source: "temple_transmissions" }) }).then(() => { form.reset(); alert("Welcome! You've been added to Temple Transmissions."); }).catch(() => { alert("Something went wrong. Please try again."); }); } }}>
+            <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); const form = e.target as HTMLFormElement; const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value; if (email) { supabase.functions.invoke("submit-newsletter", { body: { email } }).then(({ error }) => { if (error) throw error; form.reset(); alert("Welcome! You've been added to Temple Transmissions."); }).catch(() => { alert("Something went wrong. Please try again."); }); } }}>
               <input
                 type="email"
                 placeholder="Your email address"

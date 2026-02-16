@@ -1,11 +1,23 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+const ALLOWED_ORIGINS = [
+  "https://templemotherearth.lovable.app",
+  "https://templemotherearth.org",
+  "http://localhost:8080",
+  "http://localhost:5173",
+];
+
+const getCorsHeaders = (req: Request) => {
+  const origin = req.headers.get("origin") || "";
+  return {
+    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  };
 };
 
 serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -16,7 +28,6 @@ serve(async (req) => {
       throw new Error("GOOGLE_PLACES_API_KEY is not configured");
     }
 
-    // Dynamically find the Place ID using Find Place endpoint
     const findUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Temple+Mother+Earth&inputtype=textquery&fields=place_id&locationbias=circle:50000@38.85,-76.93&key=${apiKey}`;
     const findRes = await fetch(findUrl);
     const findData = await findRes.json();
@@ -28,7 +39,6 @@ serve(async (req) => {
     const placeId = findData.candidates[0].place_id;
     console.log("Resolved Place ID:", placeId);
 
-    // Use Places API (New) for place details with reviews
     const url = `https://places.googleapis.com/v1/places/${placeId}?fields=displayName,rating,userRatingCount,reviews&key=${apiKey}`;
 
     const response = await fetch(url, {
@@ -38,7 +48,6 @@ serve(async (req) => {
     });
 
     if (!response.ok) {
-      // Fallback to legacy API
       const legacyUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&key=${apiKey}`;
       const legacyResponse = await fetch(legacyUrl);
       const legacyData = await legacyResponse.json();

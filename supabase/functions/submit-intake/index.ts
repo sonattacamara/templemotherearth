@@ -1,15 +1,24 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+const ALLOWED_ORIGINS = [
+  "https://templemotherearth.lovable.app",
+  "https://templemotherearth.org",
+  "http://localhost:8080",
+  "http://localhost:5173",
+];
+
+const getCorsHeaders = (req: Request) => {
+  const origin = req.headers.get("origin") || "";
+  return {
+    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  };
 };
 
 const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1";
 
 // Server-side validation
 const validateIntakeData = (data: Record<string, unknown>): string | null => {
-  // Step 1: Basic info
   const fullName = String(data.fullName || "").trim();
   if (fullName.length < 2 || fullName.length > 100) return "Invalid name";
 
@@ -28,7 +37,6 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
   const cityState = String(data.cityState || "").trim();
   if (cityState.length < 2 || cityState.length > 200) return "City/state of residence is required";
 
-  // Step 2: Emergency contact
   const emergencyName = String(data.emergencyName || "").trim();
   if (emergencyName.length < 2 || emergencyName.length > 100) return "Invalid emergency contact name";
 
@@ -38,7 +46,6 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
   const emergencyRelation = String(data.emergencyRelation || "").trim();
   if (!emergencyRelation) return "Emergency contact relationship is required";
 
-  // Step 3: Ceremony info
   const ceremonyType = String(data.ceremonyType || "").trim();
   if (!ceremonyType) return "Ceremony type is required";
 
@@ -48,14 +55,12 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
   const intentions = String(data.intentions || "").trim();
   if (intentions.length < 10 || intentions.length > 2000) return "Intentions must be 10-2000 characters";
 
-  // Step 5: Required agreements
   if (!data.rfrAgreement || !data.liabilityWaiver || !data.truthfulness || 
       !data.confidentiality || !data.preparationCompliance || !data.emergencyAuth ||
       !data.communityGuidelines || !data.eligibilityStatement || !data.ageConfirmation21) {
     return "All agreements must be accepted";
   }
 
-  // Sanitize all string fields to prevent injection
   for (const key of Object.keys(data)) {
     if (typeof data[key] === "string") {
       const val = data[key] as string;
@@ -63,10 +68,12 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
     }
   }
 
-  return null; // valid
+  return null;
 };
 
 serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -74,7 +81,6 @@ serve(async (req) => {
   try {
     const body = await req.json();
     
-    // Server-side validation
     const validationError = validateIntakeData(body);
     if (validationError) {
       return new Response(JSON.stringify({ error: validationError }), {
@@ -83,7 +89,6 @@ serve(async (req) => {
       });
     }
 
-    // Forward validated data to GHL webhook
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

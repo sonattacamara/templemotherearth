@@ -1,12 +1,24 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+const ALLOWED_ORIGINS = [
+  "https://templemotherearth.lovable.app",
+  "https://templemotherearth.org",
+  "http://localhost:8080",
+  "http://localhost:5173",
+];
+
+const getCorsHeaders = (req: Request) => {
+  const origin = req.headers.get("origin") || "";
+  return {
+    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  };
 };
 
 serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -34,7 +46,6 @@ serve(async (req) => {
     }
 
     if (req.method === "GET" && action === "dashboard") {
-      // Verify auth - only allow authenticated users
       const authHeader = req.headers.get("Authorization");
       if (!authHeader) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
@@ -48,7 +59,6 @@ serve(async (req) => {
       since.setDate(since.getDate() - days);
       const sinceStr = since.toISOString();
 
-      // Page views by path
       const { data: pageViews } = await supabase
         .from("page_views")
         .select("path, created_at")
@@ -56,7 +66,6 @@ serve(async (req) => {
         .order("created_at", { ascending: false })
         .limit(1000);
 
-      // Form submissions
       const { data: formSubs } = await supabase
         .from("form_submissions")
         .select("form_name, metadata, created_at")
@@ -64,20 +73,17 @@ serve(async (req) => {
         .order("created_at", { ascending: false })
         .limit(1000);
 
-      // Aggregate page views by path
       const pathCounts: Record<string, number> = {};
       (pageViews || []).forEach((pv: any) => {
         pathCounts[pv.path] = (pathCounts[pv.path] || 0) + 1;
       });
 
-      // Aggregate by day
       const dailyCounts: Record<string, number> = {};
       (pageViews || []).forEach((pv: any) => {
         const day = pv.created_at.split("T")[0];
         dailyCounts[day] = (dailyCounts[day] || 0) + 1;
       });
 
-      // Aggregate form submissions by name
       const formCounts: Record<string, number> = {};
       (formSubs || []).forEach((fs: any) => {
         formCounts[fs.form_name] = (formCounts[fs.form_name] || 0) + 1;
