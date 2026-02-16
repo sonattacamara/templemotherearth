@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { motion, type Easing } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import SEOHead from "@/components/SEOHead";
@@ -499,6 +499,27 @@ const Index = () => {
                 </div>
               ))}
             </div>
+
+            {/* Crisis Resource Callout */}
+            <div className="mt-8 rounded-xl border border-destructive/30 bg-destructive/10 p-5 text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Phone className="h-4 w-4 text-destructive" />
+                <p className="font-display text-sm font-bold text-primary-foreground">
+                  If you or someone you know is in crisis
+                </p>
+              </div>
+              <p className="text-sm text-primary-foreground/80">
+                <a href="tel:988" className="font-bold text-primary-foreground underline">Call or text 988</a>
+                {" · "}
+                <span>Text HOME to <a href="sms:741741?body=HOME" className="font-bold text-primary-foreground underline">741741</a></span>
+                {" · "}
+                <span>Veterans: <a href="tel:988" className="font-bold text-primary-foreground underline">988, press 1</a></span>
+              </p>
+              <p className="mt-1 text-xs text-primary-foreground/60">
+                Free, confidential, 24/7 support. You are not alone.
+              </p>
+            </div>
+
             <p className="mt-8 text-center text-lg text-primary-foreground/75 italic">
               You don't have to have it all figured out. You just have to be willing to show up.
               <br />

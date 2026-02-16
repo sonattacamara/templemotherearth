@@ -32,6 +32,7 @@ import CeremonyDonate from "./pages/CeremonyDonate";
 import ResetPassword from "./pages/ResetPassword";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
+import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <DonationButton />
+          <CrisisFloatingButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
