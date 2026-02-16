@@ -20,17 +20,20 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const CONTRAINDICATED_MEDICATIONS = [
   { key: "ssri", label: "SSRIs (Selective Serotonin Reuptake Inhibitors) — e.g., Prozac, Zoloft, Lexapro, Celexa, Paxil" },
   { key: "snri", label: "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors) — e.g., Effexor, Cymbalta, Pristiq" },
-  { key: "maoi", label: "MAOIs (Monoamine Oxidase Inhibitors) — e.g., Nardil, Parnate, Marplan, Selegiline" },
-  { key: "tca", label: "Tricyclic Antidepressants — e.g., Amitriptyline, Nortriptyline, Imipramine" },
+  { key: "maoi", label: "MAOIs (Monoamine Oxidase Inhibitors) — e.g., Nardil, Parnate, Marplan, Selegiline, Emsam" },
+  { key: "ndri", label: "NDRIs (Norepinephrine-Dopamine Reuptake Inhibitors) — e.g., Wellbutrin, Bupropion, Focalin" },
+  { key: "tca", label: "Tricyclic Antidepressants — e.g., Amitriptyline, Nortriptyline, Imipramine, Anafranil" },
   { key: "lithium", label: "Lithium (mood stabilizer)" },
   { key: "benzodiazepines", label: "Benzodiazepines — e.g., Xanax, Klonopin, Ativan, Valium" },
   { key: "antipsychotics", label: "Antipsychotics — e.g., Seroquel, Risperdal, Zyprexa, Abilify" },
-  { key: "stimulants", label: "Stimulants / ADHD Medications — e.g., Adderall, Ritalin, Vyvanse" },
+  { key: "stimulants", label: "Stimulants / ADHD Medications — e.g., Adderall, Ritalin, Vyvanse, Concerta" },
   { key: "bloodThinners", label: "Blood Thinners / Anticoagulants — e.g., Warfarin, Heparin, Eliquis" },
   { key: "bloodPressureMeds", label: "Blood Pressure Medications — e.g., Lisinopril, Metoprolol, Amlodipine" },
-  { key: "opioids", label: "Opioids / Pain Medications — e.g., Oxycodone, Hydrocodone, Tramadol, Morphine" },
+  { key: "opioids", label: "Opioids / Narcotic Pain Medications — e.g., Oxycodone, Vicodin, Codeine, Fentanyl, Methadone, Tramadol" },
   { key: "immunosuppressants", label: "Immunosuppressants — e.g., Methotrexate, Prednisone (long-term)" },
   { key: "sleepAids", label: "Sleep Medications — e.g., Ambien, Trazodone, Lunesta" },
+  { key: "asthmaInhaler", label: "Asthma Inhalers / Asthma Medications" },
+  { key: "lTryptophan", label: "L-Tryptophan supplements" },
   { key: "herbsSupplements", label: "5-HTP, St. John's Wort, or other serotonergic supplements" },
 ];
 
@@ -49,7 +52,8 @@ const MEDICAL_CONDITIONS = {
     "Schizophrenia or schizoaffective disorder", "Bipolar disorder", "History of psychosis",
     "Severe anxiety or panic disorder", "PTSD", "Active eating disorder", "Personality disorder diagnosis",
   ],
-  "Respiratory": ["Asthma", "Chronic respiratory condition", "Sleep apnea"],
+  "Respiratory": ["Asthma", "Severe asthma or emphysema", "Chronic respiratory condition", "Sleep apnea"],
+  "Digestive": ["Crohn's disease", "Irritable bowel syndrome (IBS)", "Ulcerative colitis", "Intestinal ulcers", "Surgery on digestive system in last 3 months"],
   "Immune & Other": [
     "Autoimmune disorder", "Cancer (active or in remission)", "HIV/AIDS", "Hepatitis", "Chronic pain condition",
   ],
@@ -82,8 +86,9 @@ const step1Schema = z.object({
   dob: z.string().min(1, "Date of birth is required").refine((val) => {
     const date = new Date(val);
     const age = (Date.now() - date.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
-    return age >= 18;
-  }, "You must be at least 18 years old"),
+    return age >= 21;
+  }, "You must be at least 21 years old to participate in sacred ceremonies"),
+  cityState: z.string().trim().min(2, "City/state of residence is required").max(200),
 });
 
 const step2Schema = z.object({
@@ -105,8 +110,10 @@ const CeremonyIntake = () => {
 
   const [formData, setFormData] = useState({
     fullName: "", email: "", phone: "", dob: "",
+    cityState: "", armedForcesStatus: "",
     emergencyName: "", emergencyPhone: "", emergencyRelation: "",
     ceremonyType: "", experienceLevel: "", intentions: "",
+    referralName: "", currentChallenges: "", traumaTriggers: "", questionsOrConcerns: "",
     // Medications
     takingMedications: "", medicationsList: "",
     takingPsychMeds: "", psychMedsList: "",
@@ -116,6 +123,11 @@ const CeremonyIntake = () => {
     ...Object.fromEntries(CONTRAINDICATED_MEDICATIONS.map(m => [m.key, false])),
     medicationDetails: "",
     currentMedications: "",
+    canStopMedications: "", canStopMedicationsDetails: "",
+    // Terminal condition
+    terminalCondition: "", terminalConditionDetails: "",
+    // Tobacco/nicotine
+    tobaccoAdverseReaction: "",
     // Medical conditions
     selectedConditions: [] as string[],
     conditionDetails: "",
@@ -160,6 +172,7 @@ const CeremonyIntake = () => {
     // Waivers
     rfrAgreement: false, liabilityWaiver: false, truthfulness: false,
     confidentiality: false, preparationCompliance: false, emergencyAuth: false,
+    communityGuidelines: false, eligibilityStatement: false, ageConfirmation21: false,
   });
 
   const update = (field: string, value: any) => setFormData((prev) => ({ ...prev, [field]: value }));
@@ -195,7 +208,7 @@ const CeremonyIntake = () => {
     setValidationErrors({});
     try {
       if (step === 1) {
-        step1Schema.parse({ fullName: formData.fullName, email: formData.email, phone: formData.phone, dob: formData.dob });
+        step1Schema.parse({ fullName: formData.fullName, email: formData.email, phone: formData.phone, dob: formData.dob, cityState: formData.cityState });
       } else if (step === 2) {
         step2Schema.parse({ emergencyName: formData.emergencyName, emergencyPhone: formData.emergencyPhone, emergencyRelation: formData.emergencyRelation });
       } else if (step === 3) {
@@ -213,11 +226,11 @@ const CeremonyIntake = () => {
   };
 
   const canProceed = () => {
-    if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob;
+    if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob && formData.cityState;
     if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
     if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions;
     if (step === 4) return !totalFlagged;
-    if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth;
+    if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21;
     return false;
   };
 
@@ -348,10 +361,11 @@ const CeremonyIntake = () => {
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Personal Information</h3>
               {[
-                { field: "fullName", label: "Full Legal Name *", type: "text", placeholder: "Full Legal Name" },
+                { field: "fullName", label: "Full Legal Name (as it appears on ID) *", type: "text", placeholder: "First and Last Name" },
                 { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
-                { field: "phone", label: "Phone Number *", type: "tel", placeholder: "Phone Number" },
+                { field: "phone", label: "Phone Number * (e.g. 555-555-5555)", type: "tel", placeholder: "Phone Number" },
                 { field: "dob", label: "Date of Birth *", type: "date", placeholder: "" },
+                { field: "cityState", label: "City and State of Residence (enter country if outside the USA) *", type: "text", placeholder: "e.g. Washington, DC" },
               ].map(f => (
                 <div key={f.field}>
                   <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
@@ -359,6 +373,19 @@ const CeremonyIntake = () => {
                   {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
                 </div>
               ))}
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-foreground">Are you serving in the armed forces? (If no, skip)</label>
+                {["Active Duty", "Veteran", "Retired"].map((opt) => (
+                  <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
+                    <input type="radio" name="armedForcesStatus" className={radioClass} checked={formData.armedForcesStatus === opt} onChange={() => update("armedForcesStatus", opt)} />
+                    {opt}
+                  </label>
+                ))}
+                {formData.armedForcesStatus && (
+                  <button type="button" onClick={() => update("armedForcesStatus", "")} className="text-xs text-muted-foreground underline mt-1">Clear selection</button>
+                )}
+              </div>
             </div>
           )}
 
@@ -426,6 +453,26 @@ const CeremonyIntake = () => {
                 <label className="mb-1 block text-sm font-medium text-foreground">What are your intentions for this ceremony? *</label>
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Share what you hope to receive, release, or explore..." value={formData.intentions} onChange={(e) => update("intentions", e.target.value)} required />
               </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-foreground">How did you find us? Please state full name if you were referred by someone. *</label>
+                <input className={inputClass} placeholder="e.g. Instagram, Friend referral — Jane Smith" value={formData.referralName} onChange={(e) => update("referralName", e.target.value)} />
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-foreground">Can you tell us about the current challenges you're navigating in your life?</label>
+                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Optional — share what feels right" value={formData.currentChallenges} onChange={(e) => update("currentChallenges", e.target.value)} />
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-foreground">Would you like to inform us of any triggers related to past trauma?</label>
+                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Optional — this helps our facilitators hold space for you safely" value={formData.traumaTriggers} onChange={(e) => update("traumaTriggers", e.target.value)} />
+              </div>
+
+              <div>
+                <label className="mb-1 block text-sm font-medium text-foreground">Do you have any questions or concerns?</label>
+                <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Optional" value={formData.questionsOrConcerns} onChange={(e) => update("questionsOrConcerns", e.target.value)} />
+              </div>
             </div>
           )}
 
@@ -477,6 +524,14 @@ const CeremonyIntake = () => {
                   {radioYesNo("takingImmunosuppressants", formData.takingImmunosuppressants)}
                 </div>
 
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you able to stop all medication and supplementation prior to the ceremony? Please consult your treating physician before stopping any medication. *</label>
+                  {radioYesNo("canStopMedications", formData.canStopMedications)}
+                  {formData.canStopMedications === "no" && (
+                    <textarea className={inputClass + " mt-2 min-h-[60px] resize-none"} placeholder="Please explain in detail which medications you cannot stop and why" value={formData.canStopMedicationsDetails} onChange={(e) => update("canStopMedicationsDetails", e.target.value)} />
+                  )}
+                </div>
+
                 {/* Contraindicated Medications Checklist */}
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Contraindicated Medications — Are you currently taking any of the following?</label>
@@ -515,6 +570,20 @@ const CeremonyIntake = () => {
                   </div>
                 ))}
                 <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Please describe any conditions you checked above or any other medical conditions not listed (optional)" value={formData.conditionDetails} onChange={(e) => update("conditionDetails", e.target.value)} />
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you currently have a diagnosis of a terminal medical condition? *</label>
+                  {radioYesNo("terminalCondition", formData.terminalCondition)}
+                  {formData.terminalCondition === "yes" && (
+                    <textarea className={inputClass + " mt-2 min-h-[60px] resize-none"} placeholder="Please explain in detail" value={formData.terminalConditionDetails} onChange={(e) => update("terminalConditionDetails", e.target.value)} />
+                  )}
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have an adverse reaction to tobacco and/or nicotine? *</label>
+                  <p className="text-xs text-muted-foreground">This is important for Kambo and Hapé ceremonies which involve sacred tobacco</p>
+                  {radioYesNo("tobaccoAdverseReaction", formData.tobaccoAdverseReaction)}
+                </div>
               </div>
 
               {/* Mental Health History */}
@@ -828,6 +897,31 @@ const CeremonyIntake = () => {
                   <li>• We believe in radical inclusivity — welcoming all seekers regardless of race, gender, background, or status — while remaining rooted in the BIPOC community that founded this temple.</li>
                 </ul>
               </div>
+              {/* Eligibility Statement */}
+              <div className="rounded-lg border-2 border-accent bg-accent/10 p-4 text-sm text-muted-foreground space-y-3">
+                <p className="font-semibold text-foreground">Eligibility Statement</p>
+                <p>If any of the following apply to you, you are <strong>not eligible</strong> to participate in a sacred healing ceremony:</p>
+                <p>You are under the age of 21, in your first trimester of pregnancy, you have a history of psychosis and/or schizophrenia, have been diagnosed with a personality disorder, current active medicated bipolar disorder, history of seizures or diagnosis of epilepsy, current anorexia and/or bulimia, experienced a stroke or embolism, severe asthma or emphysema, a known cardiac illness, uncontrolled high blood pressure, Crohn's disease, irritable bowel syndrome, ulcerative colitis, or intestinal ulcers, surgery within the last three months on any part of your digestive system or liver disease.</p>
+                <p>For health and safety reasons you cannot attend a sacred healing ceremony if at the time of the retreat you are taking SSRIs, recreational drugs, have taken any medication or supplements 24 hours prior to the ceremony.</p>
+                <p className="font-medium text-foreground">All of your responses are entirely confidential.</p>
+              </div>
+
+              {/* Community Guidelines */}
+              <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
+                <p className="font-semibold text-foreground">Community Guidelines and Rules</p>
+                <ol className="list-decimal list-inside space-y-2">
+                  <li><strong>Respect and Consent:</strong> Respect the boundaries, privacy, and personal space of others. Obtain consent before touching or engaging in any physical contact.</li>
+                  <li><strong>Confidentiality:</strong> Maintain confidentiality regarding personal experiences shared during the ceremony. Do not disclose or discuss the experiences of others without their explicit permission.</li>
+                  <li><strong>Non-Judgment:</strong> Refrain from judging or criticizing the experiences, beliefs, or emotions of fellow participants. Everyone's journey is unique.</li>
+                  <li><strong>Safety:</strong> Prioritize safety at all times. Follow the instructions provided by the facilitators and guides. If you feel physically or emotionally overwhelmed, seek assistance from the facilitators immediately.</li>
+                  <li><strong>Sobriety:</strong> Abstain from alcohol, recreational drugs, and any substances that may interfere with the ceremony experience. Follow any dietary restrictions or guidelines provided.</li>
+                  <li><strong>Ceremony Etiquette:</strong> Maintain a respectful and quiet atmosphere during the ceremony. Refrain from unnecessary talking, loud noises, or disruptive behavior.</li>
+                  <li><strong>Ceremony Preparation:</strong> Follow any pre-ceremony guidelines provided, such as avoiding certain foods or medications. Prepare yourself mentally and emotionally.</li>
+                  <li><strong>Integration:</strong> Understand that the real work begins after the ceremony. Respect the integration process by allowing yourself time and space to reflect on and integrate your experiences.</li>
+                  <li><strong>Environmental Stewardship:</strong> Respect the natural surroundings of the ceremonial space. Minimize your impact on the environment.</li>
+                  <li><strong>Personal Responsibility:</strong> Take responsibility for your own well-being and experiences. Participating in a ceremony is a personal choice, and you are responsible for your own decisions and actions.</li>
+                </ol>
+              </div>
 
               {/* RFRA & Liability */}
               <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
@@ -855,9 +949,12 @@ const CeremonyIntake = () => {
 
               {/* All checkboxes */}
               {[
+                { key: "eligibilityStatement", label: "I acknowledge the eligibility statement above. I confirm that none of the listed disqualifying conditions apply to me. *" },
+                { key: "communityGuidelines", label: "I have read, understand, and agree to the Community Guidelines and Rules. *" },
+                { key: "ageConfirmation21", label: "I confirm that I am 21 years of age or older. *" },
                 { key: "rfrAgreement", label: "I have read and affirm the Statement of Beliefs. I acknowledge the RFRA declaration and understand the religious context of these ceremonies. *" },
                 { key: "liabilityWaiver", label: "I voluntarily assume all risks and release Temple Mother Earth from liability. I understand that my healing journey is my own responsibility. *" },
-                { key: "truthfulness", label: "I certify that all information provided is truthful and complete. I understand that withholding medical information could endanger my life. *" },
+                { key: "truthfulness", label: "I affirm that all information provided is accurate to the best of my knowledge. I understand that withholding information relevant to my well-being could potentially harm both myself and other participants. *" },
                 { key: "confidentiality", label: "I agree to maintain the confidentiality of all ceremony participants, facilitators, and ceremony details. *" },
                 { key: "preparationCompliance", label: "I confirm I have followed all pre-ceremony preparation guidelines provided to me. *" },
                 { key: "emergencyAuth", label: "I authorize emergency medical services to be contacted on my behalf if needed during ceremony. *" },
