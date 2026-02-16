@@ -13,6 +13,9 @@ const urlMap: Record<string, string> = {
   "/veterans-transformation-program": VETERAN_PAYPAL_URL,
   "/ceremony-intake": CEREMONY_PAYPAL_URL,
   "/donate/ceremony": CEREMONY_PAYPAL_URL,
+  "/retreats-inquiry": CEREMONY_PAYPAL_URL,
+  "/traveling-ceremonies": CEREMONY_PAYPAL_URL,
+  "/private-ceremonies": CEREMONY_PAYPAL_URL,
 };
 
 interface PageConfig {
