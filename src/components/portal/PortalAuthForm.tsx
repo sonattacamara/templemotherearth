@@ -46,7 +46,7 @@ const PortalAuthForm = () => {
     } else {
       const { error } = await signUp(email, password, fullName);
       if (error) setError(error.message);
-      else setSuccess("Please check your email to verify your account before logging in.");
+      else setSuccess("Account created! You're being signed in…");
     }
     setSubmitting(false);
   };
