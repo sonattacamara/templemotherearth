@@ -4,6 +4,8 @@ import { ArrowRight, Eye, EyeOff } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
+import PasswordRequirements from "@/components/PasswordRequirements";
+import { isPasswordValid } from "@/lib/passwordValidation";
 import { useAuth } from "@/hooks/useAuth";
 import logo from "@/assets/logo.png";
 
@@ -18,7 +20,9 @@ const MemberAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [email, setEmail] = useState("");
+  const [confirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -27,7 +31,8 @@ const MemberAuth = () => {
   const { signIn, signUp, resetPassword } = useAuth();
   const navigate = useNavigate();
 
-  const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
+  const inputClass =
+    "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,6 +46,24 @@ const MemberAuth = () => {
       else setSuccess("Password reset email sent. Check your inbox and follow the link to reset your password.");
       setLoading(false);
       return;
+    }
+
+    if (!isLogin) {
+      if (email !== confirmEmail) {
+        setError("Email addresses do not match. Please confirm your email.");
+        setLoading(false);
+        return;
+      }
+      if (!isPasswordValid(password)) {
+        setError("Please meet all password requirements.");
+        setLoading(false);
+        return;
+      }
+      if (password !== confirmPassword) {
+        setError("Passwords do not match.");
+        setLoading(false);
+        return;
+      }
     }
 
     if (isLogin) {
@@ -61,16 +84,18 @@ const MemberAuth = () => {
     setLoading(false);
   };
 
+  const resetState = () => {
+    setError("");
+    setSuccess("");
+    setConfirmEmail("");
+    setConfirmPassword("");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <section className="flex min-h-screen items-center justify-center px-4 pt-20">
-        <motion.div
-          className="w-full max-w-md"
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-        >
+        <motion.div className="w-full max-w-md" initial="hidden" animate="visible" variants={stagger}>
           <motion.div variants={fadeUp} className="text-center mb-8">
             <img src={logo} alt="Temple Mother Earth" className="mx-auto h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/20" />
             <h1 className="mt-4 font-display text-2xl font-bold text-foreground">
@@ -83,22 +108,20 @@ const MemberAuth = () => {
 
           <motion.form variants={fadeUp} className="space-y-4 rounded-2xl border border-border bg-card p-8" onSubmit={handleSubmit}>
             {!isLogin && !isForgotPassword && (
-              <input
-                className={inputClass}
-                placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                required
-              />
+              <input className={inputClass} placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
             )}
-            <input
-              className={inputClass}
-              type="email"
-              placeholder="Email Address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+
+            <input className={inputClass} type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
+
+            {!isLogin && !isForgotPassword && (
+              <div>
+                <input className={inputClass} type="email" placeholder="Confirm Email Address" value={confirmEmail} onChange={(e) => setConfirmEmail(e.target.value)} required />
+                {confirmEmail && email !== confirmEmail && (
+                  <p className="text-xs text-destructive mt-1">Email addresses do not match.</p>
+                )}
+              </div>
+            )}
+
             {!isForgotPassword && (
               <div className="relative">
                 <input
@@ -108,37 +131,43 @@ const MemberAuth = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  minLength={6}
+                  minLength={8}
                 />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                >
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
               </div>
             )}
 
+            {!isLogin && !isForgotPassword && (
+              <>
+                <input
+                  className={inputClass}
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
+                  minLength={8}
+                />
+                {confirmPassword && password !== confirmPassword && (
+                  <p className="text-xs text-destructive mt-1">Passwords do not match.</p>
+                )}
+                <PasswordRequirements password={password} />
+              </>
+            )}
+
             {error && <p className="text-sm text-destructive">{error}</p>}
             {success && <p className="text-sm text-primary">{success}</p>}
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50"
-            >
+            <button type="submit" disabled={loading} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
               {loading ? "Please wait..." : isForgotPassword ? "Send Reset Link" : isLogin ? "Sign In" : "Create Account"}
               <ArrowRight className="h-4 w-4" />
             </button>
 
             {isLogin && !isForgotPassword && (
               <p className="text-center">
-                <button
-                  type="button"
-                  onClick={() => { setIsForgotPassword(true); setError(""); setSuccess(""); }}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
+                <button type="button" onClick={() => { setIsForgotPassword(true); resetState(); }} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Forgot your password?
                 </button>
               </p>
@@ -146,22 +175,14 @@ const MemberAuth = () => {
 
             {isForgotPassword ? (
               <p className="text-center">
-                <button
-                  type="button"
-                  onClick={() => { setIsForgotPassword(false); setError(""); setSuccess(""); }}
-                  className="text-sm text-primary hover:underline font-semibold"
-                >
+                <button type="button" onClick={() => { setIsForgotPassword(false); resetState(); }} className="text-sm text-primary hover:underline font-semibold">
                   ← Back to Sign In
                 </button>
               </p>
             ) : (
               <p className="text-center text-sm text-muted-foreground">
                 {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-                <button
-                  type="button"
-                  onClick={() => { setIsLogin(!isLogin); setError(""); setSuccess(""); }}
-                  className="text-primary hover:underline font-semibold"
-                >
+                <button type="button" onClick={() => { setIsLogin(!isLogin); resetState(); }} className="text-primary hover:underline font-semibold">
                   {isLogin ? "Sign Up" : "Sign In"}
                 </button>
               </p>
