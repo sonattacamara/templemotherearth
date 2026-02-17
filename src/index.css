@@ -118,3 +118,14 @@ div[data-elfsight-app-lazy] + a[href*="elfsight"] {
   width: 0 !important;
   max-height: 0 !important;
 }
+
+/* Safe area for sticky mobile bar */
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 72px;
+  }
+}

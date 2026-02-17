@@ -191,6 +191,80 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ── FIND YOUR PATH — Quick Engagement ── */}
+      <section className="bg-card px-4 py-12 md:py-16">
+        <motion.div
+          className="mx-auto max-w-5xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-xs font-bold uppercase tracking-[0.3em] text-primary mb-6">
+            Find Your Path
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="text-center font-display text-2xl font-bold text-card-foreground md:text-3xl mb-10">
+            Where Are You on Your Journey?
+          </motion.h2>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                icon: Eye,
+                title: "I'm Curious",
+                desc: "New to Earth Medicine? Learn what to expect and how we hold space.",
+                link: "/about",
+                cta: "Learn About Us",
+              },
+              {
+                icon: Compass,
+                title: "I'm Ready to Begin",
+                desc: "Complete our sacred intake to start your healing journey.",
+                link: "/ceremony-intake",
+                cta: "Begin Intake",
+              },
+              {
+                icon: Star,
+                title: "I'm a Returning Soul",
+                desc: "Access your portal, upcoming events, and community resources.",
+                link: "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477",
+                cta: "Enter the Sacred Space",
+                isExternal: true,
+              },
+            ].map((item) => (
+              <motion.div key={item.title} variants={fadeUp}>
+                {item.isExternal ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-2xl border border-border bg-background p-6 text-center transition-all hover:shadow-lg hover:border-primary/30"
+                  >
+                    <item.icon className="mx-auto h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                    <h3 className="font-display text-lg font-semibold text-foreground">{item.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                      {item.cta} <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </a>
+                ) : (
+                  <Link
+                    to={item.link}
+                    className="group block rounded-2xl border border-border bg-background p-6 text-center transition-all hover:shadow-lg hover:border-primary/30"
+                  >
+                    <item.icon className="mx-auto h-8 w-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                    <h3 className="font-display text-lg font-semibold text-foreground">{item.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                      {item.cta} <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </Link>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
