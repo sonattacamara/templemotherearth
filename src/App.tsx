@@ -34,6 +34,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
+import MobileStickyBar from "@/components/MobileStickyBar";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <SeasonalBanner />
           <DonationButton />
           <CrisisFloatingButton />
+          <MobileStickyBar />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
