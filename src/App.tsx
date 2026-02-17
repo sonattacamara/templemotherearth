@@ -33,6 +33,7 @@ import ResetPassword from "./pages/ResetPassword";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
+import SeasonalBanner from "@/components/SeasonalBanner";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <SeasonalBanner />
           <DonationButton />
           <CrisisFloatingButton />
           <Routes>
