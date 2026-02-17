@@ -67,7 +67,7 @@ const About = () => {
           className="mx-auto max-w-4xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={stagger}
         >
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
@@ -408,7 +408,7 @@ const About = () => {
           className="mx-auto max-w-4xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
         >
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
@@ -450,7 +450,7 @@ const About = () => {
           className="mx-auto max-w-5xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
         >
           <motion.div variants={fadeUp} className="text-center">
@@ -566,7 +566,7 @@ const About = () => {
           className="mx-auto max-w-5xl"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05 }}
           variants={stagger}
         >
           <motion.div variants={fadeUp} className="text-center">
