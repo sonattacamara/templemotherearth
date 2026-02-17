@@ -11,7 +11,7 @@ import immersionAerial from "@/assets/immersion-aerial.jpg";
 import immersionHammock from "@/assets/immersion-hammock.jpg";
 import immersionPalapa from "@/assets/immersion-palapa.jpg";
 import immersionInterior from "@/assets/immersion-interior.jpg";
-import immersionSunset from "@/assets/immersion-sunset.jpg";
+
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -99,19 +99,18 @@ const RetreatsInquiry = () => {
             <motion.h3 variants={fadeUp} className="text-center font-display text-xl font-bold text-foreground mb-6">
               ✨ Your Sacred Space Awaits
             </motion.h3>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 grid-cols-2">
               {[
-                { src: immersionAerial, alt: "Aerial view of the beachfront retreat property in Sayulita, Mexico", caption: "Clifftop Sanctuary" },
-                { src: immersionHammock, alt: "Hammock overlooking turquoise ocean from the palapa", caption: "Ocean Views" },
-                { src: immersionPalapa, alt: "Palapa structure on the beach in Sayulita", caption: "Beachfront Palapa" },
-                { src: immersionInterior, alt: "Luxurious bohemian interior of the retreat villa", caption: "Sacred Living Space" },
-                { src: immersionSunset, alt: "Stunning sunset dining under the palapa roof", caption: "Sunset Dining" },
+                { src: immersionAerial, alt: "Aerial view of the clifftop retreat property overlooking the Pacific Ocean in Sayulita, Mexico", caption: "Clifftop Sanctuary" },
+                { src: immersionHammock, alt: "Lush coastal hillside and beach in Sayulita, Mexico", caption: "Coastal Paradise" },
+                { src: immersionInterior, alt: "Hammock with turquoise ocean views from the retreat property", caption: "Ocean Views" },
+                { src: immersionPalapa, alt: "Thatched-roof palapa on the rocky beachfront in Sayulita", caption: "Beachfront Palapa" },
               ].map((img, i) => (
-                <motion.div key={i} variants={fadeUp} className={`relative overflow-hidden rounded-2xl group ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}>
+                <motion.div key={i} variants={fadeUp} className="relative overflow-hidden rounded-2xl group">
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${i === 0 ? "h-full min-h-[300px]" : "h-56"}`}
+                    className="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
                   <p className="absolute bottom-3 left-4 text-sm font-semibold text-primary-foreground">{img.caption}</p>
