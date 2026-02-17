@@ -101,7 +101,7 @@ const DonationButton = () => {
 
       <button
         onClick={() => setShowDonation(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl"
+        className="fixed bottom-24 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80 hover:shadow-xl lg:bottom-6"
       >
         <config.icon className="h-4 w-4" />
         {config.label}
