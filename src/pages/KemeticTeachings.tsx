@@ -391,24 +391,24 @@ const KemeticTeachings = () => {
 
           <motion.div variants={fadeUp} className="mt-10 text-center">
             <blockquote className="font-body text-primary-foreground/70 italic max-w-2xl mx-auto border-l-4 border-secondary/40 pl-6 text-left">
-              They were worshipped as a triune. Our Kemetic church is based upon the trinity of Ptah–Sekhmet–IamHetep.
+              They were worshipped as a triune. Our Kemetic temple is based upon the trinity of Ptah–Sekhmet–IamHetep.
             </blockquote>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* ── SECTION F: JOIN OUR CHURCH ── */}
+      {/* ── SECTION F: JOIN OUR TEMPLE ── */}
       <section id="join-us" className="py-16 md:py-24 bg-foreground">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={stagger} className="mx-auto max-w-3xl px-4 text-center">
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold mb-6 text-secondary">
-            Join Our Church
+            Join Our Temple
           </motion.h2>
           <motion.div variants={fadeUp} className="font-body text-primary-foreground/80 leading-relaxed space-y-4 mb-8">
             <p>
-              We have church service weekly Saturday nights 9 PM – 12 AM to express gratitude and joy for the week. Followed by a sunrise service at the beach to merge with divine.
+              We have sacred service weekly Saturday nights 9 PM – 12 AM to express gratitude and joy for the week. Followed by a sunrise service at the beach to merge with divine.
             </p>
             <p>
-              When you join the church, you can avail yourself of the healing services of our ordained priests and priestesses.
+              When you join the temple, you can avail yourself of the healing services of our ordained priests and priestesses.
             </p>
           </motion.div>
           <motion.div variants={fadeUp}>
