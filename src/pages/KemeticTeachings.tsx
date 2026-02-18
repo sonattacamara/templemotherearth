@@ -323,9 +323,6 @@ const KemeticTeachings = () => {
       {/* ── SECTION: SEARCHABLE KEMETIC INDEX ── */}
       <section id="kemetic-index" className="py-16 md:py-24 bg-foreground/95">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={stagger} className="mx-auto max-w-4xl px-4">
-          <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
-            Kemetic Teachings Index
-          </motion.h2>
           <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/60 mb-8">
             Search and explore the sacred terms, concepts, and practices of Kemet
           </motion.p>
@@ -431,12 +428,13 @@ const KemeticTeachings = () => {
             Tap each affirmation to reveal what happens when it is not true
           </motion.p>
 
-          <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {affirmations.map((a, i) => (
+          {/* First row: 3 cards */}
+          <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
+            {affirmations.slice(0, 3).map((a, i) => (
               <motion.div
                 key={i}
                 onClick={() => toggleCard(i)}
-                className="cursor-pointer perspective-1000"
+                className="cursor-pointer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -455,13 +453,50 @@ const KemeticTeachings = () => {
                       <div>
                         <Eye className="mb-3 text-red-400" size={20} />
                         <p className="font-body text-sm text-primary-foreground/80 leading-relaxed">{a.isfet}</p>
-                        <p className="font-body text-xs text-red-400/80 mt-3 italic">This creates Isfet — chaos or disharmony.</p>
+                        <p className="font-body text-xs text-red-400/80 mt-3 italic">This creates Isfet, chaos or disharmony.</p>
                       </div>
                     )}
                   </div>
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Second row: 2 cards centered */}
+          <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto">
+            {affirmations.slice(3).map((a, idx) => {
+              const i = idx + 3;
+              return (
+                <motion.div
+                  key={i}
+                  onClick={() => toggleCard(i)}
+                  className="cursor-pointer"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className={`relative rounded-xl border min-h-[180px] transition-all duration-500 ${
+                    flippedCards.has(i)
+                      ? "bg-gradient-to-br from-red-900/30 to-foreground border-red-600/30"
+                      : "bg-gradient-to-br from-secondary/10 to-foreground border-secondary/30 shadow-lg shadow-secondary/5"
+                  }`}>
+                    <div className="p-6 flex flex-col justify-center min-h-[180px]">
+                      {!flippedCards.has(i) ? (
+                        <div className="text-center">
+                          <Sparkles className="mx-auto mb-3 text-secondary" size={24} />
+                          <p className="font-display text-xl font-semibold text-primary-foreground">✦ {a.text}</p>
+                        </div>
+                      ) : (
+                        <div>
+                          <Eye className="mb-3 text-red-400" size={20} />
+                          <p className="font-body text-sm text-primary-foreground/80 leading-relaxed">{a.isfet}</p>
+                          <p className="font-body text-xs text-red-400/80 mt-3 italic">This creates Isfet, chaos or disharmony.</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </motion.div>
       </section>
