@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, type Easing } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Sun, Moon, Sunrise, Sunset, Heart, Shield, Flame, Droplets, Sparkles, Eye, ExternalLink, Bell, ArrowRight, Send, Instagram, Globe, BookOpen } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
@@ -206,11 +207,65 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-6">
             <p>
-              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, healer, and provider. Our ancestors in Kemet (ancient Egypt) understood that the Earth herself is medicine, and that true healing begins when we align ourselves with her rhythms, her seasons, and her wisdom.
+              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, healer, and provider. Our ancestors in{" "}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Kemet</strong>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
+                  <p className="font-body text-sm"><strong>Kemet</strong> — meaning "The Black Land" — is the original name for ancient Egypt, referring to the rich, dark soil along the Nile that sustained all life.</p>
+                </TooltipContent>
+              </Tooltip>{" "}
+              (ancient Egypt) understood that the Earth herself is medicine, and that true healing begins when we align ourselves with her rhythms, her seasons, and her wisdom.
             </p>
             <p>
-              Kemetism is the spiritual practice of awareness, connection, and elevation through these Kemetic spiritual principles — creating the balance of <strong className="text-secondary">Maat</strong> with the guidance of <strong className="text-secondary">Tehuti</strong> and the transformative power of <strong className="text-secondary">Khepera</strong> restoring the Sun each morning. We follow the Sun. We honor the Earth. We remember what our ancestors always knew.
+              Kemetism is the spiritual practice of awareness, connection, and elevation through these Kemetic spiritual principles — creating the balance of{" "}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Maat</strong>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
+                  <p className="font-body text-sm"><strong>Maat</strong> — the divine principle of truth, justice, balance, and cosmic order. Living in Maat means aligning your actions with universal harmony.</p>
+                </TooltipContent>
+              </Tooltip>{" "}
+              with the guidance of{" "}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Tehuti</strong>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
+                  <p className="font-body text-sm"><strong>Tehuti</strong> (also known as Thoth) — the Neter of wisdom, writing, and sacred knowledge. Tehuti guides the mind toward higher understanding and spiritual intelligence.</p>
+                </TooltipContent>
+              </Tooltip>{" "}
+              and the transformative power of{" "}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Khepera</strong>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
+                  <p className="font-body text-sm"><strong>Khepera</strong> — the sacred scarab, the Neter of transformation and rebirth. Khepera pushes the Sun into being each morning, symbolizing perpetual renewal and the power to become.</p>
+                </TooltipContent>
+              </Tooltip>{" "}
+              restoring the Sun each morning. We follow the Sun. We honor the Earth. We remember what our ancestors always knew.
             </p>
+          </motion.div>
+
+          {/* Body-as-Temple teaching */}
+          <motion.div variants={fadeUp} className="mt-10 rounded-2xl border border-secondary/20 bg-secondary/5 p-6 md:p-8">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-secondary mb-4 text-center">
+              You Are the Temple
+            </h3>
+            <div className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-4">
+              <p>
+                In Kemetic philosophy, the body is not separate from the sacred — <em>your body is the first temple</em>. Every breath, every heartbeat, every cell carries the divine spark of creation. When you care for your body — through nourishment, movement, rest, and ceremony — you are not merely maintaining flesh. You are honoring the vessel through which the divine experiences itself.
+              </p>
+              <p>
+                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong> — the original sanctuary that holds everything we need for healing, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight — these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
+              </p>
+              <p className="text-secondary/90 italic text-center">
+                When you heal the temple within, you deepen your connection to the divine. When you honor the Earth, you honor the source from which all temples arise.
+              </p>
+            </div>
           </motion.div>
         </motion.div>
       </section>
