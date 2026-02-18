@@ -30,7 +30,7 @@ const CrisisFloatingButton = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-20 right-4 z-40 flex flex-col items-end gap-3 lg:bottom-6 lg:right-6">
+    <div className="fixed bottom-6 left-6 z-40 hidden lg:flex flex-col items-start gap-3">
       <AnimatePresence>
         {open && (
           <motion.div
