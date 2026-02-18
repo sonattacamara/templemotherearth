@@ -500,9 +500,6 @@ const KemeticTeachings = () => {
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
             Upcoming Teachings
           </motion.h2>
-          <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/50 text-sm mb-12">
-            This page grows as Dr. Love produces more content
-          </motion.p>
           <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {futureTeachings.map((title, i) => (
               <div
