@@ -509,10 +509,26 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="space-y-6 font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed">
             <blockquote className="border-l-4 border-secondary/40 pl-6 italic text-primary-foreground/70">
-              Chaos in behavior creates depletion, or accumulation and stagnation that we call <strong className="text-secondary">Wekhedu</strong>.
+              Chaos in behavior creates depletion, or accumulation and stagnation that we call{" "}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Wekhedu</strong>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
+                  <p className="font-body text-sm"><strong>Wekhedu</strong> is the Kemetic term for stagnation, depletion, or toxic accumulation in the body caused by chaotic behavior and unmet needs. It blocks the natural flow of life force.</p>
+                </TooltipContent>
+              </Tooltip>.
             </blockquote>
             <p>
-              Wekhedu prevents the free flow of blood and oxygen through the energy pathways we call <strong className="text-secondary">Metou</strong>.
+              Wekhedu prevents the free flow of blood and oxygen through the energy pathways we call{" "}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Metou</strong>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
+                  <p className="font-body text-sm"><strong>Metou</strong> are the energy pathways of the body described by IamHetep over 4,500 years ago. They are the predecessors of what Chinese medicine calls meridians, carrying life force throughout the physical temple.</p>
+                </TooltipContent>
+              </Tooltip>.
             </p>
             <p>
               IamHetep — first god of medicine and a real person, architect of the first pyramid — described these Metou during the Third Dynasty, approximately 4500 BC.
