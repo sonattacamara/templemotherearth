@@ -15,7 +15,7 @@ import facilitatorSamira from "@/assets/facilitator-samira.jpg";
 import facilitatorGeorge from "@/assets/facilitator-george-new.jpg";
 import facilitatorJala from "@/assets/facilitator-jala.jpg";
 import facilitatorRama from "@/assets/facilitator-rama.jpg";
-import communityAbout from "@/assets/community-about.jpg";
+import communityCircleGrass from "@/assets/community-circle-grass.jpg";
 import logo from "@/assets/logo.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -434,8 +434,8 @@ const About = () => {
             </motion.div>
             <motion.div variants={fadeUp}>
               <img
-                src={communityAbout}
-                alt="Temple Mother Earth community circle"
+                src={communityCircleGrass}
+                alt="Community circle of men sitting together on the grass at Temple Mother Earth"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
@@ -560,6 +560,79 @@ const About = () => {
         </motion.div>
       </section>
 
+      {/* ───── HIGH PRIEST ───── */}
+      <section className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-5xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
+          variants={stagger}
+        >
+          <motion.div variants={fadeUp} className="text-center">
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              Spiritual Leadership
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
+              Meet the High Priest of Temple Mother Earth
+            </h2>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-16 grid gap-12 md:grid-cols-2 md:items-center">
+            <div className="relative">
+              <img
+                src={facilitatorGeorge}
+                alt="Dr. George Xavier Love, Jr. — High Priest of Temple Mother Earth"
+                className="rounded-2xl shadow-xl h-[500px] w-full object-cover object-top"
+                loading="lazy"
+              />
+              <div className="absolute -bottom-4 -right-4 rounded-xl bg-primary px-6 py-3 shadow-lg">
+                <p className="font-display text-sm font-bold text-primary-foreground">High Priest</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl font-bold text-foreground md:text-3xl">
+                Dr. George Xavier Love, Jr.
+              </h3>
+              <p className="mt-2 font-body text-sm font-semibold uppercase tracking-wider text-primary">
+                Spiritual Elder · High Priest · Taoist Qigong Master
+              </p>
+              <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  A shaman, priest, physician, and scholar warrior, Dr. George Xavier Love, Jr. serves as the High Priest of Temple Mother Earth — the spiritual anchor who carries the Kemetic and Taoist wisdom traditions that guide our community's deepest work.
+                </p>
+                <p>
+                  Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides individuals toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.
+                </p>
+                <p>
+                  As the keeper of our Kemetic teachings, Dr. Love illuminates the ancient Egyptian wisdom that forms the theological backbone of Temple Mother Earth — teaching the Body as Temple philosophy, the sacred significance of Kemet as the birthplace of humanity and medicine, and the Kemetic Trinity that connects us to our divine origins.
+                </p>
+                <p>
+                  His presence in ceremony is both grounding and transcendent, holding space with a depth of knowledge that spans thousands of years of wisdom traditions.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  to="/kemetic-teachings"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
+                >
+                  <BookOpen className="h-4 w-4" />
+                  Explore His Teachings
+                </Link>
+                <a
+                  href="https://loveqigong.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3 font-body text-sm font-semibold text-foreground transition hover:bg-card"
+                >
+                  loveqigong.com →
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* ───── FACILITATORS ───── */}
       <section className="px-4 py-24 md:py-32">
         <motion.div
@@ -601,13 +674,6 @@ const About = () => {
                 role: "Herbalist & Earth Medicine Keeper",
                 img: facilitatorSamira,
                 desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding individuals toward holistic healing through the Earth's abundant pharmacy.",
-              },
-              {
-                name: "Dr. George Xavier Love, Jr.",
-                role: "Spiritual Elder & High Priest",
-                img: facilitatorGeorge,
-                desc: "A shaman, priest, physician, and scholar warrior, Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides individuals toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.",
-                website: "https://loveqigong.com",
               },
               {
                 name: "Jala Johnson",
