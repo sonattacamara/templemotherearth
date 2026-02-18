@@ -4,6 +4,7 @@ import { BookOpen, Play, Shield, Heart, Leaf, AlertTriangle, ChevronDown, Chevro
 import { Link, Navigate } from "react-router-dom";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -177,6 +178,7 @@ const MemberEducation = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Kambo Education" description="Learn about Kambo frog medicine — benefits, preparation, safety guidelines, and what to expect during ceremony at Temple Mother Earth." path="/member/education" />
       <Navigation />
 
       {/* Header */}

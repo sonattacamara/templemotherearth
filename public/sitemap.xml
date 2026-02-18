@@ -16,5 +16,6 @@
   <url><loc>https://templemotherearth.org/join-facilitator</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://templemotherearth.org/sponsor</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://templemotherearth.org/donate/ceremony</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/valentines-day</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://templemotherearth.org/conduct</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
 </urlset>

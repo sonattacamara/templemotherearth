@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
+import SEOHead from "@/components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 import PortalAuthForm from "@/components/portal/PortalAuthForm";
 import PortalQuickAccess from "@/components/portal/PortalQuickAccess";
@@ -14,6 +15,7 @@ const MemberPortal = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
+        <SEOHead title="Member Portal" description="Access your Temple Mother Earth member portal for ceremony bookings, community resources, and spiritual tools." path="/portal" />
         <Navigation />
         <div className="flex min-h-screen items-center justify-center pt-20">
           <p className="text-muted-foreground">Loading…</p>
@@ -25,6 +27,7 @@ const MemberPortal = () => {
   if (user) {
     return (
       <div className="min-h-screen bg-background">
+        <SEOHead title="Member Portal" description="Access your Temple Mother Earth member portal for ceremony bookings, community resources, and spiritual tools." path="/portal" />
         <Navigation />
         <PortalQuickAccess />
         <PortalHowItWorks />
@@ -45,6 +48,7 @@ const MemberPortal = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Member Portal" description="Access your Temple Mother Earth member portal for ceremony bookings, community resources, and spiritual tools." path="/portal" />
       <Navigation />
       <PortalAuthForm />
       <EventbriteCTA />

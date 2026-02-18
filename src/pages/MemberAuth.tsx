@@ -4,6 +4,7 @@ import { ArrowRight, Eye, EyeOff } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
 import PasswordRequirements from "@/components/PasswordRequirements";
 import { isPasswordValid } from "@/lib/passwordValidation";
 import { useAuth } from "@/hooks/useAuth";
@@ -93,6 +94,7 @@ const MemberAuth = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Member Sign In" description="Sign in or create your Temple Mother Earth member account to access ceremonies, education, and community resources." path="/member/auth" />
       <Navigation />
       <section className="flex min-h-screen items-center justify-center px-4 pt-20">
         <motion.div className="w-full max-w-md" initial="hidden" animate="visible" variants={stagger}>

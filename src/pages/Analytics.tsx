@@ -4,6 +4,7 @@ import { ArrowLeft, BarChart3, FileText, Eye, TrendingUp, Globe, Smartphone, Mon
 import { Link, Navigate } from "react-router-dom";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from "recharts";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -164,6 +165,7 @@ const Analytics = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Analytics Dashboard" description="Temple Mother Earth site analytics and performance metrics." path="/analytics" />
       <Navigation />
       <div className="pt-24 pb-16 px-4">
         <motion.div className="mx-auto max-w-6xl" initial="hidden" animate="visible" variants={stagger}>

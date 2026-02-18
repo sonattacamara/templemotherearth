@@ -1,9 +1,11 @@
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
 
 const NotFound = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEOHead title="Page Not Found" description="The page you are looking for does not exist. Return to Temple Mother Earth's homepage." />
       <Navigation />
 
       <div className="flex flex-1 items-center justify-center px-4 pt-20">
