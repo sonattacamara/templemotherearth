@@ -320,42 +320,6 @@ const KemeticTeachings = () => {
         </motion.div>
       </section>
 
-      {/* ── SECTION: SEARCHABLE KEMETIC INDEX ── */}
-      <section id="kemetic-index" className="py-16 md:py-24 bg-foreground/95">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={stagger} className="mx-auto max-w-4xl px-4">
-          <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/60 mb-8">
-            Search and explore the sacred terms, concepts, and practices of Kemet
-          </motion.p>
-          <motion.div variants={fadeUp} className="mb-8">
-            <div className="relative max-w-md mx-auto">
-              <BookOpen className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-secondary/60" />
-              <Input
-                type="text"
-                placeholder="Search teachings..."
-                value={glossarySearch}
-                onChange={(e) => setGlossarySearch(e.target.value)}
-                className="pl-12 bg-foreground/50 border-secondary/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-secondary/50 rounded-xl h-12"
-              />
-            </div>
-          </motion.div>
-          <motion.div variants={fadeUp} className="grid gap-3 sm:grid-cols-2">
-            {filteredGlossary.map((item) => (
-              <div
-                key={item.term}
-                className="rounded-xl border border-secondary/15 bg-foreground/50 p-4 hover:border-secondary/30 transition-colors"
-              >
-                <h4 className="font-display text-lg font-bold text-secondary mb-1">{item.term}</h4>
-                <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">{item.meaning}</p>
-              </div>
-            ))}
-            {filteredGlossary.length === 0 && (
-              <p className="text-center text-primary-foreground/50 font-body col-span-2 py-8">
-                No teachings found for "{glossarySearch}". Try a different search term.
-              </p>
-            )}
-          </motion.div>
-        </motion.div>
-      </section>
 
       {/* ── SECTION B: DAILY PRACTICE — SOLAR CYCLE ── */}
       <section id="daily-cycle" className="py-16 md:py-24 bg-foreground">
