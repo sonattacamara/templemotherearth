@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, X, MessageCircle, Heart } from "lucide-react";
 
@@ -28,6 +29,10 @@ const resources = [
 
 const CrisisFloatingButton = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const allowedPaths = ["/", "/veterans-transformation-program"];
+  if (!allowedPaths.includes(location.pathname)) return null;
 
   return (
     <div className="fixed bottom-6 left-6 z-40 hidden lg:flex flex-col items-start gap-3">
