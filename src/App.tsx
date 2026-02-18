@@ -31,6 +31,7 @@ import DonationCanceled from "./pages/DonationCanceled";
 import CeremonyDonate from "./pages/CeremonyDonate";
 import ResetPassword from "./pages/ResetPassword";
 import KemeticTeachings from "./pages/KemeticTeachings";
+import WebhookChecklist from "./pages/WebhookChecklist";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
@@ -78,6 +79,7 @@ const App = () => (
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
+            <Route path="/webhook-checklist" element={<WebhookChecklist />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
