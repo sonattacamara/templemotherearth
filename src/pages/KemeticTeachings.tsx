@@ -119,6 +119,33 @@ const KemeticTeachings = () => {
   const [flippedTrinity, setFlippedTrinity] = useState<Set<number>>(new Set());
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [glossarySearch, setGlossarySearch] = useState("");
+
+  const kemeticGlossary = [
+    { term: "Ankh", meaning: "The key of life. The most recognized symbol of ancient Kemet, representing eternal life and the union of masculine and feminine energies." },
+    { term: "Maat", meaning: "The divine principle of truth, justice, balance, and cosmic order. To live in Maat is to align your actions with universal harmony." },
+    { term: "Tehuti", meaning: "The Neter of wisdom, writing, and sacred knowledge. Also known as Thoth. Tehuti guides the mind toward higher understanding." },
+    { term: "Khepera", meaning: "The sacred scarab, Neter of transformation and rebirth. Khepera pushes the Sun into being each morning, symbolizing perpetual renewal." },
+    { term: "Kemet", meaning: "Meaning 'The Black Land,' the original name for ancient Egypt, referring to the rich dark soil of the Nile valley that sustained all life." },
+    { term: "Neter / Neteru", meaning: "The divine forces of nature. Neteru (plural) are not 'gods' in the Western sense but expressions of the One Creator manifesting through nature." },
+    { term: "Amun Ra", meaning: "The hidden light made visible. Amun Ra represents the supreme creative force, the noonday Sun at full radiance and power." },
+    { term: "Atum", meaning: "The Neter of completion and the setting Sun. Atum represents the return to wholeness and the sacred pause before renewal." },
+    { term: "Sekhmet", meaning: "The lioness Neter of fierce healing, protection, and sacred rage. Sekhmet destroys what no longer serves so that new life can emerge." },
+    { term: "Ptah", meaning: "The Neter of creation and craftsmanship. Ptah speaks the world into existence through divine utterance, representing the power of intention and manifestation." },
+    { term: "IamHetep", meaning: "The ancient healer, architect, and sage. IamHetep (Imhotep) represents the integration of medicine, spirituality, and sacred knowledge." },
+    { term: "Metou", meaning: "The energy pathways of the body in Kemetic healing tradition. Similar to meridians, Metou channels carry life force through the physical temple." },
+    { term: "Ka", meaning: "The vital life force or spirit double. The Ka is the energetic body that survives physical death and connects you to the divine." },
+    { term: "Ba", meaning: "The soul or personality essence. The Ba travels between the physical and spiritual worlds, carrying your unique divine expression." },
+    { term: "Ankh Activation", meaning: "A sunrise practice of breathing, movement, and intention that activates the life force (Ankh) within your body temple at the start of each day." },
+    { term: "Hapé", meaning: "A sacred tobacco-based snuff used ceremonially for grounding, clearing, and opening the spiritual senses. Administered with prayer and intention." },
+    { term: "Sacred Earth Medicine", meaning: "Plant-based sacraments provided by Mother Earth for healing, transformation, and spiritual elevation. Used in ceremony with reverence and guidance." },
+  ];
+
+  const filteredGlossary = kemeticGlossary.filter(
+    (item) =>
+      item.term.toLowerCase().includes(glossarySearch.toLowerCase()) ||
+      item.meaning.toLowerCase().includes(glossarySearch.toLowerCase())
+  );
 
   useEffect(() => {
     const onScroll = () => {
@@ -213,7 +240,7 @@ const KemeticTeachings = () => {
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Kemet</strong>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
-                  <p className="font-body text-sm"><strong>Kemet</strong> — meaning "The Black Land" — is the original name for ancient Egypt, referring to the rich, dark soil along the Nile that sustained all life.</p>
+                  <p className="font-body text-sm"><strong>Kemet</strong>, meaning "The Black Land," is the original name for ancient Egypt, referring to the rich, dark soil along the Nile that sustained all life.</p>
                 </TooltipContent>
               </Tooltip>{" "}
               (ancient Egypt) understood that the Earth herself is medicine, and that true healing begins when we align ourselves with her rhythms, her seasons, and her wisdom.
@@ -225,7 +252,7 @@ const KemeticTeachings = () => {
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Maat</strong>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
-                  <p className="font-body text-sm"><strong>Maat</strong> — the divine principle of truth, justice, balance, and cosmic order. Living in Maat means aligning your actions with universal harmony.</p>
+                  <p className="font-body text-sm"><strong>Maat</strong> is the divine principle of truth, justice, balance, and cosmic order. Living in Maat means aligning your actions with universal harmony.</p>
                 </TooltipContent>
               </Tooltip>{" "}
               with the guidance of{" "}
@@ -234,7 +261,7 @@ const KemeticTeachings = () => {
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Tehuti</strong>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
-                  <p className="font-body text-sm"><strong>Tehuti</strong> (also known as Thoth) — the Neter of wisdom, writing, and sacred knowledge. Tehuti guides the mind toward higher understanding and spiritual intelligence.</p>
+                  <p className="font-body text-sm"><strong>Tehuti</strong> (also known as Thoth) is the Neter of wisdom, writing, and sacred knowledge. Tehuti guides the mind toward higher understanding and spiritual intelligence.</p>
                 </TooltipContent>
               </Tooltip>{" "}
               and the transformative power of{" "}
@@ -243,7 +270,7 @@ const KemeticTeachings = () => {
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Khepera</strong>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-xs bg-background border-secondary/30 text-foreground">
-                  <p className="font-body text-sm"><strong>Khepera</strong> — the sacred scarab, the Neter of transformation and rebirth. Khepera pushes the Sun into being each morning, symbolizing perpetual renewal and the power to become.</p>
+                  <p className="font-body text-sm"><strong>Khepera</strong> is the sacred scarab, the Neter of transformation and rebirth. Khepera pushes the Sun into being each morning, symbolizing perpetual renewal and the power to become.</p>
                 </TooltipContent>
               </Tooltip>{" "}
               restoring the Sun each morning. We follow the Sun. We honor the Earth. We remember what our ancestors always knew.
@@ -257,15 +284,78 @@ const KemeticTeachings = () => {
             </h3>
             <div className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-4">
               <p>
-                In Kemetic philosophy, the body is not separate from the sacred — <em>your body is the first temple</em>. Every breath, every heartbeat, every cell carries the divine spark of creation. When you care for your body — through nourishment, movement, rest, and ceremony — you are not merely maintaining flesh. You are honoring the vessel through which the divine experiences itself.
+                In Kemetic philosophy, the body is not separate from the sacred. <em>Your body is the first temple.</em> Every breath, every heartbeat, every cell carries the divine spark of creation. When you care for your body through nourishment, movement, rest, and ceremony, you are not merely maintaining flesh. You are honoring the vessel through which the divine experiences itself.
               </p>
               <p>
-                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong> — the original sanctuary that holds everything we need for healing, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight — these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
+                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong>, the original sanctuary that holds everything we need for healing, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight: these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
               </p>
               <p className="text-secondary/90 italic text-center">
                 When you heal the temple within, you deepen your connection to the divine. When you honor the Earth, you honor the source from which all temples arise.
               </p>
             </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* ── SECTION: CRADLE OF CIVILIZATION ── */}
+      <section id="cradle" className="py-16 md:py-24 bg-foreground">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger} className="mx-auto max-w-4xl px-4">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-8 text-secondary">
+            Kemet: The Cradle of Civilization
+          </motion.h2>
+          <motion.div variants={fadeUp} className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-6">
+            <p>
+              Long before the rise of Greece, Rome, or any modern empire, the land of <strong className="text-secondary">Kemet</strong> stood as the birthplace of human civilization. Nestled along the Nile River in northeast Africa, Kemet gave the world its first systems of writing, mathematics, medicine, architecture, astronomy, and spiritual philosophy. The pyramids of Giza, the temples of Luxor, and the great library of Alexandria were all born from Kemetic genius.
+            </p>
+            <p>
+              But Kemet's greatest contribution was not material. It was spiritual. The people of Kemet understood that humanity itself emerged from the Earth, that we are children of the soil, shaped by the same forces that move the rivers and turn the stars. They taught that the divine is not distant or separate but woven into every living thing. The Neteru, the divine forces of nature, are not gods on thrones; they are the intelligence within the wind, the water, the fire, and the earth beneath your feet.
+            </p>
+            <p>
+              Modern archaeology and genetic science continue to affirm what our ancestors always knew: Africa, and specifically the Nile Valley region, is the origin point of <em>Homo sapiens</em>. The oldest known human remains, the earliest evidence of organized spiritual practice, and the foundations of all world religions trace back to this sacred land. Every culture, every tradition, every prayer spoken on this planet has roots in the soil of Kemet.
+            </p>
+            <p>
+              At Temple Mother Earth, we do not study Kemet as ancient history. We <em>live</em> it. We practice the daily rituals, honor the Neteru, follow the solar cycle, and remember the truth that our ancestors encoded into stone and star: that the Earth is alive, that your body is sacred, and that healing is your birthright.
+            </p>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* ── SECTION: SEARCHABLE KEMETIC INDEX ── */}
+      <section id="kemetic-index" className="py-16 md:py-24 bg-foreground/95">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={stagger} className="mx-auto max-w-4xl px-4">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
+            Kemetic Teachings Index
+          </motion.h2>
+          <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/60 mb-8">
+            Search and explore the sacred terms, concepts, and practices of Kemet
+          </motion.p>
+          <motion.div variants={fadeUp} className="mb-8">
+            <div className="relative max-w-md mx-auto">
+              <BookOpen className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-secondary/60" />
+              <Input
+                type="text"
+                placeholder="Search teachings..."
+                value={glossarySearch}
+                onChange={(e) => setGlossarySearch(e.target.value)}
+                className="pl-12 bg-foreground/50 border-secondary/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-secondary/50 rounded-xl h-12"
+              />
+            </div>
+          </motion.div>
+          <motion.div variants={fadeUp} className="grid gap-3 sm:grid-cols-2">
+            {filteredGlossary.map((item) => (
+              <div
+                key={item.term}
+                className="rounded-xl border border-secondary/15 bg-foreground/50 p-4 hover:border-secondary/30 transition-colors"
+              >
+                <h4 className="font-display text-lg font-bold text-secondary mb-1">{item.term}</h4>
+                <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">{item.meaning}</p>
+              </div>
+            ))}
+            {filteredGlossary.length === 0 && (
+              <p className="text-center text-primary-foreground/50 font-body col-span-2 py-8">
+                No teachings found for "{glossarySearch}". Try a different search term.
+              </p>
+            )}
           </motion.div>
         </motion.div>
       </section>
