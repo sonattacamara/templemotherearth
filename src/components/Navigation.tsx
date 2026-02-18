@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Veterans", href: "/veterans-transformation-program", isRoute: true },
   { label: "Membership", href: "/membership", isRoute: true },
   { label: "Community", href: "/#community", isRoute: false },
+  { label: "Teachings", href: "/kemetic-teachings", isRoute: true },
 ];
 
 const Navigation = () => {
