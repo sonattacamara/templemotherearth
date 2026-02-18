@@ -500,6 +500,12 @@ const KemeticTeachings = () => {
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
             Upcoming Teachings
           </motion.h2>
+          <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/60 text-sm mb-4 max-w-2xl mx-auto">
+            New teachings are added as Dr. Love produces more content. This page is a living repository of Kemetic wisdom.
+          </motion.p>
+          <motion.p variants={fadeUp} className="font-body text-center text-secondary/80 text-sm font-semibold mb-12 max-w-2xl mx-auto">
+            Temple members receive direct access to Dr. Love's teachings, live sessions, and Q&A through our membership pathway.
+          </motion.p>
           <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {futureTeachings.map((title, i) => (
               <div
