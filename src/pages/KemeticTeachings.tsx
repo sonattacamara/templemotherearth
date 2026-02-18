@@ -199,7 +199,7 @@ const KemeticTeachings = () => {
       </section>
 
       {/* ── SECTION A: THE PRACTICE ── */}
-      <section id="the-practice" className="py-16 md:py-24 bg-foreground/95">
+      <section id="the-practice" className="py-8 md:py-12 bg-foreground/95">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger} className="mx-auto max-w-4xl px-4">
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-8 text-secondary">
             What is Kemetism?
