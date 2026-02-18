@@ -18,6 +18,12 @@ import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
 import offeringPrivate from "@/assets/offering-private.jpg";
+import communityCeremonyGroup from "@/assets/community-ceremony-group.jpg";
+import communityCircleGrass from "@/assets/community-circle-grass.jpg";
+import communityGatheringIndoor from "@/assets/community-gathering-indoor.jpg";
+import communityPorchSelfie from "@/assets/community-porch-selfie.jpg";
+import communityRetreatJungle from "@/assets/community-retreat-jungle.jpg";
+import communityJoyBlanket from "@/assets/community-joy-blanket.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -738,6 +744,48 @@ const Index = () => {
 
           <GoogleReviewsWidget />
 
+        </motion.div>
+      </section>
+
+      {/* ───── COMMUNITY GALLERY ───── */}
+      <section className="px-4 py-24 md:py-32">
+        <motion.div
+          className="mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Our Sacred Family
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+            The Faces of Temple Mother Earth
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of healing and higher consciousness.
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
+            {[
+              { src: communityCeremonyGroup, alt: "Temple Mother Earth ceremony group gathering in white outdoors" },
+              { src: communityCircleGrass, alt: "Community circle sitting in the grass connecting hands" },
+              { src: communityGatheringIndoor, alt: "Temple Mother Earth indoor community gathering selfie" },
+              { src: communityPorchSelfie, alt: "Diverse community members gathering on porch steps" },
+              { src: communityRetreatJungle, alt: "International immersion retreat group in the jungle" },
+              { src: communityJoyBlanket, alt: "Community members sharing joy on a colorful blanket outdoors" },
+            ].map((photo) => (
+              <div key={photo.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
       </section>
 

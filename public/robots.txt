@@ -13,4 +13,11 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://templemotherearth.lovable.app/sitemap.xml
+Disallow: /analytics
+Disallow: /member/
+Disallow: /portal
+Disallow: /reset-password
+Disallow: /donation-success
+Disallow: /donation-canceled
+
+Sitemap: https://templemotherearth.org/sitemap.xml

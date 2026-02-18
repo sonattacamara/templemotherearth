@@ -8,10 +8,10 @@ interface SEOHeadProps {
   image?: string;
 }
 
-const BASE_URL = "https://templemotherearth.lovable.app";
+const BASE_URL = "https://templemotherearth.org";
 const DEFAULT_TITLE = "Temple Mother Earth — Sacred Healing Sanctuary in Washington, DC";
 const DEFAULT_DESC = "Temple Mother Earth is a sacred sanctuary offering Kambo ceremonies, ayahuasca retreats, Hapé (Rapé), cacao ceremonies, plant medicine healing, shamanic ceremonies, spiritual retreats, and integration circles in Washington, DC and internationally.";
-const DEFAULT_IMAGE = `${BASE_URL}/favicon.png`;
+const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const SEOHead = ({
   title,
