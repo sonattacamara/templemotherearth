@@ -98,11 +98,11 @@ const JourneyStage = ({ label }: { number?: string; label: string }) => (
 
 /* ── Vertical Journey Connector ── */
 const JourneyConnector = () => (
-  <div className="flex justify-center py-4">
-    <div className="flex flex-col items-center gap-1">
-      <div className="h-8 w-px bg-gradient-to-b from-transparent via-primary/40 to-primary/20" />
-      <Compass className="h-4 w-4 text-primary/40 animate-pulse" />
-      <div className="h-8 w-px bg-gradient-to-b from-primary/20 via-primary/40 to-transparent" />
+  <div className="flex justify-center py-1">
+    <div className="flex flex-col items-center gap-0.5">
+      <div className="h-4 w-px bg-gradient-to-b from-transparent via-primary/40 to-primary/20" />
+      <Compass className="h-3.5 w-3.5 text-primary/40" />
+      <div className="h-4 w-px bg-gradient-to-b from-primary/20 via-primary/40 to-transparent" />
     </div>
   </div>
 );
@@ -276,7 +276,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE II — THE AWAKENING
           ═══════════════════════════════════════════ */}
-      <section id="awakening" className="px-4 py-24 md:py-32">
+      <section id="awakening" className="px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"
@@ -321,7 +321,7 @@ const Index = () => {
       </section>
 
       {/* ───── ORIGIN STORY EXCERPT ───── */}
-      <section className="px-4 py-16 md:py-20">
+      <section className="px-4 py-10 md:py-14">
         <motion.div
           className="mx-auto max-w-3xl text-center"
           initial="hidden"
@@ -353,7 +353,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE III — CHOOSE YOUR PATH
           ═══════════════════════════════════════════ */}
-      <section id="offerings" className="bg-card px-4 py-24 md:py-32">
+      <section id="offerings" className="bg-card px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-6xl"
           initial="hidden"
@@ -440,7 +440,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE IV — THE TRANSFORMATION
           ═══════════════════════════════════════════ */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
@@ -480,7 +480,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE V — JOIN THE CIRCLE
           ═══════════════════════════════════════════ */}
-      <section id="membership" className="relative overflow-hidden px-4 py-24 md:py-32">
+      <section id="membership" className="relative overflow-hidden px-4 py-14 md:py-20">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${communityImg})` }}
@@ -543,7 +543,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE VI — THE INVITATION
           ═══════════════════════════════════════════ */}
-      <section id="community" className="relative overflow-hidden px-4 py-24 md:py-32">
+      <section id="community" className="relative overflow-hidden px-4 py-14 md:py-20">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${ctaFooterImg})` }}
@@ -626,7 +626,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── UPCOMING OFFERINGS (Eventbrite) ───── */}
-      <section id="upcoming-offerings" className="px-4 py-24 md:py-32">
+      <section id="upcoming-offerings" className="px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -698,7 +698,7 @@ const Index = () => {
       </section>
 
       {/* ───── INSTAGRAM FEED ───── */}
-      <section id="instagram" className="px-4 py-24 md:py-32">
+      <section id="instagram" className="px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -724,7 +724,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── GOOGLE REVIEWS ───── */}
-      <section id="reviews" className="bg-card px-4 py-24 md:py-32">
+      <section id="reviews" className="bg-card px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -748,7 +748,7 @@ const Index = () => {
       </section>
 
       {/* ───── COMMUNITY GALLERY ───── */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-6xl"
           initial="hidden"
@@ -792,7 +792,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── CONTACT ───── */}
-      <section id="contact" className="bg-card px-4 py-24 md:py-32">
+      <section id="contact" className="bg-card px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"
