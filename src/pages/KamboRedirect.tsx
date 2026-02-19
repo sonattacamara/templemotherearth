@@ -6,13 +6,22 @@ const KAMBO_URL = "https://kambo.templemotherearth.org/";
 
 const KamboRedirect = () => {
   const [countdown, setCountdown] = useState(4);
+  const [redirected, setRedirected] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(interval);
-          window.location.href = KAMBO_URL;
+          try {
+            const w = window.open(KAMBO_URL, "_blank");
+            if (!w) {
+              // popup blocked — user will use the manual link
+              setRedirected(true);
+            }
+          } catch {
+            setRedirected(true);
+          }
           return 0;
         }
         return prev - 1;
@@ -36,22 +45,28 @@ const KamboRedirect = () => {
       </h1>
 
       <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-primary-foreground/70">
-        You're being redirected to our Kambo healing portal. If you're not redirected automatically,{" "}
-        <a
-          href={KAMBO_URL}
-          className="text-primary underline underline-offset-2 hover:text-primary/80"
-        >
-          click here
-        </a>
-        .
+        {redirected || countdown === 0
+          ? "Tap the link below to enter the Kambo portal."
+          : "You're being redirected to our Kambo healing portal."}
       </p>
 
-      <div className="mt-6 flex items-center gap-2">
-        <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-        <span className="font-body text-xs text-primary-foreground/50">
-          Redirecting in {countdown}…
-        </span>
-      </div>
+      <a
+        href={KAMBO_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+      >
+        Enter Kambo Portal →
+      </a>
+
+      {countdown > 0 && (
+        <div className="mt-4 flex items-center gap-2">
+          <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+          <span className="font-body text-xs text-primary-foreground/50">
+            Opening in {countdown}…
+          </span>
+        </div>
+      )}
 
       <Link
         to="/"
