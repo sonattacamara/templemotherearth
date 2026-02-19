@@ -8,6 +8,7 @@ const EXTERNAL_PORTAL = "https://integration.templemotherearth.org/auth";
 
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
+  { label: "Kambo", href: "/kambo", isRoute: true },
   { label: "Experiences", href: "/#offerings", isRoute: false },
   { label: "Veterans", href: "/veterans-transformation-program", isRoute: true },
   { label: "Membership", href: "/membership", isRoute: true },

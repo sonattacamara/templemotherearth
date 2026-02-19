@@ -61,7 +61,7 @@ const KamboTeaserModal = () => {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link
-                to="/about"
+                to="/kambo"
                 onClick={dismiss}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
               >
