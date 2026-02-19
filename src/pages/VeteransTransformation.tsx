@@ -90,7 +90,7 @@ const schedule = [
 const faqs = [
   { q: "Is Kambo safe for veterans on VA medications?", a: "We require a comprehensive pre-screening process that evaluates all current medications and health conditions. Our intake process is designed to identify any contraindications. Certain medications may require a washout period. Your safety is our first priority — we will be transparent about what is and is not appropriate for your specific situation." },
   { q: "Will I lose control or hallucinate?", a: "No. Kambo does not alter your state of mind. You maintain full consciousness and mental clarity throughout the entire process. This is a physical purification. You will be aware, present, and in control at all times — the same tactical awareness you are used to." },
-  { q: "Is this legal?", a: "Temple Mother Earth operates as a 508(c)(1)(A) church under the Religious Freedom Restoration Act (RFRA). Our ceremonies are conducted as bona fide religious practices protected under the First Amendment. Kambo itself is not a controlled substance." },
+  { q: "Is this legal?", a: "Temple Mother Earth operates as a 508(c)(1)(A) temple under the Religious Freedom Restoration Act (RFRA). Our ceremonies are conducted as bona fide religious practices protected under the First Amendment. Kambo itself is not a controlled substance." },
   { q: "I have TBI. Is this safe for me?", a: "Pre-screening is required for all participants, especially those with TBI. We are transparent about what conditions require additional medical clearance. We work with each veteran individually to determine the safest approach." },
   { q: "Do you accept VA benefits or insurance?", a: "Currently, our ceremonies are not covered by VA benefits or insurance. However, we offer a Veteran Scholarship Fund and flexible payment plans. No warrior will be turned away for inability to pay." },
   { q: "What if I am in crisis right now?", a: "Please call the Veterans Crisis Line immediately: dial 988, press 1. You can also chat at VeteransCrisisLine.net or text 838255. When you are ready for the next step, we are here." },
@@ -304,7 +304,7 @@ const VeteransTransformation = () => {
       {/* ═══════ TRUST BAR ═══════ */}
       <section className="bg-[#2F4F4F] py-4">
         <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-center gap-6 px-4 text-sm text-white/80 font-body">
-          <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#B8860B]" /> 508(c)(1)(A) Recognized Church</span>
+          <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#B8860B]" /> 508(c)(1)(A) Recognized Temple</span>
           <span className="hidden sm:inline text-white/30">|</span>
           <span className="flex items-center gap-2"><Shield className="h-4 w-4 text-[#B8860B]" /> RFRA Protected Ceremonies</span>
           <span className="hidden sm:inline text-white/30">|</span>
@@ -615,7 +615,7 @@ const VeteransTransformation = () => {
             <h3 className="font-display text-2xl font-bold text-[#F5F0E6] mb-6">Is This Legal? Is This Safe?</h3>
             <div className="space-y-4 font-body text-[#F5F0E6]/70 leading-relaxed">
               <p>
-                Temple Mother Earth operates as a <strong className="text-[#B8860B]">508(c)(1)(A) church</strong> under the Religious Freedom Restoration Act (RFRA) and the First Amendment. Our ceremonies are bona fide religious practices.
+                Temple Mother Earth operates as a <strong className="text-[#B8860B]">508(c)(1)(A) temple</strong> under the Religious Freedom Restoration Act (RFRA) and the First Amendment. Our ceremonies are bona fide religious practices.
               </p>
               <p>
                 Kambo is <strong className="text-[#F5F0E6]">not a controlled substance</strong>. It is a natural secretion used for centuries by Indigenous peoples. Our facilitators are trained practitioners who conduct thorough pre-screening for every participant.
@@ -953,7 +953,7 @@ const VeteransTransformation = () => {
             <span className="font-display text-lg font-bold text-[#F5F0E6]">Temple Mother Earth</span>
           </Link>
           <p className="font-body text-sm text-[#F5F0E6]/50 max-w-xl mx-auto">
-            Temple Mother Earth is a 508(c)(1)(A) church. Our ceremonies are protected religious practices under the Religious Freedom Restoration Act (RFRA) and the First Amendment.
+            Temple Mother Earth is a 508(c)(1)(A) temple. Our ceremonies are protected religious practices under the Religious Freedom Restoration Act (RFRA) and the First Amendment.
           </p>
           <p className="mt-4 font-body text-xs text-[#F5F0E6]/30">
             Kambo ceremony near me | Plant medicine for PTSD | Veteran healing retreat Maryland DC Virginia
