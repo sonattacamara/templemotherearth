@@ -842,7 +842,7 @@ const Index = () => {
                 <div className="mt-2 flex flex-wrap gap-4">
                    <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Instagram className="h-4 w-4" /> @templemotherearth</a>
                    <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Facebook className="h-4 w-4" /> Temple Mother Earth</a>
-                   <a href="https://t.me/templemotherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Send className="h-4 w-4" /> @templemotherearth</a>
+                   <a href="https://t.me/kingfatherearth" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5"><Send className="h-4 w-4" /> @kingfatherearth</a>
                 </div>
               </div>
               <div>
