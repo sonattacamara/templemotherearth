@@ -32,45 +32,45 @@ const KamboRedirect = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-foreground px-6 text-center">
-      <Link to="/" className="mb-8">
-        <img src={logo} alt="Temple Mother Earth" className="h-16 w-16 rounded-full object-cover" />
+      <Link to="/" className="mb-6">
+        <img src={logo} alt="Temple Mother Earth" className="h-20 w-20 rounded-full object-cover" />
       </Link>
 
-      <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
-        Temple Mother Earth
+      <p className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-primary/80 mb-4">
+        A Sacred Threshold
       </p>
 
-      <h1 className="font-display text-3xl font-bold text-primary-foreground md:text-4xl">
-        Entering Kambo Sacred Space
+      <h1 className="font-display text-3xl font-bold text-primary-foreground md:text-4xl leading-tight">
+        The Frog Nation Awaits
       </h1>
 
-      <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-primary-foreground/70">
+      <p className="mt-5 max-w-sm font-body text-sm leading-relaxed text-primary-foreground/60">
         {redirected || countdown === 0
-          ? "Tap the link below to enter the Kambo portal."
-          : "You're being redirected to our Kambo healing portal."}
+          ? "When you are ready, step through the threshold below."
+          : "Take a breath. You are being guided into the Kambo sacred space."}
       </p>
 
       <a
         href={KAMBO_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+        className="mt-8 inline-flex items-center justify-center rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
       >
-        Enter Kambo Portal →
+        Enter Sacred Space
       </a>
 
       {countdown > 0 && (
-        <div className="mt-4 flex items-center gap-2">
-          <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-          <span className="font-body text-xs text-primary-foreground/50">
-            Opening in {countdown}…
+        <div className="mt-5 flex items-center gap-2">
+          <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary/60" />
+          <span className="font-body text-xs text-primary-foreground/40">
+            Preparing space… {countdown}
           </span>
         </div>
       )}
 
       <Link
         to="/"
-        className="mt-8 font-body text-xs text-primary-foreground/40 underline underline-offset-2 hover:text-primary-foreground/60"
+        className="mt-10 font-body text-xs text-primary-foreground/30 underline underline-offset-2 hover:text-primary-foreground/50"
       >
         ← Return to Temple Mother Earth
       </Link>
