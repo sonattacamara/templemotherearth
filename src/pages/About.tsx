@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
@@ -32,8 +33,9 @@ const stagger = {
 const About = () => {
   return (
     <div id="top" className="min-h-screen bg-background">
-      <SEOHead title="About Us" description="Learn about Temple Mother Earth's origin story, mission, founders, and facilitators. A sacred sanctuary for healing in Washington, DC." path="/about" />
+      <SEOHead title="About Temple Mother Earth | Our Story & Mission" description="Learn how Temple Mother Earth was founded in 2020 to provide sacred plant medicine ceremonies, spiritual healing, and conscious community in Washington DC." path="/about" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "About" }]} />
 
       {/* ───── HERO ───── */}
       <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center">

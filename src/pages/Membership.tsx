@@ -5,6 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { toast } from "@/hooks/use-toast";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
@@ -186,8 +187,9 @@ const Membership = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Membership" description="Join Temple Mother Earth's sacred community. Explore membership tiers from Welcome Circle (free) to Temple Immersion Path, each offering a deeper level of commitment and transformation." path="/membership" />
+      <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of healers and seekers." path="/membership" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Membership" }]} />
 
       {/* ───── HERO ───── */}
       <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center">

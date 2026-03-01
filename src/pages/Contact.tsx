@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
@@ -67,11 +68,12 @@ const Contact = () => {
   return (
     <div id="top" className="min-h-screen bg-background">
       <SEOHead
-        title="Contact Us"
-        description="Get in touch with Temple Mother Earth. Send us a message and our team will respond with care and intention."
+        title="Contact Temple Mother Earth | Washington DC"
+        description="Get in touch with Temple Mother Earth. Questions about ceremonies, membership, or retreats? We're here to guide your journey."
         path="/contact"
       />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Contact" }]} />
 
       {/* ───── HERO ───── */}
       <section className="relative flex min-h-[45vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center bg-foreground">

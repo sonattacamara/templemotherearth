@@ -3,6 +3,7 @@ import { motion, type Easing } from "framer-motion";
 import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import logo from "@/assets/logo.png";
@@ -33,8 +34,9 @@ const RetreatsInquiry = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="International Ayahuasca Retreats & Plant Medicine Immersions" description="Join Temple Mother Earth for Ayahuasca retreats in Mexico, plant medicine immersions in Costa Rica, Peru, Colombia & Brazil. Sacred healing journeys with Kambo, Hapé, San Pedro, and Earth Medicine ceremonies." path="/retreats-inquiry" />
+      <SEOHead title="International Retreats & Immersions" description="Join our international plant medicine retreats in Costa Rica, Peru, Mexico, and beyond. Transformational immersions with Temple Mother Earth." path="/retreats-inquiry" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Experiences" }, { label: "International Retreats" }]} />
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">

@@ -3,6 +3,7 @@ import { motion, type Easing } from "framer-motion";
 import { Heart, ArrowRight, CheckCircle2, Shield, Sparkles, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import offeringPrivate from "@/assets/offering-private.jpg";
@@ -27,8 +28,9 @@ const PrivateCeremonies = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Private Ceremonies" description="Experience deeply personal sacred sessions designed around your unique intentions. Book a private Earth Medicine ceremony with Temple Mother Earth." path="/private-ceremonies" />
+      <SEOHead title="Private Ceremonies | 1-on-1 Healing Sessions" description="Experience personalized private plant medicine ceremonies tailored to your intentions and healing journey. One-on-one sacred sessions." path="/private-ceremonies" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Experiences" }, { label: "Private Ceremonies" }]} />
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">

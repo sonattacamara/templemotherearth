@@ -25,15 +25,32 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ReligiousOrganization",
+      "@type": ["Organization", "LocalBusiness", "HealthAndBeautyBusiness"],
       "name": "Temple Mother Earth",
       "url": "https://templemotherearth.org",
-      "description": "Temple Mother Earth is a sacred sanctuary offering Kambo ceremonies, ayahuasca retreats, Hapé (Rapé), cacao ceremonies, plant medicine healing, shamanic ceremonies, spiritual retreats, and integration circles in Washington, DC and internationally. We work with Earth Medicines including Kambo frog medicine, sacred vine (ayahuasca), ceremonial cacao, Hapé, Sananga, Mapacho, and master plant dietas from the Amazonian tradition.",
+      "logo": "https://templemotherearth.org/logo.png",
+      "description": "A 501(c)(3) nonprofit spiritual sanctuary offering Kambo ceremonies, plant medicine healing, yoga, meditation, and community wellness in Washington DC.",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "2415 32nd St SE",
         "addressLocality": "Washington",
         "addressRegion": "DC",
+        "postalCode": "20020",
         "addressCountry": "US"
+      },
+      "telephone": "+1-202-439-2535",
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 18:00-22:00",
+      "sameAs": [
+        "https://www.instagram.com/templemotherearth/",
+        "https://www.facebook.com/TempleMotherEarth2020/",
+        "https://www.youtube.com/channel/UCDO11KuxRKsf5AX202k_NrQ",
+        "https://www.linkedin.com/in/temple-mother-earth-840944284/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "88"
       },
       "areaServed": [
         { "@type": "Country", "name": "United States" },
@@ -44,45 +61,18 @@
         { "@type": "Country", "name": "Brazil" }
       ],
       "knowsAbout": [
-        "Kambo ceremony", "Ayahuasca ceremony", "Hapé ceremony", "Rapé", "Cacao ceremony",
-        "Plant medicine healing", "Shamanic healing", "Entheogenic ceremony", "Sacred vine",
-        "Psilocybin ceremony", "San Pedro ceremony", "Huachuma", "Iboga", "Ibogaine",
-        "Sananga", "Mapacho", "Sacred tobacco", "Bobinsana", "Chiric Sanango",
-        "Master plant dieta", "Amazonian plant medicine", "Psychedelic integration",
-        "Spiritual healing", "Energy healing", "Meditation", "Yoga", "Integration circles",
-        "Blue lotus", "Kava", "Kratom", "Jurema", "DMT", "Salvia divinorum",
-        "Peyote", "Morning glory", "Syrian rue", "Yopo", "Noya Rao",
-        "Amanita muscaria", "Lion's mane", "Reishi", "Chaga", "Turkey tail",
-        "Psychedelic ceremony", "Holistic healing", "Traditional medicine"
+        "Kambo ceremony", "Ayahuasca ceremony", "Hapé ceremony", "Cacao ceremony",
+        "Plant medicine healing", "Shamanic healing", "Spiritual healing",
+        "Meditation", "Yoga", "Integration circles"
       ],
-      "sameAs": [
-        "https://www.instagram.com/templemotherearth/",
-        "https://www.facebook.com/TempleMotherEarth2020/"
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Earth Medicine Ceremonies",
-      "provider": {
-        "@type": "ReligiousOrganization",
-        "name": "Temple Mother Earth"
-      },
-      "description": "Sacred healing ceremonies featuring Kambo frog medicine, ayahuasca (sacred vine), Hapé (Rapé), ceremonial cacao, Sananga, and Mapacho in Washington DC and international retreat locations.",
-      "serviceType": "Healing Ceremony",
-      "areaServed": "Worldwide",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Sacred Ceremonies & Retreats",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kambo Ceremony", "description": "Sacred frog medicine ceremony for physical detox, emotional clearing, and spiritual purification using Phyllomedusa bicolor secretion." }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hapé (Rapé) Ceremony", "description": "Sacred tobacco snuff ceremony blended with medicinal plants and tree ashes for grounding, clarity, and spiritual connection." }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cacao Ceremony", "description": "Heart-opening ceremonial grade Theobroma cacao ceremony with music, meditation, and movement." }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sacred Vine Ceremony", "description": "Ayahuasca ceremony using Banisteriopsis caapi and Psychotria viridis for deep spiritual healing and visionary experience." }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "International Healing Immersions", "description": "Multi-day plant medicine retreats in sacred locations worldwide featuring ayahuasca, Kambo, and traditional Amazonian healing." }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kambo Ceremony", "description": "Sacred frog medicine ceremony for physical detox, emotional clearing, and spiritual purification." }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hapé (Rapé) Ceremony", "description": "Sacred tobacco snuff ceremony for grounding, clarity, and spiritual connection." }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cacao Ceremony", "description": "Heart-opening ceremonial cacao ceremony with music, meditation, and movement." }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "International Healing Immersions", "description": "Multi-day plant medicine retreats in sacred locations worldwide." }},
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private Ceremonies", "description": "One-on-one sacred healing sessions with experienced facilitators." }},
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Integration Circles", "description": "Community support circles for psychedelic integration and ongoing spiritual growth." }}
         ]

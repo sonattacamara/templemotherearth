@@ -3,6 +3,7 @@ import { Heart, Users, Leaf, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import communityImg from "@/assets/community.jpg";
@@ -26,8 +27,9 @@ const Volunteer = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Volunteer" description="Join the Temple Mother Earth volunteer team. Support our sacred ceremonies, community events, and healing mission in Washington, DC." path="/volunteer" />
+      <SEOHead title="Volunteer | Serve Temple Mother Earth Community" description="Join The Forest Team and serve Temple Mother Earth. Land stewardship, event support, and sacred service opportunities in DC." path="/volunteer" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Get Involved" }, { label: "Volunteer" }]} />
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">

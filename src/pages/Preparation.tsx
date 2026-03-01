@@ -2,6 +2,7 @@ import { motion, type Easing } from "framer-motion";
 import { Shield, AlertTriangle, Leaf, Heart, Sun, Droplets, Apple, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import ceremonyImg from "@/assets/offering-ceremony.jpg";
@@ -16,8 +17,9 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const Preparation = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Ceremony Preparation" description="Prepare for your Earth Medicine ceremony at Temple Mother Earth. Diet, fasting, hydration, and mental preparation guidelines." path="/preparation" />
+      <SEOHead title="Ceremony Preparation Guide" description="How to prepare for your plant medicine ceremony. Diet, intentions, and guidelines for Kambo, ayahuasca, and sacred medicine experiences." path="/preparation" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Preparation Guide" }]} />
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">
