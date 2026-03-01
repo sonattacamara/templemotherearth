@@ -163,7 +163,7 @@ const RetreatsInquiry = () => {
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any medical concerns or conditions we should know about?" value={form.medicalConcerns} onChange={(e) => update("medicalConcerns", e.target.value)} />
                 <input className={inputClass} placeholder="How did you hear about us?" value={form.howHeard} onChange={(e) => update("howHeard", e.target.value)} />
                 <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Submit Interest <ArrowRight className="h-4 w-4" />
+                  Send With Intention <ArrowRight className="h-4 w-4" />
                 </button>
               </form>
             </>

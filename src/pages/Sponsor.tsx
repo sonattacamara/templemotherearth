@@ -38,11 +38,11 @@ const Sponsor = () => {
             <HandHeart className="h-8 w-8 text-primary" />
           </motion.div>
           <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            Become a Sponsor
+            Walk With Us as a Sacred Steward
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Partner with Temple Mother Earth to sustain sacred healing spaces for our community.
-            Your sponsorship directly funds ceremonies, community programs, and access for those who need it most.
+            Your generosity sustains the sacred spaces where healing happens.
+            As a steward of Temple Mother Earth, you help ensure ceremonies, community programs, and access remain available for all who are called.
           </motion.p>
         </motion.div>
       </section>
@@ -50,9 +50,9 @@ const Sponsor = () => {
       <section className="px-4 py-16">
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
-            { icon: Shield, title: "Ceremony Sponsorship", desc: "Fund ceremonies for community members who may not have the financial means to participate in healing experiences." },
-            { icon: Star, title: "Event Sponsorship", desc: "Sponsor community days, immersions, yoga sessions, and other sacred gatherings that bring people together." },
-            { icon: Users, title: "Temple Sponsorship", desc: "Support the ongoing maintenance and growth of our DC sanctuary — a sacred space for the entire community." },
+            { icon: Shield, title: "Ceremony Stewardship", desc: "Help ensure that sacred healing is accessible to all, especially those who may not have the financial means to participate." },
+            { icon: Star, title: "Gathering Stewardship", desc: "Sustain community days, immersions, yoga sessions, and other sacred gatherings that bring people together in prayer and healing." },
+            { icon: Users, title: "Temple Stewardship", desc: "Support the ongoing care and growth of our DC sanctuary, a sacred space held open for the entire community." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">
               <item.icon className="mx-auto h-8 w-8 text-primary" />
@@ -68,10 +68,10 @@ const Sponsor = () => {
           {!submitted ? (
             <>
               <h2 className="text-center font-display text-2xl font-bold text-card-foreground md:text-3xl">
-                Sponsorship Inquiry
+               Share Your Intention
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
-                Tell us how you'd like to support the Temple. We'll connect with you to discuss partnership opportunities.
+                Tell us how you feel called to support the Temple. We will reach out to explore how we can walk this path together.
               </p>
               <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
@@ -79,8 +79,8 @@ const Sponsor = () => {
                 <input className={inputClass} type="tel" placeholder="Phone Number" value={form.phone} onChange={(e) => update("phone", e.target.value)} />
                 <input className={inputClass} placeholder="Organization (if applicable)" value={form.organization} onChange={(e) => update("organization", e.target.value)} />
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-foreground">Type of sponsorship *</label>
-                  {["Ceremony Sponsorship", "Event Sponsorship", "Temple / Facility Sponsorship", "In-Kind Donation (goods/services)", "Not sure — let's discuss"].map((opt) => (
+                  <label className="mb-2 block text-sm font-medium text-foreground">How do you feel called to support? *</label>
+                  {["Ceremony Stewardship", "Gathering Stewardship", "Temple / Facility Stewardship", "In-Kind Offering (goods/services)", "I'm not sure yet, I'd love to explore"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="sponsorType" className="mr-3 h-4 w-4 accent-primary" checked={form.sponsorType === opt} onChange={() => update("sponsorType", opt)} required />
                       {opt}
@@ -89,16 +89,16 @@ const Sponsor = () => {
                 </div>
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Tell us more about your interest in sponsoring Temple Mother Earth... *" value={form.message} onChange={(e) => update("message", e.target.value)} required />
                 <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Submit Inquiry <ArrowRight className="h-4 w-4" />
+                  Send With Love <ArrowRight className="h-4 w-4" />
                 </button>
               </form>
             </>
           ) : (
             <div className="text-center py-12">
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
-              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You for Your Generosity</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Steward</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Your sponsorship inquiry has been received. Our team will be in touch to discuss how we can partner together.
+                Your message has been received with gratitude. Our team will reach out to explore how we can walk this sacred path together.
               </p>
               <Link to="/" className="mt-8 inline-block rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80">
                 Return Home

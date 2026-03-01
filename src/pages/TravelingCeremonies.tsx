@@ -99,7 +99,7 @@ const TravelingCeremonies = () => {
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="What are your group's intentions? What are you collectively seeking?" value={form.intentions} onChange={(e) => update("intentions", e.target.value)} required />
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any additional information or questions?" value={form.additionalInfo} onChange={(e) => update("additionalInfo", e.target.value)} />
                 <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Submit Request <ArrowRight className="h-4 w-4" />
+                  Send With Intention <ArrowRight className="h-4 w-4" />
                 </button>
               </form>
             </>
