@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Snowflake, Sprout, Send } from "lucide-react";
+import { X, Sprout, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -40,26 +40,26 @@ const SeasonalBanner = () => {
       >
         <div className="mx-auto max-w-7xl flex flex-col items-center gap-2 px-4 py-3 text-center relative">
           <div className="flex items-center gap-3">
-            <Snowflake className="h-4 w-4 text-accent shrink-0 animate-pulse" />
+            <Sprout className="h-4 w-4 text-secondary shrink-0 animate-pulse" />
             <p className="font-body text-sm md:text-base text-primary-foreground/80">
-              <span className="font-semibold text-primary-foreground">Honoring the Winter Solstice</span>
-              <span className="hidden sm:inline"> — Sacred rest until the Spring Equinox.</span>
-              <span className="sm:hidden"> — Rest until Spring.</span>
+              <span className="font-semibold text-primary-foreground">The Spring Equinox Has Arrived</span>
+              <span className="hidden sm:inline"> — Ceremonies are returning. Welcome home.</span>
+              <span className="sm:hidden"> — We're back.</span>
               {" "}
-              <Sprout className="inline h-4 w-4 text-secondary" />
+              🌿
             </p>
           </div>
 
           {subscribed ? (
             <p className="font-body text-xs text-secondary font-semibold">
-              ✓ You're on the list — we'll notify you when ceremonies return.
+              ✓ You're on the list — we'll share upcoming Spring ceremonies soon.
             </p>
           ) : (
             <form onSubmit={handleSubscribe} className="flex items-center gap-2 mt-1">
               <input
                 type="email"
                 required
-                placeholder="Enter your email for Spring updates"
+                placeholder="Enter your email for Spring ceremonies"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 px-3 py-1.5 text-xs text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-1 focus:ring-primary w-56 sm:w-64"

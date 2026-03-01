@@ -89,7 +89,7 @@ const Volunteer = () => {
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               { title: "Serve", desc: "Volunteer your time and energy in areas that align with your gifts." },
-              { title: "Earn Credits", desc: "Your hours are tracked and converted into ceremony credits." },
+              { title: "Receive Blessings", desc: "Your sacred service is honored and reciprocated through ceremony access." },
               { title: "Heal", desc: "Use your credits to participate in sacred ceremonies and immersions." },
             ].map((item) => (
               <div key={item.title} className="rounded-xl border border-border bg-background p-5">
@@ -129,7 +129,7 @@ const Volunteer = () => {
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any relevant experience or skills?" value={form.experience} onChange={(e) => update("experience", e.target.value)} />
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Why do you want to volunteer with Temple Mother Earth? *" value={form.whyJoin} onChange={(e) => update("whyJoin", e.target.value)} required />
                 <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Submit Application <ArrowRight className="h-4 w-4" />
+                  Offer Your Service <ArrowRight className="h-4 w-4" />
                 </button>
               </form>
             </>

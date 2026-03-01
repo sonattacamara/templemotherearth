@@ -280,10 +280,10 @@ const Contact = () => {
       {/* ───── GLOBAL CTA ───── */}
       <DonationCTA
         variant="dark"
-        eyebrow="Support Our Mission"
+        eyebrow="Sustain the Sacred"
         headline="Walk With Us on This Journey"
-        body="Your tax-deductible contribution helps Temple Mother Earth continue to serve our community with sacred healing, education, and outreach."
-        buttonLabel="Support Our Mission"
+        body="Your tax-deductible offering helps Temple Mother Earth continue to hold space for sacred healing, education, and community."
+        buttonLabel="Offerings & Tithes"
       />
 
       <EventbriteCTA />

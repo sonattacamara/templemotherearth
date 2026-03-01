@@ -79,7 +79,7 @@ const offerings = [
     img: offeringPrivate,
     link: "/private-ceremonies",
     isExternal: false,
-    cta: "Book a Private Session",
+    cta: "Explore Private Ceremonies",
   },
 ];
 
@@ -434,7 +434,7 @@ const Index = () => {
               to="/membership"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl"
             >
-              View All Experiences →
+              Explore All Sacred Experiences →
             </Link>
           </motion.div>
         </motion.div>
@@ -647,7 +647,7 @@ const Index = () => {
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
              Explore our upcoming Earth Medicine ceremonies, community gatherings, and international immersions.
-            Reserve your space and step into the sacred.
+            Honor the call and step into the sacred.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-12">
@@ -689,7 +689,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 shadow-lg"
               >
-                View All Upcoming Ceremonies →
+                See Upcoming Ceremonies →
               </a>
             </div>
 
