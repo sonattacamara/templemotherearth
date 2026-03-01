@@ -295,7 +295,7 @@ const CeremonyIntake = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Sacred Intake Form — Ayahuasca, Kambo & Earth Medicine Ceremonies" description="Complete the Sacred Intake Form for Ayahuasca, Kambo, Hapé, and Cacao ceremonies at Temple Mother Earth. Medical screening, RFRA compliance, and personalized ceremony preparation in Washington DC and internationally." path="/ceremony-intake" />
+      <SEOHead title="Begin Your Journey | Sacred Intake Form" description="Complete your sacred intake form to start your healing journey with Temple Mother Earth. Kambo, ayahuasca, and plant medicine ceremonies in DC." path="/ceremony-intake" />
       <Navigation />
 
       {/* Hero */}

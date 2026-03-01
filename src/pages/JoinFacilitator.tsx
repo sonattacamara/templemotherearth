@@ -3,6 +3,7 @@ import { Sparkles, ArrowRight, CheckCircle2, Shield, Heart, Users } from "lucide
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import sacredSpace from "@/assets/sacred-space.jpg";
@@ -27,8 +28,9 @@ const JoinFacilitator = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Become a Facilitator" description="Apply to become a facilitator at Temple Mother Earth. Share your healing gifts and guide sacred ceremonies in our community." path="/join-facilitator" />
+      <SEOHead title="Become a Facilitator" description="Join our team of sacred facilitators. Share your gifts in ceremony, healing, and community at Temple Mother Earth." path="/join-facilitator" />
       <Navigation />
+      <PageBreadcrumb items={[{ label: "Get Involved" }, { label: "Become a Facilitator" }]} />
 
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${sacredSpace})` }} />

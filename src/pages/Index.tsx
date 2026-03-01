@@ -9,6 +9,7 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
+import HomeFAQ from "@/components/HomeFAQ";
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
@@ -112,7 +113,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead path="/" />
+      <SEOHead
+        title="Temple Mother Earth — Sacred Healing Sanctuary in Washington, DC"
+        description="A spiritual sanctuary offering Kambo ceremonies, ayahuasca retreats, plant medicine healing, yoga, and community wellness in Washington DC. Est. 2020."
+        path="/"
+      />
       <Navigation />
 
       {/* ═══════════════════════════════════════════
@@ -893,6 +898,8 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </section>
+
+      <HomeFAQ />
 
       <DonationCTA
         eyebrow="Sustain the Sacred"

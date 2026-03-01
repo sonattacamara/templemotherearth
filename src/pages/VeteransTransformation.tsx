@@ -228,8 +228,8 @@ const VeteransTransformation = () => {
         ))}
       </nav>
       <SEOHead
-        title="Veterans Transformation Program | Kambo Healing for PTSD, Chronic Pain & Military Trauma"
-        description="Veterans: when the VA, the pills, and talk therapy have not been enough, discover sacred earth medicine ceremonies designed for warriors. Veteran-led. RFRA protected. Ancient medicine for the modern warrior."
+        title="Veterans Healing Program | Plant Medicine for PTSD"
+        description="Specialized plant medicine healing program for veterans. Kambo, ayahuasca, and integrative support for PTSD, depression, and trauma recovery."
         path="/veterans-transformation-program"
       />
       <Navigation />

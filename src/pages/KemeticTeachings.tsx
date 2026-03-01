@@ -190,8 +190,8 @@ const KemeticTeachings = () => {
   return (
     <div className="min-h-screen bg-foreground text-primary-foreground">
       <SEOHead
-        title="Kemetic Teachings — Dr. George Xavier Love"
-        description="Explore the ancient African Egyptian spiritual tradition of Kemetism through the teachings of Dr. George Xavier Love, Jr. — High Priest of Kemetic Healing at Temple Mother Earth."
+        title="Kemetic Teachings | Ancient Egyptian Wisdom"
+        description="Explore Kemetic teachings and ancient Egyptian spiritual wisdom at Temple Mother Earth. Sacred knowledge for modern consciousness."
         path="/kemetic-teachings"
       />
       <Navigation />
