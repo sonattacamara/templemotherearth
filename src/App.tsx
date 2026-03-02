@@ -22,7 +22,7 @@ import MemberAuth from "./pages/MemberAuth";
 import MemberEducation from "./pages/MemberEducation";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
-import ValentinesDay from "./pages/ValentinesDay";
+
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
 import VeteransTransformation from "./pages/VeteransTransformation";
@@ -73,7 +73,7 @@ const App = () => (
             <Route path="/member/auth" element={<MemberAuth />} />
             <Route path="/member/education" element={<MemberEducation />} />
             <Route path="/analytics" element={<Analytics />} />
-            <Route path="/valentines-day" element={<ValentinesDay />} />
+            
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
             <Route path="/veterans-transformation-program" element={<VeteransTransformation />} />
