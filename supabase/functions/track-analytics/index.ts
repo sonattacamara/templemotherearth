@@ -47,9 +47,35 @@ serve(async (req) => {
 
     if (req.method === "GET" && action === "dashboard") {
       const authHeader = req.headers.get("Authorization");
-      if (!authHeader) {
+      if (!authHeader?.startsWith("Bearer ")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
           status: 401,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      // Validate JWT and get authenticated user
+      const token = authHeader.replace("Bearer ", "");
+      const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+
+      if (authError || !user) {
+        return new Response(JSON.stringify({ error: "Invalid or expired token" }), {
+          status: 401,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      // Verify admin role
+      const { data: roleData } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", user.id)
+        .eq("role", "admin")
+        .single();
+
+      if (!roleData) {
+        return new Response(JSON.stringify({ error: "Forbidden: Admin access required" }), {
+          status: 403,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
