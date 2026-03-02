@@ -22,8 +22,8 @@ const CeremonyDonate = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Gift a Ceremony — Donate to the Ceremony Fund"
-        description="Sponsor a sacred ceremony for someone who may not have the financial means. Your tax-deductible gift funds healing experiences through Temple Mother Earth's 501(c)(3) Ceremony Fund."
+        title="Donate | Support Sacred Ceremonies"
+        description="Make a tax-deductible donation to Temple Mother Earth. Support our 501(c)(3) nonprofit mission of healing and community."
         path="/donate/ceremony"
       />
       <Navigation />

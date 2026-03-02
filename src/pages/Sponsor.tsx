@@ -27,7 +27,7 @@ const Sponsor = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Sponsor" description="Support Temple Mother Earth through sponsorship. Help sustain our 501(c)(3) nonprofit mission of sacred healing and community in Washington, DC." path="/sponsor" />
+      <SEOHead title="Become a Sponsor | Support Temple Mother Earth" description="Partner with Temple Mother Earth as a sponsor. Support sacred ceremonies, community wellness, and spiritual healing." path="/sponsor" />
       <Navigation />
 
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">
