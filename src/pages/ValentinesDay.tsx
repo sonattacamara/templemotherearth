@@ -70,8 +70,8 @@ const ValentinesDay = () => {
   return (
     <div id="top" className="min-h-screen bg-background">
       <SEOHead
-        title="Valentine's Day — A Sacred Return to Self-Love"
-        description="Celebrate Valentine's Day with Temple Mother Earth. Discover the history of this sacred day, guided meditations, journal prompts, and rituals for radical self-love."
+        title="Valentine's Day Sacred Experience"
+        description="Celebrate love with a sacred Valentine's Day experience at Temple Mother Earth. Couples ceremonies and heart-opening gatherings."
         path="/valentines-day"
       />
       <Navigation />

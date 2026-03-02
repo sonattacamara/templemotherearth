@@ -953,12 +953,20 @@ const Index = () => {
             <div>
               <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Connect</h4>
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
-                
                 <Link to="/about" className="text-primary-foreground/60 hover:text-primary transition-colors">About Us</Link>
                 <Link to="/contact" className="text-primary-foreground/60 hover:text-primary transition-colors">Contact Us</Link>
                 <Link to="/portal" className="text-primary-foreground/60 hover:text-primary transition-colors">Member Portal</Link>
                 <a href="https://www.instagram.com/templemotherearth/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors inline-flex items-center gap-1.5"><Instagram className="h-3.5 w-3.5" /> Instagram</a>
                 <a href="https://www.facebook.com/TempleMotherEarth2020/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors inline-flex items-center gap-1.5"><Facebook className="h-3.5 w-3.5" /> Facebook</a>
+              </div>
+            </div>
+
+            {/* Sacred Portals */}
+            <div>
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Sacred Portals</h4>
+              <div className="mt-4 flex flex-col gap-2.5 text-sm">
+                <a href="https://kambo.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Kambo Portal</a>
+                <a href="https://costarica.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Costa Rica Immersions</a>
               </div>
             </div>
           </div>
