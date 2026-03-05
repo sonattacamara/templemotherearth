@@ -351,6 +351,22 @@ const About = () => {
             ))}
           </div>
 
+          {/* Video */}
+          <motion.div variants={fadeUp} className="mt-12">
+            <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-border shadow-lg">
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src="https://www.youtube.com/embed/gpwuq5wOvwI"
+                  title="The Four Agreements — Temple Mother Earth"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </motion.div>
+
           <motion.p variants={fadeUp} className="mt-10 text-center text-sm text-muted-foreground italic">
             Based on the wisdom of Don Miguel Ruiz — "The Four Agreements"
           </motion.p>
