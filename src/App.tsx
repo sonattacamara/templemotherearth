@@ -33,6 +33,7 @@ import ResetPassword from "./pages/ResetPassword";
 import KemeticTeachings from "./pages/KemeticTeachings";
 import WebhookChecklist from "./pages/WebhookChecklist";
 import KamboRedirect from "./pages/KamboRedirect";
+import SacredBlueprint from "./pages/SacredBlueprint";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
