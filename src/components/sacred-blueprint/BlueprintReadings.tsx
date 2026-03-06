@@ -25,7 +25,7 @@ const readings = [
     duration: "90 min via Zoom",
     description:
       "For those who have already explored their chart. Weaves together self-study with intuitive insights, Gene Keys contemplations, Venus Sequence, and ceremony alignment. Moves from information to embodiment.",
-    bookingUrl: "#", // Will be replaced with GHL booking link
+    bookingUrl: "#", // Replace with GHL calendar URL before publish
   },
 ];
 
