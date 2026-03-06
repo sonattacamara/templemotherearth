@@ -11,21 +11,21 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 const readings = [
   {
     icon: BookOpen,
-    name: "Sacred Blueprint Foundational",
+    name: "Foundational Reading",
     price: "$222",
     duration: "90 min via Zoom",
     description:
       "For those brand new to Human Design. Covers: Energy Type, Strategy, Authority, defined/undefined centers, innate gifts, conditioning patterns. Connects their design to their healing path and ceremony readiness.",
-    bookingUrl: "#", // Replace with GHL calendar URL before publish
+    bookingUrl: "https://link.convertandflow.com/widget/booking/uWDZdZasRYtT05b9PobB",
   },
   {
     icon: Sparkles,
-    name: "Sacred Blueprint Integration",
+    name: "Integration Reading",
     price: "$333",
     duration: "90 min via Zoom",
     description:
       "For those who have already explored their chart. Weaves together self-study with intuitive insights, Gene Keys contemplations, Venus Sequence, and ceremony alignment. Moves from information to embodiment.",
-    bookingUrl: "#", // Replace with GHL calendar URL before publish
+    bookingUrl: "https://link.convertandflow.com/widget/booking/tLjqigCpxx9zf0Krjj4y",
   },
 ];
 
@@ -42,7 +42,7 @@ const BlueprintReadings = () => (
         Book a Sacred Blueprint Reading
       </motion.h2>
       <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-        Your chart is just the beginning. A Sacred Blueprint Reading with Sonatta Camara, PhD goes deep — connecting your Human Design to your healing journey, your medicine path, and your next sacred step. All sessions are 90 minutes via Zoom.
+        Your chart is just the beginning. A Sacred Blueprint Reading with Sonatta Camara, PhD goes deep — connecting your Human Design to your healing journey, your medicine path, and your next sacred step. All sessions are 90 minutes via Zoom. Payment is collected at booking.
       </motion.p>
 
       <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -68,7 +68,7 @@ const BlueprintReadings = () => (
               rel="noopener noreferrer"
               className="mt-6 block rounded-xl bg-primary py-3.5 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
             >
-              Book Your Reading →
+              Book Now
             </a>
           </motion.div>
         ))}
