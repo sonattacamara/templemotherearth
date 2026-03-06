@@ -16,7 +16,7 @@ const readings = [
     duration: "90 min via Zoom",
     description:
       "For those brand new to Human Design. Covers: Energy Type, Strategy, Authority, defined/undefined centers, innate gifts, conditioning patterns. Connects their design to their healing path and ceremony readiness.",
-    bookingUrl: "#", // Will be replaced with GHL booking link
+    bookingUrl: "#", // Replace with GHL calendar URL before publish
   },
   {
     icon: Sparkles,
@@ -25,7 +25,7 @@ const readings = [
     duration: "90 min via Zoom",
     description:
       "For those who have already explored their chart. Weaves together self-study with intuitive insights, Gene Keys contemplations, Venus Sequence, and ceremony alignment. Moves from information to embodiment.",
-    bookingUrl: "#", // Will be replaced with GHL booking link
+    bookingUrl: "#", // Replace with GHL calendar URL before publish
   },
 ];
 
@@ -68,7 +68,7 @@ const BlueprintReadings = () => (
               rel="noopener noreferrer"
               className="mt-6 block rounded-xl bg-primary py-3.5 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
             >
-              Book Now →
+              Book Your Reading →
             </a>
           </motion.div>
         ))}
