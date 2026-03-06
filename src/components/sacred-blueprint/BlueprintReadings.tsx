@@ -11,21 +11,21 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 const readings = [
   {
     icon: BookOpen,
-    name: "Sacred Blueprint Foundational",
+    name: "Foundational Reading",
     price: "$222",
     duration: "90 min via Zoom",
     description:
       "For those brand new to Human Design. Covers: Energy Type, Strategy, Authority, defined/undefined centers, innate gifts, conditioning patterns. Connects their design to their healing path and ceremony readiness.",
-    bookingUrl: "#", // Replace with GHL calendar URL before publish
+    bookingUrl: "https://link.convertandflow.com/widget/booking/uWDZdZasRYtT05b9PobB",
   },
   {
     icon: Sparkles,
-    name: "Sacred Blueprint Integration",
+    name: "Integration Reading",
     price: "$333",
     duration: "90 min via Zoom",
     description:
       "For those who have already explored their chart. Weaves together self-study with intuitive insights, Gene Keys contemplations, Venus Sequence, and ceremony alignment. Moves from information to embodiment.",
-    bookingUrl: "#", // Replace with GHL calendar URL before publish
+    bookingUrl: "https://link.convertandflow.com/widget/booking/tLjqigCpxx9zf0Krjj4y",
   },
 ];
 
