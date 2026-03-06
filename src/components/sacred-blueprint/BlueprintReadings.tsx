@@ -16,7 +16,7 @@ const readings = [
     duration: "90 min via Zoom",
     description:
       "For those brand new to Human Design. Covers: Energy Type, Strategy, Authority, defined/undefined centers, innate gifts, conditioning patterns. Connects their design to their healing path and ceremony readiness.",
-    bookingUrl: "#", // Will be replaced with GHL booking link
+    bookingUrl: "#", // Replace with GHL calendar URL before publish
   },
   {
     icon: Sparkles,
