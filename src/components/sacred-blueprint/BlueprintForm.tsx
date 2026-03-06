@@ -20,6 +20,7 @@ interface BlueprintFormProps {
 
 const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     email: "",
@@ -50,7 +51,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
         setIsSubmitting(false);
         return;
       }
-      toast.success("Your Sacred Blueprint request has been received!");
+      setSubmitted(true);
       onSuccess();
     } catch (err) {
       console.error("Sacred Blueprint form error:", err);
@@ -68,57 +69,68 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
         viewport={{ once: true }}
         variants={stagger}
       >
-        <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8 shadow-lg md:p-12">
-          <div className="mb-8 text-center">
-            <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
-              Generate Your Sacred Blueprint
-            </h2>
-            <p className="font-body mt-2 text-muted-foreground">
-              Enter your birth details to receive your free Human Design chart.
+        {submitted ? (
+          <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8 shadow-lg md:p-12 text-center">
+            <p className="font-display text-2xl font-bold text-foreground md:text-3xl">
+              Your Sacred Blueprint request has been received!
             </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="firstName" className="text-foreground">First Name *</Label>
-                <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Your first name" maxLength={100} required className="bg-card" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-foreground">Email Address *</Label>
-                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" maxLength={255} required className="bg-card" />
-              </div>
+            <p className="mt-4 font-body text-muted-foreground text-lg">
+              Check your inbox for your next steps. We'll be in touch soon. 🌍
+            </p>
+          </motion.div>
+        ) : (
+          <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8 shadow-lg md:p-12">
+            <div className="mb-8 text-center">
+              <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
+                Generate Your Sacred Blueprint
+              </h2>
+              <p className="font-body mt-2 text-muted-foreground">
+                Enter your birth details to receive your free Human Design chart.
+              </p>
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
-              <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="(555) 123-4567" maxLength={20} required className="bg-card" />
-            </div>
-
-            <div className="grid gap-5 md:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="birthDate" className="text-foreground">Date of Birth *</Label>
-                <Input id="birthDate" name="birthDate" type="date" value={formData.birthDate} onChange={handleChange} required className="bg-card" />
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid gap-5 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName" className="text-foreground">First Name *</Label>
+                  <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Your first name" maxLength={100} required className="bg-card" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-foreground">Email Address *</Label>
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" maxLength={255} required className="bg-card" />
+                </div>
               </div>
+
               <div className="space-y-2">
-                <Label htmlFor="birthTime" className="text-foreground">Exact Time of Birth</Label>
-                <Input id="birthTime" name="birthTime" type="time" value={formData.birthTime} onChange={handleChange} className="bg-card" />
-                <p className="text-xs text-muted-foreground italic">Don't know? Your chart still works — share your best guess.</p>
+                <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
+                <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="(555) 123-4567" maxLength={20} required className="bg-card" />
               </div>
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="birthCity" className="text-foreground">City &amp; Country of Birth *</Label>
-              <Input id="birthCity" name="birthCity" value={formData.birthCity} onChange={handleChange} placeholder="e.g. Washington, DC, USA" maxLength={200} required className="bg-card" />
-            </div>
+              <div className="grid gap-5 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="birthDate" className="text-foreground">Date of Birth *</Label>
+                  <Input id="birthDate" name="birthDate" type="date" value={formData.birthDate} onChange={handleChange} required className="bg-card" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="birthTime" className="text-foreground">Exact Time of Birth</Label>
+                  <Input id="birthTime" name="birthTime" type="time" value={formData.birthTime} onChange={handleChange} className="bg-card" />
+                  <p className="text-xs text-muted-foreground italic">Don't know? Your chart still works — share your best guess.</p>
+                </div>
+              </div>
 
-            <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6">
-              {isSubmitting ? "Submitting…" : (
-                <><Send className="mr-2 h-5 w-5" /> Generate My Sacred Blueprint</>
-              )}
-            </Button>
-          </form>
-        </motion.div>
+              <div className="space-y-2">
+                <Label htmlFor="birthCity" className="text-foreground">City &amp; Country of Birth *</Label>
+                <Input id="birthCity" name="birthCity" value={formData.birthCity} onChange={handleChange} placeholder="e.g. Washington, DC, USA" maxLength={200} required className="bg-card" />
+              </div>
+
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6">
+                {isSubmitting ? "Submitting…" : (
+                  <><Send className="mr-2 h-5 w-5" /> Generate My Sacred Blueprint</>
+                )}
+              </Button>
+            </form>
+          </motion.div>
+        )}
       </motion.div>
     </section>
   );

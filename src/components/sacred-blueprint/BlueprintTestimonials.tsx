@@ -11,11 +11,15 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 const testimonials = [
   {
     quote: "My Sacred Blueprint reading completely shifted how I see my healing journey. Sonatta connected my Human Design to my ceremony experience in a way that finally made everything make sense.",
-    name: "Temple Member",
+    name: "Maya R., Washington DC",
   },
   {
     quote: "I came in curious about Human Design and left with a deep understanding of why I've always felt called to this kind of sacred work. This reading is unlike anything else out there.",
-    name: "Temple Member",
+    name: "Marcus T., Temple Member since 2024",
+  },
+  {
+    quote: "I had no idea Human Design could explain so much about why plant medicine hit me the way it did. Sonatta connected everything — my type, my authority, my ceremony experience. Life-changing.",
+    name: "Denise W., Kambo + Ayahuasca Graduate",
   },
 ];
 

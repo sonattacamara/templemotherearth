@@ -68,7 +68,7 @@ const BlueprintReadings = () => (
               rel="noopener noreferrer"
               className="mt-6 block rounded-xl bg-primary py-3.5 text-center font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
             >
-              Book Now →
+              Book Your Reading →
             </a>
           </motion.div>
         ))}
