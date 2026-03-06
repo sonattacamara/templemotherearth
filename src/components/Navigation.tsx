@@ -14,6 +14,7 @@ const navLinks = [
   { label: "Membership", href: "/membership", isRoute: true },
   { label: "Community", href: "/#community", isRoute: false },
   { label: "Teachings", href: "/kemetic-teachings", isRoute: true },
+  { label: "Sacred Blueprint", href: "/sacred-blueprint", isRoute: true },
 ];
 
 const Navigation = () => {

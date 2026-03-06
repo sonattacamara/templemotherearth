@@ -274,6 +274,33 @@ const Membership = () => {
         </motion.div>
       </section>
 
+      {/* ───── SACRED BLUEPRINT CALLOUT ───── */}
+      <section className="px-4 py-12">
+        <motion.div
+          className="mx-auto max-w-2xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+        >
+          <motion.div variants={fadeUp} className="rounded-2xl border border-primary/20 bg-primary/5 p-8 md:p-10 text-center">
+            <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">New</p>
+            <h3 className="font-display text-xl font-bold text-foreground md:text-2xl">
+              Discover Your Sacred Blueprint
+            </h3>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-lg mx-auto">
+              Your Human Design chart decoded through a sacred lens — connecting your unique energy type to the perfect membership path for your healing journey.
+            </p>
+            <Link
+              to="/sacred-blueprint"
+              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+            >
+              Get My Free Blueprint →
+            </Link>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* ───── THE PATHWAY (Sequential, not grid) ───── */}
       <section className="bg-card px-4 py-24 md:py-32">
         <motion.div
