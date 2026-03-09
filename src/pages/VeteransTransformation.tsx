@@ -680,7 +680,7 @@ const VeteransTransformation = () => {
           </motion.div>
 
           {formSubmitted ? (
-            <motion.div variants={fadeUp} className="rounded-xl bg-[#556B2F]/20 border border-[#556B2F]/40 p-8 text-center">
+            <motion.div id="veteran-form-section" variants={fadeUp} className="rounded-xl bg-[#556B2F]/20 border border-[#556B2F]/40 p-8 text-center">
               <Shield className="h-12 w-12 text-[#B8860B] mx-auto mb-4" />
               <h3 className="font-display text-2xl font-bold text-[#F5F0E6]">Thank You for Your Courage</h3>
               <p className="mt-4 font-body text-[#F5F0E6]/70 leading-relaxed">
