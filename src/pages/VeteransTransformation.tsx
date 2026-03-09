@@ -752,7 +752,7 @@ const VeteransTransformation = () => {
                         {formData.branch === b && <span className="h-2 w-2 rounded-full bg-white" />}
                       </span>
                       <span className="font-body text-sm text-[#F5F0E6]/80">{b}</span>
-                      <input type="radio" name="branch" value={b} checked={formData.branch === b} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="sr-only" required />
+                      <input type="radio" name="branch" value={b} checked={formData.branch === b} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="sr-only" />
                     </label>
                   ))}
                 </div>
