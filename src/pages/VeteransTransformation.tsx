@@ -188,6 +188,26 @@ const VeteransTransformation = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError("");
+    
+    // Manual validation for required fields with sr-only inputs
+    if (!formData.fullName.trim()) {
+      setFormError("Please enter your full name.");
+      return;
+    }
+    if (!formData.email.trim()) {
+      setFormError("Please enter your email.");
+      return;
+    }
+    if (!formData.phone.trim()) {
+      setFormError("Please enter your phone number.");
+      return;
+    }
+    if (!formData.branch) {
+      setFormError("Please select your branch of service.");
+      return;
+    }
+    
     setSubmitting(true);
     // TODO: Integrate with GoHighLevel webhook
     await new Promise((r) => setTimeout(r, 1200));
