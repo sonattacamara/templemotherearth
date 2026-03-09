@@ -145,6 +145,7 @@ const VeteransTransformation = () => {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const [activeSection, setActiveSection] = useState("");
 
   const sectionAnchors = [
@@ -187,6 +188,26 @@ const VeteransTransformation = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormError("");
+    
+    // Manual validation for required fields with sr-only inputs
+    if (!formData.fullName.trim()) {
+      setFormError("Please enter your full name.");
+      return;
+    }
+    if (!formData.email.trim()) {
+      setFormError("Please enter your email.");
+      return;
+    }
+    if (!formData.phone.trim()) {
+      setFormError("Please enter your phone number.");
+      return;
+    }
+    if (!formData.branch) {
+      setFormError("Please select your branch of service.");
+      return;
+    }
+    
     setSubmitting(true);
     // TODO: Integrate with GoHighLevel webhook
     await new Promise((r) => setTimeout(r, 1200));
@@ -680,7 +701,7 @@ const VeteransTransformation = () => {
           </motion.div>
 
           {formSubmitted ? (
-            <motion.div id="veteran-form-section" variants={fadeUp} className="rounded-xl bg-[#556B2F]/20 border border-[#556B2F]/40 p-8 text-center">
+            <motion.div id="veteran-form-section" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="rounded-xl bg-[#556B2F]/20 border border-[#556B2F]/40 p-8 text-center">
               <Shield className="h-12 w-12 text-[#B8860B] mx-auto mb-4" />
               <h3 className="font-display text-2xl font-bold text-[#F5F0E6]">Thank You for Your Courage</h3>
               <p className="mt-4 font-body text-[#F5F0E6]/70 leading-relaxed">
@@ -702,17 +723,17 @@ const VeteransTransformation = () => {
 
               <div>
                 <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Full Name *</label>
-                <input type="text" required value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your full name" />
+                  <input type="text" value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your full name" />
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Email *</label>
-                  <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="email@example.com" />
+                  <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="email@example.com" />
                 </div>
                 <div>
                   <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Phone *</label>
-                  <input type="tel" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="(555) 123-4567" />
+                  <input type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="(555) 123-4567" />
                 </div>
               </div>
 
@@ -731,7 +752,7 @@ const VeteransTransformation = () => {
                         {formData.branch === b && <span className="h-2 w-2 rounded-full bg-white" />}
                       </span>
                       <span className="font-body text-sm text-[#F5F0E6]/80">{b}</span>
-                      <input type="radio" name="branch" value={b} checked={formData.branch === b} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="sr-only" required />
+                      <input type="radio" name="branch" value={b} checked={formData.branch === b} onChange={(e) => setFormData({ ...formData, branch: e.target.value })} className="sr-only" />
                     </label>
                   ))}
                 </div>
@@ -936,6 +957,12 @@ const VeteransTransformation = () => {
                 <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Anything else you want us to know?</label>
                 <textarea value={formData.additionalInfo} onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })} rows={3} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your story matters. Share whatever feels right — we are listening." />
               </div>
+
+              {formError && (
+                <div className="rounded-lg bg-red-900/30 border border-red-500/40 p-4 text-center">
+                  <p className="font-body text-sm text-red-300">{formError}</p>
+                </div>
+              )}
 
               <button type="submit" disabled={submitting} className="w-full rounded-lg bg-[#556B2F] py-4 font-body text-base font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg disabled:opacity-50">
                 {submitting ? "Submitting..." : "Begin Your Transformation"}
