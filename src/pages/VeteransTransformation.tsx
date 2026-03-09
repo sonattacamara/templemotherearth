@@ -145,6 +145,7 @@ const VeteransTransformation = () => {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const [activeSection, setActiveSection] = useState("");
 
   const sectionAnchors = [
