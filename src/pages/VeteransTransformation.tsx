@@ -192,6 +192,10 @@ const VeteransTransformation = () => {
     await new Promise((r) => setTimeout(r, 1200));
     setFormSubmitted(true);
     setSubmitting(false);
+    // Scroll to the success message so the user sees it
+    setTimeout(() => {
+      document.getElementById("veteran-form-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
   };
 
   return (
