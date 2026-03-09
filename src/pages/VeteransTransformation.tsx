@@ -958,6 +958,12 @@ const VeteransTransformation = () => {
                 <textarea value={formData.additionalInfo} onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })} rows={3} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your story matters. Share whatever feels right — we are listening." />
               </div>
 
+              {formError && (
+                <div className="rounded-lg bg-red-900/30 border border-red-500/40 p-4 text-center">
+                  <p className="font-body text-sm text-red-300">{formError}</p>
+                </div>
+              )}
+
               <button type="submit" disabled={submitting} className="w-full rounded-lg bg-[#556B2F] py-4 font-body text-base font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg disabled:opacity-50">
                 {submitting ? "Submitting..." : "Begin Your Transformation"}
               </button>
