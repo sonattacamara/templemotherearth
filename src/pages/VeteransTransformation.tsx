@@ -729,7 +729,7 @@ const VeteransTransformation = () => {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Email *</label>
-                  <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="email@example.com" />
+                  <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="email@example.com" />
                 </div>
                 <div>
                   <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Phone *</label>
