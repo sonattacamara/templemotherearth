@@ -276,7 +276,7 @@ const CeremonyIntake = () => {
   const consultationAlert = (
     <div className="rounded-lg border-2 border-accent bg-accent/20 p-5 text-sm space-y-3">
       <p className="font-semibold text-accent-foreground text-base">
-        🙏 Thank you for your honesty.
+        <Heart className="inline h-4 w-4 mr-1" /> Thank you for your honesty.
       </p>
       <p className="text-muted-foreground">
         Based on your responses, a private pre-ceremony consultation with our Sacred Earth Medicine Keeper is required before you can participate. This is for your safety and wellbeing. Please click below to schedule your consultation.
