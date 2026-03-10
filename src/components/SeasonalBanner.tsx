@@ -46,7 +46,7 @@ const SeasonalBanner = () => {
               <span className="hidden sm:inline"> — Ceremonies are returning. Welcome home.</span>
               <span className="sm:hidden"> — We're back.</span>
               {" "}
-              🌿
+              <Leaf className="inline h-4 w-4" />
             </p>
           </div>
 
