@@ -483,7 +483,7 @@ const CeremonyIntake = () => {
 
               {/* Critical Warning Banner */}
               <div className="rounded-lg bg-destructive/15 border border-destructive/30 p-4 text-sm text-destructive">
-                <strong>⚠️ IMPORTANT:</strong> Please answer ALL health questions honestly and completely. Withholding medical information can be life-threatening. All information is kept strictly confidential.
+                <AlertTriangle className="inline h-4 w-4 mr-1" /> <strong>IMPORTANT:</strong> Please answer ALL health questions honestly and completely. Withholding medical information can be life-threatening. All information is kept strictly confidential.
               </div>
 
               {/* Current Medications */}
