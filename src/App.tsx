@@ -81,6 +81,7 @@ const App = () => (
             <Route path="/veterans-transformation-program" element={<VeteransTransformation />} />
             <Route path="/donation-success" element={<DonationSuccess />} />
             <Route path="/donation-canceled" element={<DonationCanceled />} />
+            <Route path="/donate" element={<Donate />} />
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
