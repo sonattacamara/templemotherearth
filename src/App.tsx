@@ -34,6 +34,7 @@ import KemeticTeachings from "./pages/KemeticTeachings";
 import WebhookChecklist from "./pages/WebhookChecklist";
 import KamboRedirect from "./pages/KamboRedirect";
 import SacredBlueprint from "./pages/SacredBlueprint";
+import Donate from "./pages/Donate";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
