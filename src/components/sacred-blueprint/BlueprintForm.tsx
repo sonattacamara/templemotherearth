@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Globe } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
