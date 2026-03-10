@@ -152,7 +152,7 @@ const PortalToolsGrid = () => (
             </div>
 
             <p className="mt-4 text-xs text-muted-foreground">
-              Once added, the portal opens like a native app — full screen, fast, and always at your fingertips. 🙏
+              Once added, the portal opens like a native app — full screen, fast, and always at your fingertips. <Heart className="inline h-3.5 w-3.5" />
             </p>
           </div>
         </div>

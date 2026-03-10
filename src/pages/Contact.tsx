@@ -1,5 +1,5 @@
 import { motion, type Easing } from "framer-motion";
-import { Send, MessageCircle } from "lucide-react";
+import { Send, MessageCircle, Flame, Moon, Leaf } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -236,7 +236,7 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  🔥 Men's Integration Circle →
+                  <Flame className="inline h-4 w-4 mr-1" /> Men's Integration Circle →
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
                   A private brotherhood space for reflection, accountability, and healing through "The Cove."
@@ -251,7 +251,7 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  🌙 Wombmen's Integration Circle →
+                  <Moon className="inline h-4 w-4 mr-1" /> Wombmen's Integration Circle →
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
                   A sacred sisterhood space for emotional processing, embodiment practices, and mutual support.
@@ -266,7 +266,7 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  🌿 The Forest Team →
+                  <Leaf className="inline h-4 w-4 mr-1" /> The Forest Team →
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
                   Our volunteer and support crew — land stewardship, event setup, and hands-on service to the Temple.

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users } from "lucide-react";
+import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -99,7 +99,7 @@ const RetreatsInquiry = () => {
           {/* Sayulita Photo Gallery */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mt-12">
             <motion.h3 variants={fadeUp} className="text-center font-display text-xl font-bold text-foreground mb-6">
-              ✨ Your Sacred Space Awaits
+              <Sparkles className="inline h-5 w-5 mr-1" /> Your Sacred Space Awaits
             </motion.h3>
             <div className="grid gap-4 grid-cols-2">
               {[

@@ -276,7 +276,7 @@ const CeremonyIntake = () => {
   const consultationAlert = (
     <div className="rounded-lg border-2 border-accent bg-accent/20 p-5 text-sm space-y-3">
       <p className="font-semibold text-accent-foreground text-base">
-        🙏 Thank you for your honesty.
+        <Heart className="inline h-4 w-4 mr-1" /> Thank you for your honesty.
       </p>
       <p className="text-muted-foreground">
         Based on your responses, a private pre-ceremony consultation with our Sacred Earth Medicine Keeper is required before you can participate. This is for your safety and wellbeing. Please click below to schedule your consultation.
@@ -483,7 +483,7 @@ const CeremonyIntake = () => {
 
               {/* Critical Warning Banner */}
               <div className="rounded-lg bg-destructive/15 border border-destructive/30 p-4 text-sm text-destructive">
-                <strong>⚠️ IMPORTANT:</strong> Please answer ALL health questions honestly and completely. Withholding medical information can be life-threatening. All information is kept strictly confidential.
+                <AlertTriangle className="inline h-4 w-4 mr-1" /> <strong>IMPORTANT:</strong> Please answer ALL health questions honestly and completely. Withholding medical information can be life-threatening. All information is kept strictly confidential.
               </div>
 
               {/* Current Medications */}
@@ -536,7 +536,7 @@ const CeremonyIntake = () => {
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Contraindicated Medications — Are you currently taking any of the following?</label>
                   <div className="rounded-lg bg-destructive/10 p-3 text-sm text-destructive mb-3">
-                    ⚠️ <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions. <strong>Do not stop any medication without consulting your doctor.</strong>
+                    <AlertTriangle className="inline h-4 w-4 mr-1" /> <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions. <strong>Do not stop any medication without consulting your doctor.</strong>
                   </div>
                   <div className="space-y-2 max-h-64 overflow-y-auto rounded-lg border border-border p-3">
                     {CONTRAINDICATED_MEDICATIONS.map((med) => (

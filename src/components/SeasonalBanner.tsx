@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Sprout, Send } from "lucide-react";
+import { X, Sprout, Send, Leaf } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -46,7 +46,7 @@ const SeasonalBanner = () => {
               <span className="hidden sm:inline"> — Ceremonies are returning. Welcome home.</span>
               <span className="sm:hidden"> — We're back.</span>
               {" "}
-              🌿
+              <Leaf className="inline h-4 w-4" />
             </p>
           </div>
 

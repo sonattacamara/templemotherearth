@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Globe } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -75,7 +75,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
               Your Sacred Blueprint request has been received!
             </p>
             <p className="mt-4 font-body text-muted-foreground text-lg">
-              Check your inbox for your next steps. We'll be in touch soon. 🌍
+              Check your inbox for your next steps. We'll be in touch soon. <Globe className="inline h-5 w-5" />
             </p>
           </motion.div>
         ) : (

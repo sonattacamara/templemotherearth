@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { motion, type Easing } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send, Phone } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send, Phone, HeartCrack, CloudFog, Brain, RefreshCw, HandHeart, Home, Sprout } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import SEOHead from "@/components/SEOHead";
@@ -575,17 +575,17 @@ const Index = () => {
           <motion.div variants={fadeUp} className="mx-auto mt-10 max-w-xl text-left">
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { emoji: "💔", text: "You're carrying grief, loss, or pain that won't seem to lift" },
-                { emoji: "🌫️", text: "You feel disconnected from your purpose or your sense of self" },
-                { emoji: "😰", text: "Anxiety, stress, or overwhelm have become your daily companion" },
-                { emoji: "🔄", text: "You keep repeating the same cycles and patterns" },
-                { emoji: "🙏", text: "You're longing for spiritual connection but don't know where to start" },
-                { emoji: "🏠", text: "You're searching for a community that truly sees and accepts you" },
-                { emoji: "💫", text: "Something deep within is calling you toward a different kind of healing" },
-                { emoji: "🌱", text: "You're ready to grow but need a safe space to do it" },
+                { icon: HeartCrack, text: "You're carrying grief, loss, or pain that won't seem to lift" },
+                { icon: CloudFog, text: "You feel disconnected from your purpose or your sense of self" },
+                { icon: Brain, text: "Anxiety, stress, or overwhelm have become your daily companion" },
+                { icon: RefreshCw, text: "You keep repeating the same cycles and patterns" },
+                { icon: HandHeart, text: "You're longing for spiritual connection but don't know where to start" },
+                { icon: Home, text: "You're searching for a community that truly sees and accepts you" },
+                { icon: Sparkles, text: "Something deep within is calling you toward a different kind of healing" },
+                { icon: Sprout, text: "You're ready to grow but need a safe space to do it" },
               ].map((item) => (
                 <div key={item.text} className="flex items-start gap-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 p-4">
-                  <span className="text-xl shrink-0">{item.emoji}</span>
+                  <item.icon className="h-5 w-5 shrink-0 text-primary-foreground/60 mt-0.5" />
                   <p className="text-sm leading-relaxed text-primary-foreground/80">{item.text}</p>
                 </div>
               ))}
