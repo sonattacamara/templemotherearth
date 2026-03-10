@@ -266,7 +266,7 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  🌿 The Forest Team →
+                  <Leaf className="inline h-4 w-4 mr-1" /> The Forest Team →
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
                   Our volunteer and support crew — land stewardship, event setup, and hands-on service to the Temple.

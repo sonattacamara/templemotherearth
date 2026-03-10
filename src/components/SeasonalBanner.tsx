@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Sprout, Send } from "lucide-react";
+import { X, Sprout, Send, Leaf } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";

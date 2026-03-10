@@ -536,7 +536,7 @@ const CeremonyIntake = () => {
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Contraindicated Medications — Are you currently taking any of the following?</label>
                   <div className="rounded-lg bg-destructive/10 p-3 text-sm text-destructive mb-3">
-                    ⚠️ <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions. <strong>Do not stop any medication without consulting your doctor.</strong>
+                    <AlertTriangle className="inline h-4 w-4 mr-1" /> <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions. <strong>Do not stop any medication without consulting your doctor.</strong>
                   </div>
                   <div className="space-y-2 max-h-64 overflow-y-auto rounded-lg border border-border p-3">
                     {CONTRAINDICATED_MEDICATIONS.map((med) => (

@@ -75,7 +75,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
               Your Sacred Blueprint request has been received!
             </p>
             <p className="mt-4 font-body text-muted-foreground text-lg">
-              Check your inbox for your next steps. We'll be in touch soon. 🌍
+              Check your inbox for your next steps. We'll be in touch soon. <Globe className="inline h-5 w-5" />
             </p>
           </motion.div>
         ) : (

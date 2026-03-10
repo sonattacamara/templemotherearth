@@ -93,7 +93,7 @@ const DonationSuccess = () => {
             className="mx-auto mt-8 max-w-md rounded-xl border border-primary/20 bg-primary/5 p-5"
           >
             <p className="text-sm font-medium text-foreground">
-              🙏 As a 501(c)(3) nonprofit, your donation is tax-deductible.
+              <HandHeart className="inline h-4 w-4 mr-1" /> As a 501(c)(3) nonprofit, your donation is tax-deductible.
             </p>
             <p className="mt-2 text-xs text-muted-foreground">
               A receipt has been sent to your email via PayPal. Please retain it for your records. Our EIN is available upon request.
