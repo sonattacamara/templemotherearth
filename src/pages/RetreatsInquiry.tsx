@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users } from "lucide-react";
+import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
