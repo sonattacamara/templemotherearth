@@ -34,6 +34,7 @@ import KemeticTeachings from "./pages/KemeticTeachings";
 import WebhookChecklist from "./pages/WebhookChecklist";
 import KamboRedirect from "./pages/KamboRedirect";
 import SacredBlueprint from "./pages/SacredBlueprint";
+import Donate from "./pages/Donate";
 import ScrollToTop from "@/components/ScrollToTop";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
@@ -80,6 +81,7 @@ const App = () => (
             <Route path="/veterans-transformation-program" element={<VeteransTransformation />} />
             <Route path="/donation-success" element={<DonationSuccess />} />
             <Route path="/donation-canceled" element={<DonationCanceled />} />
+            <Route path="/donate" element={<Donate />} />
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
