@@ -94,7 +94,7 @@ const Donate = () => {
           <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
             If you feel called to direct your offering toward a particular area of our mission, explore these dedicated funds.
           </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               to="/donate/ceremony"
               className="group flex items-center gap-4 rounded-xl border border-border bg-background p-6 transition hover:border-primary/40 hover:shadow-md"
@@ -132,6 +132,24 @@ const Donate = () => {
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />
             </a>
+
+            <Link
+              to="/veterans-transformation-program"
+              className="group flex items-center gap-4 rounded-xl border border-border bg-background p-6 transition hover:border-primary/40 hover:shadow-md"
+            >
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Veterans Transformation Fund
+                </h3>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Support healing journeys for veterans through sacred ceremony
+                </p>
+              </div>
+              <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />
+            </Link>
           </div>
         </div>
       </section>
