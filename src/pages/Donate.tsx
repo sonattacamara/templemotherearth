@@ -95,8 +95,10 @@ const Donate = () => {
             If you feel called to direct your offering toward a particular area of our mission, explore these dedicated funds.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            <Link
-              to="/donate/ceremony"
+            <a
+              href="https://www.paypal.com/donate?campaign_id=733MK2T3UK5LS"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-4 rounded-xl border border-border bg-background p-6 transition hover:border-primary/40 hover:shadow-md"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
@@ -111,7 +113,7 @@ const Donate = () => {
                 </p>
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />
-            </Link>
+            </a>
 
             <a
               href="https://www.paypal.com/donate?campaign_id=R877JP38Q4F8S"
