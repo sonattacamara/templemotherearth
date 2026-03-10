@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Heart, CheckCircle2, ArrowRight, Leaf, Mail, FileText, Users } from "lucide-react";
+import { Heart, CheckCircle2, ArrowRight, Leaf, Mail, FileText, Users, HandHeart } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
