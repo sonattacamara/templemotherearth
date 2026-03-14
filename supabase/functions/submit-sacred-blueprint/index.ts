@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    const { firstName, email, phone, birthDate, birthTime, birthCity } = await req.json();
+    const { firstName, lastName, email, phone, birthDate, birthTime, birthCity } = await req.json();
 
     // Validate required fields
     if (!firstName || typeof firstName !== "string" || firstName.trim().length === 0) {
