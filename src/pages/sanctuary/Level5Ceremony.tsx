@@ -32,10 +32,10 @@ const ritualSteps = [
   { time: "2:00–4:00 PM", title: "Integration Circle & Departure", body: "Each participant names what they experienced. Being witnessed seals the initiation. You leave carrying your 30-Day Integration Guide." },
 ];
 
-const hdTypes = [
-  { num: "01", type: "The Manifestor", tag: "To Initiate · Closed & Repelling Aura", body: "The Manifestor carries a fire that can destroy or create. The purge is often suppressed rage, creative frustration. What emerges is not a tamed Manifestor — it is a freed one." },
-  { num: "02", type: "Generator & MG", tag: "To Respond · Enveloping Aura", body: "A Generator who has been responding to the wrong things feels fundamentally broken. Post-Kambo, Generators frequently report a return of their Sacral response — clarity about what genuinely excites them." },
-  { num: "03", type: "The Projector", tag: "To Guide · Focused & Absorbing Aura", body: "The Projector sees everything. Kambo removes what was never yours. What returns is native clarity and authority — guidance no longer tinged with the need for validation." },
+const whoCards = [
+  { num: "01", type: "The One Who Has Done the Work", tag: "Ready for the Threshold", body: "You have sat in ceremony before. You have done the inner work. Something in you knows: the next level of your healing requires a deeper purification than what you have accessed so far." },
+  { num: "02", type: "The One Carrying What Words Cannot Reach", tag: "Beyond Talk · Into the Body", body: "Therapy helped. Meditation helped. But something remains lodged in the body, beneath language, beneath understanding. Kambo reaches what the mind cannot." },
+  { num: "03", type: "The One Being Called", tag: "Trust the Knowing", body: "No logic. No explanation. Just a persistent knowing that this is next. If you have been circling this ceremony, that is not curiosity. That is preparation completing itself." },
 ];
 
 const Level5Ceremony = () => (
