@@ -59,8 +59,15 @@ const CacaoCeremony = () => {
 
       {/* HERO */}
       <section className="relative min-h-screen grid place-items-center overflow-hidden bg-[#2C1810]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_30%,rgba(201,150,58,0.18)_0%,transparent_55%),radial-gradient(ellipse_100%_80%_at_0%_100%,rgba(74,44,26,0.8)_0%,transparent_50%)]" />
-        <div className="absolute w-[600px] h-[600px] rounded-full border border-[rgba(201,150,58,0.12)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" />
+        <img
+          src="https://images.pexels.com/photos/6542704/pexels-photo-6542704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Ceremonial cacao in sacred space"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.5) brightness(0.3)" }}
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810] via-[rgba(44,24,16,0.7)] to-[rgba(44,24,16,0.3)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_30%,rgba(201,150,58,0.18)_0%,transparent_55%)]" />
         <motion.div
           className="relative z-10 text-center px-10 max-w-[900px]"
           initial={{ opacity: 0, y: 30 }}
