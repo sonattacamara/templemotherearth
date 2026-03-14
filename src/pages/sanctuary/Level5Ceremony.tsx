@@ -50,8 +50,15 @@ const Level5Ceremony = () => (
 
     {/* HERO */}
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050804]">
+      <img
+        src="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        alt="Sacred ceremony space with candlelight"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "saturate(0.3) brightness(0.25) hue-rotate(-10deg)" }}
+        loading="eager"
+      />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_60%,rgba(45,74,40,0.4)_0%,transparent_60%),radial-gradient(ellipse_100%_50%_at_50%_100%,rgba(91,168,74,0.08)_0%,transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_40%_at_50%_80%,rgba(61,107,53,0.12)_0%,transparent_60%)] animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#050804] via-[rgba(5,8,4,0.6)] to-[rgba(5,8,4,0.3)]" />
 
       <motion.div
         className="relative z-10 text-center px-10 max-w-[1000px]"

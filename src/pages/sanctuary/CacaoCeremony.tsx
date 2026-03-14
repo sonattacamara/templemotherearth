@@ -297,7 +297,13 @@ const CacaoCeremony = () => {
 
       {/* FINAL CTA */}
       <section className="bg-[#2C1810] py-40 px-6 md:px-[60px] text-center relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[radial-gradient(ellipse,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
+        <img
+          src="https://images.pexels.com/photos/5946081/pexels-photo-5946081.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+          alt="Sacred ceremonial fire"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.4) brightness(0.2)" }}
+        />
+        <div className="absolute inset-0 bg-[rgba(44,24,16,0.85)]" />
         <div className="relative z-10">
           <Eyebrow>Your Heart Is Ready</Eyebrow>
           <h2 className="font-display text-[clamp(36px,5vw,72px)] font-bold text-[#F5EDD8] leading-[1.1] mb-6">This Is Your<br />Invitation</h2>

@@ -36,7 +36,7 @@ const SacredBlueprint = () => {
       {formSubmitted && <BlueprintChartPlaceholder />}
 
       <BlueprintReveals />
-      <BlueprintTypePath />
+      
       <BlueprintReadings />
       <BlueprintTestimonials />
       <BlueprintFooterCTA />
