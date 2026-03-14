@@ -8,11 +8,11 @@ const EXTERNAL_PORTAL = "https://integration.templemotherearth.org/auth";
 
 const navLinks = [
   { label: "About", href: "/about", isRoute: true },
+  { label: "Sanctuary Week", href: "/sanctuary-week", isRoute: true },
   { label: "Kambo", href: "/kambo", isRoute: true },
   { label: "Experiences", href: "/#offerings", isRoute: false },
   { label: "Veterans", href: "/veterans-transformation-program", isRoute: true },
   { label: "Membership", href: "/membership", isRoute: true },
-  { label: "Community", href: "/#community", isRoute: false },
   { label: "Teachings", href: "/kemetic-teachings", isRoute: true },
   { label: "Sacred Blueprint", href: "/sacred-blueprint", isRoute: true },
 ];

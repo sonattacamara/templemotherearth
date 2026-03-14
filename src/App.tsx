@@ -32,10 +32,18 @@ import CeremonyDonate from "./pages/CeremonyDonate";
 import ResetPassword from "./pages/ResetPassword";
 import KemeticTeachings from "./pages/KemeticTeachings";
 import WebhookChecklist from "./pages/WebhookChecklist";
-import KamboRedirect from "./pages/KamboRedirect";
 import SacredBlueprint from "./pages/SacredBlueprint";
 import Donate from "./pages/Donate";
 import ScrollToTop from "@/components/ScrollToTop";
+import SanctuaryWeek from "./pages/SanctuaryWeek";
+import HapeCeremony from "./pages/sanctuary/HapeCeremony";
+import SacredTeaCeremony from "./pages/sanctuary/SacredTeaCeremony";
+import InnerAlchemySpa from "./pages/sanctuary/InnerAlchemySpa";
+import CommunityPotluck from "./pages/sanctuary/CommunityPotluck";
+import SacredYinYoga from "./pages/sanctuary/SacredYinYoga";
+import SacredArtExpo from "./pages/sanctuary/SacredArtExpo";
+import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
+import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
@@ -85,9 +93,19 @@ const App = () => (
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
-            <Route path="/kambo" element={<KamboRedirect />} />
+            <Route path="/kambo" element={<KamboCeremony />} />
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
+            <Route path="/sanctuary-week" element={<SanctuaryWeek />} />
+            <Route path="/hape" element={<HapeCeremony />} />
+            <Route path="/sacred-tea" element={<SacredTeaCeremony />} />
+            <Route path="/spa" element={<InnerAlchemySpa />} />
+            <Route path="/potluck" element={<CommunityPotluck />} />
+            <Route path="/yin-yoga" element={<SacredYinYoga />} />
+            <Route path="/art-expo" element={<SacredArtExpo />} />
+            <Route path="/tea-house" element={<SacredTeaHouse />} />
+            <Route path="/cacao" element={<SanctuaryWeek />} />
+            <Route path="/level5" element={<SanctuaryWeek />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
