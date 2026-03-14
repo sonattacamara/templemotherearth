@@ -272,6 +272,33 @@ const SanctuaryWeek = () => (
 
     <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
+    {/* SACRED REST */}
+    <SanctuarySection eyebrow="The Rhythm of the Temple" title={<>Why We Close<br /><em className="font-serif italic text-[hsl(45,70%,49%)] text-[1.1em]">After the Winter Solstice</em></>}>
+      <div className="text-xl leading-[1.85] text-[hsl(35,30%,68%)] max-w-[720px] mx-auto text-center font-serif space-y-6">
+        <p>Every year after the Winter Solstice, Temple Mother Earth enters a period of <strong className="text-[hsl(40,30%,90%)]">Sacred Rest</strong>. We close our doors to the public. Ceremonies pause. The outward work stops.</p>
+        <p>This is not a break. This is the work. The land rests. The facilitators restore. The founders recalibrate the vision, refine the protocols, study, pray, and prepare. The sacraments themselves require seasonal alignment. You cannot pour from a vessel that has not been refilled.</p>
+        <p>Between the Winter Solstice and the Spring Equinox, the Temple does what the Earth does: it goes inward. We review the year. We grieve what needs grieving. We release what has completed its cycle. We vision what is emerging. And then, when the light returns, <strong className="text-[hsl(40,30%,90%)]">we open the doors again.</strong></p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mt-16">
+        {[
+          { icon: "🌑", title: "Winter Solstice · The Closing", desc: "The shortest day. The deepest night. We honor this by closing public ceremonies and turning inward. Facilitator training, sacred study, land stewardship, and internal ceremony take place during this time." },
+          { icon: "🌿", title: "Spring Equinox · The Reopening", desc: "When day and night are equal, the Temple reopens. Sanctuary Week is our Grand Reopening, a declaration that the light has returned and the Temple is ready to hold space once more. Year Six begins here." },
+        ].map((card) => (
+          <div key={card.title} className="bg-[hsl(105,30%,5%)] p-10 border border-[hsla(45,70%,49%,0.1)]">
+            <span className="text-3xl block mb-4">{card.icon}</span>
+            <h3 className="font-sans text-[11px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3 font-normal">{card.title}</h3>
+            <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+      <blockquote className="mt-16 border-l-[3px] border-[hsl(45,70%,49%)] p-8 bg-[hsla(45,70%,49%,0.03)] max-w-[720px] mx-auto">
+        <p className="font-serif italic text-[22px] text-[hsl(40,30%,90%)] leading-[1.7]">
+          A temple that never rests cannot hold what arrives. We close so that when we open, every ceremony carries the full weight of preparation, intention, and seasonal alignment.
+        </p>
+        <cite className="block mt-4 font-sans text-[9px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] not-italic">Temple Mother Earth · Seasonal Covenant</cite>
+      </blockquote>
+    </SanctuarySection>
+
     {/* WEEK ONE */}
     <section className="px-6 md:px-12 py-16 md:py-20 max-w-[1160px] mx-auto" id="ceremonies">
       <div className="flex items-baseline gap-6 mb-12 pb-6 border-b border-[hsla(45,70%,49%,0.1)]">
