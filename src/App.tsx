@@ -44,6 +44,9 @@ import SacredYinYoga from "./pages/sanctuary/SacredYinYoga";
 import SacredArtExpo from "./pages/sanctuary/SacredArtExpo";
 import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
 import KamboCeremony from "./pages/sanctuary/KamboCeremony";
+import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
+import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
+import EarthKingdoms from "./pages/EarthKingdoms";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
@@ -104,8 +107,9 @@ const App = () => (
             <Route path="/yin-yoga" element={<SacredYinYoga />} />
             <Route path="/art-expo" element={<SacredArtExpo />} />
             <Route path="/tea-house" element={<SacredTeaHouse />} />
-            <Route path="/cacao" element={<SanctuaryWeek />} />
-            <Route path="/level5" element={<SanctuaryWeek />} />
+            <Route path="/cacao" element={<CacaoCeremony />} />
+            <Route path="/level5" element={<Level5Ceremony />} />
+            <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
