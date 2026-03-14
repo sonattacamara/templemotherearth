@@ -23,6 +23,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     birthDate: "",
