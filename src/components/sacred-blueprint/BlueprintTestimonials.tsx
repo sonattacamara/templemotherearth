@@ -18,7 +18,7 @@ const testimonials = [
     name: "Marcus T., Temple Member since 2024",
   },
   {
-    quote: "I had no idea Human Design could explain so much about why plant medicine hit me the way it did. Sonatta connected everything — my type, my authority, my ceremony experience. Life-changing.",
+    quote: "I had no idea Human Design could explain so much about why plant medicine hit me the way it did. The reading connected everything — my type, my authority, my ceremony experience. Life-changing.",
     name: "Denise W., Kambo + Ayahuasca Graduate",
   },
 ];

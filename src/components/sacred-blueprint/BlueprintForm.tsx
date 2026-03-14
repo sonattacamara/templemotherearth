@@ -37,7 +37,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.firstName.trim() || !formData.email.trim() || !formData.birthDate || !formData.birthCity.trim()) {
+    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.birthDate || !formData.birthCity.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
