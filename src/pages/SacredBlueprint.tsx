@@ -10,7 +10,7 @@ import BlueprintIntro from "@/components/sacred-blueprint/BlueprintIntro";
 import BlueprintForm from "@/components/sacred-blueprint/BlueprintForm";
 import BlueprintChartPlaceholder from "@/components/sacred-blueprint/BlueprintChartPlaceholder";
 import BlueprintReveals from "@/components/sacred-blueprint/BlueprintReveals";
-import BlueprintTypePath from "@/components/sacred-blueprint/BlueprintTypePath";
+
 import BlueprintReadings from "@/components/sacred-blueprint/BlueprintReadings";
 import BlueprintTestimonials from "@/components/sacred-blueprint/BlueprintTestimonials";
 import BlueprintFooterCTA from "@/components/sacred-blueprint/BlueprintFooterCTA";
