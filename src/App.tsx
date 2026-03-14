@@ -93,9 +93,19 @@ const App = () => (
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
-            <Route path="/kambo" element={<KamboRedirect />} />
+            <Route path="/kambo" element={<KamboCeremony />} />
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
+            <Route path="/sanctuary-week" element={<SanctuaryWeek />} />
+            <Route path="/hape" element={<HapeCeremony />} />
+            <Route path="/sacred-tea" element={<SacredTeaCeremony />} />
+            <Route path="/spa" element={<InnerAlchemySpa />} />
+            <Route path="/potluck" element={<CommunityPotluck />} />
+            <Route path="/yin-yoga" element={<SacredYinYoga />} />
+            <Route path="/art-expo" element={<SacredArtExpo />} />
+            <Route path="/tea-house" element={<SacredTeaHouse />} />
+            <Route path="/cacao" element={<SanctuaryWeek />} />
+            <Route path="/level5" element={<SanctuaryWeek />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
