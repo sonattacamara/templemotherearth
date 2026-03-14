@@ -10,7 +10,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 
 const testimonials = [
   {
-    quote: "My Sacred Blueprint reading completely shifted how I see my healing journey. Sonatta connected my Human Design to my ceremony experience in a way that finally made everything make sense.",
+    quote: "My Sacred Blueprint reading completely shifted how I see my healing journey. The facilitator connected my Human Design to my ceremony experience in a way that finally made everything make sense.",
     name: "Maya R., Washington DC",
   },
   {
