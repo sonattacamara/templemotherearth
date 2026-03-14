@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    const { firstName, email, phone, birthDate, birthTime, birthCity } = await req.json();
+    const { firstName, lastName, email, phone, birthDate, birthTime, birthCity } = await req.json();
 
     // Validate required fields
     if (!firstName || typeof firstName !== "string" || firstName.trim().length === 0) {
@@ -52,6 +52,7 @@ serve(async (req) => {
     // Send to GoHighLevel
     const ghlPayload = {
       firstName: firstName.trim().slice(0, 100),
+      lastName: (lastName || "").trim().slice(0, 100),
       email: email.trim().toLowerCase().slice(0, 255),
       phone: (phone || "").trim().slice(0, 20),
       birthDate: birthDate.trim(),

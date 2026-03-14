@@ -23,7 +23,7 @@ const SacredBlueprint = () => {
     <div id="top" className="min-h-screen bg-background">
       <SEOHead
         title="Sacred Blueprint | Discover Your Human Design | Temple Mother Earth"
-        description="Discover your Sacred Blueprint — your unique Human Design chart decoded through a sacred lens. Get your free chart and book a reading with Sonatta Camara, PhD."
+        description="Discover your Sacred Blueprint — your unique Human Design chart decoded through a sacred lens. Get your free chart and book a reading with Temple Mother Earth."
         path="/sacred-blueprint"
       />
       <Navigation />

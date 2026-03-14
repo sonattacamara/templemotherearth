@@ -23,6 +23,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     birthDate: "",
@@ -36,7 +37,7 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.firstName.trim() || !formData.email.trim() || !formData.birthDate || !formData.birthCity.trim()) {
+    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.birthDate || !formData.birthCity.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
@@ -96,9 +97,14 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
                   <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Your first name" maxLength={100} required className="bg-card" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground">Email Address *</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" maxLength={255} required className="bg-card" />
+                  <Label htmlFor="lastName" className="text-foreground">Last Name *</Label>
+                  <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Your last name" maxLength={100} required className="bg-card" />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-foreground">Email Address *</Label>
+                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" maxLength={255} required className="bg-card" />
               </div>
 
               <div className="space-y-2">
