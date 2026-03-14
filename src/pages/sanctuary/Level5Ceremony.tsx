@@ -32,10 +32,10 @@ const ritualSteps = [
   { time: "2:00–4:00 PM", title: "Integration Circle & Departure", body: "Each participant names what they experienced. Being witnessed seals the initiation. You leave carrying your 30-Day Integration Guide." },
 ];
 
-const hdTypes = [
-  { num: "01", type: "The Manifestor", tag: "To Initiate · Closed & Repelling Aura", body: "The Manifestor carries a fire that can destroy or create. The purge is often suppressed rage, creative frustration. What emerges is not a tamed Manifestor — it is a freed one." },
-  { num: "02", type: "Generator & MG", tag: "To Respond · Enveloping Aura", body: "A Generator who has been responding to the wrong things feels fundamentally broken. Post-Kambo, Generators frequently report a return of their Sacral response — clarity about what genuinely excites them." },
-  { num: "03", type: "The Projector", tag: "To Guide · Focused & Absorbing Aura", body: "The Projector sees everything. Kambo removes what was never yours. What returns is native clarity and authority — guidance no longer tinged with the need for validation." },
+const whoCards = [
+  { num: "01", type: "The One Who Has Done the Work", tag: "Ready for the Threshold", body: "You have sat in ceremony before. You have done the inner work. Something in you knows: the next level of your healing requires a deeper purification than what you have accessed so far." },
+  { num: "02", type: "The One Carrying What Words Cannot Reach", tag: "Beyond Talk · Into the Body", body: "Therapy helped. Meditation helped. But something remains lodged in the body, beneath language, beneath understanding. Kambo reaches what the mind cannot." },
+  { num: "03", type: "The One Being Called", tag: "Trust the Knowing", body: "No logic. No explanation. Just a persistent knowing that this is next. If you have been circling this ceremony, that is not curiosity. That is preparation completing itself." },
 ];
 
 const Level5Ceremony = () => (
@@ -50,8 +50,15 @@ const Level5Ceremony = () => (
 
     {/* HERO */}
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050804]">
+      <img
+        src="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+        alt="Sacred ceremony space with candlelight"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "saturate(0.3) brightness(0.25) hue-rotate(-10deg)" }}
+        loading="eager"
+      />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_60%,rgba(45,74,40,0.4)_0%,transparent_60%),radial-gradient(ellipse_100%_50%_at_50%_100%,rgba(91,168,74,0.08)_0%,transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_40%_at_50%_80%,rgba(61,107,53,0.12)_0%,transparent_60%)] animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#050804] via-[rgba(5,8,4,0.6)] to-[rgba(5,8,4,0.3)]" />
 
       <motion.div
         className="relative z-10 text-center px-10 max-w-[1000px]"
@@ -151,12 +158,12 @@ const Level5Ceremony = () => (
     {/* WHO THIS IS FOR */}
     <SanctuarySection className="bg-[#111D0F]" eyebrow="Who This Initiation Is For" title={<>See Yourself<br /><em className="font-serif italic text-[#5BA84A] text-[1.1em]">In This Initiation</em></>}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-[rgba(91,168,74,0.06)] mt-16">
-        {hdTypes.map((hd) => (
-          <div key={hd.num} className="bg-[#050804] p-12 border-b-[3px] border-transparent hover:bg-[rgba(11,20,10,0.9)] hover:border-[#5BA84A] transition-all">
-            <span className="font-sans text-[60px] font-black text-[rgba(91,168,74,0.08)] leading-none block mb-[-10px]">{hd.num}</span>
-            <h3 className="font-serif text-2xl italic text-[#C8A030] mb-1.5">{hd.type}</h3>
-            <span className="font-sans text-[8px] tracking-[2px] uppercase text-[#8A9E84] block mb-6">{hd.tag}</span>
-            <p className="text-base text-[#F0EAD6] leading-[1.85] opacity-82">{hd.body}</p>
+        {whoCards.map((card) => (
+          <div key={card.num} className="bg-[#050804] p-12 border-b-[3px] border-transparent hover:bg-[rgba(11,20,10,0.9)] hover:border-[#5BA84A] transition-all">
+            <span className="font-sans text-[60px] font-black text-[rgba(91,168,74,0.08)] leading-none block mb-[-10px]">{card.num}</span>
+            <h3 className="font-serif text-2xl italic text-[#C8A030] mb-1.5">{card.type}</h3>
+            <span className="font-sans text-[8px] tracking-[2px] uppercase text-[#8A9E84] block mb-6">{card.tag}</span>
+            <p className="text-base text-[#F0EAD6] leading-[1.85] opacity-82">{card.body}</p>
           </div>
         ))}
       </div>
@@ -183,7 +190,14 @@ const Level5Ceremony = () => (
 
     {/* FINAL CTA */}
     <section className="text-center py-44 px-6 md:px-[60px] relative overflow-hidden bg-[#050804]">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(45,74,40,0.3)_0%,transparent_60%)] animate-pulse" />
+      <img
+        src="https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop"
+        alt="Misty jungle canopy at dawn"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "saturate(0.3) brightness(0.18) hue-rotate(-10deg)" }}
+      />
+      <div className="absolute inset-0 bg-[rgba(5,8,4,0.75)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(45,74,40,0.3)_0%,transparent_60%)]" />
       <div className="relative z-10">
         <p className="font-sans text-[8px] tracking-[6px] uppercase text-[#5BA84A] mb-8">By Application Only</p>
         <h2 className="font-sans text-[clamp(40px,7vw,100px)] font-black text-[#F0EAD6] leading-[0.95] mb-10 tracking-[-3px]">

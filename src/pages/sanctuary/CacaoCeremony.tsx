@@ -59,8 +59,15 @@ const CacaoCeremony = () => {
 
       {/* HERO */}
       <section className="relative min-h-screen grid place-items-center overflow-hidden bg-[#2C1810]">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_30%,rgba(201,150,58,0.18)_0%,transparent_55%),radial-gradient(ellipse_100%_80%_at_0%_100%,rgba(74,44,26,0.8)_0%,transparent_50%)]" />
-        <div className="absolute w-[600px] h-[600px] rounded-full border border-[rgba(201,150,58,0.12)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" />
+        <img
+          src="https://images.pexels.com/photos/6542704/pexels-photo-6542704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Ceremonial cacao in sacred space"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.5) brightness(0.3)" }}
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810] via-[rgba(44,24,16,0.7)] to-[rgba(44,24,16,0.3)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_30%,rgba(201,150,58,0.18)_0%,transparent_55%)]" />
         <motion.div
           className="relative z-10 text-center px-10 max-w-[900px]"
           initial={{ opacity: 0, y: 30 }}
@@ -290,7 +297,13 @@ const CacaoCeremony = () => {
 
       {/* FINAL CTA */}
       <section className="bg-[#2C1810] py-40 px-6 md:px-[60px] text-center relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[radial-gradient(ellipse,rgba(201,150,58,0.1)_0%,transparent_70%)]" />
+        <img
+          src="https://images.pexels.com/photos/5946081/pexels-photo-5946081.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+          alt="Sacred ceremonial fire"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.4) brightness(0.2)" }}
+        />
+        <div className="absolute inset-0 bg-[rgba(44,24,16,0.85)]" />
         <div className="relative z-10">
           <Eyebrow>Your Heart Is Ready</Eyebrow>
           <h2 className="font-display text-[clamp(36px,5vw,72px)] font-bold text-[#F5EDD8] leading-[1.1] mb-6">This Is Your<br />Invitation</h2>
