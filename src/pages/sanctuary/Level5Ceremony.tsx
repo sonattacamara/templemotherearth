@@ -190,7 +190,14 @@ const Level5Ceremony = () => (
 
     {/* FINAL CTA */}
     <section className="text-center py-44 px-6 md:px-[60px] relative overflow-hidden bg-[#050804]">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(45,74,40,0.3)_0%,transparent_60%)] animate-pulse" />
+      <img
+        src="https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop"
+        alt="Misty jungle canopy at dawn"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "saturate(0.3) brightness(0.18) hue-rotate(-10deg)" }}
+      />
+      <div className="absolute inset-0 bg-[rgba(5,8,4,0.75)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(45,74,40,0.3)_0%,transparent_60%)]" />
       <div className="relative z-10">
         <p className="font-sans text-[8px] tracking-[6px] uppercase text-[#5BA84A] mb-8">By Application Only</p>
         <h2 className="font-sans text-[clamp(40px,7vw,100px)] font-black text-[#F0EAD6] leading-[0.95] mb-10 tracking-[-3px]">

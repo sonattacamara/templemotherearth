@@ -284,9 +284,15 @@ const EarthKingdoms = () => {
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_100%,rgba(45,120,35,0.15)_0%,transparent_60%),radial-gradient(ellipse_80%_50%_at_20%_50%,rgba(123,111,160,0.08)_0%,transparent_50%)] bg-[#050604]" />
-        <div className="absolute w-[800px] h-[800px] rounded-full border border-[rgba(200,160,48,0.06)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" />
-        <div className="absolute w-[600px] h-[600px] rounded-full border border-[rgba(200,160,48,0.1)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse [animation-delay:-2s]" />
+        <img
+          src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Ancient forest canopy reaching toward light"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.4) brightness(0.22) hue-rotate(-15deg)" }}
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050604] via-[rgba(5,6,4,0.6)] to-[rgba(5,6,4,0.3)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_100%,rgba(45,120,35,0.15)_0%,transparent_60%)]" />
 
         <motion.div className="relative z-10 text-center px-10 max-w-[1000px]" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <p className="font-sans text-[9px] tracking-[6px] uppercase text-[#C8A030] mb-7">Temple Mother Earth · The Living Foundation</p>
