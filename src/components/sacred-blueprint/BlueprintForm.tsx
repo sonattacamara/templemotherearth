@@ -97,9 +97,14 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
                   <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Your first name" maxLength={100} required className="bg-card" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-foreground">Email Address *</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" maxLength={255} required className="bg-card" />
+                  <Label htmlFor="lastName" className="text-foreground">Last Name *</Label>
+                  <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Your last name" maxLength={100} required className="bg-card" />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-foreground">Email Address *</Label>
+                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" maxLength={255} required className="bg-card" />
               </div>
 
               <div className="space-y-2">
