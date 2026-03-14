@@ -107,8 +107,9 @@ const App = () => (
             <Route path="/yin-yoga" element={<SacredYinYoga />} />
             <Route path="/art-expo" element={<SacredArtExpo />} />
             <Route path="/tea-house" element={<SacredTeaHouse />} />
-            <Route path="/cacao" element={<SanctuaryWeek />} />
-            <Route path="/level5" element={<SanctuaryWeek />} />
+            <Route path="/cacao" element={<CacaoCeremony />} />
+            <Route path="/level5" element={<Level5Ceremony />} />
+            <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
