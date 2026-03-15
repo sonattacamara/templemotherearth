@@ -108,8 +108,8 @@ const JoinFacilitator = () => {
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Describe your training, certifications, and experience... *" value={form.experience} onChange={(e) => update("experience", e.target.value)} required />
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="What calls you to serve at Temple Mother Earth? *" value={form.whyJoin} onChange={(e) => update("whyJoin", e.target.value)} required />
                 <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Anything else you'd like us to know?" value={form.additionalInfo} onChange={(e) => update("additionalInfo", e.target.value)} />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Share Your Calling <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Share Your Calling <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>

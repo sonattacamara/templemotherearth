@@ -104,8 +104,8 @@ const Sponsor = () => {
                   ))}
                 </div>
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Tell us more about your interest in sponsoring Temple Mother Earth... *" value={form.message} onChange={(e) => update("message", e.target.value)} required />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Send With Love <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Send With Love <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>

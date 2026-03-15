@@ -144,8 +144,8 @@ const Volunteer = () => {
                 <input className={inputClass} placeholder="Availability (e.g., weekends, evenings, flexible)" value={form.availability} onChange={(e) => update("availability", e.target.value)} />
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any relevant experience or skills?" value={form.experience} onChange={(e) => update("experience", e.target.value)} />
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Why do you want to volunteer with Temple Mother Earth? *" value={form.whyJoin} onChange={(e) => update("whyJoin", e.target.value)} required />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Offer Your Service <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Offer Your Service <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>
