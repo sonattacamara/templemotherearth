@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ArrowRight, Eye, EyeOff } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { lovable } from "@/integrations/lovable/index";
 import PasswordRequirements from "@/components/PasswordRequirements";
 import { isPasswordValid } from "@/lib/passwordValidation";
 import logo from "@/assets/logo.png";
