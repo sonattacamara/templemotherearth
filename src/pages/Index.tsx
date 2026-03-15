@@ -213,7 +213,7 @@ const Index = () => {
       </section>
 
       {/* ── FIND YOUR PATH — Quick Engagement ── */}
-      <section className="bg-card px-4 py-12 md:py-16">
+      <section className="bg-gradient-warm px-4 py-12 md:py-16">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
