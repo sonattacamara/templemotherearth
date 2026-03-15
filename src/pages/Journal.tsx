@@ -14,6 +14,53 @@ const fadeUp = {
 
 const posts = [
   {
+    slug: "the-warriors-reset-kambo",
+    title: "The Warrior's Reset: Understanding the Sacred Science of Kambo",
+    date: "March 12, 2026",
+    excerpt:
+      "Kambo — the secretion of the giant monkey frog — has been used by indigenous Amazonian tribes for centuries as a powerful warrior's reset. Now, seekers across the Washington DC, Maryland, and Virginia region are discovering its transformative potential for detoxification, clarity, and spiritual renewal.",
+    image: "/src/assets/offering-ceremony.jpg",
+    body: `There is a reason the Matsés, Mayoruna, and other indigenous peoples of the Amazon call Kambo "the vaccine of the forest." For centuries, hunters would administer the secretion of the Phyllomedusa bicolor — the giant monkey frog — before a hunt. It sharpened their senses, cleared their bodies of illness, and reconnected them to the intelligence of the jungle.
+
+Today, this ancient warrior's medicine has found its way to seekers around the world — including right here in the DMV (Washington DC, Maryland, and Virginia). At Temple Mother Earth, we hold Kambo ceremonies with the reverence, safety, and sacred container this powerful medicine demands.
+
+**What is Kambo?**
+
+Kambo is a bioactive peptide secretion collected ethically from the Phyllomedusa bicolor frog. The frog is not harmed in this process — it is gently captured, its secretion is collected, and it is returned to the forest. The secretion contains a complex cocktail of peptides that interact with the human body in profound ways:
+
+• **Dermorphin** — 30–40x more potent than morphine, providing deep pain relief
+• **Phyllomedusin** — stimulates the gut and digestive system
+• **Dermaseptin** — a powerful antimicrobial agent
+• **Adenoregulin** — works with the adenosine receptor, impacting mood and energy
+
+When applied to small superficial burns on the skin, these peptides enter the lymphatic system directly. What follows is an intense but brief purge — typically lasting 20 to 40 minutes — that many describe as a deep cellular reset.
+
+**The Purge is the Medicine**
+
+In Western culture, we have been conditioned to fear the purge. But in indigenous medicine traditions, the purge is sacred. It is the body's intelligent release of what no longer serves — toxins, stagnant energy, stored grief, and even physical illness.
+
+Our community members in the DC, Maryland, and Virginia area consistently report:
+• Dramatic increases in mental clarity and focus
+• Relief from chronic pain and inflammation
+• Emotional release and a feeling of lightness
+• Strengthened immune response
+• A renewed sense of purpose and warrior energy
+
+**Safety and the Sacred Container**
+
+Kambo is powerful medicine, and it must be administered with training, care, and respect. At Temple Mother Earth, every Kambo ceremony is led by trained facilitators who have apprenticed directly with indigenous practitioners. We conduct thorough health screenings, maintain proper hydration protocols, and hold space with prayer and intention.
+
+This is not recreational. This is medicine work.
+
+**Who is Kambo For?**
+
+Kambo is for the seeker who is ready to shed what is heavy. It is for veterans carrying the weight of service. It is for mothers, fathers, healers, and hustlers who know that something needs to shift at a level deeper than the mind can reach.
+
+If you are in Washington DC, Maryland, Virginia, or anywhere in the greater DMV area and feel the call, we invite you to explore this ancient warrior's reset with us.
+
+🌿 *Visit our Kambo page or reach out through our Sacred Intake Form to begin your journey.*`,
+  },
+  {
     slug: "opening-the-heart-cacao-ceremony-2026",
     title: "Opening the Heart: Our First Cacao Ceremony of the Year",
     date: "March 15, 2026",
