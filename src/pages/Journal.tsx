@@ -166,16 +166,27 @@ const Journal = () => {
                   })}
                 </div>
                 <div className="mt-8 pt-6 border-t border-border">
-                  <a
-                    href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-                  >
-                    <Heart className="h-4 w-4" />
-                    Register for the Cacao Ceremony
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
+                  {post.slug.includes("kambo") ? (
+                    <Link
+                      to="/kambo"
+                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                    >
+                      <Heart className="h-4 w-4" />
+                      Learn More About Kambo
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  ) : (
+                    <a
+                      href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                    >
+                      <Heart className="h-4 w-4" />
+                      Register for Upcoming Ceremonies
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>
