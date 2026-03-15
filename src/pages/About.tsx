@@ -98,7 +98,7 @@ const About = () => {
             <motion.div variants={fadeUp} className="relative">
               <img
                 src={sacredSpace}
-                alt="Temple Mother Earth sacred space"
+                alt="Temple Mother Earth sacred sanctuary space for Kambo, Ayahuasca, and Hapé ceremonies in Washington DC"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
