@@ -302,7 +302,7 @@ const Membership = () => {
       </section>
 
       {/* ───── THE PATHWAY (Sequential, not grid) ───── */}
-      <section className="bg-card px-4 py-24 md:py-32">
+      <section className="bg-gradient-warm px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-2xl"
           initial="hidden"
