@@ -59,8 +59,8 @@ serve(async (req) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        email: String(email).trim(),
-        name: String(full_name || "").trim(),
+        email: emailStr,
+        name: nameStr,
         source: "temple-mother-earth-welcome-circle",
         event: "new_member_signup",
         tier: "welcome-circle",
