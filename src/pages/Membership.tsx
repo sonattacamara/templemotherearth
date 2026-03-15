@@ -318,7 +318,7 @@ const Membership = () => {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-4xl"
+            className="mt-4 text-center font-display text-3xl font-semibold text-card-foreground md:text-4xl"
           >
             Welcome → Belong → Train → Prepare → Embody
           </motion.h2>
