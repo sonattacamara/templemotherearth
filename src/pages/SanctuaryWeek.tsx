@@ -237,7 +237,7 @@ const SanctuaryWeek = () => (
           <em className="font-serif italic text-[hsl(45,70%,49%)] text-[1.1em]">Week</em>
         </h1>
         <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,68%)] max-w-[580px] leading-relaxed mb-12">
-          In 2020, when the world closed its doors, we opened ours. What began as a whisper has become a rooted temple. This March, we celebrate. Ten days. Ten ceremonies. One sacred container. Come home.
+          In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. This March, we gather again. Ten days. Ten ceremonies. One sacred container. Come home.
         </p>
         <div className="flex gap-4 flex-wrap">
           <a href="#ceremonies" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(100,20%,3%)] hover:bg-[hsl(45,70%,60%)] transition-all">
