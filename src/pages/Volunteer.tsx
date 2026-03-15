@@ -1,7 +1,9 @@
 import { motion, type Easing } from "framer-motion";
-import { Heart, Users, Leaf, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Heart, Users, Leaf, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
@@ -17,6 +19,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const Volunteer = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     fullName: "", email: "", phone: "", availability: "",
     interests: "", experience: "", whyJoin: "",
@@ -112,7 +115,20 @@ const Volunteer = () => {
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
                 Tell us about yourself and how you'd like to serve. We welcome all skill levels and backgrounds.
               </p>
-              <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+              <form className="mt-10 space-y-5" onSubmit={async (e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                try {
+                  const { error } = await supabase.functions.invoke("submit-volunteer", { body: form });
+                  if (error) throw error;
+                  setSubmitted(true);
+                } catch (err) {
+                  console.error(err);
+                  toast.error("Something went wrong. Please try again.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number" value={form.phone} onChange={(e) => update("phone", e.target.value)} />
@@ -128,8 +144,8 @@ const Volunteer = () => {
                 <input className={inputClass} placeholder="Availability (e.g., weekends, evenings, flexible)" value={form.availability} onChange={(e) => update("availability", e.target.value)} />
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any relevant experience or skills?" value={form.experience} onChange={(e) => update("experience", e.target.value)} />
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Why do you want to volunteer with Temple Mother Earth? *" value={form.whyJoin} onChange={(e) => update("whyJoin", e.target.value)} required />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Offer Your Service <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Offer Your Service <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>

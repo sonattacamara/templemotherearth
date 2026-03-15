@@ -1,7 +1,9 @@
 import { motion, type Easing } from "framer-motion";
-import { Sparkles, ArrowRight, CheckCircle2, Shield, Heart, Users } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2, Shield, Heart, Users, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
@@ -17,6 +19,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const JoinFacilitator = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     fullName: "", email: "", phone: "", location: "",
     background: "", modality: "", experience: "",
@@ -75,7 +78,20 @@ const JoinFacilitator = () => {
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
                 Tell us about your background, training, and what calls you to serve at Temple Mother Earth.
               </p>
-              <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+              <form className="mt-10 space-y-5" onSubmit={async (e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                try {
+                  const { error } = await supabase.functions.invoke("submit-facilitator", { body: form });
+                  if (error) throw error;
+                  setSubmitted(true);
+                } catch (err) {
+                  console.error(err);
+                  toast.error("Something went wrong. Please try again.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
@@ -92,8 +108,8 @@ const JoinFacilitator = () => {
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Describe your training, certifications, and experience... *" value={form.experience} onChange={(e) => update("experience", e.target.value)} required />
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="What calls you to serve at Temple Mother Earth? *" value={form.whyJoin} onChange={(e) => update("whyJoin", e.target.value)} required />
                 <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Anything else you'd like us to know?" value={form.additionalInfo} onChange={(e) => update("additionalInfo", e.target.value)} />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Share Your Calling <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Share Your Calling <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>

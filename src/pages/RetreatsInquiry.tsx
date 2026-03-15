@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users, Sparkles } from "lucide-react";
+import { Globe, ArrowRight, CheckCircle2, MapPin, Calendar, Users, Sparkles, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
@@ -23,6 +25,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const RetreatsInquiry = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     fullName: "", email: "", phone: "", retreatInterest: "",
     groupSize: "", dates: "", experience: "", dietaryNeeds: "",
@@ -135,7 +138,20 @@ const RetreatsInquiry = () => {
                 Fill out this form and our team will reach out with immersion details, pricing, and preparation guidelines.
                 All immersion participants will also need to complete a medical intake before ceremony.
               </p>
-              <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+              <form className="mt-10 space-y-5" onSubmit={async (e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                try {
+                  const { error } = await supabase.functions.invoke("submit-retreats-inquiry", { body: form });
+                  if (error) throw error;
+                  setSubmitted(true);
+                } catch (err) {
+                  console.error(err);
+                  toast.error("Something went wrong. Please try again.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
@@ -162,8 +178,8 @@ const RetreatsInquiry = () => {
                 <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="What are you seeking from this retreat? Share your intentions..." value={form.intentions} onChange={(e) => update("intentions", e.target.value)} />
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any medical concerns or conditions we should know about?" value={form.medicalConcerns} onChange={(e) => update("medicalConcerns", e.target.value)} />
                 <input className={inputClass} placeholder="How did you hear about us?" value={form.howHeard} onChange={(e) => update("howHeard", e.target.value)} />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Send With Intention <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Send With Intention <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>
