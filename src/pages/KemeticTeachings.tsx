@@ -208,7 +208,7 @@ const KemeticTeachings = () => {
         <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="flex justify-center mb-6">
-              <img src={drGeorge} alt="Dr. George Xavier Love, Jr." className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover object-[center_15%] border-4 border-secondary/40 shadow-xl" />
+              <img src={drGeorge} alt="Dr. George Xavier Love, Jr., Kemetic wisdom keeper and Qigong master at Temple Mother Earth" className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover object-[center_15%] border-4 border-secondary/40 shadow-xl" />
             </motion.div>
             <motion.p variants={fadeUp} className="text-secondary font-body text-sm tracking-[0.25em] uppercase mb-4">
               Temple Mother Earth Presents
