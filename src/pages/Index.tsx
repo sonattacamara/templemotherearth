@@ -116,7 +116,7 @@ const Index = () => {
   usePageTracking();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-earth">
       <SEOHead
         title="Temple Mother Earth — Sacred Healing Sanctuary in Washington, DC"
         description="A spiritual sanctuary offering Kambo ceremonies, ayahuasca retreats, plant medicine healing, yoga, and community wellness in Washington DC. Est. 2020."
@@ -135,7 +135,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 max-w-3xl"
@@ -156,7 +156,7 @@ const Index = () => {
           />
            <motion.h1
             variants={fadeUp}
-            className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
+            className="font-display text-4xl font-semibold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
           >
             Welcome to
             <br />
@@ -213,7 +213,7 @@ const Index = () => {
       </section>
 
       {/* ── FIND YOUR PATH — Quick Engagement ── */}
-      <section className="bg-card px-4 py-12 md:py-16">
+      <section className="bg-gradient-warm px-4 py-12 md:py-16">
         <motion.div
           className="mx-auto max-w-5xl"
           initial="hidden"
@@ -291,7 +291,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE II — THE AWAKENING
           ═══════════════════════════════════════════ */}
-      <section id="awakening" className="px-4 py-14 md:py-20">
+      <section id="awakening" className="px-4 py-14 md:py-20 bg-gradient-sanctuary">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"
@@ -300,7 +300,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="The Awakening" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-foreground md:text-5xl">
             You Are Your Own Healer
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-10 grid gap-10 md:grid-cols-2 items-center">
@@ -368,7 +368,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE III — CHOOSE YOUR PATH
           ═══════════════════════════════════════════ */}
-      <section id="offerings" className="bg-card px-4 py-14 md:py-20">
+      <section id="offerings" className="bg-gradient-warm px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-6xl"
           initial="hidden"
@@ -377,7 +377,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="Choose Your Path" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-card-foreground md:text-5xl">
             Sacred Experiences Await
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
@@ -464,7 +464,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="The Transformation" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-foreground md:text-5xl">
             What You Will Experience
           </motion.h2>
 
@@ -500,7 +500,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${communityImg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/85" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 mx-auto max-w-5xl"
@@ -510,7 +510,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="Your Sacred Community" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-primary-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-primary-foreground md:text-5xl">
             Your Sacred Community Awaits
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
@@ -563,7 +563,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${ctaFooterImg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/80" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 mx-auto max-w-3xl text-center"
@@ -573,7 +573,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="The Invitation" />
-          <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl font-semibold text-primary-foreground md:text-5xl">
             Does This Sound Like You?
           </motion.h2>
           <motion.div variants={fadeUp} className="mx-auto mt-10 max-w-xl text-left">
@@ -739,7 +739,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── GOOGLE REVIEWS ───── */}
-      <section id="reviews" className="bg-card px-4 py-14 md:py-20">
+      <section id="reviews" className="bg-gradient-warm px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
@@ -807,7 +807,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── CONTACT ───── */}
-      <section id="contact" className="bg-card px-4 py-14 md:py-20">
+      <section id="contact" className="bg-gradient-card-glow px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"

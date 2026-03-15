@@ -186,7 +186,7 @@ const Membership = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-earth">
       <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of healers and seekers." path="/membership" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Membership" }]} />
@@ -197,7 +197,7 @@ const Membership = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${communityImg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/80" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 max-w-2xl"
@@ -213,7 +213,7 @@ const Membership = () => {
           </motion.p>
           <motion.h1
             variants={fadeUp}
-            className="mt-6 font-display text-4xl font-bold text-primary-foreground md:text-6xl leading-tight"
+            className="mt-6 font-display text-4xl font-semibold text-primary-foreground md:text-6xl leading-tight"
           >
             You Belong Here.
             <br />
@@ -231,7 +231,7 @@ const Membership = () => {
       </section>
 
       {/* ───── PHILOSOPHY ───── */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="px-4 py-24 md:py-32 bg-gradient-sanctuary">
         <motion.div
           className="mx-auto max-w-2xl text-center"
           initial="hidden"
@@ -241,7 +241,7 @@ const Membership = () => {
         >
           <motion.h2
             variants={fadeUp}
-            className="font-display text-2xl font-bold text-foreground md:text-3xl"
+            className="font-display text-2xl font-semibold text-foreground md:text-3xl"
           >
             Why We Hold Space This Way
           </motion.h2>
@@ -302,7 +302,7 @@ const Membership = () => {
       </section>
 
       {/* ───── THE PATHWAY (Sequential, not grid) ───── */}
-      <section className="bg-card px-4 py-24 md:py-32">
+      <section className="bg-gradient-warm px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-2xl"
           initial="hidden"
@@ -318,7 +318,7 @@ const Membership = () => {
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="mt-4 text-center font-display text-3xl font-bold text-card-foreground md:text-4xl"
+            className="mt-4 text-center font-display text-3xl font-semibold text-card-foreground md:text-4xl"
           >
             Welcome → Belong → Train → Prepare → Embody
           </motion.h2>
@@ -338,7 +338,7 @@ const Membership = () => {
                 {i > 0 && <ThresholdDivider label="Next Threshold" />}
                 <motion.div
                   variants={fadeUp}
-                  className="rounded-2xl border border-border bg-background p-8 md:p-10"
+                  className="rounded-2xl border border-border bg-gradient-card-glow p-8 md:p-10"
                 >
                   {/* Identity + Name */}
                   <div className="flex items-start gap-4">
@@ -420,7 +420,7 @@ const Membership = () => {
       </section>
 
       {/* ───── FAQ ───── */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="px-4 py-24 md:py-32 bg-gradient-sanctuary">
         <motion.div
           className="mx-auto max-w-2xl"
           initial="hidden"
@@ -481,7 +481,7 @@ const Membership = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${ctaFooterImg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/85" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 mx-auto max-w-xl text-center"
