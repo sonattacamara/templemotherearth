@@ -9,8 +9,8 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = "https://templemotherearth.org";
-const DEFAULT_TITLE = "Temple Mother Earth — Sacred Healing Sanctuary in Washington, DC";
-const DEFAULT_DESC = "Temple Mother Earth is a sacred sanctuary offering Kambo ceremonies, ayahuasca retreats, Hapé (Rapé), cacao ceremonies, plant medicine healing, shamanic ceremonies, spiritual retreats, and integration circles in Washington, DC and internationally.";
+const DEFAULT_TITLE = "Temple Mother Earth — Sacred Ceremony Church · Washington, DC";
+const DEFAULT_DESC = "A 508(c)(1)(A) sacred medicine church offering sacramental ceremony, spiritual education, and congregational community in Washington DC. Est. 2020.";
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const SEOHead = ({

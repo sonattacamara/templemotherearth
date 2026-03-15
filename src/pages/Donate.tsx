@@ -126,10 +126,10 @@ const Donate = () => {
               </div>
               <div>
                 <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-                  Sacred Stewardship Fund
+                  Veterans Scholarship Fund
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Sponsor a veteran's healing and transformation journey
+                  Temple of Mother Earth · 501(c)(3) Nonprofit · EIN 85-4135623
                 </p>
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />

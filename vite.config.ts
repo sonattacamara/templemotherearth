@@ -26,9 +26,9 @@ export default defineConfig(({ mode }) => ({
       },
       manifest: {
         name: "Temple Mother Earth",
-        short_name: "TOME",
+        short_name: "TME",
         description: "A Sanctuary of Higher Consciousness — Sacred ceremonies, community, and spiritual growth.",
-        theme_color: "#c4501a",
+        theme_color: "#4A1E6B",
         background_color: "#f5f0eb",
         display: "standalone",
         orientation: "portrait-primary",

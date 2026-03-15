@@ -93,10 +93,10 @@ const DonationSuccess = () => {
             className="mx-auto mt-8 max-w-md rounded-xl border border-primary/20 bg-primary/5 p-5"
           >
             <p className="text-sm font-medium text-foreground">
-              <HandHeart className="inline h-4 w-4 mr-1" /> As a 501(c)(3) nonprofit, your donation is tax-deductible.
+              <HandHeart className="inline h-4 w-4 mr-1" /> Temple of Mother Earth is a 501(c)(3) nonprofit organization. EIN: 85-4135623.
             </p>
             <p className="mt-2 text-xs text-muted-foreground">
-              A receipt has been sent to your email via PayPal. Please retain it for your records. Our EIN is available upon request.
+              Your contribution is tax-deductible to the full extent permitted by law. No goods or services were provided in exchange for this donation. A receipt has been sent to your email via PayPal. Please retain it for your records.
             </p>
           </motion.div>
         </motion.div>

@@ -56,7 +56,7 @@ const Conduct = () => {
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I will treat all members, facilitators, and guests with respect and compassion.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I understand that what is shared in circle stays in circle — confidentiality is sacred.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I will not attend ceremonies under the influence of alcohol or recreational drugs.</li>
-                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I take full personal responsibility for my healing journey.</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I take full personal responsibility for my ceremonial journey.</li>
                 </ul>
               </div>
             </motion.div>
