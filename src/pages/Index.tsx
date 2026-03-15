@@ -300,7 +300,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="The Awakening" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-foreground md:text-5xl">
             You Are Your Own Healer
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-10 grid gap-10 md:grid-cols-2 items-center">
