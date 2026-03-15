@@ -54,7 +54,6 @@ const Journal = () => {
       <SEOHead
         title="Transmissions — Temple Mother Earth Journal"
         description="Sacred writings, ceremony reflections, and plant medicine wisdom from Temple Mother Earth in Washington, DC."
-        keywords="Cacao ceremony DC, plant medicine journal, Kambo healing blog, Ayahuasca integration, sacred ceremony Washington DC, spiritual healing DMV"
         canonicalUrl="https://templemotherearth.org/journal"
       />
       <Navigation />
