@@ -316,7 +316,7 @@ const Index = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={sacredSpace}
-                alt="Sacred space at Temple Mother Earth"
+                alt="Sacred ceremony space for Ayahuasca integration, Kambo healing, and Hapé rituals at Temple Mother Earth"
                 className="w-full h-80 object-cover"
                 loading="lazy"
               />
