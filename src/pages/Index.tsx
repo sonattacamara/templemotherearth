@@ -739,7 +739,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── GOOGLE REVIEWS ───── */}
-      <section id="reviews" className="bg-card px-4 py-14 md:py-20">
+      <section id="reviews" className="bg-gradient-warm px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-5xl text-center"
           initial="hidden"
