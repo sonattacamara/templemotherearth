@@ -569,7 +569,7 @@ const About = () => {
             <div className="relative order-1 md:order-2">
               <img
                 src={founderJames}
-                alt="King James"
+                alt="King James, co-founder of Temple Mother Earth, Kambo ceremony facilitator and veterans healing advocate"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
