@@ -420,7 +420,7 @@ const Membership = () => {
       </section>
 
       {/* ───── FAQ ───── */}
-      <section className="px-4 py-24 md:py-32">
+      <section className="px-4 py-24 md:py-32 bg-gradient-sanctuary">
         <motion.div
           className="mx-auto max-w-2xl"
           initial="hidden"
