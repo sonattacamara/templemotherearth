@@ -226,6 +226,15 @@ const Journal = () => {
                       Learn More About Kambo
                       <ArrowRight className="h-4 w-4" />
                     </Link>
+                  ) : post.slug.includes("integration") ? (
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                    >
+                      <Heart className="h-4 w-4" />
+                      Get Integration Support
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
                   ) : (
                     <a
                       href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
