@@ -485,7 +485,7 @@ const About = () => {
             <div className="relative">
               <img
                 src={founderSonatta}
-                alt="Dr. Sonatta Camara"
+                alt="Dr. Sonatta Camara, co-founder and spiritual director of Temple Mother Earth, Kambo and Hapé ceremony facilitator"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
