@@ -377,7 +377,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="Choose Your Path" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-card-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-card-foreground md:text-5xl">
             Sacred Experiences Await
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
