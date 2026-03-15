@@ -399,7 +399,7 @@ const Index = () => {
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={item.img}
-                      alt={item.title}
+                      alt={item.imgAlt}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
