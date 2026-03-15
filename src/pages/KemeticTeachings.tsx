@@ -589,7 +589,7 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
             <div className="w-full md:w-1/3 flex-shrink-0">
-              <img src={drGeorge} alt="Dr. George Xavier Love, Jr." className="w-full max-w-[280px] mx-auto rounded-2xl object-cover object-top border-2 border-secondary/20 shadow-xl" />
+              <img src={drGeorge} alt="Dr. George Xavier Love, Jr., Taoist Qigong master and Kambo spiritual elder at Temple Mother Earth" className="w-full max-w-[280px] mx-auto rounded-2xl object-cover object-top border-2 border-secondary/20 shadow-xl" />
               <div className="mt-6 flex justify-center gap-3">
                 <a href="https://instagram.com/drqilove" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-secondary transition-colors">
                   <Instagram size={16} /> @drqilove
