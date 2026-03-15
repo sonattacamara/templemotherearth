@@ -186,7 +186,7 @@ const Membership = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-earth">
       <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of healers and seekers." path="/membership" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Membership" }]} />
