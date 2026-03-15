@@ -1,7 +1,9 @@
 import { motion, type Easing } from "framer-motion";
-import { Sparkles, ArrowRight, CheckCircle2, Shield, Heart, Users } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2, Shield, Heart, Users, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
