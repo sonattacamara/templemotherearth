@@ -60,7 +60,7 @@ const offerings = [
     title: "International Immersions",
     desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
     img: offeringRetreat,
-    imgAlt: "International Ayahuasca and San Pedro healing retreat immersion in Costa Rica and Peru",
+    imgAlt: "International Ayahuasca and San Pedro sacred retreat immersion in Costa Rica and Peru",
     link: "/retreats-inquiry",
     isExternal: false,
     cta: "Explore Immersions",
