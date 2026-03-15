@@ -47,6 +47,7 @@ import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
 import EarthKingdoms from "./pages/EarthKingdoms";
+import Journal from "./pages/Journal";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
@@ -110,6 +111,7 @@ const App = () => (
             <Route path="/cacao" element={<CacaoCeremony />} />
             <Route path="/level5" element={<Level5Ceremony />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
+            <Route path="/journal" element={<Journal />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
