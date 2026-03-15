@@ -783,12 +783,12 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
-              { src: communityCeremonyGroup, alt: "Temple Mother Earth ceremony group gathering in white outdoors" },
-              { src: communityCircleGrass, alt: "Community circle sitting in the grass connecting hands" },
-              { src: communityGatheringIndoor, alt: "Temple Mother Earth indoor community gathering selfie" },
-              { src: communityPorchSelfie, alt: "Diverse community members gathering on porch steps" },
-              { src: communityRetreatJungle, alt: "International immersion retreat group in the jungle" },
-              { src: communityJoyBlanket, alt: "Community members sharing joy on a colorful blanket outdoors" },
+              { src: communityCeremonyGroup, alt: "Temple Mother Earth Kambo and Hapé ceremony group gathered in white for sacred healing outdoors" },
+              { src: communityCircleGrass, alt: "Community integration circle for Ayahuasca and Cacao ceremony participants connecting on the grass" },
+              { src: communityGatheringIndoor, alt: "Temple Mother Earth indoor gathering for Sananga, Blue Lotus, and Bobinsana plant medicine community" },
+              { src: communityPorchSelfie, alt: "Diverse sacred community members after Kambo and Guayusa ceremony gathering" },
+              { src: communityRetreatJungle, alt: "International Ayahuasca and San Pedro immersion retreat group in the Costa Rica jungle" },
+              { src: communityJoyBlanket, alt: "Community members sharing joy after Cacao and Hapé ceremony at Temple Mother Earth" },
             ].map((photo) => (
               <div key={photo.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
                 <img
