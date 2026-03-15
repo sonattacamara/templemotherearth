@@ -61,7 +61,7 @@ const Donate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Offerings & Tithes | Temple Mother Earth"
-        description="Make a tax-deductible offering to Temple Mother Earth. Support our 501(c)(3) nonprofit mission of healing, community, and preserving Earth Medicine traditions."
+        description="Make a tax-deductible donation to Temple of Mother Earth. Support our 501(c)(3) nonprofit mission of sacred education and community."
         path="/donate"
       />
       <Navigation />
