@@ -81,7 +81,13 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-    },
+      backgroundImage: {
+        'gradient-earth': 'var(--gradient-earth)',
+        'gradient-warm': 'var(--gradient-warm)',
+        'gradient-sanctuary': 'var(--gradient-sanctuary)',
+        'gradient-hero-overlay': 'var(--gradient-hero-overlay)',
+        'gradient-card-glow': 'var(--gradient-card-glow)',
+      },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
