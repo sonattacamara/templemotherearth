@@ -156,7 +156,7 @@ const Index = () => {
           />
            <motion.h1
             variants={fadeUp}
-            className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
+            className="font-display text-4xl font-semibold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
           >
             Welcome to
             <br />
