@@ -213,7 +213,7 @@ const Membership = () => {
           </motion.p>
           <motion.h1
             variants={fadeUp}
-            className="mt-6 font-display text-4xl font-bold text-primary-foreground md:text-6xl leading-tight"
+            className="mt-6 font-display text-4xl font-semibold text-primary-foreground md:text-6xl leading-tight"
           >
             You Belong Here.
             <br />
