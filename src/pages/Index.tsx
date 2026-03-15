@@ -368,7 +368,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE III — CHOOSE YOUR PATH
           ═══════════════════════════════════════════ */}
-      <section id="offerings" className="bg-card px-4 py-14 md:py-20">
+      <section id="offerings" className="bg-gradient-warm px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-6xl"
           initial="hidden"
