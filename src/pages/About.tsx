@@ -719,7 +719,7 @@ const About = () => {
                 <div className="relative h-80 overflow-hidden">
                   <img
                     src={person.img}
-                    alt={person.name}
+                    alt={person.imgAlt || person.name}
                     className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
                       person.name === "Samira Davis"
                         ? "object-[center_30%]"
