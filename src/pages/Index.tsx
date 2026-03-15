@@ -135,7 +135,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 max-w-3xl"
