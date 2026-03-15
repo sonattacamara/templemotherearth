@@ -80,7 +80,7 @@ serve(async (req) => {
 
     await supabase.from("form_submissions").insert({
       form_name: "welcome-circle-signup",
-      metadata: { email, full_name, user_id },
+      metadata: { email: emailStr, full_name: nameStr, user_id: userIdStr },
     });
 
     return new Response(JSON.stringify({ success: true }), {
