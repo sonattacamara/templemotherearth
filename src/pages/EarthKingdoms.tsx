@@ -286,7 +286,7 @@ const EarthKingdoms = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <img
           src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Ancient forest canopy reaching toward light"
+          alt="Ancient forest canopy for Ayahuasca, Psilocybin, and sacred plant medicine journeys"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "saturate(0.4) brightness(0.22) hue-rotate(-15deg)" }}
           loading="eager"

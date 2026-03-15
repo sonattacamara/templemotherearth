@@ -215,7 +215,7 @@ const SanctuaryWeek = () => (
     <section className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
       <img
         src="https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-        alt="Sacred ceremony space"
+        alt="Sacred ceremony sanctuary space for Kambo, Cacao, and Hapé healing rituals at Temple Mother Earth"
         className="absolute inset-0 w-full h-full object-cover saturate-50 brightness-50 -z-10"
         loading="eager"
       />
