@@ -927,7 +927,7 @@ const Index = () => {
             {/* Brand */}
             <div>
               <Link to="/" className="flex items-center gap-3">
-                <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
+                <img src={logo} alt="Temple Mother Earth sanctuary for Kambo and Ayahuasca healing" className="h-10 w-10 rounded-full object-cover" />
                 <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
               <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
