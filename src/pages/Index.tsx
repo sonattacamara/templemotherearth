@@ -807,7 +807,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ───── CONTACT ───── */}
-      <section id="contact" className="bg-card px-4 py-14 md:py-20">
+      <section id="contact" className="bg-gradient-card-glow px-4 py-14 md:py-20">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"
