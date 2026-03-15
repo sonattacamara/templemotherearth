@@ -147,7 +147,7 @@ const Index = () => {
           <motion.img
             variants={fadeUp}
             src={logo}
-            alt="Temple Mother Earth"
+            alt="Temple Mother Earth sacred healing sanctuary logo for Kambo, Ayahuasca, and plant medicine ceremonies in Washington DC"
             className="mx-auto mb-8 h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-primary/30 md:h-44 md:w-44"
           />
            <motion.h1
