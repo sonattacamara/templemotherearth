@@ -600,7 +600,7 @@ const About = () => {
             <div className="relative">
               <img
                 src={facilitatorGeorge}
-                alt="Dr. George Xavier Love, Jr. — High Priest of Temple Mother Earth"
+                alt="Dr. George Xavier Love, Jr., High Priest of Temple Mother Earth, Qigong master and Kemetic wisdom keeper"
                 className="rounded-2xl shadow-xl h-[500px] w-full object-cover object-[center_20%]"
                 loading="lazy"
               />
