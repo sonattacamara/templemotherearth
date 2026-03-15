@@ -288,7 +288,7 @@ const CeremonyIntake = () => {
         <Mail className="h-4 w-4" /> Schedule Consultation
       </a>
       <p className="text-xs text-muted-foreground">
-        If you believe this flag was triggered in error, please email us directly at info@templemotherearth.org
+        If you believe this flag was triggered in error, please email us directly at askus@templemotherearth.org
       </p>
     </div>
   );
