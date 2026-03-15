@@ -698,9 +698,9 @@ const About = () => {
               },
               {
                 name: "Jala Johnson",
-                role: "Creator of Metamorphosis Mind 801 · Sound Healing Practitioner",
+                role: "Creator of Metamorphosis Mind 801 · Sound Ceremony Practitioner",
                 img: facilitatorJala,
-                imgAlt: "Jala Johnson, sound healing practitioner and Cacao ceremony facilitator at Temple Mother Earth",
+                imgAlt: "Jala Johnson, sound ceremony practitioner and Cacao ceremony facilitator at Temple Mother Earth",
                 desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, immersions, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
               {
