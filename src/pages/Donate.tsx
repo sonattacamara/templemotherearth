@@ -109,7 +109,7 @@ const Donate = () => {
                   Ceremony Scholarship Fund
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Gift the journey to someone who cannot afford sacred ceremony
+                  Temple Mother Earth · 508(c)(1)(A) Sacred Church
                 </p>
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />
