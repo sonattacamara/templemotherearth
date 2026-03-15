@@ -376,7 +376,7 @@ const CeremonyIntake = () => {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Are you serving in the armed forces? (If no, skip)</label>
-                {["Active Duty", "Veteran", "Retired"].map((opt) => (
+                {["None", "Active Duty", "Veteran", "Retired"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="armedForcesStatus" className={radioClass} checked={formData.armedForcesStatus === opt} onChange={() => update("armedForcesStatus", opt)} />
                     {opt}
