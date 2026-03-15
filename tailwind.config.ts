@@ -88,6 +88,7 @@ export default {
         'gradient-hero-overlay': 'var(--gradient-hero-overlay)',
         'gradient-card-glow': 'var(--gradient-card-glow)',
       },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
