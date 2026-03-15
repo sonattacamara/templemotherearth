@@ -111,6 +111,7 @@ const App = () => (
             <Route path="/cacao" element={<CacaoCeremony />} />
             <Route path="/level5" element={<Level5Ceremony />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
+            <Route path="/journal" element={<Journal />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
