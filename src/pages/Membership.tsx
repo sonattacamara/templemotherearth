@@ -338,7 +338,7 @@ const Membership = () => {
                 {i > 0 && <ThresholdDivider label="Next Threshold" />}
                 <motion.div
                   variants={fadeUp}
-                  className="rounded-2xl border border-border bg-background p-8 md:p-10"
+                  className="rounded-2xl border border-border bg-gradient-card-glow p-8 md:p-10"
                 >
                   {/* Identity + Name */}
                   <div className="flex items-start gap-4">
