@@ -98,7 +98,7 @@ const HomeFAQ = () => {
           className="mx-auto mt-4 max-w-xl text-center text-muted-foreground"
         >
           Everything you need to know about Temple Mother Earth, our
-          ceremonies, and your healing journey.
+          ceremonies, and your sacramental path.
         </motion.p>
 
         <div className="mt-12 space-y-3">

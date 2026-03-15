@@ -238,7 +238,7 @@ const About = () => {
               {
                 icon: Users,
                 label: "Value 3",
-                title: "Community, Connection & Collective Healing",
+                title: "Community, Connection & Collective Remembrance",
                 desc: "Our community is at the heart of everything we do. We believe that healing deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
                 detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we heal in relationship, not in isolation.",
               },
@@ -569,7 +569,7 @@ const About = () => {
             <div className="relative order-1 md:order-2">
               <img
                 src={founderJames}
-                alt="King James, co-founder of Temple Mother Earth, Kambo ceremony facilitator and veterans healing advocate"
+                alt="King James, co-founder of Temple Mother Earth, Kambo ceremony facilitator and veterans transformation advocate"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
@@ -686,8 +686,8 @@ const About = () => {
                 name: "Walter Spencer",
                 role: "Poet & Facilitator",
                 img: facilitatorSpencer,
-                imgAlt: "Walter Spencer, poet and Kambo ceremony facilitator at Temple Mother Earth, creator of The Cove men's healing circle",
-                desc: "A multi-medium artist from Prince George's County rooted in creativity and healing. Through poetry, plant medicine and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Healing & Reflection Circle — inviting men to slow down, soften, and be held.",
+                imgAlt: "Walter Spencer, poet and Kambo ceremony facilitator at Temple Mother Earth, creator of The Cove men's integration circle",
+                desc: "A multi-medium artist from Prince George's County rooted in creativity and healing. Through poetry, plant medicine and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle — inviting men to slow down, soften, and be held.",
               },
               {
                 name: "Samira Davis",
@@ -698,9 +698,9 @@ const About = () => {
               },
               {
                 name: "Jala Johnson",
-                role: "Creator of Metamorphosis Mind 801 · Sound Healing Practitioner",
+                role: "Creator of Metamorphosis Mind 801 · Sound Ceremony Practitioner",
                 img: facilitatorJala,
-                imgAlt: "Jala Johnson, sound healing practitioner and Cacao ceremony facilitator at Temple Mother Earth",
+                imgAlt: "Jala Johnson, sound ceremony practitioner and Cacao ceremony facilitator at Temple Mother Earth",
                 desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, immersions, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
               {

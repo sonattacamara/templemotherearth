@@ -86,7 +86,7 @@ const DonateHeroSplit = ({
         <div className="relative flex-1 min-h-[40vh] lg:min-h-0">
           <img
             src={heroImage}
-            alt="Sacred healing sanctuary for Kambo, Ayahuasca, and Cacao ceremonies at Temple Mother Earth"
+            alt="Sacred ceremony church for Kambo, Ayahuasca, and Cacao ceremonies at Temple Mother Earth"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
           />

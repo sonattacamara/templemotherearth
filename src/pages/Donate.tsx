@@ -61,7 +61,7 @@ const Donate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Offerings & Tithes | Temple Mother Earth"
-        description="Make a tax-deductible offering to Temple Mother Earth. Support our 501(c)(3) nonprofit mission of healing, community, and preserving Earth Medicine traditions."
+        description="Make a tax-deductible donation to Temple of Mother Earth. Support our 501(c)(3) nonprofit mission of sacred education and community."
         path="/donate"
       />
       <Navigation />
@@ -109,7 +109,7 @@ const Donate = () => {
                   Ceremony Scholarship Fund
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Gift the journey to someone who cannot afford sacred ceremony
+                  Temple Mother Earth · 508(c)(1)(A) Sacred Church
                 </p>
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />
@@ -126,10 +126,10 @@ const Donate = () => {
               </div>
               <div>
                 <h3 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-                  Sacred Stewardship Fund
+                  Veterans Scholarship Fund
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Sponsor a veteran's healing and transformation journey
+                  Temple of Mother Earth · 501(c)(3) Nonprofit · EIN 85-4135623
                 </p>
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />

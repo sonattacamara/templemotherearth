@@ -139,7 +139,7 @@ const DonationCTA = ({
               </p>
               <p>Your contributions directly fund:</p>
               <ul className="ml-4 list-disc space-y-1.5">
-                <li>Sacred ceremonies and community healing gatherings</li>
+                <li>Sacred ceremonies and community integration gatherings</li>
                 <li>Veteran and underserved community scholarship programs</li>
                 <li>Maintenance and expansion of our DC sanctuary</li>
                 <li>Facilitator training and Earth Medicine education</li>

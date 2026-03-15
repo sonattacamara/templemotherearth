@@ -60,7 +60,7 @@ const offerings = [
     title: "International Immersions",
     desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
     img: offeringRetreat,
-    imgAlt: "International Ayahuasca and San Pedro healing retreat immersion in Costa Rica and Peru",
+    imgAlt: "International Ayahuasca and San Pedro sacred retreat immersion in Costa Rica and Peru",
     link: "/retreats-inquiry",
     isExternal: false,
     cta: "Explore Immersions",
@@ -118,8 +118,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-earth">
       <SEOHead
-        title="Temple Mother Earth — Sacred Healing Sanctuary in Washington, DC"
-        description="A spiritual sanctuary offering Kambo ceremonies, ayahuasca retreats, plant medicine healing, yoga, and community wellness in Washington DC. Est. 2020."
+        title="Temple Mother Earth — Sacred Ceremony Church · Washington, DC"
+        description="A 508(c)(1)(A) sacred medicine church offering sacramental ceremony, spiritual education, and congregational community in Washington DC. Est. 2020."
         path="/"
       />
       <Navigation />
@@ -151,7 +151,7 @@ const Index = () => {
           <motion.img
             variants={fadeUp}
             src={logo}
-            alt="Temple Mother Earth sacred healing sanctuary logo for Kambo, Ayahuasca, and plant medicine ceremonies in Washington DC"
+            alt="Temple Mother Earth sacred ceremony church logo for Kambo and plant medicine sacraments in Washington DC"
             className="mx-auto mb-8 h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-primary/30 md:h-44 md:w-44"
           />
            <motion.h1
@@ -239,7 +239,7 @@ const Index = () => {
               {
                 icon: Compass,
                 title: "I'm Ready to Begin",
-                desc: "Complete our sacred intake to start your healing journey.",
+                desc: "Complete our sacred intake to begin your ceremonial path.",
                 link: "/ceremony-intake",
                 cta: "Begin Intake",
               },
@@ -585,7 +585,7 @@ const Index = () => {
                 { icon: RefreshCw, text: "You keep repeating the same cycles and patterns" },
                 { icon: HandHeart, text: "You're longing for spiritual connection but don't know where to start" },
                 { icon: Home, text: "You're searching for a community that truly sees and accepts you" },
-                { icon: Sparkles, text: "Something deep within is calling you toward a different kind of healing" },
+                { icon: Sparkles, text: "Something deep within is calling you toward a different kind of return" },
                 { icon: Sprout, text: "You're ready to grow but need a safe space to do it" },
               ].map((item) => (
                 <div key={item.text} className="flex items-start gap-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 p-4">
@@ -927,7 +927,7 @@ const Index = () => {
             {/* Brand */}
             <div>
               <Link to="/" className="flex items-center gap-3">
-                <img src={logo} alt="Temple Mother Earth sanctuary for Kambo and Ayahuasca healing" className="h-10 w-10 rounded-full object-cover" />
+                <img src={logo} alt="Temple Mother Earth sanctuary for Kambo and Ayahuasca sacrament" className="h-10 w-10 rounded-full object-cover" />
                 <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
               <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">

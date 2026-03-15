@@ -85,7 +85,7 @@ const PrivateCeremonies = () => {
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">What type of ceremony are you seeking? *</label>
-                  {["Kambo Healing Ceremony", "Hapé Session", "Sacred Mother Earth Ceremony", "Not sure — I'd like guidance from a facilitator"].map((opt) => (
+                  {["Kambo Purification Ceremony", "Hapé Session", "Sacred Mother Earth Ceremony", "Not sure — I'd like guidance from a facilitator"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="ceremonyType" className="mr-3 h-4 w-4 accent-primary" checked={form.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} required />
                       {opt}

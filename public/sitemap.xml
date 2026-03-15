@@ -19,4 +19,11 @@
   
   <url><loc>https://templemotherearth.org/conduct</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://templemotherearth.org/kambo</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/level-5</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/art-expo</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/sanctuary-week</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/sacred-blueprint</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/earth-kingdoms</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/community-care</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://templemotherearth.org/donate</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
 </urlset>
