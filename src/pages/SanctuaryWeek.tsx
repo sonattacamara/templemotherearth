@@ -237,7 +237,7 @@ const SanctuaryWeek = () => (
           <em className="font-serif italic text-[hsl(45,70%,49%)] text-[1.1em]">Week</em>
         </h1>
         <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,68%)] max-w-[580px] leading-relaxed mb-12">
-          In 2020, when the world closed its doors, we opened ours. Six years later, we're still here. And this March, we're celebrating. Ten days. Ten ceremonies. One sacred container. Come home.
+          In 2020, when the world closed its doors, we opened ours. What began as a whisper has become a rooted temple. This March, we celebrate. Ten days. Ten ceremonies. One sacred container. Come home.
         </p>
         <div className="flex gap-4 flex-wrap">
           <a href="#ceremonies" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(100,20%,3%)] hover:bg-[hsl(45,70%,60%)] transition-all">
@@ -254,7 +254,7 @@ const SanctuaryWeek = () => (
     <SanctuarySection eyebrow="Year Six · Spring Equinox 2026" title={<>Six Years Ago<br /><em className="font-serif italic text-[hsl(45,70%,49%)] text-[1.1em]">We Didn't Know What We Were Building</em></>}>
       <div className="text-xl leading-[1.85] text-[hsl(35,30%,68%)] max-w-[720px] mx-auto text-center font-serif space-y-6">
         <p>We only knew people needed somewhere to land. During the pandemic, when isolation became policy, when people lost their bodies, their community, their sense of what was real, Temple Mother Earth opened. Not despite the moment. Because of it.</p>
-        <p>Six years later, that somewhere has grown into a 508(c)(1)(A) sacred church, a 501(c)(3) nonprofit, a healing ecosystem, and a family. This March is our Grand Reopening, and the beginning of Year Six's most powerful chapter yet.</p>
+        <p>That somewhere has grown into a 508(c)(1)(A) sacred church, a 501(c)(3) nonprofit, a healing ecosystem, and a family. This March is our Grand Reopening, and the beginning of our most powerful chapter yet.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-16">
         {[
