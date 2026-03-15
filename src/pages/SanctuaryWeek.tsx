@@ -349,7 +349,7 @@ const SanctuaryWeek = () => (
           {[
             { title: "All 10 Ceremonies", desc: "Every offering across Sanctuary Week, from the gentlest Cacao circle to the full arc of Level 5 and the final Kambo purification on March 29." },
             { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18. What you are carrying. What you are asking the sacraments to support." },
-            { title: "Sacred Welcome Kit", desc: "Mailed to you or held for pickup. Ceremonial items, preparation guidance, and sacred objects chosen for your specific journey." },
+            { title: "Community Container", desc: "You are held by facilitators, elders, and fellow seekers throughout the entire arc. No one walks this path alone." },
             { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29. What opened. What is integrating. How to carry this into daily life." },
           ].map((item) => (
             <div key={item.title} className="bg-[hsla(100,20%,3%,0.5)] border border-[hsla(45,70%,49%,0.1)] p-7">

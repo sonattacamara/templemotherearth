@@ -982,9 +982,16 @@ const Index = () => {
               <p className="font-body text-xs text-primary-foreground/40">
                 © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
               </p>
-              <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
-                Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.
-              </p>
+              <div className="flex flex-col items-center gap-2 md:items-end">
+                <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
+                  Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.
+                </p>
+                <div className="flex gap-4 text-xs">
+                  <Link to="/conduct" className="text-primary-foreground/40 hover:text-primary transition-colors">Privacy Policy</Link>
+                  <span className="text-primary-foreground/20">|</span>
+                  <Link to="/conduct" className="text-primary-foreground/40 hover:text-primary transition-colors">RFRA Compliance</Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

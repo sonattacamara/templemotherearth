@@ -94,6 +94,10 @@ serve(async (req) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...body,
+        firstName: String(body.fullName || "").trim().split(/\s+/)[0] || "",
+        lastName: String(body.fullName || "").trim().split(/\s+/).slice(1).join(" ") || "",
+        dateOfBirth: body.dob || "",
+        integrationStatus: "Not Started",
         submittedAt: new Date().toISOString(),
         source: "temple-mother-earth-sacred-intake",
       }),
