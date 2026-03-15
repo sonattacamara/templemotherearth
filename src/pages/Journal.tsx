@@ -100,7 +100,8 @@ const Journal = () => {
     <>
       <SEOHead
         title="Transmissions — Temple Mother Earth Journal"
-        description="Sacred writings, ceremony reflections, and plant medicine wisdom from Temple Mother Earth in Washington, DC."
+        description="Sacred writings on Kambo detox, Cacao ceremonies, Ayahuasca integration, and plant medicine wisdom from Temple Mother Earth in Washington DC, Maryland, and Virginia."
+        path="/journal"
       />
       <Navigation />
       <main className="min-h-screen bg-background pt-24 pb-20">
