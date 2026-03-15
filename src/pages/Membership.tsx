@@ -241,7 +241,7 @@ const Membership = () => {
         >
           <motion.h2
             variants={fadeUp}
-            className="font-display text-2xl font-bold text-foreground md:text-3xl"
+            className="font-display text-2xl font-semibold text-foreground md:text-3xl"
           >
             Why We Hold Space This Way
           </motion.h2>
