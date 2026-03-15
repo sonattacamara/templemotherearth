@@ -585,7 +585,7 @@ const Index = () => {
                 { icon: RefreshCw, text: "You keep repeating the same cycles and patterns" },
                 { icon: HandHeart, text: "You're longing for spiritual connection but don't know where to start" },
                 { icon: Home, text: "You're searching for a community that truly sees and accepts you" },
-                { icon: Sparkles, text: "Something deep within is calling you toward a different kind of healing" },
+                { icon: Sparkles, text: "Something deep within is calling you toward a different kind of return" },
                 { icon: Sprout, text: "You're ready to grow but need a safe space to do it" },
               ].map((item) => (
                 <div key={item.text} className="flex items-start gap-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 p-4">
