@@ -41,9 +41,19 @@ serve(async (req) => {
     );
 
     const { email, full_name, user_id } = await req.json();
-    logStep("Welcome email request", { email, full_name });
 
-    if (!email) throw new Error("Email is required");
+    // Validate inputs
+    const emailStr = String(email || "").trim();
+    if (!emailStr || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailStr) || emailStr.length > 255) {
+      throw new Error("Valid email is required");
+    }
+    const nameStr = String(full_name || "").trim().slice(0, 100);
+    const userIdStr = String(user_id || "").trim();
+    if (userIdStr && !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(userIdStr)) {
+      throw new Error("Invalid user ID format");
+    }
+
+    logStep("Welcome email request", { email: emailStr, full_name: nameStr });
 
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",
