@@ -510,7 +510,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="Your Sacred Community" />
-          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-bold text-primary-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-primary-foreground md:text-5xl">
             Your Sacred Community Awaits
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
