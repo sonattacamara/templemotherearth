@@ -16,7 +16,10 @@ const getCorsHeaders = (req: Request) => {
   };
 };
 
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1";
+const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
+if (!GHL_WEBHOOK_URL) {
+  throw new Error("GHL_WEBHOOK_URL is not configured");
+}
 
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : "";
