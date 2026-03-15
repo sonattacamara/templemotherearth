@@ -282,13 +282,13 @@ const CeremonyIntake = () => {
         Based on your responses, a private pre-ceremony consultation with our Sacred Earth Medicine Keeper is required before you can participate. This is for your safety and wellbeing. Please click below to schedule your consultation.
       </p>
       <a
-        href="mailto:info@templemotherearth.org?subject=Pre-Ceremony%20Consultation%20Request&body=I%20completed%20the%20Sacred%20Intake%20form%20and%20was%20flagged%20for%20a%20pre-ceremony%20consultation.%20Please%20contact%20me%20to%20schedule."
+        href="mailto:askus@templemotherearth.org?subject=Pre-Ceremony%20Consultation%20Request&body=I%20completed%20the%20Sacred%20Intake%20form%20and%20was%20flagged%20for%20a%20pre-ceremony%20consultation.%20Please%20contact%20me%20to%20schedule."
         className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
       >
         <Mail className="h-4 w-4" /> Schedule Consultation
       </a>
       <p className="text-xs text-muted-foreground">
-        If you believe this flag was triggered in error, please email us directly at info@templemotherearth.org
+        If you believe this flag was triggered in error, please email us directly at askus@templemotherearth.org
       </p>
     </div>
   );
@@ -376,7 +376,7 @@ const CeremonyIntake = () => {
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Are you serving in the armed forces? (If no, skip)</label>
-                {["Active Duty", "Veteran", "Retired"].map((opt) => (
+                {["None", "Active Duty", "Veteran", "Retired"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="armedForcesStatus" className={radioClass} checked={formData.armedForcesStatus === opt} onChange={() => update("armedForcesStatus", opt)} />
                     {opt}
