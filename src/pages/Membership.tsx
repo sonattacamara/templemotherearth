@@ -481,7 +481,7 @@ const Membership = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${ctaFooterImg})` }}
         />
-        <div className="absolute inset-0 bg-foreground/85" />
+        <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
         <motion.div
           className="relative z-10 mx-auto max-w-xl text-center"
