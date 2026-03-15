@@ -116,7 +116,7 @@ const Index = () => {
   usePageTracking();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-earth">
       <SEOHead
         title="Temple Mother Earth — Sacred Healing Sanctuary in Washington, DC"
         description="A spiritual sanctuary offering Kambo ceremonies, ayahuasca retreats, plant medicine healing, yoga, and community wellness in Washington DC. Est. 2020."
