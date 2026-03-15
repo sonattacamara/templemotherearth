@@ -291,7 +291,7 @@ const Index = () => {
       {/* ═══════════════════════════════════════════
           STAGE II — THE AWAKENING
           ═══════════════════════════════════════════ */}
-      <section id="awakening" className="px-4 py-14 md:py-20">
+      <section id="awakening" className="px-4 py-14 md:py-20 bg-gradient-sanctuary">
         <motion.div
           className="mx-auto max-w-4xl"
           initial="hidden"
