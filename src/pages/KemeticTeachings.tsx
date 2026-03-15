@@ -685,7 +685,7 @@ const KemeticTeachings = () => {
       {/* ── FOOTER CTA ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ctaFooterImg} alt="" className="w-full h-full object-cover" />
+          <img src={ctaFooterImg} alt="Temple Mother Earth sacred healing community gathering for Cacao and Hapé ceremonies" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-foreground/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
