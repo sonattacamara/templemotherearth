@@ -573,7 +573,7 @@ const Index = () => {
           variants={stagger}
         >
           <JourneyStage label="The Invitation" />
-          <motion.h2 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">
+          <motion.h2 variants={fadeUp} className="font-display text-3xl font-semibold text-primary-foreground md:text-5xl">
             Does This Sound Like You?
           </motion.h2>
           <motion.div variants={fadeUp} className="mx-auto mt-10 max-w-xl text-left">
