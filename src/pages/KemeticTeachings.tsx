@@ -208,7 +208,7 @@ const KemeticTeachings = () => {
         <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="flex justify-center mb-6">
-              <img src={drGeorge} alt="Dr. George Xavier Love, Jr." className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover object-[center_15%] border-4 border-secondary/40 shadow-xl" />
+              <img src={drGeorge} alt="Dr. George Xavier Love, Jr., Kemetic wisdom keeper and Qigong master at Temple Mother Earth" className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover object-[center_15%] border-4 border-secondary/40 shadow-xl" />
             </motion.div>
             <motion.p variants={fadeUp} className="text-secondary font-body text-sm tracking-[0.25em] uppercase mb-4">
               Temple Mother Earth Presents
@@ -589,7 +589,7 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
             <div className="w-full md:w-1/3 flex-shrink-0">
-              <img src={drGeorge} alt="Dr. George Xavier Love, Jr." className="w-full max-w-[280px] mx-auto rounded-2xl object-cover object-top border-2 border-secondary/20 shadow-xl" />
+              <img src={drGeorge} alt="Dr. George Xavier Love, Jr., Taoist Qigong master and Kambo spiritual elder at Temple Mother Earth" className="w-full max-w-[280px] mx-auto rounded-2xl object-cover object-top border-2 border-secondary/20 shadow-xl" />
               <div className="mt-6 flex justify-center gap-3">
                 <a href="https://instagram.com/drqilove" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-primary-foreground/60 hover:text-secondary transition-colors">
                   <Instagram size={16} /> @drqilove
@@ -685,7 +685,7 @@ const KemeticTeachings = () => {
       {/* ── FOOTER CTA ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ctaFooterImg} alt="" className="w-full h-full object-cover" />
+          <img src={ctaFooterImg} alt="Temple Mother Earth sacred healing community gathering for Cacao and Hapé ceremonies" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-foreground/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">

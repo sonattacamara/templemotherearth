@@ -106,10 +106,10 @@ const RetreatsInquiry = () => {
             </motion.h3>
             <div className="grid gap-4 grid-cols-2">
               {[
-                { src: immersionAerial, alt: "Aerial view of the clifftop retreat property overlooking the Pacific Ocean in Sayulita, Mexico", caption: "Clifftop Sanctuary" },
-                { src: immersionHammock, alt: "Lush coastal hillside and beach in Sayulita, Mexico", caption: "Coastal Paradise" },
-                { src: immersionInterior, alt: "Hammock with turquoise ocean views from the retreat property", caption: "Ocean Views" },
-                { src: immersionPalapa, alt: "Thatched-roof palapa on the rocky beachfront in Sayulita", caption: "Beachfront Palapa" },
+                { src: immersionAerial, alt: "Aerial view of Ayahuasca and San Pedro retreat property overlooking the Pacific Ocean in Sayulita, Mexico", caption: "Clifftop Sanctuary" },
+                { src: immersionHammock, alt: "Lush coastal hillside for Kambo and Cacao ceremony immersion in Sayulita, Mexico", caption: "Coastal Paradise" },
+                { src: immersionInterior, alt: "Hammock with ocean views at sacred Psilocybin and Hapé healing retreat property", caption: "Ocean Views" },
+                { src: immersionPalapa, alt: "Thatched-roof palapa ceremony space for Iboga and Blue Lotus rituals on the beachfront", caption: "Beachfront Palapa" },
               ].map((img, i) => (
                 <motion.div key={i} variants={fadeUp} className="relative overflow-hidden rounded-2xl group">
                   <img

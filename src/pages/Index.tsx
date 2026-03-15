@@ -50,6 +50,7 @@ const offerings = [
     title: "Earth Medicine Ceremonies",
     desc: "Step into ancient rituals that awaken your soul and align with the sacred rhythms of nature.",
     img: offeringCeremony,
+    imgAlt: "Sacred Kambo ceremony circle with Hapé and Sananga rituals at Temple Mother Earth Washington DC",
     link: "https://www.eventbrite.com/o/29347213477#events",
     isExternal: true,
     cta: "Enter the Ceremony",
@@ -59,6 +60,7 @@ const offerings = [
     title: "International Immersions",
     desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
     img: offeringRetreat,
+    imgAlt: "International Ayahuasca and San Pedro healing retreat immersion in Costa Rica and Peru",
     link: "/retreats-inquiry",
     isExternal: false,
     cta: "Explore Immersions",
@@ -68,6 +70,7 @@ const offerings = [
     title: "Traveling Ceremonies",
     desc: "Invite the sacred to your community with ceremonies tailored to your unique path.",
     img: offeringTraveling,
+    imgAlt: "Traveling Kambo and Cacao ceremony facilitators bringing sacred plant medicine to communities",
     link: "/traveling-ceremonies",
     isExternal: false,
     cta: "Bring Us to You",
@@ -77,6 +80,7 @@ const offerings = [
     title: "1-on-1 / Private Ceremonies",
     desc: "Experience deeply personal sacred sessions designed around your unique intentions, needs, and path of transformation.",
     img: offeringPrivate,
+    imgAlt: "Private Kambo, Hapé, and Bobinsana ceremony session for personal healing and transformation",
     link: "/private-ceremonies",
     isExternal: false,
     cta: "Explore Private Ceremonies",
@@ -147,7 +151,7 @@ const Index = () => {
           <motion.img
             variants={fadeUp}
             src={logo}
-            alt="Temple Mother Earth"
+            alt="Temple Mother Earth sacred healing sanctuary logo for Kambo, Ayahuasca, and plant medicine ceremonies in Washington DC"
             className="mx-auto mb-8 h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-primary/30 md:h-44 md:w-44"
           />
            <motion.h1
@@ -316,7 +320,7 @@ const Index = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={sacredSpace}
-                alt="Sacred space at Temple Mother Earth"
+                alt="Sacred ceremony space for Ayahuasca integration, Kambo healing, and Hapé rituals at Temple Mother Earth"
                 className="w-full h-80 object-cover"
                 loading="lazy"
               />
@@ -395,7 +399,7 @@ const Index = () => {
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={item.img}
-                      alt={item.title}
+                      alt={item.imgAlt}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
@@ -779,12 +783,12 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
-              { src: communityCeremonyGroup, alt: "Temple Mother Earth ceremony group gathering in white outdoors" },
-              { src: communityCircleGrass, alt: "Community circle sitting in the grass connecting hands" },
-              { src: communityGatheringIndoor, alt: "Temple Mother Earth indoor community gathering selfie" },
-              { src: communityPorchSelfie, alt: "Diverse community members gathering on porch steps" },
-              { src: communityRetreatJungle, alt: "International immersion retreat group in the jungle" },
-              { src: communityJoyBlanket, alt: "Community members sharing joy on a colorful blanket outdoors" },
+              { src: communityCeremonyGroup, alt: "Temple Mother Earth Kambo and Hapé ceremony group gathered in white for sacred healing outdoors" },
+              { src: communityCircleGrass, alt: "Community integration circle for Ayahuasca and Cacao ceremony participants connecting on the grass" },
+              { src: communityGatheringIndoor, alt: "Temple Mother Earth indoor gathering for Sananga, Blue Lotus, and Bobinsana plant medicine community" },
+              { src: communityPorchSelfie, alt: "Diverse sacred community members after Kambo and Guayusa ceremony gathering" },
+              { src: communityRetreatJungle, alt: "International Ayahuasca and San Pedro immersion retreat group in the Costa Rica jungle" },
+              { src: communityJoyBlanket, alt: "Community members sharing joy after Cacao and Hapé ceremony at Temple Mother Earth" },
             ].map((photo) => (
               <div key={photo.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
                 <img
@@ -923,7 +927,7 @@ const Index = () => {
             {/* Brand */}
             <div>
               <Link to="/" className="flex items-center gap-3">
-                <img src={logo} alt="Temple Mother Earth" className="h-10 w-10 rounded-full object-cover" />
+                <img src={logo} alt="Temple Mother Earth sanctuary for Kambo and Ayahuasca healing" className="h-10 w-10 rounded-full object-cover" />
                 <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
               <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">

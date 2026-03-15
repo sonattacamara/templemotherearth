@@ -52,7 +52,7 @@ const Level5Ceremony = () => (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050804]">
       <img
         src="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-        alt="Sacred ceremony space with candlelight"
+        alt="Sacred ceremony space with candlelight for Kambo, Hapé, and Sananga purification rituals"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "saturate(0.3) brightness(0.25) hue-rotate(-10deg)" }}
         loading="eager"
@@ -192,7 +192,7 @@ const Level5Ceremony = () => (
     <section className="text-center py-44 px-6 md:px-[60px] relative overflow-hidden bg-[#050804]">
       <img
         src="https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop"
-        alt="Misty jungle canopy at dawn"
+        alt="Misty jungle canopy at dawn for Kambo, Ayahuasca, and Iboga deep healing ceremonies"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "saturate(0.3) brightness(0.18) hue-rotate(-10deg)" }}
       />

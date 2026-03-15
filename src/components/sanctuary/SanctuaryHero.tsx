@@ -37,7 +37,7 @@ const SanctuaryHero = ({
       <>
         <img
           src={backgroundImage}
-          alt=""
+          alt="Sacred ceremony sanctuary for Kambo, Cacao, and Hapé healing rituals at Temple Mother Earth"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.7] -z-10"
           loading="eager"
         />
