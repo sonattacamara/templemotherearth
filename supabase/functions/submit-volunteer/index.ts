@@ -6,7 +6,10 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1";
+const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
+if (!GHL_WEBHOOK_URL) {
+  throw new Error("GHL_WEBHOOK_URL is not configured");
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {

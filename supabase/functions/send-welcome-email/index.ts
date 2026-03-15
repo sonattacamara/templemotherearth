@@ -16,7 +16,10 @@ const getCorsHeaders = (req: Request) => {
   };
 };
 
-const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/vMRpHtI7DCeMXTjneZMn/webhook-trigger/4d155fcf-352a-4e01-b718-417f1d7817e1";
+const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
+if (!GHL_WEBHOOK_URL) {
+  throw new Error("GHL_WEBHOOK_URL is not configured");
+}
 
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : "";
@@ -38,16 +41,26 @@ serve(async (req) => {
     );
 
     const { email, full_name, user_id } = await req.json();
-    logStep("Welcome email request", { email, full_name });
 
-    if (!email) throw new Error("Email is required");
+    // Validate inputs
+    const emailStr = String(email || "").trim();
+    if (!emailStr || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailStr) || emailStr.length > 255) {
+      throw new Error("Valid email is required");
+    }
+    const nameStr = String(full_name || "").trim().slice(0, 100);
+    const userIdStr = String(user_id || "").trim();
+    if (userIdStr && !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(userIdStr)) {
+      throw new Error("Invalid user ID format");
+    }
+
+    logStep("Welcome email request", { email: emailStr, full_name: nameStr });
 
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        email: String(email).trim(),
-        name: String(full_name || "").trim(),
+        email: emailStr,
+        name: nameStr,
         source: "temple-mother-earth-welcome-circle",
         event: "new_member_signup",
         tier: "welcome-circle",
@@ -67,7 +80,7 @@ serve(async (req) => {
 
     await supabase.from("form_submissions").insert({
       form_name: "welcome-circle-signup",
-      metadata: { email, full_name, user_id },
+      metadata: { email: emailStr, full_name: nameStr, user_id: userIdStr },
     });
 
     return new Response(JSON.stringify({ success: true }), {
