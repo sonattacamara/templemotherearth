@@ -453,7 +453,7 @@ const About = () => {
             <motion.div variants={fadeUp}>
               <img
                 src={communityCircleGrass}
-                alt="Community circle of men sitting together on the grass at Temple Mother Earth"
+                alt="Community integration circle for Ayahuasca, Kambo, and Cacao ceremony participants at Temple Mother Earth"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
