@@ -239,7 +239,7 @@ const Index = () => {
               {
                 icon: Compass,
                 title: "I'm Ready to Begin",
-                desc: "Complete our sacred intake to start your healing journey.",
+                desc: "Complete our sacred intake to begin your ceremonial path.",
                 link: "/ceremony-intake",
                 cta: "Begin Intake",
               },
