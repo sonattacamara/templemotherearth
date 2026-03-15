@@ -91,6 +91,57 @@ Come home to your heart. Come home to the circle.
 
 🌿 *Registration is open on our events page.*`,
   },
+  {
+    slug: "beyond-the-ceremony-integration",
+    title: "Beyond the Ceremony: The Vital Art of Integration",
+    date: "March 8, 2026",
+    excerpt:
+      "The ceremony ends, but the medicine continues. For seekers in Washington DC, Maryland, and Virginia, understanding Ayahuasca aftercare and plant medicine integration is the difference between a powerful experience and a lasting transformation.",
+    image: "/src/assets/community-circle-grass.jpg",
+    body: `The candle is blown out. The songs fade. You step back into the world carrying something new — something raw, luminous, and not yet fully understood. This is where the real work begins.
+
+At Temple Mother Earth, we say: the ceremony is the seed. Integration is the soil, the water, and the sunlight. Without it, even the most profound plant medicine experience can wither before it takes root.
+
+**What is Integration?**
+
+Integration is the practice of weaving ceremony insights into your daily life. It is the bridge between the visionary world and your Monday morning. It includes reflection, embodiment, community support, and often professional guidance.
+
+After working with powerful Earth medicines like Ayahuasca, Kambo, Psilocybin, or San Pedro, the nervous system, psyche, and spirit need time to recalibrate. Integration honors that process rather than rushing past it.
+
+**Why Integration Matters**
+
+In indigenous traditions, the days and weeks following ceremony are considered sacred. The Shipibo healers call this period the "dieta" — a time of dietary, behavioral, and energetic discipline that allows the medicine to continue its work.
+
+In the modern world — especially for those of us living in the fast-paced DMV corridor of Washington DC, Maryland, and Virginia — returning to daily life after a deep Ayahuasca or Kambo ceremony can feel disorienting. Integration practices anchor the experience:
+
+• **Journaling** — capturing visions, emotions, and insights before the mind reframes them
+• **Somatic practices** — yoga, breathwork, and movement to process what the body is holding
+• **Community circles** — sharing your experience with others who understand the territory
+• **Nature immersion** — returning to the Earth that provided the medicine
+• **Professional support** — working with integration coaches or therapists trained in psychedelic aftercare
+
+**The Integration Gap in the DMV**
+
+One of the reasons Temple Mother Earth exists is to fill the integration gap in the greater Washington DC, Maryland, and Virginia region. Many seekers travel to Peru, Costa Rica, or Mexico for Ayahuasca retreats — but return home without a support system. The insights from ceremony begin to fade. Old patterns reassert themselves. The transformation that felt so certain in the maloca becomes a distant memory.
+
+Our community provides ongoing integration circles, one-on-one support, and a network of practitioners who understand that the medicine path is not a single event — it is a lifelong practice.
+
+**Signs You Need Integration Support**
+
+• You had a powerful ceremony but feel "stuck" weeks later
+• You are struggling to make sense of visions or emotional releases
+• Old habits and patterns have resurfaced despite your intentions
+• You feel isolated or misunderstood by friends and family
+• You are craving another ceremony instead of sitting with what was already given
+
+**The Temple Mother Earth Approach**
+
+We do not believe in spiritual bypassing. Integration is not about "good vibes only." It is about having the courage to sit with discomfort, to grieve what needs to be released, and to rebuild your life in alignment with what the medicine revealed.
+
+Whether you sat with Ayahuasca in the Amazon, experienced Kambo in a local ceremony, or worked with sacred Psilocybin in a private setting — you deserve support on the other side.
+
+🌿 *If you are in the DC, Maryland, or Virginia area and seeking integration support, reach out through our Contact page or join one of our community circles.*`,
+  },
 ];
 
 const Journal = () => {
