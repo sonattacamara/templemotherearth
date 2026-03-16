@@ -19,6 +19,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const PrivateCeremonies = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     fullName: "", email: "", phone: "", ceremonyType: "",
     experience: "", intentions: "", preferredDates: "",
