@@ -99,7 +99,16 @@ serve(async (req) => {
         ...body,
         firstName: String(body.fullName || "").trim().split(/\s+/)[0] || "",
         lastName: String(body.fullName || "").trim().split(/\s+/).slice(1).join(" ") || "",
-        dateOfBirth: body.dob || "",
+        // GHL expects YYYY-MM-DD format — normalize from any input format
+        dateOfBirth: (() => {
+          const raw = String(body.dob || "").trim();
+          const d = new Date(raw);
+          if (isNaN(d.getTime())) return raw;
+          const yyyy = d.getFullYear();
+          const mm = String(d.getMonth() + 1).padStart(2, "0");
+          const dd = String(d.getDate() + 1).padStart(2, "0");
+          return `${yyyy}-${mm}-${dd}`;
+        })(),
         integrationStatus: "Not Started",
         submittedAt: new Date().toISOString(),
         source: "temple-mother-earth-sacred-intake",
