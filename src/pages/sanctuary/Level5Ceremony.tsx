@@ -17,11 +17,11 @@ const includes = [
 ];
 
 const sacraments = [
-  { icon: "💧", name: "Water Preparation", origin: "Purification Foundation", effect: "1–2 liters of clean water primes the body for the purge." },
-  { icon: "🌿", name: "Hapé", origin: "Amazonia · Sacred Snuff", effect: "Opens ceremony with grounding and mental clarity." },
-  { icon: "🐸", name: "Kambo", origin: "Phyllomedusa bicolor", effect: "The anchor sacrament. Purges the body. Removes panema." },
-  { icon: "🍫", name: "Cacao", origin: "Theobroma cacao · Heart", effect: "Post-Kambo heart sacrament. Opens and softens the heart center." },
-  { icon: "🍃", name: "Sacred Nourishment", origin: "Mineral · Plant Kingdom", effect: "Mineral broths, medicinal teas, and whole foods rebuild and restore." },
+  { name: "Water Preparation", origin: "Purification Foundation", effect: "1-2 liters of clean water primes the body for the purge." },
+  { name: "Hape", origin: "Amazonia -- Sacred Snuff", effect: "Opens ceremony with grounding and mental clarity." },
+  { name: "Kambo", origin: "Phyllomedusa bicolor", effect: "The anchor sacrament. Purges the body. Removes panema." },
+  { name: "Cacao", origin: "Theobroma cacao -- Heart", effect: "Post-Kambo heart sacrament. Opens and softens the heart center." },
+  { name: "Sacred Nourishment", origin: "Mineral -- Plant Kingdom", effect: "Mineral broths, medicinal teas, and whole foods rebuild and restore." },
 ];
 
 const ritualSteps = [
