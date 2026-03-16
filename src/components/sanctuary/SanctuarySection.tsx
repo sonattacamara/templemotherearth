@@ -33,7 +33,7 @@ const SanctuarySection = ({ eyebrow, title, children, className = "", dark = fal
           </p>
         )}
         {title && (
-          <h2 className="font-sans text-[clamp(24px,3.5vw,44px)] font-light leading-[1.1] mb-8 text-[hsl(40,30%,90%)]">
+          <h2 className="font-sans text-[clamp(24px,3.5vw,44px)] font-light leading-[1.1] mb-8 text-[hsl(100,20%,15%)]">
             {title}
           </h2>
         )}
