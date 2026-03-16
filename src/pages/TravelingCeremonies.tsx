@@ -82,7 +82,20 @@ const TravelingCeremonies = () => {
                 Tell us about your group and what you're seeking. Our team will reach out to discuss details, pricing, and logistics.
                 All participants will need to complete a medical intake before ceremony.
               </p>
-              <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+              <form className="mt-10 space-y-5" onSubmit={async (e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                try {
+                  const { error } = await supabase.functions.invoke("submit-traveling-ceremony", { body: form });
+                  if (error) throw error;
+                  setSubmitted(true);
+                } catch (err) {
+                  console.error(err);
+                  toast.error("Something went wrong. Please try again.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
