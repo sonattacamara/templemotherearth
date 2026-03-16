@@ -8,12 +8,12 @@ const APPLY_URL = "/ceremony-intake";
 const KAMBO_INFO_URL = "/kambo";
 
 const includes = [
-  { icon: "📋", name: "Pre-Ceremony Consultation", desc: "Private 45-minute call with your facilitator. Health review, intention setting, and full preparation guidance." },
-  { icon: "🐸", name: "Kambo Ceremony", desc: "The anchor sacrament. Sacred Amazonian frog secretion applied ceremonially by trained facilitators." },
-  { icon: "🌿", name: "Supporting Plant Sacraments", desc: "Hapé and cacao woven into the ceremony arc to open, ground, and integrate." },
-  { icon: "🍃", name: "Ceremonial Meal", desc: "Post-ceremony sacred nourishment — whole foods, medicinal teas, and mineral-rich restoration." },
-  { icon: "🔄", name: "Full Integration Session + Follow-up", desc: "Same-day integration circle plus 1:1 follow-up call within 7 days." },
-  { icon: "📖", name: "30-Day Integration Guide", desc: "Personal integration framework, journal prompts, and practices for embedding the initiation." },
+  { name: "Pre-Ceremony Consultation", desc: "Private 45-minute call with your facilitator. Health review, intention setting, and full preparation guidance." },
+  { name: "Kambo Ceremony", desc: "The anchor sacrament. Sacred Amazonian frog secretion applied ceremonially by trained facilitators." },
+  { name: "Supporting Plant Sacraments", desc: "Hape and cacao woven into the ceremony arc to open, ground, and integrate." },
+  { name: "Ceremonial Meal", desc: "Post-ceremony sacred nourishment -- whole foods, medicinal teas, and mineral-rich restoration." },
+  { name: "Full Integration Session + Follow-up", desc: "Same-day integration circle plus 1:1 follow-up call within 7 days." },
+  { name: "30-Day Integration Guide", desc: "Personal integration framework, journal prompts, and practices for embedding the initiation." },
 ];
 
 const sacraments = [
