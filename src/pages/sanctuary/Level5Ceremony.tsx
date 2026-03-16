@@ -46,7 +46,7 @@ const Level5Ceremony = () => (
   >
     {/* Warning Announce */}
     <div className="bg-[hsl(45,70%,49%)] text-[hsl(100,20%,3%)] text-center py-2.5 px-5 font-sans text-[9px] tracking-[4px] uppercase font-bold">
-      ⚠ Health screening required · Application only · Spring Equinox 2026
+      Health screening required -- Application only -- Spring Equinox 2026
     </div>
 
     {/* HERO */}
