@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
@@ -8,7 +7,6 @@ import DonationCTA from "@/components/DonationCTA";
 import BlueprintHero from "@/components/sacred-blueprint/BlueprintHero";
 import BlueprintIntro from "@/components/sacred-blueprint/BlueprintIntro";
 import BlueprintForm from "@/components/sacred-blueprint/BlueprintForm";
-import BlueprintChartPlaceholder from "@/components/sacred-blueprint/BlueprintChartPlaceholder";
 import BlueprintReveals from "@/components/sacred-blueprint/BlueprintReveals";
 
 import BlueprintReadings from "@/components/sacred-blueprint/BlueprintReadings";
@@ -17,8 +15,6 @@ import BlueprintFooterCTA from "@/components/sacred-blueprint/BlueprintFooterCTA
 import logo from "@/assets/logo.png";
 
 const SacredBlueprint = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
   return (
     <div id="top" className="min-h-screen bg-background">
       <SEOHead
@@ -31,9 +27,7 @@ const SacredBlueprint = () => {
 
       <BlueprintHero />
       <BlueprintIntro />
-      <BlueprintForm onSuccess={() => setFormSubmitted(true)} />
-
-      {formSubmitted && <BlueprintChartPlaceholder />}
+      <BlueprintForm />
 
       <BlueprintReveals />
       

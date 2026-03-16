@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Send, Globe } from "lucide-react";
+import { Send } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,11 +14,7 @@ const fadeUp = {
 };
 const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 
-interface BlueprintFormProps {
-  onSuccess: () => void;
-}
-
-const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
+const BlueprintForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -53,7 +49,6 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
         return;
       }
       setSubmitted(true);
-      onSuccess();
     } catch (err) {
       console.error("Sacred Blueprint form error:", err);
       toast.error("Something went wrong. Please try again.");
@@ -73,10 +68,10 @@ const BlueprintForm = ({ onSuccess }: BlueprintFormProps) => {
         {submitted ? (
           <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8 shadow-lg md:p-12 text-center">
             <p className="font-display text-2xl font-bold text-foreground md:text-3xl">
-              Your Sacred Blueprint request has been received!
+              Thank you — your Sacred Blueprint request is received.
             </p>
             <p className="mt-4 font-body text-muted-foreground text-lg">
-              Check your inbox for your next steps. We'll be in touch soon. <Globe className="inline h-5 w-5" />
+              Your Human Design report will be emailed to you with your next steps.
             </p>
           </motion.div>
         ) : (
