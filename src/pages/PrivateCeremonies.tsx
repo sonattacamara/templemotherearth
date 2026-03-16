@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Heart, ArrowRight, CheckCircle2, Shield, Sparkles, Users } from "lucide-react";
+import { Heart, ArrowRight, CheckCircle2, Shield, Sparkles, Users, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
@@ -17,6 +19,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const PrivateCeremonies = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     fullName: "", email: "", phone: "", ceremonyType: "",
     experience: "", intentions: "", preferredDates: "",
@@ -79,7 +82,20 @@ const PrivateCeremonies = () => {
                 Share your needs and our team will connect you with the right facilitator.
                 You will also need to complete a full medical intake before your ceremony date.
               </p>
-              <form className="mt-10 space-y-5" onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}>
+              <form className="mt-10 space-y-5" onSubmit={async (e) => {
+                e.preventDefault();
+                setSubmitting(true);
+                try {
+                  const { error } = await supabase.functions.invoke("submit-private-ceremony", { body: form });
+                  if (error) throw error;
+                  setSubmitted(true);
+                } catch (err) {
+                  console.error(err);
+                  toast.error("Something went wrong. Please try again.");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}>
                 <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
@@ -106,8 +122,8 @@ const PrivateCeremonies = () => {
                 <input className={inputClass} placeholder="Preferred location (DC sanctuary or your location)" value={form.location} onChange={(e) => update("location", e.target.value)} />
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any medical concerns, conditions, or medications we should know about?" value={form.medicalConcerns} onChange={(e) => update("medicalConcerns", e.target.value)} />
                 <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Anything else you'd like us to know?" value={form.additionalInfo} onChange={(e) => update("additionalInfo", e.target.value)} />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Send With Intention <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Send With Intention <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>
