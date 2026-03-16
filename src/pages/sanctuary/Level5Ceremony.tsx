@@ -205,7 +205,7 @@ const Level5Ceremony = () => (
         <p className="font-serif italic text-[22px] text-[#8A9E84] max-w-[600px] mx-auto mb-14 leading-[1.7]">
           Not everyone is called to initiation. If you have read this far and something in you is still saying yes — that is not curiosity. That is preparation.
         </p>
-        <a href={EVENTBRITE_L5} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
+        <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
           Apply for Your Seat
         </a>
         <p className="font-sans text-[9px] tracking-[3px] uppercase text-[#8A9E84] mt-7">
