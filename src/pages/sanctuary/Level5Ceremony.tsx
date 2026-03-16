@@ -84,11 +84,11 @@ const Level5Ceremony = () => (
           You have been in preparation for this whether you knew it or not. The jungle does not call everyone. It called you.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href={EVENTBRITE_L5} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
+          <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
             Apply for Your Seat
           </a>
-          <a href="#kambo" className="inline-block bg-transparent text-[#F0EAD6] px-10 py-[18px] font-sans text-[10px] tracking-[3px] uppercase border border-[rgba(240,234,214,0.2)] hover:border-[#C8A030] hover:text-[#C8A030] transition-all">
-            What is Kambo? ↓
+          <a href={KAMBO_INFO_URL} className="inline-block bg-transparent text-[#F0EAD6] px-10 py-[18px] font-sans text-[10px] tracking-[3px] uppercase border border-[rgba(240,234,214,0.2)] hover:border-[#C8A030] hover:text-[#C8A030] transition-all">
+            What is Kambo?
           </a>
         </div>
         <p className="font-sans text-[8px] tracking-[3px] uppercase text-[#8A9E84] mt-12 opacity-60">
