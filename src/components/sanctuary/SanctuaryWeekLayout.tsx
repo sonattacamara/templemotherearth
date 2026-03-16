@@ -26,12 +26,12 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
       </div>
 
       {showBackLink && (
-        <div className="px-6 md:px-12 py-3 border-b border-[hsla(45,70%,40%,0.1)]">
+        <div className="px-6 md:px-12 py-3 border-b border-[hsl(90,20%,85%)]">
           <Link
             to="/sanctuary-week"
-            className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] hover:text-[hsl(45,70%,49%)] transition-colors"
+            className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,30%,40%)] hover:text-[hsl(90,50%,30%)] transition-colors"
           >
-            ← Sanctuary Week
+            &larr; Sanctuary Week
           </Link>
         </div>
       )}
