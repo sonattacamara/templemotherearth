@@ -146,7 +146,6 @@ const Level5Ceremony = () => (
       <div className="grid grid-cols-2 md:grid-cols-5 gap-0.5 bg-[rgba(200,160,48,0.08)] mt-16">
         {sacraments.map((s) => (
           <div key={s.name} className="bg-[#050804] p-9 text-center border-t-[3px] border-transparent hover:bg-[#0B140A] hover:border-[#C8A030] transition-all">
-            <span className="text-4xl block mb-4">{s.icon}</span>
             <h4 className="font-sans text-[11px] font-bold text-[#C8A030] mb-2">{s.name}</h4>
             <p className="font-sans text-[8px] tracking-[2px] uppercase text-[#8A9E84] mb-3.5">{s.origin}</p>
             <p className="text-sm text-[#F0EAD6] leading-relaxed opacity-70">{s.effect}</p>
