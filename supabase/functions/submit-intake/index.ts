@@ -99,7 +99,22 @@ serve(async (req) => {
         ...body,
         firstName: String(body.fullName || "").trim().split(/\s+/)[0] || "",
         lastName: String(body.fullName || "").trim().split(/\s+/).slice(1).join(" ") || "",
-        dateOfBirth: body.dob || "",
+        // GHL expects YYYY-MM-DD format — HTML date inputs already send YYYY-MM-DD
+        // Just pass through if already in correct format, otherwise normalize
+        dateOfBirth: (() => {
+          const raw = String(body.dob || "").trim();
+          // HTML date input gives YYYY-MM-DD — validate and pass through
+          if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+          // Fallback: try to parse and reformat
+          const parts = raw.split(/[-\/]/);
+          if (parts.length === 3) {
+            // Handle MM/DD/YYYY or DD/MM/YYYY by assuming MM/DD/YYYY (US format)
+            const [a, b, c] = parts;
+            if (a.length === 4) return `${a}-${b.padStart(2,"0")}-${c.padStart(2,"0")}`;
+            return `${c}-${a.padStart(2,"0")}-${b.padStart(2,"0")}`;
+          }
+          return raw;
+        })(),
         integrationStatus: "Not Started",
         submittedAt: new Date().toISOString(),
         source: "temple-mother-earth-sacred-intake",

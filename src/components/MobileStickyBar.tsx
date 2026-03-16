@@ -20,7 +20,7 @@ const MobileStickyBar = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 80, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-foreground/95 backdrop-blur-md border-t border-primary/20 px-4 py-3 safe-area-pb"
+          className="fixed bottom-0 left-0 right-0 z-[60] lg:hidden bg-foreground/95 backdrop-blur-md border-t border-primary/20 px-4 py-3 safe-area-pb"
         >
           <div className="flex items-center justify-between gap-3 max-w-lg mx-auto">
             <Link
