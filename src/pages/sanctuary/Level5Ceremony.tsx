@@ -4,23 +4,24 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const EVENTBRITE_L5 = "#";
+const APPLY_URL = "/ceremony-intake";
+const KAMBO_INFO_URL = "/kambo";
 
 const includes = [
-  { icon: "📋", name: "Pre-Ceremony Consultation", desc: "Private 45-minute call with your facilitator. Health review, intention setting, and full preparation guidance." },
-  { icon: "🐸", name: "Kambo Ceremony", desc: "The anchor sacrament. Sacred Amazonian frog secretion applied ceremonially by trained facilitators." },
-  { icon: "🌿", name: "Supporting Plant Sacraments", desc: "Hapé and cacao woven into the ceremony arc to open, ground, and integrate." },
-  { icon: "🍃", name: "Ceremonial Meal", desc: "Post-ceremony sacred nourishment — whole foods, medicinal teas, and mineral-rich restoration." },
-  { icon: "🔄", name: "Full Integration Session + Follow-up", desc: "Same-day integration circle plus 1:1 follow-up call within 7 days." },
-  { icon: "📖", name: "30-Day Integration Guide", desc: "Personal integration framework, journal prompts, and practices for embedding the initiation." },
+  { name: "Pre-Ceremony Consultation", desc: "Private 45-minute call with your facilitator. Health review, intention setting, and full preparation guidance." },
+  { name: "Kambo Ceremony", desc: "The anchor sacrament. Sacred Amazonian frog secretion applied ceremonially by trained facilitators." },
+  { name: "Supporting Plant Sacraments", desc: "Hape and cacao woven into the ceremony arc to open, ground, and integrate." },
+  { name: "Ceremonial Meal", desc: "Post-ceremony sacred nourishment -- whole foods, medicinal teas, and mineral-rich restoration." },
+  { name: "Full Integration Session + Follow-up", desc: "Same-day integration circle plus 1:1 follow-up call within 7 days." },
+  { name: "30-Day Integration Guide", desc: "Personal integration framework, journal prompts, and practices for embedding the initiation." },
 ];
 
 const sacraments = [
-  { icon: "💧", name: "Water Preparation", origin: "Purification Foundation", effect: "1–2 liters of clean water primes the body for the purge." },
-  { icon: "🌿", name: "Hapé", origin: "Amazonia · Sacred Snuff", effect: "Opens ceremony with grounding and mental clarity." },
-  { icon: "🐸", name: "Kambo", origin: "Phyllomedusa bicolor", effect: "The anchor sacrament. Purges the body. Removes panema." },
-  { icon: "🍫", name: "Cacao", origin: "Theobroma cacao · Heart", effect: "Post-Kambo heart sacrament. Opens and softens the heart center." },
-  { icon: "🍃", name: "Sacred Nourishment", origin: "Mineral · Plant Kingdom", effect: "Mineral broths, medicinal teas, and whole foods rebuild and restore." },
+  { name: "Water Preparation", origin: "Purification Foundation", effect: "1-2 liters of clean water primes the body for the purge." },
+  { name: "Hape", origin: "Amazonia -- Sacred Snuff", effect: "Opens ceremony with grounding and mental clarity." },
+  { name: "Kambo", origin: "Phyllomedusa bicolor", effect: "The anchor sacrament. Purges the body. Removes panema." },
+  { name: "Cacao", origin: "Theobroma cacao -- Heart", effect: "Post-Kambo heart sacrament. Opens and softens the heart center." },
+  { name: "Sacred Nourishment", origin: "Mineral -- Plant Kingdom", effect: "Mineral broths, medicinal teas, and whole foods rebuild and restore." },
 ];
 
 const ritualSteps = [
@@ -45,7 +46,7 @@ const Level5Ceremony = () => (
   >
     {/* Warning Announce */}
     <div className="bg-[hsl(45,70%,49%)] text-[hsl(100,20%,3%)] text-center py-2.5 px-5 font-sans text-[9px] tracking-[4px] uppercase font-bold">
-      ⚠ Health screening required · Application only · Spring Equinox 2026
+      Health screening required -- Application only -- Spring Equinox 2026
     </div>
 
     {/* HERO */}
@@ -83,11 +84,11 @@ const Level5Ceremony = () => (
           You have been in preparation for this whether you knew it or not. The jungle does not call everyone. It called you.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href={EVENTBRITE_L5} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
+          <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
             Apply for Your Seat
           </a>
-          <a href="#kambo" className="inline-block bg-transparent text-[#F0EAD6] px-10 py-[18px] font-sans text-[10px] tracking-[3px] uppercase border border-[rgba(240,234,214,0.2)] hover:border-[#C8A030] hover:text-[#C8A030] transition-all">
-            What is Kambo? ↓
+          <a href={KAMBO_INFO_URL} className="inline-block bg-transparent text-[#F0EAD6] px-10 py-[18px] font-sans text-[10px] tracking-[3px] uppercase border border-[rgba(240,234,214,0.2)] hover:border-[#C8A030] hover:text-[#C8A030] transition-all">
+            What is Kambo?
           </a>
         </div>
         <p className="font-sans text-[8px] tracking-[3px] uppercase text-[#8A9E84] mt-12 opacity-60">
@@ -98,7 +99,7 @@ const Level5Ceremony = () => (
 
     {/* Warning Banner */}
     <div className="bg-[rgba(200,160,48,0.06)] border-y border-[rgba(200,160,48,0.15)] py-5 px-6 md:px-[60px] text-center font-sans text-[9px] tracking-[3px] uppercase text-[#C8A030]">
-      ⚠ This ceremony includes Kambo — mandatory health screening required · Not suitable for all individuals
+      This ceremony includes Kambo -- mandatory health screening required -- Not suitable for all individuals
     </div>
 
     {/* Event Strip */}
@@ -129,8 +130,7 @@ const Level5Ceremony = () => (
         </div>
         <div className="flex flex-col gap-0.5">
           {includes.map((item) => (
-            <div key={item.name} className="bg-[#0B140A] border-l-[3px] border-[#C8A030] p-7 grid grid-cols-[40px_1fr] gap-5 items-start hover:bg-[#1A2E17] hover:border-[#8FD67A] transition-colors">
-              <span className="text-[22px] mt-0.5">{item.icon}</span>
+            <div key={item.name} className="bg-[#0B140A] border-l-[3px] border-[#C8A030] p-7 grid grid-cols-[1fr] gap-5 items-start hover:bg-[#1A2E17] hover:border-[#8FD67A] transition-colors">
               <div>
                 <h4 className="font-sans text-[11px] tracking-[1px] uppercase text-[#C8A030] font-bold mb-1.5">{item.name}</h4>
                 <p className="text-[15px] text-[#8A9E84] leading-relaxed">{item.desc}</p>
@@ -146,7 +146,6 @@ const Level5Ceremony = () => (
       <div className="grid grid-cols-2 md:grid-cols-5 gap-0.5 bg-[rgba(200,160,48,0.08)] mt-16">
         {sacraments.map((s) => (
           <div key={s.name} className="bg-[#050804] p-9 text-center border-t-[3px] border-transparent hover:bg-[#0B140A] hover:border-[#C8A030] transition-all">
-            <span className="text-4xl block mb-4">{s.icon}</span>
             <h4 className="font-sans text-[11px] font-bold text-[#C8A030] mb-2">{s.name}</h4>
             <p className="font-sans text-[8px] tracking-[2px] uppercase text-[#8A9E84] mb-3.5">{s.origin}</p>
             <p className="text-sm text-[#F0EAD6] leading-relaxed opacity-70">{s.effect}</p>
@@ -206,7 +205,7 @@ const Level5Ceremony = () => (
         <p className="font-serif italic text-[22px] text-[#8A9E84] max-w-[600px] mx-auto mb-14 leading-[1.7]">
           Not everyone is called to initiation. If you have read this far and something in you is still saying yes — that is not curiosity. That is preparation.
         </p>
-        <a href={EVENTBRITE_L5} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
+        <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
           Apply for Your Seat
         </a>
         <p className="font-sans text-[9px] tracking-[3px] uppercase text-[#8A9E84] mt-7">

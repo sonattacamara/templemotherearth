@@ -68,6 +68,14 @@ const KamboRedirect = () => {
       <Navigation />
       <PageBreadcrumb items={[{ label: "Experiences" }, { label: "Kambo Ceremony" }]} />
 
+      {/* Animal Kingdom Header */}
+      <div className="bg-foreground border-b border-primary/20 py-3 px-6">
+        <div className="mx-auto max-w-4xl flex items-center gap-3">
+          <span className="font-body text-[7px] tracking-[3px] uppercase bg-primary/80 text-primary-foreground px-4 py-1.5 rounded-sm font-bold">Animal Kingdom</span>
+          <span className="font-display italic text-sm text-muted-foreground">Phyllomedusa bicolor -- The Giant Monkey Frog</span>
+        </div>
+      </div>
+
       {/* Hero */}
       <section className="relative flex min-h-[55vh] items-center justify-center overflow-hidden px-4 pt-8">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${offeringCeremony})` }} />

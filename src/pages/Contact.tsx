@@ -1,5 +1,5 @@
 import { motion, type Easing } from "framer-motion";
-import { Send, MessageCircle, Flame, Moon, Leaf } from "lucide-react";
+import { Send, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -26,12 +26,25 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
+const INQUIRY_TYPES = [
+  "Ceremonies",
+  "Membership",
+  "Retreats",
+  "Volunteering",
+  "Art Expo",
+  "Donations / Sponsorship",
+  "Media / Press",
+  "General Inquiry",
+  "Other",
+];
+
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    phone: "",
+    inquiryType: "",
     message: "",
   });
 
@@ -41,14 +54,20 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim() || !formData.inquiryType) {
       toast.error("Please fill in all required fields.");
       return;
     }
     setIsSubmitting(true);
     try {
       const { data, error } = await supabase.functions.invoke("submit-contact", {
-        body: formData,
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.inquiryType,
+          message: formData.message,
+        },
       });
       if (error) throw error;
       if (data?.error) {
@@ -57,7 +76,7 @@ const Contact = () => {
         return;
       }
       toast.success("Your message has been sent. We'll be in touch soon.");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", inquiryType: "", message: "" });
     } catch (err) {
       console.error("Contact form error:", err);
       toast.error("Something went wrong. Please try again.");
@@ -75,7 +94,7 @@ const Contact = () => {
       <Navigation />
       <PageBreadcrumb items={[{ label: "Contact" }]} />
 
-      {/* ───── HERO ───── */}
+      {/* HERO */}
       <section className="relative flex min-h-[45vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center bg-foreground">
         <div className="absolute inset-0 bg-foreground/90" />
         <motion.div
@@ -96,7 +115,7 @@ const Contact = () => {
         </motion.div>
       </section>
 
-      {/* ───── FORM SECTION ───── */}
+      {/* FORM SECTION */}
       <section className="py-20 px-4">
         <div className="mx-auto max-w-2xl">
           <motion.div
@@ -119,20 +138,59 @@ const Contact = () => {
             </motion.div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <motion.div variants={fadeUp} className="grid gap-6 md:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-foreground">Full Name *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your full name"
-                    maxLength={100}
-                    required
-                    className="bg-background"
-                  />
+              {/* Inquiry Type Radio Buttons */}
+              <motion.div variants={fadeUp} className="space-y-3">
+                <Label className="text-foreground font-semibold">What is this regarding? *</Label>
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                  {INQUIRY_TYPES.map((type) => (
+                    <label
+                      key={type}
+                      className={`flex cursor-pointer items-center gap-2 rounded-lg border px-3 py-2.5 text-sm transition-all ${
+                        formData.inquiryType === type
+                          ? "border-primary bg-primary/10 text-foreground"
+                          : "border-border bg-background text-muted-foreground hover:border-primary/40"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="inquiryType"
+                        value={type}
+                        checked={formData.inquiryType === type}
+                        onChange={handleChange}
+                        className="sr-only"
+                      />
+                      <span
+                        className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 ${
+                          formData.inquiryType === type
+                            ? "border-primary"
+                            : "border-muted-foreground/40"
+                        }`}
+                      >
+                        {formData.inquiryType === type && (
+                          <span className="h-2 w-2 rounded-full bg-primary" />
+                        )}
+                      </span>
+                      <span className="text-xs sm:text-sm">{type}</span>
+                    </label>
+                  ))}
                 </div>
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="space-y-2">
+                <Label htmlFor="name" className="text-foreground">Full Name *</Label>
+                <Input
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your full name"
+                  maxLength={100}
+                  required
+                  className="bg-background"
+                />
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-foreground">Email Address *</Label>
                   <Input
@@ -147,19 +205,19 @@ const Contact = () => {
                     className="bg-background"
                   />
                 </div>
-              </motion.div>
-
-              <motion.div variants={fadeUp} className="space-y-2">
-                <Label htmlFor="subject" className="text-foreground">Subject</Label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="What is this regarding?"
-                  maxLength={200}
-                  className="bg-background"
-                />
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-foreground">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="(202) 555-0123"
+                    maxLength={20}
+                    className="bg-background"
+                  />
+                </div>
               </motion.div>
 
               <motion.div variants={fadeUp} className="space-y-2">
@@ -169,7 +227,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Share your question, inquiry, or intention…"
+                  placeholder="Share your question, inquiry, or intention..."
                   rows={6}
                   maxLength={2000}
                   required
@@ -184,7 +242,7 @@ const Contact = () => {
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6"
                 >
                   {isSubmitting ? (
-                    "Sending…"
+                    "Sending..."
                   ) : (
                     <>
                       <Send className="mr-2 h-5 w-5" /> Send Message
@@ -221,7 +279,7 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  💬 Public Community Chat →
+                  Public Community Chat
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
                   Open community announcements, event updates, and general Temple conversation.
@@ -236,10 +294,10 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  <Flame className="inline h-4 w-4 mr-1" /> Men's Integration Circle →
+                  Men's Integration Circle
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
-                  A private brotherhood space for reflection, accountability, and healing through "The Cove."
+                  A private brotherhood space for reflection, accountability, and sacred practice through "The Cove."
                 </span>
               </motion.a>
 
@@ -251,7 +309,7 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  <Moon className="inline h-4 w-4 mr-1" /> Wombmen's Integration Circle →
+                  Wombmen's Integration Circle
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
                   A sacred sisterhood space for emotional processing, embodiment practices, and mutual support.
@@ -266,10 +324,10 @@ const Contact = () => {
                 className="group flex flex-col gap-2 rounded-xl border border-border bg-background p-5 text-left transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <span className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">
-                  <Leaf className="inline h-4 w-4 mr-1" /> The Forest Team →
+                  The Forest Team
                 </span>
                 <span className="font-body text-sm text-muted-foreground leading-relaxed">
-                  Our volunteer and support crew — land stewardship, event setup, and hands-on service to the Temple.
+                  Our volunteer and support crew -- land stewardship, event setup, and hands-on service to the Temple.
                 </span>
               </motion.a>
             </div>
@@ -277,22 +335,22 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* ───── GLOBAL CTA ───── */}
+      {/* GLOBAL CTA */}
       <DonationCTA
         variant="dark"
         eyebrow="Sustain the Sacred"
         headline="Walk With Us on This Journey"
-        body="Your tax-deductible offering helps Temple Mother Earth continue to hold space for sacred healing, education, and community."
+        body="Your tax-deductible offering helps Temple Mother Earth continue to hold space for sacred ceremony, education, and community."
         buttonLabel="Offerings & Tithes"
       />
 
       <EventbriteCTA />
 
-      {/* ───── FOOTER ───── */}
+      {/* FOOTER */}
       <footer className="bg-foreground py-12 text-center">
         <img src={logo} alt="Temple Mother Earth" className="mx-auto mb-4 h-12 w-auto opacity-80" />
         <p className="font-body text-sm text-primary-foreground/60">
-          © {new Date().getFullYear()} Temple Mother Earth · All Rights Reserved
+          &copy; {new Date().getFullYear()} Temple Mother Earth -- All Rights Reserved
         </p>
         <div className="mt-4 flex justify-center gap-6 text-sm text-primary-foreground/50">
           <Link to="/about" className="hover:text-primary transition-colors">About</Link>

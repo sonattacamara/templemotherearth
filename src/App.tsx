@@ -46,6 +46,7 @@ import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
 import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
+import KamboRedirect from "./pages/KamboRedirect";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
 import CommunityCare from "./pages/CommunityCare";
@@ -98,7 +99,7 @@ const App = () => (
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
-            <Route path="/kambo" element={<KamboCeremony />} />
+            <Route path="/kambo" element={<KamboRedirect />} />
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
             <Route path="/sanctuary-week" element={<SanctuaryWeek />} />

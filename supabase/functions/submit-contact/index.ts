@@ -54,16 +54,25 @@ serve(async (req) => {
       });
     }
 
+    const fullName = String(body.name).trim();
+    const nameParts = fullName.split(" ");
+    const firstName = nameParts[0] || "";
+    const lastName = nameParts.slice(1).join(" ") || "";
+
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: String(body.name).trim(),
+        name: fullName,
+        firstName,
+        lastName,
         email: String(body.email).trim(),
+        phone: String(body.phone || "").trim(),
         subject: String(body.subject || "").trim(),
         message: String(body.message).trim(),
         submittedAt: new Date().toISOString(),
         source: "temple-mother-earth-contact-form",
+        tags: ["contact-form-submission"],
       }),
     });
 
