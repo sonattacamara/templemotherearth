@@ -130,8 +130,7 @@ const Level5Ceremony = () => (
         </div>
         <div className="flex flex-col gap-0.5">
           {includes.map((item) => (
-            <div key={item.name} className="bg-[#0B140A] border-l-[3px] border-[#C8A030] p-7 grid grid-cols-[40px_1fr] gap-5 items-start hover:bg-[#1A2E17] hover:border-[#8FD67A] transition-colors">
-              <span className="text-[22px] mt-0.5">{item.icon}</span>
+            <div key={item.name} className="bg-[#0B140A] border-l-[3px] border-[#C8A030] p-7 grid grid-cols-[1fr] gap-5 items-start hover:bg-[#1A2E17] hover:border-[#8FD67A] transition-colors">
               <div>
                 <h4 className="font-sans text-[11px] tracking-[1px] uppercase text-[#C8A030] font-bold mb-1.5">{item.name}</h4>
                 <p className="text-[15px] text-[#8A9E84] leading-relaxed">{item.desc}</p>
