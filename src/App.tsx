@@ -46,7 +46,7 @@ import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
 import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
-import EarthKingdoms from "./pages/EarthKingdoms";
+import KamboRedirect from "./pages/KamboRedirect";
 import Journal from "./pages/Journal";
 import CommunityCare from "./pages/CommunityCare";
 import DonationButton from "@/components/DonationButton";
