@@ -122,8 +122,8 @@ const PrivateCeremonies = () => {
                 <input className={inputClass} placeholder="Preferred location (DC sanctuary or your location)" value={form.location} onChange={(e) => update("location", e.target.value)} />
                 <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Any medical concerns, conditions, or medications we should know about?" value={form.medicalConcerns} onChange={(e) => update("medicalConcerns", e.target.value)} />
                 <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Anything else you'd like us to know?" value={form.additionalInfo} onChange={(e) => update("additionalInfo", e.target.value)} />
-                <button type="submit" className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2">
-                  Send With Intention <ArrowRight className="h-4 w-4" />
+                <button type="submit" disabled={submitting} className="w-full rounded-lg bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center justify-center gap-2 disabled:opacity-50">
+                  {submitting ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting...</> : <>Send With Intention <ArrowRight className="h-4 w-4" /></>}
                 </button>
               </form>
             </>
