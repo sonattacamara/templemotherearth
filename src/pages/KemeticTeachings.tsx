@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, type Easing } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Sun, Moon, Sunrise, Sunset, Heart, Shield, Flame, Droplets, Sparkles, Eye, ExternalLink, Bell, ArrowRight, Send, Instagram, Globe, BookOpen } from "lucide-react";
+import { Sun, Moon, Sunrise, Sunset, Heart, Shield, Flame, Droplets, Sparkles, Eye, ExternalLink, Bell, ArrowRight, Send, BookOpen } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
