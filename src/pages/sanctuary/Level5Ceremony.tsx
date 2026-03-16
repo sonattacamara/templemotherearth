@@ -99,7 +99,7 @@ const Level5Ceremony = () => (
 
     {/* Warning Banner */}
     <div className="bg-[rgba(200,160,48,0.06)] border-y border-[rgba(200,160,48,0.15)] py-5 px-6 md:px-[60px] text-center font-sans text-[9px] tracking-[3px] uppercase text-[#C8A030]">
-      ⚠ This ceremony includes Kambo — mandatory health screening required · Not suitable for all individuals
+      This ceremony includes Kambo -- mandatory health screening required -- Not suitable for all individuals
     </div>
 
     {/* Event Strip */}
