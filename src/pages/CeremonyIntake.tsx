@@ -228,7 +228,7 @@ const CeremonyIntake = () => {
   const canProceed = () => {
     if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob && formData.cityState;
     if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
-    if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions;
+    if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10;
     if (step === 4) return !totalFlagged;
     if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21;
     return false;
@@ -439,6 +439,7 @@ const CeremonyIntake = () => {
                     {opt}
                   </label>
                 ))}
+                {validationErrors.ceremonyType && <p className="mt-1 text-xs text-destructive">{validationErrors.ceremonyType}</p>}
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Experience Level *</label>
@@ -448,10 +449,12 @@ const CeremonyIntake = () => {
                     {opt}
                   </label>
                 ))}
+                {validationErrors.experienceLevel && <p className="mt-1 text-xs text-destructive">{validationErrors.experienceLevel}</p>}
               </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-foreground">What are your intentions for this ceremony? *</label>
-                <textarea className={inputClass + " min-h-[100px] resize-none"} placeholder="Share what you hope to receive, release, or explore..." value={formData.intentions} onChange={(e) => update("intentions", e.target.value)} required />
+                <textarea className={`${inputClass} min-h-[100px] resize-none ${validationErrors.intentions ? "ring-2 ring-destructive border-destructive" : ""}`} placeholder="Share what you hope to receive, release, or explore..." value={formData.intentions} onChange={(e) => update("intentions", e.target.value)} required />
+                {validationErrors.intentions && <p className="mt-1 text-xs text-destructive">{validationErrors.intentions}</p>}
               </div>
 
               <div>
