@@ -4,7 +4,8 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const EVENTBRITE_L5 = "#";
+const APPLY_URL = "/ceremony-intake";
+const KAMBO_INFO_URL = "/kambo";
 
 const includes = [
   { icon: "📋", name: "Pre-Ceremony Consultation", desc: "Private 45-minute call with your facilitator. Health review, intention setting, and full preparation guidance." },
