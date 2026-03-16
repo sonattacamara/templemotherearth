@@ -30,18 +30,18 @@ const SanctuaryColCards = ({ cards }: SanctuaryColCardsProps) => {
           transition={{ duration: 0.7, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
           className={`p-8 md:p-10 border ${
             card.featured
-              ? "border-[hsla(45,70%,49%,0.35)] bg-[hsla(120,28%,22%,0.15)]"
-              : "border-[hsla(45,70%,49%,0.12)] bg-[hsla(120,28%,22%,0.08)]"
+              ? "border-[hsl(90,25%,72%)] bg-[hsl(90,20%,93%)]"
+              : "border-[hsl(90,15%,85%)] bg-[hsl(90,15%,95%)]"
           }`}
         >
-          <h3 className="font-sans text-[13px] tracking-[2px] text-[hsl(45,70%,49%)] mb-4 font-normal">
+          <h3 className="font-sans text-[13px] tracking-[2px] text-[hsl(90,40%,30%)] mb-4 font-normal uppercase">
             {card.title}
           </h3>
-          <p className="text-[17px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
+          <p className="text-[17px] text-[hsl(90,10%,35%)] leading-relaxed font-serif">
             {card.description}
           </p>
           {card.note && (
-            <p className="mt-6 font-sans text-[9px] tracking-[2px] uppercase text-[hsl(45,70%,49%)]">
+            <p className="mt-6 font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,40%,30%)]">
               {card.note}
             </p>
           )}
