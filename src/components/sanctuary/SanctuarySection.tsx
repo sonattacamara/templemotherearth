@@ -28,7 +28,7 @@ const SanctuarySection = ({ eyebrow, title, children, className = "", dark = fal
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       >
         {eyebrow && (
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(90,50%,30%)] mb-4">
             {eyebrow}
           </p>
         )}
