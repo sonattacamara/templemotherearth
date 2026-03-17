@@ -298,8 +298,8 @@ const SanctuaryWeek = () => {
 
   return (
     <SanctuaryWeekLayout
-      title="Sanctuary Week · March 18–29 · Temple Mother Earth"
-      description="Ten days of sacred ceremony, community, and transformation. Spring Equinox Grand Reopening, Year Six. Temple Mother Earth, Washington DC."
+      title="Sanctuary Week · Temple Mother Earth"
+      description="A recurring series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
       showBackLink={false}
     >
       {/* ═══ HERO ═══ */}
