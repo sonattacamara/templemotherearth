@@ -82,7 +82,7 @@ const RetreatsInquiry = () => {
             <div className="mx-auto mt-4 max-w-xl space-y-3 text-sm text-muted-foreground text-left">
               <p>
                 Join Temple Mother Earth in the vibrant coastal village of <strong className="text-foreground">Sayulita, Mexico</strong> for 
-                six transformative days of deep healing, Earth Medicine ceremony, and soul-level restoration.
+                six transformative days of deep restoration, Earth Medicine ceremony, and soul-level renewal.
               </p>
               <p>
                 This immersion is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
