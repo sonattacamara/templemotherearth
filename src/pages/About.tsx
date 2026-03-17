@@ -148,7 +148,7 @@ const About = () => {
                   Our work is to help people reconnect with this inner truth through sacred Earth sacrament, spiritual practice, and intentional self-discovery.
                 </p>
                 <p>
-                  Healing is not about fixing what is broken; it is about remembering what has always been whole. Our mission is to create spaces where this remembrance becomes possible.
+                  Transformation is not about fixing what is broken; it is about remembering what has always been whole. Our mission is to create spaces where this remembrance becomes possible.
                 </p>
               </div>
             </motion.div>
