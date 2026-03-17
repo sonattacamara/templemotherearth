@@ -903,8 +903,8 @@ const Index = () => {
                   <a href="https://www.google.com/search?newwindow=1&sca_esv=06faacce940c986e&rlz=1C5AJCO_enUS1200US1201&sxsrf=ANbL-n5H64gCyqp_8kwjThHtatPyFj9mJA:1771123156801&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQZdqYy5vjml0waax1nkNalfy6Vc0WUFl0oieZgIQ3lF9w_G8Ask2th5JyCqMdsOettVShT2V45zC8nPoWtLSiFmLHzelbwOgitq8c_L2BnnJbcTmA%3D%3D&q=Temple+Mother+Earth+Reviews&sa=X&ved=2ahUKEwjxgfX0u9qSAxW3L1kFHYxEGnYQ0bkNegQIOhAH&biw=1581&bih=886" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
                     <Star className="h-4 w-4 text-primary" /> Leave a Google Review
                   </a>
-                   <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🎁 Amazon Wishlist →</a>
-                   <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">📷 Share Photos & Videos →</a>
+                   <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"><Gift className="h-4 w-4 text-primary" /> Amazon Wishlist</a>
+                   <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"><Camera className="h-4 w-4 text-primary" /> Share Photos & Videos</a>
                 </div>
               </div>
               <div>
