@@ -224,33 +224,33 @@ const CacaoCeremony = () => {
       </Section>
 
       {/* PREPARATION */}
-      <Section className="bg-[#F5EDD8]">
+      <Section className="bg-[#1A1208]">
         <Eyebrow>Prepare Yourself</Eyebrow>
-        <STitle>How to Arrive <em className="text-[#8B5E3C]">Ready</em></STitle>
+        <STitle>How to Arrive <em className="text-[#C9963A]">Ready</em></STitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16">
           <div>
-            <h3 className="font-display text-[22px] italic text-[#2C1810] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)]">The Day Before</h3>
+            <h3 className="font-display text-[22px] italic text-[#F5EDD8] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)]">The Day Before</h3>
             <ul className="space-y-0">
               {["Eat clean. Whole foods, fruits, vegetables.", "No alcohol — 24 hours minimum.", "Limit caffeine to prevent overstimulation.", "Set your intention quietly.", "Rest well. Sleep is the foundation."].map((item) => (
-                <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(74,44,26,0.08)] text-base text-[#4A2C1A]">
+                <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(201,150,58,0.08)] text-base text-[#C4B49A]">
                   <span className="text-[#C9963A] text-[8px] mt-1.5 shrink-0">◆</span>{item}
                 </li>
               ))}
             </ul>
-            <h3 className="font-display text-[22px] italic text-[#2C1810] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)] mt-10">Day of Ceremony</h3>
+            <h3 className="font-display text-[22px] italic text-[#F5EDD8] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)] mt-10">Day of Ceremony</h3>
             <ul className="space-y-0">
               {["Eat lightly. No heavy meals 3–4 hours before.", "Hydrate throughout the day.", "Arrive 15 min early.", "Wear comfortable, natural fabrics.", "Bring a journal for insights."].map((item) => (
-                <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(74,44,26,0.08)] text-base text-[#4A2C1A]">
+                <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(201,150,58,0.08)] text-base text-[#C4B49A]">
                   <span className="text-[#C9963A] text-[8px] mt-1.5 shrink-0">◆</span>{item}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="font-display text-[22px] italic text-[#2C1810] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)]">What to Bring</h3>
+            <h3 className="font-display text-[22px] italic text-[#F5EDD8] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)]">What to Bring</h3>
             <ul className="space-y-0">
               {["Journal and pen", "Personal sacred objects or crystals", "Warm socks or blanket", "An open heart and a genuine intention", "Water bottle"].map((item) => (
-                <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(74,44,26,0.08)] text-base text-[#4A2C1A]">
+                <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(201,150,58,0.08)] text-base text-[#C4B49A]">
                   <span className="text-[#C9963A] text-[8px] mt-1.5 shrink-0">◆</span>{item}
                 </li>
               ))}
