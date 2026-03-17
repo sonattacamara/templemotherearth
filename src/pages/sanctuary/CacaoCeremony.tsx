@@ -340,12 +340,12 @@ const CacaoCeremony = () => {
 const FaqItem = ({ q, a }: { q: string; a: string }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="py-7 border-b border-[rgba(74,44,26,0.1)] cursor-pointer" onClick={() => setOpen(!open)}>
-      <div className="font-display text-lg text-[#2C1810] flex justify-between items-start gap-4">
+    <div className="py-7 border-b border-[rgba(201,150,58,0.15)] cursor-pointer" onClick={() => setOpen(!open)}>
+      <div className="font-display text-lg text-[#F5EDD8] flex justify-between items-start gap-4">
         {q}
         <span className={`text-[#C9963A] text-[22px] shrink-0 transition-transform ${open ? "rotate-45" : ""}`}>+</span>
       </div>
-      {open && <p className="text-base text-[#4A2C1A] leading-[1.8] mt-4">{a}</p>}
+      {open && <p className="text-base text-[#C4B49A] leading-[1.8] mt-4">{a}</p>}
     </div>
   );
 };
