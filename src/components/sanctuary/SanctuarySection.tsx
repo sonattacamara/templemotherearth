@@ -19,7 +19,7 @@ const SanctuarySection = ({ eyebrow, title, children, className = "", dark = fal
     <section
       ref={ref}
       id={id}
-      className={`px-6 md:px-12 py-20 md:py-24 ${dark ? "bg-[hsl(90,18%,93%)]" : ""} ${className}`}
+      className={`px-6 md:px-12 py-20 md:py-24 ${dark ? "bg-[hsl(30,22%,86%)]" : ""} ${className}`}
     >
       <motion.div
         className="max-w-[1100px] mx-auto"
