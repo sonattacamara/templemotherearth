@@ -204,9 +204,9 @@ const KamboRedirect = () => {
               <p className="text-muted-foreground leading-relaxed">
                 King James is the co-founder of Temple Mother Earth and an experienced Kambo practitioner
                 who has facilitated hundreds of sacred Kambo ceremonies. His approach combines deep reverence
-                for the medicine with rigorous safety protocols, ensuring every participant is held in a
+                for the sacrament with rigorous safety protocols, ensuring every participant is held in a
                 container of care, prayer, and intention. James's journey with Kambo began through his own
-                healing path, and he now dedicates his life to sharing this sacred medicine with warriors,
+                path of transformation, and he now dedicates his life to sharing this sacred sacrament with warriors,
                 seekers, and those called to purification.
               </p>
             </div>

@@ -106,7 +106,7 @@ const Preparation = () => {
                     "Silence your phone completely and leave it in your vehicle or designated area",
                     "Leave expectations at the door and trust the process — surrender is the gateway",
                     "Approach the space with reverence, gratitude, and respect for the facilitators and your fellow participants",
-                    "Be prepared for emotional releases — crying, shaking, and deep breathing are natural parts of the healing process",
+                    "Be prepared for emotional releases, crying, shaking, and deep breathing are natural parts of the ceremonial process",
                   ],
                 },
                 {

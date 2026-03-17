@@ -77,7 +77,7 @@ const Donate = () => {
       />
 
       <DonateImpactCards
-        heading="How Your Offering Creates Healing"
+        heading="How Your Offering Creates Transformation"
         subheading="Every dollar sown into the Temple directly supports transformation, community, and the preservation of sacred traditions."
         cards={impactCards}
       />

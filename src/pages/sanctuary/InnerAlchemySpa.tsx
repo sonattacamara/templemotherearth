@@ -29,8 +29,8 @@ const InnerAlchemySpa = () => (
 
     <SanctuarySection eyebrow="What's Included" title={<>A Full Day of<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Sacred Restoration</em></>}>
       <SanctuaryColCards cards={[
-        { title: "Body Treatments", description: "Therapeutic touch, energy work, and body-based practices that release what the nervous system has been holding." },
-        { title: "Sound & Vibrational Healing", description: "Bowls, instruments, and vibrational sacrament sessions to recalibrate the nervous system." },
+        { title: "Body Practices", description: "Therapeutic touch, energy work, and body-based practices that release what the nervous system has been holding." },
+        { title: "Sound & Vibrational Ceremony", description: "Bowls, instruments, and vibrational sacrament sessions to recalibrate the nervous system." },
         { title: "Sacred Nourishment", description: "Plant-based, ceremonially prepared food and juice throughout the day. Our 7 Pillars approach treats food as information." },
         { title: "Yoga & Breathwork", description: "Ceremonial yoga and breathwork sessions integrated into the day's flow. Not exercise, ceremony." },
         { title: "Sacred Ceremony", description: "A closing ceremony to seal the restoration and carry you into the evening changed." },

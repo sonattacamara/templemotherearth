@@ -87,7 +87,7 @@ const Volunteer = () => {
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
             Whether it's tending the grounds, supporting events, preparing meals, or lending your professional skills —
             your energy is valued and honored. By exchanging energy in service to the community, you open the door to
-            your own healing journey. No one is turned away.
+            your own sacred path. No one is turned away.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[

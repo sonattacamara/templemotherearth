@@ -58,7 +58,7 @@ const PrivateCeremonies = () => {
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
             { icon: Shield, title: "Undivided Attention", desc: "Your facilitator's complete focus is on you — your needs, your pace, your journey. No group dynamics to navigate." },
-            { icon: Sparkles, title: "Deeply Personalized", desc: "Every element of the ceremony is tailored to your specific intentions, healing goals, and spiritual path." },
+            { icon: Sparkles, title: "Deeply Personalized", desc: "Every element of the ceremony is tailored to your specific intentions, transformation goals, and spiritual path." },
             { icon: Users, title: "Flexible Setting", desc: "Private ceremonies can be held at our DC sanctuary or at your preferred location. We create the sacred container wherever you need it." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">

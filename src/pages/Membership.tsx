@@ -289,7 +289,7 @@ const Membership = () => {
               Discover Your Sacred Blueprint
             </h3>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-lg mx-auto">
-              Your Human Design chart decoded through a sacred lens — connecting your unique energy type to the perfect membership path for your healing journey.
+              Your Human Design chart decoded through a sacred lens, connecting your unique energy type to the perfect membership path for your sacred journey.
             </p>
             <Link
               to="/sacred-blueprint"

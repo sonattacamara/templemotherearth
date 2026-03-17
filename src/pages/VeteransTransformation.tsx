@@ -73,11 +73,11 @@ const kamboFears = [
 
 /* ─── Transformation Phases ─── */
 const phases = [
-  { phase: "Phase 1", name: "Purification", offering: "Kambo Ceremony", addresses: "Physical toxins, pharmaceutical buildup, immune system reset", benefit: "Clears the body so deeper healing can take root. Like clearing a weapon before maintenance — you strip it down first.", icon: <Leaf className="h-8 w-8" /> },
+  { phase: "Phase 1", name: "Purification", offering: "Kambo Ceremony", addresses: "Physical buildup, pharmaceutical residue, immune system reset", benefit: "Clears the body so deeper transformation can take root. Like clearing a weapon before maintenance, you strip it down first.", icon: <Leaf className="h-8 w-8" /> },
   { phase: "Phase 2", name: "Nervous System Reset", offering: "Hapé (Sacred Snuff)", addresses: "Grounding, mental clarity, energetic clearing", benefit: "Downregulates your threat-detection system. Takes you off high alert so you can actually rest.", icon: <Brain className="h-8 w-8" /> },
-  { phase: "Phase 3", name: "Deep Healing", offering: "Sacred Earth Medicine Ceremony", addresses: "Root trauma, PTSD, emotional wounds, spiritual disconnection", benefit: "Goes where talk therapy cannot reach — into the places your body locked the mission away.", icon: <Heart className="h-8 w-8" /> },
-  { phase: "Phase 4", name: "Spiritual Reset", offering: "Sacred Earth Medicine Ceremony", addresses: "Identity healing, existential restoration, spiritual reconnection", benefit: "Helps you remember who you were before the uniform — and who you are becoming after.", icon: <Sun className="h-8 w-8" /> },
-  { phase: "Phase 5", name: "Integration", offering: "Integration Circles & Ongoing Support", addresses: "Sustained healing, community accountability, new patterns", benefit: "You do not get dropped back into the world alone. We build your support network — your new unit.", icon: <Sparkles className="h-8 w-8" /> },
+  { phase: "Phase 3", name: "Deep Restoration", offering: "Sacred Earth Medicine Ceremony", addresses: "Root trauma, PTSD, emotional wounds, spiritual disconnection", benefit: "Goes where talk sessions cannot reach, into the places your body locked the mission away.", icon: <Heart className="h-8 w-8" /> },
+  { phase: "Phase 4", name: "Spiritual Reset", offering: "Sacred Earth Medicine Ceremony", addresses: "Identity restoration, existential return, spiritual reconnection", benefit: "Helps you remember who you were before the uniform, and who you are becoming after.", icon: <Sun className="h-8 w-8" /> },
+  { phase: "Phase 5", name: "Integration", offering: "Integration Circles & Ongoing Support", addresses: "Sustained transformation, community accountability, new patterns", benefit: "You do not get dropped back into the world alone. We build your support network, your new unit.", icon: <Sparkles className="h-8 w-8" /> },
 ];
 
 /* ─── Weekend Schedule ─── */
