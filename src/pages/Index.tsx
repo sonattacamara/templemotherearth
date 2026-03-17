@@ -515,7 +515,7 @@ const Index = () => {
             Your Sacred Community Awaits
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
-            Temple Mother Earth is a home for sovereign beings walking the path of healing, 
+            Temple Mother Earth is a home for sovereign beings walking the path of transformation, 
             growth, and remembrance. Whether you're just beginning to explore or ready to 
             deepen your practice, there is a place for you here.
           </motion.p>
