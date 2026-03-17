@@ -8,11 +8,11 @@ const EVENTBRITE_YIN = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrend
 
 const SacredYinYoga = () => (
   <SanctuaryWeekLayout
-    title="Sacred Yin Yoga · March 25 · Temple Mother Earth"
+    title="Sacred Yin Yoga · Temple Mother Earth"
     description="Ceremonial yin yoga with sound healing and breathwork. Surrender and restore. Temple Mother Earth, Washington DC."
   >
     <SanctuaryHero
-      dateBadge="Tuesday · March 25 · 2026"
+      dateBadge="Recurring Offering"
       eyebrow="Sacred Yin Yoga"
       title={<>You Already Know<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">How to Surrender</em></>}
       subtitle=""
@@ -23,9 +23,9 @@ const SacredYinYoga = () => (
     />
 
     <SanctuarySection id="about" eyebrow="What Sacred Yin Is" title={<>Not Exercise.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Ceremony in the Body.</em></>}>
-      <div className="text-xl leading-[1.85] text-[hsl(90,10%,35%)] max-w-[720px] font-serif space-y-6">
+      <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>Yin yoga asks you to stay. That is the entire practice. Postures are held for three to five minutes, long enough to move past the surface layer of muscle and reach the deep connective tissue, the fascia, the ligaments, the energetic meridians.</p>
-        <p>Most of us have been trained to push through. Yin asks for the opposite: <strong className="text-[hsl(100,20%,15%)]">to arrive, to feel, and to let the body open in its own time.</strong></p>
+        <p>Most of us have been trained to push through. Yin asks for the opposite: <strong className="text-[hsl(45,70%,49%)]">to arrive, to feel, and to let the body open in its own time.</strong></p>
         <p>Sacred Yin at Temple Mother Earth is ceremony. Sound healing woven throughout. Breathwork at the opening and close. The facilitator holds the space as a sacred container, not just a fitness class.</p>
       </div>
     </SanctuarySection>
@@ -39,7 +39,7 @@ const SacredYinYoga = () => (
     </SanctuarySection>
 
     <SanctuaryCTA
-      eyebrow="Tuesday · March 25 · 2026"
+      eyebrow="Recurring Offering · Washington, DC"
       title={<>Your Body<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready to Rest</em></>}
       description="You don't need experience. You don't need flexibility. You need ninety minutes and a willingness to arrive. That's all."
       ctaLabel="Secure Your Place"

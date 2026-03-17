@@ -9,11 +9,11 @@ const EVENTBRITE_POTLUCK = "https://www.eventbrite.com/e/soulful-connections-a-c
 
 const CommunityPotluck = () => (
   <SanctuaryWeekLayout
-    title="Community Integration Potluck · March 23 · Temple Mother Earth"
+    title="Community Integration Potluck · Temple Mother Earth"
     description="Free community gathering, integration circle, and Sacred Tea House. Temple Mother Earth, Washington DC."
   >
     <SanctuaryHero
-      dateBadge="Monday · March 23 · 2026 · Free"
+      dateBadge="Recurring · Free & Open"
       eyebrow="Community Integration Potluck"
       title={<>You Are Already<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Part of This Family</em></>}
       subtitle=""
@@ -24,10 +24,10 @@ const CommunityPotluck = () => (
     />
 
     <SanctuarySection id="about" eyebrow="What This Is" title={<>Not a Networking Event.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">A Home.</em></>}>
-      <div className="text-xl leading-[1.85] text-[hsl(90,10%,35%)] max-w-[720px] font-serif space-y-6">
+      <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>There is a particular kind of loneliness that comes from doing deep work alone. You have experiences that can't be explained to most people. You are looking for people who understand without explanation.</p>
-        <p><strong className="text-[hsl(100,20%,15%)]">People who have sat in ceremony and are integrating. People who are curious and drawn but haven't stepped in yet. People who are just looking for a table where the conversation goes somewhere real.</strong></p>
-        <p>The Sacred Tea House will be open throughout the evening. The integration circle creates space for what you are carrying. And the potluck, food made with intention, shared with people who are genuinely present, is its own form of ceremony.</p>
+        <p><strong className="text-[hsl(45,70%,49%)]">People who have sat in ceremony and are integrating. People who are curious and drawn but haven't stepped in yet. People who are just looking for a table where the conversation goes somewhere real.</strong></p>
+        <p>The Sacred Tea House will be open throughout the evening. The integration circle creates space for what you are carrying. And the potluck — food made with intention, shared with people who are genuinely present — is its own form of ceremony.</p>
       </div>
     </SanctuarySection>
 
@@ -45,7 +45,7 @@ const CommunityPotluck = () => (
     />
 
     <SanctuaryCTA
-      eyebrow="Monday · March 23 · 2026 · Free & Open"
+      eyebrow="Recurring · Free & Open to All"
       title={<>The Table<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Already Set For You</em></>}
       description="Register so we know you're coming. Bring something to share. Come as you are. The family is already gathering."
       ctaLabel="Register Free"
