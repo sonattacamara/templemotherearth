@@ -34,8 +34,8 @@ const ritualSteps = [
 ];
 
 const whoCards = [
-  { num: "01", type: "The One Who Has Done the Work", tag: "Ready for the Threshold", body: "You have sat in ceremony before. You have done the inner work. Something in you knows: the next level of your healing requires a deeper purification than what you have accessed so far." },
-  { num: "02", type: "The One Carrying What Words Cannot Reach", tag: "Beyond Talk · Into the Body", body: "Therapy helped. Meditation helped. But something remains lodged in the body, beneath language, beneath understanding. Kambo reaches what the mind cannot." },
+  { num: "01", type: "The One Who Has Done the Work", tag: "Ready for the Threshold", body: "You have sat in ceremony before. You have done the inner work. Something in you knows: the next level of your transformation requires a deeper purification than what you have accessed so far." },
+  { num: "02", type: "The One Carrying What Words Cannot Reach", tag: "Beyond Talk · Into the Body", body: "Talk sessions helped. Meditation helped. But something remains lodged in the body, beneath language, beneath understanding. Kambo reaches what the mind cannot." },
   { num: "03", type: "The One Being Called", tag: "Trust the Knowing", body: "No logic. No explanation. Just a persistent knowing that this is next. If you have been circling this ceremony, that is not curiosity. That is preparation completing itself." },
 ];
 

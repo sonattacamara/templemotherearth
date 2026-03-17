@@ -71,7 +71,7 @@ const Donate = () => {
         tagline="Offerings & Tithes"
         heading="Keep the Temple Sustainable"
         description="Your generosity sustains a sacred space where ceremony, community, and Earth Medicine traditions thrive. Every offering directly supports our mission to preserve these practices and expand access to transformation."
-        taxNote="Temple Mother Earth is a US federally tax-exempt 501(c)(3) religious organization. All contributions are tax-deductible. Thank you for being part of this sacred family."
+        taxNote="Temple Mother Earth is a US federally tax-exempt 508(c)(1)(A) sacred ceremony church. All contributions are tax-deductible. Thank you for being part of this sacred family."
         donateUrl={PAYPAL_DONATE_URL}
         buttonLabel="Offerings & Tithes"
       />
@@ -129,7 +129,7 @@ const Donate = () => {
                   Veterans Scholarship Fund
                 </h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  Temple of Mother Earth · 501(c)(3) Nonprofit · EIN 85-4135623
+                  Temple of Mother Earth · 508(c)(1)(A) Sacred Ceremony Church · EIN 85-4135623
                 </p>
               </div>
               <ArrowRight className="ml-auto h-4 w-4 shrink-0 text-muted-foreground/40 group-hover:text-primary transition-colors" />
@@ -141,7 +141,7 @@ const Donate = () => {
       <DonateCTA
         tagline="Sustain the Sacred"
         heading="Your Offering Plants Seeds of Transformation"
-        body="Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible offering helps us continue to serve our community, preserve Earth Medicine traditions, and grow our sacred family."
+        body="Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Your tax-deductible offering helps us continue to serve our community, preserve Earth Medicine traditions, and grow our sacred family."
         donateUrl={PAYPAL_DONATE_URL}
         buttonLabel="Offerings & Tithes"
         onDisclosure={() => setShowDisclosure(true)}
@@ -152,8 +152,8 @@ const Donate = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            &copy; {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit
-            organization. All rights reserved.
+            &copy; {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony
+            church. All rights reserved.
           </p>
         </div>
       </footer>

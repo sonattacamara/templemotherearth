@@ -47,7 +47,7 @@ const JoinFacilitator = () => {
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Share your gifts with the Temple Mother Earth community. We're seeking experienced practitioners
-            and healers who are called to serve through Earth Medicine and holistic wellness.
+            and practitioners who are called to serve through Earth Medicine and sacred wellness.
           </motion.p>
         </motion.div>
       </section>
@@ -133,7 +133,7 @@ const JoinFacilitator = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
           </p>
         </div>
       </footer>

@@ -677,38 +677,38 @@ const About = () => {
             {[
               {
                 name: "Debra Owens",
-                role: "Yoga & Sound Therapy Guide",
+                role: "Yoga & Sound Ceremony Guide",
                 img: facilitatorDebra,
-                imgAlt: "Debra Owens, yoga and sound therapy guide at Temple Mother Earth for Cacao and Blue Lotus ceremony integration",
-                desc: "Certified yoga instructor and sound therapist devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
+                imgAlt: "Debra Owens, yoga and sound ceremony guide at Temple Mother Earth for Cacao and Blue Lotus ceremony integration",
+                desc: "Certified yoga instructor and sound ceremony practitioner devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
               },
               {
                 name: "Walter Spencer",
                 role: "Poet & Facilitator",
                 img: facilitatorSpencer,
                 imgAlt: "Walter Spencer, poet and Kambo ceremony facilitator at Temple Mother Earth, creator of The Cove men's integration circle",
-                desc: "A multi-medium artist from Prince George's County rooted in creativity and healing. Through poetry, plant medicine and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle — inviting men to slow down, soften, and be held.",
+                desc: "A multi-medium artist from Prince George's County rooted in creativity and transformation. Through poetry, plant sacrament and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle — inviting men to slow down, soften, and be held.",
               },
               {
                 name: "Samira Davis",
                 role: "Herbalist & Earth Medicine Keeper",
                 img: facilitatorSamira,
                 imgAlt: "Samira Davis, herbalist and Earth Medicine keeper specializing in Bobinsana, Mugwort, and Damiana plant allies",
-                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding individuals toward holistic healing through the Earth's abundant pharmacy.",
+                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their restorative properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding individuals toward holistic restoration through the Earth's abundant pharmacy.",
               },
               {
                 name: "Jala Johnson",
                 role: "Creator of Metamorphosis Mind 801 · Sound Ceremony Practitioner",
                 img: facilitatorJala,
                 imgAlt: "Jala Johnson, sound ceremony practitioner and Cacao ceremony facilitator at Temple Mother Earth",
-                desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound healing sessions, themed workshops, immersions, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
+                desc: "Jala Johnson, creator of Metamorphosis Mind 801, is dedicated to spiritual exploration, personal expansion, and holistic wellness. Through sound ceremony sessions, themed workshops, immersions, and intentional gatherings, she supports individuals in self-expression, shedding outdated identities, and stepping more fully into authentic alignment.",
               },
               {
                 name: "Rama",
-                role: "Healer, Facilitator & Transpersonal Psychology Scholar",
+                role: "Practitioner, Facilitator & Transpersonal Psychology Scholar",
                 img: facilitatorRama,
                 imgAlt: "Rama, Ayahuasca and Kambo ceremony facilitator trained in Shipibo-Conibo and Quechua-Lamista traditions",
-                desc: "Equity and inclusion are at the core of Rama's work. Guided by Traditional Amazonian wisdom, he has trained with respected indigenous masters from the Shipibo-Conibo and Quechua-Lamista lineages, thoughtfully integrating ancient teachings into modern healing practices. A Volunteer Supervisor with the Fireside Project and MAPS MDMA-assisted Therapy Training graduate, Rama is currently pursuing a Ph.D. in transpersonal psychology. Through his work, he empowers others to heal, awaken, and step fully into their highest potential.",
+                desc: "Equity and inclusion are at the core of Rama's work. Guided by Traditional Amazonian wisdom, he has trained with respected indigenous masters from the Shipibo-Conibo and Quechua-Lamista lineages, thoughtfully integrating ancient teachings into modern sacred practices. A Volunteer Supervisor with the Fireside Project and MAPS MDMA-assisted Training graduate, Rama is currently pursuing a Ph.D. in transpersonal psychology. Through his work, he empowers others to transform, awaken, and step fully into their highest potential.",
               },
             ].map((person) => (
               <motion.div
@@ -751,7 +751,7 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* ───── YOU ARE YOUR OWN HEALER ───── */}
+      {/* ───── YOU ARE YOUR OWN SOVEREIGN BEING ───── */}
       <section className="bg-card px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-3xl text-center"
@@ -764,7 +764,7 @@ const About = () => {
             Our Message to You
           </motion.p>
           <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
-            You Are Your Own Healer
+            You Are Your Own Sovereign Being
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
@@ -775,13 +775,13 @@ const About = () => {
             </p>
             <p>
               At Temple Mother Earth, we are human beings dedicated to providing space for YOU to do
-              your OWN work with sacred tools, wisdom, guidance, and practices. This is not a magic cure
-              or a quick fix — it is called medicine for a specific reason. Healing is a lifestyle 
+              your OWN work with sacred tools, wisdom, guidance, and practices. This is not a quick fix 
+              — it is called sacrament for a specific reason. Transformation is a lifestyle 
               and a continuous journey.
             </p>
             <p className="font-display text-xl font-semibold text-foreground italic">
               "Find your way back home to the wisdom and divine intelligence that exists within your entire being.
-              You are your own healer and savior."
+              You are your own sovereign being and savior."
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-10">

@@ -37,7 +37,7 @@ const timelineDays: TimelineDay[] = [
     description: "Sacred ceremonial cacao, live sound, and community circle. The gentlest entry point, and for many, the most unexpectedly profound. All welcome.",
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
     pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-healing-ceremony-registration-822085920117", ctaReady: true,
+    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117", ctaReady: true,
     slug: "/cacao", image: "https://images.pexels.com/photos/3776163/pexels-photo-3776163.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Opening",
   },
@@ -87,7 +87,7 @@ const timelineDays: TimelineDay[] = [
     description: "Integration circle, Sacred Tea House open all evening, and a potluck table where the conversation goes somewhere real. Bring a dish. Come as you are.",
     icon: <Users className="h-5 w-5" />, tags: ["Free", "Everyone Welcome", "Community"],
     pricing: [{ label: "All Welcome", price: "Free" }],
-    ctaLabel: "Register Free", ctaHref: "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-healing-registration-1119491141139", ctaReady: true,
+    ctaLabel: "Register Free", ctaHref: "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-transformation-registration-1119491141139", ctaReady: true,
     slug: "/potluck", image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Belonging",
   },
@@ -117,7 +117,7 @@ const timelineDays: TimelineDay[] = [
     description: "The Great Purifier. The ancient Amazonian purification sacrament. For those who have been called. Sacred screening required. By application only.",
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
     pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-healing-ceremony-registration-822085920117", ctaReady: true,
+    ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
     slug: "/kambo", image: "https://images.pexels.com/photos/975354/pexels-photo-975354.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Integration",
   },
@@ -649,7 +649,7 @@ const SanctuaryWeek = () => {
           {[
             { title: "Sustainer", desc: "Full suggested contribution. Your full payment supports someone who cannot.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             { title: "Community", desc: "Reduced contribution. For those who are working but genuinely strained. No explanation required.", featured: true, icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { title: "Scholarship", desc: "For genuine hardship. Funded by our TOME 501(c)(3) scholarship fund.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { title: "Scholarship", desc: "For genuine hardship. Funded by our TOME 508(c)(1)(A) scholarship fund.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
           ].map((tier) => (
             <div key={tier.title} className={`p-8 bg-[hsl(105,30%,12%)] border ${tier.featured ? "border-[hsla(45,70%,49%,0.35)]" : "border-[hsla(45,70%,49%,0.12)]"}`}>
               <div className="mb-3">{tier.icon}</div>

@@ -414,7 +414,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mt-12 text-center text-sm text-muted-foreground"
           >
-            Your membership supports Temple Mother Earth's 501(c)(3) nonprofit mission — keeping sacred space alive for all.
+            Your membership supports Temple Mother Earth's 508(c)(1)(A) sacred mission — keeping sacred space alive for all.
           </motion.p>
         </motion.div>
       </section>
@@ -455,7 +455,7 @@ const Membership = () => {
               },
               {
                 q: "Are contributions tax-deductible?",
-                a: "Temple Mother Earth is a 501(c)(3) nonprofit. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. We recommend consulting your tax advisor.",
+                a: "Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. We recommend consulting your tax advisor.",
               },
               {
                 q: "What if I'm not sure where to start?",
@@ -541,7 +541,7 @@ const Membership = () => {
                 <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
               <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
-                A 501(c)(3) nonprofit sanctuary for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
+                A 508(c)(1)(A) sacred ceremony church for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
               </p>
             </div>
             <div>
@@ -577,7 +577,7 @@ const Membership = () => {
           <div className="mt-12 border-t border-primary-foreground/10 pt-8">
             <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
               <p className="font-body text-xs text-primary-foreground/40">
-                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+                © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
               </p>
               <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
                 Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.

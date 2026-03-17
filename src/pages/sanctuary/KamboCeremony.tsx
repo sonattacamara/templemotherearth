@@ -4,10 +4,10 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const EVENTBRITE_KAMBO = "https://www.eventbrite.com/e/kambo-healing-ceremony-registration-822085920117";
+const EVENTBRITE_KAMBO = "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117";
 
 const avatars = [
-  { num: "One", title: "The One Who Has Tried Everything", desc: "Therapy. Retreats. Plant medicine. The gym. The diet. The meditation practice. Something is still there, a weight in the body that doesn't shift no matter what the mind understands." },
+  { num: "One", title: "The One Who Has Tried Everything", desc: "Talk sessions. Retreats. Plant sacrament. The gym. The diet. The meditation practice. Something is still there, a weight in the body that doesn't shift no matter what the mind understands." },
   { num: "Two", title: "The One Who Knows They're Being Called", desc: "No explanation. No logic. Just a knowing, Kambo, and now. If you've been circling this ceremony for months or years, that is not curiosity. That is preparation." },
   { num: "Three", title: "The One Ready to Reset", desc: "A chapter is ending. Something needs to be released before what comes next can begin. Kambo is the great reset, not of who you are, but of what you've been carrying." },
 ];
@@ -226,7 +226,7 @@ const KamboCeremony = () => {
             {[
               { title: "Sustainer", desc: "Full contribution. For those who can, you also support someone who cannot." },
               { title: "Community", desc: "Reduced contribution. For those working and committed but genuinely strained.", featured: true },
-              { title: "Scholarship", desc: "Funded through TOME 501(c)(3). A brief reflection is all that's required. Ask us." },
+              { title: "Scholarship", desc: "Funded through TOME 508(c)(1)(A). A brief reflection is all that's required. Ask us." },
             ].map((tier) => (
               <div key={tier.title} className={`p-8 bg-[hsl(140,28%,6%)] border ${tier.featured ? "border-[hsla(45,70%,49%,0.3)]" : "border-[hsla(45,70%,49%,0.08)]"}`}>
                 <h3 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3">{tier.title}</h3>

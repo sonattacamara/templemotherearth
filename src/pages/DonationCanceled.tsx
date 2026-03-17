@@ -181,7 +181,7 @@ const DonationCanceled = () => {
               },
               {
                 q: "Are donations tax-deductible?",
-                a: "Yes. Temple Mother Earth is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the full extent of the law. You will receive a receipt for your records.",
+                a: "Yes. Temple Mother Earth is a registered 508(c)(1)(A) sacred ceremony church. All donations are tax-deductible to the full extent of the law. You will receive a receipt for your records.",
               },
             ].map((item) => (
               <div key={item.q} className="rounded-lg border border-border bg-background p-5">
@@ -207,7 +207,7 @@ const DonationCanceled = () => {
         <div className="mx-auto max-w-4xl text-center">
           <img src={logo} alt="Temple Mother Earth" className="mx-auto mb-4 h-10 w-auto opacity-60" />
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
           </p>
         </div>
       </footer>

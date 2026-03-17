@@ -20,13 +20,13 @@ const impactCards = [
   },
   {
     icon: Users,
-    title: "Community Healing",
-    desc: "Supports group ceremonies, creating shared healing spaces where transformation happens collectively.",
+    title: "Community Sacrament",
+    desc: "Supports group ceremonies, creating shared sacred spaces where transformation happens collectively.",
   },
   {
     icon: Sparkles,
     title: "Aftercare & Integration",
-    desc: "Funds follow-up support and integration resources so the healing journey continues beyond ceremony.",
+    desc: "Funds follow-up support and integration resources so the transformative journey continues beyond ceremony.",
   },
 ];
 
@@ -44,7 +44,7 @@ const CeremonyDonate = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Donate | Support Sacred Ceremonies"
-        description="Make a tax-deductible donation to Temple Mother Earth. Support our 501(c)(3) nonprofit mission of healing and community."
+        description="Make a tax-deductible donation to Temple Mother Earth. Support our 508(c)(1)(A) sacred mission of transformation and community."
         path="/donate/ceremony"
       />
       <Navigation />
@@ -54,7 +54,7 @@ const CeremonyDonate = () => {
         tagline="Ceremony Scholarship Fund"
         heading="Gift the Journey to Someone Else"
         description="Your generous contribution makes it possible for someone who may not have the financial means to experience the transformative power of sacred ceremony."
-        taxNote="Temple Mother Earth is a US federally tax-exempt 501(c)(3) religious organization. All contributions are tax-deductible."
+        taxNote="Temple Mother Earth is a US federally tax-exempt 508(c)(1)(A) sacred ceremony church. All contributions are tax-deductible."
         donateUrl={CEREMONY_PAYPAL_URL}
         buttonLabel="Gift a Journey"
         buttonIcon={Heart}
@@ -67,9 +67,9 @@ const CeremonyDonate = () => {
       />
 
       <DonateCTA
-        tagline="Sow Into Healing"
+        tagline="Sow Into Transformation"
         heading="Plant a Seed of Transformation"
-        body="Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible gift helps fund ceremony scholarships for those who cannot afford the journey on their own. You are planting seeds of transformation."
+        body="Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Your tax-deductible gift helps fund ceremony scholarships for those who cannot afford the journey on their own. You are planting seeds of transformation."
         donateUrl={CEREMONY_PAYPAL_URL}
         buttonLabel="Gift a Journey"
         buttonIcon={Heart}
@@ -100,8 +100,8 @@ const CeremonyDonate = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            &copy; {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit
-            organization. All rights reserved.
+            &copy; {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony
+            church. All rights reserved.
           </p>
         </div>
       </footer>

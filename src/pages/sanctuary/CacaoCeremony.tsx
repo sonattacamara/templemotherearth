@@ -4,7 +4,7 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-healing-ceremony-registration-822085920117";
+const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117";
 
 const Section = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);
@@ -270,7 +270,7 @@ const CacaoCeremony = () => {
         <STitle><span className="block text-center">What Our Community <em className="text-[#8B5E3C]">Says</em></span></STitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
           {[
-            { text: "I've been in therapy for three years working on my heart. One cacao ceremony did what three years of talk therapy couldn't. I cried for an hour and felt completely free afterward.", author: "Mariana V.", loc: "Washington, DC" },
+            { text: "I've been in talk sessions for three years working on my heart. One cacao ceremony did what three years of conventional approaches couldn't. I cried for an hour and felt completely free afterward.", author: "Mariana V.", loc: "Washington, DC" },
             { text: "The facilitators hold the space with such mastery. You feel completely safe to fall apart and put yourself back together, better.", author: "David K.", loc: "Alexandria, VA" },
             { text: "As someone who's never done any kind of sacred sacrament, I was nervous. The ceremony was gentle, profound, and exactly what I needed.", author: "Renée M.", loc: "Silver Spring, MD" },
           ].map((t) => (

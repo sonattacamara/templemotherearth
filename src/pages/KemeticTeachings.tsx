@@ -84,7 +84,7 @@ const trinity = [
     role: "The Mother",
     color: "from-red-900 to-red-800",
     border: "border-red-600/30",
-    desc: "Warrior goddess worshipped during the 60-year war against the Hyksos revolution. Taught IamHetep herbs, teas, and wound healing. Mother of Kemetic Reiki. Mother of the god of medicine.",
+    desc: "Warrior goddess worshipped during the 60-year war against the Hyksos revolution. Taught IamHetep herbs, teas, and wound restoration. Mother of Kemetic Reiki. Mother of the god of sacred knowledge.",
   },
   {
     name: "IamHetep",
@@ -98,7 +98,7 @@ const trinity = [
 /* ── Future Teachings ── */
 const futureTeachings = [
   "Ptah — The Creator",
-  "Sekhmet — The Warrior Healer",
+  "Sekhmet — The Warrior Protector",
   "IamHetep — The Divine Physician",
   "The Daily Practice Guide",
   "Wekhedu in Modern Life",
@@ -130,15 +130,15 @@ const KemeticTeachings = () => {
     { term: "Neter / Neteru", meaning: "The divine forces of nature. Neteru (plural) are not 'gods' in the Western sense but expressions of the One Creator manifesting through nature." },
     { term: "Amun Ra", meaning: "The hidden light made visible. Amun Ra represents the supreme creative force, the noonday Sun at full radiance and power." },
     { term: "Atum", meaning: "The Neter of completion and the setting Sun. Atum represents the return to wholeness and the sacred pause before renewal." },
-    { term: "Sekhmet", meaning: "The lioness Neter of fierce healing, protection, and sacred rage. Sekhmet destroys what no longer serves so that new life can emerge." },
+    { term: "Sekhmet", meaning: "The lioness Neter of fierce transformation, protection, and sacred rage. Sekhmet destroys what no longer serves so that new life can emerge." },
     { term: "Ptah", meaning: "The Neter of creation and craftsmanship. Ptah speaks the world into existence through divine utterance, representing the power of intention and manifestation." },
-    { term: "IamHetep", meaning: "The ancient healer, architect, and sage. IamHetep (Imhotep) represents the integration of medicine, spirituality, and sacred knowledge." },
-    { term: "Metou", meaning: "The energy pathways of the body in Kemetic healing tradition. Similar to meridians, Metou channels carry life force through the physical temple." },
+    { term: "IamHetep", meaning: "The ancient practitioner, architect, and sage. IamHetep (Imhotep) represents the integration of sacred knowledge, spirituality, and divine wisdom." },
+    { term: "Metou", meaning: "The energy pathways of the body in Kemetic sacred tradition. Similar to meridians, Metou channels carry life force through the physical temple." },
     { term: "Ka", meaning: "The vital life force or spirit double. The Ka is the energetic body that survives physical death and connects you to the divine." },
     { term: "Ba", meaning: "The soul or personality essence. The Ba travels between the physical and spiritual worlds, carrying your unique divine expression." },
     { term: "Ankh Activation", meaning: "A sunrise practice of breathing, movement, and intention that activates the life force (Ankh) within your body temple at the start of each day." },
     { term: "Hapé", meaning: "A sacred tobacco-based snuff used ceremonially for grounding, clearing, and opening the spiritual senses. Administered with prayer and intention." },
-    { term: "Sacred Earth Medicine", meaning: "Plant-based sacraments provided by Mother Earth for healing, transformation, and spiritual elevation. Used in ceremony with reverence and guidance." },
+    { term: "Sacred Earth Medicine", meaning: "Plant-based sacraments provided by Mother Earth for transformation, restoration, and spiritual elevation. Used in ceremony with reverence and guidance." },
   ];
 
   const filteredGlossary = kemeticGlossary.filter(
@@ -217,10 +217,10 @@ const KemeticTeachings = () => {
               Kemetic Teachings
             </motion.h1>
             <motion.p variants={fadeUp} className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-4">
-              Our temple is rooted in the ancient spiritual practices of Kemet — honoring Mother Earth as the sacred source of all healing, wisdom, and transformation.
+              Our temple is rooted in the ancient spiritual practices of Kemet — honoring Mother Earth as the sacred source of all transformation, wisdom, and restoration.
             </motion.p>
             <motion.p variants={fadeUp} className="font-body text-sm text-secondary/80 italic">
-              High Priest of Kemetic Healing · Keeper of the Wisdom of IamHetep
+              High Priest of Kemetic Wisdom · Keeper of the Wisdom of IamHetep
             </motion.p>
           </motion.div>
         </div>
@@ -234,7 +234,7 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-6">
             <p>
-              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, healer, and provider. Our ancestors in{" "}
+              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, provider, and source of all wisdom. Our ancestors in{" "}
               <Tooltip>
                 <TooltipTrigger asChild>
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Kemet</strong>
@@ -243,7 +243,7 @@ const KemeticTeachings = () => {
                   <p className="font-body text-sm"><strong>Kemet</strong>, meaning "The Black Land," is the original name for ancient Egypt, referring to the rich, dark soil along the Nile that sustained all life.</p>
                 </TooltipContent>
               </Tooltip>{" "}
-              (ancient Egypt) understood that the Earth herself is medicine, and that true healing begins when we align ourselves with her rhythms, her seasons, and her wisdom.
+              (ancient Egypt) understood that the Earth herself is sacrament, and that true transformation begins when we align ourselves with her rhythms, her seasons, and her wisdom.
             </p>
             <p>
               Kemetism is the spiritual practice of awareness, connection, and elevation through these Kemetic spiritual principles — creating the balance of{" "}
@@ -287,10 +287,10 @@ const KemeticTeachings = () => {
                 In Kemetic philosophy, the body is not separate from the sacred. <em>Your body is the first temple.</em> Every breath, every heartbeat, every cell carries the divine spark of creation. When you care for your body through nourishment, movement, rest, and ceremony, you are not merely maintaining flesh. You are honoring the vessel through which the divine experiences itself.
               </p>
               <p>
-                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong>, the original sanctuary that holds everything we need for healing, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight: these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
+                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong>, the original sanctuary that holds everything we need for restoration, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight: these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
               </p>
               <p className="text-secondary/90 italic text-center">
-                When you heal the temple within, you deepen your connection to the divine. When you honor the Earth, you honor the source from which all temples arise.
+                When you restore the temple within, you deepen your connection to the divine. When you honor the Earth, you honor the source from which all temples arise.
               </p>
             </div>
           </motion.div>
@@ -314,7 +314,7 @@ const KemeticTeachings = () => {
               Modern archaeology and genetic science continue to affirm what our ancestors always knew: Africa, and specifically the Nile Valley region, is the origin point of <em>Homo sapiens</em>. The oldest known human remains, the earliest evidence of organized spiritual practice, and the foundations of all world religions trace back to this sacred land. Every culture, every tradition, every prayer spoken on this planet has roots in the soil of Kemet.
             </p>
             <p>
-              At Temple Mother Earth, we do not study Kemet as ancient history. We <em>live</em> it. We practice the daily rituals, honor the Neteru, follow the solar cycle, and remember the truth that our ancestors encoded into stone and star: that the Earth is alive, that your body is sacred, and that healing is your birthright.
+              At Temple Mother Earth, we do not study Kemet as ancient history. We <em>live</em> it. We practice the daily rituals, honor the Neteru, follow the solar cycle, and remember the truth that our ancestors encoded into stone and star: that the Earth is alive, that your body is sacred, and that transformation is your birthright.
             </p>
           </motion.div>
         </motion.div>
@@ -568,7 +568,7 @@ const KemeticTeachings = () => {
               We have sacred service weekly Saturday nights 9 PM – 12 AM to express gratitude and joy for the week. Followed by a sunrise service at the beach to merge with divine.
             </p>
             <p>
-              When you join the temple, you can avail yourself of the healing services of our ordained priests and priestesses.
+              When you join the temple, you can avail yourself of the sacred services of our ordained priests and priestesses.
             </p>
           </motion.div>
           <motion.div variants={fadeUp}>
@@ -593,16 +593,16 @@ const KemeticTeachings = () => {
             </div>
             <div className="flex-1">
               <h3 className="font-display text-2xl font-bold text-primary-foreground mb-1">Dr. George Xavier Love, Jr.</h3>
-              <p className="font-body text-sm text-secondary mb-6">High Priest of Kemetic Healing · Keeper of the Wisdom of IamHetep</p>
+              <p className="font-body text-sm text-secondary mb-6">High Priest of Kemetic Wisdom · Keeper of the Wisdom of IamHetep</p>
               <div className="font-body text-sm md:text-base text-primary-foreground/75 leading-relaxed space-y-4">
                 <p>
                   Dr. George Xavier Love, Jr. is a Doctor of Oriental Medicine, 13th Lineage Holder of Qing Long (Blue Dragon) Qigong, and Grandmaster of Blue Dragon Immortal Qigong. He is a licensed Acupuncture Physician (since 1986), expert in Holographic Medicine, Tibetan Buddhist Psychiatry, and Taoist Psychology.
                 </p>
                 <p>
-                  A trance drummer for ancestral soul retrieval, author of 10 books, and international lecturer, Dr. Love has studied Ayurveda, Unani Tibb, Tibetan, Persian, and West African healing systems.
+                  A trance drummer for ancestral soul retrieval, author of 10 books, and international lecturer, Dr. Love has studied Ayurveda, Unani Tibb, Tibetan, Persian, and West African sacred systems.
                 </p>
                 <p>
-                  Dr. Love is the living bridge between the Kemetic healing tradition and Chinese/Oriental medicine — embodying the Metou-to-Meridian wisdom pathway that IamHetep first described nearly 4,500 years ago.
+                  Dr. Love is the living bridge between the Kemetic sacred tradition and Chinese/Oriental medicine — embodying the Metou-to-Meridian wisdom pathway that IamHetep first described nearly 4,500 years ago.
                 </p>
               </div>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-body text-primary-foreground/50">
@@ -677,7 +677,7 @@ const KemeticTeachings = () => {
       {/* ── FOOTER CTA ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ctaFooterImg} alt="Temple Mother Earth sacred healing community gathering for Cacao and Hapé ceremonies" className="w-full h-full object-cover" />
+          <img src={ctaFooterImg} alt="Temple Mother Earth sacred ceremony community gathering for Cacao and Hapé ceremonies" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-foreground/85" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">

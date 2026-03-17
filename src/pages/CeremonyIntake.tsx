@@ -312,7 +312,7 @@ const CeremonyIntake = () => {
             Your safety and sacred experience are our highest priority. This intake process helps our facilitators prepare the most supportive sacred journey for your healing.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
-            As a 501(c)(3) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
+            As a 508(c)(1)(A) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
           </motion.p>
         </motion.div>
       </section>
@@ -1000,7 +1000,7 @@ const CeremonyIntake = () => {
               {/* RFRA & Liability */}
               <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
                 <p className="font-semibold text-foreground">Religious Freedom Restoration Act (RFRA) Declaration</p>
-                <p>Temple Mother Earth is a 501(c)(3) nonprofit religious organization. Our sacramental use of Earth Medicine is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies, you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community that holds the beliefs stated above.</p>
+                <p>Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Our sacramental use of Earth Medicine is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies, you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community that holds the beliefs stated above.</p>
                 <p className="font-semibold text-foreground">Assumption of Risk & Liability Waiver</p>
                 <p>I understand that participation in Earth Medicine ceremonies carries inherent risks. I voluntarily assume all risks associated with my participation. I release Temple Mother Earth, its facilitators, staff, and volunteers from any and all liability arising from my participation in ceremonies, immersions, and related activities.</p>
                 <p>I understand that Earth Medicine is not a substitute for professional medical care and that I am encouraged to continue working with my healthcare providers.</p>
@@ -1126,7 +1126,7 @@ const CeremonyIntake = () => {
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.</p>
+          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.</p>
         </div>
       </footer>
     </div>

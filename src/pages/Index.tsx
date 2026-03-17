@@ -349,10 +349,10 @@ const Index = () => {
             <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">Our Origin</p>
             <p className="text-base leading-relaxed text-muted-foreground">
               In 2020, when the pandemic brought the world to a standstill and fear kept people isolated behind closed doors, 
-              <span className="font-semibold text-foreground"> we opened ours</span>. There was a great need for community, healing, 
-              and connection to the God within. What began as intimate healing circles during the darkest days of COVID grew into 
+              <span className="font-semibold text-foreground"> we opened ours</span>. There was a great need for community, restoration, 
+              and connection to the God within. What began as intimate sacred circles during the darkest days of COVID grew into 
               Temple Mother Earth — a sacred sanctuary where sovereign beings reconnect with the Earth, honor the divine within, 
-              and walk the path of healing together.
+              and walk the path of transformation together.
             </p>
             <a
               href="/about#top"
@@ -387,7 +387,7 @@ const Index = () => {
             in respect, prayer, reciprocity, and the remembrance that every human being carries the divine within.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-             Whether you are seeking healing, renewal, grounding, or expansion, Earth Medicine opens a path
+             Whether you are seeking restoration, renewal, grounding, or expansion, Earth Medicine opens a path
             of transformation that is both ancient and deeply personal. This sacred work honors the timeless
             relationship between humans and the Earth, offering safe containers for those ready to step
             into a deeper level of their journey.
@@ -471,7 +471,7 @@ const Index = () => {
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Heart, title: "Healing & Growth", desc: "Feel the weight of the past dissolve as you step into your power, guided by the rhythms of the Earth and the sacred within." },
+              { icon: Heart, title: "Transformation & Growth", desc: "Feel the weight of the past dissolve as you step into your power, guided by the rhythms of the Earth and the sacred within." },
               { icon: Users, title: "Connection to Spirit & Earth", desc: "Rediscover the sacred within yourself and the divine rhythms of nature." },
               { icon: Leaf, title: "A Global Circle of Support", desc: "Be uplifted by like-minded souls in ceremonies and gatherings designed for your awakening." },
               { icon: Sun, title: "A Thriving Community", desc: "Find your circle of kindred spirits, practitioners, and visionaries who share your passion for transformation." },
@@ -515,7 +515,7 @@ const Index = () => {
             Your Sacred Community Awaits
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-primary-foreground/75">
-            Temple Mother Earth is a home for sovereign beings walking the path of healing, 
+            Temple Mother Earth is a home for sovereign beings walking the path of transformation, 
             growth, and remembrance. Whether you're just beginning to explore or ready to 
             deepen your practice, there is a place for you here.
           </motion.p>
@@ -815,7 +815,7 @@ const Index = () => {
             The Faces of Temple Mother Earth
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of healing and higher consciousness.
+            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of transformation and higher consciousness.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
