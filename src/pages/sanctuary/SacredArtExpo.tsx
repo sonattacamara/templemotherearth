@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Palette, Music, Users, Sparkles, Send, ArrowRight, ArrowDown } from "lucide-react";
+import { Palette, Music, Users, Sparkles, Send, ArrowRight, ArrowDown, Flower2, Leaf as LeafIcon, Brush } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
