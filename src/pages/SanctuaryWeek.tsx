@@ -62,7 +62,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 4, date: "March 21", weekday: "Saturday", name: "Level 5 — The Complete Initiation",
+    day: 4, date: "", weekday: "", name: "Level 5 — The Complete Initiation",
     subtitle: "You Have Not Come This Far to Stop Here",
     description: "Every sacrament. One full-day container. Kambo included. For those who are genuinely ready to go all the way. By application only.",
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
