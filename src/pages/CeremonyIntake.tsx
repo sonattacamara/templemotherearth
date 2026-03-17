@@ -312,7 +312,7 @@ const CeremonyIntake = () => {
             Your safety and sacred experience are our highest priority. This intake process helps our facilitators prepare the most supportive sacred journey for your healing.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
-            As a 501(c)(3) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
+            As a 508(c)(1)(A) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
           </motion.p>
         </motion.div>
       </section>
