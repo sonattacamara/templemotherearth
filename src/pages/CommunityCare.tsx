@@ -109,7 +109,7 @@ const CommunityCare = () => (
     {/* PACKAGE PRICING */}
     <SanctuarySection eyebrow="Extended Pathways" title={<>Sacred Pathways<br /><em className="font-serif italic text-[hsl(45,70%,49%)] text-[1.1em]">Of Participation</em></>}>
       <p className="text-center text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
-        We offer these pathways as invitations. Please reach out if you require flexible support for your journey.
+        These are not packages. They are invitations into a living sacred practice. Each pathway is a doorway — chosen not by what you can afford, but by what your spirit is ready to receive.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
         {[
