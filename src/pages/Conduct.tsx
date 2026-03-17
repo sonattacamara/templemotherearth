@@ -99,7 +99,7 @@ const Conduct = () => {
                 <p>Temple Mother Earth is committed to providing:</p>
                 <ul className="space-y-2 pl-4">
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Experienced, trained facilitators for all ceremonies and gatherings.</li>
-                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />A safe, clean, and sacred environment for healing.</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />A safe, clean, and sacred environment for transformation.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Transparent communication about what to expect.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Integration support before, during, and after ceremony.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Ethical partnerships with indigenous wisdom keepers.</li>
