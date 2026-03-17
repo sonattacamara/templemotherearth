@@ -16,7 +16,8 @@ import facilitatorSamira from "@/assets/facilitator-samira.jpg";
 import facilitatorGeorge from "@/assets/facilitator-george-new.jpg";
 import facilitatorJala from "@/assets/facilitator-jala.jpg";
 import facilitatorRama from "@/assets/facilitator-rama.jpg";
-import communityCircleGrass from "@/assets/community-circle-grass.jpg";
+import communityCircleGrass from "@/assets/upload-community-group.png";
+import kingJamesFacilitator from "@/assets/upload-king-james-facilitator.png";
 import logo from "@/assets/logo.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];

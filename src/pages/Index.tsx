@@ -19,12 +19,12 @@ import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
 import offeringPrivate from "@/assets/offering-private.jpg";
-import communityCeremonyGroup from "@/assets/community-ceremony-group.jpg";
-import communityCircleGrass from "@/assets/community-circle-grass.jpg";
-import communityGatheringIndoor from "@/assets/community-gathering-indoor.jpg";
-import communityPorchSelfie from "@/assets/community-porch-selfie.jpg";
-import communityRetreatJungle from "@/assets/community-retreat-jungle.jpg";
-import communityJoyBlanket from "@/assets/community-joy-blanket.jpg";
+import communityCeremonyGroup from "@/assets/upload-community-ceremony.png";
+import communityCircleGrass from "@/assets/upload-community-circle.png";
+import communityGatheringIndoor from "@/assets/upload-community-group.png";
+import communityPorchSelfie from "@/assets/upload-community-selfie.png";
+import communityRetreatJungle from "@/assets/upload-community-outdoor-group.png";
+import communityJoyBlanket from "@/assets/upload-community-smiles.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
