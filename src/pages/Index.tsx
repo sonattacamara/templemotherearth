@@ -9,7 +9,7 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
-import HomeFAQ from "@/components/HomeFAQ";
+
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
@@ -946,7 +946,7 @@ const Index = () => {
         </motion.div>
       </section>
 
-      <HomeFAQ />
+      
 
       <DonationCTA
         eyebrow="Sustain the Sacred"
