@@ -193,6 +193,8 @@ const Preparation = () => {
         </div>
       </section>
 
+      <CeremonyExploreNav />
+
       <EventbriteCTA />
 
       <footer className="bg-foreground px-4 py-12">

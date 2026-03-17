@@ -63,6 +63,8 @@ const HapeCeremony = () => (
       ctaHref="https://bit.ly/HapeCircle"
       note="Community Care Model · Suggested sacred contribution · Scholarship available · Ask us"
     />
+
+    <CeremonyExploreNav variant="light" />
   </SanctuaryWeekLayout>
 );
 

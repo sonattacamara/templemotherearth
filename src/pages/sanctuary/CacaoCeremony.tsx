@@ -3,6 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import { usePageTracking } from "@/hooks/useAnalytics";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117";
 

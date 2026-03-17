@@ -257,6 +257,8 @@ const KamboCeremony = () => {
           </p>
         </div>
       </section>
+
+      <CeremonyExploreNav variant="dark" />
     </SanctuaryWeekLayout>
   );
 };
