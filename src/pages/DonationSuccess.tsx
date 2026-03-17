@@ -40,7 +40,7 @@ const DonationSuccess = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Thank You for Your Donation"
-        description="Your generous donation to Temple Mother Earth has been received. Thank you for supporting our 501(c)(3) mission."
+        description="Your generous donation to Temple Mother Earth has been received. Thank you for supporting our sacred mission."
         path="/donation-success"
       />
       <Navigation />
