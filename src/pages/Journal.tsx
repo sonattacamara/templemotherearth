@@ -79,7 +79,7 @@ Ceremonial-grade Cacao is not the processed chocolate you find on store shelves.
 
 In our ceremonies, we work with Cacao as a bridge. A bridge between the thinking mind and the feeling heart. A bridge between isolation and community. A bridge between who you have been and who you are becoming.
 
-Many of our community members describe Cacao ceremonies as the most gentle yet profound entry point into sacred medicine work. There is no purging, no intensity — only warmth, connection, music, and the quiet courage to feel.
+Many of our community members describe Cacao ceremonies as the most gentle yet profound entry point into sacred ceremonial work. There is no purging, no intensity — only warmth, connection, music, and the quiet courage to feel.
 
 **Returning to the Circle**
 
