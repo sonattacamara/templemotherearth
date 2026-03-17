@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import DonationCTA from "@/components/DonationCTA";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Heart, Brain, Users, Phone, MessageCircle, ChevronDown, ChevronUp, AlertTriangle, Leaf, Zap, Sun, Sparkles, Target } from "lucide-react";
