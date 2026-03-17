@@ -84,7 +84,7 @@ const trinity = [
     role: "The Mother",
     color: "from-red-900 to-red-800",
     border: "border-red-600/30",
-    desc: "Warrior goddess worshipped during the 60-year war against the Hyksos revolution. Taught IamHetep herbs, teas, and wound healing. Mother of Kemetic Reiki. Mother of the god of medicine.",
+    desc: "Warrior goddess worshipped during the 60-year war against the Hyksos revolution. Taught IamHetep herbs, teas, and wound restoration. Mother of Kemetic Reiki. Mother of the god of sacred knowledge.",
   },
   {
     name: "IamHetep",
