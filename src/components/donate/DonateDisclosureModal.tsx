@@ -40,7 +40,7 @@ const DonateDisclosureModal = ({ open, onClose, items }: DonateDisclosureModalPr
         <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
           <p>
             <strong className="text-foreground">Temple Mother Earth</strong> is a registered
-            501(c)(3) nonprofit organization (EIN available upon request). All offerings are
+            508(c)(1)(A) sacred ceremony church (EIN available upon request). All offerings are
             tax-deductible to the extent allowed by law.
           </p>
           <p>Your contributions directly support:</p>
