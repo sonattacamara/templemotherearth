@@ -51,15 +51,15 @@ const kingdoms: KingdomData[] = [
       { title: "Why We're Running on Empty", content: "Industrial agriculture has stripped topsoil of mineral content. Magnesium deficiency alone drives anxiety, insomnia, muscle tension — and over 80% of Americans are deficient." },
     ],
     facts: [
-      { emoji: "🌊", label: "Sea Moss", val: "Contains 92 of the 102 minerals the human body is made of." },
-      { emoji: "🏔️", label: "Shilajit", val: "Ancient mineral resin with 85+ minerals and fulvic acid." },
-      { emoji: "💧", label: "Structured Water", val: "Water in its fourth phase — H3O2 — hydrates at the cellular level." },
-      { emoji: "🧲", label: "Magnesium", val: "Involved in over 300 enzymatic reactions. 80%+ Americans deficient." },
+      { icon: Droplets, label: "Sea Moss", val: "Contains 92 of the 102 minerals the human body is made of." },
+      { icon: Mountain, label: "Shilajit", val: "Ancient mineral resin with 85+ minerals and fulvic acid." },
+      { icon: Droplet, label: "Structured Water", val: "Water in its fourth phase — H3O2 — hydrates at the cellular level." },
+      { icon: Magnet, label: "Magnesium", val: "Involved in over 300 enzymatic reactions. 80%+ Americans deficient." },
     ],
     cards: [
-      { icon: "🌊", name: "Sea Moss", body: "92 minerals. Bioavailable iodine, iron, calcium, magnesium, zinc." },
-      { icon: "🏔️", name: "Shilajit", body: "The 'destroyer of weakness.' Fulvic acid carries minerals into cells." },
-      { icon: "🧲", name: "Magnesium", body: "Master mineral of the nervous system. Governs 300+ reactions." },
+      { icon: Droplets, name: "Sea Moss", body: "92 minerals. Bioavailable iodine, iron, calcium, magnesium, zinc." },
+      { icon: Mountain, name: "Shilajit", body: "The 'destroyer of weakness.' Fulvic acid carries minerals into cells." },
+      { icon: Magnet, name: "Magnesium", body: "Master mineral of the nervous system. Governs 300+ reactions." },
     ],
     stats: [
       { num: "60+", label: "Minerals the body requires" },
