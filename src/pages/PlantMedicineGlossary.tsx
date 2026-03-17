@@ -146,7 +146,7 @@ const PlantMedicineGlossary = () => {
             International Ceremony & Retreat Locations
           </h2>
           <p className="font-body text-muted-foreground mb-6">
-            Temple Mother Earth offers sacred plant medicine ceremonies and healing immersions in Washington DC and at retreat centers across the Americas.
+            Temple Mother Earth offers sacred plant medicine ceremonies and sacred immersions in Washington DC and at retreat centers across the Americas.
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
             {internationalLocations.map((loc) => (
