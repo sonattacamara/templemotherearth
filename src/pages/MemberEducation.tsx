@@ -156,7 +156,7 @@ const videoResources = [
   { title: "Understanding Kambo: An Introduction", duration: "12 min", description: "Learn the origins, science, and spiritual significance of Kambo medicine." },
   { title: "Preparation Guide: Body, Mind & Spirit", duration: "8 min", description: "Step-by-step preparation to ensure you're ready for your Kambo ceremony." },
   { title: "What to Expect During Ceremony", duration: "15 min", description: "A detailed walkthrough of the Kambo ceremony process from start to finish." },
-  { title: "Integration Practices After Kambo", duration: "10 min", description: "Powerful integration practices to deepen your healing journey after ceremony." },
+  { title: "Integration Practices After Kambo", duration: "10 min", description: "Powerful integration practices to deepen your ceremonial journey after ceremony." },
   { title: "Kambo & the Immune System: The Science", duration: "18 min", description: "Explore the bioactive peptides in Kambo and their effects on the human body." },
 ];
 
