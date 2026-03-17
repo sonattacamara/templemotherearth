@@ -253,7 +253,7 @@ const About = () => {
                 icon: Sparkles,
                 label: "Value 5",
                 title: "Emotional Maturity & Inner Accountability",
-                desc: "Healing requires courage, honesty, and a willingness to take responsibility for one's own path. We support individuals in developing emotional intelligence, communication skills, self-awareness, and the capacity to navigate life with clarity.",
+                desc: "Transformation requires courage, honesty, and a willingness to take responsibility for one's own path. We support individuals in developing emotional intelligence, communication skills, self-awareness, and the capacity to navigate life with clarity.",
                 detail: "We believe emotional maturity is a spiritual practice — a way of aligning our actions with our highest self. Every offering, from ceremonies to classes, is designed to help people return to their inner truth with integrity and compassion.",
               },
               {
