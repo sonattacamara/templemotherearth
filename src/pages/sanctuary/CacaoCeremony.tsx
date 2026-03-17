@@ -122,14 +122,14 @@ const CacaoCeremony = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
-          <div className="space-y-5 text-[17px] leading-[1.85] text-[#3A2A1C]">
-            <h3 className="font-display text-[28px] italic text-[#2C1810] mb-5">What Is Cacao?</h3>
+          <div className="space-y-5 text-[17px] leading-[1.85] text-[#C4B49A]">
+            <h3 className="font-display text-[28px] italic text-[#F5EDD8] mb-5">What Is Cacao?</h3>
             <p>Theobroma cacao is a small tropical tree native to the deep forests of Central and South America. Its fruit pods contain seeds that have been harvested, fermented, and used in ceremony for over 4,000 years by the Olmec, Maya, and Aztec civilizations.</p>
             <p>Ceremonial grade cacao is entirely different from commercial chocolate. It is raw, minimally processed, and prepared at a dose (40–60g) that activates its full pharmacological and spiritual profile.</p>
             <p>At Temple Mother Earth, we source only the highest-quality ceremonial grade cacao from indigenous farming communities who grow it the traditional way.</p>
-            <h3 className="font-display text-[28px] italic text-[#2C1810] mt-10 mb-5">How Does It Work in Your Body?</h3>
-            <p>The primary compound, <strong>Theobromine</strong>, is a gentle stimulant that increases blood flow to the brain and heart. Unlike caffeine, theobromine does not spike adrenaline or crash the nervous system.</p>
-            <p>Cacao also contains <strong>Anandamide</strong> — the "bliss molecule" — and PEA (phenylethylamine), which triggers dopamine and serotonin release, creating feelings of joy, love, and connection.</p>
+            <h3 className="font-display text-[28px] italic text-[#F5EDD8] mt-10 mb-5">How Does It Work in Your Body?</h3>
+            <p>The primary compound, <strong className="text-[#C9963A]">Theobromine</strong>, is a gentle stimulant that increases blood flow to the brain and heart. Unlike caffeine, theobromine does not spike adrenaline or crash the nervous system.</p>
+            <p>Cacao also contains <strong className="text-[#C9963A]">Anandamide</strong> — the "bliss molecule" — and PEA (phenylethylamine), which triggers dopamine and serotonin release, creating feelings of joy, love, and connection.</p>
           </div>
 
           <div className="bg-[#2C1810] p-12 relative overflow-hidden">
