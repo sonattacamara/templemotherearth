@@ -47,7 +47,7 @@ const PrivateCeremonies = () => {
             1-on-1 / Private Ceremonies
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey,
+            Personalized, intimate Earth Medicine sessions tailored specifically to your individual sacred path,
             held in a private and sacred setting with one of our experienced facilitators.
           </motion.p>
         </motion.div>
