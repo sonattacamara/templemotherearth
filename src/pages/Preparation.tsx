@@ -17,7 +17,7 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const Preparation = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Ceremony Preparation Guide" description="How to prepare for your plant medicine ceremony. Diet, intentions, and guidelines for Kambo, ayahuasca, and sacred medicine experiences." path="/preparation" />
+      <SEOHead title="Ceremony Preparation Guide" description="How to prepare for your sacred ceremony. Diet, intentions, and guidelines for Kambo, ayahuasca, and Earth Medicine experiences." path="/preparation" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Preparation Guide" }]} />
 
