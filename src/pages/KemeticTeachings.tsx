@@ -599,10 +599,10 @@ const KemeticTeachings = () => {
                   Dr. George Xavier Love, Jr. is a Doctor of Oriental Medicine, 13th Lineage Holder of Qing Long (Blue Dragon) Qigong, and Grandmaster of Blue Dragon Immortal Qigong. He is a licensed Acupuncture Physician (since 1986), expert in Holographic Medicine, Tibetan Buddhist Psychiatry, and Taoist Psychology.
                 </p>
                 <p>
-                  A trance drummer for ancestral soul retrieval, author of 10 books, and international lecturer, Dr. Love has studied Ayurveda, Unani Tibb, Tibetan, Persian, and West African healing systems.
+                  A trance drummer for ancestral soul retrieval, author of 10 books, and international lecturer, Dr. Love has studied Ayurveda, Unani Tibb, Tibetan, Persian, and West African sacred systems.
                 </p>
                 <p>
-                  Dr. Love is the living bridge between the Kemetic healing tradition and Chinese/Oriental medicine — embodying the Metou-to-Meridian wisdom pathway that IamHetep first described nearly 4,500 years ago.
+                  Dr. Love is the living bridge between the Kemetic sacred tradition and Chinese/Oriental medicine — embodying the Metou-to-Meridian wisdom pathway that IamHetep first described nearly 4,500 years ago.
                 </p>
               </div>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-body text-primary-foreground/50">
