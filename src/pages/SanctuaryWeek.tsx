@@ -37,7 +37,7 @@ const timelineDays: TimelineDay[] = [
     description: "Sacred ceremonial cacao, live sound, and community circle. The gentlest entry point, and for many, the most unexpectedly profound. All welcome.",
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
     pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-healing-ceremony-registration-822085920117", ctaReady: true,
+    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117", ctaReady: true,
     slug: "/cacao", image: "https://images.pexels.com/photos/3776163/pexels-photo-3776163.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Opening",
   },
