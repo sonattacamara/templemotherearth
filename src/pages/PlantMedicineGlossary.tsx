@@ -164,7 +164,7 @@ const PlantMedicineGlossary = () => {
 
         {/* CTA */}
         <section className="text-center py-12 border-t border-border">
-          <h2 className="font-display text-2xl text-foreground mb-3">Begin Your Healing Journey</h2>
+          <h2 className="font-display text-2xl text-foreground mb-3">Begin Your Sacred Journey</h2>
           <p className="font-body text-muted-foreground mb-6 max-w-xl mx-auto">
             Whether you are called to Kambo, Hapé, sacred vine, cacao, or another earth medicine, the first step is completing our Sacred Intake Form.
           </p>
