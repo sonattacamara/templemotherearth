@@ -50,6 +50,8 @@ import KamboRedirect from "./pages/KamboRedirect";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
 import CommunityCare from "./pages/CommunityCare";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RFRACompliance from "./pages/RFRACompliance";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
