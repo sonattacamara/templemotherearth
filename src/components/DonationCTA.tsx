@@ -134,8 +134,8 @@ const DonationCTA = ({
 
             <div className="mt-4 space-y-3 text-sm leading-relaxed opacity-80">
               <p>
-                <strong>Temple Mother Earth</strong> is a registered 501(c)(3) nonprofit organization (EIN available upon request).
-                All donations are tax-deductible to the extent allowed by law.
+                <strong>Temple Mother Earth</strong> is a sacred ceremony church organized under section 508(c)(1)(A).
+                All offerings are tax-deductible to the extent allowed by law. EIN available upon request.
               </p>
               <p>Your contributions directly fund:</p>
               <ul className="ml-4 list-disc space-y-1.5">

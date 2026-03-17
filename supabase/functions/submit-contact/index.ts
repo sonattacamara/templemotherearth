@@ -21,8 +21,11 @@ if (!GHL_WEBHOOK_URL) {
 }
 
 const validateContactData = (data: Record<string, unknown>): string | null => {
-  const name = String(data.name || "").trim();
-  if (name.length < 2 || name.length > 100) return "Name must be 2-100 characters";
+  const firstName = String(data.firstName || "").trim();
+  if (firstName.length < 1 || firstName.length > 50) return "First name is required (max 50 characters)";
+
+  const lastName = String(data.lastName || "").trim();
+  if (lastName.length < 1 || lastName.length > 50) return "Last name is required (max 50 characters)";
 
   const email = String(data.email || "").trim();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) return "Invalid email address";
@@ -54,10 +57,9 @@ serve(async (req) => {
       });
     }
 
-    const fullName = String(body.name).trim();
-    const nameParts = fullName.split(" ");
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
+    const firstName = String(body.firstName || "").trim();
+    const lastName = String(body.lastName || "").trim();
+    const fullName = `${firstName} ${lastName}`.trim();
 
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",

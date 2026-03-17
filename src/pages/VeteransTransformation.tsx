@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import DonationCTA from "@/components/DonationCTA";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Heart, Brain, Users, Phone, MessageCircle, ChevronDown, ChevronUp, AlertTriangle, Leaf, Zap, Sun, Sparkles, Target } from "lucide-react";
@@ -190,7 +191,6 @@ const VeteransTransformation = () => {
     e.preventDefault();
     setFormError("");
     
-    // Manual validation for required fields with sr-only inputs
     if (!formData.fullName.trim()) {
       setFormError("Please enter your full name.");
       return;
@@ -209,14 +209,26 @@ const VeteransTransformation = () => {
     }
     
     setSubmitting(true);
-    // TODO: Integrate with GoHighLevel webhook
-    await new Promise((r) => setTimeout(r, 1200));
-    setFormSubmitted(true);
-    setSubmitting(false);
-    // Scroll to the success message so the user sees it
-    setTimeout(() => {
-      document.getElementById("veteran-form-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 100);
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-veterans", {
+        body: formData,
+      });
+      if (error) throw error;
+      if (data?.error) {
+        setFormError(data.error);
+        setSubmitting(false);
+        return;
+      }
+      setFormSubmitted(true);
+      setSubmitting(false);
+      setTimeout(() => {
+        document.getElementById("veteran-form-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
+    } catch (err) {
+      console.error("Veterans form error:", err);
+      setFormError("Something went wrong. Please try again.");
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -984,7 +996,7 @@ const VeteransTransformation = () => {
             <span className="font-display text-lg font-bold text-[#F5F0E6]">Temple Mother Earth</span>
           </Link>
           <p className="font-body text-sm text-[#F5F0E6]/50 max-w-xl mx-auto">
-            Temple Mother Earth is a 508(c)(1)(A) temple. Our ceremonies are protected religious practices under the Religious Freedom Restoration Act (RFRA) and the First Amendment.
+            Temple Mother Earth is a sacred ceremony church organized under section 508(c)(1)(A). Our ceremonies are protected religious practices under the Religious Freedom Restoration Act (RFRA) and the First Amendment.
           </p>
           <p className="mt-4 font-body text-xs text-[#F5F0E6]/30">
             Kambo ceremony near me | Plant medicine for PTSD | Veteran healing retreat Maryland DC Virginia

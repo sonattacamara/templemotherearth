@@ -119,7 +119,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-earth">
       <SEOHead
         title="Temple Mother Earth — Sacred Ceremony Church · Washington, DC"
-        description="A 508(c)(1)(A) sacred medicine church offering sacramental ceremony, spiritual education, and congregational community in Washington DC. Est. 2020."
+        description="A sacred ceremony church offering sacramental Earth Medicine ceremony, spiritual education, and congregational community in Washington DC. Organized under 508(c)(1)(A). Est. 2020."
         path="/"
       />
       <Navigation />
@@ -172,8 +172,9 @@ const Index = () => {
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75 md:text-xl"
           >
-            Your soul has led you here in this now moment. Whether you are here to remember, reconnect,
-            or rise into your highest purpose, you are home.
+            You are a sovereign being — whole, divine, and powerful beyond measure. Temple Mother Earth
+            exists to help you remember that truth. Through sacred ceremony, Earth Medicine, and intentional
+            community, we hold space for your return to the wisdom that has always lived within you.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
@@ -682,13 +683,55 @@ const Index = () => {
               </p>
             </div>
 
+            {/* Upcoming Experiences */}
+            <div className="grid gap-6 md:grid-cols-2 mb-8">
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-center space-y-4">
+                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">
+                  Life's Best Yes — Costa Rica Immersion
+                </h3>
+                <p className="text-sm text-muted-foreground">August 2026 · 7-Day Sacred Retreat</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  A full immersion into Earth Medicine, ancient ceremony, and deep transformation in the jungles of Costa Rica.
+                </p>
+                <Link
+                  to="/retreats-inquiry"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  Reserve Your Spot →
+                </Link>
+              </div>
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-center space-y-4">
+                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">
+                  Sacred Cacao Ceremony — Waitlist Open
+                </h3>
+                <p className="text-sm text-muted-foreground">Monthly · Washington, DC</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  A heart-opening ceremony of connection, intention, and remembrance. Join the waitlist for our next gathering.
+                </p>
+                <a
+                  href="https://www.eventbrite.com/o/29347213477#events"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  Join the Waitlist →
+                </a>
+              </div>
+            </div>
+
             {/* Eventbrite CTA */}
             <div className="w-full rounded-xl border border-primary/10 bg-card/30 p-8 text-center space-y-6">
               <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Calendar className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-display text-xl font-bold text-foreground">
-                Browse Upcoming Ceremonies
+                Browse All Upcoming Ceremonies
               </h3>
               <p className="mx-auto max-w-md text-sm text-muted-foreground">
                 View our full calendar of Earth Medicine ceremonies, community gatherings, and sacred experiences on Eventbrite.
@@ -701,12 +744,6 @@ const Index = () => {
               >
                 See Upcoming Ceremonies →
               </a>
-            </div>
-
-            <div className="mt-8 flex flex-col items-center gap-4">
-              <p className="text-xs text-muted-foreground">
-                Questions? Reach out to us through our community circles below.
-              </p>
             </div>
           </motion.div>
         </motion.div>
@@ -914,7 +951,7 @@ const Index = () => {
       <DonationCTA
         eyebrow="Sustain the Sacred"
         headline="Your Offerings Keep the Temple Alive"
-        body="As a 501(c)(3) nonprofit, every tax-deductible gift sustains ceremonies, community programs, and sacred spaces for kindred spirits everywhere."
+        body="As a tax-exempt sacred ceremony church organized under 508(c)(1)(A), every offering sustains ceremonies, community programs, and sacred spaces for kindred spirits everywhere."
         buttonLabel="Offerings & Tithes"
       />
 
@@ -931,7 +968,7 @@ const Index = () => {
                 <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
               <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
-                A 501(c)(3) nonprofit sanctuary for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
+                A sacred ceremony church organized under 508(c)(1)(A) for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
               </p>
             </div>
 
@@ -984,7 +1021,7 @@ const Index = () => {
           <div className="mt-12 border-t border-primary-foreground/10 pt-8">
             <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
               <p className="font-body text-xs text-primary-foreground/40">
-                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+                © {new Date().getFullYear()} Temple Mother Earth. A sacred ceremony church organized under 508(c)(1)(A). All rights reserved.
               </p>
               <div className="flex flex-col items-center gap-2 md:items-end">
                 <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">

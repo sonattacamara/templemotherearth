@@ -41,7 +41,8 @@ const INQUIRY_TYPES = [
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     inquiryType: "",
@@ -54,7 +55,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim() || !formData.inquiryType) {
+    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.message.trim() || !formData.inquiryType) {
       toast.error("Please fill in all required fields.");
       return;
     }
@@ -62,7 +63,9 @@ const Contact = () => {
     try {
       const { data, error } = await supabase.functions.invoke("submit-contact", {
         body: {
-          name: formData.name,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
           email: formData.email,
           phone: formData.phone,
           subject: formData.inquiryType,
@@ -76,7 +79,7 @@ const Contact = () => {
         return;
       }
       toast.success("Your message has been sent. We'll be in touch soon.");
-      setFormData({ name: "", email: "", phone: "", inquiryType: "", message: "" });
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", inquiryType: "", message: "" });
     } catch (err) {
       console.error("Contact form error:", err);
       toast.error("Something went wrong. Please try again.");
@@ -176,18 +179,33 @@ const Contact = () => {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="space-y-2">
-                <Label htmlFor="name" className="text-foreground">Full Name *</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your full name"
-                  maxLength={100}
-                  required
-                  className="bg-background"
-                />
+              <motion.div variants={fadeUp} className="grid gap-4 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName" className="text-foreground">First Name *</Label>
+                  <Input
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="First name"
+                    maxLength={50}
+                    required
+                    className="bg-background"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="lastName" className="text-foreground">Last Name *</Label>
+                  <Input
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Last name"
+                    maxLength={50}
+                    required
+                    className="bg-background"
+                  />
+                </div>
               </motion.div>
 
               <motion.div variants={fadeUp} className="grid gap-6 md:grid-cols-2">

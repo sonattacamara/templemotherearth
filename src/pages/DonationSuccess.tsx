@@ -40,7 +40,7 @@ const DonationSuccess = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Thank You for Your Donation"
-        description="Your generous donation to Temple Mother Earth has been received. Thank you for supporting our 501(c)(3) mission."
+        description="Your generous donation to Temple Mother Earth has been received. Thank you for supporting our sacred mission."
         path="/donation-success"
       />
       <Navigation />
@@ -93,7 +93,7 @@ const DonationSuccess = () => {
             className="mx-auto mt-8 max-w-md rounded-xl border border-primary/20 bg-primary/5 p-5"
           >
             <p className="text-sm font-medium text-foreground">
-              <HandHeart className="inline h-4 w-4 mr-1" /> Temple of Mother Earth is a 501(c)(3) nonprofit organization. EIN: 85-4135623.
+              <HandHeart className="inline h-4 w-4 mr-1" /> Temple of Mother Earth is a sacred ceremony church organized under section 508(c)(1)(A). EIN: 85-4135623.
             </p>
             <p className="mt-2 text-xs text-muted-foreground">
               Your contribution is tax-deductible to the full extent permitted by law. No goods or services were provided in exchange for this donation. A receipt has been sent to your email via PayPal. Please retain it for your records.
@@ -223,7 +223,7 @@ const DonationSuccess = () => {
         <div className="mx-auto max-w-4xl text-center">
           <img src={logo} alt="Temple Mother Earth" className="mx-auto mb-4 h-10 w-auto opacity-60" />
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+            © {new Date().getFullYear()} Temple Mother Earth. A sacred ceremony church organized under 508(c)(1)(A). All rights reserved.
           </p>
           <p className="mt-2 font-body text-xs text-primary-foreground/30">
             Questions about your donation? Contact us at{" "}
