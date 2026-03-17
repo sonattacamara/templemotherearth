@@ -19,7 +19,7 @@ const SanctuaryCTA = ({ eyebrow, title, description, ctaLabel, ctaHref, external
   return (
     <section
       ref={ref}
-      className="bg-gradient-to-br from-[hsl(25,25%,18%)] to-[hsl(25,22%,20%)] py-20 md:py-24 px-6 md:px-12 text-center border-t border-[hsl(25,20%,24%)]"
+      className="bg-gradient-to-br from-[hsl(105,30%,13%)] to-[hsl(110,25%,15%)] py-20 md:py-24 px-6 md:px-12 text-center border-t border-[hsl(100,25%,18%)]"
     >
       <motion.div
         initial={{ opacity: 0, y: 22 }}
@@ -27,26 +27,26 @@ const SanctuaryCTA = ({ eyebrow, title, description, ctaLabel, ctaHref, external
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       >
         {eyebrow && (
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(40,40%,60%)] mb-4">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">
             {eyebrow}
           </p>
         )}
         <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-light leading-[1.1] mb-6 text-[hsl(40,30%,90%)]">
           {title}
         </h2>
-        <p className="text-[hsl(40,20%,65%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
+        <p className="text-[hsl(90,15%,65%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
           {description}
         </p>
         <a
           href={ctaHref}
           target={external ? "_blank" : undefined}
           rel={external ? "noopener noreferrer" : undefined}
-          className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(40,40%,55%)] text-[hsl(25,30%,8%)] hover:bg-[hsl(40,40%,65%)] transition-all duration-300"
+          className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
         >
           {ctaLabel}
         </a>
         {note && (
-          <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,15%,50%)] mt-8">
+          <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,15%,45%)] mt-8">
             {note}
           </p>
         )}
