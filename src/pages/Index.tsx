@@ -762,7 +762,7 @@ const Index = () => {
             Follow Our Journey
           </motion.p>
           <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
-            @TempleMotherEarth 🌍
+            @TempleMotherEarth
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
             Stay connected with our community through sacred moments, ceremonies, and gatherings shared on Instagram.
