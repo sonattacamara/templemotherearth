@@ -951,7 +951,7 @@ const Index = () => {
       <DonationCTA
         eyebrow="Sustain the Sacred"
         headline="Your Offerings Keep the Temple Alive"
-        body="As a 501(c)(3) nonprofit, every tax-deductible gift sustains ceremonies, community programs, and sacred spaces for kindred spirits everywhere."
+        body="As a tax-exempt sacred ceremony church organized under 508(c)(1)(A), every offering sustains ceremonies, community programs, and sacred spaces for kindred spirits everywhere."
         buttonLabel="Offerings & Tithes"
       />
 
