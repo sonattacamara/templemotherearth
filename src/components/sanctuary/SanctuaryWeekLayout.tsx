@@ -39,7 +39,7 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
       {children}
 
       {/* RFRA Footer */}
-      <footer className="bg-[hsl(25,25%,12%)] border-t border-[hsl(25,20%,18%)] py-8 px-6 md:px-12 text-center">
+      <footer className="bg-[hsl(25,25%,18%)] border-t border-[hsl(25,20%,24%)] py-8 px-6 md:px-12 text-center">
         <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(40,20%,50%)] leading-loose">
           &copy; 2026 Temple Mother Earth -- 508(c)(1)(A) Sacred Church -- Washington, DC
         </p>
