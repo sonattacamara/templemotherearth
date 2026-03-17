@@ -140,7 +140,7 @@ We do not believe in spiritual bypassing. Integration is not about "good vibes o
 
 Whether you sat with Ayahuasca in the Amazon, experienced Kambo in a local ceremony, or worked with sacred Psilocybin in a private setting — you deserve support on the other side.
 
-🌿 *If you are in the DC, Maryland, or Virginia area and seeking integration support, reach out through our Contact page or join one of our community circles.*`,
+*If you are in the DC, Maryland, or Virginia area and seeking integration support, reach out through our Contact page or join one of our community circles.*`,
   },
 ];
 
