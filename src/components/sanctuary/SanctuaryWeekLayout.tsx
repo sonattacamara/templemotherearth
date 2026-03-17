@@ -14,7 +14,7 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
   usePageTracking();
 
   return (
-    <div className="sanctuary-spring min-h-screen bg-[hsl(40,33%,97%)] text-[hsl(100,20%,15%)]">
+    <div className="sanctuary-spring min-h-screen bg-[hsl(25,30%,8%)] text-[hsl(40,30%,90%)]">
       <SEOHead title={title} description={description} />
       <Navigation />
 
