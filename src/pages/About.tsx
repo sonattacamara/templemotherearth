@@ -83,10 +83,10 @@ const About = () => {
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   In 2020, when the pandemic brought the world to a standstill and fear kept people isolated 
-                  behind closed doors, Dr. Sonatta Camara and King James made a radical choice: they opened 
-                  their doors. What began as intimate healing circles during the darkest days of the pandemic 
-                  grew into Temple Mother Earth — a sacred sanctuary where sovereign beings come to reconnect 
-                  with the Earth, honor the God within, and walk the path of healing together.
+                   behind closed doors, Dr. Sonatta Camara and King James made a radical choice: they opened 
+                   their doors. What began as intimate ceremonial circles during the darkest days of the pandemic 
+                   grew into Temple Mother Earth — a sacred sanctuary where sovereign beings come to reconnect 
+                   with the Earth, honor the God within, and walk the path of transformation together.
                 </p>
                 <p>
                Founded by and for people who are looking for higher states of consciousness, who want to end their own pain and suffering, who are ready for tapping into the God within them, to create love and abundance in all things. Temple Mother Earth bridges ancient Earth Medicine traditions with 
