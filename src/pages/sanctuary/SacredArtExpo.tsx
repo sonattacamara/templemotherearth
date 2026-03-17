@@ -291,7 +291,7 @@ const SacredArtExpo = () => {
                 Thank you for sharing your light with us.
               </h3>
               <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed" style={{ color: "#B8A07Aaa" }}>
-                Our team will be in touch within 48 hours. We cannot wait to see what you bring. 🌿
+                Our team will be in touch within 48 hours. We cannot wait to see what you bring.
               </p>
             </motion.div>
           ) : (
