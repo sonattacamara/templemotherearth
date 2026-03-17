@@ -593,7 +593,7 @@ const KemeticTeachings = () => {
             </div>
             <div className="flex-1">
               <h3 className="font-display text-2xl font-bold text-primary-foreground mb-1">Dr. George Xavier Love, Jr.</h3>
-              <p className="font-body text-sm text-secondary mb-6">High Priest of Kemetic Healing · Keeper of the Wisdom of IamHetep</p>
+              <p className="font-body text-sm text-secondary mb-6">High Priest of Kemetic Wisdom · Keeper of the Wisdom of IamHetep</p>
               <div className="font-body text-sm md:text-base text-primary-foreground/75 leading-relaxed space-y-4">
                 <p>
                   Dr. George Xavier Love, Jr. is a Doctor of Oriental Medicine, 13th Lineage Holder of Qing Long (Blue Dragon) Qigong, and Grandmaster of Blue Dragon Immortal Qigong. He is a licensed Acupuncture Physician (since 1986), expert in Holographic Medicine, Tibetan Buddhist Psychiatry, and Taoist Psychology.
