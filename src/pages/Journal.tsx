@@ -50,7 +50,7 @@ Our community members in the DC, Maryland, and Virginia area consistently report
 
 Kambo is powerful medicine, and it must be administered with training, care, and respect. At Temple Mother Earth, every Kambo ceremony is led by trained facilitators who have apprenticed directly with indigenous practitioners. We conduct thorough health screenings, maintain proper hydration protocols, and hold space with prayer and intention.
 
-This is not recreational. This is medicine work.
+This is not recreational. This is sacred practice.
 
 **Who is Kambo For?**
 
