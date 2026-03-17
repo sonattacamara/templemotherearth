@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail, CalendarIcon } from "lucide-react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 import SEOHead from "@/components/SEOHead";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
 
