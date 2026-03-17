@@ -16,7 +16,8 @@ import facilitatorSamira from "@/assets/facilitator-samira.jpg";
 import facilitatorGeorge from "@/assets/facilitator-george-new.jpg";
 import facilitatorJala from "@/assets/facilitator-jala.jpg";
 import facilitatorRama from "@/assets/facilitator-rama.jpg";
-import communityCircleGrass from "@/assets/community-circle-grass.jpg";
+import communityCircleGrass from "@/assets/upload-community-group.png";
+import kingJamesFacilitator from "@/assets/upload-king-james-facilitator.png";
 import logo from "@/assets/logo.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -709,6 +710,13 @@ const About = () => {
                 img: facilitatorRama,
                 imgAlt: "Rama, Ayahuasca and Kambo ceremony facilitator trained in Shipibo-Conibo and Quechua-Lamista traditions",
                 desc: "Equity and inclusion are at the core of Rama's work. Guided by Traditional Amazonian wisdom, he has trained with respected indigenous masters from the Shipibo-Conibo and Quechua-Lamista lineages, thoughtfully integrating ancient teachings into modern sacred practices. A Volunteer Supervisor with the Fireside Project and MAPS MDMA-assisted Training graduate, Rama is currently pursuing a Ph.D. in transpersonal psychology. Through his work, he empowers others to transform, awaken, and step fully into their highest potential.",
+              },
+              {
+                name: "King James",
+                role: "Kambo Facilitator · Co-Founder",
+                img: kingJamesFacilitator,
+                imgAlt: "King James, Kambo facilitator and co-founder at Temple Mother Earth",
+                desc: "King James is a ceremony facilitator and co-founder of Temple Mother Earth, devoted to disciplined, heart-centered service, especially for veterans and communities seeking grounded sacred practice.",
               },
             ].map((person) => (
               <motion.div

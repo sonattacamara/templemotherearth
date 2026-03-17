@@ -19,12 +19,12 @@ import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
 import offeringPrivate from "@/assets/offering-private.jpg";
-import communityCeremonyGroup from "@/assets/community-ceremony-group.jpg";
-import communityCircleGrass from "@/assets/community-circle-grass.jpg";
-import communityGatheringIndoor from "@/assets/community-gathering-indoor.jpg";
-import communityPorchSelfie from "@/assets/community-porch-selfie.jpg";
-import communityRetreatJungle from "@/assets/community-retreat-jungle.jpg";
-import communityJoyBlanket from "@/assets/community-joy-blanket.jpg";
+import communityCeremonyGroup from "@/assets/upload-community-ceremony.png";
+import communityCircleGrass from "@/assets/upload-community-circle.png";
+import communityGatheringIndoor from "@/assets/upload-community-group.png";
+import communityPorchSelfie from "@/assets/upload-community-selfie.png";
+import communityRetreatJungle from "@/assets/upload-community-outdoor-group.png";
+import communityJoyBlanket from "@/assets/upload-community-smiles.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -820,12 +820,12 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
-              { src: communityCeremonyGroup, alt: "Temple Mother Earth Kambo and Hapé ceremony group gathered in white for sacred healing outdoors" },
-              { src: communityCircleGrass, alt: "Community integration circle for Ayahuasca and Cacao ceremony participants connecting on the grass" },
-              { src: communityGatheringIndoor, alt: "Temple Mother Earth indoor gathering for Sananga, Blue Lotus, and Bobinsana plant medicine community" },
-              { src: communityPorchSelfie, alt: "Diverse sacred community members after Kambo and Guayusa ceremony gathering" },
-              { src: communityRetreatJungle, alt: "International Ayahuasca and San Pedro immersion retreat group in the Costa Rica jungle" },
-              { src: communityJoyBlanket, alt: "Community members sharing joy after Cacao and Hapé ceremony at Temple Mother Earth" },
+              { src: communityCeremonyGroup, alt: "King James in outdoor sacred ceremony with community support at Temple Mother Earth" },
+              { src: communityCircleGrass, alt: "Community dialogue circle on the lawn during sacred ceremony integration" },
+              { src: communityGatheringIndoor, alt: "Temple Mother Earth group community photo during outdoor gathering" },
+              { src: communityPorchSelfie, alt: "Temple Mother Earth community selfie from sacred gathering" },
+              { src: communityRetreatJungle, alt: "Community teaching moment outdoors in nature" },
+              { src: communityJoyBlanket, alt: "Temple Mother Earth smiling community members in close group portrait" },
             ].map((photo) => (
               <div key={photo.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
                 <img
