@@ -19,7 +19,7 @@ const SanctuarySection = ({ eyebrow, title, children, className = "", dark = fal
     <section
       ref={ref}
       id={id}
-      className={`px-6 md:px-12 py-20 md:py-24 ${dark ? "bg-[hsl(40,30%,93%)]" : ""} ${className}`}
+      className={`px-6 md:px-12 py-20 md:py-24 ${dark ? "bg-[hsl(25,25%,12%)]" : ""} ${className}`}
     >
       <motion.div
         className="max-w-[1100px] mx-auto"
@@ -28,12 +28,12 @@ const SanctuarySection = ({ eyebrow, title, children, className = "", dark = fal
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       >
         {eyebrow && (
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(90,40%,30%)] mb-4">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(40,40%,60%)] mb-4">
             {eyebrow}
           </p>
         )}
         {title && (
-          <h2 className="font-sans text-[clamp(24px,3.5vw,44px)] font-light leading-[1.1] mb-8 text-[hsl(100,20%,15%)]">
+          <h2 className="font-sans text-[clamp(24px,3.5vw,44px)] font-light leading-[1.1] mb-8 text-[hsl(40,30%,90%)]">
             {title}
           </h2>
         )}
