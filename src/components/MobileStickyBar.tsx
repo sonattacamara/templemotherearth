@@ -35,7 +35,7 @@ const MobileStickyBar = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center rounded-xl border border-primary-foreground/30 px-4 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/20"
             >
-              Events
+              Offerings
             </a>
           </div>
         </motion.div>
