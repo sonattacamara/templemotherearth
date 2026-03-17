@@ -705,10 +705,10 @@ const About = () => {
               },
               {
                 name: "Rama",
-                role: "Healer, Facilitator & Transpersonal Psychology Scholar",
+                role: "Practitioner, Facilitator & Transpersonal Psychology Scholar",
                 img: facilitatorRama,
                 imgAlt: "Rama, Ayahuasca and Kambo ceremony facilitator trained in Shipibo-Conibo and Quechua-Lamista traditions",
-                desc: "Equity and inclusion are at the core of Rama's work. Guided by Traditional Amazonian wisdom, he has trained with respected indigenous masters from the Shipibo-Conibo and Quechua-Lamista lineages, thoughtfully integrating ancient teachings into modern healing practices. A Volunteer Supervisor with the Fireside Project and MAPS MDMA-assisted Therapy Training graduate, Rama is currently pursuing a Ph.D. in transpersonal psychology. Through his work, he empowers others to heal, awaken, and step fully into their highest potential.",
+                desc: "Equity and inclusion are at the core of Rama's work. Guided by Traditional Amazonian wisdom, he has trained with respected indigenous masters from the Shipibo-Conibo and Quechua-Lamista lineages, thoughtfully integrating ancient teachings into modern sacred practices. A Volunteer Supervisor with the Fireside Project and MAPS MDMA-assisted Training graduate, Rama is currently pursuing a Ph.D. in transpersonal psychology. Through his work, he empowers others to transform, awaken, and step fully into their highest potential.",
               },
             ].map((person) => (
               <motion.div
