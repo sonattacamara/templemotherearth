@@ -216,7 +216,7 @@ const RetreatsInquiry = () => {
         <p>
           All retreat participants must complete our <Link to="/ceremony-intake">Sacred Intake Form</Link> for medical screening and RFRA compliance. 
           Visit our <Link to="/plant-medicine-glossary">plant medicine glossary</Link> to learn about Ayahuasca, Psilocybin, San Pedro, Ibogaine, 
-          5-MeO-DMT, Bobinsana, Chiric Sanango, Noya Rao, Mapacho, Sananga, Blue Lotus, and other sacred healing allies. 
+          5-MeO-DMT, Bobinsana, Chiric Sanango, Noya Rao, Mapacho, Sananga, Blue Lotus, and other sacred allies. 
           We also facilitate <Link to="/traveling-ceremonies">traveling ceremonies</Link> and <Link to="/private-ceremonies">private ceremonies</Link> 
           across the United States for those seeking Kambo, Hapé, and Earth Medicine closer to home.
         </p>
