@@ -163,7 +163,7 @@ const About = () => {
                   We are committed to offering grounded, ethical, and spiritually aligned environments for ceremony, emotional work, and inner exploration. Whether in Washington, D.C. or during our international immersions, every gathering is held with reverence, prayer, and deep respect for the sacred lineages that inform our work.
                 </p>
                 <p>
-                  Our mission is to ensure that anyone who steps through our doors feels safe, supported, and honored in their healing process. We prioritize trauma awareness, cultural integrity, emotional maturity, and responsible Earth medicine practices.
+                  Our mission is to ensure that anyone who steps through our doors feels safe, supported, and honored in their ceremonial process. We prioritize trauma awareness, cultural integrity, emotional maturity, and responsible Earth Medicine practices.
                 </p>
               </div>
             </motion.div>
