@@ -2,14 +2,16 @@ import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion } from "framer-motion";
+import { Leaf, Flower2, Moon, Sun, Sprout, Sparkles, Coffee } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const teaMenu = [
-  { icon: "🍃", name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
-  { icon: "🌸", name: "Adaptogenic Blend", properties: "Stress Relief · Nervous System", desc: "Ashwagandha, reishi, lion's mane, and holy basil, a deeply nourishing blend for the modern nervous system." },
-  { icon: "🌙", name: "Dream Tea", properties: "Intuition · Relaxation", desc: "Mugwort, passionflower, and blue lotus, a lunar blend for deep relaxation and inner vision." },
-  { icon: "☀️", name: "Solar Vitality", properties: "Energy · Clarity", desc: "Nettle, rosehips, and golden herbs, a warming, mineral-rich blend that activates and brightens." },
-  { icon: "🌿", name: "Detox & Cleanse", properties: "Purification · Renewal", desc: "Dandelion, burdock, and cleansing herbs aligned with Sonatta's 7 Wellness Pillars detox protocols." },
-  { icon: "🔮", name: "Sacred Ceremony Blend", properties: "Ceremonial Grade · House Special", desc: "Our signature house blend, seasonal, medicinal, and prepared fresh for each gathering." },
+const teaMenu: { icon: LucideIcon; name: string; properties: string; desc: string }[] = [
+  { icon: Leaf, name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
+  { icon: Flower2, name: "Adaptogenic Blend", properties: "Stress Relief · Nervous System", desc: "Ashwagandha, reishi, lion's mane, and holy basil, a deeply nourishing blend for the modern nervous system." },
+  { icon: Moon, name: "Dream Tea", properties: "Intuition · Relaxation", desc: "Mugwort, passionflower, and blue lotus, a lunar blend for deep relaxation and inner vision." },
+  { icon: Sun, name: "Solar Vitality", properties: "Energy · Clarity", desc: "Nettle, rosehips, and golden herbs, a warming, mineral-rich blend that activates and brightens." },
+  { icon: Sprout, name: "Detox & Cleanse", properties: "Purification · Renewal", desc: "Dandelion, burdock, and cleansing herbs aligned with Sonatta's 7 Wellness Pillars detox protocols." },
+  { icon: Sparkles, name: "Sacred Ceremony Blend", properties: "Ceremonial Grade · House Special", desc: "Our signature house blend, seasonal, medicinal, and prepared fresh for each gathering." },
 ];
 
 const steps = [
