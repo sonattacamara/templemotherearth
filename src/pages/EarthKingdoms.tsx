@@ -237,7 +237,7 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-16 bg-[rgba(200,160,48,0.06)]">
           {k.cards.map((c) => (
             <div key={c.name} className="p-9 hover:-translate-y-1 transition-transform" style={{ background: k.cardBg }}>
-              <span className="text-[28px] block mb-3.5">{c.icon}</span>
+              <c.icon className="h-7 w-7 mb-3.5" style={{ color: k.cardNameColor }} />
               <h4 className="font-serif text-xl italic mb-2.5" style={{ color: k.cardNameColor }}>{c.name}</h4>
               <p className="text-sm leading-[1.75] opacity-75 text-[#F0EAD6]">{c.body}</p>
             </div>
