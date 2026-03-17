@@ -239,8 +239,8 @@ const About = () => {
                 icon: Users,
                 label: "Value 3",
                 title: "Community, Connection & Collective Remembrance",
-                desc: "Our community is at the heart of everything we do. We believe that healing deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
-                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we heal in relationship, not in isolation.",
+                desc: "Our community is at the heart of everything we do. We believe that transformation deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
+                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we restore in relationship, not in isolation.",
               },
               {
                 icon: Heart,
