@@ -167,15 +167,15 @@ const kingdoms: KingdomData[] = [
       { title: "TME's Role", content: "Temple Mother Earth exists to restore the human being to its rightful place in the web of kingdoms — not above, not below, but woven in. Conscious. Humble. Powerful." },
     ],
     facts: [
-      { emoji: "🧬", label: "DNA", val: "3.2 billion base pairs. Contains the blueprint of the universe in miniature." },
-      { emoji: "🧠", label: "Neuroplasticity", val: "The brain can grow new neurons and rewire at any age. Ceremony accelerates this." },
-      { emoji: "💓", label: "Heart Field", val: "The heart's electromagnetic field extends 3+ feet. Measurable by instruments." },
-      { emoji: "✨", label: "Consciousness", val: "The one kingdom that can choose to evolve. That choice is ceremony." },
+      { icon: Dna, label: "DNA", val: "3.2 billion base pairs. Contains the blueprint of the universe in miniature." },
+      { icon: Brain, label: "Neuroplasticity", val: "The brain can grow new neurons and rewire at any age. Ceremony accelerates this." },
+      { icon: HeartPulse, label: "Heart Field", val: "The heart's electromagnetic field extends 3+ feet. Measurable by instruments." },
+      { icon: Sparkles, label: "Consciousness", val: "The one kingdom that can choose to evolve. That choice is ceremony." },
     ],
     cards: [
-      { icon: "🧬", name: "DNA Upgrade", body: "Epigenetic activation through ceremony, nutrition, and practice." },
-      { icon: "🧠", name: "Neurogenesis", body: "Growing new neurons through sacrament and contemplative practice." },
-      { icon: "💓", name: "Heart Coherence", body: "Aligning heart, mind, and body into a single coherent field." },
+      { icon: Dna, name: "DNA Upgrade", body: "Epigenetic activation through ceremony, nutrition, and practice." },
+      { icon: Brain, name: "Neurogenesis", body: "Growing new neurons through sacrament and contemplative practice." },
+      { icon: HeartPulse, name: "Heart Coherence", body: "Aligning heart, mind, and body into a single coherent field." },
     ],
     stats: [
       { num: "3.2B", label: "DNA base pairs" },
