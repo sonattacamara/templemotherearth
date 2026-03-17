@@ -110,7 +110,7 @@ After working with powerful Earth sacraments like Ayahuasca, Kambo, Psilocybin, 
 
 **Why Integration Matters**
 
-In indigenous traditions, the days and weeks following ceremony are considered sacred. The Shipibo healers call this period the "dieta" — a time of dietary, behavioral, and energetic discipline that allows the medicine to continue its work.
+In indigenous traditions, the days and weeks following ceremony are considered sacred. The Shipibo practitioners call this period the "dieta" — a time of dietary, behavioral, and energetic discipline that allows the sacrament to continue its work.
 
 In the modern world — especially for those of us living in the fast-paced DMV corridor of Washington DC, Maryland, and Virginia — returning to daily life after a deep Ayahuasca or Kambo ceremony can feel disorienting. Integration practices anchor the experience:
 
