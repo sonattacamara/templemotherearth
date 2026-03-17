@@ -76,7 +76,8 @@ const CacaoCeremony = () => {
           transition={{ duration: 1 }}
         >
           <p className="font-sans text-[10px] tracking-[6px] uppercase text-[#C9963A] mb-8">
-            Sanctuary Week · Wednesday, March 18, 2026 · Washington DC
+            Recurring Offering · Washington DC
+          </p>
           </p>
           <p className="font-serif italic text-[22px] text-[#C4B49A] mb-4">An invitation to open what has been waiting</p>
           <h1 className="font-display text-[clamp(52px,9vw,108px)] font-black text-[#F5EDD8] leading-[0.95] mb-2 tracking-tight">
