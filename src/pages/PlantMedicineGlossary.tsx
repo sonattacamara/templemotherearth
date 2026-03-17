@@ -82,10 +82,10 @@ const glossaryData = [
 
 const internationalLocations = [
   { region: "Washington, DC & DMV Area", description: "Our home sanctuary offering regular Kambo ceremonies, Hapé circles, cacao ceremonies, and integration support in the Washington DC metropolitan area.", link: "/ceremony-intake" },
-  { region: "Mexico (Sayulita, Riviera Nayarit)", description: "International healing immersions on the Pacific coast of Mexico featuring multi-day retreats with Kambo, sacred vine ceremonies, and traditional Amazonian plant medicine.", link: "/retreats-inquiry" },
-  { region: "Costa Rica", description: "Tropical retreat immersions in Costa Rica's biodiversity-rich landscape, offering plant medicine ceremonies surrounded by pristine rainforest.", link: "/retreats-inquiry" },
+  { region: "Mexico (Sayulita, Riviera Nayarit)", description: "International sacred immersions on the Pacific coast of Mexico featuring multi-day retreats with Kambo, sacred vine ceremonies, and traditional Amazonian plant sacrament.", link: "/retreats-inquiry" },
+  { region: "Costa Rica", description: "Tropical retreat immersions in Costa Rica's biodiversity-rich landscape, offering plant sacrament ceremonies surrounded by pristine rainforest.", link: "/retreats-inquiry" },
   { region: "Peru (Amazon & Sacred Valley)", description: "Deep Amazonian immersions in the birthplace of ayahuasca, Kambo, and master plant dieta traditions. Pilgrimages to the Sacred Valley of the Incas.", link: "/retreats-inquiry" },
-  { region: "Colombia", description: "Ceremonies and retreats in Colombia connecting with Muisca, Kogi, and Amazonian healing lineages.", link: "/retreats-inquiry" },
+  { region: "Colombia", description: "Ceremonies and retreats in Colombia connecting with Muisca, Kogi, and Amazonian ceremonial lineages.", link: "/retreats-inquiry" },
   { region: "Brazil (Amazon)", description: "Journeys to the Brazilian Amazon, home of Jurema Sagrada, Rapé traditions, and rich Amazonian curanderismo.", link: "/retreats-inquiry" },
   { region: "Traveling Ceremonies (Nationwide)", description: "Temple Mother Earth brings sacred ceremonies to communities across the United States. Request a traveling ceremony for your area.", link: "/traveling-ceremonies" },
   { region: "Private Ceremonies (Anywhere)", description: "Personalized one-on-one or small group ceremonies with our experienced facilitators, available at your location or ours.", link: "/private-ceremonies" },
