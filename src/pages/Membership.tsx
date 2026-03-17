@@ -223,7 +223,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-lg leading-relaxed text-primary-foreground/70"
           >
-            Temple Mother Earth was born from a simple truth: healing happens in community.
+            Temple Mother Earth was born from a simple truth: transformation happens in community.
             Whether you're taking your first step or deepening a lifelong practice, 
             there is a home for you here.
           </motion.p>
