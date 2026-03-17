@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail, CalendarIcon } from "lucide-react";
 import { z } from "zod";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 import SEOHead from "@/components/SEOHead";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -364,7 +369,58 @@ const CeremonyIntake = () => {
                 { field: "fullName", label: "Full Legal Name (as it appears on ID) *", type: "text", placeholder: "First and Last Name" },
                 { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
                 { field: "phone", label: "Phone Number * (e.g. 555-555-5555)", type: "tel", placeholder: "Phone Number" },
-                { field: "dob", label: "Date of Birth *", type: "date", placeholder: "" },
+              ].map(f => (
+                <div key={f.field}>
+                  <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
+                  <input className={`${inputClass} ${validationErrors[f.field] ? "ring-2 ring-destructive border-destructive" : ""}`} type={f.type} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
+                  {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
+                </div>
+              ))}
+
+              {/* DOB DatePicker */}
+              <div>
+                <label className="mb-1 block text-sm font-medium text-foreground">Date of Birth *</label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={cn(
+                        "w-full justify-start text-left font-normal h-11",
+                        !formData.dob && "text-muted-foreground",
+                        validationErrors.dob && "ring-2 ring-destructive border-destructive"
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {formData.dob ? format(new Date(formData.dob + "T00:00:00"), "PPP") : <span>Select your date of birth</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
+                      mode="single"
+                      selected={formData.dob ? new Date(formData.dob + "T00:00:00") : undefined}
+                      onSelect={(date) => {
+                        if (date) {
+                          const yyyy = date.getFullYear();
+                          const mm = String(date.getMonth() + 1).padStart(2, "0");
+                          const dd = String(date.getDate()).padStart(2, "0");
+                          update("dob", `${yyyy}-${mm}-${dd}`);
+                        } else {
+                          update("dob", "");
+                        }
+                      }}
+                      disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
+                      captionLayout="dropdown-buttons"
+                      fromYear={1930}
+                      toYear={new Date().getFullYear() - 21}
+                      initialFocus
+                      className={cn("p-3 pointer-events-auto")}
+                    />
+                  </PopoverContent>
+                </Popover>
+                {validationErrors.dob && <p className="mt-1 text-xs text-destructive">{validationErrors.dob}</p>}
+              </div>
+
+              {[
                 { field: "cityState", label: "City and State of Residence (enter country if outside the USA) *", type: "text", placeholder: "e.g. Washington, DC" },
               ].map(f => (
                 <div key={f.field}>
