@@ -41,7 +41,7 @@ const SanctuaryCTA = ({ eyebrow, title, description, ctaLabel, ctaHref, external
           href={ctaHref}
           target={external ? "_blank" : undefined}
           rel={external ? "noopener noreferrer" : undefined}
-          className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(90,40%,30%)] text-[hsl(90,20%,97%)] hover:bg-[hsl(90,40%,38%)] transition-all duration-300"
+          className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(40,40%,55%)] text-[hsl(25,30%,8%)] hover:bg-[hsl(40,40%,65%)] transition-all duration-300"
         >
           {ctaLabel}
         </a>
