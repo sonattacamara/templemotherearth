@@ -98,7 +98,7 @@ const trinity = [
 /* ── Future Teachings ── */
 const futureTeachings = [
   "Ptah — The Creator",
-  "Sekhmet — The Warrior Healer",
+  "Sekhmet — The Warrior Protector",
   "IamHetep — The Divine Physician",
   "The Daily Practice Guide",
   "Wekhedu in Modern Life",
