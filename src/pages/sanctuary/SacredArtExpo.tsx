@@ -182,9 +182,9 @@ const SacredArtExpo = () => {
           {/* Event Cards */}
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
             {[
-              { emoji: "🌸", title: "Spring Equinox", detail: "March 28, 2026 · 7–10 PM" },
-              { emoji: "🍂", title: "Fall Equinox", detail: "Date TBD · Fall 2026" },
-              { emoji: "🎨", title: "Canvas & Ceremony", detail: "July 2026 · Immersive art + ceremony" },
+              { icon: Flower2, title: "Spring Equinox", detail: "March 28, 2026 · 7–10 PM" },
+              { icon: LeafIcon, title: "Fall Equinox", detail: "Date TBD · Fall 2026" },
+              { icon: Brush, title: "Canvas & Ceremony", detail: "July 2026 · Immersive art + ceremony" },
             ].map((e) => (
               <motion.div
                 key={e.title}
@@ -192,7 +192,7 @@ const SacredArtExpo = () => {
                 className="rounded-xl p-6 text-center"
                 style={{ background: "#1a1612", border: "1px solid #c9a84c22" }}
               >
-                <span className="text-3xl">{e.emoji}</span>
+                <e.icon className="mx-auto h-8 w-8" style={{ color: "#c9a84c" }} />
                 <h3 className="mt-3 font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
                   {e.title}
                 </h3>
