@@ -118,7 +118,7 @@ In the modern world — especially for those of us living in the fast-paced DMV 
 • **Somatic practices** — yoga, breathwork, and movement to process what the body is holding
 • **Community circles** — sharing your experience with others who understand the territory
 • **Nature immersion** — returning to the Earth that provided the medicine
-• **Professional support** — working with integration coaches or therapists trained in psychedelic aftercare
+• **Professional support** — working with integration coaches or practitioners trained in ceremonial aftercare
 
 **The Integration Gap in the DMV**
 
