@@ -155,7 +155,7 @@ const CacaoCeremony = () => {
         {/* Effects Grid */}
         <div className="mt-20">
           <Eyebrow>What Cacao Does</Eyebrow>
-          <h3 className="font-display text-[28px] text-[#2C1810] mb-2">Effects Across Body, Mind & Spirit</h3>
+          <h3 className="font-display text-[28px] text-[#F5EDD8] mb-2">Effects Across Body, Mind & Spirit</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-4 bg-[#C9963A]">
           {[
@@ -166,10 +166,10 @@ const CacaoCeremony = () => {
             { icon: "🌀", title: "Spiritual", body: "In ceremonial context, cacao acts as a bridge between ordinary consciousness and deeper states of presence." },
             { icon: "🦴", title: "Physical", body: "Rich in magnesium — the most deficient mineral in modern bodies. Relaxes muscles and supports nervous system." },
           ].map((card) => (
-            <div key={card.title} className="bg-[#FDFAF4] p-10 hover:bg-[#F5EDD8] transition-colors">
+            <div key={card.title} className="bg-[#1A1208] p-10 hover:bg-[#2C1810] transition-colors">
               <span className="text-[28px] block mb-4">{card.icon}</span>
-              <h4 className="font-display text-lg font-bold text-[#2C1810] mb-2.5">{card.title}</h4>
-              <p className="text-[15px] leading-[1.7] text-[#4A2C1A]">{card.body}</p>
+              <h4 className="font-display text-lg font-bold text-[#C9963A] mb-2.5">{card.title}</h4>
+              <p className="text-[15px] leading-[1.7] text-[#C4B49A]">{card.body}</p>
             </div>
           ))}
         </div>
