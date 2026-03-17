@@ -26,7 +26,7 @@ const impactCards = [
   {
     icon: Sparkles,
     title: "Aftercare & Integration",
-    desc: "Funds follow-up support and integration resources so the healing journey continues beyond ceremony.",
+    desc: "Funds follow-up support and integration resources so the transformative journey continues beyond ceremony.",
   },
 ];
 
