@@ -52,7 +52,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 3, date: "March 20", weekday: "Friday", name: "Sacred Tea Ceremony",
+    day: 3, date: "", weekday: "", name: "Sacred Tea Ceremony",
     subtitle: "The Door Has Always Been There",
     description: "Three levels: Community, Sacred Circle, and Fruit of the Gods. Choose the depth you are ready for. The sacrament meets you exactly where you are.",
     icon: <Coffee className="h-5 w-5" />, tags: ["Signature", "Tiered", "Pre-Screening"],
