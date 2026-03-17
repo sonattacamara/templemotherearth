@@ -309,14 +309,14 @@ const EarthKingdoms = () => {
           </p>
           <div className="flex gap-2 flex-wrap justify-center">
             {[
-              { emoji: "💎", label: "Mineral", href: "#mineral" },
-              { emoji: "🌿", label: "Plant", href: "#plant" },
-              { emoji: "🍄", label: "Fungi", href: "#fungi" },
-              { emoji: "🐸", label: "Animal", href: "#animal" },
-              { emoji: "👁", label: "Kingdom of Man", href: "#human" },
+              { icon: Gem, label: "Mineral", href: "#mineral" },
+              { icon: Leaf, label: "Plant", href: "#plant" },
+              { icon: Sparkles, label: "Fungi", href: "#fungi" },
+              { icon: Cat, label: "Animal", href: "#animal" },
+              { icon: Eye, label: "Kingdom of Man", href: "#human" },
             ].map((pill) => (
-              <a key={pill.label} href={pill.href} className="px-5 py-2.5 font-sans text-[9px] tracking-[2px] uppercase border border-[rgba(200,160,48,0.25)] text-[#8A9A84] hover:text-[#C8A030] hover:border-[#C8A030] hover:bg-[rgba(200,160,48,0.06)] transition-all">
-                {pill.emoji} {pill.label}
+              <a key={pill.label} href={pill.href} className="flex items-center gap-2 px-5 py-2.5 font-sans text-[9px] tracking-[2px] uppercase border border-[rgba(200,160,48,0.25)] text-[#8A9A84] hover:text-[#C8A030] hover:border-[#C8A030] hover:bg-[rgba(200,160,48,0.06)] transition-all">
+                <pill.icon className="h-4 w-4" /> {pill.label}
               </a>
             ))}
           </div>
