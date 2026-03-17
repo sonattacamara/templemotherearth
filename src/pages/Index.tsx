@@ -80,7 +80,7 @@ const offerings = [
     title: "1-on-1 / Private Ceremonies",
     desc: "Experience deeply personal sacred sessions designed around your unique intentions, needs, and path of transformation.",
     img: offeringPrivate,
-    imgAlt: "Private Kambo, Hapé, and Bobinsana ceremony session for personal healing and transformation",
+    imgAlt: "Private Kambo, Hapé, and Bobinsana ceremony session for personal transformation and sacred practice",
     link: "/private-ceremonies",
     isExternal: false,
     cta: "Explore Private Ceremonies",
