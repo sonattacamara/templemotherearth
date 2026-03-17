@@ -143,7 +143,7 @@ const tiers = [
     period: "/month",
     icon: Star,
     commitment: "3-month journey",
-    philosophy: "For those walking the path of deep integration and service. After three months of practice and preparation, you become eligible for quarterly immersions. This is where healing becomes a way of life.",
+    philosophy: "For those walking the path of deep integration and service. After three months of practice and preparation, you become eligible for quarterly immersions. This is where transformation becomes a way of life.",
     includes: [
       "Everything in Preparation Path",
       "Quarterly immersion eligibility",
