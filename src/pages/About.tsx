@@ -90,8 +90,8 @@ const About = () => {
                 </p>
                 <p>
                Founded by and for people who are looking for higher states of consciousness, who want to end their own pain and suffering, who are ready for tapping into the God within them, to create love and abundance in all things. Temple Mother Earth bridges ancient Earth Medicine traditions with 
-                  modern healing practices. From our Washington, DC sanctuary, we serve our local community 
-                  and extend our reach through international immersions and traveling ceremonies.
+                   modern sacred practices. From our Washington, DC sanctuary, we serve our local community 
+                   and extend our reach through international immersions and traveling ceremonies.
                 </p>
               </div>
             </motion.div>
