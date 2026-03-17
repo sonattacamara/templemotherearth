@@ -79,7 +79,7 @@ const Volunteer = () => {
             Sacred Energy Exchange
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            At Temple Mother Earth, we believe that everyone deserves access to healing — regardless of financial means.
+            At Temple Mother Earth, we believe that everyone deserves access to sacred ceremony, regardless of financial means.
             We practice <strong className="text-foreground">Sacred Energy Exchange</strong>, a reciprocal model where volunteers
             contribute their time, energy, and skills to sustain the Temple, and in return, earn credits toward
             sacred ceremony participation.
