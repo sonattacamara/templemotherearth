@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 const EVENTBRITE_KAMBO = "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117";
 
 const avatars = [
-  { num: "One", title: "The One Who Has Tried Everything", desc: "Therapy. Retreats. Plant medicine. The gym. The diet. The meditation practice. Something is still there, a weight in the body that doesn't shift no matter what the mind understands." },
+  { num: "One", title: "The One Who Has Tried Everything", desc: "Talk sessions. Retreats. Plant sacrament. The gym. The diet. The meditation practice. Something is still there, a weight in the body that doesn't shift no matter what the mind understands." },
   { num: "Two", title: "The One Who Knows They're Being Called", desc: "No explanation. No logic. Just a knowing, Kambo, and now. If you've been circling this ceremony for months or years, that is not curiosity. That is preparation." },
   { num: "Three", title: "The One Ready to Reset", desc: "A chapter is ending. Something needs to be released before what comes next can begin. Kambo is the great reset, not of who you are, but of what you've been carrying." },
 ];
