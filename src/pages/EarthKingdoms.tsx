@@ -305,7 +305,7 @@ const EarthKingdoms = () => {
           </h1>
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A030] to-transparent mx-auto my-8" />
           <p className="font-serif italic text-[22px] text-[#F0EAD6] max-w-[700px] mx-auto mb-12 leading-[1.7]">
-            Every sacrament we offer, every ceremony we hold, every healing that happens at Temple Mother Earth flows from the intelligence of the living Earth, organized into five great Kingdoms.
+            Every sacrament we offer, every ceremony we hold, every transformation that happens at Temple Mother Earth flows from the intelligence of the living Earth, organized into five great Kingdoms.
           </p>
           <div className="flex gap-2 flex-wrap justify-center">
             {[
