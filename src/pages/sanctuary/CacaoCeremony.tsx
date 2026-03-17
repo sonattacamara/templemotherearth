@@ -102,8 +102,7 @@ const CacaoCeremony = () => {
       {/* Event Strip */}
       <div className="bg-[#0E0A06] flex justify-center items-center flex-wrap border-b border-[rgba(201,150,58,0.2)]">
         {[
-          { label: "Date", value: "Wednesday, March 18" },
-          { label: "Duration", value: "3 Hours" },
+          { label: "Format", value: "3 Hours" },
           { label: "Location", value: "Temple Mother Earth, DC" },
           { label: "Level", value: "All Experience Levels" },
         ].map((item) => (
