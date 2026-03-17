@@ -58,7 +58,7 @@ const About = () => {
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Born during the pandemic, when the world was closing its doors, Temple Mother Earth opened ours — 
-            bringing community together to heal with Mother Earth when it was needed most.
+            bringing community together to restore with Mother Earth when it was needed most.
           </motion.p>
         </motion.div>
       </section>
