@@ -128,7 +128,7 @@ const kingdoms: KingdomData[] = [
   },
   {
     id: "animal", num: "Four", name: "ANIMAL", subtitle: "sacred messengers & sacrament carriers",
-    lead: "The Animal Kingdom is not a source of exploitation — it is a community of teachers. The frog, toad, snake, scorpion — ancient healing intelligences.",
+    lead: "The Animal Kingdom is not a source of exploitation, it is a community of teachers. The frog, toad, snake, scorpion, ancient sacred intelligences.",
     titleColor: "#8FD67A", eyebrowColor: "#3D7A3D", factBg: "#060D06", factLabelColor: "#5BA84A",
     cardBg: "#060D06", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7A3D",
     sections: [
