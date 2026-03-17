@@ -41,7 +41,8 @@ const INQUIRY_TYPES = [
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     inquiryType: "",
