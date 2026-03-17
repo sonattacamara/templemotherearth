@@ -53,7 +53,7 @@ const RetreatsInquiry = () => {
             International Immersions
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Journey with Temple Mother Earth to breathtaking destinations for immersive healing experiences
+            Journey with Temple Mother Earth to breathtaking destinations for immersive sacred experiences
             that blend cultural richness, Earth Medicine, and deep spiritual practice.
           </motion.p>
         </motion.div>
