@@ -32,7 +32,7 @@ interface TimelineDay {
 
 const timelineDays: TimelineDay[] = [
   {
-    day: 1, date: "March 18", weekday: "Wednesday", name: "Cacao Community Ceremony",
+    day: 1, date: "", weekday: "", name: "Cacao Community Ceremony",
     subtitle: "Your Heart Already Knows the Way",
     description: "Sacred ceremonial cacao, live sound, and community circle. The gentlest entry point, and for many, the most unexpectedly profound. All welcome.",
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
