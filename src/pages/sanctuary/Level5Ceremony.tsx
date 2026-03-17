@@ -81,7 +81,7 @@ const Level5Ceremony = () => (
         </p>
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A030] to-transparent mx-auto my-8" />
         <p className="font-serif italic text-[clamp(18px,2vw,22px)] text-[#F0EAD6] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-          You have been in preparation for this whether you knew it or not. The jungle does not call everyone. It called you.
+          You have been in preparation for this whether you knew it or not. Mother Earth does not call everyone. She called you.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
@@ -155,14 +155,14 @@ const Level5Ceremony = () => (
     </SanctuarySection>
 
     {/* WHO THIS IS FOR */}
-    <SanctuarySection className="bg-[#111D0F]" eyebrow="Who This Initiation Is For" title={<>See Yourself<br /><em className="font-serif italic text-[#5BA84A] text-[1.1em]">In This Initiation</em></>}>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-[rgba(91,168,74,0.06)] mt-16">
+    <SanctuarySection className="bg-[#111D0F]" eyebrow="Who This Initiation Is For" title={<>See Yourself<br /><em className="font-serif italic text-[#C8A030] text-[1.1em]">In This Initiation</em></>}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-[rgba(200,160,48,0.06)] mt-16">
         {whoCards.map((card) => (
-          <div key={card.num} className="bg-[#050804] p-12 border-b-[3px] border-transparent hover:bg-[rgba(11,20,10,0.9)] hover:border-[#5BA84A] transition-all">
-            <span className="font-sans text-[60px] font-black text-[rgba(91,168,74,0.08)] leading-none block mb-[-10px]">{card.num}</span>
+          <div key={card.num} className="bg-[#0B140A] p-12 border-b-[3px] border-transparent hover:bg-[rgba(11,20,10,0.9)] hover:border-[#C8A030] transition-all">
+            <span className="font-sans text-[60px] font-black text-[rgba(200,160,48,0.18)] leading-none block mb-[-10px]">{card.num}</span>
             <h3 className="font-serif text-2xl italic text-[#C8A030] mb-1.5">{card.type}</h3>
-            <span className="font-sans text-[8px] tracking-[2px] uppercase text-[#8A9E84] block mb-6">{card.tag}</span>
-            <p className="text-base text-[#F0EAD6] leading-[1.85] opacity-82">{card.body}</p>
+            <span className="font-sans text-[9px] tracking-[2px] uppercase text-[#C8A030] opacity-70 block mb-6">{card.tag}</span>
+            <p className="text-base text-[#F0EAD6] leading-[1.85] opacity-90">{card.body}</p>
           </div>
         ))}
       </div>
