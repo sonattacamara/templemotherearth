@@ -694,7 +694,7 @@ const About = () => {
                 role: "Herbalist & Earth Medicine Keeper",
                 img: facilitatorSamira,
                 imgAlt: "Samira Davis, herbalist and Earth Medicine keeper specializing in Bobinsana, Mugwort, and Damiana plant allies",
-                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their healing properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding individuals toward holistic healing through the Earth's abundant pharmacy.",
+                desc: "Traditional herbalist, Earth Medicine keeper, and founder of BLVCK LXTUS. Samira carries deep knowledge of sacred plant allies and their restorative properties, weaving ancestral herbal wisdom into modern wellness practices. Her work honors the sacred relationship between humanity and the botanical world, guiding individuals toward holistic restoration through the Earth's abundant pharmacy.",
               },
               {
                 name: "Jala Johnson",
