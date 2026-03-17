@@ -1014,8 +1014,6 @@ const Index = () => {
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
                 <a href="https://kambo.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Kambo Portal</a>
                 <a href="https://costarica.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Costa Rica Immersions</a>
-                <a href="https://mexico.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Mexico Immersion</a>
-                <a href="https://peru.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Peru Immersion</a>
                 <a href="https://integration.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">Integration Portal</a>
               </div>
             </div>
