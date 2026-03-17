@@ -96,7 +96,7 @@ const PlantMedicineGlossary = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Plant Medicine Glossary | Sacred Earth Medicines"
-        description="Comprehensive guide to sacred plant medicines including Kambo, ayahuasca, psilocybin, San Pedro, and traditional healing practices."
+        description="Comprehensive guide to sacred plant sacraments including Kambo, ayahuasca, psilocybin, San Pedro, and traditional ceremonial practices."
         path="/plant-medicine-glossary"
       />
       <Navigation />
