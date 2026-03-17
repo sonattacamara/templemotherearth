@@ -649,7 +649,7 @@ const SanctuaryWeek = () => {
           {[
             { title: "Sustainer", desc: "Full suggested contribution. Your full payment supports someone who cannot.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             { title: "Community", desc: "Reduced contribution. For those who are working but genuinely strained. No explanation required.", featured: true, icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { title: "Scholarship", desc: "For genuine hardship. Funded by our TOME 501(c)(3) scholarship fund.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { title: "Scholarship", desc: "For genuine hardship. Funded by our TOME 508(c)(1)(A) scholarship fund.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
           ].map((tier) => (
             <div key={tier.title} className={`p-8 bg-[hsl(105,30%,12%)] border ${tier.featured ? "border-[hsla(45,70%,49%,0.35)]" : "border-[hsla(45,70%,49%,0.12)]"}`}>
               <div className="mb-3">{tier.icon}</div>
