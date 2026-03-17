@@ -175,7 +175,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Building Community Through Connection & Consciousness</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  At Temple Mother Earth, we know that healing does not happen in isolation — it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
+                  At Temple Mother Earth, we know that transformation does not happen in isolation — it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
                 </p>
                 <p>
                   We hold a vision of community built on respect, compassion, sovereignty, and shared awakening.
