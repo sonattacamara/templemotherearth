@@ -67,9 +67,9 @@ const CeremonyDonate = () => {
       />
 
       <DonateCTA
-        tagline="Sow Into Healing"
+        tagline="Sow Into Transformation"
         heading="Plant a Seed of Transformation"
-        body="Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible gift helps fund ceremony scholarships for those who cannot afford the journey on their own. You are planting seeds of transformation."
+        body="Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Your tax-deductible gift helps fund ceremony scholarships for those who cannot afford the journey on their own. You are planting seeds of transformation."
         donateUrl={CEREMONY_PAYPAL_URL}
         buttonLabel="Gift a Journey"
         buttonIcon={Heart}
