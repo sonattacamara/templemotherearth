@@ -24,7 +24,7 @@ const glossaryData = [
   },
   {
     category: "Master Plant Teachers & Dieta Plants",
-    description: "Plants used in Amazonian plant dieta traditions, often alongside ayahuasca, to deepen healing, build spiritual relationships, and strengthen the body and mind.",
+    description: "Plants used in Amazonian plant dieta traditions, often alongside ayahuasca, to deepen transformation, build spiritual relationships, and strengthen the body and mind.",
     entries: [
       { name: "Tobacco / Mapacho", botanical: "Nicotiana rustica", origin: "Americas — pan-indigenous", description: "Considered the 'Grandfather' plant in many indigenous traditions. Used for prayer, protection, purification, and energetic clearing. Mapacho is the ceremonial jungle tobacco distinct from commercial varieties." },
       { name: "Bobinsana", botanical: "Calliandra angustifolia", origin: "Amazon Basin — Peru", description: "Heart-opening plant teacher used in traditional dieta. Known for cultivating compassion, emotional sensitivity, and dream enhancement." },
