@@ -106,7 +106,7 @@ At Temple Mother Earth, we say: the ceremony is the seed. Integration is the soi
 
 Integration is the practice of weaving ceremony insights into your daily life. It is the bridge between the visionary world and your Monday morning. It includes reflection, embodiment, community support, and often professional guidance.
 
-After working with powerful Earth medicines like Ayahuasca, Kambo, Psilocybin, or San Pedro, the nervous system, psyche, and spirit need time to recalibrate. Integration honors that process rather than rushing past it.
+After working with powerful Earth sacraments like Ayahuasca, Kambo, Psilocybin, or San Pedro, the nervous system, psyche, and spirit need time to recalibrate. Integration honors that process rather than rushing past it.
 
 **Why Integration Matters**
 
