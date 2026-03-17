@@ -92,7 +92,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Belonging",
   },
   {
-    day: 7, date: "March 25", weekday: "Tuesday", name: "Sacred Yin Yoga",
+    day: 7, date: "", weekday: "", name: "Sacred Yin Yoga",
     subtitle: "You Already Know How to Surrender",
     description: "90 minutes of ceremonial yin yoga with sound ceremony and breathwork. Not exercise, ceremony in the body. All levels welcome.",
     icon: <Mountain className="h-5 w-5" />, tags: ["All Levels", "Sound", "Nervous System"],
