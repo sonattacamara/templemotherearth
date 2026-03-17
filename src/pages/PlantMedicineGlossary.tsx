@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 const glossaryData = [
   {
     category: "Entheogenic & Psychoactive Plant Medicines",
-    description: "Sacred visionary medicines used in ceremonial traditions worldwide for spiritual awakening, deep healing, and consciousness expansion.",
+    description: "Sacred visionary sacraments used in ceremonial traditions worldwide for spiritual awakening, deep transformation, and consciousness expansion.",
     entries: [
-      { name: "Ayahuasca (Sacred Vine)", botanical: "Banisteriopsis caapi + Psychotria viridis", origin: "Amazon Basin — Peru, Colombia, Brazil, Ecuador", description: "DMT-containing sacred brew used in Amazonian shamanic traditions for deep spiritual healing, visionary experience, and consciousness expansion. Also known as Sacred Vine, Yagé, and La Medicina.", link: "/retreats-inquiry", linkLabel: "Explore Sacred Vine Retreats" },
-      { name: "Peyote (Hikuri)", botanical: "Lophophora williamsii", origin: "Mexico, Southwestern United States", description: "Mescaline-containing cactus sacred to Native American traditions and Huichol (Wixárika) ceremonies. Used for prayer, healing, and divine communion." },
-      { name: "San Pedro (Huachuma)", botanical: "Echinopsis pachanoi", origin: "Andes — Peru, Ecuador, Bolivia", description: "Mescaline-containing cactus from the Andes used for thousands of years in healing ceremonies. Known as the 'Cactus of the Four Winds.'" },
-      { name: "Psilocybin Mushrooms", botanical: "Psilocybe cubensis, P. semilanceata, P. azurescens", origin: "Worldwide — Mesoamerica (Mazatec tradition)", description: "Sacred fungi containing psilocybin and psilocin, used in Mazatec healing traditions and increasingly studied for therapeutic applications in depression, PTSD, and end-of-life anxiety." },
-      { name: "Iboga / Ibogaine", botanical: "Tabernanthe iboga", origin: "Central Africa — Gabon, Cameroon", description: "Root bark used in Bwiti spiritual tradition for initiation, healing, and addiction interruption. Contains ibogaine, a powerful psychoactive alkaloid." },
-      { name: "Salvia Divinorum", botanical: "Salvia divinorum", origin: "Oaxaca, Mexico", description: "Used by Mazatec healers (curanderos) for divination and spiritual healing. Contains salvinorin A, a potent kappa-opioid agonist." },
+      { name: "Ayahuasca (Sacred Vine)", botanical: "Banisteriopsis caapi + Psychotria viridis", origin: "Amazon Basin — Peru, Colombia, Brazil, Ecuador", description: "DMT-containing sacred brew used in Amazonian shamanic traditions for deep spiritual transformation, visionary experience, and consciousness expansion. Also known as Sacred Vine, Yagé, and La Medicina.", link: "/retreats-inquiry", linkLabel: "Explore Sacred Vine Retreats" },
+      { name: "Peyote (Hikuri)", botanical: "Lophophora williamsii", origin: "Mexico, Southwestern United States", description: "Mescaline-containing cactus sacred to Native American traditions and Huichol (Wixárika) ceremonies. Used for prayer, sacred practice, and divine communion." },
+      { name: "San Pedro (Huachuma)", botanical: "Echinopsis pachanoi", origin: "Andes — Peru, Ecuador, Bolivia", description: "Mescaline-containing cactus from the Andes used for thousands of years in sacred ceremonies. Known as the 'Cactus of the Four Winds.'" },
+      { name: "Psilocybin Mushrooms", botanical: "Psilocybe cubensis, P. semilanceata, P. azurescens", origin: "Worldwide — Mesoamerica (Mazatec tradition)", description: "Sacred fungi containing psilocybin and psilocin, used in Mazatec ceremonial traditions and increasingly studied for applications in depression, PTSD, and end-of-life anxiety." },
+      { name: "Iboga / Ibogaine", botanical: "Tabernanthe iboga", origin: "Central Africa — Gabon, Cameroon", description: "Root bark used in Bwiti spiritual tradition for initiation, transformation, and addiction interruption. Contains ibogaine, a powerful psychoactive alkaloid." },
+      { name: "Salvia Divinorum", botanical: "Salvia divinorum", origin: "Oaxaca, Mexico", description: "Used by Mazatec practitioners (curanderos) for divination and spiritual practice. Contains salvinorin A, a potent kappa-opioid agonist." },
       { name: "Cannabis / Hemp", botanical: "Cannabis sativa / indica", origin: "Central Asia — used globally", description: "Ceremonial plant used across Rastafari, Hindu (Shiva worship), and Sufi traditions for meditation, prayer, and spiritual connection." },
       { name: "Morning Glory (Ololiuqui)", botanical: "Turbina corymbosa, Ipomoea tricolor", origin: "Mexico — Aztec and Mazatec traditions", description: "LSA-containing seeds used by Aztec and Mazatec peoples for divination and spiritual healing ceremonies." },
       { name: "Hawaiian Baby Woodrose", botanical: "Argyreia nervosa", origin: "Indian subcontinent, Hawaii", description: "Seeds containing LSA (d-lysergic acid amide), used for visionary and meditative experiences." },
@@ -24,17 +24,17 @@ const glossaryData = [
   },
   {
     category: "Master Plant Teachers & Dieta Plants",
-    description: "Plants used in Amazonian plant dieta traditions, often alongside ayahuasca, to deepen healing, build spiritual relationships, and strengthen the body and mind.",
+    description: "Plants used in Amazonian plant dieta traditions, often alongside ayahuasca, to deepen transformation, build spiritual relationships, and strengthen the body and mind.",
     entries: [
       { name: "Tobacco / Mapacho", botanical: "Nicotiana rustica", origin: "Americas — pan-indigenous", description: "Considered the 'Grandfather' plant in many indigenous traditions. Used for prayer, protection, purification, and energetic clearing. Mapacho is the ceremonial jungle tobacco distinct from commercial varieties." },
       { name: "Bobinsana", botanical: "Calliandra angustifolia", origin: "Amazon Basin — Peru", description: "Heart-opening plant teacher used in traditional dieta. Known for cultivating compassion, emotional sensitivity, and dream enhancement." },
-      { name: "Chiric Sanango", botanical: "Brunfelsia grandiflora", origin: "Amazon Basin — Peru", description: "Master plant used for emotional healing, building courage, and clearing fear. Often used in plant dietas to strengthen resolve." },
+      { name: "Chiric Sanango", botanical: "Brunfelsia grandiflora", origin: "Amazon Basin — Peru", description: "Master plant used for emotional restoration, building courage, and clearing fear. Often used in plant dietas to strengthen resolve." },
       { name: "Ajo Sacha", botanical: "Mansoa alliacea", origin: "Amazon Basin", description: "'Garlic vine' used for spiritual cleansing, protection against negative energies, and strengthening the immune system." },
       { name: "Piñón Colorado", botanical: "Jatropha gossypiifolia", origin: "Amazon Basin", description: "Used for purification, spiritual protection, and energetic cleansing in Amazonian curanderismo." },
       { name: "Chullachaki Caspi", botanical: "Tovomita sp.", origin: "Amazon Basin — Peru", description: "Grounding and strengthening tree medicine. Used in plant dietas for stability, focus, and physical resilience." },
       { name: "Noya Rao", botanical: "Tree of Light", origin: "Amazon Basin — Shipibo tradition", description: "Extremely rare luminescent tree considered one of the most powerful dieta plants. Known for spiritual illumination and deep visionary work." },
       { name: "Camalonga", botanical: "Thevetia peruviana", origin: "Amazon Basin", description: "Seeds used in plant dietas for enhancing dreams, developing visionary capacity, and spiritual protection." },
-      { name: "Uchu Sanango", botanical: "Tabernaemontana sananho", origin: "Amazon Basin — Peru", description: "Used for emotional and physical healing, particularly joint pain and inflammation. Known for generating intense heat during dieta." },
+      { name: "Uchu Sanango", botanical: "Tabernaemontana sananho", origin: "Amazon Basin — Peru", description: "Used for emotional and physical restoration, particularly joint pain and inflammation. Known for generating intense heat during dieta." },
     ],
   },
   {
@@ -50,10 +50,10 @@ const glossaryData = [
     ],
   },
   {
-    category: "Traditional Healing & Medicinal Plant Allies",
-    description: "Time-honored botanical allies used across global healing traditions for emotional balance, dream work, and holistic wellness.",
+    category: "Traditional Sacred & Ceremonial Plant Allies",
+    description: "Time-honored botanical allies used across global ceremonial traditions for emotional balance, dream work, and holistic wellness.",
     entries: [
-      { name: "Blue Lotus", botanical: "Nymphaea caerulea", origin: "Egypt, East Africa", description: "Sacred flower of ancient Egyptian ceremony. Used for relaxation, mild euphoria, enhanced meditation, and dream work. Deeply connected to African ancestral healing lineages." },
+      { name: "Blue Lotus", botanical: "Nymphaea caerulea", origin: "Egypt, East Africa", description: "Sacred flower of ancient Egyptian ceremony. Used for relaxation, mild euphoria, enhanced meditation, and dream work. Deeply connected to African ancestral ceremonial lineages." },
       { name: "Mugwort", botanical: "Artemisia vulgaris", origin: "Europe, Asia, North America", description: "Dream-enhancing herb and feminine medicine. Used for lucid dreaming, menstrual support, and spiritual protection." },
       { name: "Damiana", botanical: "Turnera diffusa", origin: "Mexico, Central America", description: "Heart and sensual medicine traditionally used as an aphrodisiac and mood enhancer. Also used in ceremonial settings for opening the heart." },
       { name: "Passionflower", botanical: "Passiflora incarnata", origin: "Americas", description: "Contains mild MAOIs. Used for calming anxiety, supporting sleep, and as a gentle nervine. Also used in some ayahuasca analog preparations." },
@@ -82,10 +82,10 @@ const glossaryData = [
 
 const internationalLocations = [
   { region: "Washington, DC & DMV Area", description: "Our home sanctuary offering regular Kambo ceremonies, Hapé circles, cacao ceremonies, and integration support in the Washington DC metropolitan area.", link: "/ceremony-intake" },
-  { region: "Mexico (Sayulita, Riviera Nayarit)", description: "International healing immersions on the Pacific coast of Mexico featuring multi-day retreats with Kambo, sacred vine ceremonies, and traditional Amazonian plant medicine.", link: "/retreats-inquiry" },
-  { region: "Costa Rica", description: "Tropical retreat immersions in Costa Rica's biodiversity-rich landscape, offering plant medicine ceremonies surrounded by pristine rainforest.", link: "/retreats-inquiry" },
+  { region: "Mexico (Sayulita, Riviera Nayarit)", description: "International sacred immersions on the Pacific coast of Mexico featuring multi-day retreats with Kambo, sacred vine ceremonies, and traditional Amazonian plant sacrament.", link: "/retreats-inquiry" },
+  { region: "Costa Rica", description: "Tropical retreat immersions in Costa Rica's biodiversity-rich landscape, offering plant sacrament ceremonies surrounded by pristine rainforest.", link: "/retreats-inquiry" },
   { region: "Peru (Amazon & Sacred Valley)", description: "Deep Amazonian immersions in the birthplace of ayahuasca, Kambo, and master plant dieta traditions. Pilgrimages to the Sacred Valley of the Incas.", link: "/retreats-inquiry" },
-  { region: "Colombia", description: "Ceremonies and retreats in Colombia connecting with Muisca, Kogi, and Amazonian healing lineages.", link: "/retreats-inquiry" },
+  { region: "Colombia", description: "Ceremonies and retreats in Colombia connecting with Muisca, Kogi, and Amazonian ceremonial lineages.", link: "/retreats-inquiry" },
   { region: "Brazil (Amazon)", description: "Journeys to the Brazilian Amazon, home of Jurema Sagrada, Rapé traditions, and rich Amazonian curanderismo.", link: "/retreats-inquiry" },
   { region: "Traveling Ceremonies (Nationwide)", description: "Temple Mother Earth brings sacred ceremonies to communities across the United States. Request a traveling ceremony for your area.", link: "/traveling-ceremonies" },
   { region: "Private Ceremonies (Anywhere)", description: "Personalized one-on-one or small group ceremonies with our experienced facilitators, available at your location or ours.", link: "/private-ceremonies" },
@@ -96,7 +96,7 @@ const PlantMedicineGlossary = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Plant Medicine Glossary | Sacred Earth Medicines"
-        description="Comprehensive guide to sacred plant medicines including Kambo, ayahuasca, psilocybin, San Pedro, and traditional healing practices."
+        description="Comprehensive guide to sacred plant sacraments including Kambo, ayahuasca, psilocybin, San Pedro, and traditional ceremonial practices."
         path="/plant-medicine-glossary"
       />
       <Navigation />
@@ -107,7 +107,7 @@ const PlantMedicineGlossary = () => {
             Sacred Plant Medicine Glossary
           </h1>
           <p className="font-body text-muted-foreground text-lg max-w-3xl">
-            A comprehensive guide to the sacred earth medicines, entheogenic plant teachers, and healing traditions honored by Temple Mother Earth. Our sanctuary in Washington, DC and our{" "}
+            A comprehensive guide to the sacred earth sacraments, entheogenic plant teachers, and ceremonial traditions honored by Temple Mother Earth. Our sanctuary in Washington, DC and our{" "}
             <Link to="/retreats-inquiry" className="text-primary underline">international retreat locations</Link>{" "}
             offer ceremonial experiences rooted in indigenous wisdom and reverence for the natural world.
           </p>
@@ -146,7 +146,7 @@ const PlantMedicineGlossary = () => {
             International Ceremony & Retreat Locations
           </h2>
           <p className="font-body text-muted-foreground mb-6">
-            Temple Mother Earth offers sacred plant medicine ceremonies and healing immersions in Washington DC and at retreat centers across the Americas.
+            Temple Mother Earth offers sacred plant medicine ceremonies and sacred immersions in Washington DC and at retreat centers across the Americas.
           </p>
           <div className="grid gap-6 sm:grid-cols-2">
             {internationalLocations.map((loc) => (
@@ -164,7 +164,7 @@ const PlantMedicineGlossary = () => {
 
         {/* CTA */}
         <section className="text-center py-12 border-t border-border">
-          <h2 className="font-display text-2xl text-foreground mb-3">Begin Your Healing Journey</h2>
+          <h2 className="font-display text-2xl text-foreground mb-3">Begin Your Sacred Journey</h2>
           <p className="font-body text-muted-foreground mb-6 max-w-xl mx-auto">
             Whether you are called to Kambo, Hapé, sacred vine, cacao, or another earth medicine, the first step is completing our Sacred Intake Form.
           </p>

@@ -19,21 +19,21 @@ const DonationSuccess = () => {
   const categoryMessages: Record<string, { title: string; message: string }> = {
     veteran: {
       title: "A Warrior's Journey Begins With You",
-      message: "Your generous contribution directly supports a veteran's path to healing through sacred ceremony. You have planted a seed of transformation that will ripple through their life and the lives of those they touch.",
+      message: "Your generous contribution directly supports a veteran's path to transformation through sacred ceremony. You have planted a seed of restoration that will ripple through their life and the lives of those they touch.",
     },
     ceremony: {
-      title: "You've Gifted the Journey of Healing",
+      title: "You've Gifted the Journey of Transformation",
       message: "Because of your generosity, someone who may not have had the financial means will now have the opportunity to experience the transformative power of sacred ceremony. You are a vessel of light.",
     },
     general: {
       title: "The Temple Grows Because of You",
-      message: "Your offering sustains our sacred space, our community programs, and our mission to bring Earth Medicine healing to all who seek it. Every seed you plant bears fruit in ways seen and unseen.",
+      message: "Your offering sustains our sacred space, our community programs, and our mission to bring Earth Medicine sacrament to all who seek it. Every seed you plant bears fruit in ways seen and unseen.",
     },
   };
 
   const { title, message } = categoryMessages[category || ""] || {
     title: "Your Offering Has Been Received",
-    message: "Thank you for your generous contribution to Temple Mother Earth. Your support sustains our sacred mission of healing, community, and the preservation of Earth Medicine traditions.",
+    message: "Thank you for your generous contribution to Temple Mother Earth. Your support sustains our sacred mission of transformation, community, and the preservation of Earth Medicine traditions.",
   };
 
   return (
@@ -127,7 +127,7 @@ const DonationSuccess = () => {
               {
                 icon: Heart,
                 title: "Lives Transformed",
-                desc: "Your contribution directly enables ceremonies, community programs, facilitator training, and sacred space maintenance. Every dollar plants seeds of healing.",
+                desc: "Your contribution directly enables ceremonies, community programs, facilitator training, and sacred space maintenance. Every dollar plants seeds of transformation.",
               },
             ].map((item) => (
               <motion.div

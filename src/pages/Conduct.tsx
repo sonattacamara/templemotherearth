@@ -83,7 +83,7 @@ const Conduct = () => {
               </div>
               <ul className="space-y-2 pl-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />No harassment, discrimination, or disrespect of any kind will be tolerated.</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Honor the lived experiences and healing journeys of others without judgment.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Honor the lived experiences and ceremonial journeys of others without judgment.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Practice active listening — hold space rather than offering unsolicited advice.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Respect the physical boundaries of all community members at all times.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Children are welcome at family-friendly events only (Community Day, Soulful Sundays, Cacao Ceremony). All Earth Medicine ceremonies are 21+.</li>
@@ -99,7 +99,7 @@ const Conduct = () => {
                 <p>Temple Mother Earth is committed to providing:</p>
                 <ul className="space-y-2 pl-4">
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Experienced, trained facilitators for all ceremonies and gatherings.</li>
-                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />A safe, clean, and sacred environment for healing.</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />A safe, clean, and sacred environment for transformation.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Transparent communication about what to expect.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Integration support before, during, and after ceremony.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Ethical partnerships with indigenous wisdom keepers.</li>
@@ -138,7 +138,7 @@ const Conduct = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
           </p>
         </div>
       </footer>

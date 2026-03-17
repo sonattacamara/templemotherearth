@@ -4,6 +4,8 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { Droplets, Mountain, Droplet, Magnet, Leaf, Dna, Sun, Pill, Candy, Flower2, Globe, Brain, ShieldCheck, Zap, Cat, Snail, Bug, Sparkles, HeartPulse, Gem, Eye } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const RevealSection = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);
@@ -31,8 +33,8 @@ interface KingdomData {
   quoteColor: string;
   quoteCite: string;
   sections: { title: string; content: string }[];
-  facts: { emoji: string; label: string; val: string }[];
-  cards: { icon: string; name: string; body: string }[];
+  facts: { icon: LucideIcon; label: string; val: string }[];
+  cards: { icon: LucideIcon; name: string; body: string }[];
   stats: { num: string; label: string }[];
   quote: { text: string; cite: string };
   ceremonyLink: { tag: string; name: string; href: string };
@@ -49,15 +51,15 @@ const kingdoms: KingdomData[] = [
       { title: "Why We're Running on Empty", content: "Industrial agriculture has stripped topsoil of mineral content. Magnesium deficiency alone drives anxiety, insomnia, muscle tension — and over 80% of Americans are deficient." },
     ],
     facts: [
-      { emoji: "🌊", label: "Sea Moss", val: "Contains 92 of the 102 minerals the human body is made of." },
-      { emoji: "🏔️", label: "Shilajit", val: "Ancient mineral resin with 85+ minerals and fulvic acid." },
-      { emoji: "💧", label: "Structured Water", val: "Water in its fourth phase — H3O2 — hydrates at the cellular level." },
-      { emoji: "🧲", label: "Magnesium", val: "Involved in over 300 enzymatic reactions. 80%+ Americans deficient." },
+      { icon: Droplets, label: "Sea Moss", val: "Contains 92 of the 102 minerals the human body is made of." },
+      { icon: Mountain, label: "Shilajit", val: "Ancient mineral resin with 85+ minerals and fulvic acid." },
+      { icon: Droplet, label: "Structured Water", val: "Water in its fourth phase — H3O2 — hydrates at the cellular level." },
+      { icon: Magnet, label: "Magnesium", val: "Involved in over 300 enzymatic reactions. 80%+ Americans deficient." },
     ],
     cards: [
-      { icon: "🌊", name: "Sea Moss", body: "92 minerals. Bioavailable iodine, iron, calcium, magnesium, zinc." },
-      { icon: "🏔️", name: "Shilajit", body: "The 'destroyer of weakness.' Fulvic acid carries minerals into cells." },
-      { icon: "🧲", name: "Magnesium", body: "Master mineral of the nervous system. Governs 300+ reactions." },
+      { icon: Droplets, name: "Sea Moss", body: "92 minerals. Bioavailable iodine, iron, calcium, magnesium, zinc." },
+      { icon: Mountain, name: "Shilajit", body: "The 'destroyer of weakness.' Fulvic acid carries minerals into cells." },
+      { icon: Magnet, name: "Magnesium", body: "Master mineral of the nervous system. Governs 300+ reactions." },
     ],
     stats: [
       { num: "60+", label: "Minerals the body requires" },
@@ -78,15 +80,15 @@ const kingdoms: KingdomData[] = [
       { title: "Ceremonial Plants at TME", content: "Cacao (Theobroma cacao) — the heart opener. Hapé — sacred Amazonian snuff. Blue Lotus — the sacred flower of ancient Egypt. Kava — the peace plant of the Pacific." },
     ],
     facts: [
-      { emoji: "🌿", label: "Species", val: "Over 390,000 plant species known. 80,000+ medicinal." },
-      { emoji: "🧬", label: "Phytochemistry", val: "Plants produce 200,000+ secondary metabolites — alkaloids, terpenes, flavonoids." },
-      { emoji: "🌞", label: "Photosynthesis", val: "Plants convert light into matter — when we eat plants, we ingest sunlight." },
-      { emoji: "💊", label: "Pharmaceutical Debt", val: "Over 50% of all pharmaceutical drugs derived from plant compounds." },
+      { icon: Leaf, label: "Species", val: "Over 390,000 plant species known. 80,000+ medicinal." },
+      { icon: Dna, label: "Phytochemistry", val: "Plants produce 200,000+ secondary metabolites — alkaloids, terpenes, flavonoids." },
+      { icon: Sun, label: "Photosynthesis", val: "Plants convert light into matter — when we eat plants, we ingest sunlight." },
+      { icon: Pill, label: "Pharmaceutical Debt", val: "Over 50% of all pharmaceutical drugs derived from plant compounds." },
     ],
     cards: [
-      { icon: "🍫", name: "Ceremonial Cacao", body: "4,000 years of ceremony. Heart-opening, bliss-inducing." },
-      { icon: "🌿", name: "Hapé", body: "Sacred tobacco blend. Grounds, clarifies, purifies." },
-      { icon: "🌺", name: "Blue Lotus", body: "Sacred flower of Egypt. Mild psychoactive, profoundly calming." },
+      { icon: Candy, name: "Ceremonial Cacao", body: "4,000 years of ceremony. Heart-opening, bliss-inducing." },
+      { icon: Leaf, name: "Hapé", body: "Sacred tobacco blend. Grounds, clarifies, purifies." },
+      { icon: Flower2, name: "Blue Lotus", body: "Sacred flower of Egypt. Mild psychoactive, profoundly calming." },
     ],
     stats: [
       { num: "390K", label: "Known plant species" },
@@ -107,15 +109,15 @@ const kingdoms: KingdomData[] = [
       { title: "Medicinal Mushrooms", content: "Reishi has been used for 2,000+ years. Lion's Mane stimulates nerve growth factor. Cordyceps increases cellular ATP by up to 28%." },
     ],
     facts: [
-      { emoji: "🌐", label: "Mycelial Network", val: "A single teaspoon of soil contains miles of mycelial threads." },
-      { emoji: "🧠", label: "Lion's Mane", val: "The only food known to stimulate NGF and BDNF — grows new neurons." },
-      { emoji: "🛡", label: "Beta-Glucans", val: "Used as approved pharmaceutical drugs in Japan, China, South Korea." },
-      { emoji: "⚡", label: "Cordyceps", val: "Increases cellular ATP production by up to 28%." },
+      { icon: Globe, label: "Mycelial Network", val: "A single teaspoon of soil contains miles of mycelial threads." },
+      { icon: Brain, label: "Lion's Mane", val: "The only food known to stimulate NGF and BDNF — grows new neurons." },
+      { icon: ShieldCheck, label: "Beta-Glucans", val: "Used as approved pharmaceutical drugs in Japan, China, South Korea." },
+      { icon: Zap, label: "Cordyceps", val: "Increases cellular ATP production by up to 28%." },
     ],
     cards: [
-      { icon: "🦁", name: "Lion's Mane", body: "The brain mushroom. Grows new neurons." },
-      { icon: "🌟", name: "Reishi", body: "Mushroom of Immortality. Immune modulation, deep sleep." },
-      { icon: "⚡", name: "Cordyceps", body: "The warrior mushroom. Increases ATP and endurance." },
+      { icon: Brain, name: "Lion's Mane", body: "The brain mushroom. Grows new neurons." },
+      { icon: Sparkles, name: "Reishi", body: "Mushroom of Immortality. Immune modulation, deep sleep." },
+      { icon: Zap, name: "Cordyceps", body: "The warrior mushroom. Increases ATP and endurance." },
     ],
     stats: [
       { num: "3.8B", label: "Years fungi existed" },
@@ -136,15 +138,15 @@ const kingdoms: KingdomData[] = [
       { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous wisdom keepers have known for millennia." },
     ],
     facts: [
-      { emoji: "🐸", label: "Kambo Peptides", val: "70+ bioactive peptides including Dermorphin (30–40x more potent than morphine)." },
-      { emoji: "🦎", label: "Bufo · 5-MeO-DMT", val: "The most intense non-ordinary state of consciousness accessible." },
-      { emoji: "🐍", label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
-      { emoji: "🦂", label: "Scorpion · Venom Therapy", val: "Over 130,000 species. Ziconotide — 1,000x more potent than morphine." },
+      { icon: Cat, label: "Kambo Peptides", val: "70+ bioactive peptides including Dermorphin (30-40x more potent than morphine)." },
+      { icon: Snail, label: "Bufo · 5-MeO-DMT", val: "The most intense non-ordinary state of consciousness accessible." },
+      { icon: Sparkles, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
+      { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ziconotide — 1,000x more potent than morphine." },
     ],
     cards: [
-      { icon: "🐸", name: "The Frog", body: "Kambo. 70+ peptides. The Great Purifier." },
-      { icon: "🦎", name: "The Toad", body: "5-MeO-DMT. Direct encounter with pure being." },
-      { icon: "🐍", name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
+      { icon: Cat, name: "The Frog", body: "Kambo. 70+ peptides. The Great Purifier." },
+      { icon: Snail, name: "The Toad", body: "5-MeO-DMT. Direct encounter with pure being." },
+      { icon: Sparkles, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
     ],
     stats: [
       { num: "70+", label: "Kambo bioactive peptides" },
@@ -165,15 +167,15 @@ const kingdoms: KingdomData[] = [
       { title: "TME's Role", content: "Temple Mother Earth exists to restore the human being to its rightful place in the web of kingdoms — not above, not below, but woven in. Conscious. Humble. Powerful." },
     ],
     facts: [
-      { emoji: "🧬", label: "DNA", val: "3.2 billion base pairs. Contains the blueprint of the universe in miniature." },
-      { emoji: "🧠", label: "Neuroplasticity", val: "The brain can grow new neurons and rewire at any age. Ceremony accelerates this." },
-      { emoji: "💓", label: "Heart Field", val: "The heart's electromagnetic field extends 3+ feet. Measurable by instruments." },
-      { emoji: "✨", label: "Consciousness", val: "The one kingdom that can choose to evolve. That choice is ceremony." },
+      { icon: Dna, label: "DNA", val: "3.2 billion base pairs. Contains the blueprint of the universe in miniature." },
+      { icon: Brain, label: "Neuroplasticity", val: "The brain can grow new neurons and rewire at any age. Ceremony accelerates this." },
+      { icon: HeartPulse, label: "Heart Field", val: "The heart's electromagnetic field extends 3+ feet. Measurable by instruments." },
+      { icon: Sparkles, label: "Consciousness", val: "The one kingdom that can choose to evolve. That choice is ceremony." },
     ],
     cards: [
-      { icon: "🧬", name: "DNA Upgrade", body: "Epigenetic activation through ceremony, nutrition, and practice." },
-      { icon: "🧠", name: "Neurogenesis", body: "Growing new neurons through sacrament and contemplative practice." },
-      { icon: "💓", name: "Heart Coherence", body: "Aligning heart, mind, and body into a single coherent field." },
+      { icon: Dna, name: "DNA Upgrade", body: "Epigenetic activation through ceremony, nutrition, and practice." },
+      { icon: Brain, name: "Neurogenesis", body: "Growing new neurons through sacrament and contemplative practice." },
+      { icon: HeartPulse, name: "Heart Coherence", body: "Aligning heart, mind, and body into a single coherent field." },
     ],
     stats: [
       { num: "3.2B", label: "DNA base pairs" },
@@ -221,7 +223,7 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
           <div className="flex flex-col" style={{ background: k.factBg }}>
             {k.facts.map((f) => (
               <div key={f.label} className="py-[22px] px-7 border-b border-[rgba(200,160,48,0.06)] last:border-b-0 grid grid-cols-[36px_1fr] gap-4">
-                <span className="text-lg mt-0.5">{f.emoji}</span>
+                <f.icon className="h-5 w-5 mt-0.5" style={{ color: k.factLabelColor }} />
                 <div>
                   <div className="font-sans text-[8px] tracking-[3px] uppercase mb-1 font-normal" style={{ color: k.factLabelColor }}>{f.label}</div>
                   <div className="text-[15px] text-[#F0EAD6] leading-relaxed opacity-80">{f.val}</div>
@@ -235,7 +237,7 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-16 bg-[rgba(200,160,48,0.06)]">
           {k.cards.map((c) => (
             <div key={c.name} className="p-9 hover:-translate-y-1 transition-transform" style={{ background: k.cardBg }}>
-              <span className="text-[28px] block mb-3.5">{c.icon}</span>
+              <c.icon className="h-7 w-7 mb-3.5" style={{ color: k.cardNameColor }} />
               <h4 className="font-serif text-xl italic mb-2.5" style={{ color: k.cardNameColor }}>{c.name}</h4>
               <p className="text-sm leading-[1.75] opacity-75 text-[#F0EAD6]">{c.body}</p>
             </div>
@@ -303,18 +305,18 @@ const EarthKingdoms = () => {
           </h1>
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A030] to-transparent mx-auto my-8" />
           <p className="font-serif italic text-[22px] text-[#F0EAD6] max-w-[700px] mx-auto mb-12 leading-[1.7]">
-            Every sacrament we offer, every ceremony we hold, every healing that happens at Temple Mother Earth flows from the intelligence of the living Earth, organized into five great Kingdoms.
+            Every sacrament we offer, every ceremony we hold, every transformation that happens at Temple Mother Earth flows from the intelligence of the living Earth, organized into five great Kingdoms.
           </p>
           <div className="flex gap-2 flex-wrap justify-center">
             {[
-              { emoji: "💎", label: "Mineral", href: "#mineral" },
-              { emoji: "🌿", label: "Plant", href: "#plant" },
-              { emoji: "🍄", label: "Fungi", href: "#fungi" },
-              { emoji: "🐸", label: "Animal", href: "#animal" },
-              { emoji: "👁", label: "Kingdom of Man", href: "#human" },
+              { icon: Gem, label: "Mineral", href: "#mineral" },
+              { icon: Leaf, label: "Plant", href: "#plant" },
+              { icon: Sparkles, label: "Fungi", href: "#fungi" },
+              { icon: Cat, label: "Animal", href: "#animal" },
+              { icon: Eye, label: "Kingdom of Man", href: "#human" },
             ].map((pill) => (
-              <a key={pill.label} href={pill.href} className="px-5 py-2.5 font-sans text-[9px] tracking-[2px] uppercase border border-[rgba(200,160,48,0.25)] text-[#8A9A84] hover:text-[#C8A030] hover:border-[#C8A030] hover:bg-[rgba(200,160,48,0.06)] transition-all">
-                {pill.emoji} {pill.label}
+              <a key={pill.label} href={pill.href} className="flex items-center gap-2 px-5 py-2.5 font-sans text-[9px] tracking-[2px] uppercase border border-[rgba(200,160,48,0.25)] text-[#8A9A84] hover:text-[#C8A030] hover:border-[#C8A030] hover:bg-[rgba(200,160,48,0.06)] transition-all">
+                <pill.icon className="h-4 w-4" /> {pill.label}
               </a>
             ))}
           </div>

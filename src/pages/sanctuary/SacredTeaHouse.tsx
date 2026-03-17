@@ -2,14 +2,16 @@ import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion } from "framer-motion";
+import { Leaf, Flower2, Moon, Sun, Sprout, Sparkles, Coffee } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const teaMenu = [
-  { icon: "🍃", name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
-  { icon: "🌸", name: "Adaptogenic Blend", properties: "Stress Relief · Nervous System", desc: "Ashwagandha, reishi, lion's mane, and holy basil, a deeply nourishing blend for the modern nervous system." },
-  { icon: "🌙", name: "Dream Tea", properties: "Intuition · Relaxation", desc: "Mugwort, passionflower, and blue lotus, a lunar blend for deep relaxation and inner vision." },
-  { icon: "☀️", name: "Solar Vitality", properties: "Energy · Clarity", desc: "Nettle, rosehips, and golden herbs, a warming, mineral-rich blend that activates and brightens." },
-  { icon: "🌿", name: "Detox & Cleanse", properties: "Purification · Renewal", desc: "Dandelion, burdock, and cleansing herbs aligned with Sonatta's 7 Wellness Pillars detox protocols." },
-  { icon: "🔮", name: "Sacred Ceremony Blend", properties: "Ceremonial Grade · House Special", desc: "Our signature house blend, seasonal, medicinal, and prepared fresh for each gathering." },
+const teaMenu: { icon: LucideIcon; name: string; properties: string; desc: string }[] = [
+  { icon: Leaf, name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
+  { icon: Flower2, name: "Adaptogenic Blend", properties: "Stress Relief · Nervous System", desc: "Ashwagandha, reishi, lion's mane, and holy basil, a deeply nourishing blend for the modern nervous system." },
+  { icon: Moon, name: "Dream Tea", properties: "Intuition · Relaxation", desc: "Mugwort, passionflower, and blue lotus, a lunar blend for deep relaxation and inner vision." },
+  { icon: Sun, name: "Solar Vitality", properties: "Energy · Clarity", desc: "Nettle, rosehips, and golden herbs, a warming, mineral-rich blend that activates and brightens." },
+  { icon: Sprout, name: "Detox & Cleanse", properties: "Purification · Renewal", desc: "Dandelion, burdock, and cleansing herbs aligned with Sonatta's 7 Wellness Pillars detox protocols." },
+  { icon: Sparkles, name: "Sacred Ceremony Blend", properties: "Ceremonial Grade · House Special", desc: "Our signature house blend, seasonal, medicinal, and prepared fresh for each gathering." },
 ];
 
 const steps = [
@@ -41,7 +43,7 @@ const SacredTeaHouse = () => (
         className="relative z-10 max-w-[600px]"
       >
         <p className="font-display text-[10px] tracking-[5px] uppercase text-[hsl(110,25%,47%)] mb-6">Ongoing · Monthly Offering</p>
-        <p className="text-6xl mb-5">🫖</p>
+        <Coffee className="mx-auto h-16 w-16 text-[hsl(110,25%,47%)] mb-5" />
         <h1 className="font-display text-[clamp(32px,5vw,68px)] font-semibold text-[hsl(108,28%,13%)] leading-[1.1] mb-2">
           Sacred Tea House
         </h1>
@@ -79,7 +81,7 @@ const SacredTeaHouse = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[3px] bg-[hsl(100,17%,71%)]">
         {teaMenu.map((tea) => (
           <div key={tea.name} className="bg-[hsl(90,20%,97%)] p-8 border-b-[3px] border-transparent hover:border-[hsl(45,50%,53%)] transition-colors">
-            <span className="text-[28px] block mb-3">{tea.icon}</span>
+            <tea.icon className="h-7 w-7 text-[hsl(110,25%,47%)] mb-3" />
             <h4 className="font-display text-[12px] tracking-[2px] text-[hsl(108,28%,13%)] mb-2 font-normal">{tea.name}</h4>
             <p className="font-display text-[9px] tracking-[2px] uppercase text-[hsl(110,25%,47%)] mb-2.5">{tea.properties}</p>
             <p className="text-[14px] leading-relaxed text-[hsl(110,15%,47%)] font-serif">{tea.desc}</p>

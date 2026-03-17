@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
-import { Palette, Music, Users, Sparkles, Send, ArrowRight, ArrowDown } from "lucide-react";
+import { Palette, Music, Users, Sparkles, Send, ArrowRight, ArrowDown, Flower2, Leaf as LeafIcon, Brush } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
@@ -173,18 +173,18 @@ const SacredArtExpo = () => {
             <p>
               This is not just a gallery.{" "}
               <strong style={{ color: "#F5F0E6" }}>
-                It is a ceremony of creative souls gathered to witness, honor, and elevate art as
-                medicine.
-              </strong>
-            </p>
+              It is a ceremony of creative souls gathered to witness, honor, and elevate art as
+                 sacrament.
+               </strong>
+             </p>
           </motion.div>
 
           {/* Event Cards */}
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
             {[
-              { emoji: "🌸", title: "Spring Equinox", detail: "March 28, 2026 · 7–10 PM" },
-              { emoji: "🍂", title: "Fall Equinox", detail: "Date TBD · Fall 2026" },
-              { emoji: "🎨", title: "Canvas & Ceremony", detail: "July 2026 · Immersive art + ceremony" },
+              { icon: Flower2, title: "Spring Equinox", detail: "March 28, 2026 · 7–10 PM" },
+              { icon: LeafIcon, title: "Fall Equinox", detail: "Date TBD · Fall 2026" },
+              { icon: Brush, title: "Canvas & Ceremony", detail: "July 2026 · Immersive art + ceremony" },
             ].map((e) => (
               <motion.div
                 key={e.title}
@@ -192,7 +192,7 @@ const SacredArtExpo = () => {
                 className="rounded-xl p-6 text-center"
                 style={{ background: "#1a1612", border: "1px solid #c9a84c22" }}
               >
-                <span className="text-3xl">{e.emoji}</span>
+                <e.icon className="mx-auto h-8 w-8" style={{ color: "#c9a84c" }} />
                 <h3 className="mt-3 font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
                   {e.title}
                 </h3>
@@ -291,7 +291,7 @@ const SacredArtExpo = () => {
                 Thank you for sharing your light with us.
               </h3>
               <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed" style={{ color: "#B8A07Aaa" }}>
-                Our team will be in touch within 48 hours. We cannot wait to see what you bring. 🌿
+                Our team will be in touch within 48 hours. We cannot wait to see what you bring.
               </p>
             </motion.div>
           ) : (

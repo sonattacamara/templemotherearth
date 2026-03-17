@@ -33,7 +33,7 @@ const stagger = {
 const About = () => {
   return (
     <div id="top" className="min-h-screen bg-background">
-      <SEOHead title="About Temple Mother Earth | Our Story & Mission" description="Learn how Temple Mother Earth was founded in 2020 to provide sacred plant medicine ceremonies, spiritual healing, and conscious community in Washington DC." path="/about" />
+      <SEOHead title="About Temple Mother Earth | Our Story & Mission" description="Learn how Temple Mother Earth was founded in 2020 to provide sacred plant medicine ceremonies, spiritual transformation, and conscious community in Washington DC." path="/about" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "About" }]} />
 
@@ -58,7 +58,7 @@ const About = () => {
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Born during the pandemic, when the world was closing its doors, Temple Mother Earth opened ours — 
-            bringing community together to heal with Mother Earth when it was needed most.
+            bringing community together to restore with Mother Earth when it was needed most.
           </motion.p>
         </motion.div>
       </section>
@@ -83,15 +83,15 @@ const About = () => {
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   In 2020, when the pandemic brought the world to a standstill and fear kept people isolated 
-                  behind closed doors, Dr. Sonatta Camara and King James made a radical choice: they opened 
-                  their doors. What began as intimate healing circles during the darkest days of the pandemic 
-                  grew into Temple Mother Earth — a sacred sanctuary where sovereign beings come to reconnect 
-                  with the Earth, honor the God within, and walk the path of healing together.
+                   behind closed doors, Dr. Sonatta Camara and King James made a radical choice: they opened 
+                   their doors. What began as intimate ceremonial circles during the darkest days of the pandemic 
+                   grew into Temple Mother Earth — a sacred sanctuary where sovereign beings come to reconnect 
+                   with the Earth, honor the God within, and walk the path of transformation together.
                 </p>
                 <p>
                Founded by and for people who are looking for higher states of consciousness, who want to end their own pain and suffering, who are ready for tapping into the God within them, to create love and abundance in all things. Temple Mother Earth bridges ancient Earth Medicine traditions with 
-                  modern healing practices. From our Washington, DC sanctuary, we serve our local community 
-                  and extend our reach through international immersions and traveling ceremonies.
+                   modern sacred practices. From our Washington, DC sanctuary, we serve our local community 
+                   and extend our reach through international immersions and traveling ceremonies.
                 </p>
               </div>
             </motion.div>
@@ -142,13 +142,13 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Restoring the Sacred Within Every Person</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  The mission of Temple Mother Earth is to guide individuals back to the place where true healing begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
+                  The mission of Temple Mother Earth is to guide individuals back to the place where true transformation begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
                 </p>
                 <p>
-                  Our work is to help people reconnect with this inner truth through sacred Earth medicine, spiritual practice, and intentional self-discovery.
+                  Our work is to help people reconnect with this inner truth through sacred Earth sacrament, spiritual practice, and intentional self-discovery.
                 </p>
                 <p>
-                  Healing is not about fixing what is broken; it is about remembering what has always been whole. Our mission is to create spaces where this remembrance becomes possible.
+                  Transformation is not about fixing what is broken; it is about remembering what has always been whole. Our mission is to create spaces where this remembrance becomes possible.
                 </p>
               </div>
             </motion.div>
@@ -157,13 +157,13 @@ const About = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Shield className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Providing Safe, Sacred Spaces for Healing & Transformation</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Providing Safe, Sacred Spaces for Transformation & Restoration</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
                   We are committed to offering grounded, ethical, and spiritually aligned environments for ceremony, emotional work, and inner exploration. Whether in Washington, D.C. or during our international immersions, every gathering is held with reverence, prayer, and deep respect for the sacred lineages that inform our work.
                 </p>
                 <p>
-                  Our mission is to ensure that anyone who steps through our doors feels safe, supported, and honored in their healing process. We prioritize trauma awareness, cultural integrity, emotional maturity, and responsible Earth medicine practices.
+                  Our mission is to ensure that anyone who steps through our doors feels safe, supported, and honored in their ceremonial process. We prioritize trauma awareness, cultural integrity, emotional maturity, and responsible Earth Medicine practices.
                 </p>
               </div>
             </motion.div>
@@ -175,7 +175,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Building Community Through Connection & Consciousness</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  At Temple Mother Earth, we know that healing does not happen in isolation — it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
+                  At Temple Mother Earth, we know that transformation does not happen in isolation — it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
                 </p>
                 <p>
                   We hold a vision of community built on respect, compassion, sovereignty, and shared awakening.
@@ -225,8 +225,8 @@ const About = () => {
                 icon: Leaf,
                 label: "Value 1",
                 title: "Reverence for the Earth & the Sacred",
-                desc: "At Temple Mother Earth, we honor the Earth as our first teacher, our medicine, and our guide. Every ceremony, circle, and gathering begins with a deep acknowledgment of the land, the elements, and the unseen forces that support our lives. We believe that healing happens when we return to harmony with nature and with the God within.",
-                detail: "Our work is built on humility, respect, and gratitude — honoring the sacred lineages, teachings, and Earth medicines that make our healing possible.",
+                desc: "At Temple Mother Earth, we honor the Earth as our first teacher, our sacrament, and our guide. Every ceremony, circle, and gathering begins with a deep acknowledgment of the land, the elements, and the unseen forces that support our lives. We believe that transformation happens when we return to harmony with nature and with the God within.",
+                detail: "Our work is built on humility, respect, and gratitude — honoring the sacred lineages, teachings, and Earth sacraments that make our restoration possible.",
               },
               {
                 icon: Shield,
@@ -239,8 +239,8 @@ const About = () => {
                 icon: Users,
                 label: "Value 3",
                 title: "Community, Connection & Collective Remembrance",
-                desc: "Our community is at the heart of everything we do. We believe that healing deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
-                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we heal in relationship, not in isolation.",
+                desc: "Our community is at the heart of everything we do. We believe that transformation deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
+                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we restore in relationship, not in isolation.",
               },
               {
                 icon: Heart,
@@ -253,7 +253,7 @@ const About = () => {
                 icon: Sparkles,
                 label: "Value 5",
                 title: "Emotional Maturity & Inner Accountability",
-                desc: "Healing requires courage, honesty, and a willingness to take responsibility for one's own path. We support individuals in developing emotional intelligence, communication skills, self-awareness, and the capacity to navigate life with clarity.",
+                desc: "Transformation requires courage, honesty, and a willingness to take responsibility for one's own path. We support individuals in developing emotional intelligence, communication skills, self-awareness, and the capacity to navigate life with clarity.",
                 detail: "We believe emotional maturity is a spiritual practice — a way of aligning our actions with our highest self. Every offering, from ceremonies to classes, is designed to help people return to their inner truth with integrity and compassion.",
               },
               {

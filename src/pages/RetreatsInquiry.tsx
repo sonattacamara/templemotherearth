@@ -53,7 +53,7 @@ const RetreatsInquiry = () => {
             International Immersions
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Journey with Temple Mother Earth to breathtaking destinations for immersive healing experiences
+            Journey with Temple Mother Earth to breathtaking destinations for immersive sacred experiences
             that blend cultural richness, Earth Medicine, and deep spiritual practice.
           </motion.p>
         </motion.div>
@@ -82,13 +82,13 @@ const RetreatsInquiry = () => {
             <div className="mx-auto mt-4 max-w-xl space-y-3 text-sm text-muted-foreground text-left">
               <p>
                 Join Temple Mother Earth in the vibrant coastal village of <strong className="text-foreground">Sayulita, Mexico</strong> for 
-                six transformative days of deep healing, Earth Medicine ceremony, and soul-level restoration.
+                six transformative days of deep restoration, Earth Medicine ceremony, and soul-level renewal.
               </p>
               <p>
                 This immersion is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
                 stored trauma from the body, and reclaim your natural state of peace. Through guided breathwork, 
                 body napping (deep somatic rest), movement practices, and sacred ceremony, you'll learn to{" "}
-                <strong className="text-foreground">return your body to its healing baseline</strong> — not just during the immersion, but as a
+                <strong className="text-foreground">return your body to its natural baseline</strong> — not just during the immersion, but as a
                 way of life.
               </p>
               <p>
@@ -204,8 +204,8 @@ const RetreatsInquiry = () => {
         <h2>International Ayahuasca Retreats & Plant Medicine Immersions</h2>
         <p>
           Temple Mother Earth offers <Link to="/retreats-inquiry">Ayahuasca retreats in Mexico</Link>, <Link to="/retreats-inquiry">plant medicine retreats in Costa Rica</Link>, 
-          and <Link to="/retreats-inquiry">sacred healing immersions in Peru, Colombia, and Brazil</Link>. Our international retreats combine 
-          Ayahuasca ceremony (Banisteriopsis caapi + Chacruna), Kambo healing, Hapé (Rapé), ceremonial Cacao, breathwork, 
+          and <Link to="/retreats-inquiry">sacred immersions in Peru, Colombia, and Brazil</Link>. Our international retreats combine 
+          Ayahuasca ceremony (Banisteriopsis caapi + Chacruna), Kambo purification, Hapé (Rapé), ceremonial Cacao, breathwork, 
           and somatic integration in transformative multi-day experiences.
         </p>
         <p>
@@ -216,7 +216,7 @@ const RetreatsInquiry = () => {
         <p>
           All retreat participants must complete our <Link to="/ceremony-intake">Sacred Intake Form</Link> for medical screening and RFRA compliance. 
           Visit our <Link to="/plant-medicine-glossary">plant medicine glossary</Link> to learn about Ayahuasca, Psilocybin, San Pedro, Ibogaine, 
-          5-MeO-DMT, Bobinsana, Chiric Sanango, Noya Rao, Mapacho, Sananga, Blue Lotus, and other sacred healing allies. 
+          5-MeO-DMT, Bobinsana, Chiric Sanango, Noya Rao, Mapacho, Sananga, Blue Lotus, and other sacred allies. 
           We also facilitate <Link to="/traveling-ceremonies">traveling ceremonies</Link> and <Link to="/private-ceremonies">private ceremonies</Link> 
           across the United States for those seeking Kambo, Hapé, and Earth Medicine closer to home.
         </p>
@@ -227,7 +227,7 @@ const RetreatsInquiry = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
           </p>
         </div>
       </footer>

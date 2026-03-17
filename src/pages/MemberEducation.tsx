@@ -141,7 +141,7 @@ If you are unsure whether Kambo is safe for you, please reach out through our co
 • Attend Temple Mother Earth integration circles (virtual or in-person).
 • Continue journaling and tracking shifts in your emotional landscape.
 • Notice changes in habits, relationships, and energy levels.
-• Be gentle with yourself — healing is not linear.
+• Be gentle with yourself — transformation is not linear.
 
 **Community Support:**
 As a Temple Mother Earth member, you have access to:
@@ -156,7 +156,7 @@ const videoResources = [
   { title: "Understanding Kambo: An Introduction", duration: "12 min", description: "Learn the origins, science, and spiritual significance of Kambo medicine." },
   { title: "Preparation Guide: Body, Mind & Spirit", duration: "8 min", description: "Step-by-step preparation to ensure you're ready for your Kambo ceremony." },
   { title: "What to Expect During Ceremony", duration: "15 min", description: "A detailed walkthrough of the Kambo ceremony process from start to finish." },
-  { title: "Integration Practices After Kambo", duration: "10 min", description: "Powerful integration practices to deepen your healing journey after ceremony." },
+  { title: "Integration Practices After Kambo", duration: "10 min", description: "Powerful integration practices to deepen your ceremonial journey after ceremony." },
   { title: "Kambo & the Immune System: The Science", duration: "18 min", description: "Explore the bioactive peptides in Kambo and their effects on the human body." },
 ];
 
@@ -344,7 +344,7 @@ const MemberEducation = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
           </p>
         </div>
       </footer>
