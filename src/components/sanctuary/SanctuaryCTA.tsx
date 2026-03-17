@@ -19,7 +19,7 @@ const SanctuaryCTA = ({ eyebrow, title, description, ctaLabel, ctaHref, external
   return (
     <section
       ref={ref}
-      className="bg-gradient-to-br from-[hsl(40,30%,93%)] to-[hsl(38,28%,95%)] py-20 md:py-24 px-6 md:px-12 text-center border-t border-[hsl(40,25%,85%)]"
+      className="bg-gradient-to-br from-[hsl(25,25%,12%)] to-[hsl(25,22%,14%)] py-20 md:py-24 px-6 md:px-12 text-center border-t border-[hsl(25,20%,18%)]"
     >
       <motion.div
         initial={{ opacity: 0, y: 22 }}
