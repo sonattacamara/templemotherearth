@@ -41,7 +41,7 @@ const SanctuaryColCards = ({ cards }: SanctuaryColCardsProps) => {
             {card.description}
           </p>
           {card.note && (
-            <p className="mt-6 font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,40%,30%)]">
+            <p className="mt-6 font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,40%,60%)]">
               {card.note}
             </p>
           )}

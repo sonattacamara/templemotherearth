@@ -39,14 +39,14 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
       {children}
 
       {/* RFRA Footer */}
-      <footer className="bg-[hsl(40,30%,93%)] border-t border-[hsl(40,25%,85%)] py-8 px-6 md:px-12 text-center">
-        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,20%,45%)] leading-loose">
+      <footer className="bg-[hsl(25,25%,12%)] border-t border-[hsl(25,20%,18%)] py-8 px-6 md:px-12 text-center">
+        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(40,20%,50%)] leading-loose">
           &copy; 2026 Temple Mother Earth -- 508(c)(1)(A) Sacred Church -- Washington, DC
         </p>
-        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,20%,45%)] leading-loose mt-2">
+        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(40,20%,50%)] leading-loose mt-2">
           All ceremonies held in sincere religious practice under protection of the Religious Freedom Restoration Act (RFRA) -- Not a substitute for medical or psychological treatment
         </p>
-        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,20%,45%)] leading-loose mt-2">
+        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(40,20%,50%)] leading-loose mt-2">
           Ceremony space is held for those who register in advance. Secure your place to begin your preparation.
         </p>
       </footer>

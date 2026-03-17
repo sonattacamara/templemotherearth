@@ -21,7 +21,7 @@ const SanctuaryPullQuote = ({ quote, attribution }: SanctuaryPullQuoteProps) => 
     >
       {quote}
       {attribution && (
-        <span className="block mt-4 not-italic font-sans text-[10px] tracking-[2px] text-[hsl(90,10%,50%)] uppercase">
+        <span className="block mt-4 not-italic font-sans text-[10px] tracking-[2px] text-[hsl(40,15%,50%)] uppercase">
           {attribution}
         </span>
       )}

@@ -46,7 +46,7 @@ const SanctuaryCTA = ({ eyebrow, title, description, ctaLabel, ctaHref, external
           {ctaLabel}
         </a>
         {note && (
-          <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,10%,50%)] mt-8">
+          <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,15%,50%)] mt-8">
             {note}
           </p>
         )}
