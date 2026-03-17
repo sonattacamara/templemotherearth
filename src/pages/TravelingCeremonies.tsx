@@ -9,6 +9,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import offeringTraveling from "@/assets/offering-traveling.jpg";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
