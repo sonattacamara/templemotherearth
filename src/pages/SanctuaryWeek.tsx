@@ -112,7 +112,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Integration",
   },
   {
-    day: 9, date: "March 29", weekday: "Saturday", name: "Kambo Ceremony",
+    day: 9, date: "", weekday: "", name: "Kambo Ceremony",
     subtitle: "Some Things Cannot Be Talked Through",
     description: "The Great Purifier. The ancient Amazonian purification sacrament. For those who have been called. Sacred screening required. By application only.",
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
