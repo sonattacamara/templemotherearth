@@ -677,10 +677,10 @@ const About = () => {
             {[
               {
                 name: "Debra Owens",
-                role: "Yoga & Sound Therapy Guide",
+                role: "Yoga & Sound Ceremony Guide",
                 img: facilitatorDebra,
-                imgAlt: "Debra Owens, yoga and sound therapy guide at Temple Mother Earth for Cacao and Blue Lotus ceremony integration",
-                desc: "Certified yoga instructor and sound therapist devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
+                imgAlt: "Debra Owens, yoga and sound ceremony guide at Temple Mother Earth for Cacao and Blue Lotus ceremony integration",
+                desc: "Certified yoga instructor and sound ceremony practitioner devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
               },
               {
                 name: "Walter Spencer",
