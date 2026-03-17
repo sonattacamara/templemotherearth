@@ -287,10 +287,10 @@ const KemeticTeachings = () => {
                 In Kemetic philosophy, the body is not separate from the sacred. <em>Your body is the first temple.</em> Every breath, every heartbeat, every cell carries the divine spark of creation. When you care for your body through nourishment, movement, rest, and ceremony, you are not merely maintaining flesh. You are honoring the vessel through which the divine experiences itself.
               </p>
               <p>
-                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong>, the original sanctuary that holds everything we need for healing, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight: these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
+                And just as your body is your personal temple, <strong className="text-secondary">Mother Earth is the greater container</strong>, the original sanctuary that holds everything we need for restoration, sustenance, and spiritual elevation. The plants, the water, the soil, the sunlight: these are not resources to be consumed. They are sacred gifts from a living, breathing temple that cradles all of humanity.
               </p>
               <p className="text-secondary/90 italic text-center">
-                When you heal the temple within, you deepen your connection to the divine. When you honor the Earth, you honor the source from which all temples arise.
+                When you restore the temple within, you deepen your connection to the divine. When you honor the Earth, you honor the source from which all temples arise.
               </p>
             </div>
           </motion.div>
