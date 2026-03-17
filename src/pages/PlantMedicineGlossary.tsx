@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const glossaryData = [
   {
     category: "Entheogenic & Psychoactive Plant Medicines",
-    description: "Sacred visionary medicines used in ceremonial traditions worldwide for spiritual awakening, deep healing, and consciousness expansion.",
+    description: "Sacred visionary sacraments used in ceremonial traditions worldwide for spiritual awakening, deep transformation, and consciousness expansion.",
     entries: [
       { name: "Ayahuasca (Sacred Vine)", botanical: "Banisteriopsis caapi + Psychotria viridis", origin: "Amazon Basin — Peru, Colombia, Brazil, Ecuador", description: "DMT-containing sacred brew used in Amazonian shamanic traditions for deep spiritual healing, visionary experience, and consciousness expansion. Also known as Sacred Vine, Yagé, and La Medicina.", link: "/retreats-inquiry", linkLabel: "Explore Sacred Vine Retreats" },
       { name: "Peyote (Hikuri)", botanical: "Lophophora williamsii", origin: "Mexico, Southwestern United States", description: "Mescaline-containing cactus sacred to Native American traditions and Huichol (Wixárika) ceremonies. Used for prayer, healing, and divine communion." },
