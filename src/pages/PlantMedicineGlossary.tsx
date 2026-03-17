@@ -50,8 +50,8 @@ const glossaryData = [
     ],
   },
   {
-    category: "Traditional Healing & Medicinal Plant Allies",
-    description: "Time-honored botanical allies used across global healing traditions for emotional balance, dream work, and holistic wellness.",
+    category: "Traditional Sacred & Ceremonial Plant Allies",
+    description: "Time-honored botanical allies used across global ceremonial traditions for emotional balance, dream work, and holistic wellness.",
     entries: [
       { name: "Blue Lotus", botanical: "Nymphaea caerulea", origin: "Egypt, East Africa", description: "Sacred flower of ancient Egyptian ceremony. Used for relaxation, mild euphoria, enhanced meditation, and dream work. Deeply connected to African ancestral healing lineages." },
       { name: "Mugwort", botanical: "Artemisia vulgaris", origin: "Europe, Asia, North America", description: "Dream-enhancing herb and feminine medicine. Used for lucid dreaming, menstrual support, and spiritual protection." },
