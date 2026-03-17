@@ -314,7 +314,7 @@ const KemeticTeachings = () => {
               Modern archaeology and genetic science continue to affirm what our ancestors always knew: Africa, and specifically the Nile Valley region, is the origin point of <em>Homo sapiens</em>. The oldest known human remains, the earliest evidence of organized spiritual practice, and the foundations of all world religions trace back to this sacred land. Every culture, every tradition, every prayer spoken on this planet has roots in the soil of Kemet.
             </p>
             <p>
-              At Temple Mother Earth, we do not study Kemet as ancient history. We <em>live</em> it. We practice the daily rituals, honor the Neteru, follow the solar cycle, and remember the truth that our ancestors encoded into stone and star: that the Earth is alive, that your body is sacred, and that healing is your birthright.
+              At Temple Mother Earth, we do not study Kemet as ancient history. We <em>live</em> it. We practice the daily rituals, honor the Neteru, follow the solar cycle, and remember the truth that our ancestors encoded into stone and star: that the Earth is alive, that your body is sacred, and that transformation is your birthright.
             </p>
           </motion.div>
         </motion.div>
