@@ -349,10 +349,10 @@ const Index = () => {
             <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">Our Origin</p>
             <p className="text-base leading-relaxed text-muted-foreground">
               In 2020, when the pandemic brought the world to a standstill and fear kept people isolated behind closed doors, 
-              <span className="font-semibold text-foreground"> we opened ours</span>. There was a great need for community, healing, 
-              and connection to the God within. What began as intimate healing circles during the darkest days of COVID grew into 
+              <span className="font-semibold text-foreground"> we opened ours</span>. There was a great need for community, restoration, 
+              and connection to the God within. What began as intimate sacred circles during the darkest days of COVID grew into 
               Temple Mother Earth — a sacred sanctuary where sovereign beings reconnect with the Earth, honor the divine within, 
-              and walk the path of healing together.
+              and walk the path of transformation together.
             </p>
             <a
               href="/about#top"
