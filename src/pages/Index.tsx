@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { motion, type Easing } from "framer-motion";
-import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send, Phone, HeartCrack, CloudFog, Brain, RefreshCw, HandHeart, Home, Sprout } from "lucide-react";
+import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send, Phone, HeartCrack, CloudFog, Brain, RefreshCw, HandHeart, Home, Sprout, Gift, Camera, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import SEOHead from "@/components/SEOHead";
@@ -199,7 +199,7 @@ const Index = () => {
               to="/sacred-blueprint"
               className="rounded-xl bg-primary/20 border border-primary/40 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              Discover Your Sacred Blueprint ✦
+              Discover Your Sacred Blueprint
             </Link>
           </motion.div>
         </motion.div>
@@ -762,7 +762,7 @@ const Index = () => {
             Follow Our Journey
           </motion.p>
           <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
-            @TempleMotherEarth 🌍
+            @TempleMotherEarth
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
             Stay connected with our community through sacred moments, ceremonies, and gatherings shared on Instagram.
@@ -903,8 +903,8 @@ const Index = () => {
                   <a href="https://www.google.com/search?newwindow=1&sca_esv=06faacce940c986e&rlz=1C5AJCO_enUS1200US1201&sxsrf=ANbL-n5H64gCyqp_8kwjThHtatPyFj9mJA:1771123156801&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOQZdqYy5vjml0waax1nkNalfy6Vc0WUFl0oieZgIQ3lF9w_G8Ask2th5JyCqMdsOettVShT2V45zC8nPoWtLSiFmLHzelbwOgitq8c_L2BnnJbcTmA%3D%3D&q=Temple+Mother+Earth+Reviews&sa=X&ved=2ahUKEwjxgfX0u9qSAxW3L1kFHYxEGnYQ0bkNegQIOhAH&biw=1581&bih=886" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
                     <Star className="h-4 w-4 text-primary" /> Leave a Google Review
                   </a>
-                   <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">🎁 Amazon Wishlist →</a>
-                   <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">📷 Share Photos & Videos →</a>
+                   <a href="https://www.amazon.com/hz/wishlist/ls/22FRJ7F629NNE?ref_=wl_share" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"><Gift className="h-4 w-4 text-primary" /> Amazon Wishlist</a>
+                   <a href="https://photos.google.com/share/AF1QipMxNzo9_-BFv40HTtnV_hqFcMAWyOMRk1CqLPxveEjV4JeUwkG0Ffw9qJLbgMsTyQ?pli=1&key=ZHVoakpYUnU1RWkydDI3NGJLdGFxckJPdkI0OGpR" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"><Camera className="h-4 w-4 text-primary" /> Share Photos & Videos</a>
                 </div>
               </div>
               <div>
@@ -927,16 +927,16 @@ const Index = () => {
                     <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Open community announcements, event updates, and general Temple conversation.</p>
                   </div>
                   <div>
-                    <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🔥 Men's Integration Circle →</a>
-                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">A private brotherhood space for reflection, accountability, and healing through "The Cove."</p>
+                    <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Flame className="h-3.5 w-3.5 text-primary" /> Men's Integration Circle</a>
+                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">A private brotherhood space for reflection, accountability, and sacred practice through "The Cove."</p>
                   </div>
                   <div>
-                    <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🌙 Wombmen's Integration Circle →</a>
+                    <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Moon className="h-3.5 w-3.5 text-primary" /> Wombmen's Integration Circle</a>
                     <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">A sacred sisterhood space for emotional processing, embodiment practices, and mutual support.</p>
                   </div>
                   <div>
-                    <a href="https://t.me/+WaG5DTz0HJYzNGNh" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🌿 The Forest Team →</a>
-                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Our volunteer and support crew — land stewardship, event setup, and hands-on service to the Temple.</p>
+                    <a href="https://t.me/+WaG5DTz0HJYzNGNh" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Leaf className="h-3.5 w-3.5 text-primary" /> The Forest Team</a>
+                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Our volunteer and support crew, land stewardship, event setup, and hands-on service to the Temple.</p>
                   </div>
                   <p className="text-xs text-muted-foreground/60 italic mt-1">Private circles are for members only</p>
                 </div>
