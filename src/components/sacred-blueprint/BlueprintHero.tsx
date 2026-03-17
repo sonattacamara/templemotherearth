@@ -1,5 +1,6 @@
 import { motion, type Easing } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import sacredArtGoddess from "@/assets/upload-art-goddess-snake.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
