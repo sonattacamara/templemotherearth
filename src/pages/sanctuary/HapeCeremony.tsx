@@ -4,6 +4,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 const HapeCeremony = () => (
   <SanctuaryWeekLayout
@@ -62,6 +63,8 @@ const HapeCeremony = () => (
       ctaHref="https://bit.ly/HapeCircle"
       note="Community Care Model · Suggested sacred contribution · Scholarship available · Ask us"
     />
+
+    <CeremonyExploreNav variant="light" />
   </SanctuaryWeekLayout>
 );
 

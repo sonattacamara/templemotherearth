@@ -3,6 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import { usePageTracking } from "@/hooks/useAnalytics";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117";
 
@@ -323,6 +324,8 @@ const CacaoCeremony = () => {
           </p>
         </div>
       </section>
+
+      <CeremonyExploreNav variant="dark" />
 
       {/* Footer */}
       <footer className="bg-[#0E0A06] border-t border-[rgba(201,150,58,0.1)] py-8 px-6 text-center">

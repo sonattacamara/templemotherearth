@@ -1,6 +1,7 @@
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
@@ -256,6 +257,8 @@ const KamboCeremony = () => {
           </p>
         </div>
       </section>
+
+      <CeremonyExploreNav variant="dark" />
     </SanctuaryWeekLayout>
   );
 };

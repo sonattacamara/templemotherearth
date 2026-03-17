@@ -10,6 +10,7 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import logo from "@/assets/logo.png";
 import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import founderJames from "@/assets/founder-james.jpg";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 const KAMBO_URL = "https://kambo.templemotherearth.org/";
 
@@ -277,6 +278,8 @@ const KamboRedirect = () => {
           </Link>
         </div>
       </section>
+
+      <CeremonyExploreNav />
 
       <EventbriteCTA />
 
