@@ -927,16 +927,16 @@ const Index = () => {
                     <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Open community announcements, event updates, and general Temple conversation.</p>
                   </div>
                   <div>
-                    <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🔥 Men's Integration Circle →</a>
-                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">A private brotherhood space for reflection, accountability, and healing through "The Cove."</p>
+                    <a href="https://t.me/MensFellowship" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Flame className="h-3.5 w-3.5 text-primary" /> Men's Integration Circle</a>
+                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">A private brotherhood space for reflection, accountability, and sacred practice through "The Cove."</p>
                   </div>
                   <div>
-                    <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🌙 Wombmen's Integration Circle →</a>
+                    <a href="https://t.me/+12lOyLI8QH01NzYx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Moon className="h-3.5 w-3.5 text-primary" /> Wombmen's Integration Circle</a>
                     <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">A sacred sisterhood space for emotional processing, embodiment practices, and mutual support.</p>
                   </div>
                   <div>
-                    <a href="https://t.me/+WaG5DTz0HJYzNGNh" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium">🌿 The Forest Team →</a>
-                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Our volunteer and support crew — land stewardship, event setup, and hands-on service to the Temple.</p>
+                    <a href="https://t.me/+WaG5DTz0HJYzNGNh" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors font-medium inline-flex items-center gap-1.5"><Leaf className="h-3.5 w-3.5 text-primary" /> The Forest Team</a>
+                    <p className="text-xs text-muted-foreground/70 mt-0.5 pl-6">Our volunteer and support crew, land stewardship, event setup, and hands-on service to the Temple.</p>
                   </div>
                   <p className="text-xs text-muted-foreground/60 italic mt-1">Private circles are for members only</p>
                 </div>
