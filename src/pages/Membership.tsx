@@ -262,7 +262,7 @@ const Membership = () => {
               { icon: Shield, title: "Safety & Nervous System Care", desc: "Your body knows what it needs. We create spaces where your nervous system can feel safe enough to release, restore, and integrate at your own pace." },
               { icon: Heart, title: "Integration & Wholeness", desc: "Every experience is held in a container of care — preparation before, integration after — so insights become lasting transformation, not fleeting moments." },
               { icon: Sparkles, title: "Intentional & Sacred", desc: "Each step on this path is a conscious choice. We honor that by ensuring you feel informed, supported, and never rushed." },
-              { icon: Users, title: "Community & Connection", desc: "Healing doesn't happen in isolation. You are surrounded by kindred spirits who see you, hold space for you, and walk alongside you." },
+              { icon: Users, title: "Community & Connection", desc: "Transformation doesn't happen in isolation. You are surrounded by kindred spirits who see you, hold space for you, and walk alongside you." },
             ].map((v) => (
               <div key={v.title} className="rounded-2xl border border-border bg-card p-6 text-left">
                 <v.icon className="h-6 w-6 text-primary" />
