@@ -223,7 +223,7 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
           <div className="flex flex-col" style={{ background: k.factBg }}>
             {k.facts.map((f) => (
               <div key={f.label} className="py-[22px] px-7 border-b border-[rgba(200,160,48,0.06)] last:border-b-0 grid grid-cols-[36px_1fr] gap-4">
-                <span className="text-lg mt-0.5">{f.emoji}</span>
+                <f.icon className="h-5 w-5 mt-0.5" style={{ color: k.factLabelColor }} />
                 <div>
                   <div className="font-sans text-[8px] tracking-[3px] uppercase mb-1 font-normal" style={{ color: k.factLabelColor }}>{f.label}</div>
                   <div className="text-[15px] text-[#F0EAD6] leading-relaxed opacity-80">{f.val}</div>
