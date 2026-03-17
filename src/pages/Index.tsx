@@ -683,13 +683,55 @@ const Index = () => {
               </p>
             </div>
 
+            {/* Upcoming Experiences */}
+            <div className="grid gap-6 md:grid-cols-2 mb-8">
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-center space-y-4">
+                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Globe className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">
+                  Life's Best Yes — Costa Rica Immersion
+                </h3>
+                <p className="text-sm text-muted-foreground">August 2026 · 7-Day Sacred Retreat</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  A full immersion into Earth Medicine, ancient ceremony, and deep transformation in the jungles of Costa Rica.
+                </p>
+                <Link
+                  to="/retreats-inquiry"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  Reserve Your Spot →
+                </Link>
+              </div>
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-center space-y-4">
+                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Heart className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">
+                  Sacred Cacao Ceremony — Waitlist Open
+                </h3>
+                <p className="text-sm text-muted-foreground">Monthly · Washington, DC</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  A heart-opening ceremony of connection, intention, and remembrance. Join the waitlist for our next gathering.
+                </p>
+                <a
+                  href="https://www.eventbrite.com/o/29347213477#events"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  Join the Waitlist →
+                </a>
+              </div>
+            </div>
+
             {/* Eventbrite CTA */}
             <div className="w-full rounded-xl border border-primary/10 bg-card/30 p-8 text-center space-y-6">
               <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Calendar className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-display text-xl font-bold text-foreground">
-                Browse Upcoming Ceremonies
+                Browse All Upcoming Ceremonies
               </h3>
               <p className="mx-auto max-w-md text-sm text-muted-foreground">
                 View our full calendar of Earth Medicine ceremonies, community gatherings, and sacred experiences on Eventbrite.
@@ -702,12 +744,6 @@ const Index = () => {
               >
                 See Upcoming Ceremonies →
               </a>
-            </div>
-
-            <div className="mt-8 flex flex-col items-center gap-4">
-              <p className="text-xs text-muted-foreground">
-                Questions? Reach out to us through our community circles below.
-              </p>
             </div>
           </motion.div>
         </motion.div>
