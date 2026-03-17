@@ -253,7 +253,7 @@ const Membership = () => {
             </p>
             <p>
               Every stage of this journey is designed with love, intention, and deep care for your 
-              nervous system, your spirit, and your unique path of healing.
+              nervous system, your spirit, and your unique path of transformation.
             </p>
           </motion.div>
 
