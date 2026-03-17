@@ -55,7 +55,7 @@ const KamboTeaserModal = () => {
             </h2>
 
             <p className="mt-4 font-body text-sm leading-relaxed text-primary-foreground/70">
-              Kambo is the ancient purification medicine that clears what years of trying couldn't touch.
+              Kambo is the ancient purification sacrament that clears what years of trying couldn't touch.
               Intimate ceremonies held by King James in Washington DC.
             </p>
 
