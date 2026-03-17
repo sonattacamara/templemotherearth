@@ -72,7 +72,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Initiation",
   },
   {
-    day: 5, date: "March 22", weekday: "Sunday", name: "Inner Alchemy Wellness Spa Day",
+    day: 5, date: "", weekday: "", name: "Inner Alchemy Wellness Spa Day",
     subtitle: "Your Body Has Been Waiting for This Day",
     description: "A full day of body practices, sound ceremony, sacred nourishment, yoga, and ceremonial closing. From sunrise to sunset, every moment held.",
     icon: <Sun className="h-5 w-5" />, tags: ["Full Day", "Restoration", "Body"],
