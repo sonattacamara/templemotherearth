@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import { X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const KamboTeaserModal = () => {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
+    // Only show on homepage, and only once per session
+    if (location.pathname !== "/") return;
     if (sessionStorage.getItem("kambo-teaser-dismissed")) return;
-    const timer = setTimeout(() => setVisible(true), 3000);
+    const timer = setTimeout(() => setVisible(true), 5000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   const dismiss = () => {
     setVisible(false);
