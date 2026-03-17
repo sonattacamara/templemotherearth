@@ -181,7 +181,7 @@ const DonationCanceled = () => {
               },
               {
                 q: "Are donations tax-deductible?",
-                a: "Yes. Temple Mother Earth is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the full extent of the law. You will receive a receipt for your records.",
+                a: "Yes. Temple Mother Earth is a registered 508(c)(1)(A) sacred ceremony church. All donations are tax-deductible to the full extent of the law. You will receive a receipt for your records.",
               },
             ].map((item) => (
               <div key={item.q} className="rounded-lg border border-border bg-background p-5">
