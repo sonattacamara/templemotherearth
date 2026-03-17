@@ -138,7 +138,7 @@ const KemeticTeachings = () => {
     { term: "Ba", meaning: "The soul or personality essence. The Ba travels between the physical and spiritual worlds, carrying your unique divine expression." },
     { term: "Ankh Activation", meaning: "A sunrise practice of breathing, movement, and intention that activates the life force (Ankh) within your body temple at the start of each day." },
     { term: "Hapé", meaning: "A sacred tobacco-based snuff used ceremonially for grounding, clearing, and opening the spiritual senses. Administered with prayer and intention." },
-    { term: "Sacred Earth Medicine", meaning: "Plant-based sacraments provided by Mother Earth for healing, transformation, and spiritual elevation. Used in ceremony with reverence and guidance." },
+    { term: "Sacred Earth Medicine", meaning: "Plant-based sacraments provided by Mother Earth for transformation, restoration, and spiritual elevation. Used in ceremony with reverence and guidance." },
   ];
 
   const filteredGlossary = kemeticGlossary.filter(
