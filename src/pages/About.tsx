@@ -816,7 +816,7 @@ const About = () => {
                 <span className="font-display text-lg font-bold text-primary-foreground">Temple Mother Earth</span>
               </Link>
               <p className="mt-4 text-sm text-primary-foreground/50 leading-relaxed">
-                A 501(c)(3) nonprofit sanctuary for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
+                A sacred ceremony church organized under 508(c)(1)(A) for Earth Medicine, sovereignty, and sacred community. Est. 2020 · Washington, DC.
               </p>
             </div>
             <div>
