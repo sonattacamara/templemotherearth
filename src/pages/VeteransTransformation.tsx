@@ -191,7 +191,6 @@ const VeteransTransformation = () => {
     e.preventDefault();
     setFormError("");
     
-    // Manual validation for required fields with sr-only inputs
     if (!formData.fullName.trim()) {
       setFormError("Please enter your full name.");
       return;
@@ -210,14 +209,26 @@ const VeteransTransformation = () => {
     }
     
     setSubmitting(true);
-    // TODO: Integrate with GoHighLevel webhook
-    await new Promise((r) => setTimeout(r, 1200));
-    setFormSubmitted(true);
-    setSubmitting(false);
-    // Scroll to the success message so the user sees it
-    setTimeout(() => {
-      document.getElementById("veteran-form-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 100);
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-veterans", {
+        body: formData,
+      });
+      if (error) throw error;
+      if (data?.error) {
+        setFormError(data.error);
+        setSubmitting(false);
+        return;
+      }
+      setFormSubmitted(true);
+      setSubmitting(false);
+      setTimeout(() => {
+        document.getElementById("veteran-form-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
+    } catch (err) {
+      console.error("Veterans form error:", err);
+      setFormError("Something went wrong. Please try again.");
+      setSubmitting(false);
+    }
   };
 
   return (
