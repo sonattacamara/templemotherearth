@@ -22,7 +22,7 @@ const impactCards = [
   {
     icon: Users,
     title: "Grow Our Sacred Family",
-    desc: "Fund community gatherings, sacred services, and educational programs that bring our Temple family together in healing.",
+    desc: "Fund community gatherings, sacred services, and educational programs that bring our Temple family together in sacred fellowship.",
   },
   {
     icon: Shield,
