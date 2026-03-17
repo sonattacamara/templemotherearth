@@ -42,7 +42,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 2, date: "March 19", weekday: "Thursday", name: "Hapé Community Ceremony",
+    day: 2, date: "", weekday: "", name: "Hapé Community Ceremony",
     subtitle: "The Noise Stops. You Remember.",
     description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The forest has been waiting for you.",
     icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
