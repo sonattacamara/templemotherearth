@@ -70,7 +70,7 @@ const Donate = () => {
         heroImage={sacredSpaceImg}
         tagline="Offerings & Tithes"
         heading="Keep the Temple Sustainable"
-        description="Your generosity sustains a sacred space where healing, community, and Earth Medicine traditions thrive. Every offering directly supports our mission to preserve these practices and expand access to transformation."
+        description="Your generosity sustains a sacred space where ceremony, community, and Earth Medicine traditions thrive. Every offering directly supports our mission to preserve these practices and expand access to transformation."
         taxNote="Temple Mother Earth is a US federally tax-exempt 501(c)(3) religious organization. All contributions are tax-deductible. Thank you for being part of this sacred family."
         donateUrl={PAYPAL_DONATE_URL}
         buttonLabel="Offerings & Tithes"
