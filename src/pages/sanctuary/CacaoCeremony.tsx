@@ -197,10 +197,10 @@ const CacaoCeremony = () => {
       </Section>
 
       {/* JOURNEY / WHAT TO EXPECT */}
-      <Section className="bg-[#FDFAF4]">
+      <Section className="bg-[#0E0A06]">
         <Eyebrow>The Experience</Eyebrow>
-        <STitle>What Happens <em className="text-[#8B5E3C]">at Ceremony</em></STitle>
-        <p className="text-xl leading-[1.8] text-[#4A2C1A] max-w-[720px] italic mb-16">
+        <STitle>What Happens <em className="text-[#C9963A]">at Ceremony</em></STitle>
+        <p className="text-xl leading-[1.8] text-[#C4B49A] max-w-[720px] italic mb-16">
           Every ceremony at Temple Mother Earth follows a sacred structure refined across hundreds of ceremonies.
         </p>
         <div className="relative pl-12 border-l border-gradient-to-b">
@@ -216,8 +216,8 @@ const CacaoCeremony = () => {
             <div key={step.time} className="relative pb-14 last:pb-0">
               <div className="absolute -left-[52px] top-2 w-2.5 h-2.5 rounded-full bg-[#C9963A] shadow-[0_0_0_4px_rgba(201,150,58,0.15)]" />
               <p className="font-sans text-[10px] tracking-[3px] uppercase text-[#C9963A] mb-2">{step.time}</p>
-              <h3 className="font-display text-[24px] italic text-[#2C1810] mb-3">{step.title}</h3>
-              <p className="text-[17px] text-[#4A2C1A] leading-[1.8] max-w-[620px]">{step.body}</p>
+              <h3 className="font-display text-[24px] italic text-[#F5EDD8] mb-3">{step.title}</h3>
+              <p className="text-[17px] text-[#C4B49A] leading-[1.8] max-w-[620px]">{step.body}</p>
             </div>
           ))}
         </div>
