@@ -46,16 +46,16 @@ const CacaoCeremony = () => {
   usePageTracking();
 
   return (
-    <div className="min-h-screen bg-[#FFFEF9] text-[#0E0A06]" style={{ fontFamily: "'EB Garamond', serif" }}>
+    <div className="min-h-screen bg-[#0E0A06] text-[#F5EDD8]" style={{ fontFamily: "'EB Garamond', serif" }}>
       <SEOHead
-        title="Cacao Community Ceremony · March 18 · Temple Mother Earth"
+        title="Cacao Community Ceremony · Temple Mother Earth"
         description="Open your heart with sacred ceremonial cacao. A ceremony held in sacred space at Temple Mother Earth, Washington DC."
       />
       <Navigation />
 
       {/* Announce Bar */}
       <div className="bg-[#2C1810] text-[#E8BF72] text-center py-2.5 px-5 font-sans text-[11px] tracking-[3px] uppercase">
-        Spring Equinox · Grand Reopening Year Six · Temple Mother Earth · Washington, DC
+        Recurring Offering · Temple Mother Earth · Washington, DC
       </div>
 
       {/* HERO */}
