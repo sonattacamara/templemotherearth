@@ -225,8 +225,8 @@ const About = () => {
                 icon: Leaf,
                 label: "Value 1",
                 title: "Reverence for the Earth & the Sacred",
-                desc: "At Temple Mother Earth, we honor the Earth as our first teacher, our medicine, and our guide. Every ceremony, circle, and gathering begins with a deep acknowledgment of the land, the elements, and the unseen forces that support our lives. We believe that healing happens when we return to harmony with nature and with the God within.",
-                detail: "Our work is built on humility, respect, and gratitude — honoring the sacred lineages, teachings, and Earth medicines that make our healing possible.",
+                desc: "At Temple Mother Earth, we honor the Earth as our first teacher, our sacrament, and our guide. Every ceremony, circle, and gathering begins with a deep acknowledgment of the land, the elements, and the unseen forces that support our lives. We believe that transformation happens when we return to harmony with nature and with the God within.",
+                detail: "Our work is built on humility, respect, and gratitude — honoring the sacred lineages, teachings, and Earth sacraments that make our restoration possible.",
               },
               {
                 icon: Shield,
