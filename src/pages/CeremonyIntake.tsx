@@ -1000,7 +1000,7 @@ const CeremonyIntake = () => {
               {/* RFRA & Liability */}
               <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground space-y-3 max-h-60 overflow-y-auto">
                 <p className="font-semibold text-foreground">Religious Freedom Restoration Act (RFRA) Declaration</p>
-                <p>Temple Mother Earth is a 501(c)(3) nonprofit religious organization. Our sacramental use of Earth Medicine is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies, you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community that holds the beliefs stated above.</p>
+                <p>Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Our sacramental use of Earth Medicine is protected under the Religious Freedom Restoration Act (RFRA) of 1993. By participating in our ceremonies, you acknowledge that these practices are sincere religious exercises conducted within a structured spiritual community that holds the beliefs stated above.</p>
                 <p className="font-semibold text-foreground">Assumption of Risk & Liability Waiver</p>
                 <p>I understand that participation in Earth Medicine ceremonies carries inherent risks. I voluntarily assume all risks associated with my participation. I release Temple Mother Earth, its facilitators, staff, and volunteers from any and all liability arising from my participation in ceremonies, immersions, and related activities.</p>
                 <p>I understand that Earth Medicine is not a substitute for professional medical care and that I am encouraged to continue working with my healthcare providers.</p>
