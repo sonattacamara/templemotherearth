@@ -89,7 +89,7 @@ This Wednesday, we invite you back. Whether you are a seasoned ceremonial partic
 
 Come home to your heart. Come home to the circle.
 
-🌿 *Registration is open on our events page.*`,
+*Registration is open on our events page.*`,
   },
   {
     slug: "beyond-the-ceremony-integration",
