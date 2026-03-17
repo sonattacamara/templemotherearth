@@ -7,7 +7,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 const InnerAlchemySpa = () => (
   <SanctuaryWeekLayout
     title="Inner Alchemy Wellness Spa Day · March 22 · Temple Mother Earth"
-    description="A full day of sacred rest and restoration. Treatments, sound healing, nourishment, and ceremony. Temple Mother Earth, Washington DC."
+    description="A full day of sacred rest and restoration. Body practices, sound ceremony, nourishment, and ceremony. Temple Mother Earth, Washington DC."
   >
     <SanctuaryHero
       dateBadge="Sunday · March 22 · 2026"
