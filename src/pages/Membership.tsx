@@ -455,7 +455,7 @@ const Membership = () => {
               },
               {
                 q: "Are contributions tax-deductible?",
-                a: "Temple Mother Earth is a 501(c)(3) nonprofit. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. We recommend consulting your tax advisor.",
+                a: "Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. We recommend consulting your tax advisor.",
               },
               {
                 q: "What if I'm not sure where to start?",
