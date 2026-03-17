@@ -141,7 +141,7 @@ If you are unsure whether Kambo is safe for you, please reach out through our co
 • Attend Temple Mother Earth integration circles (virtual or in-person).
 • Continue journaling and tracking shifts in your emotional landscape.
 • Notice changes in habits, relationships, and energy levels.
-• Be gentle with yourself — healing is not linear.
+• Be gentle with yourself — transformation is not linear.
 
 **Community Support:**
 As a Temple Mother Earth member, you have access to:
