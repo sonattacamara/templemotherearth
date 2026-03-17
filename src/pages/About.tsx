@@ -142,7 +142,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Restoring the Sacred Within Every Person</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  The mission of Temple Mother Earth is to guide individuals back to the place where true healing begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
+                  The mission of Temple Mother Earth is to guide individuals back to the place where true transformation begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
                 </p>
                 <p>
                   Our work is to help people reconnect with this inner truth through sacred Earth medicine, spiritual practice, and intentional self-discovery.
