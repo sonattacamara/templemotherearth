@@ -568,7 +568,7 @@ const KemeticTeachings = () => {
               We have sacred service weekly Saturday nights 9 PM – 12 AM to express gratitude and joy for the week. Followed by a sunrise service at the beach to merge with divine.
             </p>
             <p>
-              When you join the temple, you can avail yourself of the healing services of our ordained priests and priestesses.
+              When you join the temple, you can avail yourself of the sacred services of our ordained priests and priestesses.
             </p>
           </motion.div>
           <motion.div variants={fadeUp}>
