@@ -28,7 +28,7 @@ const glossaryData = [
     entries: [
       { name: "Tobacco / Mapacho", botanical: "Nicotiana rustica", origin: "Americas — pan-indigenous", description: "Considered the 'Grandfather' plant in many indigenous traditions. Used for prayer, protection, purification, and energetic clearing. Mapacho is the ceremonial jungle tobacco distinct from commercial varieties." },
       { name: "Bobinsana", botanical: "Calliandra angustifolia", origin: "Amazon Basin — Peru", description: "Heart-opening plant teacher used in traditional dieta. Known for cultivating compassion, emotional sensitivity, and dream enhancement." },
-      { name: "Chiric Sanango", botanical: "Brunfelsia grandiflora", origin: "Amazon Basin — Peru", description: "Master plant used for emotional healing, building courage, and clearing fear. Often used in plant dietas to strengthen resolve." },
+      { name: "Chiric Sanango", botanical: "Brunfelsia grandiflora", origin: "Amazon Basin — Peru", description: "Master plant used for emotional restoration, building courage, and clearing fear. Often used in plant dietas to strengthen resolve." },
       { name: "Ajo Sacha", botanical: "Mansoa alliacea", origin: "Amazon Basin", description: "'Garlic vine' used for spiritual cleansing, protection against negative energies, and strengthening the immune system." },
       { name: "Piñón Colorado", botanical: "Jatropha gossypiifolia", origin: "Amazon Basin", description: "Used for purification, spiritual protection, and energetic cleansing in Amazonian curanderismo." },
       { name: "Chullachaki Caspi", botanical: "Tovomita sp.", origin: "Amazon Basin — Peru", description: "Grounding and strengthening tree medicine. Used in plant dietas for stability, focus, and physical resilience." },
