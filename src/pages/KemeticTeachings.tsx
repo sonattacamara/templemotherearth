@@ -217,10 +217,10 @@ const KemeticTeachings = () => {
               Kemetic Teachings
             </motion.h1>
             <motion.p variants={fadeUp} className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-4">
-              Our temple is rooted in the ancient spiritual practices of Kemet — honoring Mother Earth as the sacred source of all healing, wisdom, and transformation.
+              Our temple is rooted in the ancient spiritual practices of Kemet — honoring Mother Earth as the sacred source of all transformation, wisdom, and restoration.
             </motion.p>
             <motion.p variants={fadeUp} className="font-body text-sm text-secondary/80 italic">
-              High Priest of Kemetic Healing · Keeper of the Wisdom of IamHetep
+              High Priest of Kemetic Wisdom · Keeper of the Wisdom of IamHetep
             </motion.p>
           </motion.div>
         </div>
