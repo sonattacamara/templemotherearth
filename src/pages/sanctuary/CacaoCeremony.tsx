@@ -324,6 +324,8 @@ const CacaoCeremony = () => {
         </div>
       </section>
 
+      <CeremonyExploreNav variant="dark" />
+
       {/* Footer */}
       <footer className="bg-[#0E0A06] border-t border-[rgba(201,150,58,0.1)] py-8 px-6 text-center">
         <p className="font-sans text-[10px] tracking-[2px] text-[#4A2C1A] uppercase">
