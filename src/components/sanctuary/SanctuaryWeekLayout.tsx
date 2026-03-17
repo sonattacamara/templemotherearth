@@ -21,7 +21,7 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
       {/* Sanctuary Week Announce Bar */}
       <div className="bg-[hsl(105,30%,13%)] border-b border-[hsl(100,25%,18%)] py-2.5 px-6 text-center">
         <span className="font-sans text-[9px] tracking-[3px] uppercase text-[hsl(45,70%,55%)]">
-          Temple Mother Earth · Sanctuary Week · March 18-29, 2026 · Washington, DC
+          Temple Mother Earth · Sanctuary Week · Washington, DC
         </span>
       </div>
 
