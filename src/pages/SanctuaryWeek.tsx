@@ -319,17 +319,42 @@ const SanctuaryWeek = () => (
       </motion.div>
     </section>
 
+    {/* MONTHLY THEME BANNER */}
+    {(() => {
+      const MONTHLY_THEMES = [
+        { month: 3, year: 2026, theme: "Spring Equinox · Year Six · The Grand Reopening", desc: "Six years of building home. This is the celebration of what we built and the opening of what comes next." },
+        { month: 4, year: 2026, theme: "April Theme — Coming Soon", desc: "Stay tuned for our April sacred theme." },
+        { month: 5, year: 2026, theme: "May Theme — Coming Soon", desc: "Stay tuned for our May sacred theme." },
+        { month: 6, year: 2026, theme: "June Theme — Coming Soon", desc: "Stay tuned for our June sacred theme." },
+        { month: 7, year: 2026, theme: "July Theme — Coming Soon", desc: "Stay tuned for our July sacred theme." },
+        { month: 8, year: 2026, theme: "August Theme — Coming Soon", desc: "Stay tuned for our August sacred theme." },
+        { month: 9, year: 2026, theme: "September Theme — Coming Soon", desc: "Stay tuned for our September sacred theme." },
+        { month: 10, year: 2026, theme: "October Theme — Coming Soon", desc: "Stay tuned for our October sacred theme." },
+        { month: 11, year: 2026, theme: "November Theme — Coming Soon", desc: "Stay tuned for our November sacred theme." },
+        { month: 12, year: 2026, theme: "December Theme — Coming Soon", desc: "Stay tuned for our December sacred theme." },
+      ];
+      const now = new Date();
+      const current = MONTHLY_THEMES.find(t => t.month === now.getMonth() + 1 && t.year === now.getFullYear()) || MONTHLY_THEMES[0];
+      return (
+        <div className="bg-[hsl(90,40%,30%)] py-6 px-6 md:px-12 text-center">
+          <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,70%)] mb-2">Monthly Theme</p>
+          <p className="font-sans text-[clamp(16px,2vw,22px)] font-light text-[hsl(90,20%,97%)] mb-1">{current.theme}</p>
+          <p className="font-serif italic text-[14px] text-[hsl(90,30%,80%)]">{current.desc}</p>
+        </div>
+      );
+    })()}
+
     {/* SACRED PATHWAYS PRICING OVERVIEW */}
-    <SanctuarySection eyebrow="Sacred Pathways" title={<>Choose Your<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Path of Participation</em></>}>
+    <SanctuarySection eyebrow="Sacred Pathways" title={<>Find Your<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Pathway of Participation</em></>}>
       <p className="text-center text-[19px] text-[hsl(90,10%,35%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
-        We offer these pathways not as transactions, but as invitations to return home to yourself. Flexible arrangements and our Community Care scholarship program ensure this path remains accessible to all who feel the pull.
+        These are not packages. They are invitations into a living sacred practice. Each pathway is a doorway — chosen not by what you can afford, but by what your spirit is ready to receive. We meet you exactly where you are.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
         {[
           { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
-          { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$1,555" },
-          { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,332" },
-          { title: "Day Experience", subtitle: "A Gentle Offering", price: "$444" },
+          { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$2,222" },
+          { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
+          { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
         ].map((path) => (
           <div key={path.title} className="bg-[hsl(90,15%,94%)] border border-[hsl(90,15%,85%)] p-8 text-center">
             <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,40%,30%)] mb-2">{path.title}</p>
@@ -339,7 +364,7 @@ const SanctuaryWeek = () => (
         ))}
       </div>
       <p className="text-center font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,10%,50%)] mt-8">
-        Pay-as-you-go: $444/day · <Link to="/community-care" className="text-[hsl(90,40%,30%)] hover:underline">Community Care Model applies</Link> · Scholarship available
+        <Link to="/community-care" className="text-[hsl(90,40%,30%)] hover:underline">Community Care Model applies</Link> · Scholarship available for genuine hardship
       </p>
     </SanctuarySection>
 
