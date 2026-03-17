@@ -34,7 +34,7 @@ const glossaryData = [
       { name: "Chullachaki Caspi", botanical: "Tovomita sp.", origin: "Amazon Basin — Peru", description: "Grounding and strengthening tree medicine. Used in plant dietas for stability, focus, and physical resilience." },
       { name: "Noya Rao", botanical: "Tree of Light", origin: "Amazon Basin — Shipibo tradition", description: "Extremely rare luminescent tree considered one of the most powerful dieta plants. Known for spiritual illumination and deep visionary work." },
       { name: "Camalonga", botanical: "Thevetia peruviana", origin: "Amazon Basin", description: "Seeds used in plant dietas for enhancing dreams, developing visionary capacity, and spiritual protection." },
-      { name: "Uchu Sanango", botanical: "Tabernaemontana sananho", origin: "Amazon Basin — Peru", description: "Used for emotional and physical healing, particularly joint pain and inflammation. Known for generating intense heat during dieta." },
+      { name: "Uchu Sanango", botanical: "Tabernaemontana sananho", origin: "Amazon Basin — Peru", description: "Used for emotional and physical restoration, particularly joint pain and inflammation. Known for generating intense heat during dieta." },
     ],
   },
   {
