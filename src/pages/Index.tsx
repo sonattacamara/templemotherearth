@@ -172,8 +172,9 @@ const Index = () => {
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75 md:text-xl"
           >
-            Your soul has led you here in this now moment. Whether you are here to remember, reconnect,
-            or rise into your highest purpose, you are home.
+            You are a sovereign being — whole, divine, and powerful beyond measure. Temple Mother Earth
+            exists to help you remember that truth. Through sacred ceremony, Earth Medicine, and intentional
+            community, we hold space for your return to the wisdom that has always lived within you.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
