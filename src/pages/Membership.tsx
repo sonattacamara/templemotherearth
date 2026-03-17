@@ -414,7 +414,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mt-12 text-center text-sm text-muted-foreground"
           >
-            Your membership supports Temple Mother Earth's 501(c)(3) nonprofit mission — keeping sacred space alive for all.
+            Your membership supports Temple Mother Earth's 508(c)(1)(A) sacred mission — keeping sacred space alive for all.
           </motion.p>
         </motion.div>
       </section>
