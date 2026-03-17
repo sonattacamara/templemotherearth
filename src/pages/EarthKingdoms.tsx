@@ -80,15 +80,15 @@ const kingdoms: KingdomData[] = [
       { title: "Ceremonial Plants at TME", content: "Cacao (Theobroma cacao) — the heart opener. Hapé — sacred Amazonian snuff. Blue Lotus — the sacred flower of ancient Egypt. Kava — the peace plant of the Pacific." },
     ],
     facts: [
-      { emoji: "🌿", label: "Species", val: "Over 390,000 plant species known. 80,000+ medicinal." },
-      { emoji: "🧬", label: "Phytochemistry", val: "Plants produce 200,000+ secondary metabolites — alkaloids, terpenes, flavonoids." },
-      { emoji: "🌞", label: "Photosynthesis", val: "Plants convert light into matter — when we eat plants, we ingest sunlight." },
-      { emoji: "💊", label: "Pharmaceutical Debt", val: "Over 50% of all pharmaceutical drugs derived from plant compounds." },
+      { icon: Leaf, label: "Species", val: "Over 390,000 plant species known. 80,000+ medicinal." },
+      { icon: Dna, label: "Phytochemistry", val: "Plants produce 200,000+ secondary metabolites — alkaloids, terpenes, flavonoids." },
+      { icon: Sun, label: "Photosynthesis", val: "Plants convert light into matter — when we eat plants, we ingest sunlight." },
+      { icon: Pill, label: "Pharmaceutical Debt", val: "Over 50% of all pharmaceutical drugs derived from plant compounds." },
     ],
     cards: [
-      { icon: "🍫", name: "Ceremonial Cacao", body: "4,000 years of ceremony. Heart-opening, bliss-inducing." },
-      { icon: "🌿", name: "Hapé", body: "Sacred tobacco blend. Grounds, clarifies, purifies." },
-      { icon: "🌺", name: "Blue Lotus", body: "Sacred flower of Egypt. Mild psychoactive, profoundly calming." },
+      { icon: Candy, name: "Ceremonial Cacao", body: "4,000 years of ceremony. Heart-opening, bliss-inducing." },
+      { icon: Leaf, name: "Hapé", body: "Sacred tobacco blend. Grounds, clarifies, purifies." },
+      { icon: Flower2, name: "Blue Lotus", body: "Sacred flower of Egypt. Mild psychoactive, profoundly calming." },
     ],
     stats: [
       { num: "390K", label: "Known plant species" },
