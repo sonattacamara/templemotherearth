@@ -48,7 +48,7 @@ const painPoints = [
   {
     icon: <Zap className="h-6 w-6" />,
     title: "TBI & Brain Fog",
-    text: "The blasts you survived left invisible damage. The fog, the headaches, the memory gaps. Your brain is trying to heal and it needs support that goes deeper than what a scan can show.",
+    text: "The blasts you survived left invisible damage. The fog, the headaches, the memory gaps. Your brain is trying to restore itself and it needs support that goes deeper than what a scan can show.",
   },
   {
     icon: <Leaf className="h-6 w-6" />,
