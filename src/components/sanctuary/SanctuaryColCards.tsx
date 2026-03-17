@@ -37,7 +37,7 @@ const SanctuaryColCards = ({ cards }: SanctuaryColCardsProps) => {
           <h3 className="font-sans text-[13px] tracking-[2px] text-[hsl(40,40%,60%)] mb-4 font-normal uppercase">
             {card.title}
           </h3>
-          <p className="text-[17px] text-[hsl(90,10%,35%)] leading-relaxed font-serif">
+          <p className="text-[17px] text-[hsl(40,15%,65%)] leading-relaxed font-serif">
             {card.description}
           </p>
           {card.note && (
