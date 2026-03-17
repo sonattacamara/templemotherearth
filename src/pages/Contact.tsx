@@ -55,7 +55,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim() || !formData.inquiryType) {
+    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.message.trim() || !formData.inquiryType) {
       toast.error("Please fill in all required fields.");
       return;
     }
@@ -63,7 +63,9 @@ const Contact = () => {
     try {
       const { data, error } = await supabase.functions.invoke("submit-contact", {
         body: {
-          name: formData.name,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
           email: formData.email,
           phone: formData.phone,
           subject: formData.inquiryType,
@@ -77,7 +79,7 @@ const Contact = () => {
         return;
       }
       toast.success("Your message has been sent. We'll be in touch soon.");
-      setFormData({ name: "", email: "", phone: "", inquiryType: "", message: "" });
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", inquiryType: "", message: "" });
     } catch (err) {
       console.error("Contact form error:", err);
       toast.error("Something went wrong. Please try again.");
