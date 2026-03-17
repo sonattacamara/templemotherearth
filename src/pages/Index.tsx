@@ -387,7 +387,7 @@ const Index = () => {
             in respect, prayer, reciprocity, and the remembrance that every human being carries the divine within.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-             Whether you are seeking healing, renewal, grounding, or expansion, Earth Medicine opens a path
+             Whether you are seeking restoration, renewal, grounding, or expansion, Earth Medicine opens a path
             of transformation that is both ancient and deeply personal. This sacred work honors the timeless
             relationship between humans and the Earth, offering safe containers for those ready to step
             into a deeper level of their journey.
