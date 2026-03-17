@@ -33,8 +33,8 @@ interface KingdomData {
   quoteColor: string;
   quoteCite: string;
   sections: { title: string; content: string }[];
-  facts: { emoji: string; label: string; val: string }[];
-  cards: { icon: string; name: string; body: string }[];
+  facts: { icon: LucideIcon; label: string; val: string }[];
+  cards: { icon: LucideIcon; name: string; body: string }[];
   stats: { num: string; label: string }[];
   quote: { text: string; cite: string };
   ceremonyLink: { tag: string; name: string; href: string };
