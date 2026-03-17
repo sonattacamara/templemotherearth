@@ -37,7 +37,7 @@ When applied to small superficial burns on the skin, these peptides enter the ly
 
 **The Purge is the Medicine**
 
-In Western culture, we have been conditioned to fear the purge. But in indigenous medicine traditions, the purge is sacred. It is the body's intelligent release of what no longer serves — toxins, stagnant energy, stored grief, and even physical illness.
+In Western culture, we have been conditioned to fear the purge. But in indigenous sacramental traditions, the purge is sacred. It is the body's intelligent release of what no longer serves — stagnant energy, stored grief, and even physical illness.
 
 Our community members in the DC, Maryland, and Virginia area consistently report:
 • Dramatic increases in mental clarity and focus
