@@ -20,8 +20,8 @@ const impactCards = [
   },
   {
     icon: Users,
-    title: "Community Healing",
-    desc: "Supports group ceremonies, creating shared healing spaces where transformation happens collectively.",
+    title: "Community Sacrament",
+    desc: "Supports group ceremonies, creating shared sacred spaces where transformation happens collectively.",
   },
   {
     icon: Sparkles,
