@@ -54,7 +54,7 @@ This is not recreational. This is sacred practice.
 
 **Who is Kambo For?**
 
-Kambo is for the seeker who is ready to shed what is heavy. It is for veterans carrying the weight of service. It is for mothers, fathers, healers, and hustlers who know that something needs to shift at a level deeper than the mind can reach.
+Kambo is for the seeker who is ready to shed what is heavy. It is for veterans carrying the weight of service. It is for mothers, fathers, practitioners, and seekers who know that something needs to shift at a level deeper than the mind can reach.
 
 If you are in Washington DC, Maryland, Virginia, or anywhere in the greater DMV area and feel the call, we invite you to explore this ancient warrior's reset with us.
 
