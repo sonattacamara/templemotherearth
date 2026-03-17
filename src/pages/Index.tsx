@@ -815,7 +815,7 @@ const Index = () => {
             The Faces of Temple Mother Earth
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of healing and higher consciousness.
+            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of transformation and higher consciousness.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
