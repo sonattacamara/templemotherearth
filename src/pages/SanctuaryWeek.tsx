@@ -87,7 +87,7 @@ const timelineDays: TimelineDay[] = [
     description: "Integration circle, Sacred Tea House open all evening, and a potluck table where the conversation goes somewhere real. Bring a dish. Come as you are.",
     icon: <Users className="h-5 w-5" />, tags: ["Free", "Everyone Welcome", "Community"],
     pricing: [{ label: "All Welcome", price: "Free" }],
-    ctaLabel: "Register Free", ctaHref: "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-healing-registration-1119491141139", ctaReady: true,
+    ctaLabel: "Register Free", ctaHref: "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-transformation-registration-1119491141139", ctaReady: true,
     slug: "/potluck", image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Belonging",
   },
