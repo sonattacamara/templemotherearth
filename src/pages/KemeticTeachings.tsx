@@ -234,7 +234,7 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-6">
             <p>
-              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, healer, and provider. Our ancestors in{" "}
+              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, provider, and source of all wisdom. Our ancestors in{" "}
               <Tooltip>
                 <TooltipTrigger asChild>
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Kemet</strong>
