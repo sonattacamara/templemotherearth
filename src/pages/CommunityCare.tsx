@@ -113,10 +113,10 @@ const CommunityCare = () => (
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
         {[
-          { title: "Spring Equinox", subtitle: "10 Days · All 10 Ceremonies", price: "$2,222", desc: "The complete Sanctuary Week experience. One sacred arc, held from beginning to end." },
+          { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222", desc: "The complete Sanctuary Week experience. One sacred arc, held from beginning to end." },
           { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$2,222", desc: "A focused immersion for those who wish to go deep within a single week." },
           { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333", desc: "A powerful weekend container for those new to the work or returning." },
-          { title: "Day Experience", subtitle: "A Gentle Offering", price: "$333", desc: "Pay-as-you-go, $333 per day. Step in when you feel called." },
+          { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333", desc: "A single ceremony day. Step in when you feel called." },
         ].map((path) => (
           <div key={path.title} className="bg-[hsl(105,30%,5%)] border border-[hsla(45,70%,49%,0.1)] p-8">
             <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2">{path.title}</p>
