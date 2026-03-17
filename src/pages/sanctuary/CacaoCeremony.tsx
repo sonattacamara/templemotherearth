@@ -114,10 +114,10 @@ const CacaoCeremony = () => {
       </div>
 
       {/* MEDICINE SECTION */}
-      <Section id="about" className="bg-[#FFFEF9]">
+      <Section id="about" className="bg-[#0E0A06]">
         <Eyebrow>The Sacred Sacrament</Eyebrow>
-        <STitle>Everything You Need to Know<br /><em className="text-[#8B5E3C]">About Ceremonial Cacao</em></STitle>
-        <p className="text-xl leading-[1.8] text-[#4A2C1A] max-w-[720px] italic mb-16">
+        <STitle>Everything You Need to Know<br /><em className="text-[#C9963A]">About Ceremonial Cacao</em></STitle>
+        <p className="text-xl leading-[1.8] text-[#C4B49A] max-w-[720px] italic mb-16">
           This isn't hot chocolate. This is one of the oldest sacred plant sacraments in human history — and you are about to experience why civilizations revered it as a gift from the gods.
         </p>
 
