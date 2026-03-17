@@ -57,10 +57,9 @@ serve(async (req) => {
       });
     }
 
-    const fullName = String(body.name).trim();
-    const nameParts = fullName.split(" ");
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
+    const firstName = String(body.firstName || "").trim();
+    const lastName = String(body.lastName || "").trim();
+    const fullName = `${firstName} ${lastName}`.trim();
 
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",

@@ -1021,7 +1021,7 @@ const Index = () => {
           <div className="mt-12 border-t border-primary-foreground/10 pt-8">
             <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
               <p className="font-body text-xs text-primary-foreground/40">
-                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+                © {new Date().getFullYear()} Temple Mother Earth. A sacred ceremony church organized under 508(c)(1)(A). All rights reserved.
               </p>
               <div className="flex flex-col items-center gap-2 md:items-end">
                 <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">

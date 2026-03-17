@@ -179,18 +179,33 @@ const Contact = () => {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="space-y-2">
-                <Label htmlFor="name" className="text-foreground">Full Name *</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your full name"
-                  maxLength={100}
-                  required
-                  className="bg-background"
-                />
+              <motion.div variants={fadeUp} className="grid gap-4 md:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="firstName" className="text-foreground">First Name *</Label>
+                  <Input
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="First name"
+                    maxLength={50}
+                    required
+                    className="bg-background"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="lastName" className="text-foreground">Last Name *</Label>
+                  <Input
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Last name"
+                    maxLength={50}
+                    required
+                    className="bg-background"
+                  />
+                </div>
               </motion.div>
 
               <motion.div variants={fadeUp} className="grid gap-6 md:grid-cols-2">

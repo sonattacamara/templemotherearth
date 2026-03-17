@@ -996,7 +996,7 @@ const VeteransTransformation = () => {
             <span className="font-display text-lg font-bold text-[#F5F0E6]">Temple Mother Earth</span>
           </Link>
           <p className="font-body text-sm text-[#F5F0E6]/50 max-w-xl mx-auto">
-            Temple Mother Earth is a 508(c)(1)(A) temple. Our ceremonies are protected religious practices under the Religious Freedom Restoration Act (RFRA) and the First Amendment.
+            Temple Mother Earth is a sacred ceremony church organized under section 508(c)(1)(A). Our ceremonies are protected religious practices under the Religious Freedom Restoration Act (RFRA) and the First Amendment.
           </p>
           <p className="mt-4 font-body text-xs text-[#F5F0E6]/30">
             Kambo ceremony near me | Plant medicine for PTSD | Veteran healing retreat Maryland DC Virginia
