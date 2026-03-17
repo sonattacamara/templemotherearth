@@ -53,7 +53,7 @@ const glossaryData = [
     category: "Traditional Sacred & Ceremonial Plant Allies",
     description: "Time-honored botanical allies used across global ceremonial traditions for emotional balance, dream work, and holistic wellness.",
     entries: [
-      { name: "Blue Lotus", botanical: "Nymphaea caerulea", origin: "Egypt, East Africa", description: "Sacred flower of ancient Egyptian ceremony. Used for relaxation, mild euphoria, enhanced meditation, and dream work. Deeply connected to African ancestral healing lineages." },
+      { name: "Blue Lotus", botanical: "Nymphaea caerulea", origin: "Egypt, East Africa", description: "Sacred flower of ancient Egyptian ceremony. Used for relaxation, mild euphoria, enhanced meditation, and dream work. Deeply connected to African ancestral ceremonial lineages." },
       { name: "Mugwort", botanical: "Artemisia vulgaris", origin: "Europe, Asia, North America", description: "Dream-enhancing herb and feminine medicine. Used for lucid dreaming, menstrual support, and spiritual protection." },
       { name: "Damiana", botanical: "Turnera diffusa", origin: "Mexico, Central America", description: "Heart and sensual medicine traditionally used as an aphrodisiac and mood enhancer. Also used in ceremonial settings for opening the heart." },
       { name: "Passionflower", botanical: "Passiflora incarnata", origin: "Americas", description: "Contains mild MAOIs. Used for calming anxiety, supporting sleep, and as a gentle nervine. Also used in some ayahuasca analog preparations." },
