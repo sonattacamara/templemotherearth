@@ -4,7 +4,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const EVENTBRITE_KAMBO = "https://www.eventbrite.com/e/kambo-healing-ceremony-registration-822085920117";
+const EVENTBRITE_KAMBO = "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117";
 
 const avatars = [
   { num: "One", title: "The One Who Has Tried Everything", desc: "Therapy. Retreats. Plant medicine. The gym. The diet. The meditation practice. Something is still there, a weight in the body that doesn't shift no matter what the mind understands." },
