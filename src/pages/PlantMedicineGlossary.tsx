@@ -107,7 +107,7 @@ const PlantMedicineGlossary = () => {
             Sacred Plant Medicine Glossary
           </h1>
           <p className="font-body text-muted-foreground text-lg max-w-3xl">
-            A comprehensive guide to the sacred earth medicines, entheogenic plant teachers, and healing traditions honored by Temple Mother Earth. Our sanctuary in Washington, DC and our{" "}
+            A comprehensive guide to the sacred earth sacraments, entheogenic plant teachers, and ceremonial traditions honored by Temple Mother Earth. Our sanctuary in Washington, DC and our{" "}
             <Link to="/retreats-inquiry" className="text-primary underline">international retreat locations</Link>{" "}
             offer ceremonial experiences rooted in indigenous wisdom and reverence for the natural world.
           </p>
