@@ -323,10 +323,10 @@ const SanctuaryWeek = () => {
             <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Week</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            Ten days. Nine ceremonies. One sacred container. Your journey toward transformation begins here.
+            A recurring series of sacred ceremonies, community gatherings, and body practices held throughout the month. Each offering stands on its own. Choose what calls you.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
-            In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. This March, we gather again. Come home.
+            In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. The sacred container is open. Come home.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#timeline" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
