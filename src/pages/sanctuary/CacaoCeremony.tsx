@@ -4,7 +4,7 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-healing-ceremony-registration-822085920117";
+const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117";
 
 const Section = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);
