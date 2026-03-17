@@ -83,7 +83,7 @@ const Conduct = () => {
               </div>
               <ul className="space-y-2 pl-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />No harassment, discrimination, or disrespect of any kind will be tolerated.</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Honor the lived experiences and healing journeys of others without judgment.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Honor the lived experiences and ceremonial journeys of others without judgment.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Practice active listening — hold space rather than offering unsolicited advice.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Respect the physical boundaries of all community members at all times.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Children are welcome at family-friendly events only (Community Day, Soulful Sundays, Cacao Ceremony). All Earth Medicine ceremonies are 21+.</li>
