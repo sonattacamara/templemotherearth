@@ -687,7 +687,7 @@ const About = () => {
                 role: "Poet & Facilitator",
                 img: facilitatorSpencer,
                 imgAlt: "Walter Spencer, poet and Kambo ceremony facilitator at Temple Mother Earth, creator of The Cove men's integration circle",
-                desc: "A multi-medium artist from Prince George's County rooted in creativity and healing. Through poetry, plant medicine and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle — inviting men to slow down, soften, and be held.",
+                desc: "A multi-medium artist from Prince George's County rooted in creativity and transformation. Through poetry, plant sacrament and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle — inviting men to slow down, soften, and be held.",
               },
               {
                 name: "Samira Davis",
