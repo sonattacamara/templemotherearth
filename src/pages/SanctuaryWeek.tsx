@@ -82,7 +82,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Rest",
   },
   {
-    day: 6, date: "March 23", weekday: "Monday", name: "Community Integration Potluck",
+    day: 6, date: "", weekday: "", name: "Community Integration Potluck",
     subtitle: "You Are Already Part of This Family",
     description: "Integration circle, Sacred Tea House open all evening, and a potluck table where the conversation goes somewhere real. Bring a dish. Come as you are.",
     icon: <Users className="h-5 w-5" />, tags: ["Free", "Everyone Welcome", "Community"],
