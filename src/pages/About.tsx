@@ -157,7 +157,7 @@ const About = () => {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Shield className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Providing Safe, Sacred Spaces for Healing & Transformation</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Providing Safe, Sacred Spaces for Transformation & Restoration</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
                   We are committed to offering grounded, ethical, and spiritually aligned environments for ceremony, emotional work, and inner exploration. Whether in Washington, D.C. or during our international immersions, every gathering is held with reverence, prayer, and deep respect for the sacred lineages that inform our work.
