@@ -216,10 +216,7 @@ const TimelineCard = ({ day }: { day: TimelineDay }) => (
     <div className="p-5 md:p-6">
       <div className="flex items-center gap-3 mb-3">
         <span className="font-sans text-[8px] tracking-[3px] uppercase text-[hsl(45,70%,49%)]">
-          Day {day.day}
-        </span>
-        <span className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,50%)]">
-          {day.weekday} · {day.date}
+          {day.phase}
         </span>
       </div>
       <span className="inline-block font-sans text-[7px] tracking-[2px] uppercase px-2 py-0.5 mb-3 border border-[hsla(45,70%,49%,0.25)] text-[hsl(45,60%,55%)]">
