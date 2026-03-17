@@ -204,7 +204,7 @@ const RetreatsInquiry = () => {
         <h2>International Ayahuasca Retreats & Plant Medicine Immersions</h2>
         <p>
           Temple Mother Earth offers <Link to="/retreats-inquiry">Ayahuasca retreats in Mexico</Link>, <Link to="/retreats-inquiry">plant medicine retreats in Costa Rica</Link>, 
-          and <Link to="/retreats-inquiry">sacred healing immersions in Peru, Colombia, and Brazil</Link>. Our international retreats combine 
+          and <Link to="/retreats-inquiry">sacred immersions in Peru, Colombia, and Brazil</Link>. Our international retreats combine 
           Ayahuasca ceremony (Banisteriopsis caapi + Chacruna), Kambo healing, Hapé (Rapé), ceremonial Cacao, breathwork, 
           and somatic integration in transformative multi-day experiences.
         </p>
