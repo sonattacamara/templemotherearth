@@ -81,7 +81,7 @@ const Level5Ceremony = () => (
         </p>
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A030] to-transparent mx-auto my-8" />
         <p className="font-serif italic text-[clamp(18px,2vw,22px)] text-[#F0EAD6] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-          You have been in preparation for this whether you knew it or not. The jungle does not call everyone. It called you.
+          You have been in preparation for this whether you knew it or not. Mother Earth does not call everyone. She called you.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
