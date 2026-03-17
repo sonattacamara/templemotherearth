@@ -145,7 +145,7 @@ const About = () => {
                   The mission of Temple Mother Earth is to guide individuals back to the place where true transformation begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
                 </p>
                 <p>
-                  Our work is to help people reconnect with this inner truth through sacred Earth medicine, spiritual practice, and intentional self-discovery.
+                  Our work is to help people reconnect with this inner truth through sacred Earth sacrament, spiritual practice, and intentional self-discovery.
                 </p>
                 <p>
                   Healing is not about fixing what is broken; it is about remembering what has always been whole. Our mission is to create spaces where this remembrance becomes possible.
