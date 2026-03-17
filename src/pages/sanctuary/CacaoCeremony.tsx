@@ -266,18 +266,18 @@ const CacaoCeremony = () => {
       </Section>
 
       {/* TESTIMONIALS */}
-      <Section className="bg-[#FDFAF4]">
+      <Section className="bg-[#0E0A06]">
         <Eyebrow className="text-center">Voices from the Circle</Eyebrow>
-        <STitle><span className="block text-center">What Our Community <em className="text-[#8B5E3C]">Says</em></span></STitle>
+        <STitle><span className="block text-center">What Our Community <em className="text-[#C9963A]">Says</em></span></STitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
           {[
             { text: "I've been in talk sessions for three years working on my heart. One cacao ceremony did what three years of conventional approaches couldn't. I cried for an hour and felt completely free afterward.", author: "Mariana V.", loc: "Washington, DC" },
             { text: "The facilitators hold the space with such mastery. You feel completely safe to fall apart and put yourself back together, better.", author: "David K.", loc: "Alexandria, VA" },
             { text: "As someone who's never done any kind of sacred sacrament, I was nervous. The ceremony was gentle, profound, and exactly what I needed.", author: "Renée M.", loc: "Silver Spring, MD" },
           ].map((t) => (
-            <div key={t.author} className="p-10 border border-[rgba(201,150,58,0.2)] relative">
+            <div key={t.author} className="p-10 border border-[rgba(201,150,58,0.2)] bg-[#1A1208] relative">
               <span className="absolute top-4 left-6 font-display text-[80px] text-[rgba(201,150,58,0.1)] leading-none">"</span>
-              <p className="italic text-base leading-[1.8] text-[#4A2C1A] mb-6 relative z-10">{t.text}</p>
+              <p className="italic text-base leading-[1.8] text-[#C4B49A] mb-6 relative z-10">{t.text}</p>
               <p className="font-sans text-[10px] tracking-[2px] uppercase text-[#C9963A]">{t.author}</p>
               <p className="text-xs text-[#9A7B5A] italic mt-1">{t.loc}</p>
             </div>
@@ -286,9 +286,9 @@ const CacaoCeremony = () => {
       </Section>
 
       {/* FAQ */}
-      <Section className="bg-[#FFFEF9]">
+      <Section className="bg-[#0E0A06]">
         <Eyebrow className="text-center">Questions & Answers</Eyebrow>
-        <STitle><span className="block text-center">Frequently Asked <em className="text-[#8B5E3C]">Questions</em></span></STitle>
+        <STitle><span className="block text-center">Frequently Asked <em className="text-[#C9963A]">Questions</em></span></STitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 mt-16">
           {faqItems.map((item) => (
             <FaqItem key={item.q} q={item.q} a={item.a} />
