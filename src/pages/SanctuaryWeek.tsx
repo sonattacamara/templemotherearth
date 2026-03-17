@@ -32,7 +32,7 @@ interface TimelineDay {
 
 const timelineDays: TimelineDay[] = [
   {
-    day: 1, date: "March 18", weekday: "Wednesday", name: "Cacao Community Ceremony",
+    day: 1, date: "", weekday: "", name: "Cacao Community Ceremony",
     subtitle: "Your Heart Already Knows the Way",
     description: "Sacred ceremonial cacao, live sound, and community circle. The gentlest entry point, and for many, the most unexpectedly profound. All welcome.",
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
@@ -42,7 +42,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 2, date: "March 19", weekday: "Thursday", name: "Hapé Community Ceremony",
+    day: 2, date: "", weekday: "", name: "Hapé Community Ceremony",
     subtitle: "The Noise Stops. You Remember.",
     description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The forest has been waiting for you.",
     icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
@@ -52,7 +52,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 3, date: "March 20", weekday: "Friday", name: "Sacred Tea Ceremony",
+    day: 3, date: "", weekday: "", name: "Sacred Tea Ceremony",
     subtitle: "The Door Has Always Been There",
     description: "Three levels: Community, Sacred Circle, and Fruit of the Gods. Choose the depth you are ready for. The sacrament meets you exactly where you are.",
     icon: <Coffee className="h-5 w-5" />, tags: ["Signature", "Tiered", "Pre-Screening"],
@@ -62,7 +62,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 4, date: "March 21", weekday: "Saturday", name: "Level 5 — The Complete Initiation",
+    day: 4, date: "", weekday: "", name: "Level 5 — The Complete Initiation",
     subtitle: "You Have Not Come This Far to Stop Here",
     description: "Every sacrament. One full-day container. Kambo included. For those who are genuinely ready to go all the way. By application only.",
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
@@ -72,7 +72,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Initiation",
   },
   {
-    day: 5, date: "March 22", weekday: "Sunday", name: "Inner Alchemy Wellness Spa Day",
+    day: 5, date: "", weekday: "", name: "Inner Alchemy Wellness Spa Day",
     subtitle: "Your Body Has Been Waiting for This Day",
     description: "A full day of body practices, sound ceremony, sacred nourishment, yoga, and ceremonial closing. From sunrise to sunset, every moment held.",
     icon: <Sun className="h-5 w-5" />, tags: ["Full Day", "Restoration", "Body"],
@@ -82,7 +82,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Rest",
   },
   {
-    day: 6, date: "March 23", weekday: "Monday", name: "Community Integration Potluck",
+    day: 6, date: "", weekday: "", name: "Community Integration Potluck",
     subtitle: "You Are Already Part of This Family",
     description: "Integration circle, Sacred Tea House open all evening, and a potluck table where the conversation goes somewhere real. Bring a dish. Come as you are.",
     icon: <Users className="h-5 w-5" />, tags: ["Free", "Everyone Welcome", "Community"],
@@ -92,7 +92,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Belonging",
   },
   {
-    day: 7, date: "March 25", weekday: "Tuesday", name: "Sacred Yin Yoga",
+    day: 7, date: "", weekday: "", name: "Sacred Yin Yoga",
     subtitle: "You Already Know How to Surrender",
     description: "90 minutes of ceremonial yin yoga with sound ceremony and breathwork. Not exercise, ceremony in the body. All levels welcome.",
     icon: <Mountain className="h-5 w-5" />, tags: ["All Levels", "Sound", "Nervous System"],
@@ -102,7 +102,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Integration",
   },
   {
-    day: 8, date: "March 28", weekday: "Friday", name: "Sacred Art Expo",
+    day: 8, date: "", weekday: "", name: "Sacred Art Expo",
     subtitle: "Art Born From the Other Side",
     description: "Visionary art exhibition, artist marketplace, live sound performances, and Sacred Tea House open all evening. An evening where ceremony becomes culture.",
     icon: <Palette className="h-5 w-5" />, tags: ["Art", "Music", "Evening"],
@@ -112,7 +112,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Integration",
   },
   {
-    day: 9, date: "March 29", weekday: "Saturday", name: "Kambo Ceremony",
+    day: 9, date: "", weekday: "", name: "Kambo Ceremony",
     subtitle: "Some Things Cannot Be Talked Through",
     description: "The Great Purifier. The ancient Amazonian purification sacrament. For those who have been called. Sacred screening required. By application only.",
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
@@ -216,10 +216,7 @@ const TimelineCard = ({ day }: { day: TimelineDay }) => (
     <div className="p-5 md:p-6">
       <div className="flex items-center gap-3 mb-3">
         <span className="font-sans text-[8px] tracking-[3px] uppercase text-[hsl(45,70%,49%)]">
-          Day {day.day}
-        </span>
-        <span className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,50%)]">
-          {day.weekday} · {day.date}
+          {day.phase}
         </span>
       </div>
       <span className="inline-block font-sans text-[7px] tracking-[2px] uppercase px-2 py-0.5 mb-3 border border-[hsla(45,70%,49%,0.25)] text-[hsl(45,60%,55%)]">
@@ -298,8 +295,8 @@ const SanctuaryWeek = () => {
 
   return (
     <SanctuaryWeekLayout
-      title="Sanctuary Week · March 18–29 · Temple Mother Earth"
-      description="Ten days of sacred ceremony, community, and transformation. Spring Equinox Grand Reopening, Year Six. Temple Mother Earth, Washington DC."
+      title="Sanctuary Week · Temple Mother Earth"
+      description="A recurring series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
       showBackLink={false}
     >
       {/* ═══ HERO ═══ */}
@@ -313,7 +310,7 @@ const SanctuaryWeek = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
           <span className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[4px] uppercase px-5 py-2 mb-8">
-            Grand Reopening · Year Six · Spring Equinox 2026
+            Recurring Sacred Offerings · Year Six
           </span>
           <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-4">
             Temple Mother Earth · Washington, DC
@@ -323,10 +320,10 @@ const SanctuaryWeek = () => {
             <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Week</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            Ten days. Nine ceremonies. One sacred container. Your journey toward transformation begins here.
+            A recurring series of sacred ceremonies, community gatherings, and body practices held throughout the month. Each offering stands on its own. Choose what calls you.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
-            In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. This March, we gather again. Come home.
+            In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. The sacred container is open. Come home.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#timeline" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
@@ -421,7 +418,7 @@ const SanctuaryWeek = () => {
       {/* ═══ SACRED PATHWAYS PRICING ═══ */}
       <SanctuarySection eyebrow="Sacred Pathways" title={<>Find Your<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Pathway of Participation</em></>}>
         <p className="text-center text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
-          These are not packages. They are invitations into a living sacred practice. Each pathway is a doorway, chosen not by what you can afford, but by what your spirit is ready to receive.
+          Sanctuary Week is a recurring series of sacred ceremonies, body practices, and community gatherings. Each offering is its own doorway. Choose the path your spirit is ready to walk.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
