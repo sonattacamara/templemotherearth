@@ -138,15 +138,15 @@ const kingdoms: KingdomData[] = [
       { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous wisdom keepers have known for millennia." },
     ],
     facts: [
-      { emoji: "🐸", label: "Kambo Peptides", val: "70+ bioactive peptides including Dermorphin (30–40x more potent than morphine)." },
-      { emoji: "🦎", label: "Bufo · 5-MeO-DMT", val: "The most intense non-ordinary state of consciousness accessible." },
-      { emoji: "🐍", label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
-      { emoji: "🦂", label: "Scorpion · Venom Therapy", val: "Over 130,000 species. Ziconotide — 1,000x more potent than morphine." },
+      { icon: Cat, label: "Kambo Peptides", val: "70+ bioactive peptides including Dermorphin (30-40x more potent than morphine)." },
+      { icon: Snail, label: "Bufo · 5-MeO-DMT", val: "The most intense non-ordinary state of consciousness accessible." },
+      { icon: Sparkles, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
+      { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ziconotide — 1,000x more potent than morphine." },
     ],
     cards: [
-      { icon: "🐸", name: "The Frog", body: "Kambo. 70+ peptides. The Great Purifier." },
-      { icon: "🦎", name: "The Toad", body: "5-MeO-DMT. Direct encounter with pure being." },
-      { icon: "🐍", name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
+      { icon: Cat, name: "The Frog", body: "Kambo. 70+ peptides. The Great Purifier." },
+      { icon: Snail, name: "The Toad", body: "5-MeO-DMT. Direct encounter with pure being." },
+      { icon: Sparkles, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
     ],
     stats: [
       { num: "70+", label: "Kambo bioactive peptides" },
