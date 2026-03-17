@@ -127,7 +127,7 @@ const DonationSuccess = () => {
               {
                 icon: Heart,
                 title: "Lives Transformed",
-                desc: "Your contribution directly enables ceremonies, community programs, facilitator training, and sacred space maintenance. Every dollar plants seeds of healing.",
+                desc: "Your contribution directly enables ceremonies, community programs, facilitator training, and sacred space maintenance. Every dollar plants seeds of transformation.",
               },
             ].map((item) => (
               <motion.div

@@ -81,7 +81,7 @@ const SacredTeaHouse = () => (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[3px] bg-[hsl(100,17%,71%)]">
         {teaMenu.map((tea) => (
           <div key={tea.name} className="bg-[hsl(90,20%,97%)] p-8 border-b-[3px] border-transparent hover:border-[hsl(45,50%,53%)] transition-colors">
-            <span className="text-[28px] block mb-3">{tea.icon}</span>
+            <tea.icon className="h-7 w-7 text-[hsl(110,25%,47%)] mb-3" />
             <h4 className="font-display text-[12px] tracking-[2px] text-[hsl(108,28%,13%)] mb-2 font-normal">{tea.name}</h4>
             <p className="font-display text-[9px] tracking-[2px] uppercase text-[hsl(110,25%,47%)] mb-2.5">{tea.properties}</p>
             <p className="text-[14px] leading-relaxed text-[hsl(110,15%,47%)] font-serif">{tea.desc}</p>
