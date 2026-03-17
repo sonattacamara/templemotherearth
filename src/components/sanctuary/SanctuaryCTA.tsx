@@ -34,7 +34,7 @@ const SanctuaryCTA = ({ eyebrow, title, description, ctaLabel, ctaHref, external
         <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-light leading-[1.1] mb-6 text-[hsl(40,30%,90%)]">
           {title}
         </h2>
-        <p className="text-[hsl(90,10%,35%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
+        <p className="text-[hsl(40,20%,65%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
           {description}
         </p>
         <a
