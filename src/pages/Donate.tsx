@@ -42,7 +42,7 @@ const impactCards = [
   {
     icon: HandHeart,
     title: "Community Outreach",
-    desc: "Bring traveling ceremonies and educational resources to communities across the country who need healing most.",
+    desc: "Bring traveling ceremonies and educational resources to communities across the country who need sacred support most.",
   },
 ];
 
