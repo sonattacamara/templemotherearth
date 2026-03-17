@@ -54,7 +54,7 @@ const CeremonyDonate = () => {
         tagline="Ceremony Scholarship Fund"
         heading="Gift the Journey to Someone Else"
         description="Your generous contribution makes it possible for someone who may not have the financial means to experience the transformative power of sacred ceremony."
-        taxNote="Temple Mother Earth is a US federally tax-exempt 501(c)(3) religious organization. All contributions are tax-deductible."
+        taxNote="Temple Mother Earth is a US federally tax-exempt 508(c)(1)(A) sacred ceremony church. All contributions are tax-deductible."
         donateUrl={CEREMONY_PAYPAL_URL}
         buttonLabel="Gift a Journey"
         buttonIcon={Heart}
