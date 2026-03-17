@@ -43,7 +43,7 @@ const SacredTeaHouse = () => (
         className="relative z-10 max-w-[600px]"
       >
         <p className="font-display text-[10px] tracking-[5px] uppercase text-[hsl(110,25%,47%)] mb-6">Ongoing · Monthly Offering</p>
-        <p className="text-6xl mb-5">🫖</p>
+        <Coffee className="mx-auto h-16 w-16 text-[hsl(110,25%,47%)] mb-5" />
         <h1 className="font-display text-[clamp(32px,5vw,68px)] font-semibold text-[hsl(108,28%,13%)] leading-[1.1] mb-2">
           Sacred Tea House
         </h1>
