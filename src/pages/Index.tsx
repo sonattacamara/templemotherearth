@@ -199,7 +199,7 @@ const Index = () => {
               to="/sacred-blueprint"
               className="rounded-xl bg-primary/20 border border-primary/40 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              Discover Your Sacred Blueprint ✦
+              Discover Your Sacred Blueprint
             </Link>
           </motion.div>
         </motion.div>
