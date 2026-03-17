@@ -31,7 +31,7 @@ const PrivateCeremonies = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Private Ceremonies | 1-on-1 Healing Sessions" description="Experience personalized private plant medicine ceremonies tailored to your intentions and healing journey. One-on-one sacred sessions." path="/private-ceremonies" />
+      <SEOHead title="Private Ceremonies | 1-on-1 Sacred Sessions" description="Experience personalized private Earth Medicine ceremonies tailored to your intentions and sacred path. One-on-one ceremonial sessions." path="/private-ceremonies" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Experiences" }, { label: "Private Ceremonies" }]} />
 
