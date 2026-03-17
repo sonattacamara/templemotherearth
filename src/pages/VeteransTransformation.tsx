@@ -32,8 +32,8 @@ const painPoints = [
   },
   {
     icon: <AlertTriangle className="h-6 w-6" />,
-    title: "Failed VA Treatment",
-    text: "You have done the intake forms. Sat in the waiting rooms. Taken the pills that made you feel like a zombie. Tried the talk therapy that barely scratched the surface. You are not a lost cause. The system was not built to reach where your pain actually lives.",
+    title: "Failed VA Protocols",
+    text: "You have done the intake forms. Sat in the waiting rooms. Taken the pills that made you feel like a zombie. Tried the talk sessions that barely scratched the surface. You are not a lost cause. The system was not built to reach where your pain actually lives.",
   },
   {
     icon: <Users className="h-6 w-6" />,
