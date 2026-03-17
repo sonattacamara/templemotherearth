@@ -33,7 +33,7 @@ const stagger = {
 const About = () => {
   return (
     <div id="top" className="min-h-screen bg-background">
-      <SEOHead title="About Temple Mother Earth | Our Story & Mission" description="Learn how Temple Mother Earth was founded in 2020 to provide sacred plant medicine ceremonies, spiritual healing, and conscious community in Washington DC." path="/about" />
+      <SEOHead title="About Temple Mother Earth | Our Story & Mission" description="Learn how Temple Mother Earth was founded in 2020 to provide sacred plant medicine ceremonies, spiritual transformation, and conscious community in Washington DC." path="/about" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "About" }]} />
 
