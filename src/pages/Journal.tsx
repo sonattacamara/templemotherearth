@@ -58,7 +58,7 @@ Kambo is for the seeker who is ready to shed what is heavy. It is for veterans c
 
 If you are in Washington DC, Maryland, Virginia, or anywhere in the greater DMV area and feel the call, we invite you to explore this ancient warrior's reset with us.
 
-🌿 *Visit our Kambo page or reach out through our Sacred Intake Form to begin your journey.*`,
+*Visit our Kambo page or reach out through our Sacred Intake Form to begin your journey.*`,
   },
   {
     slug: "opening-the-heart-cacao-ceremony-2026",
