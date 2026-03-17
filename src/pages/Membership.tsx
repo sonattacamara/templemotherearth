@@ -577,7 +577,7 @@ const Membership = () => {
           <div className="mt-12 border-t border-primary-foreground/10 pt-8">
             <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
               <p className="font-body text-xs text-primary-foreground/40">
-                © {new Date().getFullYear()} Temple Mother Earth. A 501(c)(3) nonprofit organization. All rights reserved.
+                © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.
               </p>
               <p className="font-body text-xs text-primary-foreground/40 text-center md:text-right max-w-lg">
                 Temple Mother Earth operates as a religious organization under the protections of the Religious Freedom Restoration Act (RFRA) and the First Amendment of the United States Constitution.

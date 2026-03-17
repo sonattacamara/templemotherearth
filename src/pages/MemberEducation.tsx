@@ -31,7 +31,7 @@ At Temple Mother Earth, Kambo is administered with deep reverence for its indige
     icon: Heart,
     content: `Kambo has been traditionally used for:
 
-• **Deep physical detoxification** — Kambo purges toxins, heavy metals, and parasites from the body through a natural purging process.
+• **Deep physical detoxification** — Kambo purges stored impurities, heavy metals, and parasites from the body through a natural purging process.
 • **Immune system activation** — The bioactive peptides in Kambo stimulate the immune system, helping the body fight infection and illness.
 • **Mental clarity & focus** — Many participants report heightened mental clarity, improved focus, and a sense of "lifting" from brain fog.
 • **Emotional release** — Stored emotional trauma and grief often release during the ceremony, creating space for new energy.

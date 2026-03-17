@@ -117,7 +117,7 @@ const timelineDays: TimelineDay[] = [
     description: "The Great Purifier. The ancient Amazonian purification sacrament. For those who have been called. Sacred screening required. By application only.",
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
     pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-healing-ceremony-registration-822085920117", ctaReady: true,
+    ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
     slug: "/kambo", image: "https://images.pexels.com/photos/975354/pexels-photo-975354.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Integration",
   },

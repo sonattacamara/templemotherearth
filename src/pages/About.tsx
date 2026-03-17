@@ -751,7 +751,7 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* ───── YOU ARE YOUR OWN HEALER ───── */}
+      {/* ───── YOU ARE YOUR OWN SOVEREIGN BEING ───── */}
       <section className="bg-card px-4 py-24 md:py-32">
         <motion.div
           className="mx-auto max-w-3xl text-center"
@@ -764,7 +764,7 @@ const About = () => {
             Our Message to You
           </motion.p>
           <motion.h2 variants={fadeUp} className="mt-4 font-display text-3xl font-bold text-card-foreground md:text-5xl">
-            You Are Your Own Healer
+            You Are Your Own Sovereign Being
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
@@ -775,13 +775,13 @@ const About = () => {
             </p>
             <p>
               At Temple Mother Earth, we are human beings dedicated to providing space for YOU to do
-              your OWN work with sacred tools, wisdom, guidance, and practices. This is not a magic cure
-              or a quick fix — it is called medicine for a specific reason. Healing is a lifestyle 
+              your OWN work with sacred tools, wisdom, guidance, and practices. This is not a quick fix 
+              — it is called sacrament for a specific reason. Transformation is a lifestyle 
               and a continuous journey.
             </p>
             <p className="font-display text-xl font-semibold text-foreground italic">
               "Find your way back home to the wisdom and divine intelligence that exists within your entire being.
-              You are your own healer and savior."
+              You are your own sovereign being and savior."
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-10">

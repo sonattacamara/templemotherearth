@@ -422,7 +422,7 @@ const VeteransTransformation = () => {
               Kambo contains <strong>16 bioactive peptides</strong> that stimulate the immune system, reduce inflammation, release pain-fighting compounds stronger than morphine (without addiction), and reset the body's detox systems.
             </p>
             <p>
-              It purges toxins, pharmaceuticals, and stagnant energy from the body. Veterans who have been on years of VA medications often report feeling <em>"clean"</em> for the first time.
+              It purges stored impurities, pharmaceutical residue, and stagnant energy from the body. Veterans who have been on years of VA medications often report feeling <em>"clean"</em> for the first time.
             </p>
             <p>
               It takes approximately <strong>20 to 40 minutes</strong>. Not weeks. Not months. One powerful session.

@@ -226,7 +226,7 @@ const KamboCeremony = () => {
             {[
               { title: "Sustainer", desc: "Full contribution. For those who can, you also support someone who cannot." },
               { title: "Community", desc: "Reduced contribution. For those working and committed but genuinely strained.", featured: true },
-              { title: "Scholarship", desc: "Funded through TOME 501(c)(3). A brief reflection is all that's required. Ask us." },
+              { title: "Scholarship", desc: "Funded through TOME 508(c)(1)(A). A brief reflection is all that's required. Ask us." },
             ].map((tier) => (
               <div key={tier.title} className={`p-8 bg-[hsl(140,28%,6%)] border ${tier.featured ? "border-[hsla(45,70%,49%,0.3)]" : "border-[hsla(45,70%,49%,0.08)]"}`}>
                 <h3 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3">{tier.title}</h3>
