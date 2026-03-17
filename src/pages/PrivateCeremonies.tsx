@@ -31,7 +31,7 @@ const PrivateCeremonies = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Private Ceremonies | 1-on-1 Healing Sessions" description="Experience personalized private plant medicine ceremonies tailored to your intentions and healing journey. One-on-one sacred sessions." path="/private-ceremonies" />
+      <SEOHead title="Private Ceremonies | 1-on-1 Sacred Sessions" description="Experience personalized private Earth Medicine ceremonies tailored to your intentions and sacred path. One-on-one ceremonial sessions." path="/private-ceremonies" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Experiences" }, { label: "Private Ceremonies" }]} />
 
@@ -47,7 +47,7 @@ const PrivateCeremonies = () => {
             1-on-1 / Private Ceremonies
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Personalized, intimate Earth Medicine sessions tailored specifically to your individual healing journey,
+            Personalized, intimate Earth Medicine sessions tailored specifically to your individual sacred path,
             held in a private and sacred setting with one of our experienced facilitators.
           </motion.p>
         </motion.div>
@@ -58,7 +58,7 @@ const PrivateCeremonies = () => {
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
             { icon: Shield, title: "Undivided Attention", desc: "Your facilitator's complete focus is on you — your needs, your pace, your journey. No group dynamics to navigate." },
-            { icon: Sparkles, title: "Deeply Personalized", desc: "Every element of the ceremony is tailored to your specific intentions, healing goals, and spiritual path." },
+            { icon: Sparkles, title: "Deeply Personalized", desc: "Every element of the ceremony is tailored to your specific intentions, transformation goals, and spiritual path." },
             { icon: Users, title: "Flexible Setting", desc: "Private ceremonies can be held at our DC sanctuary or at your preferred location. We create the sacred container wherever you need it." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">

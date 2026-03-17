@@ -21,10 +21,10 @@ const fadeUp = {
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const benefits = [
-  { icon: Shield, title: "Immune System Strengthening", desc: "Kambo peptides stimulate the immune system, helping clear toxins and support the body's natural healing intelligence." },
+  { icon: Shield, title: "Immune System Strengthening", desc: "Kambo peptides stimulate the immune system, helping clear accumulated buildup and support the body's natural intelligence." },
   { icon: Brain, title: "Mental Clarity & Focus", desc: "Many participants report sharp mental clarity, lifted brain fog, and heightened awareness after ceremony." },
-  { icon: Heart, title: "Emotional Release & Healing", desc: "The purging process helps release stored emotions, grief, and energetic blockages held deep in the body." },
-  { icon: Sparkles, title: "Spiritual Purification", desc: "Kambo is considered a spiritual reset — clearing negative energy and realigning your connection to source." },
+  { icon: Heart, title: "Emotional Release & Purification", desc: "The purging process helps release stored emotions, grief, and energetic blockages held deep in the body." },
+  { icon: Sparkles, title: "Spiritual Purification", desc: "Kambo is considered a spiritual reset, clearing negative energy and realigning your connection to source." },
 ];
 
 const whatToExpect = [
@@ -204,9 +204,9 @@ const KamboRedirect = () => {
               <p className="text-muted-foreground leading-relaxed">
                 King James is the co-founder of Temple Mother Earth and an experienced Kambo practitioner
                 who has facilitated hundreds of sacred Kambo ceremonies. His approach combines deep reverence
-                for the medicine with rigorous safety protocols, ensuring every participant is held in a
+                for the sacrament with rigorous safety protocols, ensuring every participant is held in a
                 container of care, prayer, and intention. James's journey with Kambo began through his own
-                healing path, and he now dedicates his life to sharing this sacred medicine with warriors,
+                path of transformation, and he now dedicates his life to sharing this sacred sacrament with warriors,
                 seekers, and those called to purification.
               </p>
             </div>

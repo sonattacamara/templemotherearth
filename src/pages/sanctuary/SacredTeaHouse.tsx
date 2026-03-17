@@ -22,7 +22,7 @@ const steps = [
 const benefits = [
   { title: "Accessible Entry Point", desc: "Sacred Tea House is an ideal introduction to sacred ceremony, approachable, gentle, and deeply nourishing." },
   { title: "Nervous System Reset", desc: "Medicinal teas and ceremonial space help regulate the nervous system and shift out of chronic stress states." },
-  { title: "Community Sacrament", desc: "There is healing in gathering. Being witnessed, seen, and held in community is its own powerful sacrament." },
+  { title: "Community Sacrament", desc: "There is restoration in gathering. Being witnessed, seen, and held in community is its own powerful sacrament." },
   { title: "Ritual & Rhythm", desc: "A monthly anchor point of slowness, sacredness, and self-renewal in the rhythm of your life." },
 ];
 

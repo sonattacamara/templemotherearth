@@ -128,12 +128,12 @@ const kingdoms: KingdomData[] = [
   },
   {
     id: "animal", num: "Four", name: "ANIMAL", subtitle: "sacred messengers & sacrament carriers",
-    lead: "The Animal Kingdom is not a source of exploitation — it is a community of teachers. The frog, toad, snake, scorpion — ancient healing intelligences.",
+    lead: "The Animal Kingdom is not a source of exploitation, it is a community of teachers. The frog, toad, snake, scorpion, ancient sacred intelligences.",
     titleColor: "#8FD67A", eyebrowColor: "#3D7A3D", factBg: "#060D06", factLabelColor: "#5BA84A",
     cardBg: "#060D06", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7A3D",
     sections: [
       { title: "The Frog · Kambo", content: "Phyllomedusa bicolor — over 70 bioactive peptides found nowhere else in nature. The frog is never harmed. The relationship is symbiotic, not extractive." },
-      { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous healers have known for millennia." },
+      { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous wisdom keepers have known for millennia." },
     ],
     facts: [
       { emoji: "🐸", label: "Kambo Peptides", val: "70+ bioactive peptides including Dermorphin (30–40x more potent than morphine)." },

@@ -22,7 +22,7 @@ const impactCards = [
   {
     icon: Users,
     title: "Grow Our Sacred Family",
-    desc: "Fund community gatherings, sacred services, and educational programs that bring our Temple family together in healing.",
+    desc: "Fund community gatherings, sacred services, and educational programs that bring our Temple family together in sacred fellowship.",
   },
   {
     icon: Shield,
@@ -42,7 +42,7 @@ const impactCards = [
   {
     icon: HandHeart,
     title: "Community Outreach",
-    desc: "Bring traveling ceremonies and educational resources to communities across the country who need healing most.",
+    desc: "Bring traveling ceremonies and educational resources to communities across the country who need sacred support most.",
   },
 ];
 
@@ -70,14 +70,14 @@ const Donate = () => {
         heroImage={sacredSpaceImg}
         tagline="Offerings & Tithes"
         heading="Keep the Temple Sustainable"
-        description="Your generosity sustains a sacred space where healing, community, and Earth Medicine traditions thrive. Every offering directly supports our mission to preserve these practices and expand access to transformation."
+        description="Your generosity sustains a sacred space where ceremony, community, and Earth Medicine traditions thrive. Every offering directly supports our mission to preserve these practices and expand access to transformation."
         taxNote="Temple Mother Earth is a US federally tax-exempt 501(c)(3) religious organization. All contributions are tax-deductible. Thank you for being part of this sacred family."
         donateUrl={PAYPAL_DONATE_URL}
         buttonLabel="Offerings & Tithes"
       />
 
       <DonateImpactCards
-        heading="How Your Offering Creates Healing"
+        heading="How Your Offering Creates Transformation"
         subheading="Every dollar sown into the Temple directly supports transformation, community, and the preservation of sacred traditions."
         cards={impactCards}
       />

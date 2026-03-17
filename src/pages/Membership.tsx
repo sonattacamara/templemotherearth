@@ -143,7 +143,7 @@ const tiers = [
     period: "/month",
     icon: Star,
     commitment: "3-month journey",
-    philosophy: "For those walking the path of deep integration and service. After three months of practice and preparation, you become eligible for quarterly immersions. This is where healing becomes a way of life.",
+    philosophy: "For those walking the path of deep integration and service. After three months of practice and preparation, you become eligible for quarterly immersions. This is where transformation becomes a way of life.",
     includes: [
       "Everything in Preparation Path",
       "Quarterly immersion eligibility",
@@ -187,7 +187,7 @@ const Membership = () => {
 
   return (
     <div className="min-h-screen bg-gradient-earth">
-      <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of healers and seekers." path="/membership" />
+      <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of seekers and practitioners." path="/membership" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Membership" }]} />
 
@@ -223,7 +223,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mx-auto mt-8 max-w-lg text-lg leading-relaxed text-primary-foreground/70"
           >
-            Temple Mother Earth was born from a simple truth: healing happens in community.
+            Temple Mother Earth was born from a simple truth: transformation happens in community.
             Whether you're taking your first step or deepening a lifelong practice, 
             there is a home for you here.
           </motion.p>
@@ -253,16 +253,16 @@ const Membership = () => {
             </p>
             <p>
               Every stage of this journey is designed with love, intention, and deep care for your 
-              nervous system, your spirit, and your unique path of healing.
+              nervous system, your spirit, and your unique path of transformation.
             </p>
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-14 grid gap-6 sm:grid-cols-2">
             {[
-              { icon: Shield, title: "Safety & Nervous System Care", desc: "Your body knows what it needs. We create spaces where your nervous system can feel safe enough to heal, release, and integrate at your own pace." },
+              { icon: Shield, title: "Safety & Nervous System Care", desc: "Your body knows what it needs. We create spaces where your nervous system can feel safe enough to release, restore, and integrate at your own pace." },
               { icon: Heart, title: "Integration & Wholeness", desc: "Every experience is held in a container of care — preparation before, integration after — so insights become lasting transformation, not fleeting moments." },
               { icon: Sparkles, title: "Intentional & Sacred", desc: "Each step on this path is a conscious choice. We honor that by ensuring you feel informed, supported, and never rushed." },
-              { icon: Users, title: "Community & Connection", desc: "Healing doesn't happen in isolation. You are surrounded by kindred spirits who see you, hold space for you, and walk alongside you." },
+              { icon: Users, title: "Community & Connection", desc: "Transformation doesn't happen in isolation. You are surrounded by kindred spirits who see you, hold space for you, and walk alongside you." },
             ].map((v) => (
               <div key={v.title} className="rounded-2xl border border-border bg-card p-6 text-left">
                 <v.icon className="h-6 w-6 text-primary" />
@@ -289,7 +289,7 @@ const Membership = () => {
               Discover Your Sacred Blueprint
             </h3>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-lg mx-auto">
-              Your Human Design chart decoded through a sacred lens — connecting your unique energy type to the perfect membership path for your healing journey.
+              Your Human Design chart decoded through a sacred lens, connecting your unique energy type to the perfect membership path for your sacred journey.
             </p>
             <Link
               to="/sacred-blueprint"

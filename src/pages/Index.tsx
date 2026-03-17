@@ -80,7 +80,7 @@ const offerings = [
     title: "1-on-1 / Private Ceremonies",
     desc: "Experience deeply personal sacred sessions designed around your unique intentions, needs, and path of transformation.",
     img: offeringPrivate,
-    imgAlt: "Private Kambo, Hapé, and Bobinsana ceremony session for personal healing and transformation",
+    imgAlt: "Private Kambo, Hapé, and Bobinsana ceremony session for personal transformation and sacred practice",
     link: "/private-ceremonies",
     isExternal: false,
     cta: "Explore Private Ceremonies",
@@ -302,33 +302,33 @@ const Index = () => {
         >
           <JourneyStage label="The Awakening" />
           <motion.h2 variants={fadeUp} className="text-center font-display text-3xl font-semibold text-foreground md:text-5xl">
-            You Are Your Own Healer
+            You Are a Sovereign Being
           </motion.h2>
           <motion.div variants={fadeUp} className="mt-10 grid gap-10 md:grid-cols-2 items-center">
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
                 The Divine resides within you. Whether you call it God, Source, Universe, Spirit, 
                 the Most High, the Creator, the Ancestors, the Great Mystery, Jah, Allah, Yahweh, 
-                Brahman, the Sacred, or simply Love — that infinite intelligence lives within your 
+                Brahman, the Sacred, or simply Love, that infinite intelligence lives within your 
                 very being. You have always had the power to connect to it.
               </p>
               <p>
-                At Temple Mother Earth, we don't heal you — we hold sacred space for you to remember 
-                that you are your own healer. Through Earth Medicine, ceremony, and community, 
+                At Temple Mother Earth, we hold sacred space for you to remember 
+                your own wholeness. Through Earth Medicine, ceremony, and community, 
                 we help you reconnect with the divine wisdom that has always been yours.
               </p>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
                 src={sacredSpace}
-                alt="Sacred ceremony space for Ayahuasca integration, Kambo healing, and Hapé rituals at Temple Mother Earth"
+                alt="Sacred ceremony space for Ayahuasca integration, Kambo purification, and Hapé rituals at Temple Mother Earth"
                 className="w-full h-80 object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="font-display text-sm font-semibold text-primary-foreground italic">
-                  "Find your way back home to the wisdom and divine intelligence that exists within your entire being. You are your own healer and savior."
+                  "Find your way back home to the wisdom and divine intelligence that exists within your entire being. You are a sovereign being."
                 </p>
               </div>
             </div>

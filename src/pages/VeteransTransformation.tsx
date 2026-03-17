@@ -32,8 +32,8 @@ const painPoints = [
   },
   {
     icon: <AlertTriangle className="h-6 w-6" />,
-    title: "Failed VA Treatment",
-    text: "You have done the intake forms. Sat in the waiting rooms. Taken the pills that made you feel like a zombie. Tried the talk therapy that barely scratched the surface. You are not a lost cause. The system was not built to reach where your pain actually lives.",
+    title: "Failed VA Protocols",
+    text: "You have done the intake forms. Sat in the waiting rooms. Taken the pills that made you feel like a zombie. Tried the talk sessions that barely scratched the surface. You are not a lost cause. The system was not built to reach where your pain actually lives.",
   },
   {
     icon: <Users className="h-6 w-6" />,
@@ -48,7 +48,7 @@ const painPoints = [
   {
     icon: <Zap className="h-6 w-6" />,
     title: "TBI & Brain Fog",
-    text: "The blasts you survived left invisible damage. The fog, the headaches, the memory gaps. Your brain is trying to heal and it needs support that goes deeper than what a scan can show.",
+    text: "The blasts you survived left invisible damage. The fog, the headaches, the memory gaps. Your brain is trying to restore itself and it needs support that goes deeper than what a scan can show.",
   },
   {
     icon: <Leaf className="h-6 w-6" />,
@@ -73,11 +73,11 @@ const kamboFears = [
 
 /* ─── Transformation Phases ─── */
 const phases = [
-  { phase: "Phase 1", name: "Purification", offering: "Kambo Ceremony", addresses: "Physical toxins, pharmaceutical buildup, immune system reset", benefit: "Clears the body so deeper healing can take root. Like clearing a weapon before maintenance — you strip it down first.", icon: <Leaf className="h-8 w-8" /> },
+  { phase: "Phase 1", name: "Purification", offering: "Kambo Ceremony", addresses: "Physical buildup, pharmaceutical residue, immune system reset", benefit: "Clears the body so deeper transformation can take root. Like clearing a weapon before maintenance, you strip it down first.", icon: <Leaf className="h-8 w-8" /> },
   { phase: "Phase 2", name: "Nervous System Reset", offering: "Hapé (Sacred Snuff)", addresses: "Grounding, mental clarity, energetic clearing", benefit: "Downregulates your threat-detection system. Takes you off high alert so you can actually rest.", icon: <Brain className="h-8 w-8" /> },
-  { phase: "Phase 3", name: "Deep Healing", offering: "Sacred Earth Medicine Ceremony", addresses: "Root trauma, PTSD, emotional wounds, spiritual disconnection", benefit: "Goes where talk therapy cannot reach — into the places your body locked the mission away.", icon: <Heart className="h-8 w-8" /> },
-  { phase: "Phase 4", name: "Spiritual Reset", offering: "Sacred Earth Medicine Ceremony", addresses: "Identity healing, existential restoration, spiritual reconnection", benefit: "Helps you remember who you were before the uniform — and who you are becoming after.", icon: <Sun className="h-8 w-8" /> },
-  { phase: "Phase 5", name: "Integration", offering: "Integration Circles & Ongoing Support", addresses: "Sustained healing, community accountability, new patterns", benefit: "You do not get dropped back into the world alone. We build your support network — your new unit.", icon: <Sparkles className="h-8 w-8" /> },
+  { phase: "Phase 3", name: "Deep Restoration", offering: "Sacred Earth Medicine Ceremony", addresses: "Root trauma, PTSD, emotional wounds, spiritual disconnection", benefit: "Goes where talk sessions cannot reach, into the places your body locked the mission away.", icon: <Heart className="h-8 w-8" /> },
+  { phase: "Phase 4", name: "Spiritual Reset", offering: "Sacred Earth Medicine Ceremony", addresses: "Identity restoration, existential return, spiritual reconnection", benefit: "Helps you remember who you were before the uniform, and who you are becoming after.", icon: <Sun className="h-8 w-8" /> },
+  { phase: "Phase 5", name: "Integration", offering: "Integration Circles & Ongoing Support", addresses: "Sustained transformation, community accountability, new patterns", benefit: "You do not get dropped back into the world alone. We build your support network, your new unit.", icon: <Sparkles className="h-8 w-8" /> },
 ];
 
 /* ─── Weekend Schedule ─── */
