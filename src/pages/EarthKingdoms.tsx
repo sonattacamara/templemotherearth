@@ -109,15 +109,15 @@ const kingdoms: KingdomData[] = [
       { title: "Medicinal Mushrooms", content: "Reishi has been used for 2,000+ years. Lion's Mane stimulates nerve growth factor. Cordyceps increases cellular ATP by up to 28%." },
     ],
     facts: [
-      { emoji: "🌐", label: "Mycelial Network", val: "A single teaspoon of soil contains miles of mycelial threads." },
-      { emoji: "🧠", label: "Lion's Mane", val: "The only food known to stimulate NGF and BDNF — grows new neurons." },
-      { emoji: "🛡", label: "Beta-Glucans", val: "Used as approved pharmaceutical drugs in Japan, China, South Korea." },
-      { emoji: "⚡", label: "Cordyceps", val: "Increases cellular ATP production by up to 28%." },
+      { icon: Globe, label: "Mycelial Network", val: "A single teaspoon of soil contains miles of mycelial threads." },
+      { icon: Brain, label: "Lion's Mane", val: "The only food known to stimulate NGF and BDNF — grows new neurons." },
+      { icon: ShieldCheck, label: "Beta-Glucans", val: "Used as approved pharmaceutical drugs in Japan, China, South Korea." },
+      { icon: Zap, label: "Cordyceps", val: "Increases cellular ATP production by up to 28%." },
     ],
     cards: [
-      { icon: "🦁", name: "Lion's Mane", body: "The brain mushroom. Grows new neurons." },
-      { icon: "🌟", name: "Reishi", body: "Mushroom of Immortality. Immune modulation, deep sleep." },
-      { icon: "⚡", name: "Cordyceps", body: "The warrior mushroom. Increases ATP and endurance." },
+      { icon: Brain, name: "Lion's Mane", body: "The brain mushroom. Grows new neurons." },
+      { icon: Sparkles, name: "Reishi", body: "Mushroom of Immortality. Immune modulation, deep sleep." },
+      { icon: Zap, name: "Cordyceps", body: "The warrior mushroom. Increases ATP and endurance." },
     ],
     stats: [
       { num: "3.8B", label: "Years fungi existed" },
