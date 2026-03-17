@@ -47,7 +47,7 @@ const KamboTeaserModal = () => {
             </button>
 
             <p className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary mb-2">
-              Sacred Medicine Awaits
+              Sacred Sacrament Awaits
             </p>
 
             <h2 className="font-display text-2xl font-bold text-primary-foreground md:text-3xl">
