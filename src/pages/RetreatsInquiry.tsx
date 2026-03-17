@@ -14,6 +14,7 @@ import immersionAerial from "@/assets/immersion-aerial.jpg";
 import immersionHammock from "@/assets/immersion-hammock.jpg";
 import immersionPalapa from "@/assets/immersion-palapa.jpg";
 import immersionInterior from "@/assets/immersion-interior.jpg";
+import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
