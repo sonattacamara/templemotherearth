@@ -243,7 +243,7 @@ const KemeticTeachings = () => {
                   <p className="font-body text-sm"><strong>Kemet</strong>, meaning "The Black Land," is the original name for ancient Egypt, referring to the rich, dark soil along the Nile that sustained all life.</p>
                 </TooltipContent>
               </Tooltip>{" "}
-              (ancient Egypt) understood that the Earth herself is medicine, and that true healing begins when we align ourselves with her rhythms, her seasons, and her wisdom.
+              (ancient Egypt) understood that the Earth herself is sacrament, and that true transformation begins when we align ourselves with her rhythms, her seasons, and her wisdom.
             </p>
             <p>
               Kemetism is the spiritual practice of awareness, connection, and elevation through these Kemetic spiritual principles — creating the balance of{" "}
