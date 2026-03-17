@@ -141,7 +141,7 @@ const Donate = () => {
       <DonateCTA
         tagline="Sustain the Sacred"
         heading="Your Offering Plants Seeds of Transformation"
-        body="Temple Mother Earth is a 501(c)(3) nonprofit organization. Your tax-deductible offering helps us continue to serve our community, preserve Earth Medicine traditions, and grow our sacred family."
+        body="Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Your tax-deductible offering helps us continue to serve our community, preserve Earth Medicine traditions, and grow our sacred family."
         donateUrl={PAYPAL_DONATE_URL}
         buttonLabel="Offerings & Tithes"
         onDisclosure={() => setShowDisclosure(true)}
