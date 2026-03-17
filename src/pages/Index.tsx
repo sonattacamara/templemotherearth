@@ -946,7 +946,7 @@ const Index = () => {
         </motion.div>
       </section>
 
-      <HomeFAQ />
+      
 
       <DonationCTA
         eyebrow="Sustain the Sacred"
