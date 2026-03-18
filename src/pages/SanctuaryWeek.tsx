@@ -359,8 +359,8 @@ const SanctuaryWeek = () => {
           <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
             The Arc of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Ten Days</em>
           </h2>
-          <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[600px] mx-auto mt-6 leading-relaxed">
-            Scroll through each day. Each ceremony builds on the last. The sequence is sacred.
+          <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[640px] mx-auto mt-6 leading-relaxed">
+            The arc is intentional. Like the seasons, each ceremony opens what the next one deepens. Your nervous system needs time between thresholds, your spirit needs community to land in, and your body needs rest before it can rise again. This is a living container, held by the people who walked it before you, designed to honor exactly where you are in your becoming.
           </p>
         </div>
 
