@@ -87,7 +87,7 @@ const KamboRedirect = () => {
             Sacred Frog Medicine
           </motion.p>
           <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl leading-tight">
-            Kambo Ceremony in Washington DC
+            Kambo Ceremony in <span className="whitespace-nowrap">Washington DC</span>
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Experience the ancient purification medicine of the Giant Monkey Tree Frog.
