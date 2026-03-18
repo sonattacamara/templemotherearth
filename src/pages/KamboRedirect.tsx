@@ -135,15 +135,7 @@ const KamboRedirect = () => {
                 our co-founder and experienced Kambo practitioner, in a safe, sacred, and medically-screened environment.
               </p>
             </div>
-            <div className="space-y-6">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src={kamboFrogEye}
-                  alt="Close-up of Giant Monkey Tree Frog eye, the sacred source of Kambo purification ceremony"
-                  className="w-full h-56 object-cover"
-                  loading="lazy"
-                />
-              </div>
+            <div>
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <video
                   controls
