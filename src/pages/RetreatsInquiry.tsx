@@ -28,7 +28,7 @@ const RetreatsInquiry = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", retreatInterest: "",
+    firstName: "", lastName: "", email: "", phone: "", retreatInterest: "",
     groupSize: "", dates: "", experience: "", dietaryNeeds: "",
     intentions: "", medicalConcerns: "", howHeard: "",
   });
