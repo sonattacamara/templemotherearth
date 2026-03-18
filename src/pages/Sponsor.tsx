@@ -21,7 +21,7 @@ const Sponsor = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", organization: "",
+    firstName: "", lastName: "", email: "", phone: "", organization: "",
     sponsorType: "", message: "",
   });
 
