@@ -213,6 +213,7 @@ const TimelineCard = ({ day }: { day: TimelineDay }) => (
       src={day.image}
       alt={day.name}
       className="w-full h-[180px] object-cover saturate-[0.7] brightness-[0.8] group-hover:saturate-[0.9] group-hover:brightness-[0.9] transition-[filter] duration-400"
+      style={day.imagePosition ? { objectPosition: day.imagePosition } : undefined}
       loading="lazy"
     />
     <div className="p-5 md:p-6">
