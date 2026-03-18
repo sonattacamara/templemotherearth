@@ -13,6 +13,7 @@ import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
 import sanctuaryDay4Level5 from "@/assets/sanctuary-day4-level5.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
+import kamboCeremonyAltar from "@/assets/kambo-ceremony-altar.jpg";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -124,7 +125,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
     pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
-    slug: "/kambo", image: "https://images.pexels.com/photos/975354/pexels-photo-975354.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    slug: "/kambo", image: kamboCeremonyAltar,
     phase: "The Integration",
   },
 ];
@@ -351,6 +352,62 @@ const SanctuaryWeek = () => {
         </motion.div>
       </section>
 
+      {/* ═══ FIVE PILLARS (moved near top) ═══ */}
+      <SanctuarySection eyebrow="Our Sacred Approach" title={<>Five Pillars of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">The Sanctuary Experience</em></>}>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-0.5">
+          {[
+            { num: "01", title: "10-Ceremony Arc", desc: "A rhythmic, continuous journey designed to honor your natural process of becoming.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "02", title: "Expert Facilitation", desc: "A collaborative, heart-led team holding a steady space for your unfolding growth.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "03", title: "Extended Integration", desc: "Guidance that walks beside you for 6+ months as you ground your transformation.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "04", title: "Intimate Cohorts", desc: "Small circles of 12 to 20, fostering true community, belonging, and shared wisdom.", icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "05", title: "Trauma-Informed", desc: "A compassionate, tailored approach that honors exactly where you are today.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+          ].map((pillar) => (
+            <div key={pillar.num} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7">
+              <div className="mb-3">{pillar.icon}</div>
+              <p className="font-sans text-2xl font-extralight text-[hsla(45,70%,49%,0.3)] mb-2">{pillar.num}</p>
+              <h3 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(40,30%,90%)] mb-2">{pillar.title}</h3>
+              <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{pillar.desc}</p>
+            </div>
+          ))}
+        </div>
+      </SanctuarySection>
+
+      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
+
+      {/* ═══ INTERACTIVE TIMELINE (moved near top) ═══ */}
+      <section id="timeline" className="px-6 md:px-12 py-16 md:py-24 max-w-[1100px] mx-auto">
+        <div className="text-center mb-16">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Journey</p>
+          <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
+            The Arc of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Ten Days</em>
+          </h2>
+          <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[600px] mx-auto mt-6 leading-relaxed">
+            Scroll through each day. Each ceremony builds on the last. The sequence is sacred.
+          </p>
+        </div>
+
+        <PhaseMarker title="The Opening" days="Days 1–3" />
+        {timelineDays.slice(0, 3).map((day, i) => (
+          <TimelineNode key={day.day} day={day} index={i} />
+        ))}
+
+        <PhaseMarker title="The Initiation" days="Day 4" />
+        <TimelineNode day={timelineDays[3]} index={3} />
+
+        <PhaseMarker title="The Rest" days="Day 5" />
+        <TimelineNode day={timelineDays[4]} index={4} />
+
+        <PhaseMarker title="The Belonging" days="Day 6" />
+        <TimelineNode day={timelineDays[5]} index={5} />
+
+        <PhaseMarker title="The Integration" days="Days 7–9" />
+        {timelineDays.slice(6).map((day, i) => (
+          <TimelineNode key={day.day} day={day} index={i + 6} />
+        ))}
+      </section>
+
+      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
+
       {/* ═══ ENERGY OF SIX — FEATURED CALLOUT ═══ */}
       <section className="py-20 md:py-28 px-6 md:px-12 bg-gradient-to-b from-[hsl(114,36%,10%)] to-[hsl(105,30%,8%)]">
         <motion.div
@@ -422,88 +479,6 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ SACRED PATHWAYS PRICING ═══ */}
-      <SanctuarySection eyebrow="Sacred Pathways" title={<>Find Your<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Pathway of Participation</em></>}>
-        <p className="text-center text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
-          Sanctuary Week is a recurring series of sacred ceremonies, body practices, and community gatherings. Each offering is its own doorway. Choose the path your spirit is ready to walk.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
-          {[
-            { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
-            { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$2,222" },
-            { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
-            { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
-          ].map((path) => (
-            <div key={path.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 text-center">
-              <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2">{path.title}</p>
-              <p className="font-sans text-3xl font-extralight text-[hsl(40,30%,92%)] mb-2">{path.price}</p>
-              <p className="font-serif text-[14px] text-[hsl(35,30%,60%)]">{path.subtitle}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-center font-sans text-[9px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-8">
-          <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Community Care Model applies</Link> · Scholarship available for genuine hardship
-        </p>
-      </SanctuarySection>
-
-      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
-
-      {/* ═══ FIVE PILLARS ═══ */}
-      <SanctuarySection eyebrow="Our Sacred Approach" title={<>Five Pillars of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">The Sanctuary Experience</em></>}>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-0.5">
-          {[
-            { num: "01", title: "10-Ceremony Arc", desc: "A rhythmic, continuous journey designed to honor your natural process of becoming.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "02", title: "Expert Facilitation", desc: "A collaborative, heart-led team holding a steady space for your unfolding growth.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "03", title: "Extended Integration", desc: "Guidance that walks beside you for 6+ months as you ground your transformation.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "04", title: "Intimate Cohorts", desc: "Small circles of 12 to 20, fostering true community, belonging, and shared wisdom.", icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "05", title: "Trauma-Informed", desc: "A compassionate, tailored approach that honors exactly where you are today.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-          ].map((pillar) => (
-            <div key={pillar.num} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7">
-              <div className="mb-3">{pillar.icon}</div>
-              <p className="font-sans text-2xl font-extralight text-[hsla(45,70%,49%,0.3)] mb-2">{pillar.num}</p>
-              <h3 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(40,30%,90%)] mb-2">{pillar.title}</h3>
-              <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{pillar.desc}</p>
-            </div>
-          ))}
-        </div>
-      </SanctuarySection>
-
-      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
-
-      {/* ═══ INTERACTIVE TIMELINE ═══ */}
-      <section id="timeline" className="px-6 md:px-12 py-16 md:py-24 max-w-[1100px] mx-auto">
-        <div className="text-center mb-16">
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Journey</p>
-          <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
-            The Arc of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Ten Days</em>
-          </h2>
-          <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[600px] mx-auto mt-6 leading-relaxed">
-            Scroll through each day. Each ceremony builds on the last. The sequence is sacred.
-          </p>
-        </div>
-
-        <PhaseMarker title="The Opening" days="Days 1–3" />
-        {timelineDays.slice(0, 3).map((day, i) => (
-          <TimelineNode key={day.day} day={day} index={i} />
-        ))}
-
-        <PhaseMarker title="The Initiation" days="Day 4" />
-        <TimelineNode day={timelineDays[3]} index={3} />
-
-        <PhaseMarker title="The Rest" days="Day 5" />
-        <TimelineNode day={timelineDays[4]} index={4} />
-
-        <PhaseMarker title="The Belonging" days="Day 6" />
-        <TimelineNode day={timelineDays[5]} index={5} />
-
-        <PhaseMarker title="The Integration" days="Days 7–9" />
-        {timelineDays.slice(6).map((day, i) => (
-          <TimelineNode key={day.day} day={day} index={i + 6} />
-        ))}
-      </section>
-
-      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
-
       {/* ═══ DAILY RHYTHM ═══ */}
       <SanctuarySection eyebrow="The Daily Rhythm" title={<>A Day in<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Sanctuary Week</em></>}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
@@ -556,45 +531,6 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ $2,222 PACKAGE ═══ */}
-      <section
-        id="package"
-        className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
-      >
-        <div className="max-w-[860px] mx-auto">
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Full Initiation</p>
-          <p className="font-sans text-4xl font-extralight text-[hsl(45,70%,55%)] mb-6 tracking-tight">$2,222</p>
-          <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
-            The Sanctuary Week<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
-          </h2>
-          <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
-            All 9 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
-            {[
-              { title: "All 9 Ceremonies", desc: "Full access to every sacred gathering across both weeks of Sanctuary Week.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Community Container", desc: "Curated materials, ceremonial guide, sacred journal, and preparation instructions.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            ].map((item) => (
-              <div key={item.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7 flex gap-4">
-                <div className="mt-1 shrink-0">{item.icon}</div>
-                <div>
-                  <h4 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2.5 font-normal">{item.title}</h4>
-                  <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <a href={EVENTBRITE_ORG} target="_blank" rel="noopener noreferrer" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
-            Secure the Full Package
-          </a>
-          <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-6">
-            Limited to 8 participants · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Community Care Model</Link> applies · Scholarship available
-          </p>
-        </div>
-      </section>
-
       {/* ═══ FIRST CEREMONY ═══ */}
       <SanctuarySection eyebrow="Your First Ceremony" title={<>A Gentle<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Opening</em></>}>
         <div className="text-xl leading-[1.85] text-[hsl(35,30%,68%)] max-w-[720px] mx-auto text-center font-serif space-y-6">
@@ -642,7 +578,72 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ COMMUNITY CARE SUMMARY ═══ */}
+      {/* ═══ SACRED PATHWAYS PRICING (moved to bottom) ═══ */}
+      <SanctuarySection eyebrow="Sacred Pathways" title={<>Find Your<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Pathway of Participation</em></>}>
+        <p className="text-center text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
+          Sanctuary Week is a recurring series of sacred ceremonies, body practices, and community gatherings. Each offering is its own doorway. Choose the path your spirit is ready to walk.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
+          {[
+            { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
+            { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$2,222" },
+            { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
+            { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
+          ].map((path) => (
+            <div key={path.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 text-center">
+              <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2">{path.title}</p>
+              <p className="font-sans text-3xl font-extralight text-[hsl(40,30%,92%)] mb-2">{path.price}</p>
+              <p className="font-serif text-[14px] text-[hsl(35,30%,60%)]">{path.subtitle}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-center font-sans text-[9px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-8">
+          <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Community Care Model applies</Link> · Scholarship available for genuine hardship
+        </p>
+      </SanctuarySection>
+
+      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
+
+      {/* ═══ $2,222 PACKAGE (moved to bottom) ═══ */}
+      <section
+        id="package"
+        className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
+      >
+        <div className="max-w-[860px] mx-auto">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Full Initiation</p>
+          <p className="font-sans text-4xl font-extralight text-[hsl(45,70%,55%)] mb-6 tracking-tight">$2,222</p>
+          <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
+            The Sanctuary Week<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
+          </h2>
+          <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
+            All 9 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
+            {[
+              { title: "All 9 Ceremonies", desc: "Full access to every sacred gathering across both weeks of Sanctuary Week.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Community Container", desc: "Curated materials, ceremonial guide, sacred journal, and preparation instructions.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            ].map((item) => (
+              <div key={item.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7 flex gap-4">
+                <div className="mt-1 shrink-0">{item.icon}</div>
+                <div>
+                  <h4 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2.5 font-normal">{item.title}</h4>
+                  <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a href={EVENTBRITE_ORG} target="_blank" rel="noopener noreferrer" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
+            Secure the Full Package
+          </a>
+          <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-6">
+            Limited to 8 participants · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Community Care Model</Link> applies · Scholarship available
+          </p>
+        </div>
+      </section>
+
+      {/* ═══ COMMUNITY CARE SUMMARY (moved to bottom) ═══ */}
       <SanctuarySection id="care" eyebrow="Everything is Energy" title={<>Community<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Care Model</em></>}>
         <div className="text-center max-w-[600px] mx-auto">
           <p className="text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif mb-10">
