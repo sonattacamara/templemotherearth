@@ -11,6 +11,73 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
+interface FlipCardProps {
+  icon: React.ElementType;
+  title: string;
+  detail: string;
+  intention: string;
+  link: string;
+}
+
+const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardProps) => {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <motion.div
+      variants={fadeUp}
+      className="cursor-pointer"
+      style={{ perspective: 800, minHeight: 220 }}
+      onClick={() => setFlipped((f) => !f)}
+    >
+      <motion.div
+        animate={{ rotateY: flipped ? 180 : 0 }}
+        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        className="relative w-full h-full"
+        style={{ transformStyle: "preserve-3d", minHeight: 220 }}
+      >
+        {/* Front */}
+        <div
+          className="absolute inset-0 rounded-xl p-6 text-center flex flex-col items-center justify-center"
+          style={{ background: "#1a1612", border: "1px solid #c9a84c22", backfaceVisibility: "hidden" }}
+        >
+          <Icon className="mx-auto h-8 w-8" style={{ color: "#c9a84c" }} />
+          <h3 className="mt-3 font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
+            {title}
+          </h3>
+          <p className="mt-1 text-sm" style={{ color: "#B8A07Aaa" }}>{detail}</p>
+          <p className="mt-3 text-[10px] uppercase tracking-[0.3em] font-sans" style={{ color: "#c9a84c66" }}>
+            Tap to learn more
+          </p>
+        </div>
+        {/* Back */}
+        <div
+          className="absolute inset-0 rounded-xl p-6 flex flex-col items-center justify-between text-center"
+          style={{ background: "#1a1612", border: "1px solid #c9a84c33", backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+        >
+          <div>
+            <h3 className="font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
+              {title}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed font-serif" style={{ color: "#B8A07Acc" }}>
+              {intention}
+            </p>
+          </div>
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="mt-4 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 font-sans text-xs font-bold uppercase tracking-wider transition hover:opacity-90"
+            style={{ background: "#c9a84c", color: "#0d0b08" }}
+          >
+            Reserve Your Experience <ArrowRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -182,22 +249,29 @@ const SacredArtExpo = () => {
           {/* Event Cards */}
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
             {[
-              { icon: Flower2, title: "Spring Equinox", detail: "March 28, 2026 · 7–10 PM" },
-              { icon: LeafIcon, title: "Fall Equinox", detail: "Date TBD · Fall 2026" },
-              { icon: Brush, title: "Canvas & Ceremony", detail: "July 2026 · Immersive art + ceremony" },
+              {
+                icon: Flower2,
+                title: "Spring Equinox",
+                detail: "March 28, 2026 · 7–10 PM",
+                intention: "A celebration of renewal and rebirth. As the Earth awakens, we gather to honor the creative spirit within — displaying art that reflects transformation, new beginnings, and the sacredness of spring.",
+                link: "https://bit.ly/ARTExpo",
+              },
+              {
+                icon: LeafIcon,
+                title: "Fall Equinox",
+                detail: "Date TBD · Fall 2026",
+                intention: "A ceremony of harvest and reflection. As the seasons shift, we invite art that speaks to gratitude, ancestral wisdom, and the beauty found in surrender and letting go.",
+                link: "https://bit.ly/ARTExpo",
+              },
+              {
+                icon: Brush,
+                title: "Canvas & Ceremony",
+                detail: "July 2026 · Immersive art + ceremony",
+                intention: "An immersive evening where art-making becomes ceremony. Guests create alongside artists in a guided, sacred space — blending live painting, sound healing, and communal expression.",
+                link: "https://bit.ly/ARTExpo",
+              },
             ].map((e) => (
-              <motion.div
-                key={e.title}
-                variants={fadeUp}
-                className="rounded-xl p-6 text-center"
-                style={{ background: "#1a1612", border: "1px solid #c9a84c22" }}
-              >
-                <e.icon className="mx-auto h-8 w-8" style={{ color: "#c9a84c" }} />
-                <h3 className="mt-3 font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
-                  {e.title}
-                </h3>
-                <p className="mt-1 text-sm" style={{ color: "#B8A07Aaa" }}>{e.detail}</p>
-              </motion.div>
+              <EventFlipCard key={e.title} icon={e.icon} title={e.title} detail={e.detail} intention={e.intention} link={e.link} />
             ))}
           </div>
         </motion.div>
