@@ -367,7 +367,8 @@ const CeremonyIntake = () => {
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Personal Information</h3>
               {[
-                { field: "fullName", label: "Full Legal Name (as it appears on ID) *", type: "text", placeholder: "First and Last Name" },
+                { field: "firstName", label: "First Name *", type: "text", placeholder: "First Name" },
+                { field: "lastName", label: "Last Name *", type: "text", placeholder: "Last Name" },
                 { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
                 { field: "phone", label: "Phone Number * (e.g. 555-555-5555)", type: "tel", placeholder: "Phone Number" },
               ].map(f => (
