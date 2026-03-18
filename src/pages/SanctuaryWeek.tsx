@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
-import sanctuaryDay1CommunityAttire from "@/assets/sanctuary-day1-community-attire.png";
+import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -28,6 +28,7 @@ interface TimelineDay {
   ctaReady: boolean;
   slug: string;
   image: string;
+  imagePosition?: string;
   phase: string;
 }
 
@@ -39,7 +40,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
     pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117", ctaReady: true,
-    slug: "/cacao", image: sanctuaryDay1CommunityAttire,
+    slug: "/cacao", image: sanctuaryDay1CacaoPods, imagePosition: "center 56%",
     phase: "The Opening",
   },
   {
@@ -212,6 +213,7 @@ const TimelineCard = ({ day }: { day: TimelineDay }) => (
       src={day.image}
       alt={day.name}
       className="w-full h-[180px] object-cover saturate-[0.7] brightness-[0.8] group-hover:saturate-[0.9] group-hover:brightness-[0.9] transition-[filter] duration-400"
+      style={day.imagePosition ? { objectPosition: day.imagePosition } : undefined}
       loading="lazy"
     />
     <div className="p-5 md:p-6">
