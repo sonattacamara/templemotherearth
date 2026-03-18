@@ -214,7 +214,7 @@ const CeremonyIntake = () => {
     setValidationErrors({});
     try {
       if (step === 1) {
-        step1Schema.parse({ fullName: formData.fullName, email: formData.email, phone: formData.phone, dob: formData.dob, cityState: formData.cityState });
+        step1Schema.parse({ firstName: formData.firstName, lastName: formData.lastName, email: formData.email, phone: formData.phone, dob: formData.dob, cityState: formData.cityState });
       } else if (step === 2) {
         step2Schema.parse({ emergencyName: formData.emergencyName, emergencyPhone: formData.emergencyPhone, emergencyRelation: formData.emergencyRelation });
       } else if (step === 3) {
