@@ -85,7 +85,8 @@ const RECENT_SUBSTANCES = [
 
 // Zod validation schemas per step
 const step1Schema = z.object({
-  fullName: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
+  lastName: z.string().trim().min(1, "Last name is required").max(50, "Last name must be less than 50 characters"),
   email: z.string().trim().email("Please enter a valid email address").max(255),
   phone: z.string().trim().min(7, "Please enter a valid phone number").max(20, "Phone number is too long").regex(/^[\d\s\-\+\(\)]+$/, "Phone number contains invalid characters"),
   dob: z.string().min(1, "Date of birth is required").refine((val) => {
