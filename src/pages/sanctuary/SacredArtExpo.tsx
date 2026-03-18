@@ -95,7 +95,7 @@ const SacredArtExpo = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(https://images.pexels.com/photos/1472334/pexels-photo-1472334.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)",
+            backgroundImage: `url(${artExpoHero})`,
           }}
         />
         <div className="absolute inset-0 bg-[#0d0b08]/80" />
