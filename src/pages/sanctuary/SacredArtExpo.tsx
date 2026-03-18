@@ -64,7 +64,7 @@ const SacredArtExpo = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.fullName || !form.email || !form.phone || !form.city) {
+    if (!form.firstName || !form.lastName || !form.email || !form.phone || !form.city) {
       toast.error("Please fill in all required fields.");
       return;
     }
