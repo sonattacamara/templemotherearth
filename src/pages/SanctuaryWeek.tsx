@@ -11,6 +11,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
+import sanctuaryDay4Level5 from "@/assets/sanctuary-day4-level5.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -72,7 +73,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
     pricing: [{ label: "Sustainer", price: "$777" }, { label: "Community", price: "$555" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
-    slug: "/level5", image: "https://images.pexels.com/photos/1510901/pexels-photo-1510901.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    slug: "/level5", image: sanctuaryDay4Level5, imagePosition: "center 34%",
     phase: "The Initiation",
   },
   {
