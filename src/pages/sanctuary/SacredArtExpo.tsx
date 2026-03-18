@@ -312,13 +312,23 @@ const SacredArtExpo = () => {
               <form onSubmit={handleSubmit} className="mt-10 space-y-6">
                 <motion.div variants={fadeUp} className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
-                    <Label className="text-sm" style={{ color: "#F5F0E6" }}>Full Name *</Label>
+                    <Label className="text-sm" style={{ color: "#F5F0E6" }}>First Name *</Label>
                     <Input
-                      value={form.fullName}
-                      onChange={(e) => update("fullName", e.target.value)}
+                      value={form.firstName}
+                      onChange={(e) => update("firstName", e.target.value)}
                       required
                       className="border-[#c9a84c33] bg-[#0d0b08] text-[#F5F0E6] placeholder:text-[#B8A07A66]"
-                      placeholder="Your full name"
+                      placeholder="First name"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-sm" style={{ color: "#F5F0E6" }}>Last Name *</Label>
+                    <Input
+                      value={form.lastName}
+                      onChange={(e) => update("lastName", e.target.value)}
+                      required
+                      className="border-[#c9a84c33] bg-[#0d0b08] text-[#F5F0E6] placeholder:text-[#B8A07A66]"
+                      placeholder="Last name"
                     />
                   </div>
                   <div className="space-y-2">

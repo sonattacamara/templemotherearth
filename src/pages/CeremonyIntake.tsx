@@ -115,7 +115,7 @@ const CeremonyIntake = () => {
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
   const [formData, setFormData] = useState({
-    fullName: "", email: "", phone: "", dob: "",
+    firstName: "", lastName: "", email: "", phone: "", dob: "",
     cityState: "", armedForcesStatus: "",
     emergencyName: "", emergencyPhone: "", emergencyRelation: "",
     ceremonyType: "", experienceLevel: "", intentions: "",
