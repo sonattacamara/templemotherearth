@@ -30,10 +30,17 @@ serve(async (req) => {
   try {
     const body = await req.json();
 
-    // Basic validation
-    const fullName = String(body.fullName || "").trim();
-    if (fullName.length < 2 || fullName.length > 100) {
-      return new Response(JSON.stringify({ error: "Full name is required" }), {
+    const firstName = String(body.firstName || "").trim();
+    if (firstName.length < 1 || firstName.length > 50) {
+      return new Response(JSON.stringify({ error: "First name is required" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
+    const lastName = String(body.lastName || "").trim();
+    if (lastName.length < 1 || lastName.length > 50) {
+      return new Response(JSON.stringify({ error: "Last name is required" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 400,
       });
