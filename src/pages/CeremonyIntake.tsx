@@ -232,7 +232,7 @@ const CeremonyIntake = () => {
   };
 
   const canProceed = () => {
-    if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob && formData.cityState;
+    if (step === 1) return formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState;
     if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
     if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10;
     if (step === 4) return !totalFlagged;
