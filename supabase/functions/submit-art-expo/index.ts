@@ -18,9 +18,9 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { fullName, email, phone, city, mediums, description, portfolio, event, heardFrom } = body;
+    const { firstName, lastName, email, phone, city, mediums, description, portfolio, event, heardFrom } = body;
 
-    if (!fullName || !email || !phone || !city) {
+    if (!firstName || !lastName || !email || !phone || !city) {
       return new Response(JSON.stringify({ error: "Please fill in all required fields." }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -37,10 +37,11 @@ serve(async (req) => {
     }
 
     const payload = {
-      firstName: fullName.trim().split(" ")[0],
-      lastName: fullName.trim().split(" ").slice(1).join(" "),
-      email: email.trim().toLowerCase(),
-      phone: (phone || "").trim(),
+      firstName: String(firstName).trim(),
+      lastName: String(lastName).trim(),
+      name: `${String(firstName).trim()} ${String(lastName).trim()}`,
+      email: String(email).trim().toLowerCase(),
+      phone: String(phone || "").trim(),
       city,
       mediums: Array.isArray(mediums) ? mediums.join(", ") : mediums,
       description,

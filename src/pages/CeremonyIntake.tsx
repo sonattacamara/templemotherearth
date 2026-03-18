@@ -85,7 +85,8 @@ const RECENT_SUBSTANCES = [
 
 // Zod validation schemas per step
 const step1Schema = z.object({
-  fullName: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
+  lastName: z.string().trim().min(1, "Last name is required").max(50, "Last name must be less than 50 characters"),
   email: z.string().trim().email("Please enter a valid email address").max(255),
   phone: z.string().trim().min(7, "Please enter a valid phone number").max(20, "Phone number is too long").regex(/^[\d\s\-\+\(\)]+$/, "Phone number contains invalid characters"),
   dob: z.string().min(1, "Date of birth is required").refine((val) => {
@@ -114,7 +115,7 @@ const CeremonyIntake = () => {
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
   const [formData, setFormData] = useState({
-    fullName: "", email: "", phone: "", dob: "",
+    firstName: "", lastName: "", email: "", phone: "", dob: "",
     cityState: "", armedForcesStatus: "",
     emergencyName: "", emergencyPhone: "", emergencyRelation: "",
     ceremonyType: "", experienceLevel: "", intentions: "",
@@ -213,7 +214,7 @@ const CeremonyIntake = () => {
     setValidationErrors({});
     try {
       if (step === 1) {
-        step1Schema.parse({ fullName: formData.fullName, email: formData.email, phone: formData.phone, dob: formData.dob, cityState: formData.cityState });
+        step1Schema.parse({ firstName: formData.firstName, lastName: formData.lastName, email: formData.email, phone: formData.phone, dob: formData.dob, cityState: formData.cityState });
       } else if (step === 2) {
         step2Schema.parse({ emergencyName: formData.emergencyName, emergencyPhone: formData.emergencyPhone, emergencyRelation: formData.emergencyRelation });
       } else if (step === 3) {
@@ -231,7 +232,7 @@ const CeremonyIntake = () => {
   };
 
   const canProceed = () => {
-    if (step === 1) return formData.fullName && formData.email && formData.phone && formData.dob && formData.cityState;
+    if (step === 1) return formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState;
     if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
     if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10;
     if (step === 4) return !totalFlagged;
@@ -366,7 +367,8 @@ const CeremonyIntake = () => {
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Personal Information</h3>
               {[
-                { field: "fullName", label: "Full Legal Name (as it appears on ID) *", type: "text", placeholder: "First and Last Name" },
+                { field: "firstName", label: "First Name *", type: "text", placeholder: "First Name" },
+                { field: "lastName", label: "Last Name *", type: "text", placeholder: "Last Name" },
                 { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
                 { field: "phone", label: "Phone Number * (e.g. 555-555-5555)", type: "tel", placeholder: "Phone Number" },
               ].map(f => (

@@ -119,7 +119,8 @@ const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset W
 const VeteransTransformation = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     branch: "",
     branchOther: "",
     serviceEra: "",
@@ -191,8 +192,8 @@ const VeteransTransformation = () => {
     e.preventDefault();
     setFormError("");
     
-    if (!formData.fullName.trim()) {
-      setFormError("Please enter your full name.");
+    if (!formData.firstName.trim() || !formData.lastName.trim()) {
+      setFormError("Please enter your first and last name.");
       return;
     }
     if (!formData.email.trim()) {
@@ -733,9 +734,15 @@ const VeteransTransformation = () => {
                 <p className="font-body text-xs text-[#F5F0E6]/40">All fields marked * are required</p>
               </div>
 
-              <div>
-                <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Full Name *</label>
-                  <input type="text" value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your full name" />
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">First Name *</label>
+                  <input type="text" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="First name" />
+                </div>
+                <div>
+                  <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Last Name *</label>
+                  <input type="text" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Last name" />
+                </div>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">

@@ -30,10 +30,17 @@ serve(async (req) => {
   try {
     const body = await req.json();
 
-    // Basic validation
-    const fullName = String(body.fullName || "").trim();
-    if (fullName.length < 2 || fullName.length > 100) {
-      return new Response(JSON.stringify({ error: "Full name is required" }), {
+    const firstName = String(body.firstName || "").trim();
+    if (firstName.length < 1 || firstName.length > 50) {
+      return new Response(JSON.stringify({ error: "First name is required" }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      });
+    }
+
+    const lastName = String(body.lastName || "").trim();
+    if (lastName.length < 1 || lastName.length > 50) {
+      return new Response(JSON.stringify({ error: "Last name is required" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 400,
       });
@@ -55,15 +62,11 @@ serve(async (req) => {
       });
     }
 
-    const nameParts = fullName.split(" ");
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
-
     const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: fullName,
+        name: `${firstName} ${lastName}`,
         firstName,
         lastName,
         email,

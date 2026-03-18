@@ -21,7 +21,7 @@ const JoinFacilitator = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", location: "",
+    firstName: "", lastName: "", email: "", phone: "", location: "",
     background: "", modality: "", experience: "",
     whyJoin: "", additionalInfo: "",
   });
@@ -92,7 +92,10 @@ const JoinFacilitator = () => {
                   setSubmitting(false);
                 }
               }}>
-                <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
+                <div className="grid grid-cols-2 gap-3">
+                  <input className={inputClass} placeholder="First Name *" value={form.firstName} onChange={(e) => update("firstName", e.target.value)} required />
+                  <input className={inputClass} placeholder="Last Name *" value={form.lastName} onChange={(e) => update("lastName", e.target.value)} required />
+                </div>
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <input className={inputClass} placeholder="City / State *" value={form.location} onChange={(e) => update("location", e.target.value)} required />

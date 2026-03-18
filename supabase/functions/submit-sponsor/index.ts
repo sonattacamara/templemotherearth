@@ -18,20 +18,21 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { fullName, email, phone, organization, sponsorType, message } = body;
+    const { firstName, lastName, email, phone, organization, sponsorType, message } = body;
 
-    if (!fullName || !email) {
-      return new Response(JSON.stringify({ error: "Name and email are required." }), {
+    if (!firstName || !lastName || !email) {
+      return new Response(JSON.stringify({ error: "First name, last name, and email are required." }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
     const payload = {
-      firstName: fullName.trim().split(" ")[0],
-      lastName: fullName.trim().split(" ").slice(1).join(" "),
-      email: email.trim().toLowerCase(),
-      phone: (phone || "").trim(),
+      firstName: String(firstName).trim(),
+      lastName: String(lastName).trim(),
+      name: `${String(firstName).trim()} ${String(lastName).trim()}`,
+      email: String(email).trim().toLowerCase(),
+      phone: String(phone || "").trim(),
       organization,
       sponsorType,
       message,

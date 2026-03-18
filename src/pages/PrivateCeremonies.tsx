@@ -22,7 +22,7 @@ const PrivateCeremonies = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", ceremonyType: "",
+    firstName: "", lastName: "", email: "", phone: "", ceremonyType: "",
     experience: "", intentions: "", preferredDates: "",
     location: "", medicalConcerns: "", additionalInfo: "",
   });
@@ -97,7 +97,10 @@ const PrivateCeremonies = () => {
                   setSubmitting(false);
                 }
               }}>
-                <input className={inputClass} placeholder="Full Name *" value={form.fullName} onChange={(e) => update("fullName", e.target.value)} required />
+                <div className="grid grid-cols-2 gap-3">
+                  <input className={inputClass} placeholder="First Name *" value={form.firstName} onChange={(e) => update("firstName", e.target.value)} required />
+                  <input className={inputClass} placeholder="Last Name *" value={form.lastName} onChange={(e) => update("lastName", e.target.value)} required />
+                </div>
                 <input className={inputClass} type="email" placeholder="Email Address *" value={form.email} onChange={(e) => update("email", e.target.value)} required />
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <div>
