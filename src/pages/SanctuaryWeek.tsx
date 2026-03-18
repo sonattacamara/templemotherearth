@@ -12,6 +12,7 @@ import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
 import sanctuaryDay4Level5 from "@/assets/sanctuary-day4-level5.png";
+import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -46,36 +47,7 @@ const timelineDays: TimelineDay[] = [
     slug: "/cacao", image: sanctuaryDay1CacaoPods, imagePosition: "center 56%",
     phase: "The Opening",
   },
-  {
-    day: 2, date: "", weekday: "", name: "Hapé Community Ceremony",
-    subtitle: "The Noise Stops. You Remember.",
-    description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The forest has been waiting for you.",
-    icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
-    pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://bit.ly/HapeCircle", ctaReady: true,
-    slug: "/hape", image: sanctuaryDay2HapeCeremony, imagePosition: "center 38%",
-    phase: "The Opening",
-  },
-  {
-    day: 3, date: "", weekday: "", name: "Sacred Tea Ceremony",
-    subtitle: "The Door Has Always Been There",
-    description: "Three levels: Community, Sacred Circle, and Fruit of the Gods. Choose the depth you are ready for. The sacrament meets you exactly where you are.",
-    icon: <Coffee className="h-5 w-5" />, tags: ["Signature", "Tiered", "Pre-Screening"],
-    pricing: [{ label: "Fruit of the Gods", price: "$111" }, { label: "Sacred Circle", price: "$66" }, { label: "Community", price: "$33" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
-    slug: "/sacred-tea", image: sanctuaryDay3SacredTea, imagePosition: "center 58%",
-    phase: "The Opening",
-  },
-  {
-    day: 4, date: "", weekday: "", name: "Level 5 — The Complete Initiation",
-    subtitle: "You Have Not Come This Far to Stop Here",
-    description: "Every sacrament. One full-day container. Kambo included. For those who are genuinely ready to go all the way. By application only.",
-    icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
-    pricing: [{ label: "Sustainer", price: "$777" }, { label: "Community", price: "$555" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
-    slug: "/level5", image: sanctuaryDay4Level5, imagePosition: "center 34%",
-    phase: "The Initiation",
-  },
+...
   {
     day: 5, date: "", weekday: "", name: "Inner Alchemy Wellness Spa Day",
     subtitle: "Your Body Has Been Waiting for This Day",
@@ -83,7 +55,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Sun className="h-5 w-5" />, tags: ["Full Day", "Restoration", "Body"],
     pricing: [{ label: "Sustainer", price: "$111" }, { label: "Community", price: "$88" }, { label: "All Welcome", price: "Free" }],
     ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
-    slug: "/spa", image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    slug: "/spa", image: sanctuaryDay5Spa, imagePosition: "center 62%",
     phase: "The Rest",
   },
   {
