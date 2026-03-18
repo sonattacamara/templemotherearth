@@ -11,9 +11,9 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
-import sanctuaryDay4Level5 from "@/assets/sanctuary-day4-level5.png";
+import sanctuaryDay4Level5 from "@/assets/level5-god-molecule.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
-import kamboCeremonyAltar from "@/assets/kambo-ceremony-altar.jpg";
+import kamboFrogArt from "@/assets/kambo-frog-art.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
