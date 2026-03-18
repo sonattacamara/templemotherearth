@@ -20,7 +20,7 @@ const panels = [
       <div className="space-y-4 text-[17px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
         <p>Kambo is the secretion of the Phyllomedusa bicolor, the Giant Monkey Frog of the Amazon. The frog is not harmed. The secretion is collected from the skin, dried, and stored.</p>
         <p>The secretion contains a complex sequence of bioactive peptides. The effect is immediate and physical, an intense purge of the body that typically lasts 20-40 minutes.</p>
-        <p>In the Matses tradition, this sacrament is called "the hunting medicine." At Temple Mother Earth, it is held as a sacrament of purification within our 508(c)(1)(A) sacred church.</p>
+        <p>In the Matses tradition, this sacrament is called "the hunting sacrament." At Temple Mother Earth, it is held as a sacrament of purification within our 508(c)(1)(A) sacred church.</p>
       </div>
     ),
   },
