@@ -9,6 +9,7 @@ import {
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
+import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -50,7 +51,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
     pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Register Now", ctaHref: "https://bit.ly/HapeCircle", ctaReady: true,
-    slug: "/hape", image: "https://images.pexels.com/photos/975771/pexels-photo-975771.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    slug: "/hape", image: sanctuaryDay2HapeCeremony, imagePosition: "center 38%",
     phase: "The Opening",
   },
   {
