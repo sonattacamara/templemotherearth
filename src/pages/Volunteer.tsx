@@ -21,7 +21,7 @@ const Volunteer = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", availability: "",
+    firstName: "", lastName: "", email: "", phone: "", availability: "",
     interests: "", experience: "", whyJoin: "",
   });
 
