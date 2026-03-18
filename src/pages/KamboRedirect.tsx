@@ -80,7 +80,7 @@ const KamboRedirect = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[55vh] items-center justify-center overflow-hidden px-4 pt-8">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${offeringCeremony})` }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${communityOutdoorCeremony})` }} />
         <div className="absolute inset-0 bg-foreground/75" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-primary/80 mb-4">
