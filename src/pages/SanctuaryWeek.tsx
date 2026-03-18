@@ -352,29 +352,7 @@ const SanctuaryWeek = () => {
         </motion.div>
       </section>
 
-      {/* ═══ FIVE PILLARS (moved near top) ═══ */}
-      <SanctuarySection eyebrow="Our Sacred Approach" title={<>Five Pillars of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">The Sanctuary Experience</em></>}>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-0.5">
-          {[
-            { num: "01", title: "10-Ceremony Arc", desc: "A rhythmic, continuous journey designed to honor your natural process of becoming.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "02", title: "Expert Facilitation", desc: "A collaborative, heart-led team holding a steady space for your unfolding growth.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "03", title: "Extended Integration", desc: "Guidance that walks beside you for 6+ months as you ground your transformation.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "04", title: "Intimate Cohorts", desc: "Small circles of 12 to 20, fostering true community, belonging, and shared wisdom.", icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-            { num: "05", title: "Trauma-Informed", desc: "A compassionate, tailored approach that honors exactly where you are today.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-          ].map((pillar) => (
-            <div key={pillar.num} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7">
-              <div className="mb-3">{pillar.icon}</div>
-              <p className="font-sans text-2xl font-extralight text-[hsla(45,70%,49%,0.3)] mb-2">{pillar.num}</p>
-              <h3 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(40,30%,90%)] mb-2">{pillar.title}</h3>
-              <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{pillar.desc}</p>
-            </div>
-          ))}
-        </div>
-      </SanctuarySection>
-
-      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
-
-      {/* ═══ INTERACTIVE TIMELINE (moved near top) ═══ */}
+      {/* ═══ INTERACTIVE TIMELINE ═══ */}
       <section id="timeline" className="px-6 md:px-12 py-16 md:py-24 max-w-[1100px] mx-auto">
         <div className="text-center mb-16">
           <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Journey</p>
@@ -407,6 +385,28 @@ const SanctuaryWeek = () => {
       </section>
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
+
+      {/* ═══ FIVE PILLARS ═══ */}
+      <SanctuarySection eyebrow="Our Sacred Approach" title={<>Five Pillars of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">The Sanctuary Experience</em></>}>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-0.5">
+          {[
+            { num: "01", title: "10-Ceremony Arc", desc: "A rhythmic, continuous journey designed to honor your natural process of becoming.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "02", title: "Expert Facilitation", desc: "A collaborative, heart-led team holding a steady space for your unfolding growth.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "03", title: "Extended Integration", desc: "Guidance that walks beside you for 6+ months as you ground your transformation.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "04", title: "Intimate Cohorts", desc: "Small circles of 12 to 20, fostering true community, belonging, and shared wisdom.", icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "05", title: "Trauma-Informed", desc: "A compassionate, tailored approach that honors exactly where you are today.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+          ].map((pillar) => (
+            <div key={pillar.num} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7">
+              <div className="mb-3">{pillar.icon}</div>
+              <p className="font-sans text-2xl font-extralight text-[hsla(45,70%,49%,0.3)] mb-2">{pillar.num}</p>
+              <h3 className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(40,30%,90%)] mb-2">{pillar.title}</h3>
+              <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{pillar.desc}</p>
+            </div>
+          ))}
+        </div>
+      </SanctuarySection>
+
+
 
       {/* ═══ ENERGY OF SIX — FEATURED CALLOUT ═══ */}
       <section className="py-20 md:py-28 px-6 md:px-12 bg-gradient-to-b from-[hsl(114,36%,10%)] to-[hsl(105,30%,8%)]">
