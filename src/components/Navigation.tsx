@@ -40,7 +40,7 @@ const navStructure: NavEntry[] = [
     items: [
       { label: "Sacred Yin Yoga", href: "/yin-yoga", isRoute: true },
       { label: "Inner Alchemy Spa Day", href: "/spa", isRoute: true },
-      { label: "Sacred Art Expo", href: "/art-expo", isRoute: true },
+      { label: "Art Expo", href: "/art-expo", isRoute: true },
       { label: "Sacred Tea House", href: "/tea-house", isRoute: true },
       { label: "Community Potluck", href: "/potluck", isRoute: true },
       { label: "Veterans Program", href: "/veterans-transformation-program", isRoute: true },
