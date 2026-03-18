@@ -75,7 +75,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
     pricing: [{ label: "Sustainer", price: "$777" }, { label: "Community", price: "$555" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
-    slug: "/level5", image: sanctuaryDay4Level5, imagePosition: "center 34%",
+    slug: "/level5", image: level5Initiation, imagePosition: "center 50%",
     phase: "The Initiation",
   },
   {
