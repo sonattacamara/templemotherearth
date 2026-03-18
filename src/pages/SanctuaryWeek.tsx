@@ -11,9 +11,9 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
-import sanctuaryDay4Level5 from "@/assets/sanctuary-day4-level5.png";
+import sanctuaryDay4Level5 from "@/assets/level5-god-molecule.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
-import kamboCeremonyAltar from "@/assets/kambo-ceremony-altar.jpg";
+import kamboFrogArt from "@/assets/kambo-frog-art.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -109,7 +109,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Integration",
   },
   {
-    day: 8, date: "", weekday: "", name: "Sacred Art Expo",
+    day: 8, date: "", weekday: "", name: "Art Expo",
     subtitle: "Art Born From the Other Side",
     description: "Visionary art exhibition, artist marketplace, live sound performances, and Sacred Tea House open all evening. An evening where ceremony becomes culture.",
     icon: <Palette className="h-5 w-5" />, tags: ["Art", "Music", "Evening"],
@@ -125,7 +125,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
     pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
-    slug: "/kambo", image: kamboCeremonyAltar,
+    slug: "/kambo", image: kamboFrogArt,
     phase: "The Integration",
   },
 ];

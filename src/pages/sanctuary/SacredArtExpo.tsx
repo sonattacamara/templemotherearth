@@ -84,7 +84,7 @@ const SacredArtExpo = () => {
     <div className="min-h-screen" style={{ background: "#0d0b08" }}>
       <SEOHead
         title="Art Expo · Artist Submissions"
-        description="Temple Mother Earth invites artists of all mediums to submit work for our bi-annual Sacred Art Expo. Spring Equinox March 28, 2026."
+        description="Temple Mother Earth invites artists of all mediums to submit work for our bi-annual Art Expo. Spring Equinox March 28, 2026."
         path="/art-expo"
       />
       <Navigation />
@@ -110,7 +110,7 @@ const SacredArtExpo = () => {
             className="font-sans text-[10px] font-bold uppercase tracking-[0.5em]"
             style={{ color: "#c9a84c" }}
           >
-            Temple Mother Earth · Art Expo
+           Temple Mother Earth · Art Expo
           </motion.p>
           <motion.h1
             variants={fadeUp}
@@ -166,18 +166,16 @@ const SacredArtExpo = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-[720px] space-y-6 font-serif text-lg leading-[1.85]" style={{ color: "#B8A07Aaa" }}>
             <p>
-              The TME Art Expo is a bi-annual sacred art exhibition held at the Spring and Fall
+              The Temple Mother Earth Art Expo is a bi-annual sacred art exhibition held at the Spring and Fall
               Equinox — moments of balance, beauty, and transition. Each expo features local DC-area
               artists across all mediums: painting, sculpture, photography, digital art, fiber arts,
               and beyond.
             </p>
             <p>
-              This is not just a gallery.{" "}
               <strong style={{ color: "#F5F0E6" }}>
-              It is a ceremony of creative souls gathered to witness, honor, and elevate art as
-                 sacrament.
-               </strong>
-             </p>
+                A ceremony of creative souls gathered to witness, honor, and elevate art as sacrament.
+              </strong>
+            </p>
           </motion.div>
 
           {/* Event Cards */}
