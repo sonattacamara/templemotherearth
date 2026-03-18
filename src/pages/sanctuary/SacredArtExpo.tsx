@@ -20,7 +20,7 @@ interface FlipCardProps {
 }
 
 const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardProps) => {
-  const [flipped, setFlipped] = useStateReact(false);
+  const [flipped, setFlipped] = useState(false);
 
   return (
     <motion.div
