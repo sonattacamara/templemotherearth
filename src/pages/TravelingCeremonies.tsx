@@ -80,8 +80,8 @@ const TravelingCeremonies = () => {
                 Request a Traveling Ceremony
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
-                Tell us about your group and what you're seeking. Our team will reach out to discuss details, pricing, and logistics.
-                All participants will need to complete a medical intake before ceremony.
+                Tell us about your group and what you're seeking. Our team will reach out to discuss details, sacred reciprocity, and logistics.
+                All participants will need to complete the sacred intake before ceremony.
               </p>
               <form className="mt-10 space-y-5" onSubmit={async (e) => {
                 e.preventDefault();
