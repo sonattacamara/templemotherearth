@@ -192,8 +192,8 @@ const VeteransTransformation = () => {
     e.preventDefault();
     setFormError("");
     
-    if (!formData.fullName.trim()) {
-      setFormError("Please enter your full name.");
+    if (!formData.firstName.trim() || !formData.lastName.trim()) {
+      setFormError("Please enter your first and last name.");
       return;
     }
     if (!formData.email.trim()) {
