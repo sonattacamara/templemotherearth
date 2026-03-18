@@ -10,6 +10,7 @@ import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
+import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
 
 const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
@@ -61,7 +62,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Coffee className="h-5 w-5" />, tags: ["Signature", "Tiered", "Pre-Screening"],
     pricing: [{ label: "Fruit of the Gods", price: "$111" }, { label: "Sacred Circle", price: "$66" }, { label: "Community", price: "$33" }],
     ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
-    slug: "/sacred-tea", image: "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    slug: "/sacred-tea", image: sanctuaryDay3SacredTea, imagePosition: "center 58%",
     phase: "The Opening",
   },
   {
