@@ -20,7 +20,7 @@ const panels = [
       <div className="space-y-4 text-[17px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
         <p>Kambo is the secretion of the Phyllomedusa bicolor, the Giant Monkey Frog of the Amazon. The frog is not harmed. The secretion is collected from the skin, dried, and stored.</p>
         <p>The secretion contains a complex sequence of bioactive peptides. The effect is immediate and physical, an intense purge of the body that typically lasts 20-40 minutes.</p>
-        <p>In the Matses tradition, this sacrament is called "the hunting medicine." At Temple Mother Earth, it is held as a sacrament of purification within our 508(c)(1)(A) sacred church.</p>
+        <p>In the Matses tradition, this sacrament is called "the hunting sacrament." At Temple Mother Earth, it is held as a sacrament of purification within our 508(c)(1)(A) sacred church.</p>
       </div>
     ),
   },
@@ -121,7 +121,7 @@ const KamboCeremony = () => {
       <section className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
         <img
           src="https://images.pexels.com/photos/975354/pexels-photo-975354.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Dense Amazon rainforest for Kambo, Ayahuasca, and Bobinsana plant medicine ceremonies"
+          alt="Dense Amazon rainforest for Kambo, Ayahuasca, and Bobinsana sacred Earth Medicine ceremonies"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.35] brightness-[0.4] -z-10"
           style={{ filter: "saturate(0.35) brightness(0.4) hue-rotate(-20deg)" }}
           loading="eager"

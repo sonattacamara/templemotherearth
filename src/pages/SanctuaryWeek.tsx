@@ -112,7 +112,7 @@ const timelineDays: TimelineDay[] = [
   {
     day: 8, date: "", weekday: "", name: "Art Expo",
     subtitle: "Art Born From the Other Side",
-    description: "Visionary art exhibition, artist marketplace, live sound performances, and Sacred Tea House open all evening. An evening where ceremony becomes culture.",
+    description: "Visionary art exhibition, artist gathering, live sound performances, and Sacred Tea House open all evening. An evening where ceremony becomes culture.",
     icon: <Palette className="h-5 w-5" />, tags: ["Art", "Music", "Evening"],
     pricing: [{ label: "Sustainer", price: "$22" }, { label: "Community", price: "$11" }, { label: "Members", price: "Free" }],
     ctaLabel: "Reserve Your Evening", ctaHref: "https://www.eventbrite.com/e/art-expo-registration-539756675747", ctaReady: true,

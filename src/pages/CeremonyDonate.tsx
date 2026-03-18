@@ -16,7 +16,7 @@ const impactCards = [
   {
     icon: Leaf,
     title: "Ceremony Access",
-    desc: "Covers the full cost of a sacred ceremony experience for a community member in financial need.",
+    desc: "Covers the sacred reciprocity of a ceremony experience for a community member in financial need.",
   },
   {
     icon: Users,

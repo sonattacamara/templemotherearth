@@ -80,8 +80,8 @@ const TravelingCeremonies = () => {
                 Request a Traveling Ceremony
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
-                Tell us about your group and what you're seeking. Our team will reach out to discuss details, pricing, and logistics.
-                All participants will need to complete a medical intake before ceremony.
+                Tell us about your group and what you're seeking. Our team will reach out to discuss details, sacred reciprocity, and logistics.
+                All participants will need to complete the sacred intake before ceremony.
               </p>
               <form className="mt-10 space-y-5" onSubmit={async (e) => {
                 e.preventDefault();
@@ -128,7 +128,7 @@ const TravelingCeremonies = () => {
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
               <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred One</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Your traveling ceremony request has been received. Our team will be in touch to discuss logistics, pricing, and next steps.
+                Your traveling ceremony request has been received. Our team will be in touch to discuss logistics, sacred reciprocity, and next steps.
               </p>
               <Link to="/" className="mt-8 inline-block rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80">
                 Return Home

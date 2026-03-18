@@ -82,10 +82,10 @@ const CommunityCare = () => (
     >
       <div className="max-w-[720px] mx-auto text-center font-serif space-y-6">
         <p className="text-[19px] text-[hsl(35,30%,68%)] leading-[1.85]">
-          Temple Mother Earth does not operate like a business. We operate like a village. And every village needs guardians who ensure that what is sacred remains protected, accessible, and sustained.
+          Temple Mother Earth does not operate like a corporation. We operate like a village. And every village needs guardians who ensure that what is sacred remains protected, accessible, and sustained.
         </p>
         <p className="text-[17px] text-[hsl(35,30%,68%)] leading-[1.85]">
-          Your contribution does not buy you access to ceremony. It sustains the infrastructure that makes ceremony possible for everyone. When you give at the Sustainer level, you are holding the door open for someone behind you. When you receive at the Scholarship level, someone before you held that door for you.
+          Your contribution does not grant you access to ceremony. It sustains the sacred infrastructure that makes ceremony possible for everyone. When you give at the Sustainer level, you are holding the door open for someone behind you. When you receive at the Scholarship level, someone before you held that door for you.
         </p>
         <p className="text-[17px] text-[hsl(35,30%,68%)] leading-[1.85]">
           This is the Guardian energy. Not charity. Not sympathy. Sacred responsibility passed from one soul to the next.
