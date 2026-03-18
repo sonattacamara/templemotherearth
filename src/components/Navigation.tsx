@@ -32,13 +32,13 @@ const navStructure: NavEntry[] = [
       { label: "Cacao Ceremony", href: "/cacao", isRoute: true },
       { label: "Hapé Ceremony", href: "/hape", isRoute: true },
       { label: "Sacred Tea Ceremony", href: "/sacred-tea", isRoute: true },
-      { label: "Sacred Yin Yoga", href: "/yin-yoga", isRoute: true },
       { label: "Level 5 Initiation", href: "/level5", isRoute: true },
     ],
   },
   {
     label: "Experiences",
     items: [
+      { label: "Sacred Yin Yoga", href: "/yin-yoga", isRoute: true },
       { label: "Inner Alchemy Spa Day", href: "/spa", isRoute: true },
       { label: "Sacred Art Expo", href: "/art-expo", isRoute: true },
       { label: "Sacred Tea House", href: "/tea-house", isRoute: true },
