@@ -135,13 +135,26 @@ const KamboRedirect = () => {
                 our co-founder and experienced Kambo practitioner, in a safe, sacred, and medically-screened environment.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={offeringCeremony}
-                alt="Sacred Kambo ceremony circle at Temple Mother Earth with participants in white clothing seated in a circle"
-                className="w-full h-80 object-cover"
-                loading="lazy"
-              />
+            <div className="space-y-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={kamboFrogEye}
+                  alt="Close-up of Giant Monkey Tree Frog eye, the sacred source of Kambo purification ceremony"
+                  className="w-full h-56 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <video
+                  controls
+                  preload="metadata"
+                  poster={kamboFrogEye}
+                  className="w-full"
+                >
+                  <source src="/videos/what-is-kambo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </motion.div>
         </motion.div>
