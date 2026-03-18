@@ -98,7 +98,7 @@ const faqs = [
   { q: "Can I bring my spouse or partner?", a: "Affirmative. We understand that military service impacts entire families. We offer couples ceremonies and encourage partners to participate when appropriate. Your family has been carrying this too." },
   { q: "What if I have never done anything like this?", a: "Most of our veterans had not either. This program is built for first-timers. Kambo is the ideal starting point — you stay fully aware and in control the entire time. No surprises." },
   { q: "How is this different from the VA?", a: "Our approach is personalized, sacred, and community-based. We work on root causes, not just symptoms. One transformative weekend can accomplish what years of conventional approaches could not. You are not a number here — you are a warrior who deserves to come home to yourself." },
-  { q: "What does a typical Kambo session involve?", a: "A Kambo session lasts approximately 20 to 40 minutes. Small points are applied to the skin, and the secretion of the Giant Monkey Frog is administered. You will experience a powerful physical purge that cleanses stored impurities from your body. The entire process is held in sacred, supportive space by trained facilitators. Think of it as a system reboot." },
+  { q: "What does a typical Kambo ceremony involve?", a: "A Kambo ceremony lasts approximately 20 to 40 minutes. Small points are applied to the skin, and the secretion of the Giant Monkey Frog is administered. You will experience a powerful physical purge that cleanses stored impurities from your body. The entire process is held in sacred, supportive space by trained facilitators. Think of it as a system reboot." },
 ];
 
 /* ─── Branches ─── */

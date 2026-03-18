@@ -177,7 +177,7 @@ const DonationCanceled = () => {
               },
               {
                 q: "Can I donate by check or other means?",
-                a: "Yes. Contact our team for information about donating by check, wire transfer, or in-kind donations of goods and services.",
+                a: "Yes. Contact our team for information about donating by check, wire transfer, or in-kind offerings.",
               },
               {
                 q: "Are donations tax-deductible?",

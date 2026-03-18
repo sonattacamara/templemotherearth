@@ -152,7 +152,7 @@ const Index = () => {
           <motion.img
             variants={fadeUp}
             src={logo}
-            alt="Temple Mother Earth sacred ceremony church logo for Kambo and plant medicine sacraments in Washington DC"
+            alt="Temple Mother Earth sacred ceremony church logo for Kambo and Earth Medicine sacraments in Washington DC"
             className="mx-auto mb-8 h-32 w-32 rounded-full object-cover shadow-2xl ring-4 ring-primary/30 md:h-44 md:w-44"
           />
            <motion.h1

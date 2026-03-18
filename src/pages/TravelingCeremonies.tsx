@@ -128,7 +128,7 @@ const TravelingCeremonies = () => {
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
               <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred One</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Your traveling ceremony request has been received. Our team will be in touch to discuss logistics, pricing, and next steps.
+                Your traveling ceremony request has been received. Our team will be in touch to discuss logistics, sacred reciprocity, and next steps.
               </p>
               <Link to="/" className="mt-8 inline-block rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80">
                 Return Home
