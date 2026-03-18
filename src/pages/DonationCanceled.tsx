@@ -164,8 +164,8 @@ const DonationCanceled = () => {
           <div className="mt-8 space-y-5">
             {[
               {
-                q: "Was I charged?",
-                a: "No. Since the donation was not completed, no charge was made to your account. You can verify this in your PayPal transaction history.",
+                q: "Was anything processed?",
+                a: "No. Since the donation was not completed, nothing was processed. You can verify this in your PayPal history.",
               },
               {
                 q: "Can I donate a different amount?",
