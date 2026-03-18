@@ -8,7 +8,8 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import logo from "@/assets/logo.png";
-import offeringCeremony from "@/assets/offering-ceremony.jpg";
+import communityOutdoorCeremony from "@/assets/community-outdoor-ceremony.jpg";
+import kamboFrogEye from "@/assets/kambo-frog-eye.jpg";
 import founderJames from "@/assets/founder-james.jpg";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
@@ -79,14 +80,14 @@ const KamboRedirect = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[55vh] items-center justify-center overflow-hidden px-4 pt-8">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${offeringCeremony})` }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${communityOutdoorCeremony})` }} />
         <div className="absolute inset-0 bg-foreground/75" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-primary/80 mb-4">
             Sacred Frog Medicine
           </motion.p>
           <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-primary-foreground md:text-5xl leading-tight">
-            Kambo Ceremony in Washington DC
+            Kambo Ceremony in <span className="whitespace-nowrap">Washington DC</span>
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Experience the ancient purification medicine of the Giant Monkey Tree Frog.
@@ -134,13 +135,26 @@ const KamboRedirect = () => {
                 our co-founder and experienced Kambo practitioner, in a safe, sacred, and medically-screened environment.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={offeringCeremony}
-                alt="Sacred Kambo ceremony circle at Temple Mother Earth with participants in white clothing seated in a circle"
-                className="w-full h-80 object-cover"
-                loading="lazy"
-              />
+            <div className="space-y-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={kamboFrogEye}
+                  alt="Close-up of Giant Monkey Tree Frog eye, the sacred source of Kambo purification ceremony"
+                  className="w-full h-56 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <video
+                  controls
+                  preload="metadata"
+                  poster={kamboFrogEye}
+                  className="w-full"
+                >
+                  <source src="/videos/what-is-kambo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </motion.div>
         </motion.div>
