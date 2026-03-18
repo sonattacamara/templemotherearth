@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
+import MonthlyThemeCard from "@/components/sanctuary/MonthlyThemeCard";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
@@ -366,24 +367,44 @@ const SanctuaryWeek = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
             {[
-              { month: "April 2026", theme: "The Awakening", desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.", icon: <Sun className="h-6 w-6" /> },
-              { month: "May 2026", theme: "The Remembrance", desc: "We return to what the body already knows. Ancestral wisdom rises. This month we honor lineage, memory, and the prayers that carried us here.", icon: <Moon className="h-6 w-6" /> },
-              { month: "June 2026", theme: "The Sovereignty", desc: "You are the authority of your own becoming. This month we honor the sacred autonomy of every seeker who walks through the temple doors.", icon: <Crown className="h-6 w-6" /> },
-              { month: "July 2026", theme: "The Belonging", desc: "No one walks this path alone. This month we honor the sacred family — the circle that holds you when you cannot hold yourself.", icon: <Users className="h-6 w-6" /> },
+              {
+                month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
+                desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
+                backContent: [
+                  "April marks the Grand Reopening — the first Sanctuary Week after the temple's winter rest.",
+                  "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
+                  "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify. Every offering honors the threshold between stillness and motion.",
+                ],
+              },
+              {
+                month: "May 2026", theme: "The Remembrance", icon: <Moon className="h-6 w-6" />,
+                desc: "We return to what the body already knows. Ancestral wisdom rises. This month we honor lineage, memory, and the prayers that carried us here.",
+                backContent: [
+                  "May invites us to look backward before moving forward — to honor the ancestors, the lineages, and the unseen hands that guide this work.",
+                  "Ceremonies deepen into ancestral connection, grief tending, and the remembrance of who you were before the world told you to forget.",
+                  "The Sacred Tea Ceremony becomes the month's anchor — a doorway into the deeper layers of memory held in your body and spirit.",
+                ],
+              },
+              {
+                month: "June 2026", theme: "The Sovereignty", icon: <Crown className="h-6 w-6" />,
+                desc: "You are the authority of your own becoming. This month we honor the sacred autonomy of every seeker who walks through the temple doors.",
+                backContent: [
+                  "June is the month of standing fully in your own power. No guru. No intermediary. The divine speaks directly through you.",
+                  "This month's ceremonies focus on boundaries, self-trust, and the courage to claim your own spiritual authority.",
+                  "Level 5 — The Complete Initiation — finds its deepest expression here, as seekers who have walked the arc step fully into their sovereignty.",
+                ],
+              },
+              {
+                month: "July 2026", theme: "The Belonging", icon: <Users className="h-6 w-6" />,
+                desc: "No one walks this path alone. This month we honor the sacred family — the circle that holds you when you cannot hold yourself.",
+                backContent: [
+                  "July celebrates the truth that transformation is not a solo act. The community you walk beside is part of the sacrament itself.",
+                  "This month amplifies community offerings — the Potluck, the Art Expo, and extended Sacred Tea House evenings become the heartbeat.",
+                  "Integration circles expand. Alumni return. New seekers are welcomed by those who once sat where they now sit. The circle widens.",
+                ],
+              },
             ].map((item, i) => (
-              <motion.div
-                key={item.month}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 text-center"
-              >
-                <span className="text-[hsl(45,70%,49%)] mb-4 block">{item.icon}</span>
-                <p className="font-sans text-[8px] tracking-[3px] uppercase text-[hsl(35,20%,50%)] mb-2">{item.month}</p>
-                <h3 className="font-serif italic text-[22px] text-[hsl(45,70%,55%)] mb-3">{item.theme}</h3>
-                <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">{item.desc}</p>
-              </motion.div>
+              <MonthlyThemeCard key={item.month} {...item} index={i} />
             ))}
           </div>
           <p className="text-center font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-8">
