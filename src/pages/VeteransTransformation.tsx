@@ -119,7 +119,8 @@ const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset W
 const VeteransTransformation = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     branch: "",
     branchOther: "",
     serviceEra: "",
