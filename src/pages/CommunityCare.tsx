@@ -60,10 +60,10 @@ const CommunityCare = () => (
           In Indigenous traditions around the world, when you receive something sacred, you give something in return. Not because you owe it. Because the exchange itself is part of the ceremony. It completes the circle.
         </p>
         <p className="text-[17px] text-[hsl(35,30%,68%)] leading-[1.85]">
-          When you offer energy back to the space that held you, you are not paying for a service. You are honoring the lineage, the land, the facilitators, the medicines, and the unseen hands that made your experience possible.
+          When you offer energy back to the space that held you, you are honoring the lineage, the land, the facilitators, the medicines, and the unseen hands that made your experience possible. This is sacred reciprocity in its purest form.
         </p>
         <p className="text-[17px] text-[hsl(35,30%,68%)] leading-[1.85]">
-          This is not transactional. This is relational. This is how sacred communities have sustained themselves since the beginning of human ceremony.
+          This is relational. This is spiritual. This is how sacred communities have sustained themselves since the beginning of human ceremony.
         </p>
         <div className="mt-10 p-8 border border-[hsla(45,70%,49%,0.15)] bg-[hsl(105,30%,5%)]">
           <p className="text-[16px] text-[hsl(40,30%,90%)] italic leading-relaxed">
