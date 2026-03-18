@@ -8,7 +8,8 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import logo from "@/assets/logo.png";
-import offeringCeremony from "@/assets/offering-ceremony.jpg";
+import communityOutdoorCeremony from "@/assets/community-outdoor-ceremony.jpg";
+import kamboFrogEye from "@/assets/kambo-frog-eye.jpg";
 import founderJames from "@/assets/founder-james.jpg";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
