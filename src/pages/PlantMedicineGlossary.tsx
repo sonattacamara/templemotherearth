@@ -329,6 +329,32 @@ const PlantMedicineGlossary = () => {
             <p className="font-serif italic text-[clamp(16px,2vw,22px)] text-[hsl(35,30%,68%)] max-w-[600px] mx-auto leading-relaxed mb-4">
               {totalPlants} sacred earth sacraments, entheogenic plant teachers, and ceremonial traditions honored across living indigenous lineages worldwide.
             </p>
+          </motion.div>
+
+          {/* Entheogen Etymology Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="max-w-[720px] mx-auto mt-10 bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.15)] p-8 md:p-10"
+          >
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4 text-center">
+              Entheogen · From the Greek
+            </p>
+            <p className="font-serif text-[18px] text-[hsl(40,30%,88%)] leading-[1.85] text-center mb-4">
+              <em className="text-[hsl(45,70%,55%)]">En</em> (within) · <em className="text-[hsl(45,70%,55%)]">Theos</em> (God, the Divine) · <em className="text-[hsl(45,70%,55%)]">Gen</em> (to generate, to bring forth)
+            </p>
+            <p className="font-serif text-[16px] text-[hsl(35,30%,68%)] leading-relaxed text-center">
+              An <em>entheogen</em> is a substance that generates the experience of the divine within. The word was created to honor the sacred, ceremonial context in which these plants and fungi have been used for millennia, distinct from recreational or clinical language. Entheogens are not taken. They are received, in prayer, in ceremony, in community, with the understanding that what opens inside you was already there, waiting to be remembered. Every tradition listed here, from the Amazon to the Andes, from ancient Egypt to the forests of Siberia, shares this same root truth: the divine is not somewhere else. It is within you, and these sacred allies have always been the key.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="mt-8 text-center"
+          >
             <p className="font-sans text-[8px] tracking-[3px] uppercase text-[hsl(35,20%,45%)]">
               Search · Filter by Category · Explore by Origin
             </p>
