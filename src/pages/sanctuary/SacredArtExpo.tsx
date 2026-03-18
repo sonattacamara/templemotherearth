@@ -3,6 +3,7 @@ import { motion, type Easing } from "framer-motion";
 import { Palette, Music, Users, Sparkles, Send, ArrowRight, ArrowDown, Flower2, Leaf as LeafIcon, Brush } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
+import artExpoHero from "@/assets/art-expo-hero.jpeg";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -94,7 +95,7 @@ const SacredArtExpo = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url(https://images.pexels.com/photos/1472334/pexels-photo-1472334.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop)",
+            backgroundImage: `url(${artExpoHero})`,
           }}
         />
         <div className="absolute inset-0 bg-[#0d0b08]/80" />
