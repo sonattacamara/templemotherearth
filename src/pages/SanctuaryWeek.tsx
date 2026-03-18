@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
+import MonthlyThemeCard from "@/components/sanctuary/MonthlyThemeCard";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
 import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
