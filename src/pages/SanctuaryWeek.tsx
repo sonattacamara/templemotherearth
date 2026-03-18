@@ -352,7 +352,41 @@ const SanctuaryWeek = () => {
         </motion.div>
       </section>
 
-      {/* ═══ FIVE PILLARS (moved near top) ═══ */}
+      {/* ═══ INTERACTIVE TIMELINE ═══ */}
+      <section id="timeline" className="px-6 md:px-12 py-16 md:py-24 max-w-[1100px] mx-auto">
+        <div className="text-center mb-16">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Journey</p>
+          <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
+            The Arc of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Ten Days</em>
+          </h2>
+          <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[600px] mx-auto mt-6 leading-relaxed">
+            Scroll through each day. Each ceremony builds on the last. The sequence is sacred.
+          </p>
+        </div>
+
+        <PhaseMarker title="The Opening" days="Days 1–3" />
+        {timelineDays.slice(0, 3).map((day, i) => (
+          <TimelineNode key={day.day} day={day} index={i} />
+        ))}
+
+        <PhaseMarker title="The Initiation" days="Day 4" />
+        <TimelineNode day={timelineDays[3]} index={3} />
+
+        <PhaseMarker title="The Rest" days="Day 5" />
+        <TimelineNode day={timelineDays[4]} index={4} />
+
+        <PhaseMarker title="The Belonging" days="Day 6" />
+        <TimelineNode day={timelineDays[5]} index={5} />
+
+        <PhaseMarker title="The Integration" days="Days 7–9" />
+        {timelineDays.slice(6).map((day, i) => (
+          <TimelineNode key={day.day} day={day} index={i + 6} />
+        ))}
+      </section>
+
+      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
+
+      {/* ═══ FIVE PILLARS ═══ */}
       <SanctuarySection eyebrow="Our Sacred Approach" title={<>Five Pillars of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">The Sanctuary Experience</em></>}>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-0.5">
           {[
