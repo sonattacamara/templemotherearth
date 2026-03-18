@@ -84,7 +84,7 @@ const SacredArtExpo = () => {
     <div className="min-h-screen" style={{ background: "#0d0b08" }}>
       <SEOHead
         title="Art Expo · Artist Submissions"
-        description="Temple Mother Earth invites artists of all mediums to submit work for our bi-annual Sacred Art Expo. Spring Equinox March 28, 2026."
+        description="Temple Mother Earth invites artists of all mediums to submit work for our bi-annual Art Expo. Spring Equinox March 28, 2026."
         path="/art-expo"
       />
       <Navigation />
