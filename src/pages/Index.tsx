@@ -14,6 +14,7 @@ import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
+import sovereignBeing from "@/assets/sovereign-being.png";
 import communityImg from "@/assets/community.jpg";
 import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
@@ -318,11 +319,11 @@ const Index = () => {
                 we help you reconnect with the divine wisdom that has always been yours.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-[hsl(240,10%,8%)]">
               <img
-                src={sacredSpace}
-                alt="Sacred ceremony space for Ayahuasca integration, Kambo purification, and Hapé rituals at Temple Mother Earth"
-                className="w-full h-80 object-cover"
+                src={sovereignBeing}
+                alt="Luminous crystalline sovereign being with crown energy representing divine consciousness and spiritual awakening"
+                className="w-full h-80 object-contain"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
