@@ -110,7 +110,7 @@ const SacredArtExpo = () => {
             className="font-sans text-[10px] font-bold uppercase tracking-[0.5em]"
             style={{ color: "#c9a84c" }}
           >
-            Temple Mother Earth · Art Expo
+           Temple Mother Earth · Art Expo
           </motion.p>
           <motion.h1
             variants={fadeUp}
