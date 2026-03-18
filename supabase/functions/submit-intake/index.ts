@@ -22,8 +22,11 @@ if (!GHL_WEBHOOK_URL) {
 
 // Server-side validation
 const validateIntakeData = (data: Record<string, unknown>): string | null => {
-  const fullName = String(data.fullName || "").trim();
-  if (fullName.length < 2 || fullName.length > 100) return "Invalid name";
+  const firstName = String(data.firstName || "").trim();
+  if (firstName.length < 1 || firstName.length > 50) return "First name is required";
+
+  const lastName = String(data.lastName || "").trim();
+  if (lastName.length < 1 || lastName.length > 50) return "Last name is required";
 
   const email = String(data.email || "").trim();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) return "Invalid email";
