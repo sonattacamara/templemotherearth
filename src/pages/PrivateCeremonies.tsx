@@ -22,7 +22,7 @@ const PrivateCeremonies = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", ceremonyType: "",
+    firstName: "", lastName: "", email: "", phone: "", ceremonyType: "",
     experience: "", intentions: "", preferredDates: "",
     location: "", medicalConcerns: "", additionalInfo: "",
   });
