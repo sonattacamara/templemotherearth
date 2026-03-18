@@ -182,22 +182,29 @@ const SacredArtExpo = () => {
           {/* Event Cards */}
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
             {[
-              { icon: Flower2, title: "Spring Equinox", detail: "March 28, 2026 · 7–10 PM" },
-              { icon: LeafIcon, title: "Fall Equinox", detail: "Date TBD · Fall 2026" },
-              { icon: Brush, title: "Canvas & Ceremony", detail: "July 2026 · Immersive art + ceremony" },
+              {
+                icon: Flower2,
+                title: "Spring Equinox",
+                detail: "March 28, 2026 · 7–10 PM",
+                intention: "A celebration of renewal and rebirth. As the Earth awakens, we gather to honor the creative spirit within — displaying art that reflects transformation, new beginnings, and the sacredness of spring.",
+                link: "https://bit.ly/ARTExpo",
+              },
+              {
+                icon: LeafIcon,
+                title: "Fall Equinox",
+                detail: "Date TBD · Fall 2026",
+                intention: "A ceremony of harvest and reflection. As the seasons shift, we invite art that speaks to gratitude, ancestral wisdom, and the beauty found in surrender and letting go.",
+                link: "https://bit.ly/ARTExpo",
+              },
+              {
+                icon: Brush,
+                title: "Canvas & Ceremony",
+                detail: "July 2026 · Immersive art + ceremony",
+                intention: "An immersive evening where art-making becomes ceremony. Guests create alongside artists in a guided, sacred space — blending live painting, sound healing, and communal expression.",
+                link: "https://bit.ly/ARTExpo",
+              },
             ].map((e) => (
-              <motion.div
-                key={e.title}
-                variants={fadeUp}
-                className="rounded-xl p-6 text-center"
-                style={{ background: "#1a1612", border: "1px solid #c9a84c22" }}
-              >
-                <e.icon className="mx-auto h-8 w-8" style={{ color: "#c9a84c" }} />
-                <h3 className="mt-3 font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
-                  {e.title}
-                </h3>
-                <p className="mt-1 text-sm" style={{ color: "#B8A07Aaa" }}>{e.detail}</p>
-              </motion.div>
+              <EventFlipCard key={e.title} icon={e.icon} title={e.title} detail={e.detail} intention={e.intention} link={e.link} />
             ))}
           </div>
         </motion.div>
