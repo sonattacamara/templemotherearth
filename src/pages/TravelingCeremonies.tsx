@@ -22,7 +22,7 @@ const TravelingCeremonies = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    fullName: "", email: "", phone: "", location: "",
+    firstName: "", lastName: "", email: "", phone: "", location: "",
     ceremonyType: "", groupSize: "", preferredDates: "",
     venue: "", intentions: "", additionalInfo: "",
   });
