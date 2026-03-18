@@ -71,7 +71,7 @@ const offerings = [
     title: "Traveling Ceremonies",
     desc: "Invite the sacred to your community with ceremonies tailored to your unique path.",
     img: offeringTraveling,
-    imgAlt: "Traveling Kambo and Cacao ceremony facilitators bringing sacred plant medicine to communities",
+    imgAlt: "Traveling Kambo and Cacao ceremony facilitators bringing sacred Earth Medicine to communities",
     link: "/traveling-ceremonies",
     isExternal: false,
     cta: "Bring Us to You",
