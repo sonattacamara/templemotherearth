@@ -100,8 +100,9 @@ serve(async (req) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...body,
-        firstName: String(body.fullName || "").trim().split(/\s+/)[0] || "",
-        lastName: String(body.fullName || "").trim().split(/\s+/).slice(1).join(" ") || "",
+        firstName: String(body.firstName || "").trim(),
+        lastName: String(body.lastName || "").trim(),
+        name: `${String(body.firstName || "").trim()} ${String(body.lastName || "").trim()}`,
         // GHL expects YYYY-MM-DD format — HTML date inputs already send YYYY-MM-DD
         // Just pass through if already in correct format, otherwise normalize
         dateOfBirth: (() => {
