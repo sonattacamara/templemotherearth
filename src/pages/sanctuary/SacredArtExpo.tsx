@@ -172,12 +172,10 @@ const SacredArtExpo = () => {
               and beyond.
             </p>
             <p>
-              This is not just a gallery.{" "}
               <strong style={{ color: "#F5F0E6" }}>
-              It is a ceremony of creative souls gathered to witness, honor, and elevate art as
-                 sacrament.
-               </strong>
-             </p>
+                A ceremony of creative souls gathered to witness, honor, and elevate art as sacrament.
+              </strong>
+            </p>
           </motion.div>
 
           {/* Event Cards */}

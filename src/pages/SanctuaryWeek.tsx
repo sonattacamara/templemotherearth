@@ -125,7 +125,7 @@ const timelineDays: TimelineDay[] = [
     icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
     pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
     ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
-    slug: "/kambo", image: kamboCeremonyAltar,
+    slug: "/kambo", image: kamboFrogArt,
     phase: "The Integration",
   },
 ];
