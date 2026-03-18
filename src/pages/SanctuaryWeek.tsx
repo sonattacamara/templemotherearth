@@ -353,67 +353,7 @@ const SanctuaryWeek = () => {
         </motion.div>
       </section>
 
-      {/* ═══ MONTHLY THEMES ═══ */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)]">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="text-center mb-14">
-            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · Monthly Themes</p>
-            <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
-              The Sacred<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Calendar</em>
-            </h2>
-            <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[580px] mx-auto mt-6 leading-relaxed">
-              Each month carries its own spiritual theme — a lens through which every ceremony, gathering, and practice is held.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
-            {[
-              {
-                month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
-                desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
-                backContent: [
-                  "April marks the Grand Reopening — the first Sanctuary Week after the temple's winter rest.",
-                  "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
-                  "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify. Every offering honors the threshold between stillness and motion.",
-                ],
-              },
-              {
-                month: "May 2026", theme: "The Remembrance", icon: <Moon className="h-6 w-6" />,
-                desc: "We return to what the body already knows. Ancestral wisdom rises. This month we honor lineage, memory, and the prayers that carried us here.",
-                backContent: [
-                  "May invites us to look backward before moving forward — to honor the ancestors, the lineages, and the unseen hands that guide this work.",
-                  "Ceremonies deepen into ancestral connection, grief tending, and the remembrance of who you were before the world told you to forget.",
-                  "The Sacred Tea Ceremony becomes the month's anchor — a doorway into the deeper layers of memory held in your body and spirit.",
-                ],
-              },
-              {
-                month: "June 2026", theme: "The Sovereignty", icon: <Crown className="h-6 w-6" />,
-                desc: "You are the authority of your own becoming. This month we honor the sacred autonomy of every seeker who walks through the temple doors.",
-                backContent: [
-                  "June is the month of standing fully in your own power. No guru. No intermediary. The divine speaks directly through you.",
-                  "This month's ceremonies focus on boundaries, self-trust, and the courage to claim your own spiritual authority.",
-                  "Level 5 — The Complete Initiation — finds its deepest expression here, as seekers who have walked the arc step fully into their sovereignty.",
-                ],
-              },
-              {
-                month: "July 2026", theme: "The Belonging", icon: <Users className="h-6 w-6" />,
-                desc: "No one walks this path alone. This month we honor the sacred family — the circle that holds you when you cannot hold yourself.",
-                backContent: [
-                  "July celebrates the truth that transformation is not a solo act. The community you walk beside is part of the sacrament itself.",
-                  "This month amplifies community offerings — the Potluck, the Art Expo, and extended Sacred Tea House evenings become the heartbeat.",
-                  "Integration circles expand. Alumni return. New seekers are welcomed by those who once sat where they now sit. The circle widens.",
-                ],
-              },
-            ].map((item, i) => (
-              <MonthlyThemeCard key={item.month} {...item} index={i} />
-            ))}
-          </div>
-          <p className="text-center font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-8">
-            Themes continue through the year · Each month revealed as the previous one closes
-          </p>
-        </div>
-      </section>
 
-      <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ INTERACTIVE TIMELINE ═══ */}
       <section id="timeline" className="px-6 md:px-12 py-16 md:py-24 max-w-[1100px] mx-auto">
@@ -568,6 +508,111 @@ const SanctuaryWeek = () => {
           ))}
         </div>
       </SanctuarySection>
+
+      {/* ═══ MONTHLY THEMES / SACRED CALENDAR ═══ */}
+      <section className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center mb-14">
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · Monthly Themes</p>
+            <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
+              The Sacred<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Calendar</em>
+            </h2>
+            <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[580px] mx-auto mt-6 leading-relaxed">
+              Each month carries its own spiritual theme — a lens through which every ceremony, gathering, and practice is held.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5">
+            {[
+              {
+                month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
+                desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
+                backContent: [
+                  "April marks the Grand Reopening — the first Sanctuary Week after the temple's winter rest.",
+                  "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
+                  "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify.",
+                ],
+              },
+              {
+                month: "May 2026", theme: "The Remembrance", icon: <Moon className="h-6 w-6" />,
+                desc: "We return to what the body already knows. Ancestral wisdom rises. This month we honor lineage, memory, and the prayers that carried us here.",
+                backContent: [
+                  "May invites us to look backward before moving forward — to honor the ancestors, the lineages, and the unseen hands that guide this work.",
+                  "Ceremonies deepen into ancestral connection, grief tending, and the remembrance of who you were before the world told you to forget.",
+                  "The Sacred Tea Ceremony becomes the month's anchor — a doorway into the deeper layers of memory held in your body and spirit.",
+                ],
+              },
+              {
+                month: "June 2026", theme: "The Sovereignty", icon: <Crown className="h-6 w-6" />,
+                desc: "You are the authority of your own becoming. This month we honor the sacred autonomy of every seeker who walks through the temple doors.",
+                backContent: [
+                  "June is the month of standing fully in your own power. No guru. No intermediary. The divine speaks directly through you.",
+                  "This month's ceremonies focus on boundaries, self-trust, and the courage to claim your own spiritual authority.",
+                  "Level 5 — The Complete Initiation — finds its deepest expression here, as seekers step fully into their sovereignty.",
+                ],
+              },
+              {
+                month: "July 2026", theme: "The Belonging", icon: <Users className="h-6 w-6" />,
+                desc: "No one walks this path alone. This month we honor the sacred family — the circle that holds you when you cannot hold yourself.",
+                backContent: [
+                  "July celebrates the truth that transformation is not a solo act. The community you walk beside is part of the sacrament itself.",
+                  "This month amplifies community offerings — the Potluck, the Art Expo, and extended Sacred Tea House evenings become the heartbeat.",
+                  "Integration circles expand. Alumni return. New seekers are welcomed by those who once sat where they now sit.",
+                ],
+              },
+              {
+                month: "August 2026", theme: "The Harvest", icon: <Leaf className="h-6 w-6" />,
+                desc: "The seeds planted in spring bear fruit. This month we honor the abundance that arrives when you stay on the path long enough to receive it.",
+                backContent: [
+                  "August is the month of receiving — of allowing the work you have done to show itself in your body, your relationships, and your clarity.",
+                  "Ceremonies focus on gratitude, embodiment, and the sacred art of allowing blessings to land without deflecting them.",
+                  "Alumni share their harvest stories. The circle witnesses each person's growth as a sacrament in itself.",
+                ],
+              },
+              {
+                month: "September 2026", theme: "The Threshold", icon: <Flame className="h-6 w-6" />,
+                desc: "The light begins to shift. This month we honor the courage it takes to stand at the doorway between who you have been and who you are becoming.",
+                backContent: [
+                  "September marks the Autumn Equinox — the balance point. Equal light, equal dark. A time to assess what must be released before winter.",
+                  "Kambo and Level 5 carry particular power this month as seekers are invited to burn away what no longer serves their becoming.",
+                  "The temple holds a special equinox ceremony to honor the turning of the wheel and the sacred act of letting go.",
+                ],
+              },
+              {
+                month: "October 2026", theme: "The Ancestors", icon: <Star className="h-6 w-6" />,
+                desc: "The veil is thin. This month we honor the ones who walked before us — the unseen council that holds every ceremony from the other side.",
+                backContent: [
+                  "October deepens the ancestral work begun in May. As the veil thins, ceremonies open portals to lineage, legacy, and spiritual inheritance.",
+                  "Sacred Tea and Hapé ceremonies carry a particular reverence this month — prayers are offered not just for the living, but for those who have crossed over.",
+                  "The Art Expo takes on a visionary dimension, inviting art born from dreams, ceremony, and communion with the ancestors.",
+                ],
+              },
+              {
+                month: "November 2026", theme: "The Gratitude", icon: <Heart className="h-6 w-6" />,
+                desc: "Before the temple closes, we give thanks. This month we honor every breath, every tear, every breakthrough, and every soul who walked through the doors.",
+                backContent: [
+                  "November is the temple's season of thanksgiving — not a holiday, but a living practice of radical gratitude for the year's journey.",
+                  "Community Potluck becomes the centerpiece, expanding into a full day of shared nourishment, story, and celebration.",
+                  "Integration circles deepen as the year's participants reflect on the distance traveled from their first ceremony to now.",
+                ],
+              },
+              {
+                month: "December 2026", theme: "The Surrender", icon: <Sparkles className="h-6 w-6" />,
+                desc: "The longest night approaches. This month we honor the sacred act of release — trusting that what dies in the dark will be reborn in the light.",
+                backContent: [
+                  "December holds the final ceremonies before the Winter Solstice closing. Every offering carries the weight of completion and the tenderness of farewell.",
+                  "The closing ceremony marks the moment the temple turns inward. Candles are lit. Prayers are spoken. The doors close gently.",
+                  "What was planted in April's Awakening finds its resting place here. The cycle is complete. The Earth exhales. And so do we.",
+                ],
+              },
+            ].map((item, i) => (
+              <MonthlyThemeCard key={item.month} {...item} index={i} />
+            ))}
+          </div>
+          <p className="text-center font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-8">
+            Each month revealed as the previous one closes · The arc is sacred
+          </p>
+        </div>
+      </section>
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
