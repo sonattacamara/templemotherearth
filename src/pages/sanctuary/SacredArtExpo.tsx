@@ -11,8 +11,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
-import { useState as useStateReact } from "react";
-
 interface FlipCardProps {
   icon: React.ElementType;
   title: string;
