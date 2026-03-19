@@ -125,6 +125,12 @@ div[data-elfsight-app-lazy] + a[href*="elfsight"] {
   max-height: 0 !important;
 }
 
+/* Gold shimmer animation for Art Expo flip cards */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 /* Safe area for sticky mobile bar */
 .safe-area-pb {
   padding-bottom: env(safe-area-inset-bottom, 0px);

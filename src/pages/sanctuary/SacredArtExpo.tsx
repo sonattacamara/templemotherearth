@@ -25,7 +25,7 @@ const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardP
   return (
     <motion.div
       variants={fadeUp}
-      className="cursor-pointer"
+      className="cursor-pointer group"
       style={{ perspective: 800, minHeight: 220 }}
       onClick={() => setFlipped((f) => !f)}
     >
@@ -37,9 +37,17 @@ const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardP
       >
         {/* Front */}
         <div
-          className="absolute inset-0 rounded-xl p-6 text-center flex flex-col items-center justify-center"
+          className="absolute inset-0 rounded-xl p-6 text-center flex flex-col items-center justify-center overflow-hidden"
           style={{ background: "#1a1612", border: "1px solid #c9a84c22", backfaceVisibility: "hidden" }}
         >
+          {/* Shimmer overlay */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+            style={{
+              background: "linear-gradient(105deg, transparent 40%, rgba(201,168,76,0.08) 45%, rgba(201,168,76,0.18) 50%, rgba(201,168,76,0.08) 55%, transparent 60%)",
+              animation: "shimmer 3s ease-in-out infinite",
+            }}
+          />
           <Icon className="mx-auto h-8 w-8" style={{ color: "#c9a84c" }} />
           <h3 className="mt-3 font-serif text-lg font-semibold" style={{ color: "#c9a84c" }}>
             {title}
