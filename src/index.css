@@ -125,6 +125,17 @@ div[data-elfsight-app-lazy] + a[href*="elfsight"] {
   max-height: 0 !important;
 }
 
+/* Gold shimmer animation for Art Expo flip cards */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(201,168,76,0.05); border-color: rgba(201,168,76,0.13); }
+  50% { box-shadow: 0 0 18px rgba(201,168,76,0.12); border-color: rgba(201,168,76,0.25); }
+}
+
 /* Safe area for sticky mobile bar */
 .safe-area-pb {
   padding-bottom: env(safe-area-inset-bottom, 0px);
