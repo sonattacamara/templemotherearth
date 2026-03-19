@@ -38,7 +38,13 @@ const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardP
         {/* Front */}
         <div
           className="absolute inset-0 rounded-xl p-6 text-center flex flex-col items-center justify-center overflow-hidden"
-          style={{ background: "#1a1612", border: "1px solid #c9a84c22", backfaceVisibility: "hidden" }}
+          style={{
+            background: "#1a1612",
+            border: "1px solid #c9a84c22",
+            backfaceVisibility: "hidden",
+            boxShadow: "0 0 12px rgba(201,168,76,0.06)",
+            animation: "glowPulse 4s ease-in-out infinite",
+          }}
         >
           {/* Shimmer overlay */}
           <div
