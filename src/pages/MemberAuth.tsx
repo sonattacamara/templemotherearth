@@ -30,6 +30,8 @@ const MemberAuth = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [formLoadedAt] = useState(Date.now());
   const { signIn, signUp, resetPassword } = useAuth();
   const navigate = useNavigate();
 
