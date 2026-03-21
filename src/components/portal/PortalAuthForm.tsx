@@ -40,6 +40,14 @@ const PortalAuthForm = () => {
     setSuccess("");
     setSubmitting(true);
 
+    // Bot detection
+    if (honeypot) { setSubmitting(false); return; }
+    if (!isLogin && Date.now() - formLoadedAt < 3000) {
+      setError("Please take a moment before submitting.");
+      setSubmitting(false);
+      return;
+    }
+
     if (isForgotPassword) {
       const { error } = await resetPassword(email);
       if (error) setError(error.message);
