@@ -44,6 +44,14 @@ const MemberAuth = () => {
     setSuccess("");
     setLoading(true);
 
+    // Bot detection: honeypot and timing check
+    if (honeypot) { setLoading(false); return; }
+    if (!isLogin && Date.now() - formLoadedAt < 3000) {
+      setError("Please take a moment before submitting.");
+      setLoading(false);
+      return;
+    }
+
     if (isForgotPassword) {
       const { error } = await resetPassword(email);
       if (error) setError(error.message);
