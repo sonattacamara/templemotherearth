@@ -68,7 +68,7 @@ const PortalAuthForm = () => {
       const { error } = await signIn(email, password);
       if (error) setError(error.message);
     } else {
-      const { error } = await signUp(email, password, fullName);
+      const { error } = await signUp(email, password, firstName, lastName);
       if (error) setError(error.message);
       else setSuccess("Account created! You're being signed in…");
     }
