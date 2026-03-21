@@ -22,7 +22,8 @@ const PortalAuthForm = () => {
   const [confirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -67,7 +68,7 @@ const PortalAuthForm = () => {
       const { error } = await signIn(email, password);
       if (error) setError(error.message);
     } else {
-      const { error } = await signUp(email, password, fullName);
+      const { error } = await signUp(email, password, firstName, lastName);
       if (error) setError(error.message);
       else setSuccess("Account created! You're being signed in…");
     }
@@ -115,9 +116,15 @@ const PortalAuthForm = () => {
           )}
 
           {!isLogin && !isForgotPassword && (
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-1">Your Name</label>
-              <input className={inputClass} placeholder="How would you like to be called?" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-1">First Name</label>
+                <input className={inputClass} placeholder="First name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-1">Last Name</label>
+                <input className={inputClass} placeholder="Last name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+              </div>
             </div>
           )}
 

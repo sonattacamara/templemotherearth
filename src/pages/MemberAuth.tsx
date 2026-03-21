@@ -24,7 +24,8 @@ const MemberAuth = () => {
   const [confirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -75,7 +76,7 @@ const MemberAuth = () => {
         navigate("/member/education");
       }
     } else {
-      const { error } = await signUp(email, password, fullName);
+      const { error } = await signUp(email, password, firstName, lastName);
       if (error) {
         setError(error.message);
       } else {
@@ -110,7 +111,10 @@ const MemberAuth = () => {
 
           <motion.form variants={fadeUp} className="space-y-4 rounded-2xl border border-border bg-card p-8" onSubmit={handleSubmit}>
             {!isLogin && !isForgotPassword && (
-              <input className={inputClass} placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
+              <div className="grid grid-cols-2 gap-3">
+                <input className={inputClass} placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                <input className={inputClass} placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+              </div>
             )}
 
             <input className={inputClass} type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />

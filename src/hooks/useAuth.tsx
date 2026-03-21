@@ -6,7 +6,7 @@ interface AuthContextType {
   user: User | null;
   session: Session | null;
   loading: boolean;
-  signUp: (email: string, password: string, fullName: string) => Promise<{ error: Error | null }>;
+  signUp: (email: string, password: string, firstName: string, lastName: string) => Promise<{ error: Error | null }>;
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error: Error | null }>;
@@ -35,20 +35,21 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return () => subscription.unsubscribe();
   }, []);
 
-  const signUp = async (email: string, password: string, fullName: string) => {
+  const signUp = async (email: string, password: string, firstName: string, lastName: string) => {
+    const fullName = `${firstName.trim()} ${lastName.trim()}`.trim();
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         emailRedirectTo: window.location.origin,
-        data: { full_name: fullName },
+        data: { full_name: fullName, first_name: firstName.trim(), last_name: lastName.trim() },
       },
     });
 
     // Trigger welcome email via GHL webhook
     if (!error && data?.user) {
       supabase.functions.invoke("send-welcome-email", {
-        body: { email, full_name: fullName, user_id: data.user.id },
+        body: { email, firstName: firstName.trim(), lastName: lastName.trim(), full_name: fullName, user_id: data.user.id },
       }).catch(console.error);
     }
 
