@@ -141,10 +141,11 @@ const PortalAuthForm = () => {
           <div>
             <label className="block text-sm font-semibold text-foreground mb-1">Email</label>
             <input className={inputClass} type="email" placeholder="your@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            {/* Honeypot - hidden from real users */}
-            <div className="absolute opacity-0 pointer-events-none h-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
-              <input type="text" name="website_url" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" />
-            </div>
+          </div>
+          {/* Honeypot - hidden from real users */}
+          <div className="absolute opacity-0 pointer-events-none h-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+            <input type="text" name="website_url" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" />
+          </div>
 
           {!isLogin && !isForgotPassword && (
             <div>
