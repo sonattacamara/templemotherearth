@@ -30,6 +30,8 @@ const MemberAuth = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [formLoadedAt] = useState(Date.now());
   const { signIn, signUp, resetPassword } = useAuth();
   const navigate = useNavigate();
 
@@ -41,6 +43,14 @@ const MemberAuth = () => {
     setError("");
     setSuccess("");
     setLoading(true);
+
+    // Bot detection: honeypot and timing check
+    if (honeypot) { setLoading(false); return; }
+    if (!isLogin && Date.now() - formLoadedAt < 3000) {
+      setError("Please take a moment before submitting.");
+      setLoading(false);
+      return;
+    }
 
     if (isForgotPassword) {
       const { error } = await resetPassword(email);
@@ -118,6 +128,10 @@ const MemberAuth = () => {
             )}
 
             <input className={inputClass} type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            {/* Honeypot - hidden from real users */}
+            <div className="absolute opacity-0 pointer-events-none h-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+              <input type="text" name="website_url" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" />
+            </div>
 
             {!isLogin && !isForgotPassword && (
               <div>

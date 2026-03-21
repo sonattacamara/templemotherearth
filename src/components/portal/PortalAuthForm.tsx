@@ -28,6 +28,8 @@ const PortalAuthForm = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [formLoadedAt] = useState(Date.now());
 
   const inputClass =
     "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
@@ -37,6 +39,14 @@ const PortalAuthForm = () => {
     setError("");
     setSuccess("");
     setSubmitting(true);
+
+    // Bot detection
+    if (honeypot) { setSubmitting(false); return; }
+    if (!isLogin && Date.now() - formLoadedAt < 3000) {
+      setError("Please take a moment before submitting.");
+      setSubmitting(false);
+      return;
+    }
 
     if (isForgotPassword) {
       const { error } = await resetPassword(email);
@@ -131,6 +141,10 @@ const PortalAuthForm = () => {
           <div>
             <label className="block text-sm font-semibold text-foreground mb-1">Email</label>
             <input className={inputClass} type="email" placeholder="your@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </div>
+          {/* Honeypot - hidden from real users */}
+          <div className="absolute opacity-0 pointer-events-none h-0 overflow-hidden" aria-hidden="true" tabIndex={-1}>
+            <input type="text" name="website_url" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" />
           </div>
 
           {!isLogin && !isForgotPassword && (

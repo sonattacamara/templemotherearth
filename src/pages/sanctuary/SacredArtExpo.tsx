@@ -574,11 +574,10 @@ const SacredArtExpo = () => {
             </a>
           </motion.div>
           <motion.p variants={fadeUp} className="mt-4 text-sm" style={{ color: "#B8A07A66" }}>
-            Questions? Reach us at{" "}
-            <a href="mailto:askus@templemotherearth.org" style={{ color: "#c9a84c" }}>
-              askus@templemotherearth.org
-            </a>{" "}
-            or call <a href="tel:+12024392535" style={{ color: "#c9a84c" }}>202-439-2535</a>
+            Questions?{" "}
+            <a href="/contact" style={{ color: "#c9a84c" }}>
+              Visit our Contact page →
+            </a>
           </motion.p>
         </motion.div>
       </section>
