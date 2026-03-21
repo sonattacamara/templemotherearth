@@ -111,7 +111,10 @@ const MemberAuth = () => {
 
           <motion.form variants={fadeUp} className="space-y-4 rounded-2xl border border-border bg-card p-8" onSubmit={handleSubmit}>
             {!isLogin && !isForgotPassword && (
-              <input className={inputClass} placeholder="Full Name" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
+              <div className="grid grid-cols-2 gap-3">
+                <input className={inputClass} placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                <input className={inputClass} placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+              </div>
             )}
 
             <input className={inputClass} type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
