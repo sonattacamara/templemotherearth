@@ -505,7 +505,7 @@ const SanctuaryWeek = () => {
                 month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
                 desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
                 backContent: [
-                  "April marks the Grand Reopening — the first Sanctuary Week after the temple's winter rest.",
+                  "April marks the Grand Reopening — the first Sacred Series after the temple's winter rest.",
                   "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
                   "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify.",
                 ],
