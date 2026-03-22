@@ -1,4 +1,5 @@
 import { motion, type Easing } from "framer-motion";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
