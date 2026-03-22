@@ -33,7 +33,9 @@ const MemberPortal = () => {
         <Navigation />
         <PortalQuickAccess />
         <PortalHowItWorks />
+        <PortalDailyPractice />
         <PortalToolsGrid />
+        <PortalFacilitatorDirectory />
         <PortalPathway />
         <PortalExternalLink />
         <EventbriteCTA />
