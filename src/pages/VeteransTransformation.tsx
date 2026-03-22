@@ -217,17 +217,13 @@ const VeteransTransformation = () => {
       if (error) throw error;
       if (data?.error) {
         setFormError(data.error);
-        setSubmitting(false);
         return;
       }
       setFormSubmitted(true);
-      setSubmitting(false);
-      setTimeout(() => {
-        document.getElementById("veteran-form-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 100);
     } catch (err) {
       console.error("Veterans form error:", err);
       setFormError("Something went wrong. Please try again.");
+    } finally {
       setSubmitting(false);
     }
   };

@@ -50,8 +50,10 @@ const navStructure: NavEntry[] = [
     label: "Learn",
     items: [
       { label: "Kemetic Teachings", href: "/kemetic-teachings", isRoute: true },
+      { label: "Earth Kingdoms", href: "/earth-kingdoms", isRoute: true },
       { label: "Sacred Blueprint", href: "/sacred-blueprint", isRoute: true },
       { label: "Journal", href: "/journal", isRoute: true },
+      { label: "Preparation", href: "/preparation", isRoute: true },
       { label: "Plant Sacrament Glossary", href: "/plant-medicine-glossary", isRoute: true },
     ],
   },
