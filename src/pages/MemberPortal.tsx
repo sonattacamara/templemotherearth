@@ -8,6 +8,8 @@ import PortalHowItWorks from "@/components/portal/PortalHowItWorks";
 import PortalToolsGrid from "@/components/portal/PortalToolsGrid";
 import PortalPathway from "@/components/portal/PortalPathway";
 import PortalExternalLink from "@/components/portal/PortalExternalLink";
+import PortalDailyPractice from "@/components/portal/PortalDailyPractice";
+import PortalFacilitatorDirectory from "@/components/portal/PortalFacilitatorDirectory";
 
 const MemberPortal = () => {
   const { user, loading } = useAuth();
