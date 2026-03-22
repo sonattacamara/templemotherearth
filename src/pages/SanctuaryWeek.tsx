@@ -109,26 +109,6 @@ const timelineDays: TimelineDay[] = [
     slug: "/yin-yoga", image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Integration",
   },
-  {
-    day: 8, date: "", weekday: "", name: "Art Expo",
-    subtitle: "Art Born From the Other Side",
-    description: "Visionary art exhibition, artist gathering, live sound performances, and Sacred Tea House open all evening. An evening where ceremony becomes culture.",
-    icon: <Palette className="h-5 w-5" />, tags: ["Art", "Music", "Evening"],
-    pricing: [{ label: "Sustainer", price: "$22" }, { label: "Community", price: "$11" }, { label: "Members", price: "Free" }],
-    ctaLabel: "Reserve Your Evening", ctaHref: "https://www.eventbrite.com/e/art-expo-registration-539756675747", ctaReady: true,
-    slug: "/art-expo", image: "https://images.pexels.com/photos/1839919/pexels-photo-1839919.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
-    phase: "The Integration",
-  },
-  {
-    day: 9, date: "", weekday: "", name: "Kambo Ceremony",
-    subtitle: "Some Things Cannot Be Talked Through",
-    description: "The Great Purifier. The ancient Amazonian purification sacrament. For those who have been called. Sacred screening required. By application only.",
-    icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
-    pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
-    slug: "/kambo", image: kamboFrogArt,
-    phase: "The Integration",
-  },
 ];
 
 /* ─── Timeline Node Component ─── */
