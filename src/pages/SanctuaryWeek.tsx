@@ -361,10 +361,8 @@ const SanctuaryWeek = () => {
         <PhaseMarker title="The Belonging" days="Day 6" />
         <TimelineNode day={timelineDays[5]} index={5} />
 
-        <PhaseMarker title="The Integration" days="Days 7–9" />
-        {timelineDays.slice(6).map((day, i) => (
-          <TimelineNode key={day.day} day={day} index={i + 6} />
-        ))}
+        <PhaseMarker title="The Integration" days="Day 7" />
+        <TimelineNode day={timelineDays[6]} index={6} />
       </section>
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
