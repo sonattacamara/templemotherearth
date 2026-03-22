@@ -939,6 +939,8 @@ const Index = () => {
 
       
 
+      <MonthlyThemeBanner />
+
       <DonationCTA
         eyebrow="Sustain the Sacred"
         headline="Your Offerings Keep the Temple Alive"
