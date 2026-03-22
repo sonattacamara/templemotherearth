@@ -1,4 +1,5 @@
 import { motion, type Easing } from "framer-motion";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import { Heart, Shield, Users, Leaf, Globe, Sparkles, ArrowLeft, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -813,6 +814,13 @@ const About = () => {
       />
 
       <EventbriteCTA />
+
+      <InternalLinkingFooter links={[
+        { label: "Sacred Series", href: "/sanctuary-week" },
+        { label: "Sacred Intake Form", href: "/ceremony-intake" },
+        { label: "Membership", href: "/membership" },
+        { label: "Journal", href: "/journal" },
+      ]} />
 
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">

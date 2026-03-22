@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import { motion, type Easing } from "framer-motion";
 import { Flame, Globe, Users, Heart, Leaf, Sun, ArrowRight, Sparkles, ShieldCheck, MapPin, Star, Eye, Compass, Calendar, Instagram, Facebook, Send, Phone, HeartCrack, CloudFog, Brain, RefreshCw, HandHeart, Home, Sprout, Gift, Camera, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -1032,6 +1033,13 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <InternalLinkingFooter links={[
+        { label: "About Us", href: "/about" },
+        { label: "Sacred Series", href: "/sanctuary-week" },
+        { label: "Earth Kingdoms", href: "/earth-kingdoms" },
+        { label: "Kemetic Teachings", href: "/kemetic-teachings" },
+      ]} />
 
       {/* ───── SEO: Plant Medicine Knowledge Base (visually hidden, crawlable) ───── */}
       <section className="sr-only" aria-label="Plant Medicine Knowledge Base">

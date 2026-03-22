@@ -362,6 +362,29 @@ const CeremonyIntake = () => {
       <section className="px-4 pb-24">
         <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
 
+          {/* Before You Begin Notice */}
+          {step === 1 && (
+            <div className="rounded-xl border border-primary/20 bg-primary/5 p-5 mb-8">
+              <div className="flex items-start gap-3">
+                <ShieldCheck className="h-6 w-6 text-primary shrink-0 mt-0.5" />
+                <div>
+                  <h4 className="font-display text-base font-semibold text-foreground mb-1">Before You Begin</h4>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Please review our Code of Conduct and Ceremony Preparation guidelines before completing this form.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <Link to="/conduct" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                      Code of Conduct <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                    <Link to="/preparation" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                      Preparation Guide <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Step 1: Personal Info */}
           {step === 1 && (
             <div className="space-y-5">
