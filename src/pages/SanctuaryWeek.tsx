@@ -461,7 +461,7 @@ const SanctuaryWeek = () => {
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ DAILY RHYTHM ═══ */}
-      <SanctuarySection eyebrow="The Daily Rhythm" title={<>A Day in<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Sanctuary Week</em></>}>
+      <SanctuarySection eyebrow="The Daily Rhythm" title={<>A Day in<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">the Sacred Series</em></>}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
           {[
             { time: "6:00 AM", title: "Rise & Grounding", desc: "Greet the dawn with intentionality. Sip herbal tea as you settle into stillness, meditation, and the quiet beauty of your own inner alignment.", icon: <Sun className="h-4 w-4" /> },
