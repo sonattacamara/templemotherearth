@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://templemotherearth.org/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://templemotherearth.org/about</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/membership</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/ceremony-intake</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/contact</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/kemetic-teachings</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/veterans-transformation-program</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/plant-medicine-glossary</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/retreats-inquiry</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/traveling-ceremonies</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/private-ceremonies</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/preparation</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/volunteer</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/join-facilitator</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/sponsor</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/donate/ceremony</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  
-  <url><loc>https://templemotherearth.org/conduct</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://templemotherearth.org/kambo</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/level-5</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/art-expo</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/sanctuary-week</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/sacred-blueprint</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/earth-kingdoms</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/community-care</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://templemotherearth.org/donate</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+<url><loc>https://templemotherearth.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://templemotherearth.org/about</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://templemotherearth.org/sanctuary-week</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://templemotherearth.org/membership</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://templemotherearth.org/ceremony-intake</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://templemotherearth.org/veterans-transformation-program</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<url><loc>https://templemotherearth.org/community-care</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/journal</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/journal/the-warriors-reset-kambo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/journal/opening-the-heart-cacao-ceremony-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/journal/beyond-the-ceremony-integration</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/kemetic-teachings</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/earth-kingdoms</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/sacred-blueprint</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/retreats-inquiry</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://templemotherearth.org/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/donate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/portal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/hape</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/cacao</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/kambo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/level5</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/sacred-tea</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/plant-medicine-glossary</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/preparation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/traveling-ceremonies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/private-ceremonies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://templemotherearth.org/conduct</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/volunteer</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/join-facilitator</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/sponsor</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/spa</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/potluck</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/yin-yoga</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/art-expo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://templemotherearth.org/tea-house</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

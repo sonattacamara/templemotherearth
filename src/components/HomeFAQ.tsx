@@ -89,7 +89,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: "What are the membership tiers?",
-        a: "We offer five pathways: Welcome Circle (free), Community Rhythm ($33/mo), Environment Collective ($66/mo), Preparation Path ($133/mo), and Temple Immersion ($500/mo). Each tier is designed to meet you where you are on your sacred journey.",
+        a: "We offer five pathways: Welcome Circle (free) — community access and newsletter. Community Rhythm ($50/month) — full portal access, monthly teachings, ceremony attendance. Environment Collective ($150/month) — daily Qi Gong, replay library, embodiment workshops. Preparation Path ($275/month) — guided 3-month preparation container, ceremony eligibility. Temple Immersion Path ($500/month) — quarterly immersion eligibility, deep integration support.",
       },
       {
         q: "What is the cost of ceremonies?",

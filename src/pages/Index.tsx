@@ -59,9 +59,9 @@ const offerings = [
   {
     icon: Globe,
     title: "International Immersions",
-    desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
+    desc: "Journey with us to Sayulita, Mexico (Oct 31–Nov 7, 2026) and the sacred shores of Costa Rica (Aug 2–8, 2026). Immersive Earth Medicine experiences in breathtaking sacred landscapes.",
     img: offeringRetreat,
-    imgAlt: "International Ayahuasca and San Pedro sacred retreat immersion in Costa Rica and Peru",
+    imgAlt: "Life's Best Yes Immersion in Sayulita Mexico and Costa Rica sacred retreat",
     link: "/retreats-inquiry",
     isExternal: false,
     cta: "Explore Immersions",
@@ -686,43 +686,33 @@ const Index = () => {
 
             {/* Upcoming Experiences */}
             <div className="grid gap-6 md:grid-cols-2 mb-8">
-              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-center space-y-4">
-                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-primary" />
-                </div>
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-left space-y-3">
+                <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🌿 International Immersion</p>
                 <h3 className="font-display text-lg font-bold text-foreground">
-                  Life's Best Yes — Costa Rica Immersion
+                  Wide Open Immersion — Costa Rica
                 </h3>
-                <p className="text-sm text-muted-foreground">August 2026 · 7-Day Sacred Retreat</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  A full immersion into Earth Medicine, ancient ceremony, and deep transformation in the jungles of Costa Rica.
-                </p>
-                <Link
-                  to="/retreats-inquiry"
-                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-                >
-                  Reserve Your Spot →
-                </Link>
-              </div>
-              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-center space-y-4">
-                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Heart className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-display text-lg font-bold text-foreground">
-                  Sacred Cacao Ceremony — Waitlist Open
-                </h3>
-                <p className="text-sm text-muted-foreground">Monthly · Washington, DC</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  A heart-opening ceremony of connection, intention, and remembrance. Join the waitlist for our next gathering.
-                </p>
+                <p className="text-sm text-muted-foreground">August 2–8, 2026 · Nicoya Peninsula · 7 days</p>
                 <a
-                  href="https://www.eventbrite.com/o/29347213477#events"
+                  href="https://costarica.templemotherearth.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
                 >
-                  Join the Waitlist →
+                  Learn More → <ArrowRight className="h-3.5 w-3.5" />
                 </a>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-6 text-left space-y-3">
+                <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🇲🇽 International Immersion</p>
+                <h3 className="font-display text-lg font-bold text-foreground">
+                  Life's Best Yes — Sayulita, Mexico
+                </h3>
+                <p className="text-sm text-muted-foreground">October 31 – November 7, 2026 · Interest list open</p>
+                <Link
+                  to="/retreats-inquiry"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                >
+                  Express Your Interest → <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
               </div>
             </div>
 
