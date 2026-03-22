@@ -532,7 +532,16 @@ const Membership = () => {
 
       <EventbriteCTA />
 
-      {/* ───── FOOTER ───── */}
+      <InternalLinkingFooter
+        links={[
+          { label: "Sacred Intake", href: "/ceremony-intake" },
+          { label: "Preparation Guide", href: "/preparation" },
+          { label: "Sanctuary Week", href: "/sanctuary-week" },
+          { label: "Community Care", href: "/community-care" },
+          { label: "About Us", href: "/about" },
+        ]}
+      />
+
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-10 md:grid-cols-4">

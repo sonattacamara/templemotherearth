@@ -701,6 +701,16 @@ const KemeticTeachings = () => {
         </div>
       </section>
 
+      <InternalLinkingFooter
+        links={[
+          { label: "Sacred Blueprint", href: "/sacred-blueprint" },
+          { label: "Earth Kingdoms", href: "/earth-kingdoms" },
+          { label: "Journal", href: "/journal" },
+          { label: "About Our Facilitators", href: "/about" },
+          { label: "Plant Sacrament Glossary", href: "/plant-medicine-glossary" },
+        ]}
+      />
+
       {/* ── FOOTER ── */}
       <footer className="bg-foreground border-t border-primary-foreground/10 py-10 px-4">
         <div className="mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-4">
