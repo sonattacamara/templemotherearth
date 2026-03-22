@@ -604,7 +604,7 @@ const SanctuaryWeek = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mt-16">
           {[
             { icon: <Moon className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Winter Solstice · The Closing", desc: "The shortest day. The deepest night. We honor this by closing public ceremonies and turning inward. Facilitator training, sacred study, land stewardship, and internal ceremony take place during this time." },
-            { icon: <Sun className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Spring Equinox · The Reopening", desc: "When day and night are equal, the Temple reopens. Sanctuary Week is our Grand Reopening, a declaration that the light has returned and the Temple is ready to hold space once more. Year Six begins here." },
+            { icon: <Sun className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Spring Equinox · The Reopening", desc: "When day and night are equal, the Temple reopens. The Sacred Series is our Grand Reopening, a declaration that the light has returned and the Temple is ready to hold space once more. Year Six begins here." },
           ].map((card) => (
             <div key={card.title} className="bg-[hsl(105,30%,12%)] p-10 border border-[hsla(45,70%,49%,0.12)]">
               <div className="mb-4">{card.icon}</div>
