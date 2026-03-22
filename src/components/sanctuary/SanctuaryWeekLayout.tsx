@@ -18,10 +18,10 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
       <SEOHead title={title} description={description} />
       <Navigation />
 
-      {/* Sanctuary Week Announce Bar */}
+      {/* Sacred Series Announce Bar */}
       <div className="bg-[hsl(105,30%,13%)] border-b border-[hsl(100,25%,18%)] py-2.5 px-6 text-center">
         <span className="font-sans text-[9px] tracking-[3px] uppercase text-[hsl(45,70%,55%)]">
-          Temple Mother Earth · Sanctuary Week · Washington, DC
+          Temple Mother Earth · Sacred Series · Washington, DC
         </span>
       </div>
 
@@ -31,7 +31,7 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
             to="/sanctuary-week"
             className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,20%,45%)] hover:text-[hsl(45,70%,55%)] transition-colors"
           >
-            &larr; Sanctuary Week
+            &larr; Sacred Series
           </Link>
         </div>
       )}

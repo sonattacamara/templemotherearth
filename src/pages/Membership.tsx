@@ -536,7 +536,7 @@ const Membership = () => {
         links={[
           { label: "Sacred Intake", href: "/ceremony-intake" },
           { label: "Preparation Guide", href: "/preparation" },
-          { label: "Sanctuary Week", href: "/sanctuary-week" },
+          { label: "Sacred Series", href: "/sanctuary-week" },
           { label: "Community Care", href: "/community-care" },
           { label: "About Us", href: "/about" },
         ]}

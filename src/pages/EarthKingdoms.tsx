@@ -355,7 +355,7 @@ const EarthKingdoms = () => {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link to="/sanctuary-week" className="inline-block bg-[#C8A030] text-[#050604] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
-              Explore Sanctuary Week
+              Explore the Sacred Series
             </Link>
             <Link to="/ceremony-intake" className="inline-block bg-transparent text-[#F0EAD6] px-10 py-[18px] font-sans text-[10px] tracking-[3px] uppercase border border-[rgba(240,234,214,0.2)] hover:border-[#C8A030] hover:text-[#C8A030] transition-all">
               Begin Your Journey

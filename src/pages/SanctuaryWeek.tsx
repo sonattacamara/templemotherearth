@@ -109,26 +109,6 @@ const timelineDays: TimelineDay[] = [
     slug: "/yin-yoga", image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Integration",
   },
-  {
-    day: 8, date: "", weekday: "", name: "Art Expo",
-    subtitle: "Art Born From the Other Side",
-    description: "Visionary art exhibition, artist gathering, live sound performances, and Sacred Tea House open all evening. An evening where ceremony becomes culture.",
-    icon: <Palette className="h-5 w-5" />, tags: ["Art", "Music", "Evening"],
-    pricing: [{ label: "Sustainer", price: "$22" }, { label: "Community", price: "$11" }, { label: "Members", price: "Free" }],
-    ctaLabel: "Reserve Your Evening", ctaHref: "https://www.eventbrite.com/e/art-expo-registration-539756675747", ctaReady: true,
-    slug: "/art-expo", image: "https://images.pexels.com/photos/1839919/pexels-photo-1839919.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
-    phase: "The Integration",
-  },
-  {
-    day: 9, date: "", weekday: "", name: "Kambo Ceremony",
-    subtitle: "Some Things Cannot Be Talked Through",
-    description: "The Great Purifier. The ancient Amazonian purification sacrament. For those who have been called. Sacred screening required. By application only.",
-    icon: <Shield className="h-5 w-5" />, tags: ["Purification", "Application Required", "Sacred Screening"],
-    pricing: [{ label: "Sustainer", price: "$222" }, { label: "Community", price: "$155" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Apply for Your Place", ctaHref: "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117", ctaReady: true,
-    slug: "/kambo", image: kamboFrogArt,
-    phase: "The Integration",
-  },
 ];
 
 /* ─── Timeline Node Component ─── */
@@ -304,8 +284,8 @@ const SanctuaryWeek = () => {
 
   return (
     <SanctuaryWeekLayout
-      title="Sanctuary Week · Temple Mother Earth"
-      description="A recurring series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
+      title="Sacred Series · Temple Mother Earth"
+      description="A recurring 7-day series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
       showBackLink={false}
     >
       {/* ═══ HERO ═══ */}
@@ -319,17 +299,17 @@ const SanctuaryWeek = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
           <span className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[4px] uppercase px-5 py-2 mb-8">
-            Recurring Sacred Offerings · Year Six
+            7-Day Sacred Offerings · Year Six
           </span>
           <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-4">
             Temple Mother Earth · Washington, DC
           </p>
           <h1 className="font-sans text-[clamp(40px,7vw,88px)] font-extralight leading-none text-[hsl(40,30%,92%)] mb-6 tracking-tight">
-            Sanctuary<br />
-            <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Week</em>
+            Sacred<br />
+            <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Series</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            A recurring series of sacred ceremonies, community gatherings, and body practices held throughout the month. Each offering stands on its own. Choose what calls you.
+            A recurring 7-day series of sacred ceremonies, community gatherings, and body practices held each month. Each offering stands on its own. Choose what calls you.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
             In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. The sacred container is open. Come home.
@@ -360,7 +340,7 @@ const SanctuaryWeek = () => {
         <div className="text-center mb-16">
           <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Journey</p>
           <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
-            The Arc of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Ten Days</em>
+            The Arc of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Seven Days</em>
           </h2>
           <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[640px] mx-auto mt-6 leading-relaxed">
             The arc is intentional. Like the seasons, each ceremony opens what the next one deepens. Your nervous system needs time between thresholds, your spirit needs community to land in, and your body needs rest before it can rise again. This is a living container, held by the people who walked it before you, designed to honor exactly where you are in your becoming.
@@ -381,10 +361,8 @@ const SanctuaryWeek = () => {
         <PhaseMarker title="The Belonging" days="Day 6" />
         <TimelineNode day={timelineDays[5]} index={5} />
 
-        <PhaseMarker title="The Integration" days="Days 7–9" />
-        {timelineDays.slice(6).map((day, i) => (
-          <TimelineNode key={day.day} day={day} index={i + 6} />
-        ))}
+        <PhaseMarker title="The Integration" days="Day 7" />
+        <TimelineNode day={timelineDays[6]} index={6} />
       </section>
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
@@ -393,7 +371,7 @@ const SanctuaryWeek = () => {
       <SanctuarySection eyebrow="Our Sacred Approach" title={<>Five Pillars of<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">The Sanctuary Experience</em></>}>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-0.5">
           {[
-            { num: "01", title: "10-Ceremony Arc", desc: "A rhythmic, continuous journey designed to honor your natural process of becoming.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+            { num: "01", title: "7-Ceremony Arc", desc: "A rhythmic, continuous journey designed to honor your natural process of becoming.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             { num: "02", title: "Expert Facilitation", desc: "A collaborative, heart-led team holding a steady space for your unfolding growth.", icon: <Shield className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             { num: "03", title: "Extended Integration", desc: "Guidance that walks beside you for 6+ months as you ground your transformation.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             { num: "04", title: "Intimate Cohorts", desc: "Small circles of 12 to 20, fostering true community, belonging, and shared wisdom.", icon: <Users className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
@@ -449,7 +427,7 @@ const SanctuaryWeek = () => {
               <Star className="h-6 w-6 text-[hsl(45,70%,49%)] mb-4" />
               <h3 className="font-sans text-[11px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3 font-normal">What This Means</h3>
               <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
-                Six years of building home. Six years of holding the hearth. Sanctuary Week is the celebration of what we built, and the opening of what comes next.
+                Six years of building home. Six years of holding the hearth. The Sacred Series is the celebration of what we built, and the opening of what comes next.
               </p>
             </div>
           </div>
@@ -483,7 +461,7 @@ const SanctuaryWeek = () => {
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ DAILY RHYTHM ═══ */}
-      <SanctuarySection eyebrow="The Daily Rhythm" title={<>A Day in<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Sanctuary Week</em></>}>
+      <SanctuarySection eyebrow="The Daily Rhythm" title={<>A Day in<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">the Sacred Series</em></>}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
           {[
             { time: "6:00 AM", title: "Rise & Grounding", desc: "Greet the dawn with intentionality. Sip herbal tea as you settle into stillness, meditation, and the quiet beauty of your own inner alignment.", icon: <Sun className="h-4 w-4" /> },
@@ -527,7 +505,7 @@ const SanctuaryWeek = () => {
                 month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
                 desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
                 backContent: [
-                  "April marks the Grand Reopening — the first Sanctuary Week after the temple's winter rest.",
+                  "April marks the Grand Reopening — the first Sacred Series after the temple's winter rest.",
                   "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
                   "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify.",
                 ],
@@ -626,7 +604,7 @@ const SanctuaryWeek = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mt-16">
           {[
             { icon: <Moon className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Winter Solstice · The Closing", desc: "The shortest day. The deepest night. We honor this by closing public ceremonies and turning inward. Facilitator training, sacred study, land stewardship, and internal ceremony take place during this time." },
-            { icon: <Sun className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Spring Equinox · The Reopening", desc: "When day and night are equal, the Temple reopens. Sanctuary Week is our Grand Reopening, a declaration that the light has returned and the Temple is ready to hold space once more. Year Six begins here." },
+            { icon: <Sun className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Spring Equinox · The Reopening", desc: "When day and night are equal, the Temple reopens. The Sacred Series is our Grand Reopening, a declaration that the light has returned and the Temple is ready to hold space once more. Year Six begins here." },
           ].map((card) => (
             <div key={card.title} className="bg-[hsl(105,30%,12%)] p-10 border border-[hsla(45,70%,49%,0.12)]">
               <div className="mb-4">{card.icon}</div>
@@ -689,12 +667,12 @@ const SanctuaryWeek = () => {
       {/* ═══ SACRED PATHWAYS PRICING (moved to bottom) ═══ */}
       <SanctuarySection eyebrow="Sacred Pathways" title={<>Find Your<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Pathway of Participation</em></>}>
         <p className="text-center text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
-          Sanctuary Week is a recurring series of sacred ceremonies, body practices, and community gatherings. Each offering is its own doorway. Choose the path your spirit is ready to walk.
+          The Sacred Series is a recurring 7-day series of sacred ceremonies, body practices, and community gatherings. Each offering is its own doorway. Choose the path your spirit is ready to walk.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
             { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
-            { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$2,222" },
+            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening", price: "$2,222" },
             { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
             { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
           ].map((path) => (
@@ -721,14 +699,14 @@ const SanctuaryWeek = () => {
           <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Full Initiation</p>
           <p className="font-sans text-4xl font-extralight text-[hsl(45,70%,55%)] mb-6 tracking-tight">$2,222</p>
           <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
-            The Sanctuary Week<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
+            The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
           </h2>
           <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
-            All 9 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
+            All 7 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
-              { title: "All 9 Ceremonies", desc: "Full access to every sacred gathering across both weeks of Sanctuary Week.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "All 7 Ceremonies", desc: "Full access to every sacred gathering across the Sacred Series.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Community Container", desc: "Curated materials, ceremonial guide, sacred journal, and preparation instructions.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },

@@ -34,7 +34,7 @@ const CommunityPotluck = () => (
     <SanctuarySection eyebrow="The Evening" title={<>Three Spaces.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">One Family.</em></>}>
       <SanctuaryColCards cards={[
         { title: "The Table", description: "Bring a dish to share. Plant-based, made with love. Food prepared with intention and shared in community has been a sacred act in every culture on earth." },
-        { title: "The Integration Circle", description: "A facilitated sharing circle for those processing experiences from Sanctuary Week or from their own practice. You speak. You are witnessed." },
+        { title: "The Integration Circle", description: "A facilitated sharing circle for those processing experiences from the Sacred Series or from their own practice. You speak. You are witnessed." },
         { title: "The Sacred Tea House", description: "Open all evening. Ceremonial teas, plant elixirs, and the quiet that comes from drinking something sacred in the company of people you trust." },
       ]} />
     </SanctuarySection>
