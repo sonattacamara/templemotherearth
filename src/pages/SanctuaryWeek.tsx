@@ -780,6 +780,11 @@ const SanctuaryWeek = () => {
           </div>
         </div>
       </section>
+      <InternalLinkingFooter links={[
+        { label: "Community Care", href: "/community-care" },
+        { label: "Preparation Guide", href: "/preparation" },
+        { label: "Sacred Intake Form", href: "/ceremony-intake" },
+      ]} />
     </SanctuaryWeekLayout>
   );
 };

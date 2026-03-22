@@ -815,6 +815,13 @@ const About = () => {
 
       <EventbriteCTA />
 
+      <InternalLinkingFooter links={[
+        { label: "Sacred Series", href: "/sanctuary-week" },
+        { label: "Sacred Intake Form", href: "/ceremony-intake" },
+        { label: "Membership", href: "/membership" },
+        { label: "Journal", href: "/journal" },
+      ]} />
+
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">

@@ -1034,6 +1034,13 @@ const Index = () => {
         </div>
       </footer>
 
+      <InternalLinkingFooter links={[
+        { label: "About Us", href: "/about" },
+        { label: "Sacred Series", href: "/sanctuary-week" },
+        { label: "Earth Kingdoms", href: "/earth-kingdoms" },
+        { label: "Kemetic Teachings", href: "/kemetic-teachings" },
+      ]} />
+
       {/* ───── SEO: Plant Medicine Knowledge Base (visually hidden, crawlable) ───── */}
       <section className="sr-only" aria-label="Plant Medicine Knowledge Base">
         <h2>Sacred Plant Medicines & Earth Medicines at Temple Mother Earth</h2>
