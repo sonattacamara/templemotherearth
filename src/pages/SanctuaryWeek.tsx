@@ -299,17 +299,17 @@ const SanctuaryWeek = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
           <span className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[4px] uppercase px-5 py-2 mb-8">
-            Recurring Sacred Offerings · Year Six
+            7-Day Sacred Offerings · Year Six
           </span>
           <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-4">
             Temple Mother Earth · Washington, DC
           </p>
           <h1 className="font-sans text-[clamp(40px,7vw,88px)] font-extralight leading-none text-[hsl(40,30%,92%)] mb-6 tracking-tight">
-            Sanctuary<br />
-            <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Week</em>
+            Sacred<br />
+            <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Series</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            A recurring series of sacred ceremonies, community gatherings, and body practices held throughout the month. Each offering stands on its own. Choose what calls you.
+            A recurring 7-day series of sacred ceremonies, community gatherings, and body practices held each month. Each offering stands on its own. Choose what calls you.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
             In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. The sacred container is open. Come home.
