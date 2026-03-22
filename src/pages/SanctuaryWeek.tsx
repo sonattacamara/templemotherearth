@@ -706,7 +706,7 @@ const SanctuaryWeek = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
-              { title: "All 9 Ceremonies", desc: "Full access to every sacred gathering across both weeks of Sanctuary Week.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "All 7 Ceremonies", desc: "Full access to every sacred gathering across the Sacred Series.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Community Container", desc: "Curated materials, ceremonial guide, sacred journal, and preparation instructions.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
