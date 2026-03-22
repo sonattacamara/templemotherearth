@@ -48,7 +48,7 @@ const MonthlyThemeBanner = () => {
             Explore this month's sacred offerings.
           </p>
           <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:underline">
-            View Sanctuary Week →
+            View Sacred Series →
           </span>
         </Link>
       </motion.div>

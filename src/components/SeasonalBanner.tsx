@@ -3,7 +3,7 @@ import { X, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BANNER = {
-  text: "Sanctuary Week · Recurring Sacred Offerings · Year Six",
+  text: "Sacred Series · 7 Days of Sacred Offerings · Year Six",
   subtext: "Washington DC · Space limited · Reserve your place now",
   ctaLabel: "Reserve Your Place →",
   ctaHref: "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477",

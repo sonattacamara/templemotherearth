@@ -31,7 +31,7 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
             to="/sanctuary-week"
             className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,20%,45%)] hover:text-[hsl(45,70%,55%)] transition-colors"
           >
-            &larr; Sanctuary Week
+            &larr; Sacred Series
           </Link>
         </div>
       )}
