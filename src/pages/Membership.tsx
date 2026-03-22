@@ -10,6 +10,7 @@ import { toast } from "@/hooks/use-toast";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
