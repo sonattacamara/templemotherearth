@@ -7,6 +7,7 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import ceremonyImg from "@/assets/offering-ceremony.jpg";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
