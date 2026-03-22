@@ -59,9 +59,9 @@ const offerings = [
   {
     icon: Globe,
     title: "International Immersions",
-    desc: "Travel to sacred spaces around the world where Mother Earth's wisdom will nurture your spirit and ignite your transformation.",
+    desc: "Journey with us to Sayulita, Mexico (Oct 31–Nov 7, 2026) and the sacred shores of Costa Rica (Aug 2–8, 2026). Immersive Earth Medicine experiences in breathtaking sacred landscapes.",
     img: offeringRetreat,
-    imgAlt: "International Ayahuasca and San Pedro sacred retreat immersion in Costa Rica and Peru",
+    imgAlt: "Life's Best Yes Immersion in Sayulita Mexico and Costa Rica sacred retreat",
     link: "/retreats-inquiry",
     isExternal: false,
     cta: "Explore Immersions",
