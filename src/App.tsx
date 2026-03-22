@@ -118,6 +118,7 @@ const App = () => (
             <Route path="/level-5" element={<Level5Ceremony />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="/journal" element={<Journal />} />
+            <Route path="/journal/:slug" element={<JournalPost />} />
             <Route path="/community-care" element={<CommunityCare />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/rfra-compliance" element={<RFRACompliance />} />
