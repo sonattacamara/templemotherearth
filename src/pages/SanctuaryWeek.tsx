@@ -672,7 +672,7 @@ const SanctuaryWeek = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
             { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
-            { title: "Monthly Intensive", subtitle: "7 Days of Deepening", price: "$2,222" },
+            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening", price: "$2,222" },
             { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
             { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
           ].map((path) => (
