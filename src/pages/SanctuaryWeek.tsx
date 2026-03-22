@@ -427,7 +427,7 @@ const SanctuaryWeek = () => {
               <Star className="h-6 w-6 text-[hsl(45,70%,49%)] mb-4" />
               <h3 className="font-sans text-[11px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3 font-normal">What This Means</h3>
               <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
-                Six years of building home. Six years of holding the hearth. Sanctuary Week is the celebration of what we built, and the opening of what comes next.
+                Six years of building home. Six years of holding the hearth. The Sacred Series is the celebration of what we built, and the opening of what comes next.
               </p>
             </div>
           </div>
