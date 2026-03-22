@@ -284,8 +284,8 @@ const SanctuaryWeek = () => {
 
   return (
     <SanctuaryWeekLayout
-      title="Sanctuary Week · Temple Mother Earth"
-      description="A recurring series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
+      title="Sacred Series · Temple Mother Earth"
+      description="A recurring 7-day series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
       showBackLink={false}
     >
       {/* ═══ HERO ═══ */}
