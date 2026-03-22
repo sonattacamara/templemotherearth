@@ -699,10 +699,10 @@ const SanctuaryWeek = () => {
           <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Full Initiation</p>
           <p className="font-sans text-4xl font-extralight text-[hsl(45,70%,55%)] mb-6 tracking-tight">$2,222</p>
           <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
-            The Sanctuary Week<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
+            The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
           </h2>
           <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
-            All 9 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
+            All 7 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
