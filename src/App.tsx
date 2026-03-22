@@ -49,6 +49,7 @@ import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
 import KamboRedirect from "./pages/KamboRedirect";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
+import JournalPost from "./pages/JournalPost";
 import CommunityCare from "./pages/CommunityCare";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RFRACompliance from "./pages/RFRACompliance";
