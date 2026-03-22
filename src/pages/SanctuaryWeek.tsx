@@ -1,4 +1,5 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
