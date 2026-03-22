@@ -6,6 +6,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import Navigation from "@/components/Navigation";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import { usePageTracking } from "@/hooks/useAnalytics";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -699,6 +700,16 @@ const KemeticTeachings = () => {
           </div>
         </div>
       </section>
+
+      <InternalLinkingFooter
+        links={[
+          { label: "Sacred Blueprint", href: "/sacred-blueprint" },
+          { label: "Earth Kingdoms", href: "/earth-kingdoms" },
+          { label: "Journal", href: "/journal" },
+          { label: "About Our Facilitators", href: "/about" },
+          { label: "Plant Sacrament Glossary", href: "/plant-medicine-glossary" },
+        ]}
+      />
 
       {/* ── FOOTER ── */}
       <footer className="bg-foreground border-t border-primary-foreground/10 py-10 px-4">

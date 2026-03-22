@@ -9,6 +9,7 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
+import MonthlyThemeBanner from "@/components/MonthlyThemeBanner";
 
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -938,6 +939,8 @@ const Index = () => {
       </section>
 
       
+
+      <MonthlyThemeBanner />
 
       <DonationCTA
         eyebrow="Sustain the Sacred"

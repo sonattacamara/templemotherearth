@@ -10,6 +10,7 @@ import { toast } from "@/hooks/use-toast";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
@@ -531,7 +532,16 @@ const Membership = () => {
 
       <EventbriteCTA />
 
-      {/* ───── FOOTER ───── */}
+      <InternalLinkingFooter
+        links={[
+          { label: "Sacred Intake", href: "/ceremony-intake" },
+          { label: "Preparation Guide", href: "/preparation" },
+          { label: "Sanctuary Week", href: "/sanctuary-week" },
+          { label: "Community Care", href: "/community-care" },
+          { label: "About Us", href: "/about" },
+        ]}
+      />
+
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-10 md:grid-cols-4">

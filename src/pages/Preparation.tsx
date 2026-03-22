@@ -7,6 +7,7 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import ceremonyImg from "@/assets/offering-ceremony.jpg";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -197,6 +198,15 @@ const Preparation = () => {
 
       <EventbriteCTA />
 
+      <InternalLinkingFooter
+        links={[
+          { label: "Sacred Intake Form", href: "/ceremony-intake" },
+          { label: "Sanctuary Week", href: "/sanctuary-week" },
+          { label: "Code of Conduct", href: "/conduct" },
+          { label: "Plant Sacrament Glossary", href: "/plant-medicine-glossary" },
+          { label: "Enter the Sacred Space", href: "https://www.eventbrite.com/o/29347213477", isExternal: true },
+        ]}
+      />
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
