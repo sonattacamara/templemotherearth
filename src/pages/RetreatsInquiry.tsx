@@ -161,11 +161,27 @@ const RetreatsInquiry = () => {
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Which immersion interests you? *</label>
-                  {["Mexico: Life's Best Yes Immersion (Oct 31 – Nov 5, 2026)", "Costa Rica Immersion", "Peru Immersion", "Future immersions — notify me of upcoming destinations", "Both — I want to attend Mexico and future immersions"].map((opt) => (
-                    <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
-                      <input type="radio" name="retreatInterest" className="mr-3 h-4 w-4 accent-primary" checked={form.retreatInterest === opt} onChange={() => update("retreatInterest", opt)} required />
-                      {opt}
-                    </label>
+                  {[
+                    "Mexico: Life's Best Yes Immersion (Oct 31 – Nov 5, 2026)",
+                    "Costa Rica Immersion",
+                    "Peru Immersion",
+                    "Future immersions — notify me of upcoming destinations",
+                    "All — notify me of every upcoming immersion",
+                  ].map((opt) => (
+                    <div key={opt} className="mb-2">
+                      <label className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="radio" name="retreatInterest" className="mr-3 h-4 w-4 accent-primary" checked={form.retreatInterest === opt} onChange={() => update("retreatInterest", opt)} required />
+                        {opt}
+                      </label>
+                      {opt === "Costa Rica Immersion" && form.retreatInterest === opt && (
+                        <p className="ml-7 mt-1 text-xs text-muted-foreground">
+                          Details & registration available now →{" "}
+                          <a href="https://costarica.templemotherearth.org" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+                            costarica.templemotherearth.org
+                          </a>
+                        </p>
+                      )}
+                    </div>
                   ))}
                 </div>
                 <input className={inputClass} placeholder="Traveling solo or with a group? How many?" value={form.groupSize} onChange={(e) => update("groupSize", e.target.value)} />
