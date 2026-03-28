@@ -9,9 +9,9 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = "https://templemotherearth.org";
-const DEFAULT_TITLE = "Temple Mother Earth — Sacred Ceremony Church · Washington, DC";
-const DEFAULT_DESC = "A 508(c)(1)(A) sacred medicine church offering sacramental ceremony, spiritual education, and congregational community in Washington DC. Est. 2020.";
-const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
+const DEFAULT_TITLE = "Temple Mother Earth — A Temple of Higher Consciousness · Washington, DC";
+const DEFAULT_DESC = "A 508(c)(1)(A) temple of higher consciousness offering sacramental ceremony, spiritual education, and congregational community in Washington DC. Est. 2020.";
+const DEFAULT_IMAGE = `${BASE_URL}/og-logo.png`;
 
 const SEOHead = ({
   title,
