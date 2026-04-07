@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "npm:@supabase/supabase-js@2.57.2";
+import { upsertGHLContact } from "../_shared/ghl-contact.ts";
 
 const ALLOWED_ORIGINS = [
   "https://templemotherearth.lovable.app",
@@ -15,11 +16,6 @@ const getCorsHeaders = (req: Request) => {
     "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
   };
 };
-
-const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
-if (!GHL_WEBHOOK_URL) {
-  throw new Error("GHL_WEBHOOK_URL is not configured");
-}
 
 const logStep = (step: string, details?: any) => {
   const detailsStr = details ? ` - ${JSON.stringify(details)}` : "";
@@ -42,7 +38,6 @@ serve(async (req) => {
 
     const { email, firstName, lastName, full_name, user_id } = await req.json();
 
-    // Validate inputs
     const emailStr = String(email || "").trim();
     if (!emailStr || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailStr) || emailStr.length > 255) {
       throw new Error("Valid email is required");
@@ -57,24 +52,17 @@ serve(async (req) => {
 
     logStep("Welcome email request", { email: emailStr, firstName: firstNameStr, lastName: lastNameStr });
 
-    const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        firstName: firstNameStr,
-        lastName: lastNameStr,
-        name: nameStr,
-        email: emailStr,
-        source: "temple-mother-earth-welcome-circle",
-        event: "new_member_signup",
-        tier: "welcome-circle",
-        tags: ["welcome-circle-member"],
-        submittedAt: new Date().toISOString(),
-      }),
+    const ghlResult = await upsertGHLContact({
+      firstName: firstNameStr,
+      lastName: lastNameStr,
+      name: nameStr,
+      email: emailStr,
+      tags: ["welcome-circle-member"],
+      source: "temple-mother-earth-welcome-circle",
     });
 
-    if (!webhookResponse.ok) {
-      logStep("GHL webhook error", { status: webhookResponse.status });
+    if (!ghlResult.success) {
+      logStep("GHL upsert error", { error: ghlResult.error });
       return new Response(JSON.stringify({ error: "Failed to send welcome email" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 502,

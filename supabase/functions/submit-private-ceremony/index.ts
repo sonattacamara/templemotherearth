@@ -1,15 +1,11 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { upsertGHLContact } from "../_shared/ghl-contact.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
-
-const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
-if (!GHL_WEBHOOK_URL) {
-  throw new Error("GHL_WEBHOOK_URL is not configured");
-}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -18,41 +14,26 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone, ceremonyType, experience, intentions, preferredDates, location, medicalConcerns, additionalInfo } = body;
+    const { firstName, lastName, email, phone } = body;
 
     if (!firstName || !lastName || !email) {
       return new Response(JSON.stringify({ error: "First name, last name, and email are required." }), {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    const payload = {
+    const ghlResult = await upsertGHLContact({
       firstName: String(firstName).trim(),
       lastName: String(lastName).trim(),
       name: `${String(firstName).trim()} ${String(lastName).trim()}`,
       email: String(email).trim().toLowerCase(),
       phone: String(phone || "").trim(),
-      ceremonyType,
-      experience,
-      intentions,
-      preferredDates,
-      location,
-      medicalConcerns,
-      additionalInfo,
       tags: ["private-ceremony-inquiry"],
       source: "private-ceremonies-page",
-      submittedAt: new Date().toISOString(),
-    };
-
-    const res = await fetch(GHL_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
     });
 
-    if (!res.ok) {
-      console.error("GHL webhook failed:", res.status, await res.text());
+    if (!ghlResult.success) {
+      console.error("GHL upsert failed:", ghlResult.error);
     }
 
     return new Response(JSON.stringify({ success: true }), {
@@ -61,8 +42,7 @@ serve(async (req) => {
   } catch (err) {
     console.error("submit-private-ceremony error:", err);
     return new Response(JSON.stringify({ error: "Internal server error." }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 });
