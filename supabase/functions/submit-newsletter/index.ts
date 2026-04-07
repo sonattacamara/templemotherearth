@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { upsertGHLContact } from "../_shared/ghl-contact.ts";
 
 const ALLOWED_ORIGINS = [
   "https://templemotherearth.lovable.app",
@@ -15,11 +16,6 @@ const getCorsHeaders = (req: Request) => {
   };
 };
 
-const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
-if (!GHL_WEBHOOK_URL) {
-  throw new Error("GHL_WEBHOOK_URL is not configured");
-}
-
 serve(async (req) => {
   const corsHeaders = getCorsHeaders(req);
 
@@ -32,34 +28,27 @@ serve(async (req) => {
 
     if (!email || typeof email !== "string") {
       return new Response(JSON.stringify({ error: "Email is required" }), {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
     const trimmedEmail = email.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail) || trimmedEmail.length > 255) {
       return new Response(JSON.stringify({ error: "Invalid email address" }), {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: trimmedEmail,
-        source: "temple_transmissions",
-        submittedAt: new Date().toISOString(),
-      }),
+    const ghlResult = await upsertGHLContact({
+      email: trimmedEmail,
+      tags: ["temple-transmissions-newsletter"],
+      source: "temple_transmissions",
     });
 
-    if (!webhookResponse.ok) {
-      console.error("GHL webhook error:", webhookResponse.status);
+    if (!ghlResult.success) {
+      console.error("GHL upsert error:", ghlResult.error);
       return new Response(JSON.stringify({ error: "Submission failed" }), {
-        status: 502,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 502, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
@@ -69,8 +58,7 @@ serve(async (req) => {
   } catch (error) {
     console.error("Newsletter signup error:", error);
     return new Response(JSON.stringify({ error: "Internal server error" }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 });

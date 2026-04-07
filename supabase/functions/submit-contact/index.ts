@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { upsertGHLContact } from "../_shared/ghl-contact.ts";
 
 const ALLOWED_ORIGINS = [
   "https://templemotherearth.lovable.app",
@@ -14,11 +15,6 @@ const getCorsHeaders = (req: Request) => {
     "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
   };
 };
-
-const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
-if (!GHL_WEBHOOK_URL) {
-  throw new Error("GHL_WEBHOOK_URL is not configured");
-}
 
 const validateContactData = (data: Record<string, unknown>): string | null => {
   const firstName = String(data.firstName || "").trim();
@@ -61,25 +57,18 @@ serve(async (req) => {
     const lastName = String(body.lastName || "").trim();
     const fullName = `${firstName} ${lastName}`.trim();
 
-    const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: fullName,
-        firstName,
-        lastName,
-        email: String(body.email).trim(),
-        phone: String(body.phone || "").trim(),
-        subject: String(body.subject || "").trim(),
-        message: String(body.message).trim(),
-        submittedAt: new Date().toISOString(),
-        source: "temple-mother-earth-contact-form",
-        tags: ["contact-form-submission"],
-      }),
+    const ghlResult = await upsertGHLContact({
+      firstName,
+      lastName,
+      name: fullName,
+      email: String(body.email).trim(),
+      phone: String(body.phone || "").trim(),
+      tags: ["contact-form-submission"],
+      source: "temple-mother-earth-contact-form",
     });
 
-    if (!webhookResponse.ok) {
-      console.error("GHL webhook error:", webhookResponse.status);
+    if (!ghlResult.success) {
+      console.error("GHL upsert error:", ghlResult.error);
       return new Response(JSON.stringify({ error: "Submission failed" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 502,

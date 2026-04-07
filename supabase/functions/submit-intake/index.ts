@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { upsertGHLContact } from "../_shared/ghl-contact.ts";
 
 const ALLOWED_ORIGINS = [
   "https://templemotherearth.lovable.app",
@@ -15,12 +16,6 @@ const getCorsHeaders = (req: Request) => {
   };
 };
 
-const GHL_WEBHOOK_URL = Deno.env.get("GHL_WEBHOOK_URL");
-if (!GHL_WEBHOOK_URL) {
-  throw new Error("GHL_WEBHOOK_URL is not configured");
-}
-
-// Server-side validation
 const validateIntakeData = (data: Record<string, unknown>): string | null => {
   const firstName = String(data.firstName || "").trim();
   if (firstName.length < 1 || firstName.length > 50) return "First name is required";
@@ -95,38 +90,34 @@ serve(async (req) => {
       });
     }
 
-    const webhookResponse = await fetch(GHL_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...body,
-        firstName: String(body.firstName || "").trim(),
-        lastName: String(body.lastName || "").trim(),
-        name: `${String(body.firstName || "").trim()} ${String(body.lastName || "").trim()}`,
-        // GHL expects YYYY-MM-DD format — HTML date inputs already send YYYY-MM-DD
-        // Just pass through if already in correct format, otherwise normalize
-        dateOfBirth: (() => {
-          const raw = String(body.dob || "").trim();
-          // HTML date input gives YYYY-MM-DD — validate and pass through
-          if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
-          // Fallback: try to parse and reformat
-          const parts = raw.split(/[-\/]/);
-          if (parts.length === 3) {
-            // Handle MM/DD/YYYY or DD/MM/YYYY by assuming MM/DD/YYYY (US format)
-            const [a, b, c] = parts;
-            if (a.length === 4) return `${a}-${b.padStart(2,"0")}-${c.padStart(2,"0")}`;
-            return `${c}-${a.padStart(2,"0")}-${b.padStart(2,"0")}`;
-          }
-          return raw;
-        })(),
-        integrationStatus: "Not Started",
-        submittedAt: new Date().toISOString(),
-        source: "temple-mother-earth-sacred-intake",
-      }),
+    const firstName = String(body.firstName || "").trim();
+    const lastName = String(body.lastName || "").trim();
+
+    // Normalize DOB to YYYY-MM-DD
+    const dateOfBirth = (() => {
+      const raw = String(body.dob || "").trim();
+      if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+      const parts = raw.split(/[-\/]/);
+      if (parts.length === 3) {
+        const [a, b, c] = parts;
+        if (a.length === 4) return `${a}-${b.padStart(2,"0")}-${c.padStart(2,"0")}`;
+        return `${c}-${a.padStart(2,"0")}-${b.padStart(2,"0")}`;
+      }
+      return raw;
+    })();
+
+    const ghlResult = await upsertGHLContact({
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`,
+      email: String(body.email).trim(),
+      phone: String(body.phone || "").trim(),
+      tags: ["ceremony-intake-submission"],
+      source: "temple-mother-earth-sacred-intake",
     });
 
-    if (!webhookResponse.ok) {
-      console.error("GHL webhook error:", webhookResponse.status);
+    if (!ghlResult.success) {
+      console.error("GHL upsert error:", ghlResult.error);
       return new Response(JSON.stringify({ error: "Submission failed" }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 502,
