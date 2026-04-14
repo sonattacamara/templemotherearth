@@ -1123,11 +1123,11 @@ const CeremonyIntake = () => {
                 <button onClick={() => { setValidationErrors({}); setStep(step - 1); }} className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent">Back</button>
               ) : <div />}
               {step < 5 ? (
-                <button onClick={handleNext} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                <button onClick={handleNext} className={`rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center gap-2 ${!canProceed() ? 'opacity-60' : ''}`}>
                   Continue <ArrowRight className="h-4 w-4" />
                 </button>
               ) : (
-                <button onClick={handleSubmit} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                <button onClick={handleSubmit} className={`rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center gap-2 ${!canProceed() ? 'opacity-60' : ''}`}>
                   Complete Sacred Intake <ArrowRight className="h-4 w-4" />
                 </button>
               )}
