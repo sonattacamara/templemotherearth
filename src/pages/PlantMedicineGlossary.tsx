@@ -28,9 +28,9 @@ const categoryShortNames: Record<string, string> = {
 /* ─── Origin Region Mapping ─── */
 const regionMap: Record<string, string[]> = {
   "Amazon Basin": ["Ayahuasca (Sacred Vine)", "Kambo", "Rapé / Hapé", "Sananga", "Bobinsana", "Chiric Sanango", "Ajo Sacha", "Piñón Colorado", "Chullachaki Caspi", "Noya Rao", "Camalonga", "Uchu Sanango", "Jurema (Mimosa Hostilis)", "Tobacco / Mapacho", "Yopo / Cohoba"],
-  "Mesoamerica": ["Psilocybin Mushrooms", "Salvia Divinorum", "Morning Glory (Ololiuqui)", "Cacao (Ceremonial Grade)", "Damiana"],
+  "Mesoamerica": ["Sacred Fungi", "Salvia Divinorum", "Morning Glory (Ololiuqui)", "Cacao (Ceremonial Grade)", "Damiana"],
   "Andes": ["San Pedro (Huachuma)", "Coca Leaf", "Cebil / Vilca", "Cordyceps"],
-  "Africa": ["Iboga / Ibogaine", "Blue Lotus", "Khat"],
+  "Africa": ["Iboga", "Blue Lotus", "Khat"],
   "Asia & Pacific": ["Cannabis / Hemp", "Kava", "Kratom", "Betel Nut", "Hawaiian Baby Woodrose", "Calamus Root (Sweet Flag)"],
   "Europe & Siberia": ["Amanita Muscaria (Fly Agaric)", "Mugwort", "Wormwood / Artemisia", "Chaga"],
   "Middle East": ["Syrian Rue (Harmal)"],

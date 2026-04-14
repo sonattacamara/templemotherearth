@@ -247,7 +247,7 @@ const CeremonyIntake = () => {
       ["psychoticEpisodes", "Please answer whether you have experienced psychotic episodes outside of ceremony."],
       ["inTherapy", "Please answer whether you are currently in therapy or under mental health care."],
       ["recentTrauma", "Please answer whether you have experienced major emotional trauma in the last 6 months."],
-      ["recreationalDrugs", "Please answer whether you currently use recreational drugs or substances."],
+      ["recreationalDrugs", "Please answer whether you currently use non-sacramental substances."],
       ["consumeAlcohol", "Please answer whether you consume alcohol."],
       ["useCannabis", "Please answer whether you use cannabis or marijuana."],
       ["substanceAbuseTreatment", "Please answer whether you have been in treatment for substance abuse or addiction."],
@@ -875,7 +875,7 @@ const CeremonyIntake = () => {
                 <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Substance Use</h4>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground">Do you currently use any recreational drugs or substances? *</label>
+                  <label className="block text-sm font-medium text-foreground">Do you currently use any non-sacramental substances? *</label>
                   {radioYesNo("recreationalDrugs", formData.recreationalDrugs)}
                   {formData.recreationalDrugs === "yes" && (
                     <input className={inputClass + " mt-2"} placeholder="Please specify substances and frequency of use" value={formData.recreationalDrugsDetails} onChange={(e) => update("recreationalDrugsDetails", e.target.value)} />
@@ -1154,9 +1154,9 @@ const CeremonyIntake = () => {
               {/* Eligibility Statement */}
               <div className="rounded-lg border-2 border-accent bg-accent/10 p-4 text-sm text-muted-foreground space-y-3">
                 <p className="font-semibold text-foreground">Eligibility Statement</p>
-                <p>If any of the following apply to you, you are <strong>not eligible</strong> to participate in a sacred healing ceremony:</p>
+                <p>If any of the following apply to you, you are <strong>not eligible</strong> to participate in a sacred ceremony:</p>
                 <p>You are under the age of 21, in your first trimester of pregnancy, you have a history of psychosis and/or schizophrenia, have been diagnosed with a personality disorder, current active medicated bipolar disorder, history of seizures or diagnosis of epilepsy, current anorexia and/or bulimia, experienced a stroke or embolism, severe asthma or emphysema, a known cardiac illness, uncontrolled high blood pressure, Crohn's disease, irritable bowel syndrome, ulcerative colitis, or intestinal ulcers, surgery within the last three months on any part of your digestive system or liver disease.</p>
-                <p>For health and safety reasons you cannot attend a sacred healing ceremony if at the time of the retreat you are taking SSRIs, recreational drugs, have taken any medication or supplements 24 hours prior to the ceremony.</p>
+                <p>For health and safety reasons you cannot attend a sacred ceremony if at the time of the retreat you are taking SSRIs, non-sacramental substances, have taken any medication or supplements 24 hours prior to the ceremony.</p>
                 <p className="font-medium text-foreground">All of your responses are entirely confidential.</p>
               </div>
 

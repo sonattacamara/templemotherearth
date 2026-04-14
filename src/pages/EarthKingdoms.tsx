@@ -122,7 +122,7 @@ const kingdoms: KingdomData[] = [
     stats: [
       { num: "3.8B", label: "Years fungi existed" },
       { num: "1.5M", label: "Estimated species" },
-      { num: "60%", label: "Psilocybin remission rate" },
+      { num: "60%", label: "Sacred fungi transformation rate" },
       { num: "28%", label: "ATP increase with Cordyceps" },
     ],
     quote: { text: "When you eat a medicinal mushroom, you are ingesting a piece of the planet's own intelligence.", cite: "Paul Stamets, Mycologist" },
@@ -288,7 +288,7 @@ const EarthKingdoms = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <img
           src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Ancient forest canopy for Ayahuasca, Psilocybin, and sacred plant medicine journeys"
+          alt="Ancient forest canopy for Sacred Vine, Sacred Fungi, and sacred earth medicine journeys"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "saturate(0.4) brightness(0.22) hue-rotate(-15deg)" }}
           loading="eager"
