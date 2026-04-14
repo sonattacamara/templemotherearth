@@ -324,6 +324,13 @@ const CacaoCeremony = () => {
         </div>
       </section>
 
+      {/* RFRA Statement */}
+      <div className="bg-[#0A0806] border-t border-[rgba(201,150,58,0.1)] py-8 px-6 md:px-12">
+        <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-[#8A7A5A] leading-relaxed">
+          This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
+        </p>
+      </div>
+
       <CeremonyExploreNav variant="dark" />
 
       {/* Footer */}
