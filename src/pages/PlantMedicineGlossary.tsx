@@ -298,10 +298,24 @@ const PlantMedicineGlossary = () => {
     <div className="min-h-screen bg-[hsl(114,36%,10%)] text-[hsl(40,30%,92%)]">
       <SEOHead
         title="Sacred Plant Medicine Glossary | Temple Mother Earth"
-        description="Comprehensive guide to sacred plant sacraments including Kambo, ayahuasca, psilocybin, San Pedro, cacao, and traditional ceremonial practices worldwide."
+        description="Comprehensive guide to sacred plant sacraments including Kambo, Sacred Vine, Sacred Fungi, San Pedro, cacao, and traditional ceremonial practices worldwide."
         path="/plant-medicine-glossary"
       />
       <Navigation />
+
+      {/* ═══ RFRA DISCLAIMER ═══ */}
+      <div className="bg-[hsl(105,30%,8%)] border-b border-[hsla(45,70%,49%,0.15)] pt-24 pb-0">
+        <div className="max-w-[860px] mx-auto px-6 md:px-12">
+          <div className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.25)] p-6 md:p-8">
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-3 text-center font-bold">
+              Sacred Sacrament Reference — Religious Use Only
+            </p>
+            <p className="font-serif text-[14px] text-[hsl(35,30%,68%)] leading-relaxed text-center">
+              This glossary describes sacred sacraments as understood within the theology of Temple Mother Earth, a 508(c)(1)(A) protected autonomous religious institution. All references to sacred medicines describe their ceremonial and theological significance within our congregation's legally protected religious practice under the Religious Freedom Restoration Act (RFRA), 42 U.S.C. § 2000bb et seq., and the First Amendment to the United States Constitution. Nothing on this page constitutes medical advice, legal advice, or encouragement of any activity outside of our protected religious ceremonies.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* ═══ HERO ═══ */}
       <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 px-6 md:px-12 overflow-hidden">
