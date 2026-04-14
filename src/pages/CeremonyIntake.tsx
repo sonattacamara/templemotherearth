@@ -112,7 +112,6 @@ const step3Schema = z.object({
 
 const CeremonyIntake = () => {
   const [step, setStep] = useState(1);
-  const [isFlagged, setIsFlagged] = useState(false);
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
   const [formData, setFormData] = useState({
@@ -121,38 +120,30 @@ const CeremonyIntake = () => {
     emergencyName: "", emergencyPhone: "", emergencyRelation: "",
     ceremonyType: "", experienceLevel: "", intentions: "",
     referralName: "", currentChallenges: "", traumaTriggers: "", questionsOrConcerns: "",
-    // Medications
     takingMedications: "", medicationsList: "",
     takingPsychMeds: "", psychMedsList: "",
     recentPsychMeds: "", recentPsychMedsDetails: "",
     takingBloodThinners: "", takingImmunosuppressants: "",
-    // Contraindicated meds
-    ...Object.fromEntries(CONTRAINDICATED_MEDICATIONS.map(m => [m.key, false])),
+    ...Object.fromEntries(CONTRAINDICATED_MEDICATIONS.map((m) => [m.key, false])),
     medicationDetails: "",
     currentMedications: "",
     canStopMedications: "", canStopMedicationsDetails: "",
-    // Terminal condition
     terminalCondition: "", terminalConditionDetails: "",
-    // Tobacco/nicotine
     tobaccoAdverseReaction: "",
-    // Medical conditions
     selectedConditions: [] as string[],
     conditionDetails: "",
-    // Mental health
     psychiatricHospital: "", psychiatricHospitalDetails: "",
     suicidalIdeation: "", suicidalIdeationDetails: "",
     psychoticEpisodes: "", psychoticEpisodesDetails: "",
     inTherapy: "", therapistName: "",
     recentTrauma: "", recentTraumaDetails: "",
     emotionalStability: 5,
-    // Substance use
     recreationalDrugs: "", recreationalDrugsDetails: "",
     consumeAlcohol: "", alcoholFrequency: "",
     useCannabis: "", cannabisFrequency: "",
     substanceAbuseTreatment: "", substanceAbuseTreatmentDetails: "",
     recentPsychedelics: "", recentPsychedelicsDetails: "",
     recentSubstances: [] as string[],
-    // Allergies & Physical
     hasAllergies: "", allergiesList: "",
     frogAllergy: "",
     foodSensitivities: "", foodSensitivitiesDetails: "",
@@ -160,81 +151,217 @@ const CeremonyIntake = () => {
     hasFasted: "", fastDuration: "",
     mobilityLimitations: "", mobilityDetails: "",
     difficultyFloor: "",
-    // Prev ceremony
     ceremonyExperienceLevel: "",
     previousMedicines: [] as string[],
     previousMedicineOther: "",
     previousExperienceDetails: "",
     adverseReaction: "", adverseReactionDetails: "",
-    // Kambo-specific
     hadKamboBefore: "", kamboTimes: "", lastKamboDate: "",
     kamboSurgery: "", kamboPacemaker: "", kamboStroke: "",
     kamboAddisons: "", kamboClotting: "", kamboTransplant: "",
     kamboImplants: "", kamboWaterFast: "", kamboBufo28: "",
-    // Intentions & support
     ceremonyIntention: "", seekingHealing: "",
     integrationSupport: "",
     howHeard: "", howHeardOther: "",
     facilitatorNotes: "",
-    // Waivers
     rfrAgreement: false, liabilityWaiver: false, truthfulness: false,
     confidentiality: false, preparationCompliance: false, emergencyAuth: false,
     communityGuidelines: false, eligibilityStatement: false, ageConfirmation21: false,
   });
 
   const update = (field: string, value: any) => setFormData((prev) => ({ ...prev, [field]: value }));
+
   const toggleArrayItem = (field: string, item: string) => {
     const arr = formData[field as keyof typeof formData] as string[];
     if (item === "None of the above" || item === "None - this will be my first experience") {
       update(field, arr.includes(item) ? [] : [item]);
     } else {
-      const filtered = arr.filter(i => i !== "None of the above" && i !== "None - this will be my first experience");
-      update(field, filtered.includes(item) ? filtered.filter(i => i !== item) : [...filtered, item]);
+      const filtered = arr.filter((i) => i !== "None of the above" && i !== "None - this will be my first experience");
+      update(field, filtered.includes(item) ? filtered.filter((i) => i !== item) : [...filtered, item]);
     }
   };
 
-  const hasFlaggedMedication = CONTRAINDICATED_MEDICATIONS.some(
-    (med) => formData[med.key as keyof typeof formData] === true
-  ) || formData.takingPsychMeds === "yes" || formData.recentPsychMeds === "yes";
+  const hasFlaggedMedication =
+    CONTRAINDICATED_MEDICATIONS.some((med) => formData[med.key as keyof typeof formData] === true) ||
+    formData.takingPsychMeds === "yes" ||
+    formData.recentPsychMeds === "yes";
 
-  const hasFlaggedCondition = formData.selectedConditions.some(c => FLAGGED_CONDITIONS.includes(c));
+  const hasFlaggedCondition = formData.selectedConditions.some((condition) => FLAGGED_CONDITIONS.includes(condition));
   const isHealthFlagged = hasFlaggedMedication || hasFlaggedCondition;
-
-  // Kambo-specific flags
   const isKambo = formData.ceremonyType === "Kambo Ceremony";
-  const kamboFlagged = isKambo && (
-    formData.kamboSurgery === "yes" || formData.kamboPacemaker === "yes" ||
-    formData.kamboStroke === "yes" || formData.kamboAddisons === "yes" ||
-    formData.kamboClotting === "yes" || formData.kamboTransplant === "yes" ||
-    formData.kamboImplants === "yes" || formData.kamboBufo28 === "yes"
-  );
-
+  const kamboFlagged =
+    isKambo &&
+    (formData.kamboSurgery === "yes" ||
+      formData.kamboPacemaker === "yes" ||
+      formData.kamboStroke === "yes" ||
+      formData.kamboAddisons === "yes" ||
+      formData.kamboClotting === "yes" ||
+      formData.kamboTransplant === "yes" ||
+      formData.kamboImplants === "yes" ||
+      formData.kamboBufo28 === "yes");
   const totalFlagged = isHealthFlagged || kamboFlagged;
 
   const formRef = useRef<HTMLDivElement>(null);
 
+  const scrollToValidationTarget = () => {
+    setTimeout(() => {
+      const firstError = formRef.current?.querySelector('[data-error="true"]');
+      if (firstError instanceof HTMLElement) {
+        firstError.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
+
+  const getFirstErrorMessage = (errors: Record<string, string>) =>
+    Object.values(errors)[0] || "Please complete all required fields before continuing.";
+
+  const getStep4ValidationErrors = () => {
+    const errors: Record<string, string> = {};
+
+    const requireChoice = (field: keyof typeof formData, message: string) => {
+      if (!String(formData[field] ?? "").trim()) errors[field as string] = message;
+    };
+
+    const requireText = (field: keyof typeof formData, message: string, minLength = 1) => {
+      if (String(formData[field] ?? "").trim().length < minLength) errors[field as string] = message;
+    };
+
+    const requirePositiveNumber = (field: keyof typeof formData, message: string) => {
+      const value = Number(formData[field] ?? 0);
+      if (!Number.isFinite(value) || value <= 0) errors[field as string] = message;
+    };
+
+    [
+      ["takingMedications", "Please answer whether you are currently taking any medications."],
+      ["takingPsychMeds", "Please answer whether you are currently taking psychiatric medications."],
+      ["recentPsychMeds", "Please answer whether you have taken psychiatric medications in the last 30 days."],
+      ["takingBloodThinners", "Please answer whether you are taking blood thinners or heart medications."],
+      ["takingImmunosuppressants", "Please answer whether you are taking immunosuppressant medications."],
+      ["canStopMedications", "Please answer whether you can stop medication and supplementation prior to ceremony."],
+      ["terminalCondition", "Please answer whether you have a terminal medical condition."],
+      ["tobaccoAdverseReaction", "Please answer whether you have an adverse reaction to tobacco or nicotine."],
+      ["psychiatricHospital", "Please answer whether you have ever been hospitalized for psychiatric reasons."],
+      ["suicidalIdeation", "Please answer whether you have experienced suicidal ideation or attempts."],
+      ["psychoticEpisodes", "Please answer whether you have experienced psychotic episodes outside of ceremony."],
+      ["inTherapy", "Please answer whether you are currently in therapy or under mental health care."],
+      ["recentTrauma", "Please answer whether you have experienced major emotional trauma in the last 6 months."],
+      ["recreationalDrugs", "Please answer whether you currently use recreational drugs or substances."],
+      ["consumeAlcohol", "Please answer whether you consume alcohol."],
+      ["useCannabis", "Please answer whether you use cannabis or marijuana."],
+      ["substanceAbuseTreatment", "Please answer whether you have been in treatment for substance abuse or addiction."],
+      ["recentPsychedelics", "Please answer whether you have used psychedelics or earth medicines in the last 30 days."],
+      ["hasAllergies", "Please answer whether you have any known allergies."],
+      ["frogAllergy", "Please answer whether you have an allergy to tree frogs, amphibian secretions, or frog peptides."],
+      ["foodSensitivities", "Please answer whether you have food sensitivities or dietary restrictions."],
+      ["hasFasted", "Please answer whether you have fasted before."],
+      ["mobilityLimitations", "Please answer whether you have mobility limitations or chronic pain."],
+      ["difficultyFloor", "Please answer whether you have difficulty sitting on the floor for extended periods."],
+      ["adverseReaction", "Please answer whether you have had an adverse reaction during a ceremony."],
+      ["integrationSupport", "Please answer whether you have integration support in place."],
+    ].forEach(([field, message]) => requireChoice(field as keyof typeof formData, message));
+
+    requirePositiveNumber("weight", "Please enter your current weight.");
+    requireChoice("heightFeet", "Please select your height in feet.");
+    requireChoice("heightInches", "Please select your height in inches.");
+    requireChoice("ceremonyExperienceLevel", "Please select your previous ceremony experience level.");
+    requireText("ceremonyIntention", "Please share your intention for this ceremony.", 10);
+    requireChoice("howHeard", "Please tell us how you heard about Temple Mother Earth.");
+
+    if (formData.recentSubstances.length === 0) {
+      errors.recentSubstances = "Please select at least one option for substances consumed in the last 48 hours.";
+    }
+
+    if (formData.takingMedications === "yes") requireText("medicationsList", "Please list your current medications.");
+    if (formData.takingPsychMeds === "yes") requireText("psychMedsList", "Please list your psychiatric medications.");
+    if (formData.recentPsychMeds === "yes") requireText("recentPsychMedsDetails", "Please describe the psychiatric medications you took recently.");
+    if (formData.canStopMedications === "no") requireText("canStopMedicationsDetails", "Please explain which medications you cannot stop.");
+    if (formData.terminalCondition === "yes") requireText("terminalConditionDetails", "Please provide more detail about the terminal medical condition.");
+    if (formData.psychiatricHospital === "yes") requireText("psychiatricHospitalDetails", "Please describe the psychiatric hospitalization history.");
+    if (formData.suicidalIdeation === "yes") requireText("suicidalIdeationDetails", "Please describe the suicidal ideation history.");
+    if (formData.psychoticEpisodes === "yes") requireText("psychoticEpisodesDetails", "Please describe the psychotic episode history.");
+    if (formData.recentTrauma === "yes") requireText("recentTraumaDetails", "Please describe the recent trauma.");
+    if (formData.recreationalDrugs === "yes") requireText("recreationalDrugsDetails", "Please specify the substances and frequency of use.");
+    if (formData.consumeAlcohol === "yes") requireChoice("alcoholFrequency", "Please select how often you consume alcohol.");
+    if (formData.useCannabis === "yes") requireChoice("cannabisFrequency", "Please select how often you use cannabis.");
+    if (formData.substanceAbuseTreatment === "yes") requireText("substanceAbuseTreatmentDetails", "Please describe your substance abuse treatment history.");
+    if (formData.recentPsychedelics === "yes") requireText("recentPsychedelicsDetails", "Please specify the recent earth medicine use.");
+    if (formData.hasAllergies === "yes") requireText("allergiesList", "Please list your allergies.");
+    if (formData.foodSensitivities === "yes") requireText("foodSensitivitiesDetails", "Please describe your food sensitivities or dietary restrictions.");
+    if (formData.hasFasted === "yes") requireChoice("fastDuration", "Please select your longest fast duration.");
+    if (formData.mobilityLimitations === "yes") requireText("mobilityDetails", "Please describe your mobility limitations or chronic pain.");
+    if (formData.adverseReaction === "yes") requireText("adverseReactionDetails", "Please describe the difficult or adverse ceremony reaction.");
+    if (formData.howHeard === "Other") requireText("howHeardOther", "Please specify how you heard about Temple Mother Earth.");
+
+    if (isKambo) {
+      requireChoice("hadKamboBefore", "Please answer whether you have had Kambo before.");
+      if (formData.hadKamboBefore === "yes") {
+        requireChoice("kamboTimes", "Please select how many times you have had Kambo.");
+        requireText("lastKamboDate", "Please provide the date of your last Kambo session.");
+      }
+
+      [
+        ["kamboSurgery", "Please answer whether you have had surgery in the last 6 months."],
+        ["kamboPacemaker", "Please answer whether you have a pacemaker or heart implant."],
+        ["kamboStroke", "Please answer whether you have had a stroke or brain hemorrhage."],
+        ["kamboAddisons", "Please answer whether you have Addison's disease."],
+        ["kamboClotting", "Please answer whether you have a blood clotting disorder."],
+        ["kamboTransplant", "Please answer whether you have had an organ transplant."],
+        ["kamboImplants", "Please answer whether you have silicone implants."],
+        ["kamboWaterFast", "Please answer whether you are currently on a water fast."],
+        ["kamboBufo28", "Please answer whether you have consumed Bufo/5-MeO-DMT in the last 28 days."],
+      ].forEach(([field, message]) => requireChoice(field as keyof typeof formData, message));
+    }
+
+    return errors;
+  };
+
   const validateStep = () => {
     setValidationErrors({});
+
     try {
       if (step === 1) {
-        step1Schema.parse({ firstName: formData.firstName, lastName: formData.lastName, email: formData.email, phone: formData.phone, dob: formData.dob, cityState: formData.cityState });
+        step1Schema.parse({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          dob: formData.dob,
+          cityState: formData.cityState,
+        });
       } else if (step === 2) {
-        step2Schema.parse({ emergencyName: formData.emergencyName, emergencyPhone: formData.emergencyPhone, emergencyRelation: formData.emergencyRelation });
+        step2Schema.parse({
+          emergencyName: formData.emergencyName,
+          emergencyPhone: formData.emergencyPhone,
+          emergencyRelation: formData.emergencyRelation,
+        });
       } else if (step === 3) {
-        step3Schema.parse({ ceremonyType: formData.ceremonyType, experienceLevel: formData.experienceLevel, intentions: formData.intentions });
+        step3Schema.parse({
+          ceremonyType: formData.ceremonyType,
+          experienceLevel: formData.experienceLevel,
+          intentions: formData.intentions,
+        });
+      } else if (step === 4) {
+        const errors = getStep4ValidationErrors();
+        if (Object.keys(errors).length > 0) {
+          setValidationErrors(errors);
+          toast.error(getFirstErrorMessage(errors));
+          scrollToValidationTarget();
+          return false;
+        }
       }
-      // Steps 4+ use canProceed() for validation — no Zod schema needed
+
       return true;
     } catch (err) {
       if (err instanceof z.ZodError) {
         const errors: Record<string, string> = {};
-        err.errors.forEach((e) => { if (e.path[0]) errors[e.path[0] as string] = e.message; });
+        err.errors.forEach((issue) => {
+          if (issue.path[0]) errors[issue.path[0] as string] = issue.message;
+        });
         setValidationErrors(errors);
-        // Scroll to first error
-        setTimeout(() => {
-          const firstError = formRef.current?.querySelector('[data-error="true"]');
-          firstError?.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 100);
+        toast.error(getFirstErrorMessage(errors));
+        scrollToValidationTarget();
       }
       return false;
     }
@@ -244,26 +371,32 @@ const CeremonyIntake = () => {
     if (step === 1) return !!(formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState);
     if (step === 2) return !!(formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation);
     if (step === 3) return !!(formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10);
-    if (step === 4) return !totalFlagged;
-    if (step === 5) return !!(formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21);
+    if (step === 4) return true;
+    if (step === 5) {
+      return !!(
+        formData.rfrAgreement &&
+        formData.liabilityWaiver &&
+        formData.truthfulness &&
+        formData.confidentiality &&
+        formData.preparationCompliance &&
+        formData.emergencyAuth &&
+        formData.communityGuidelines &&
+        formData.eligibilityStatement &&
+        formData.ageConfirmation21
+      );
+    }
     return false;
   };
 
   const handleNext = () => {
-    if (!canProceed()) {
-      if (step === 4 && totalFlagged) {
-        toast.error("A pre-ceremony consultation is required based on your responses. Please contact us to proceed.");
-      } else if (step === 5) {
-        toast.error("Please review and accept all agreements before submitting.");
-      } else {
-        toast.error("Please complete all required fields before continuing.");
-      }
-      return;
+    if (!validateStep()) return;
+
+    if (step === 4 && totalFlagged) {
+      toast("Thank you for your honesty. Your responses may require follow-up before final ceremony approval.");
     }
-    if (validateStep()) {
-      setStep(step + 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+
+    setStep((currentStep) => currentStep + 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSubmit = async () => {
@@ -273,16 +406,14 @@ const CeremonyIntake = () => {
     }
     if (!validateStep()) return;
 
-    // Submit via edge function with server-side validation
     try {
-      const { error } = await supabase.functions.invoke('submit-intake', {
+      const { error } = await supabase.functions.invoke("submit-intake", {
         body: formData,
       });
       if (error) {
         console.error("Intake submission error:", error);
       }
     } catch (err) {
-      // Silent fail — don't block the user from seeing confirmation
       console.error("Submission error:", err);
     }
 
@@ -294,7 +425,7 @@ const CeremonyIntake = () => {
   const radioClass = "mr-3 h-4 w-4 appearance-none rounded-full border-2 border-muted-foreground/40 transition-all cursor-pointer checked:border-primary checked:bg-primary checked:shadow-[inset_0_0_0_2px_hsl(var(--background))] hover:border-primary";
   const radioYesNo = (field: string, value: string) => (
     <div className="flex gap-4 mt-1">
-      {["yes", "no"].map(v => (
+      {["yes", "no"].map((v) => (
         <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
           <input type="radio" name={field} className={radioClass} checked={value === v} onChange={() => update(field, v)} />
           {v === "yes" ? "Yes" : "No"}
@@ -309,16 +440,16 @@ const CeremonyIntake = () => {
         <Heart className="inline h-4 w-4 mr-1" /> Thank you for your honesty.
       </p>
       <p className="text-muted-foreground">
-        Based on your responses, a private pre-ceremony consultation with our Sacred Earth Medicine Keeper is required before you can participate. This is for your safety and wellbeing. Please click below to schedule your consultation.
+        Based on your responses, a private pre-ceremony consultation may be needed before final approval. Please continue and submit your intake, and our team will review everything and reach out if follow-up is needed.
       </p>
       <a
         href="/contact"
         className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
       >
-        <Mail className="h-4 w-4" /> Schedule Consultation
+        <Mail className="h-4 w-4" /> Contact the Temple
       </a>
       <p className="text-xs text-muted-foreground">
-        If you believe this flag was triggered in error, please reach out through our <a href="/contact" className="text-primary underline">Contact page</a>.
+        If you would like support before submitting, please reach out through our <a href="/contact" className="text-primary underline">Contact page</a>.
       </p>
     </div>
   );
