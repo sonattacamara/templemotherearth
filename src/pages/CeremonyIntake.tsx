@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail, CalendarIcon } from "lucide-react";
+import { toast } from "sonner";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
@@ -210,6 +211,8 @@ const CeremonyIntake = () => {
 
   const totalFlagged = isHealthFlagged || kamboFlagged;
 
+  const formRef = useRef<HTMLDivElement>(null);
+
   const validateStep = () => {
     setValidationErrors({});
     try {
@@ -220,29 +223,46 @@ const CeremonyIntake = () => {
       } else if (step === 3) {
         step3Schema.parse({ ceremonyType: formData.ceremonyType, experienceLevel: formData.experienceLevel, intentions: formData.intentions });
       }
+      // Steps 4+ use canProceed() for validation — no Zod schema needed
       return true;
     } catch (err) {
       if (err instanceof z.ZodError) {
         const errors: Record<string, string> = {};
         err.errors.forEach((e) => { if (e.path[0]) errors[e.path[0] as string] = e.message; });
         setValidationErrors(errors);
+        // Scroll to first error
+        setTimeout(() => {
+          const firstError = formRef.current?.querySelector('[data-error="true"]');
+          firstError?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
       }
       return false;
     }
   };
 
   const canProceed = () => {
-    if (step === 1) return formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState;
-    if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
-    if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10;
+    if (step === 1) return !!(formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState);
+    if (step === 2) return !!(formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation);
+    if (step === 3) return !!(formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10);
     if (step === 4) return !totalFlagged;
-    if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21;
+    if (step === 5) return !!(formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21);
     return false;
   };
 
   const handleNext = () => {
+    if (!canProceed()) {
+      if (step === 4 && totalFlagged) {
+        toast.error("A pre-ceremony consultation is required based on your responses. Please contact us to proceed.");
+      } else if (step === 5) {
+        toast.error("Please review and accept all agreements before submitting.");
+      } else {
+        toast.error("Please complete all required fields before continuing.");
+      }
+      return;
+    }
     if (validateStep()) {
       setStep(step + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -1151,7 +1171,7 @@ const CeremonyIntake = () => {
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.</p>
+          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony temple. All rights reserved.</p>
         </div>
       </footer>
     </div>
