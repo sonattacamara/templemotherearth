@@ -64,6 +64,13 @@ const HapeCeremony = () => (
       note="Community Care Model · Suggested sacred contribution · Scholarship available · Ask us"
     />
 
+    {/* RFRA Statement */}
+    <div className="bg-[hsl(140,28%,4%)] border-t border-[hsla(45,70%,49%,0.1)] py-8 px-6 md:px-12">
+      <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-[hsl(35,30%,55%)] leading-relaxed">
+        This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
+      </p>
+    </div>
+
     <CeremonyExploreNav variant="light" />
   </SanctuaryWeekLayout>
 );

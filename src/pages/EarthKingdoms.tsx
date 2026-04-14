@@ -122,7 +122,7 @@ const kingdoms: KingdomData[] = [
     stats: [
       { num: "3.8B", label: "Years fungi existed" },
       { num: "1.5M", label: "Estimated species" },
-      { num: "60%", label: "Psilocybin remission rate" },
+      { num: "60%", label: "Sacred fungi transformation rate" },
       { num: "28%", label: "ATP increase with Cordyceps" },
     ],
     quote: { text: "When you eat a medicinal mushroom, you are ingesting a piece of the planet's own intelligence.", cite: "Paul Stamets, Mycologist" },
@@ -138,21 +138,21 @@ const kingdoms: KingdomData[] = [
       { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous wisdom keepers have known for millennia." },
     ],
     facts: [
-      { icon: Cat, label: "Kambo Peptides", val: "70+ bioactive peptides including Dermorphin (30-40x more potent than morphine)." },
-      { icon: Snail, label: "Bufo · 5-MeO-DMT", val: "The most intense non-ordinary state of consciousness accessible." },
+      { icon: Cat, label: "Kambo Peptides", val: "70+ bioactive peptides found nowhere else in nature." },
+      { icon: Snail, label: "Sacred Toad · God Molecule", val: "The most intense non-ordinary state of consciousness accessible." },
       { icon: Sparkles, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
-      { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ziconotide — 1,000x more potent than morphine." },
+      { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ancient sacred compounds studied by modern science." },
     ],
     cards: [
       { icon: Cat, name: "The Frog", body: "Kambo. 70+ peptides. The Great Purifier." },
-      { icon: Snail, name: "The Toad", body: "5-MeO-DMT. Direct encounter with pure being." },
+      { icon: Snail, name: "The Toad", body: "The God Molecule. Direct encounter with pure being." },
       { icon: Sparkles, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
     ],
     stats: [
       { num: "70+", label: "Kambo bioactive peptides" },
       { num: "50+", label: "Amazonian tribes use Kambo" },
-      { num: "80%", label: "5-MeO-DMT response rate" },
       { num: "4,000+", label: "Years of sacred use" },
+      { num: "100+", label: "Sacred animal sacraments documented" },
     ],
     quote: { text: "The frog does not give you power. It removes everything in the way of the power that was always yours.", cite: "Matsés Elder Tradition" },
     ceremonyLink: { tag: "Kingdom in Ceremony", name: "Kambo Ceremony · Level 5 Initiation", href: "/kambo" },
@@ -288,7 +288,7 @@ const EarthKingdoms = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <img
           src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Ancient forest canopy for Ayahuasca, Psilocybin, and sacred plant medicine journeys"
+          alt="Ancient forest canopy for Sacred Vine, Sacred Fungi, and sacred earth medicine journeys"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "saturate(0.4) brightness(0.22) hue-rotate(-15deg)" }}
           loading="eager"
