@@ -384,7 +384,7 @@ const CeremonyIntake = () => {
 
       {/* Form */}
       <section className="px-4 pb-24">
-        <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
+        <div ref={formRef} className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
 
           {/* Before You Begin Notice */}
           {step === 1 && (
