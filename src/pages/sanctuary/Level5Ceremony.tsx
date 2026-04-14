@@ -213,6 +213,13 @@ const Level5Ceremony = () => (
         </p>
       </div>
     </section>
+
+    {/* RFRA Statement */}
+    <div className="bg-[#050804] border-t border-[rgba(200,160,48,0.1)] py-8 px-6 md:px-12">
+      <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-[#8A9E84] leading-relaxed">
+        This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
+      </p>
+    </div>
   </SanctuaryWeekLayout>
 );
 

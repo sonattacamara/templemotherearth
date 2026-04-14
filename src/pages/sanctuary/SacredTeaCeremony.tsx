@@ -57,6 +57,13 @@ const SacredTeaCeremony = () => (
       ctaHref={EVENTBRITE_PLACEHOLDER}
       note="Health screening required for Sacred Circle & Fruit of the Gods levels · Registration required for all levels"
     />
+
+    {/* RFRA Statement */}
+    <div className="bg-background border-t border-[hsla(45,70%,49%,0.1)] py-8 px-6 md:px-12">
+      <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-muted-foreground leading-relaxed">
+        This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
+      </p>
+    </div>
   </SanctuaryWeekLayout>
 );
 
