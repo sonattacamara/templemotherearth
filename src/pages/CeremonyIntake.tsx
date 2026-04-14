@@ -419,7 +419,7 @@ const CeremonyIntake = () => {
                 { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
                 { field: "phone", label: "Phone Number * (e.g. 555-555-5555)", type: "tel", placeholder: "Phone Number" },
               ].map(f => (
-                <div key={f.field}>
+                <div key={f.field} data-error={!!validationErrors[f.field]}>
                   <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
                   <input className={`${inputClass} ${validationErrors[f.field] ? "ring-2 ring-destructive border-destructive" : ""}`} type={f.type} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
                   {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
