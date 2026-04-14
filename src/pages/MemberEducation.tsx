@@ -35,7 +35,7 @@ At Temple Mother Earth, Kambo is administered with deep reverence for its indige
 • **Immune system activation** — The bioactive peptides in Kambo stimulate the immune system, helping the body fight infection and illness.
 • **Mental clarity & focus** — Many participants report heightened mental clarity, improved focus, and a sense of "lifting" from brain fog.
 • **Emotional release** — Stored emotional trauma and grief often release during the ceremony, creating space for new energy.
-• **Pain relief** — Dermorphin and deltorphin, found in Kambo, are natural painkillers far more potent than morphine.
+• **Pain relief** — Kambo contains powerful natural peptides that support the body's own pain management systems.
 • **Energy & vitality** — After the initial purge and rest, many people experience a significant increase in energy and vitality.
 • **Spiritual alignment** — Kambo is often described as a "reset button" that clears energetic blockages and realigns the spirit.
 
