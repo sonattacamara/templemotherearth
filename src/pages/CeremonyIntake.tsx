@@ -74,14 +74,14 @@ const FLAGGED_CONDITIONS = [
 ];
 
 const EARTH_MEDICINES = [
-  "Ayahuasca", "Kambo", "5-MeO-DMT (Bufo/Sapo)", "Psilocybin (mushrooms)",
-  "San Pedro / Huachuma", "Iboga / Ibogaine", "Hapé", "Cacao (ceremonial)",
+  "Ayahuasca", "Kambo", "God Molecule / Sacred Toad Sacrament", "Sacred Fungi (mushrooms)",
+  "San Pedro / Huachuma", "Iboga", "Hapé", "Cacao (ceremonial)",
   "Sweat Lodge", "Cannabis in ceremony", "Other", "None - this will be my first experience",
 ];
 
 const RECENT_SUBSTANCES = [
   "Alcohol", "Cannabis/Marijuana", "Caffeine (excessive)", "Energy drinks",
-  "Recreational drugs", "Prescription sleep aids", "None of the above",
+  "Non-sacramental substance use", "Prescription sleep aids", "None of the above",
 ];
 
 // Zod validation schemas per step
@@ -310,7 +310,7 @@ const CeremonyIntake = () => {
         ["kamboTransplant", "Please answer whether you have had an organ transplant."],
         ["kamboImplants", "Please answer whether you have silicone implants."],
         ["kamboWaterFast", "Please answer whether you are currently on a water fast."],
-        ["kamboBufo28", "Please answer whether you have consumed Bufo/5-MeO-DMT in the last 28 days."],
+        ["kamboBufo28", "Please answer whether you have consumed the God Molecule / Sacred Toad Sacrament in the last 28 days."],
       ].forEach(([field, message]) => requireChoice(field as keyof typeof formData, message));
     }
 
@@ -1071,7 +1071,7 @@ const CeremonyIntake = () => {
                     { field: "kamboTransplant", q: "Have you had any organ transplants?" },
                     { field: "kamboImplants", q: "Do you have any silicone implants (breast implants, cosmetic fillers, etc.)?" },
                     { field: "kamboWaterFast", q: "Are you currently on a water fast or have you been fasting for more than 24 hours?" },
-                    { field: "kamboBufo28", q: "Have you consumed any Bufo/5-MeO-DMT in the last 28 days?" },
+                    { field: "kamboBufo28", q: "Have you consumed the God Molecule / Sacred Toad Sacrament in the last 28 days?" },
                   ].map(item => (
                     <div key={item.field}>
                       <label className="block text-sm font-medium text-foreground">{item.q} *</label>
