@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail, CalendarIcon } from "lucide-react";
+import { toast } from "sonner";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
@@ -210,6 +211,8 @@ const CeremonyIntake = () => {
 
   const totalFlagged = isHealthFlagged || kamboFlagged;
 
+  const formRef = useRef<HTMLDivElement>(null);
+
   const validateStep = () => {
     setValidationErrors({});
     try {
@@ -220,33 +223,54 @@ const CeremonyIntake = () => {
       } else if (step === 3) {
         step3Schema.parse({ ceremonyType: formData.ceremonyType, experienceLevel: formData.experienceLevel, intentions: formData.intentions });
       }
+      // Steps 4+ use canProceed() for validation — no Zod schema needed
       return true;
     } catch (err) {
       if (err instanceof z.ZodError) {
         const errors: Record<string, string> = {};
         err.errors.forEach((e) => { if (e.path[0]) errors[e.path[0] as string] = e.message; });
         setValidationErrors(errors);
+        // Scroll to first error
+        setTimeout(() => {
+          const firstError = formRef.current?.querySelector('[data-error="true"]');
+          firstError?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
       }
       return false;
     }
   };
 
   const canProceed = () => {
-    if (step === 1) return formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState;
-    if (step === 2) return formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation;
-    if (step === 3) return formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10;
+    if (step === 1) return !!(formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState);
+    if (step === 2) return !!(formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation);
+    if (step === 3) return !!(formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10);
     if (step === 4) return !totalFlagged;
-    if (step === 5) return formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21;
+    if (step === 5) return !!(formData.rfrAgreement && formData.liabilityWaiver && formData.truthfulness && formData.confidentiality && formData.preparationCompliance && formData.emergencyAuth && formData.communityGuidelines && formData.eligibilityStatement && formData.ageConfirmation21);
     return false;
   };
 
   const handleNext = () => {
+    if (!canProceed()) {
+      if (step === 4 && totalFlagged) {
+        toast.error("A pre-ceremony consultation is required based on your responses. Please contact us to proceed.");
+      } else if (step === 5) {
+        toast.error("Please review and accept all agreements before submitting.");
+      } else {
+        toast.error("Please complete all required fields before continuing.");
+      }
+      return;
+    }
     if (validateStep()) {
       setStep(step + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   const handleSubmit = async () => {
+    if (!canProceed()) {
+      toast.error("Please review and accept all agreements before submitting.");
+      return;
+    }
     if (!validateStep()) return;
 
     // Submit via edge function with server-side validation
@@ -360,7 +384,7 @@ const CeremonyIntake = () => {
 
       {/* Form */}
       <section className="px-4 pb-24">
-        <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
+        <div ref={formRef} className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
 
           {/* Before You Begin Notice */}
           {step === 1 && (
@@ -395,7 +419,7 @@ const CeremonyIntake = () => {
                 { field: "email", label: "Email Address *", type: "email", placeholder: "Email Address" },
                 { field: "phone", label: "Phone Number * (e.g. 555-555-5555)", type: "tel", placeholder: "Phone Number" },
               ].map(f => (
-                <div key={f.field}>
+                <div key={f.field} data-error={!!validationErrors[f.field]}>
                   <label className="mb-1 block text-sm font-medium text-foreground">{f.label}</label>
                   <input className={`${inputClass} ${validationErrors[f.field] ? "ring-2 ring-destructive border-destructive" : ""}`} type={f.type} placeholder={f.placeholder} value={formData[f.field as keyof typeof formData] as string} onChange={(e) => update(f.field, e.target.value)} required />
                   {validationErrors[f.field] && <p className="mt-1 text-xs text-destructive">{validationErrors[f.field]}</p>}
@@ -1103,11 +1127,11 @@ const CeremonyIntake = () => {
                 <button onClick={() => { setValidationErrors({}); setStep(step - 1); }} className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent">Back</button>
               ) : <div />}
               {step < 5 ? (
-                <button onClick={handleNext} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                <button onClick={handleNext} className={`rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center gap-2 ${!canProceed() ? 'opacity-60' : ''}`}>
                   Continue <ArrowRight className="h-4 w-4" />
                 </button>
               ) : (
-                <button onClick={handleSubmit} disabled={!canProceed()} className="rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                <button onClick={handleSubmit} className={`rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center gap-2 ${!canProceed() ? 'opacity-60' : ''}`}>
                   Complete Sacred Intake <ArrowRight className="h-4 w-4" />
                 </button>
               )}
@@ -1151,7 +1175,7 @@ const CeremonyIntake = () => {
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. All rights reserved.</p>
+          <p className="font-body text-xs text-primary-foreground/40">© {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony temple. All rights reserved.</p>
         </div>
       </footer>
     </div>
