@@ -792,6 +792,77 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── VOICES FROM THE CONGREGATION ───── */}
+      <section className="bg-background px-4 py-16 md:py-24">
+        <motion.div
+          className="mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+            Voices from the Congregation
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mx-auto mt-4 max-w-3xl text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+            Transformation Stories from Our Sacred Community
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-2xl text-center text-muted-foreground">
+            Real reflections from sovereign beings who answered the call. First names only, shared with permission.
+          </motion.p>
+
+          <motion.div variants={stagger} className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                quote: "After my first Kambo ceremony, I released grief I had been carrying since childhood. I walked in heavy. I walked out lighter than I have felt in twenty years. The container Temple Mother Earth holds is unlike anything I have experienced.",
+                name: "Maya",
+                ceremony: "Kambo Ceremony",
+                year: "2024",
+              },
+              {
+                quote: "Cacao opened my heart in a way I did not know was possible. I came in skeptical, expecting nothing. I left in tears, finally understanding what it means to feel held by community. I now attend every month.",
+                name: "Marcus",
+                ceremony: "Cacao Ceremony",
+                year: "2023",
+              },
+              {
+                quote: "As a veteran, I had tried everything. Talk therapy, medication, meditation. The Sacred Series gave me back something I did not know I had lost — my sense of belonging on this earth. Dr. Sonatta and King James saved my life.",
+                name: "David",
+                ceremony: "Veterans Sacred Series",
+                year: "2024",
+              },
+              {
+                quote: "The Sacred Tea Ceremony taught me how to slow down. Six years of burnout dissolved over the course of one afternoon. I left with a stillness I now carry into every part of my life.",
+                name: "Aisha",
+                ceremony: "Sacred Tea Ceremony",
+                year: "2025",
+              },
+            ].map((story) => (
+              <motion.div
+                key={story.name}
+                variants={fadeUp}
+                className="rounded-2xl border border-primary/15 bg-card p-7 shadow-sm transition-all hover:border-primary/40 hover:shadow-md"
+              >
+                <Sparkles className="h-5 w-5 text-primary" aria-hidden />
+                <p className="mt-4 font-display italic text-lg text-card-foreground leading-relaxed">
+                  &ldquo;{story.quote}&rdquo;
+                </p>
+                <div className="mt-6 flex items-baseline justify-between border-t border-primary/10 pt-4">
+                  <p className="font-body text-sm font-semibold text-foreground">— {story.name}</p>
+                  <p className="font-body text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    {story.ceremony} · {story.year}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.p variants={fadeUp} className="mt-10 text-center text-sm text-muted-foreground italic">
+            Names changed where requested. Stories shared with the consent of each congregation member.
+          </motion.p>
+        </motion.div>
+      </section>
+
       {/* ───── COMMUNITY GALLERY ───── */}
       <section className="px-4 py-14 md:py-20">
         <motion.div
