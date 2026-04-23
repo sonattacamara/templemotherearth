@@ -260,6 +260,12 @@ const KamboCeremony = () => {
 
       {/* RFRA Statement */}
       <div className="bg-[hsl(140,28%,4%)] border-t border-[hsla(45,70%,49%,0.1)] py-8 px-6 md:px-12">
+        <div className="max-w-[760px] mx-auto mb-6 p-6 border border-[hsla(45,70%,49%,0.2)] rounded-lg bg-[hsla(45,70%,49%,0.04)] text-center">
+          <p className="font-sans text-[10px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] mb-2">Sacred Access</p>
+          <p className="font-serif italic text-[15px] text-[hsl(35,30%,82%)] leading-relaxed">
+            We believe healing is a birthright, not a privilege. Sliding scale and scholarship offerings are available for those called to ceremony. Write to <a href="mailto:askus@templemotherearth.org" className="text-[hsl(45,70%,49%)] underline">askus@templemotherearth.org</a> to begin the conversation.
+          </p>
+        </div>
         <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-[hsl(35,30%,55%)] leading-relaxed">
           This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
         </p>
