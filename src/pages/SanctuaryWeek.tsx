@@ -285,7 +285,7 @@ const SanctuaryWeek = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
           <span className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[4px] uppercase px-5 py-2 mb-8">
-            7-Day Sacred Offerings · Year Six
+            Sacred Series · Seven Days
           </span>
           <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-4">
             Temple Mother Earth · Washington, DC
@@ -295,14 +295,14 @@ const SanctuaryWeek = () => {
             <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Series</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            A recurring 7-day series of sacred ceremonies, community gatherings, and body practices held each month. Each offering stands on its own. Choose what calls you.
+            A living 7-day sanctuary rhythm for the seeker who is ready to be witnessed, held, and reminded that they already belong. Each doorway stands on its own. Choose what calls your body, soul, and spirit.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
-            In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. The sacred container is open. Come home.
+            This month’s circle is New Earth Rising — a call for those who can feel something changing within them and want to rise in community, not isolation.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#timeline" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
-              Explore the Journey
+              Explore the Seven Days
             </a>
             <a href="#monthly-themes" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsla(45,70%,49%,0.5)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
               See What's Happening This Month
@@ -385,7 +385,7 @@ const SanctuaryWeek = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center mb-12">
-            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · The Lovers</p>
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Sacred Series · The Energy of Home</p>
             <h2 className="font-sans text-[clamp(48px,8vw,96px)] font-extralight leading-none text-[hsl(45,70%,55%)] mb-4">
               6
             </h2>
@@ -406,7 +406,7 @@ const SanctuaryWeek = () => {
               <Crown className="h-6 w-6 text-[hsl(45,70%,49%)] mb-4" />
               <h3 className="font-sans text-[11px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3 font-normal">The Lovers · Tarot VI</h3>
               <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
-                Card VI in the Tarot, sacred union, conscious alignment, the moment of choosing who you truly are. Year Six is the year we choose with intention.
+                Card VI in the Tarot, sacred union, conscious alignment, the moment of choosing who you truly are. This series invites you to choose your path with intention.
               </p>
             </div>
             <div className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 md:p-9">
@@ -477,7 +477,7 @@ const SanctuaryWeek = () => {
       <section id="monthly-themes" className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)] scroll-mt-20">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-14">
-            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · Monthly Themes</p>
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Sacred Series · Monthly Themes</p>
             <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
               The Sacred<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Calendar</em>
             </h2>
