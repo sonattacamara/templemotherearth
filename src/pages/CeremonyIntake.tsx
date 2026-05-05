@@ -1187,8 +1187,312 @@ const CeremonyIntake = () => {
             </div>
           )}
 
-          {/* Step 5: Sacred Agreement & Waiver */}
+          {/* Step 5: Inner Landscape (Reflection) */}
           {step === 5 && (
+            <div className="space-y-8">
+              <h3 className="font-display text-xl font-bold text-card-foreground">Inner Landscape</h3>
+              <p className="text-sm text-muted-foreground">
+                These reflections are part of your sacred preparation. Some questions are required so we can hold space for you well; others are optional invitations to listen inward. There are no wrong answers.
+              </p>
+
+              {/* Identity & Body */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Identity & Body</h4>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Preferred pronouns</label>
+                  <input className={inputClass} placeholder="she/her, he/him, they/them, etc." value={formData.pronouns} onChange={(e) => update("pronouns", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you breathe easily and deeply?</label>
+                  <div className="flex gap-4 mt-1">
+                    {["Yes","No","Maybe"].map(v => (
+                      <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="radio" name="breathEasily" className={radioClass} checked={formData.breathEasily === v} onChange={() => update("breathEasily", v)} />
+                        {v}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Have you explored breath practices (pranayama, holotropic, Wim Hof, etc.)?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} placeholder="Optional" value={formData.breathPractice} onChange={(e) => update("breathPractice", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">How much water do you consume in a day?</label>
+                  <select className={inputClass + " mt-1"} value={formData.waterIntake} onChange={(e) => update("waterIntake", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["Half gallon","Gallon","Not enough","Other"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you wear contacts?</label>
+                  {radioYesNo("wearContacts", formData.wearContacts)}
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What do you do for exercise and movement?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.exerciseMovement} onChange={(e) => update("exerciseMovement", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How do you nourish yourself with food?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.nourishFood} onChange={(e) => update("nourishFood", e.target.value)} />
+                </div>
+              </div>
+
+              {/* Sleep & Dreams */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Sleep & Dreams</h4>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How do you prepare for sleep?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.sleepPrep} onChange={(e) => update("sleepPrep", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">How many hours do you sleep per night?</label>
+                  <select className={inputClass + " mt-1"} value={formData.sleepHours} onChange={(e) => update("sleepHours", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["8-10","6-8","Too little","Too much"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you wake up feeling rested?</label>
+                  {radioYesNo("wakeRested", formData.wakeRested)}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Is your sleep environment nourishing?</label>
+                  {radioYesNo("sleepEnvironment", formData.sleepEnvironment)}
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What do you dream about?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.dreams} onChange={(e) => update("dreams", e.target.value)} />
+                </div>
+              </div>
+
+              {/* Psychosomatic Awareness */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Psychosomatic Awareness</h4>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Where and how do you hold fear, stress or tension in your body?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.holdTension} onChange={(e) => update("holdTension", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Do you have unfinished business with friends, family, or community?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.unfinishedBusiness} onChange={(e) => update("unfinishedBusiness", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What are your most valued emotional strengths?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.emotionalStrengths} onChange={(e) => update("emotionalStrengths", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How do you relate to your unconscious?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.relateUnconscious} onChange={(e) => update("relateUnconscious", e.target.value)} />
+                </div>
+              </div>
+
+              {/* Spirituality */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Spirituality</h4>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you consider yourself a spiritual person?</label>
+                  <select className={inputClass + " mt-1"} value={formData.spiritualPerson} onChange={(e) => update("spiritualPerson", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["Yes","No","I'm not sure","Other"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you believe in a God, many gods, or no god at all?</label>
+                  <select className={inputClass + " mt-1"} value={formData.beliefInGod} onChange={(e) => update("beliefInGod", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["God","Gods","No god at all","I'm not sure","Other"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have a spiritual teacher?</label>
+                  <div className="flex gap-4 mt-1">
+                    {["Yes","No","Maybe"].map(v => (
+                      <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="radio" name="spiritualTeacher" className={radioClass} checked={formData.spiritualTeacher === v} onChange={() => update("spiritualTeacher", v)} />
+                        {v}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Community & Self */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Community & Self</h4>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How is your relationship with your family of origin?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.familyRelationship} onChange={(e) => update("familyRelationship", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What does it mean to you to belong to a community?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.communityMeaning} onChange={(e) => update("communityMeaning", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you feel nourished or depleted by your social commitments?</label>
+                  <select className={inputClass + " mt-1"} value={formData.socialNourishment} onChange={(e) => update("socialNourishment", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["I feel nourished","I feel depleted"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How well do you balance time with others and time for yourself?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.timeBalance} onChange={(e) => update("timeBalance", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How much time do you spend in nature?</label>
+                  <input className={inputClass} value={formData.timeInNature} onChange={(e) => update("timeInNature", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Is your home messy or tidy?</label>
+                  <select className={inputClass + " mt-1"} value={formData.homeMessTidy} onChange={(e) => update("homeMessTidy", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["Messy","Tidy"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you encounter the same issues or patterns over and over?</label>
+                  {radioYesNo("repeatingPatterns", formData.repeatingPatterns)}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you lean more toward gathering knowledge or having direct experiences?</label>
+                  <select className={inputClass + " mt-1"} value={formData.knowledgeVsExperience} onChange={(e) => update("knowledgeVsExperience", e.target.value)}>
+                    <option value="">Select...</option>
+                    {["Gathering knowledge","Direct experiences"].map(o => <option key={o} value={o}>{o}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What aspect of life would you like to bring innovation to?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.innovationArea} onChange={(e) => update("innovationArea", e.target.value)} />
+                </div>
+              </div>
+
+              {/* Love */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Love</h4>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you feel love?</label>
+                  <div className="flex gap-4 mt-1">
+                    {["Yes","No","Maybe"].map(v => (
+                      <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="radio" name="feelLove" className={radioClass} checked={formData.feelLove === v} onChange={() => update("feelLove", v)} />
+                        {v}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Where do you feel love in your body?</label>
+                  <input className={inputClass} value={formData.loveInBody} onChange={(e) => update("loveInBody", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How do you express love toward yourself?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.expressLoveSelf} onChange={(e) => update("expressLoveSelf", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">What are your 2 most preferred love languages?</label>
+                  <div className="mt-2 space-y-1">
+                    {["Acts of service","Touch","Words of Affirmation","Gifts","Quality Time"].map(o => (
+                      <label key={o} className="flex items-center text-sm text-foreground cursor-pointer">
+                        <input type="checkbox" className={checkboxClass} checked={formData.loveLanguages.includes(o)} onChange={() => toggleArrayItem("loveLanguages", o)} />
+                        {o}
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">How do you connect to your core essence?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.coreEssence} onChange={(e) => update("coreEssence", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Are you comfortable simply being with yourself?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.beingWithSelf} onChange={(e) => update("beingWithSelf", e.target.value)} />
+                </div>
+              </div>
+
+              {/* Shadow Work & Readiness */}
+              <div className="space-y-4">
+                <h4 className="font-display text-lg font-semibold text-foreground border-b border-border pb-2">Shadow Work & Readiness</h4>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have any history of addiction (drug, alcohol, behavioral)?</label>
+                  {radioYesNo("historyAddiction", formData.historyAddiction)}
+                  {formData.historyAddiction === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please describe" value={formData.historyAddictionDetails} onChange={(e) => update("historyAddictionDetails", e.target.value)} />
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Do you have any fears or phobias?</label>
+                  {radioYesNo("fearsPhobias", formData.fearsPhobias)}
+                  {formData.fearsPhobias === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please describe" value={formData.fearsPhobiasDetails} onChange={(e) => update("fearsPhobiasDetails", e.target.value)} />
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you aware of any energy blockages that may surface during ceremony?</label>
+                  {radioYesNo("energyBlockages", formData.energyBlockages)}
+                  {formData.energyBlockages === "yes" && (
+                    <input className={inputClass + " mt-2"} placeholder="Please describe" value={formData.energyBlockagesDetails} onChange={(e) => update("energyBlockagesDetails", e.target.value)} />
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Shadow Work: Which fears resonate the most for you? (Select all that apply)</label>
+                  <div className="mt-2 space-y-1">
+                    {[
+                      "Fear of Death (letting go)",
+                      "Fear of Losing Control",
+                      "Fear of Not Being Lovable / Loved",
+                      "Fear of Rejection / Not Being Good Enough",
+                      "Fear of Going Mad",
+                    ].map(o => (
+                      <label key={o} className="flex items-start text-sm text-foreground cursor-pointer py-0.5">
+                        <input type="checkbox" className={checkboxClass} checked={formData.shadowFears.includes(o)} onChange={() => toggleArrayItem("shadowFears", o)} />
+                        <span>{o}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Is there anything about your physical / mental / emotional / spiritual state the facilitators should know?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.physicalMentalSpiritual} onChange={(e) => update("physicalMentalSpiritual", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Are there any important unmet needs?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.unmetNeeds} onChange={(e) => update("unmetNeeds", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What are you willing to sacrifice / let go of for this transformation?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.willingToSacrifice} onChange={(e) => update("willingToSacrifice", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What do you want to clarify about yourself, your relationships, or your life's path?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.clarifyAboutLife} onChange={(e) => update("clarifyAboutLife", e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground">Are you willing to set aside a minimum of 12 hours before and after ceremony, free of social, personal, and professional commitments?</label>
+                  {radioYesNo("setAside12Hours", formData.setAside12Hours)}
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What beliefs make you small?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.smallBeliefs} onChange={(e) => update("smallBeliefs", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What changes do you feel ready to make now?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.readyChanges} onChange={(e) => update("readyChanges", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">What is our role in your healing and transformation process?</label>
+                  <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.ourRoleInHealing} onChange={(e) => update("ourRoleInHealing", e.target.value)} />
+                </div>
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Is there anything else you feel led to share?</label>
+                  <textarea className={inputClass + " min-h-[80px] resize-none"} value={formData.anythingElseToShare} onChange={(e) => update("anythingElseToShare", e.target.value)} />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Step 6: Sacred Agreement & Waiver */}
+          {step === 6 && (
             <div className="space-y-5">
               <h3 className="font-display text-xl font-bold text-card-foreground">Sacred Agreement & Waiver</h3>
 
@@ -1274,8 +1578,8 @@ const CeremonyIntake = () => {
             </div>
           )}
 
-          {/* Step 6: Thank You */}
-          {step === 6 && (
+          {/* Step 7: Thank You */}
+          {step === 7 && (
             <div className="text-center py-8">
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
               <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Seeker</h3>
@@ -1305,12 +1609,12 @@ const CeremonyIntake = () => {
           )}
 
           {/* Navigation Buttons */}
-          {step <= 5 && (
+          {step <= 6 && (
             <div className="mt-8 flex items-center justify-between">
               {step > 1 ? (
                 <button onClick={() => { setValidationErrors({}); setStep(step - 1); }} className="rounded-lg border border-input px-6 py-2.5 text-sm font-body text-foreground transition hover:bg-accent">Back</button>
               ) : <div />}
-              {step < 5 ? (
+              {step < 6 ? (
                 <button onClick={handleNext} className={`rounded-lg bg-primary px-6 py-2.5 text-sm font-body font-semibold text-primary-foreground transition hover:bg-primary/80 flex items-center gap-2 ${!canProceed() ? 'opacity-60' : ''}`}>
                   Continue <ArrowRight className="h-4 w-4" />
                 </button>
