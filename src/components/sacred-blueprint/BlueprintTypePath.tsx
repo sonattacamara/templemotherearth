@@ -12,22 +12,22 @@ const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 const types = [
   {
     type: "Generator",
-    path: "Environment Collective ($150/mo)",
+    path: "Environment Collective",
     why: "Your energy is built for consistent, satisfying practice. The daily Qi Gong and body-mind work in Environment Collective is designed for your natural rhythm.",
   },
   {
     type: "Projector",
-    path: "Community Rhythm ($50/mo)",
+    path: "Community Rhythm",
     why: "Projectors thrive when seen, guided, and not over-committed. Community Rhythm gives you rich teachings and community without draining your energy.",
   },
   {
     type: "Manifestor",
-    path: "Preparation Path ($275/mo)",
+    path: "Preparation Path",
     why: "Manifestors move fast and go deep. The Preparation Path channels your initiating energy into a grounded ceremonial journey on your own timeline.",
   },
   {
     type: "Reflector",
-    path: "Welcome Circle (Free)",
+    path: "Welcome Circle",
     why: "Reflectors need time to truly sense a community before committing. Take the full 30 days in Welcome Circle to feel the Temple before you decide.",
   },
 ];

@@ -356,12 +356,8 @@ const Membership = () => {
                     </div>
                   </div>
 
-                  {/* Price + Commitment */}
+                  {/* Commitment */}
                   <div className="mt-6 flex flex-wrap items-baseline gap-3">
-                    <span className="font-display text-3xl font-bold text-foreground">
-                      {tier.price}
-                    </span>
-                    <span className="text-sm text-muted-foreground">{tier.period}</span>
                     {tier.commitment && (
                       <span className="flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                         <Lock className="h-3 w-3" />
@@ -402,7 +398,7 @@ const Membership = () => {
                       {loadingTier === tier.stripeKey ? (
                         <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</>
                       ) : (
-                        <>Begin — {tier.price}/mo</>
+                        <>Begin {tier.name}</>
                       )}
                     </button>
                   )}

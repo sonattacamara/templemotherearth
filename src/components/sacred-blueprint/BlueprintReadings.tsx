@@ -12,7 +12,6 @@ const readings = [
   {
     icon: BookOpen,
     name: "Foundational Reading",
-    price: "$222",
     duration: "90 min via Zoom",
     description:
       "For those brand new to Human Design. Covers: Energy Type, Strategy, Authority, defined/undefined centers, innate gifts, conditioning patterns. Connects their design to their healing path and ceremony readiness.",
@@ -21,7 +20,6 @@ const readings = [
   {
     icon: Sparkles,
     name: "Integration Reading",
-    price: "$333",
     duration: "90 min via Zoom",
     description:
       "For those who have already explored their chart. Weaves together self-study with intuitive insights, Gene Keys contemplations, Venus Sequence, and ceremony alignment. Moves from information to embodiment.",
@@ -42,7 +40,7 @@ const BlueprintReadings = () => (
         Book a Sacred Blueprint Reading
       </motion.h2>
       <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-        Your chart is just the beginning. A Sacred Blueprint Reading goes deep — connecting your Human Design to your healing journey, your medicine path, and your next sacred step. All sessions are 90 minutes via Zoom. Payment is collected at booking.
+    Your chart is just the beginning. A Sacred Blueprint Reading goes deep — connecting your Human Design to your healing journey, your medicine path, and your next sacred step. All sessions are 90 minutes via Zoom.
       </motion.p>
 
       <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -53,7 +51,6 @@ const BlueprintReadings = () => (
             </div>
             <h3 className="font-display text-xl font-bold text-foreground">{r.name}</h3>
             <div className="mt-3 flex flex-wrap items-center gap-3">
-              <span className="font-display text-2xl font-bold text-primary">{r.price}</span>
               <span className="flex items-center gap-1 text-sm text-muted-foreground">
                 <Clock className="h-3.5 w-3.5" /> {r.duration}
               </span>

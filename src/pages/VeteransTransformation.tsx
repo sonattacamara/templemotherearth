@@ -114,7 +114,7 @@ const currentSupport = ["VA Healthcare", "Private Therapist", "Support Group", "
 
 const hearAbout = ["Google Search", "Social Media", "Another Veteran", "Podcast", "Therapist / Counselor Referral", "VA / Military Organization", "Other"];
 
-const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset Weekend ($1,497)", "Full Transformation Pathway", "Not Sure — Help Me Decide"];
+const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset Weekend", "Full Transformation Pathway", "Not Sure — Help Me Decide"];
 
 const VeteransTransformation = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -542,7 +542,6 @@ const VeteransTransformation = () => {
           </motion.div>
 
           <motion.div variants={fadeUp} className="mt-12 text-center">
-            <p className="font-display text-4xl font-bold text-[#B8860B]">$1,497</p>
             <p className="mt-2 font-body text-[#F5F0E6]/70">Full Veteran's Weekend: Relax & Reset</p>
             <p className="mt-4 font-body text-sm text-[#F5F0E6]/50 italic max-w-lg mx-auto">
               Scholarship opportunities available for veterans in financial hardship. No warrior turned away for inability to pay.
@@ -677,7 +676,7 @@ const VeteransTransformation = () => {
               Veteran Scholarship Fund
             </h2>
             <p className="mx-auto mt-6 max-w-2xl font-body text-[#2F4F4F]/70 leading-relaxed">
-              Your $1,497 donation sends a veteran through a full transformation weekend. Every dollar goes directly to healing a warrior who has given everything for this country.
+              Your donation sends a veteran through a full transformation weekend. Every dollar goes directly to healing a warrior who has given everything for this country.
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-8">

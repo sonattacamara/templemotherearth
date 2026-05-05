@@ -221,13 +221,6 @@ const TimelineCard = ({ day }: { day: TimelineDay }) => (
       <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif mb-4">
         {day.description}
       </p>
-      <div className="flex gap-3 flex-wrap mb-4">
-        {day.pricing.map((tier) => (
-          <span key={tier.label} className="font-sans text-[8px] tracking-[1.5px] uppercase text-[hsl(35,20%,50%)]">
-            <span className="text-[hsl(45,70%,49%)]">{tier.price}</span> {tier.label}
-          </span>
-        ))}
-      </div>
       <div className="flex gap-2 flex-wrap mb-4">
         {day.tags.map((tag) => (
           <span key={tag} className="font-sans text-[7px] tracking-[2px] uppercase border border-[hsl(100,20%,22%)] text-[hsl(35,20%,50%)] px-2.5 py-1">
@@ -320,7 +313,7 @@ const SanctuaryWeek = () => {
               Explore the Journey
             </a>
             <a href="#package" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsla(45,70%,49%,0.5)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
-              Full Package $2,222
+              Full Initiation Package
             </a>
           </div>
         </motion.div>
@@ -672,15 +665,14 @@ const SanctuaryWeek = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
-            { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
-            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening", price: "$2,222" },
-            { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
-            { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
+            { title: "Spring Equinox", subtitle: "10 Days of Immersion" },
+            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening" },
+            { title: "Weekend Immersion", subtitle: "3 Days of Presence" },
+            { title: "Day Experience", subtitle: "A Sacred Entry Point" },
           ].map((path) => (
             <div key={path.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 text-center">
-              <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2">{path.title}</p>
-              <p className="font-sans text-3xl font-extralight text-[hsl(40,30%,92%)] mb-2">{path.price}</p>
-              <p className="font-serif text-[14px] text-[hsl(35,30%,60%)]">{path.subtitle}</p>
+              <p className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3">{path.title}</p>
+              <p className="font-serif text-[15px] text-[hsl(35,30%,68%)]">{path.subtitle}</p>
             </div>
           ))}
         </div>
@@ -691,14 +683,13 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ $2,222 PACKAGE (moved to bottom) ═══ */}
+      {/* ═══ FULL INITIATION PACKAGE (moved to bottom) ═══ */}
       <section
         id="package"
         className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
       >
         <div className="max-w-[860px] mx-auto">
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Full Initiation</p>
-          <p className="font-sans text-4xl font-extralight text-[hsl(45,70%,55%)] mb-6 tracking-tight">$2,222</p>
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">The Full Initiation</p>
           <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
             The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
           </h2>
