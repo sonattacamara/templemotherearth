@@ -321,18 +321,40 @@ const Index = () => {
                 we help you reconnect with the divine wisdom that has always been yours.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-[hsl(240,10%,8%)]">
-              <img
-                src={sovereignBeing}
-                alt="Luminous crystalline sovereign being with crown energy representing divine consciousness and spiritual awakening"
-                className="w-full h-80 object-contain"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="font-display text-sm font-semibold text-primary-foreground italic">
-                  "Find your way back home to the wisdom and divine intelligence that exists within your entire being. You are a sovereign being."
+            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-[hsl(105,30%,10%)] via-[hsl(105,25%,14%)] to-[hsl(120,20%,8%)] min-h-[20rem] flex items-center justify-center p-10">
+              {/* Abstract sacred geometry */}
+              <div className="absolute inset-0 opacity-[0.18] pointer-events-none">
+                <svg viewBox="0 0 400 400" className="w-full h-full" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stopColor="hsl(45, 70%, 60%)" stopOpacity="0.6" />
+                      <stop offset="100%" stopColor="hsl(45, 70%, 49%)" stopOpacity="0" />
+                    </radialGradient>
+                  </defs>
+                  <circle cx="200" cy="200" r="180" fill="url(#goldGlow)" />
+                  <g stroke="hsl(45, 70%, 55%)" strokeWidth="0.8" fill="none">
+                    <circle cx="200" cy="200" r="60" />
+                    <circle cx="200" cy="140" r="60" />
+                    <circle cx="200" cy="260" r="60" />
+                    <circle cx="148" cy="170" r="60" />
+                    <circle cx="252" cy="170" r="60" />
+                    <circle cx="148" cy="230" r="60" />
+                    <circle cx="252" cy="230" r="60" />
+                    <circle cx="200" cy="200" r="120" />
+                    <circle cx="200" cy="200" r="160" />
+                  </g>
+                </svg>
+              </div>
+              {/* Centered quote */}
+              <div className="relative z-10 text-center max-w-md">
+                <div className="mx-auto mb-6 h-px w-12 bg-[hsl(45,70%,55%)]" />
+                <p className="font-display text-xl md:text-2xl font-light italic text-[hsl(40,30%,92%)] leading-relaxed">
+                  "Find your way back home to the wisdom and divine intelligence that exists within your entire being."
                 </p>
+                <p className="mt-6 font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-[hsl(45,70%,55%)]">
+                  You Are a Sovereign Being
+                </p>
+                <div className="mx-auto mt-6 h-px w-12 bg-[hsl(45,70%,55%)]" />
               </div>
             </div>
           </motion.div>
