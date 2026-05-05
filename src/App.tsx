@@ -22,6 +22,7 @@ import MemberAuth from "./pages/MemberAuth";
 import MemberEducation from "./pages/MemberEducation";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
+import AdminIntakes from "./pages/AdminIntakes";
 
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
@@ -99,6 +100,7 @@ const App = () => (
             <Route path="/member/auth" element={<MemberAuth />} />
             <Route path="/member/education" element={<MemberEducation />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/admin/intakes" element={<AdminIntakes />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
