@@ -471,10 +471,6 @@ const CeremonyIntake = () => {
   };
 
   const handleSubmit = async () => {
-    if (!canProceed()) {
-      toast.error("Please review and accept all agreements before submitting.");
-      return;
-    }
     if (!validateStep()) return;
 
     try {
