@@ -576,6 +576,27 @@ const CeremonyIntake = () => {
       <section className="px-4 pb-24">
         <div ref={formRef} className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
 
+          {Object.keys(validationErrors).length > 0 && step <= 6 && (
+            <div data-error="true" className="mb-6 rounded-lg border border-destructive/50 bg-destructive/10 p-4">
+              <div className="flex items-start gap-2">
+                <AlertTriangle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-destructive">
+                    Please complete the {Object.keys(validationErrors).length} highlighted item{Object.keys(validationErrors).length === 1 ? "" : "s"} below to continue.
+                  </p>
+                  <ul className="mt-2 list-disc list-inside text-xs text-destructive/90 space-y-0.5 max-h-40 overflow-y-auto">
+                    {Object.values(validationErrors).slice(0, 12).map((msg, i) => (
+                      <li key={i}>{msg}</li>
+                    ))}
+                    {Object.keys(validationErrors).length > 12 && (
+                      <li>…and {Object.keys(validationErrors).length - 12} more</li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Before You Begin Notice */}
           {step === 1 && (
             <div className="rounded-xl border border-primary/20 bg-primary/5 p-5 mb-8">
