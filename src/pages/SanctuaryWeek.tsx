@@ -313,7 +313,7 @@ const SanctuaryWeek = () => {
               Explore the Journey
             </a>
             <a href="#package" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsla(45,70%,49%,0.5)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
-              Full Package $2,222
+              Full Initiation Package
             </a>
           </div>
         </motion.div>
