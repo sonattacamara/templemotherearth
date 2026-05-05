@@ -669,7 +669,7 @@ const CeremonyIntake = () => {
               <h3 className="font-display text-xl font-bold text-card-foreground">Ceremony Selection</h3>
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Which ceremony are you seeking? *</label>
-                {["Kambo Ceremony", "Hapé Circle", "Sacred Mother Earth Ceremony", "Cacao Ceremony", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
+                {["Sacred Series (Monthly 7-Day Series)", "Kambo Ceremony", "Hapé Circle", "Sacred Tea Ceremony", "Sacred Mother Earth Ceremony", "Cacao Ceremony", "Level 5 — The Complete Initiation", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="ceremonyType" className={radioClass} checked={formData.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} />
                     {opt}
