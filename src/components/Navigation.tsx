@@ -48,6 +48,16 @@ const navStructure: NavEntry[] = [
     ],
   },
   {
+    label: "Immersions",
+    items: [
+      { label: "Sayulita, Mexico", href: "/immersions/sayulita", isRoute: true },
+      { label: "Panama", href: "/immersions/panama", isRoute: true },
+      { label: "Egypt", href: "/immersions/egypt", isRoute: true },
+      { label: "Peru", href: "/immersions/peru", isRoute: true },
+      { label: "All Retreats", href: "/retreats-inquiry", isRoute: true },
+    ],
+  },
+  {
     label: "Learn",
     items: [
       { label: "Kemetic Teachings", href: "/kemetic-teachings", isRoute: true },
