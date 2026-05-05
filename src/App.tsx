@@ -42,6 +42,7 @@ import InnerAlchemySpa from "./pages/sanctuary/InnerAlchemySpa";
 import CommunityPotluck from "./pages/sanctuary/CommunityPotluck";
 import SacredYinYoga from "./pages/sanctuary/SacredYinYoga";
 import SacredArtExpo from "./pages/sanctuary/SacredArtExpo";
+import FrequencyFungiFlow from "./pages/sanctuary/FrequencyFungiFlow";
 import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
 import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
@@ -113,6 +114,8 @@ const App = () => (
             <Route path="/potluck" element={<CommunityPotluck />} />
             <Route path="/yin-yoga" element={<SacredYinYoga />} />
             <Route path="/art-expo" element={<SacredArtExpo />} />
+            <Route path="/frequencyfungiflow" element={<FrequencyFungiFlow />} />
+            <Route path="/frequency-fungi-flow" element={<FrequencyFungiFlow />} />
             <Route path="/tea-house" element={<SacredTeaHouse />} />
             <Route path="/cacao" element={<CacaoCeremony />} />
             <Route path="/level5" element={<Level5Ceremony />} />
