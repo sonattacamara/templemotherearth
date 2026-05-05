@@ -398,6 +398,28 @@ const CeremonyIntake = () => {
           scrollToValidationTarget();
           return false;
         }
+      } else if (step === 6) {
+        const required: Array<[string, string]> = [
+          ["eligibilityStatement", "Please acknowledge the eligibility statement."],
+          ["communityGuidelines", "Please agree to the Community Guidelines."],
+          ["ageConfirmation21", "Please confirm you are 21 or older."],
+          ["rfrAgreement", "Please affirm the Statement of Beliefs / RFRA acknowledgment."],
+          ["liabilityWaiver", "Please accept the liability waiver."],
+          ["truthfulness", "Please affirm the truthfulness statement."],
+          ["confidentiality", "Please agree to the confidentiality agreement."],
+          ["preparationCompliance", "Please confirm preparation compliance."],
+          ["emergencyAuth", "Please authorize emergency contact if needed."],
+        ];
+        const errors: Record<string, string> = {};
+        required.forEach(([k, msg]) => {
+          if (!formData[k as keyof typeof formData]) errors[k] = msg;
+        });
+        if (Object.keys(errors).length > 0) {
+          setValidationErrors(errors);
+          toast.error("Please accept all required agreements.");
+          scrollToValidationTarget();
+          return false;
+        }
       }
 
       return true;
@@ -449,10 +471,6 @@ const CeremonyIntake = () => {
   };
 
   const handleSubmit = async () => {
-    if (!canProceed()) {
-      toast.error("Please review and accept all agreements before submitting.");
-      return;
-    }
     if (!validateStep()) return;
 
     try {
@@ -476,16 +494,22 @@ const CeremonyIntake = () => {
   const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
   const checkboxClass = "mr-3 h-4 w-4 rounded border-input accent-primary";
   const radioClass = "mr-3 h-4 w-4 appearance-none rounded-full border-2 border-muted-foreground/40 transition-all cursor-pointer checked:border-primary checked:bg-primary checked:shadow-[inset_0_0_0_2px_hsl(var(--background))] hover:border-primary";
-  const radioYesNo = (field: string, value: string) => (
-    <div className="flex gap-4 mt-1">
-      {["yes", "no"].map((v) => (
-        <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
-          <input type="radio" name={field} className={radioClass} checked={value === v} onChange={() => update(field, v)} />
-          {v === "yes" ? "Yes" : "No"}
-        </label>
-      ))}
-    </div>
-  );
+  const radioYesNo = (field: string, value: string) => {
+    const err = validationErrors[field];
+    return (
+      <div data-error={!!err}>
+        <div className={`flex gap-4 mt-1 ${err ? "rounded-md ring-2 ring-destructive p-2 -m-2" : ""}`}>
+          {["yes", "no"].map((v) => (
+            <label key={v} className="flex items-center text-sm text-foreground cursor-pointer">
+              <input type="radio" name={field} className={radioClass} checked={value === v} onChange={() => update(field, v)} />
+              {v === "yes" ? "Yes" : "No"}
+            </label>
+          ))}
+        </div>
+        {err && <p className="mt-1 text-xs text-destructive">{err}</p>}
+      </div>
+    );
+  };
 
   const consultationAlert = (
     <div className="rounded-lg border-2 border-accent bg-accent/20 p-5 text-sm space-y-3">
@@ -569,6 +593,27 @@ const CeremonyIntake = () => {
       {/* Form */}
       <section className="px-4 pb-24">
         <div ref={formRef} className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
+
+          {Object.keys(validationErrors).length > 0 && step <= 6 && (
+            <div data-error="true" className="mb-6 rounded-lg border border-destructive/50 bg-destructive/10 p-4">
+              <div className="flex items-start gap-2">
+                <AlertTriangle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-destructive">
+                    Please complete the {Object.keys(validationErrors).length} highlighted item{Object.keys(validationErrors).length === 1 ? "" : "s"} below to continue.
+                  </p>
+                  <ul className="mt-2 list-disc list-inside text-xs text-destructive/90 space-y-0.5 max-h-40 overflow-y-auto">
+                    {Object.values(validationErrors).slice(0, 12).map((msg, i) => (
+                      <li key={i}>{msg}</li>
+                    ))}
+                    {Object.keys(validationErrors).length > 12 && (
+                      <li>…and {Object.keys(validationErrors).length - 12} more</li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Before You Begin Notice */}
           {step === 1 && (
@@ -1569,12 +1614,20 @@ const CeremonyIntake = () => {
                 { key: "confidentiality", label: "I agree to maintain the confidentiality of all ceremony participants, facilitators, and ceremony details. *" },
                 { key: "preparationCompliance", label: "I confirm I have followed all pre-ceremony preparation guidelines provided to me. *" },
                 { key: "emergencyAuth", label: "I authorize emergency medical services to be contacted on my behalf if needed during ceremony. *" },
-              ].map(item => (
-                <label key={item.key} className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
-                  <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, (e.target as HTMLInputElement).checked)} />
-                  <span>{item.label}</span>
-                </label>
-              ))}
+              ].map(item => {
+                const missing = !formData[item.key as keyof typeof formData];
+                const showError = Object.keys(validationErrors).length > 0 && missing;
+                return (
+                  <label
+                    key={item.key}
+                    data-error={showError}
+                    className={`flex items-start gap-3 text-sm text-foreground cursor-pointer rounded-md p-2 -m-2 ${showError ? "ring-2 ring-destructive bg-destructive/5" : ""}`}
+                  >
+                    <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, (e.target as HTMLInputElement).checked)} />
+                    <span>{item.label}</span>
+                  </label>
+                );
+              })}
             </div>
           )}
 
