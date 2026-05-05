@@ -86,6 +86,24 @@ export async function upsertGHLContact(
     if (!createRes.ok) {
       const errText = await createRes.text();
       console.error(`[GHL] Create failed [${createRes.status}]: ${errText}`);
+      const duplicateContactId = (() => {
+        try {
+          return JSON.parse(errText)?.meta?.contactId || null;
+        } catch {
+          return null;
+        }
+      })();
+      if (duplicateContactId) {
+        const updateDuplicateRes = await fetch(`${GHL_API_BASE}/contacts/${duplicateContactId}`, {
+          method: "PUT",
+          headers,
+          body: JSON.stringify(contactBody),
+        });
+        if (updateDuplicateRes.ok) {
+          console.log(`[GHL] Updated duplicate-matched contact ${duplicateContactId}`);
+          return { success: true, contactId: duplicateContactId, action: "updated" };
+        }
+      }
       return { success: false, error: `Create failed: ${createRes.status}` };
     }
     const createData = await createRes.json();

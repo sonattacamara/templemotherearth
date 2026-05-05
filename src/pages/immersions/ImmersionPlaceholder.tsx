@@ -11,6 +11,10 @@ interface ImmersionPlaceholderProps {
   description: string;
   path: string;
   poetic: string;
+  dates?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  ctaExternal?: boolean;
 }
 
 const ImmersionPlaceholder = ({
@@ -20,6 +24,10 @@ const ImmersionPlaceholder = ({
   description,
   path,
   poetic,
+  dates = "Dates opening soon",
+  ctaHref = "/retreats-inquiry",
+  ctaLabel = "Join the Waitlist",
+  ctaExternal = false,
 }: ImmersionPlaceholderProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -39,6 +47,7 @@ const ImmersionPlaceholder = ({
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs uppercase tracking-widest text-primary">
             <MapPin className="h-3.5 w-3.5" /> {region}
           </div>
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-primary/80">{dates}</p>
           <h1 className="font-display text-4xl font-bold text-foreground md:text-6xl">
             {name}
           </h1>
@@ -62,12 +71,23 @@ const ImmersionPlaceholder = ({
               Future home: <span className="font-mono text-primary/80">{futureSubdomain}</span>
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                to="/retreats-inquiry"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-              >
-                Join the Waitlist <ArrowRight className="h-4 w-4" />
-              </Link>
+              {ctaExternal ? (
+                <a
+                  href={ctaHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  {ctaLabel} <ArrowRight className="h-4 w-4" />
+                </a>
+              ) : (
+                <Link
+                  to={ctaHref}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  {ctaLabel} <ArrowRight className="h-4 w-4" />
+                </Link>
+              )}
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-xl border border-input px-7 py-3 text-sm font-semibold text-foreground transition hover:bg-accent"
@@ -85,6 +105,7 @@ const ImmersionPlaceholder = ({
                 { label: "Panama", href: "/immersions/panama" },
                 { label: "Egypt", href: "/immersions/egypt" },
                 { label: "Peru", href: "/immersions/peru" },
+                { label: "Costa Rica", href: "/immersions/costa-rica" },
               ]
                 .filter((l) => l.href !== path)
                 .map((l) => (

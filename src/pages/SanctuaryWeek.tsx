@@ -17,7 +17,7 @@ import level5Initiation from "@/assets/level5-initiation.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 import kamboFrogArt from "@/assets/kambo-frog-art.png";
 
-const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
+const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/sacred-series-week-vol-5-new-earth-rising-registration-1985533292527?aff=ebdsoporgprofile";
 
 /* ─── Timeline Day Data ─── */
 interface TimelineDay {
@@ -29,7 +29,6 @@ interface TimelineDay {
   description: string;
   icon: React.ReactNode;
   tags: string[];
-  pricing: { label: string; price: string }[];
   ctaLabel: string;
   ctaHref: string;
   ctaReady: boolean;
@@ -45,8 +44,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "Your Heart Already Knows the Way",
     description: "Sacred ceremonial cacao, live sound, and community circle. The gentlest entry point, and for many, the most unexpectedly profound. All welcome.",
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
-    pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/cacao", image: sanctuaryDay1CacaoPods, imagePosition: "center 56%",
     phase: "The Opening",
   },
@@ -55,18 +53,16 @@ const timelineDays: TimelineDay[] = [
     subtitle: "The Noise Stops. You Remember.",
     description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The forest has been waiting for you.",
     icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
-    pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://bit.ly/HapeCircle", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/hape", image: sanctuaryDay2HapeCeremony, imagePosition: "center 38%",
     phase: "The Opening",
   },
   {
     day: 3, date: "", weekday: "", name: "Sacred Tea Ceremony",
     subtitle: "The Door Has Always Been There",
-    description: "Three levels: Community, Sacred Circle, and Fruit of the Gods. Choose the depth you are ready for. The sacrament meets you exactly where you are.",
+    description: "A sacred doorway for remembrance. Come exactly as you are, and let the sacrament meet the part of you that is ready to listen.",
     icon: <Coffee className="h-5 w-5" />, tags: ["Signature", "Tiered", "Pre-Screening"],
-    pricing: [{ label: "Fruit of the Gods", price: "$111" }, { label: "Sacred Circle", price: "$66" }, { label: "Community", price: "$33" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/sacred-tea", image: sanctuaryDay3SacredTea, imagePosition: "center 58%",
     phase: "The Opening",
   },
@@ -75,8 +71,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "You Have Not Come This Far to Stop Here",
     description: "Every sacrament. One full-day container. Kambo included. For those who are genuinely ready to go all the way. By application only.",
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
-    pricing: [{ label: "Sustainer", price: "$777" }, { label: "Community", price: "$555" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
+    ctaLabel: "Apply Through Eventbrite", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/level5", image: level5Initiation, imagePosition: "center 50%",
     phase: "The Initiation",
   },
@@ -85,8 +80,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "Your Body Has Been Waiting for This Day",
     description: "A full day of body practices, sound ceremony, sacred nourishment, yoga, and ceremonial closing. From sunrise to sunset, every moment held.",
     icon: <Sun className="h-5 w-5" />, tags: ["Full Day", "Restoration", "Body"],
-    pricing: [{ label: "Sustainer", price: "$111" }, { label: "Community", price: "$88" }, { label: "All Welcome", price: "Free" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/spa", image: sanctuaryDay5Spa, imagePosition: "center 62%",
     phase: "The Rest",
   },
@@ -95,8 +89,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "You Are Already Part of This Family",
     description: "Integration circle, Sacred Tea House open all evening, and a potluck table where the conversation goes somewhere real. Bring a dish. Come as you are.",
     icon: <Users className="h-5 w-5" />, tags: ["Free", "Everyone Welcome", "Community"],
-    pricing: [{ label: "All Welcome", price: "Free" }],
-    ctaLabel: "Register Free", ctaHref: "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-transformation-registration-1119491141139", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/potluck", image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Belonging",
   },
@@ -105,8 +98,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "You Already Know How to Surrender",
     description: "90 minutes of ceremonial yin yoga with sound ceremony and breathwork. Not exercise, ceremony in the body. All levels welcome.",
     icon: <Mountain className="h-5 w-5" />, tags: ["All Levels", "Sound", "Nervous System"],
-    pricing: [{ label: "Sustainer", price: "$33" }, { label: "Community", price: "$22" }],
-    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/yin-yoga", image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Integration",
   },
@@ -293,7 +285,7 @@ const SanctuaryWeek = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
           <span className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[4px] uppercase px-5 py-2 mb-8">
-            7-Day Sacred Offerings · Year Six
+            Sacred Series · Seven Days
           </span>
           <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-4">
             Temple Mother Earth · Washington, DC
@@ -303,14 +295,14 @@ const SanctuaryWeek = () => {
             <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Series</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            A recurring 7-day series of sacred ceremonies, community gatherings, and body practices held each month. Each offering stands on its own. Choose what calls you.
+            A living 7-day sanctuary rhythm for the seeker who is ready to be witnessed, held, and reminded that they already belong. Each doorway stands on its own. Choose what calls your body, soul, and spirit.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
-            In 2020, when the world closed its doors, we opened ours. Six years later, the temple has only grown deeper. The sacred container is open. Come home.
+            This month’s circle is New Earth Rising — a call for those who can feel something changing within them and want to rise in community, not isolation.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#timeline" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
-              Explore the Journey
+              Explore the Seven Days
             </a>
             <a href="#monthly-themes" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsla(45,70%,49%,0.5)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
               See What's Happening This Month
@@ -393,7 +385,7 @@ const SanctuaryWeek = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center mb-12">
-            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · The Lovers</p>
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Sacred Series · The Energy of Home</p>
             <h2 className="font-sans text-[clamp(48px,8vw,96px)] font-extralight leading-none text-[hsl(45,70%,55%)] mb-4">
               6
             </h2>
@@ -414,7 +406,7 @@ const SanctuaryWeek = () => {
               <Crown className="h-6 w-6 text-[hsl(45,70%,49%)] mb-4" />
               <h3 className="font-sans text-[11px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3 font-normal">The Lovers · Tarot VI</h3>
               <p className="text-[16px] text-[hsl(35,30%,68%)] leading-relaxed font-serif">
-                Card VI in the Tarot, sacred union, conscious alignment, the moment of choosing who you truly are. Year Six is the year we choose with intention.
+                Card VI in the Tarot, sacred union, conscious alignment, the moment of choosing who you truly are. This series invites you to choose your path with intention.
               </p>
             </div>
             <div className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 md:p-9">
@@ -485,7 +477,7 @@ const SanctuaryWeek = () => {
       <section id="monthly-themes" className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)] scroll-mt-20">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-14">
-            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · Monthly Themes</p>
+            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Sacred Series · Monthly Themes</p>
             <h2 className="font-sans text-[clamp(28px,4vw,48px)] font-extralight text-[hsl(40,30%,92%)] leading-tight">
               The Sacred<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Calendar</em>
             </h2>
@@ -593,12 +585,12 @@ const SanctuaryWeek = () => {
         <div className="text-xl leading-[1.85] text-[hsl(35,30%,68%)] max-w-[720px] mx-auto text-center font-serif space-y-6">
           <p>Every year after the Winter Solstice, Temple Mother Earth enters a period of <strong className="text-[hsl(40,30%,90%)]">Sacred Rest</strong>. We close our doors to the public. Ceremonies pause. The outward work stops.</p>
           <p>This is not a break. This is the work. The land rests. The facilitators restore. The founders recalibrate the vision, refine the protocols, study, pray, and prepare.</p>
-          <p>Between the Winter Solstice and the Spring Equinox, the Temple does what the Earth does: it goes inward. And then, when the light returns, <strong className="text-[hsl(40,30%,90%)]">we open the doors again.</strong></p>
+          <p>Between the Winter Solstice and the return of spring light, the Temple does what the Earth does: it goes inward. And then, when the community is called forward again, <strong className="text-[hsl(40,30%,90%)]">we open the doors with intention.</strong></p>
         </div>
         <div className="max-w-[760px] mx-auto mt-12 border border-[hsla(45,70%,49%,0.35)] bg-[hsla(45,70%,49%,0.06)] p-8 md:p-10 text-center">
           <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-3">Important · Mark Your Calendar</p>
           <h3 className="font-serif italic text-[22px] md:text-[26px] text-[hsl(40,30%,92%)] leading-snug mb-4">
-            The Temple closes Winter Solstice (Dec 21) and reopens Spring Equinox (Mar 20)
+            The Temple honors sacred rest after Winter Solstice and reopens with the spring season
           </h3>
           <p className="text-[16px] text-[hsl(35,30%,72%)] leading-relaxed font-serif mb-6">
             Beginning November, we begin gently preparing our community for the three sacred months of rest. Plan your final ceremonies of the year by November. Use the winter for inward integration. Then return to us in the spring, restored.
@@ -621,7 +613,7 @@ const SanctuaryWeek = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mt-16">
           {[
             { icon: <Moon className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Winter Solstice · The Closing", desc: "The shortest day. The deepest night. We honor this by closing public ceremonies and turning inward. Facilitator training, sacred study, land stewardship, and internal ceremony take place during this time." },
-            { icon: <Sun className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Spring Equinox · The Reopening", desc: "When day and night are equal, the Temple reopens. The Sacred Series is our Grand Reopening, a declaration that the light has returned and the Temple is ready to hold space once more. Year Six begins here." },
+            { icon: <Sun className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Spring Season · The Reopening", desc: "When the light returns, the Temple opens its public circle again. The Sacred Series becomes a declaration that the community is ready to gather, remember, and rise together." },
           ].map((card) => (
             <div key={card.title} className="bg-[hsl(105,30%,12%)] p-10 border border-[hsla(45,70%,49%,0.12)]">
               <div className="mb-4">{card.icon}</div>
@@ -688,8 +680,8 @@ const SanctuaryWeek = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
-            { title: "Spring Equinox", subtitle: "10 Days of Immersion" },
-            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening" },
+            { title: "New Earth Rising", subtitle: "Current monthly theme" },
+            { title: "Seven-Day Arc", subtitle: "A complete rhythm of deepening" },
             { title: "Weekend Immersion", subtitle: "3 Days of Presence" },
             { title: "Day Experience", subtitle: "A Sacred Entry Point" },
           ].map((path) => (
@@ -790,7 +782,7 @@ const SanctuaryWeek = () => {
             When you feel ready, a space of compassion is waiting for you. We are here to help you discern your next steps with kindness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={EVENTBRITE_ORG} target="_blank" rel="noopener noreferrer" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
+            <a href={SACRED_SERIES_EVENTBRITE} target="_blank" rel="noopener noreferrer" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
               Reserve Your Place
             </a>
             <Link to="/contact" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 border border-[hsla(45,70%,49%,0.4)] text-[hsl(45,70%,49%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">

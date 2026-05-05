@@ -107,7 +107,7 @@ const step2Schema = z.object({
 const step3Schema = z.object({
   ceremonyType: z.string().min(1, "Please select a ceremony type"),
   experienceLevel: z.string().min(1, "Please select your experience level"),
-  intentions: z.string().trim().min(10, "Please share a bit more about your intentions").max(2000, "Intentions must be less than 2000 characters"),
+  intentions: z.string().trim().max(2000, "Intentions must be less than 2000 characters").optional(),
 });
 
 const CeremonyIntake = () => {
@@ -418,7 +418,7 @@ const CeremonyIntake = () => {
   const canProceed = () => {
     if (step === 1) return !!(formData.firstName && formData.lastName && formData.email && formData.phone && formData.dob && formData.cityState);
     if (step === 2) return !!(formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation);
-    if (step === 3) return !!(formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10);
+    if (step === 3) return !!(formData.ceremonyType && formData.experienceLevel);
     if (step === 4) return true;
     if (step === 5) return true;
     if (step === 6) {
@@ -741,8 +741,8 @@ const CeremonyIntake = () => {
                 {validationErrors.experienceLevel && <p className="mt-1 text-xs text-destructive">{validationErrors.experienceLevel}</p>}
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-foreground">What are your intentions for this ceremony? *</label>
-                <textarea className={`${inputClass} min-h-[100px] resize-none ${validationErrors.intentions ? "ring-2 ring-destructive border-destructive" : ""}`} placeholder="Share what you hope to receive, release, or explore..." value={formData.intentions} onChange={(e) => update("intentions", e.target.value)} required />
+                <label className="mb-1 block text-sm font-medium text-foreground">What are your intentions for this ceremony?</label>
+                <textarea className={`${inputClass} min-h-[100px] resize-none ${validationErrors.intentions ? "ring-2 ring-destructive border-destructive" : ""}`} placeholder="Share what you hope to receive, release, or explore..." value={formData.intentions} onChange={(e) => update("intentions", e.target.value)} />
                 {validationErrors.intentions && <p className="mt-1 text-xs text-destructive">{validationErrors.intentions}</p>}
               </div>
 
