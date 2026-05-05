@@ -13,38 +13,38 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const pathwaySteps = [
   {
-    stage: "Welcome", tier: "Welcome Circle", price: "Free · 30 Days", icon: Heart,
+    stage: "Welcome", tier: "Welcome Circle", icon: Heart,
     color: "text-pink-500", bgColor: "bg-pink-500/10",
     description: "Your first step into the Temple community. Explore who we are, what we stand for, and feel the energy of this sacred space.",
     includes: ["Access to the Integration Portal for 30 days", "Community orientation resources", "Introduction to our ceremonies and offerings", "Temple Transmissions newsletter"],
     action: "You're here! Explore the resources below.",
   },
   {
-    stage: "Belong", tier: "Community Rhythm", price: "$50/month", icon: Users,
+    stage: "Belong", tier: "Community Rhythm", icon: Users,
     color: "text-amber-500", bgColor: "bg-amber-500/10",
     description: "Root yourself in the rhythm of community. Show up, share space, and begin building sacred relationships.",
     includes: ["Full Integration Portal access", "Community events & gatherings", "Monthly community days", "Telegram community access", "Priority Eventbrite booking"],
     action: "Join Community Rhythm →",
   },
   {
-    stage: "Train", tier: "Environment Collective", price: "$150/month", icon: Leaf,
+    stage: "Train", tier: "Environment Collective", icon: Leaf,
     color: "text-emerald-500", bgColor: "bg-emerald-500/10",
     description: "Deepen your practice. Build the daily discipline that prepares your body, mind, and spirit for deeper ceremony work.",
     includes: ["Everything in Community Rhythm", "Live virtual Qi Gong (Mon–Fri)", "Breathwork & movement sessions", "Wellness workshops & skill shares", "Access to facilitator Q&A sessions"],
     action: "Join Environment Collective →",
   },
   {
-    stage: "Prepare", tier: "Preparation Path", price: "$275/month · 3-month minimum", icon: Shield,
+    stage: "Prepare", tier: "Preparation Path", icon: Shield,
     color: "text-blue-500", bgColor: "bg-blue-500/10",
     description: "Enter the preparation phase. This is where the real inner work begins — clearing, cleansing, and readying yourself for ceremony.",
     includes: ["Everything in Environment Collective", "Ceremony eligibility after 3 months", "1-on-1 facilitator guidance", "Sacred intake & medical screening", "Preparation circles & education", "Integration support sessions"],
     action: "Begin Preparation Path →",
   },
   {
-    stage: "Embody", tier: "Temple Immersion Path", price: "$500/month · 3-month minimum", icon: Sparkles,
+    stage: "Embody", tier: "Temple Immersion Path", icon: Sparkles,
     color: "text-purple-500", bgColor: "bg-purple-500/10",
     description: "The highest expression of commitment. Fully embody the Temple way of life with quarterly immersions and deep ceremony access.",
-    includes: ["Everything in Preparation Path", "Quarterly international immersions eligibility", "Advanced ceremony access", "Facilitator mentorship track", "VIP retreat pricing", "Direct founder access"],
+    includes: ["Everything in Preparation Path", "Quarterly international immersions eligibility", "Advanced ceremony access", "Facilitator mentorship track", "Priority retreat access", "Direct founder access"],
     action: "Begin Temple Immersion →",
   },
 ];
@@ -86,7 +86,6 @@ const PortalPathway = () => (
                   <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                     {step.stage}
                   </span>
-                  <span className="text-xs text-muted-foreground">{step.price}</span>
                 </div>
                 <h3 className="mt-1 font-display text-lg font-bold text-foreground">{step.tier}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{step.description}</p>
