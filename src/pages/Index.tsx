@@ -215,6 +215,51 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── COMMUNITY GALLERY ───── */}
+      <section className="px-4 py-14 md:py-20">
+        <motion.div
+          className="mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={stagger}
+        >
+          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Our Sacred Family
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-foreground md:text-5xl">
+            The Faces of Temple Mother Earth
+          </motion.h2>
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
+            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of transformation and higher consciousness.
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
+            {[
+              { src: communityCeremonyGroup, alt: "King James in outdoor sacred ceremony with community support at Temple Mother Earth" },
+              { src: communityCircleGrass, alt: "Community dialogue circle on the lawn during sacred ceremony integration" },
+              { src: communityGatheringIndoor, alt: "Temple Mother Earth group community photo during outdoor gathering" },
+              { src: communityPorchSelfie, alt: "Temple Mother Earth community selfie from sacred gathering" },
+              { src: communityRetreatJungle, alt: "Community teaching moment outdoors in nature" },
+              { src: communityJoyBlanket, alt: "Temple Mother Earth smiling community members in close group portrait" },
+            ].map((photo) => (
+              <div key={photo.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+      </section>
+
+      <JourneyConnector />
+
+
       {/* ── FIND YOUR PATH — Quick Engagement ── */}
       <section className="bg-gradient-warm px-4 py-12 md:py-16">
         <motion.div
@@ -883,50 +928,6 @@ const Index = () => {
           </motion.p>
         </motion.div>
       </section>
-
-      {/* ───── COMMUNITY GALLERY ───── */}
-      <section className="px-4 py-14 md:py-20">
-        <motion.div
-          className="mx-auto max-w-6xl"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={stagger}
-        >
-          <motion.p variants={fadeUp} className="text-center font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-            Our Sacred Family
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-4 text-center font-display text-3xl font-bold text-foreground md:text-5xl">
-            The Faces of Temple Mother Earth
-          </motion.h2>
-          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of transformation and higher consciousness.
-          </motion.p>
-
-          <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
-            {[
-              { src: communityCeremonyGroup, alt: "King James in outdoor sacred ceremony with community support at Temple Mother Earth" },
-              { src: communityCircleGrass, alt: "Community dialogue circle on the lawn during sacred ceremony integration" },
-              { src: communityGatheringIndoor, alt: "Temple Mother Earth group community photo during outdoor gathering" },
-              { src: communityPorchSelfie, alt: "Temple Mother Earth community selfie from sacred gathering" },
-              { src: communityRetreatJungle, alt: "Community teaching moment outdoors in nature" },
-              { src: communityJoyBlanket, alt: "Temple Mother Earth smiling community members in close group portrait" },
-            ].map((photo) => (
-              <div key={photo.alt} className="group relative overflow-hidden rounded-2xl aspect-[4/3]">
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
-
-      <JourneyConnector />
 
       {/* ───── CONTACT ───── */}
       <section id="contact" className="bg-gradient-card-glow px-4 py-14 md:py-20">
