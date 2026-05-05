@@ -680,8 +680,8 @@ const SanctuaryWeek = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
-            { title: "Monthly Sacred Series", subtitle: "7 Days of Sacred Practice" },
-            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening" },
+            { title: "New Earth Rising", subtitle: "Current monthly theme" },
+            { title: "Seven-Day Arc", subtitle: "A complete rhythm of deepening" },
             { title: "Weekend Immersion", subtitle: "3 Days of Presence" },
             { title: "Day Experience", subtitle: "A Sacred Entry Point" },
           ].map((path) => (
