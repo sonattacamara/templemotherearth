@@ -16,7 +16,6 @@ import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
-import sovereignBeing from "@/assets/sovereign-being.png";
 import communityImg from "@/assets/community.jpg";
 import offeringCeremony from "@/assets/offering-ceremony.jpg";
 import offeringRetreat from "@/assets/offering-retreat.jpg";
