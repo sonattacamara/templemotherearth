@@ -58,6 +58,7 @@ import Sayulita from "./pages/immersions/Sayulita";
 import Panama from "./pages/immersions/Panama";
 import Egypt from "./pages/immersions/Egypt";
 import Peru from "./pages/immersions/Peru";
+import CostaRica from "./pages/immersions/CostaRica";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
@@ -134,6 +135,7 @@ const App = () => (
             <Route path="/immersions/panama" element={<Panama />} />
             <Route path="/immersions/egypt" element={<Egypt />} />
             <Route path="/immersions/peru" element={<Peru />} />
+            <Route path="/immersions/costa-rica" element={<CostaRica />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
