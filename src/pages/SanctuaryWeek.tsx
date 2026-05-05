@@ -221,13 +221,6 @@ const TimelineCard = ({ day }: { day: TimelineDay }) => (
       <p className="text-[14px] text-[hsl(35,30%,68%)] leading-relaxed font-serif mb-4">
         {day.description}
       </p>
-      <div className="flex gap-3 flex-wrap mb-4">
-        {day.pricing.map((tier) => (
-          <span key={tier.label} className="font-sans text-[8px] tracking-[1.5px] uppercase text-[hsl(35,20%,50%)]">
-            <span className="text-[hsl(45,70%,49%)]">{tier.price}</span> {tier.label}
-          </span>
-        ))}
-      </div>
       <div className="flex gap-2 flex-wrap mb-4">
         {day.tags.map((tag) => (
           <span key={tag} className="font-sans text-[7px] tracking-[2px] uppercase border border-[hsl(100,20%,22%)] text-[hsl(35,20%,50%)] px-2.5 py-1">
