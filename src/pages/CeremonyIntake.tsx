@@ -1596,12 +1596,20 @@ const CeremonyIntake = () => {
                 { key: "confidentiality", label: "I agree to maintain the confidentiality of all ceremony participants, facilitators, and ceremony details. *" },
                 { key: "preparationCompliance", label: "I confirm I have followed all pre-ceremony preparation guidelines provided to me. *" },
                 { key: "emergencyAuth", label: "I authorize emergency medical services to be contacted on my behalf if needed during ceremony. *" },
-              ].map(item => (
-                <label key={item.key} className="flex items-start gap-3 text-sm text-foreground cursor-pointer">
-                  <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, (e.target as HTMLInputElement).checked)} />
-                  <span>{item.label}</span>
-                </label>
-              ))}
+              ].map(item => {
+                const missing = !formData[item.key as keyof typeof formData];
+                const showError = Object.keys(validationErrors).length > 0 && missing;
+                return (
+                  <label
+                    key={item.key}
+                    data-error={showError}
+                    className={`flex items-start gap-3 text-sm text-foreground cursor-pointer rounded-md p-2 -m-2 ${showError ? "ring-2 ring-destructive bg-destructive/5" : ""}`}
+                  >
+                    <input type="checkbox" className="mt-1 h-4 w-4 rounded border-input accent-primary" checked={formData[item.key as keyof typeof formData] as boolean} onChange={(e) => update(item.key, (e.target as HTMLInputElement).checked)} />
+                    <span>{item.label}</span>
+                  </label>
+                );
+              })}
             </div>
           )}
 
