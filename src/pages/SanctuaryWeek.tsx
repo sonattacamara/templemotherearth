@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Heart, Leaf, Sun, Moon, Sparkles, Shield, Star, Users,
   Calendar, Clock, Music, Palette, Mountain, Coffee, Flame,
-  ChevronDown, ArrowRight, Gem, Crown
+  ChevronDown, ArrowRight, Gem, Crown, FileText
 } from "lucide-react";
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
@@ -312,8 +312,8 @@ const SanctuaryWeek = () => {
             <a href="#timeline" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
               Explore the Journey
             </a>
-            <a href="#package" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsla(45,70%,49%,0.5)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
-              Full Initiation Package
+            <a href="#monthly-themes" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsla(45,70%,49%,0.5)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
+              See What's Happening This Month
             </a>
           </div>
         </motion.div>
@@ -482,7 +482,7 @@ const SanctuaryWeek = () => {
       </SanctuarySection>
 
       {/* ═══ MONTHLY THEMES / SACRED CALENDAR ═══ */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)]">
+      <section id="monthly-themes" className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)] scroll-mt-20">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-14">
             <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · Monthly Themes</p>
@@ -497,11 +497,11 @@ const SanctuaryWeek = () => {
             {[
               {
                 month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
-                desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
+                desc: "The doors swing open after the long winter rest. Your body has been waiting. Your spirit has been waiting. This is your reentry into yourself.",
                 backContent: [
-                  "April marks the Grand Reopening — the first Sacred Series after the temple's winter rest.",
-                  "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
-                  "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify.",
+                  "April is the Grand Reopening — the first Sacred Series of the year. The energy in the temple is electric. New beginnings are sacred here.",
+                  "Cacao opens the heart you closed during the cold months. Hapé clears the static so you can hear your own voice again. Sacred Tea invites you deeper than thought.",
+                  "If you missed last year — this is the month to come home. The seekers who arrive in April set the tone for everything that follows.",
                 ],
               },
               {
@@ -524,11 +524,11 @@ const SanctuaryWeek = () => {
               },
               {
                 month: "July 2026", theme: "The Belonging", icon: <Users className="h-6 w-6" />,
-                desc: "No one walks this path alone. This month we honor the sacred family — the circle that holds you when you cannot hold yourself.",
+                desc: "You were never meant to do this alone. This is the month the circle widens, the table lengthens, and the family you didn't know you were missing finds you.",
                 backContent: [
-                  "July celebrates the truth that transformation is not a solo act. The community you walk beside is part of the sacrament itself.",
-                  "This month amplifies community offerings — the Potluck, the Art Expo, and extended Sacred Tea House evenings become the heartbeat.",
-                  "Integration circles expand. Alumni return. New seekers are welcomed by those who once sat where they now sit.",
+                  "July is when the temple breathes its fullest. The Community Potluck, the Sacred Art Expo, the extended Tea House evenings — the whole family comes home.",
+                  "Alumni return to break bread with new seekers. Stories are exchanged. Phone numbers are exchanged. Lifelong friendships begin around our long wooden table.",
+                  "If you have ever felt spiritually homeless — July is the month you stop looking. Your people are already here, saving you a seat.",
                 ],
               },
               {
@@ -551,11 +551,11 @@ const SanctuaryWeek = () => {
               },
               {
                 month: "October 2026", theme: "The Ancestors", icon: <Star className="h-6 w-6" />,
-                desc: "The veil is thin. This month we honor the ones who walked before us — the unseen council that holds every ceremony from the other side.",
+                desc: "The veil thins. The ones who walked before you draw close. This is the month they speak — and the month you finally have the stillness to listen.",
                 backContent: [
-                  "October deepens the ancestral work begun in May. As the veil thins, ceremonies open portals to lineage, legacy, and spiritual inheritance.",
-                  "Sacred Tea and Hapé ceremonies carry a particular reverence this month — prayers are offered not just for the living, but for those who have crossed over.",
-                  "The Art Expo takes on a visionary dimension, inviting art born from dreams, ceremony, and communion with the ancestors.",
+                  "October is the most mystical month in the temple year. Sacred Tea and Hapé carry prayers across the veil. The grandmothers and grandfathers come close.",
+                  "Seekers consistently report October ceremonies as the most spiritually profound of the year. Lineages are honored. Names are spoken. Burdens long carried are finally laid down.",
+                  "The Sacred Art Expo turns visionary — paintings, songs, and prayers born from dreams and ancestral communion. This is not a month to miss.",
                 ],
               },
               {
@@ -594,6 +594,29 @@ const SanctuaryWeek = () => {
           <p>Every year after the Winter Solstice, Temple Mother Earth enters a period of <strong className="text-[hsl(40,30%,90%)]">Sacred Rest</strong>. We close our doors to the public. Ceremonies pause. The outward work stops.</p>
           <p>This is not a break. This is the work. The land rests. The facilitators restore. The founders recalibrate the vision, refine the protocols, study, pray, and prepare.</p>
           <p>Between the Winter Solstice and the Spring Equinox, the Temple does what the Earth does: it goes inward. And then, when the light returns, <strong className="text-[hsl(40,30%,90%)]">we open the doors again.</strong></p>
+        </div>
+        <div className="max-w-[760px] mx-auto mt-12 border border-[hsla(45,70%,49%,0.35)] bg-[hsla(45,70%,49%,0.06)] p-8 md:p-10 text-center">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-3">Important · Mark Your Calendar</p>
+          <h3 className="font-serif italic text-[22px] md:text-[26px] text-[hsl(40,30%,92%)] leading-snug mb-4">
+            The Temple closes Winter Solstice (Dec 21) and reopens Spring Equinox (Mar 20)
+          </h3>
+          <p className="text-[16px] text-[hsl(35,30%,72%)] leading-relaxed font-serif mb-6">
+            Beginning November, we begin gently preparing our community for the three sacred months of rest. Plan your final ceremonies of the year by November. Use the winter for inward integration. Then return to us in the spring, restored.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="#monthly-themes"
+              className="inline-block font-sans text-[8px] tracking-[3px] uppercase px-7 py-3 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all"
+            >
+              View the Sacred Calendar
+            </a>
+            <Link
+              to="/contact"
+              className="inline-block font-sans text-[8px] tracking-[3px] uppercase px-7 py-3 border border-[hsla(45,70%,49%,0.4)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all"
+            >
+              Get Reopening Notification
+            </Link>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mt-16">
           {[
@@ -683,25 +706,25 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ FULL INITIATION PACKAGE (moved to bottom) ═══ */}
+      {/* ═══ SACRED SERIES INVITATION — APPLY ONLY ═══ */}
       <section
-        id="package"
+        id="apply"
         className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
       >
         <div className="max-w-[860px] mx-auto">
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">The Full Initiation</p>
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">By Application Only</p>
           <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
-            The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
+            The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Invitation</em>
           </h2>
           <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
-            All 7 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
+            The Sacred Series is held in sacred trust with each seeker. Before we discuss anything practical, we want to meet you, understand your readiness, and ensure this container is the right fit for your spirit.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
-              { title: "All 7 Ceremonies", desc: "Full access to every sacred gathering across the Sacred Series.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Community Container", desc: "Curated materials, ceremonial guide, sacred journal, and preparation instructions.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 1 · Sacred Intake", desc: "Complete the medical and spiritual intake form so our facilitators can understand who you are and how to hold you.", icon: <FileText className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 2 · 1:1 Discernment Call", desc: "A heart-to-heart conversation with Sonatta or James to feel into mutual readiness.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 3 · Sacred Reciprocity", desc: "Once accepted, we share the energy exchange privately and walk you through the Community Care tiers — including scholarship.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 4 · Begin Preparation", desc: "Receive the preparation guide, dietary protocols, and 1:1 integration support — held from beginning to end.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             ].map((item) => (
               <div key={item.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7 flex gap-4">
                 <div className="mt-1 shrink-0">{item.icon}</div>
@@ -712,11 +735,16 @@ const SanctuaryWeek = () => {
               </div>
             ))}
           </div>
-          <a href={EVENTBRITE_ORG} target="_blank" rel="noopener noreferrer" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
-            Secure the Full Package
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/ceremony-intake" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
+              Begin Your Application
+            </Link>
+            <Link to="/contact" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 border border-[hsla(45,70%,49%,0.4)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
+              Speak With Us First
+            </Link>
+          </div>
           <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-6">
-            Limited to 8 participants · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Community Care Model</Link> applies · Scholarship available
+            Limited to 8 seekers · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Sacred Reciprocity</Link> · Scholarships available
           </p>
         </div>
       </section>
