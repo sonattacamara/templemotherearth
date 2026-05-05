@@ -595,7 +595,7 @@ const CeremonyIntake = () => {
         <div ref={formRef} className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-6 md:p-10">
 
           {Object.keys(validationErrors).length > 0 && step <= 6 && (
-            <div data-error="true" className="mb-6 rounded-lg border border-destructive/50 bg-destructive/10 p-4">
+            <div data-error="true" className="sticky top-4 z-30 mb-6 rounded-lg border border-destructive/50 bg-destructive/15 backdrop-blur p-4 shadow-lg">
               <div className="flex items-start gap-2">
                 <AlertTriangle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
                 <div className="flex-1">
