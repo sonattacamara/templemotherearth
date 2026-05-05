@@ -178,7 +178,7 @@ const validateIntakeData = (data: Record<string, unknown>): string | null => {
   if (!experienceLevel) return "Experience level is required";
 
   const intentions = String(data.intentions || "").trim();
-  if (intentions.length < 10 || intentions.length > 2000) return "Intentions must be 10-2000 characters";
+  if (intentions.length > 2000) return "Intentions must be less than 2000 characters";
 
   if (!data.rfrAgreement || !data.liabilityWaiver || !data.truthfulness || 
       !data.confidentiality || !data.preparationCompliance || !data.emergencyAuth ||
