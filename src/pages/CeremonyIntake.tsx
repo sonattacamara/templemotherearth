@@ -398,6 +398,28 @@ const CeremonyIntake = () => {
           scrollToValidationTarget();
           return false;
         }
+      } else if (step === 6) {
+        const required: Array<[string, string]> = [
+          ["eligibilityStatement", "Please acknowledge the eligibility statement."],
+          ["communityGuidelines", "Please agree to the Community Guidelines."],
+          ["ageConfirmation21", "Please confirm you are 21 or older."],
+          ["rfrAgreement", "Please affirm the Statement of Beliefs / RFRA acknowledgment."],
+          ["liabilityWaiver", "Please accept the liability waiver."],
+          ["truthfulness", "Please affirm the truthfulness statement."],
+          ["confidentiality", "Please agree to the confidentiality agreement."],
+          ["preparationCompliance", "Please confirm preparation compliance."],
+          ["emergencyAuth", "Please authorize emergency contact if needed."],
+        ];
+        const errors: Record<string, string> = {};
+        required.forEach(([k, msg]) => {
+          if (!formData[k as keyof typeof formData]) errors[k] = msg;
+        });
+        if (Object.keys(errors).length > 0) {
+          setValidationErrors(errors);
+          toast.error("Please accept all required agreements.");
+          scrollToValidationTarget();
+          return false;
+        }
       }
 
       return true;
