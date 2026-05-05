@@ -89,15 +89,15 @@ const categories: FAQCategory[] = [
       },
       {
         q: "What are the membership tiers?",
-        a: "We offer five pathways: Welcome Circle (free) — community access and newsletter. Community Rhythm ($50/month) — full portal access, monthly teachings, ceremony attendance. Environment Collective ($150/month) — daily Qi Gong, replay library, embodiment workshops. Preparation Path ($275/month) — guided 3-month preparation container, ceremony eligibility. Temple Immersion Path ($500/month) — quarterly immersion eligibility, deep integration support.",
+        a: "We offer five pathways: Welcome Circle — community access and newsletter. Community Rhythm — full portal access, monthly teachings, ceremony attendance. Environment Collective — daily Qi Gong, replay library, embodiment workshops. Preparation Path — guided 3-month preparation container, ceremony eligibility. Temple Immersion Path — quarterly immersion eligibility, deep integration support. Visit our Membership page to learn about each pathway.",
       },
       {
-        q: "What is the cost of ceremonies?",
-        a: "Ceremony contributions vary based on the type of experience. We operate as a 508(c)(1)(A) sacred ceremony church, and all contributions support our mission. We also offer a Sacred Energy Exchange program for those who wish to volunteer in exchange for ceremony access. No one is turned away for inability to contribute.",
+        q: "How do contributions work?",
+        a: "Each offering's sacred contribution is shared at the point of registration via Eventbrite, or — for offerings by application — confirmed during the application process. We operate as a 508(c)(1)(A) sacred ceremony church, and all contributions support our mission. Our Sacred Energy Exchange and scholarship offerings ensure no one is turned away for inability to contribute.",
       },
       {
-        q: "Do you offer veteran discounts or scholarships?",
-        a: "Yes. Our Veterans Transformation Program provides specialized support for veterans, including scholarship opportunities. We believe every warrior deserves access to sacred ceremony. Contact us to learn more about veteran pricing and our scholarship fund.",
+        q: "Do you offer veteran scholarships?",
+        a: "Yes. Our Veterans Transformation Program provides specialized support for veterans, including scholarship opportunities. We believe every warrior deserves access to sacred ceremony. Contact us to learn more about our veteran scholarship fund.",
       },
     ],
   },
