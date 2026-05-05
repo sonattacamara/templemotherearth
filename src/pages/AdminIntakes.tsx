@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Navigate, Link } from "react-router-dom";
-import { Search, Download, AlertTriangle, Eye, ArrowLeft, Filter } from "lucide-react";
+import { Search, Download, AlertTriangle, Eye, ArrowLeft, Filter, ArrowUp, ArrowDown, ChevronsUpDown, ChevronLeft, ChevronRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
@@ -163,6 +163,10 @@ const AdminIntakes = () => {
   const [days, setDays] = useState<number>(0); // 0 = all
   const [flaggedOnly, setFlaggedOnly] = useState(false);
   const [selected, setSelected] = useState<Submission | null>(null);
+  const [sortKey, setSortKey] = useState<"created_at" | "name" | "email" | "phone" | "ceremonyType">("created_at");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [page, setPage] = useState(1);
+  const PAGE_SIZE = 25;
 
   useEffect(() => {
     if (!user) { setRoleChecked(true); return; }
@@ -197,7 +201,7 @@ const AdminIntakes = () => {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     const cutoff = days > 0 ? Date.now() - days * 86400000 : 0;
-    return submissions.filter((s) => {
+    const list = submissions.filter((s) => {
       const m = s.metadata || {};
       if (cutoff && new Date(s.created_at).getTime() < cutoff) return false;
       if (ceremonyFilter !== "all" && m.ceremonyType !== ceremonyFilter) return false;
@@ -208,7 +212,37 @@ const AdminIntakes = () => {
       }
       return true;
     });
-  }, [submissions, search, ceremonyFilter, days, flaggedOnly]);
+    const getKey = (s: Submission): string | number => {
+      const m = s.metadata || {};
+      if (sortKey === "created_at") return new Date(s.created_at).getTime();
+      if (sortKey === "name") return `${m.firstName ?? ""} ${m.lastName ?? ""}`.toLowerCase();
+      if (sortKey === "email") return String(m.email ?? "").toLowerCase();
+      if (sortKey === "phone") return String(m.phone ?? "").toLowerCase();
+      if (sortKey === "ceremonyType") return String(m.ceremonyType ?? "").toLowerCase();
+      return "";
+    };
+    list.sort((a, b) => {
+      const av = getKey(a); const bv = getKey(b);
+      if (av < bv) return sortDir === "asc" ? -1 : 1;
+      if (av > bv) return sortDir === "asc" ? 1 : -1;
+      return 0;
+    });
+    return list;
+  }, [submissions, search, ceremonyFilter, days, flaggedOnly, sortKey, sortDir]);
+
+  useEffect(() => { setPage(1); }, [search, ceremonyFilter, days, flaggedOnly, sortKey, sortDir]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const pageRows = useMemo(() => filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE), [filtered, page]);
+
+  const toggleSort = (key: typeof sortKey) => {
+    if (sortKey === key) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    else { setSortKey(key); setSortDir(key === "created_at" ? "desc" : "asc"); }
+  };
+  const SortIcon = ({ k }: { k: typeof sortKey }) =>
+    sortKey !== k ? <ChevronsUpDown className="inline h-3.5 w-3.5 ml-1 opacity-50" />
+    : sortDir === "asc" ? <ArrowUp className="inline h-3.5 w-3.5 ml-1" />
+    : <ArrowDown className="inline h-3.5 w-3.5 ml-1" />;
 
   const exportCsv = () => {
     const headers = ["Submitted","First","Last","Email","Phone","Ceremony","Experience","Flagged","City/State"];
@@ -293,11 +327,11 @@ const AdminIntakes = () => {
               <table className="w-full text-sm">
                 <thead className="bg-muted/40 text-muted-foreground">
                   <tr>
-                    <th className="text-left px-4 py-2 font-medium">Submitted</th>
-                    <th className="text-left px-4 py-2 font-medium">Name</th>
-                    <th className="text-left px-4 py-2 font-medium">Email</th>
-                    <th className="text-left px-4 py-2 font-medium">Phone</th>
-                    <th className="text-left px-4 py-2 font-medium">Ceremony</th>
+                    <th className="text-left px-4 py-2 font-medium cursor-pointer select-none" onClick={() => toggleSort("created_at")}>Submitted<SortIcon k="created_at" /></th>
+                    <th className="text-left px-4 py-2 font-medium cursor-pointer select-none" onClick={() => toggleSort("name")}>Name<SortIcon k="name" /></th>
+                    <th className="text-left px-4 py-2 font-medium cursor-pointer select-none" onClick={() => toggleSort("email")}>Email<SortIcon k="email" /></th>
+                    <th className="text-left px-4 py-2 font-medium cursor-pointer select-none" onClick={() => toggleSort("phone")}>Phone<SortIcon k="phone" /></th>
+                    <th className="text-left px-4 py-2 font-medium cursor-pointer select-none" onClick={() => toggleSort("ceremonyType")}>Ceremony<SortIcon k="ceremonyType" /></th>
                     <th className="text-left px-4 py-2 font-medium">Status</th>
                     <th className="px-4 py-2"></th>
                   </tr>
@@ -309,7 +343,7 @@ const AdminIntakes = () => {
                   {!loading && filtered.length === 0 && (
                     <tr><td colSpan={7} className="px-4 py-8 text-center text-muted-foreground">No intakes match your filters.</td></tr>
                   )}
-                  {!loading && filtered.map((s) => {
+                  {!loading && pageRows.map((s) => {
                     const m = s.metadata || {};
                     const flagged = isFlagged(m);
                     return (
@@ -337,8 +371,19 @@ const AdminIntakes = () => {
                 </tbody>
               </table>
             </div>
-            <div className="px-4 py-2 text-xs text-muted-foreground border-t border-border">
-              Showing {filtered.length} of {submissions.length} intakes
+            <div className="flex items-center justify-between px-4 py-3 text-xs text-muted-foreground border-t border-border">
+              <span>
+                Showing {filtered.length === 0 ? 0 : (page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length} (total {submissions.length})
+              </span>
+              <div className="flex items-center gap-2">
+                <Button variant="outline" size="sm" disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))}>
+                  <ChevronLeft className="h-4 w-4" /> Prev
+                </Button>
+                <span className="px-2">Page {page} of {totalPages}</span>
+                <Button variant="outline" size="sm" disabled={page >= totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))}>
+                  Next <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
