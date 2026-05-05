@@ -665,15 +665,14 @@ const SanctuaryWeek = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {[
-            { title: "Spring Equinox", subtitle: "10 Days of Immersion", price: "$2,222" },
-            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening", price: "$2,222" },
-            { title: "Weekend Immersion", subtitle: "3 Days of Presence", price: "$1,333" },
-            { title: "Day Experience", subtitle: "A Sacred Entry Point", price: "$333" },
+            { title: "Spring Equinox", subtitle: "10 Days of Immersion" },
+            { title: "Monthly Sacred Series", subtitle: "7 Days of Deepening" },
+            { title: "Weekend Immersion", subtitle: "3 Days of Presence" },
+            { title: "Day Experience", subtitle: "A Sacred Entry Point" },
           ].map((path) => (
             <div key={path.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-8 text-center">
-              <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-2">{path.title}</p>
-              <p className="font-sans text-3xl font-extralight text-[hsl(40,30%,92%)] mb-2">{path.price}</p>
-              <p className="font-serif text-[14px] text-[hsl(35,30%,60%)]">{path.subtitle}</p>
+              <p className="font-sans text-[10px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3">{path.title}</p>
+              <p className="font-serif text-[15px] text-[hsl(35,30%,68%)]">{path.subtitle}</p>
             </div>
           ))}
         </div>
