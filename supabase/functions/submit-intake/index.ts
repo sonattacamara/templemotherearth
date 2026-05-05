@@ -247,7 +247,12 @@ serve(async (req) => {
 
     // 2) Build tags based on ceremony type
     const ceremonyType = String(body.ceremonyType || "").trim();
-    const tags = ["ceremony-intake-submission", "sacred-intake"];
+    const tags = [
+      "ceremony-intake-submission",
+      "sacred-intake",
+      "intake-submitted-notify-seeker",
+      "intake-submitted-notify-admin",
+    ];
     if (ceremonyType) tags.push(`intake-${ceremonyType.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`);
 
     // 3) Push to GHL with rich note. Don't fail submission if GHL hiccups — DB has the record.
