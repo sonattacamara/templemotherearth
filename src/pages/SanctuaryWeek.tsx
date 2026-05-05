@@ -497,11 +497,11 @@ const SanctuaryWeek = () => {
             {[
               {
                 month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
-                desc: "The temple reopens. The Spring Equinox has passed. What was dormant begins to stir. This month we honor the first breath after rest.",
+                desc: "The doors swing open after the long winter rest. Your body has been waiting. Your spirit has been waiting. This is your reentry into yourself.",
                 backContent: [
-                  "April marks the Grand Reopening — the first Sacred Series after the temple's winter rest.",
-                  "Ceremonies this month focus on gently reawakening the body, clearing stagnant energy, and reconnecting with sacred community.",
-                  "The Cacao Ceremony opens the month as a heart-centered invitation. Hapé follows to ground and clarify.",
+                  "April is the Grand Reopening — the first Sacred Series of the year. The energy in the temple is electric. New beginnings are sacred here.",
+                  "Cacao opens the heart you closed during the cold months. Hapé clears the static so you can hear your own voice again. Sacred Tea invites you deeper than thought.",
+                  "If you missed last year — this is the month to come home. The seekers who arrive in April set the tone for everything that follows.",
                 ],
               },
               {
@@ -524,11 +524,11 @@ const SanctuaryWeek = () => {
               },
               {
                 month: "July 2026", theme: "The Belonging", icon: <Users className="h-6 w-6" />,
-                desc: "No one walks this path alone. This month we honor the sacred family — the circle that holds you when you cannot hold yourself.",
+                desc: "You were never meant to do this alone. This is the month the circle widens, the table lengthens, and the family you didn't know you were missing finds you.",
                 backContent: [
-                  "July celebrates the truth that transformation is not a solo act. The community you walk beside is part of the sacrament itself.",
-                  "This month amplifies community offerings — the Potluck, the Art Expo, and extended Sacred Tea House evenings become the heartbeat.",
-                  "Integration circles expand. Alumni return. New seekers are welcomed by those who once sat where they now sit.",
+                  "July is when the temple breathes its fullest. The Community Potluck, the Sacred Art Expo, the extended Tea House evenings — the whole family comes home.",
+                  "Alumni return to break bread with new seekers. Stories are exchanged. Phone numbers are exchanged. Lifelong friendships begin around our long wooden table.",
+                  "If you have ever felt spiritually homeless — July is the month you stop looking. Your people are already here, saving you a seat.",
                 ],
               },
               {
@@ -551,11 +551,11 @@ const SanctuaryWeek = () => {
               },
               {
                 month: "October 2026", theme: "The Ancestors", icon: <Star className="h-6 w-6" />,
-                desc: "The veil is thin. This month we honor the ones who walked before us — the unseen council that holds every ceremony from the other side.",
+                desc: "The veil thins. The ones who walked before you draw close. This is the month they speak — and the month you finally have the stillness to listen.",
                 backContent: [
-                  "October deepens the ancestral work begun in May. As the veil thins, ceremonies open portals to lineage, legacy, and spiritual inheritance.",
-                  "Sacred Tea and Hapé ceremonies carry a particular reverence this month — prayers are offered not just for the living, but for those who have crossed over.",
-                  "The Art Expo takes on a visionary dimension, inviting art born from dreams, ceremony, and communion with the ancestors.",
+                  "October is the most mystical month in the temple year. Sacred Tea and Hapé carry prayers across the veil. The grandmothers and grandfathers come close.",
+                  "Seekers consistently report October ceremonies as the most spiritually profound of the year. Lineages are honored. Names are spoken. Burdens long carried are finally laid down.",
+                  "The Sacred Art Expo turns visionary — paintings, songs, and prayers born from dreams and ancestral communion. This is not a month to miss.",
                 ],
               },
               {
