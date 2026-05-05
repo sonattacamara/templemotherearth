@@ -482,7 +482,7 @@ const SanctuaryWeek = () => {
       </SanctuarySection>
 
       {/* ═══ MONTHLY THEMES / SACRED CALENDAR ═══ */}
-      <section className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)]">
+      <section id="monthly-themes" className="px-6 md:px-12 py-20 md:py-28 bg-[hsl(105,30%,8%)] scroll-mt-20">
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-14">
             <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Year Six · Monthly Themes</p>
