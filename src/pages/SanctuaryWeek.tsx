@@ -683,14 +683,13 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ $2,222 PACKAGE (moved to bottom) ═══ */}
+      {/* ═══ FULL INITIATION PACKAGE (moved to bottom) ═══ */}
       <section
         id="package"
         className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
       >
         <div className="max-w-[860px] mx-auto">
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">The Full Initiation</p>
-          <p className="font-sans text-4xl font-extralight text-[hsl(45,70%,55%)] mb-6 tracking-tight">$2,222</p>
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">The Full Initiation</p>
           <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
             The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
           </h2>
