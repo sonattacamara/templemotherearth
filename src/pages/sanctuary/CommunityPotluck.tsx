@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
@@ -8,7 +8,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 const EVENTBRITE_POTLUCK = "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-healing-registration-1119491141139";
 
 const CommunityPotluck = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Community Integration Potluck · Temple Mother Earth"
     description="Free community gathering, integration circle, and Sacred Tea House. Temple Mother Earth, Washington DC."
   >
@@ -52,7 +52,7 @@ const CommunityPotluck = () => (
       ctaHref={EVENTBRITE_POTLUCK}
       note="Free & open to all · Registration helps us prepare the space · Bring a dish to share"
     />
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default CommunityPotluck;

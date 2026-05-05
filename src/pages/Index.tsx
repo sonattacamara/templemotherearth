@@ -1129,7 +1129,7 @@ const Index = () => {
 
       <InternalLinkingFooter links={[
         { label: "About Us", href: "/about" },
-        { label: "Sacred Series", href: "/sanctuary-week" },
+        { label: "Sacred Series", href: "/sacred-series" },
         { label: "Earth Kingdoms", href: "/earth-kingdoms" },
         { label: "Kemetic Teachings", href: "/kemetic-teachings" },
       ]} />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import { Sparkles, Heart, Users, Shield, Star, Flame, Leaf, Sun } from "lucide-react";
 
@@ -11,7 +11,7 @@ const BODY_SOFT = "text-[17px] md:text-[18px] text-[hsl(40,25%,82%)] leading-[1.
 const PULL = "text-[20px] md:text-[22px] text-[hsl(45,70%,72%)] italic font-serif leading-[1.7]";
 
 const CommunityCare = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Sacred Reciprocity · A Philosophy of Energy · Temple Mother Earth"
     description="Everything is energy. Time, money, prayer, presence. Discover how sacred reciprocity holds the temple — and how you are invited to participate."
     showBackLink={true}
@@ -310,7 +310,7 @@ const CommunityCare = () => (
             Apply For Scholarship
           </Link>
           <Link
-            to="/sanctuary-week"
+            to="/sacred-series"
             className="inline-block rounded-xl border border-[hsla(45,70%,49%,0.5)] px-10 py-4 font-sans text-[10px] tracking-[3px] uppercase font-semibold text-[hsl(45,70%,68%)] transition hover:bg-[hsla(45,70%,49%,0.1)]"
           >
             View Ceremonies
@@ -328,7 +328,7 @@ const CommunityCare = () => (
         </div>
       </div>
     </section>
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default CommunityCare;

@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
@@ -8,7 +8,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 const EVENTBRITE_PLACEHOLDER = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
 
 const SacredTeaCeremony = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Sacred Tea Ceremony · Temple Mother Earth"
     description="The Fruit of the Gods. A multi-tiered sacred ceremony at Temple Mother Earth, Washington DC."
   >
@@ -70,7 +70,7 @@ const SacredTeaCeremony = () => (
         This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
       </p>
     </div>
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default SacredTeaCeremony;

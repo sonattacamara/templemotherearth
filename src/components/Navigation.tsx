@@ -27,7 +27,7 @@ const navStructure: NavEntry[] = [
   {
     label: "Ceremonies",
     items: [
-      { label: "Sacred Series", href: "/sanctuary-week", isRoute: true },
+      { label: "Sacred Series", href: "/sacred-series", isRoute: true },
       { label: "Kambo Purification", href: "/kambo", isRoute: true },
       { label: "Cacao Ceremony", href: "/cacao", isRoute: true },
       { label: "Hapé Ceremony", href: "/hape", isRoute: true },

@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
@@ -36,7 +36,7 @@ import WebhookChecklist from "./pages/WebhookChecklist";
 import SacredBlueprint from "./pages/SacredBlueprint";
 import Donate from "./pages/Donate";
 import ScrollToTop from "@/components/ScrollToTop";
-import SanctuaryWeek from "./pages/SanctuaryWeek";
+import SacredSeries from "./pages/SacredSeries";
 import HapeCeremony from "./pages/sanctuary/HapeCeremony";
 import SacredTeaCeremony from "./pages/sanctuary/SacredTeaCeremony";
 import InnerAlchemySpa from "./pages/sanctuary/InnerAlchemySpa";
@@ -114,7 +114,8 @@ const App = () => (
             <Route path="/kambo" element={<KamboRedirect />} />
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
-            <Route path="/sanctuary-week" element={<SanctuaryWeek />} />
+            <Route path="/sacred-series" element={<SacredSeries />} />
+            <Route path="/sanctuary-week" element={<Navigate to="/sacred-series" replace />} />
             <Route path="/hape" element={<HapeCeremony />} />
             <Route path="/sacred-tea" element={<SacredTeaCeremony />} />
             <Route path="/spa" element={<InnerAlchemySpa />} />

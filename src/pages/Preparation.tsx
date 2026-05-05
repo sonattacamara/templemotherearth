@@ -201,7 +201,7 @@ const Preparation = () => {
       <InternalLinkingFooter
         links={[
           { label: "Sacred Intake Form", href: "/ceremony-intake" },
-          { label: "Sacred Series", href: "/sanctuary-week" },
+          { label: "Sacred Series", href: "/sacred-series" },
           { label: "Code of Conduct", href: "/conduct" },
           { label: "Plant Sacrament Glossary", href: "/plant-medicine-glossary" },
           { label: "Enter the Sacred Space", href: "https://www.eventbrite.com/o/29347213477", isExternal: true },

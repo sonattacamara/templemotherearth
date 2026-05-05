@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ const benefits = [
 ];
 
 const SacredTeaHouse = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Sacred Tea House | Temple Mother Earth"
     description="A slow, sacred, sensory experience. Ceremonial tea space where plant sacrament, community, and contemplative practice meet."
   >
@@ -142,7 +142,7 @@ const SacredTeaHouse = () => (
       </a>
       <p className="mt-6 text-[12px] font-display tracking-[2px] text-[hsl(40,30%,90%)] opacity-40">Temple Mother Earth · Monthly Offering</p>
     </section>
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default SacredTeaHouse;

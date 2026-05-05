@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
@@ -7,7 +7,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 
 const HapeCeremony = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Hapé Community Ceremony · Temple Mother Earth"
     description="Sacred Amazonian snuff ceremony. Ground, clear, and return to yourself. Temple Mother Earth, Washington DC."
   >
@@ -78,7 +78,7 @@ const HapeCeremony = () => (
     </div>
 
     <CeremonyExploreNav variant="light" />
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default HapeCeremony;

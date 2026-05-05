@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
@@ -7,7 +7,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 const EVENTBRITE_YIN = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";
 
 const SacredYinYoga = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Sacred Yin Yoga · Temple Mother Earth"
     description="Ceremonial yin yoga with sound healing and breathwork. Surrender and restore. Temple Mother Earth, Washington DC."
   >
@@ -46,7 +46,7 @@ const SacredYinYoga = () => (
       ctaHref={EVENTBRITE_YIN}
       note="All levels welcome · Community Care Model · Registration confirms your place"
     />
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default SacredYinYoga;

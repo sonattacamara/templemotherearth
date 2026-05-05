@@ -7,7 +7,7 @@ import {
   Calendar, Clock, Music, Palette, Mountain, Coffee, Flame,
   ChevronDown, ArrowRight, Gem, Crown, FileText
 } from "lucide-react";
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import MonthlyThemeCard from "@/components/sanctuary/MonthlyThemeCard";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
@@ -262,14 +262,14 @@ const PhaseMarker = ({ title, days }: { title: string; days: string }) => {
 };
 
 /* ─── Main Page ─── */
-const SanctuaryWeek = () => {
+const SacredSeries = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <SanctuaryWeekLayout
+    <SacredSeriesLayout
       title="Sacred Series · Temple Mother Earth"
       description="A recurring 7-day series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
       showBackLink={false}
@@ -796,8 +796,8 @@ const SanctuaryWeek = () => {
         { label: "Preparation Guide", href: "/preparation" },
         { label: "Sacred Intake Form", href: "/ceremony-intake" },
       ]} />
-    </SanctuaryWeekLayout>
+    </SacredSeriesLayout>
   );
 };
 
-export default SanctuaryWeek;
+export default SacredSeries;
