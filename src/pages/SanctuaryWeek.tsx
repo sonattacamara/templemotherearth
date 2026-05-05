@@ -595,6 +595,29 @@ const SanctuaryWeek = () => {
           <p>This is not a break. This is the work. The land rests. The facilitators restore. The founders recalibrate the vision, refine the protocols, study, pray, and prepare.</p>
           <p>Between the Winter Solstice and the Spring Equinox, the Temple does what the Earth does: it goes inward. And then, when the light returns, <strong className="text-[hsl(40,30%,90%)]">we open the doors again.</strong></p>
         </div>
+        <div className="max-w-[760px] mx-auto mt-12 border border-[hsla(45,70%,49%,0.35)] bg-[hsla(45,70%,49%,0.06)] p-8 md:p-10 text-center">
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-3">Important · Mark Your Calendar</p>
+          <h3 className="font-serif italic text-[22px] md:text-[26px] text-[hsl(40,30%,92%)] leading-snug mb-4">
+            The Temple closes Winter Solstice (Dec 21) and reopens Spring Equinox (Mar 20)
+          </h3>
+          <p className="text-[16px] text-[hsl(35,30%,72%)] leading-relaxed font-serif mb-6">
+            Beginning November, we begin gently preparing our community for the three sacred months of rest. Plan your final ceremonies of the year by November. Use the winter for inward integration. Then return to us in the spring, restored.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="#monthly-themes"
+              className="inline-block font-sans text-[8px] tracking-[3px] uppercase px-7 py-3 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all"
+            >
+              View the Sacred Calendar
+            </a>
+            <Link
+              to="/contact"
+              className="inline-block font-sans text-[8px] tracking-[3px] uppercase px-7 py-3 border border-[hsla(45,70%,49%,0.4)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all"
+            >
+              Get Reopening Notification
+            </Link>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mt-16">
           {[
             { icon: <Moon className="h-8 w-8 text-[hsl(45,70%,49%)]" />, title: "Winter Solstice · The Closing", desc: "The shortest day. The deepest night. We honor this by closing public ceremonies and turning inward. Facilitator training, sacred study, land stewardship, and internal ceremony take place during this time." },
