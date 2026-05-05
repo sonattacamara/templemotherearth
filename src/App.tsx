@@ -54,6 +54,10 @@ import JournalPost from "./pages/JournalPost";
 import CommunityCare from "./pages/CommunityCare";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RFRACompliance from "./pages/RFRACompliance";
+import Sayulita from "./pages/immersions/Sayulita";
+import Panama from "./pages/immersions/Panama";
+import Egypt from "./pages/immersions/Egypt";
+import Peru from "./pages/immersions/Peru";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
@@ -126,6 +130,10 @@ const App = () => (
             <Route path="/community-care" element={<CommunityCare />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/rfra-compliance" element={<RFRACompliance />} />
+            <Route path="/immersions/sayulita" element={<Sayulita />} />
+            <Route path="/immersions/panama" element={<Panama />} />
+            <Route path="/immersions/egypt" element={<Egypt />} />
+            <Route path="/immersions/peru" element={<Peru />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
