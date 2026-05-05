@@ -706,25 +706,25 @@ const SanctuaryWeek = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ FULL INITIATION PACKAGE (moved to bottom) ═══ */}
+      {/* ═══ SACRED SERIES INVITATION — APPLY ONLY ═══ */}
       <section
-        id="package"
+        id="apply"
         className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
       >
         <div className="max-w-[860px] mx-auto">
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">The Full Initiation</p>
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">By Application Only</p>
           <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-extralight leading-[1.05] mb-6 text-[hsl(40,30%,92%)]">
-            The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Initiation Package</em>
+            The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Invitation</em>
           </h2>
           <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
-            All 7 ceremonies. One sacred arc. Held from beginning to end. The arc is intentional. The sequence is sacred.
+            The Sacred Series is held in sacred trust with each seeker. Before we discuss anything practical, we want to meet you, understand your readiness, and ensure this container is the right fit for your spirit.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
-              { title: "All 7 Ceremonies", desc: "Full access to every sacred gathering across the Sacred Series.", icon: <Calendar className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "1:1 Preparation Call", desc: "A personal conversation with Sonatta or James before March 18.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Community Container", desc: "Curated materials, ceremonial guide, sacred journal, and preparation instructions.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Integration Session", desc: "A 1:1 integration session with your facilitator within 14 days after March 29.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 1 · Sacred Intake", desc: "Complete the medical and spiritual intake form so our facilitators can understand who you are and how to hold you.", icon: <FileTextIcon /> },
+              { title: "Step 2 · 1:1 Discernment Call", desc: "A heart-to-heart conversation with Sonatta or James to feel into mutual readiness.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 3 · Sacred Reciprocity", desc: "Once accepted, we share the energy exchange privately and walk you through the Community Care tiers — including scholarship.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 4 · Begin Preparation", desc: "Receive the preparation guide, dietary protocols, and 1:1 integration support — held from beginning to end.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             ].map((item) => (
               <div key={item.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7 flex gap-4">
                 <div className="mt-1 shrink-0">{item.icon}</div>
@@ -735,11 +735,16 @@ const SanctuaryWeek = () => {
               </div>
             ))}
           </div>
-          <a href={EVENTBRITE_ORG} target="_blank" rel="noopener noreferrer" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
-            Secure the Full Package
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/ceremony-intake" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
+              Begin Your Application
+            </Link>
+            <Link to="/contact" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 border border-[hsla(45,70%,49%,0.4)] text-[hsl(45,70%,55%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all">
+              Speak With Us First
+            </Link>
+          </div>
           <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-6">
-            Limited to 8 participants · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Community Care Model</Link> applies · Scholarship available
+            Limited to 8 seekers · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Sacred Reciprocity</Link> · Scholarships available
           </p>
         </div>
       </section>
