@@ -115,6 +115,7 @@ const App = () => (
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
             <Route path="/sacred-series" element={<SacredSeries />} />
+            <Route path="/sanctuary-week" element={<Navigate to="/sacred-series" replace />} />
             <Route path="/hape" element={<HapeCeremony />} />
             <Route path="/sacred-tea" element={<SacredTeaCeremony />} />
             <Route path="/spa" element={<InnerAlchemySpa />} />
