@@ -420,7 +420,8 @@ const CeremonyIntake = () => {
     if (step === 2) return !!(formData.emergencyName && formData.emergencyPhone && formData.emergencyRelation);
     if (step === 3) return !!(formData.ceremonyType && formData.experienceLevel && formData.intentions.trim().length >= 10);
     if (step === 4) return true;
-    if (step === 5) {
+    if (step === 5) return true;
+    if (step === 6) {
       return !!(
         formData.rfrAgreement &&
         formData.liabilityWaiver &&
@@ -460,12 +461,16 @@ const CeremonyIntake = () => {
       });
       if (error) {
         console.error("Intake submission error:", error);
+        toast.error("There was an issue submitting your intake. Please try again or contact us.");
+        return;
       }
     } catch (err) {
       console.error("Submission error:", err);
+      toast.error("There was an issue submitting your intake. Please try again or contact us.");
+      return;
     }
 
-    setStep(6);
+    setStep(7);
   };
 
   const inputClass = "w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary";
@@ -546,7 +551,7 @@ const CeremonyIntake = () => {
       <section className="px-4 py-8">
         <div className="mx-auto max-w-2xl">
           <div className="flex items-center justify-between text-xs font-body text-muted-foreground">
-            {["Personal Info", "Emergency Contact", "Ceremony Selection", "Health Screening", "Agreement"].map((label, i) => (
+            {["Personal Info", "Emergency Contact", "Ceremony Selection", "Health Screening", "Inner Landscape", "Agreement"].map((label, i) => (
               <div key={label} className={`flex flex-col items-center gap-1 ${i + 1 <= step ? "text-primary" : ""}`}>
                 <div className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold ${i + 1 < step ? "bg-primary text-primary-foreground" : i + 1 === step ? "border-2 border-primary text-primary" : "border border-input text-muted-foreground"}`}>
                   {i + 1 < step ? <CheckCircle2 className="h-4 w-4" /> : i + 1}
@@ -556,7 +561,7 @@ const CeremonyIntake = () => {
             ))}
           </div>
           <div className="mt-4 h-2 rounded-full bg-muted">
-            <div className="h-2 rounded-full bg-primary transition-all duration-500" style={{ width: `${((step - 1) / 4) * 100}%` }} />
+            <div className="h-2 rounded-full bg-primary transition-all duration-500" style={{ width: `${((step - 1) / 5) * 100}%` }} />
           </div>
         </div>
       </section>
