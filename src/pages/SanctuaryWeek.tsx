@@ -17,7 +17,7 @@ import level5Initiation from "@/assets/level5-initiation.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 import kamboFrogArt from "@/assets/kambo-frog-art.png";
 
-const EVENTBRITE_ORG = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
+const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/sacred-series-week-vol-5-new-earth-rising-registration-1985533292527?aff=ebdsoporgprofile";
 
 /* ─── Timeline Day Data ─── */
 interface TimelineDay {
@@ -29,7 +29,6 @@ interface TimelineDay {
   description: string;
   icon: React.ReactNode;
   tags: string[];
-  pricing: { label: string; price: string }[];
   ctaLabel: string;
   ctaHref: string;
   ctaReady: boolean;
@@ -45,8 +44,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "Your Heart Already Knows the Way",
     description: "Sacred ceremonial cacao, live sound, and community circle. The gentlest entry point, and for many, the most unexpectedly profound. All welcome.",
     icon: <Heart className="h-5 w-5" />, tags: ["Community", "All Welcome", "Heart"],
-    pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/cacao", image: sanctuaryDay1CacaoPods, imagePosition: "center 56%",
     phase: "The Opening",
   },
@@ -55,18 +53,16 @@ const timelineDays: TimelineDay[] = [
     subtitle: "The Noise Stops. You Remember.",
     description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The forest has been waiting for you.",
     icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
-    pricing: [{ label: "Sustainer", price: "$44" }, { label: "Community", price: "$33" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Register Now", ctaHref: "https://bit.ly/HapeCircle", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/hape", image: sanctuaryDay2HapeCeremony, imagePosition: "center 38%",
     phase: "The Opening",
   },
   {
     day: 3, date: "", weekday: "", name: "Sacred Tea Ceremony",
     subtitle: "The Door Has Always Been There",
-    description: "Three levels: Community, Sacred Circle, and Fruit of the Gods. Choose the depth you are ready for. The sacrament meets you exactly where you are.",
+    description: "A sacred doorway for remembrance. Come exactly as you are, and let the sacrament meet the part of you that is ready to listen.",
     icon: <Coffee className="h-5 w-5" />, tags: ["Signature", "Tiered", "Pre-Screening"],
-    pricing: [{ label: "Fruit of the Gods", price: "$111" }, { label: "Sacred Circle", price: "$66" }, { label: "Community", price: "$33" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/sacred-tea", image: sanctuaryDay3SacredTea, imagePosition: "center 58%",
     phase: "The Opening",
   },
@@ -75,8 +71,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "You Have Not Come This Far to Stop Here",
     description: "Every sacrament. One full-day container. Kambo included. For those who are genuinely ready to go all the way. By application only.",
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
-    pricing: [{ label: "Sustainer", price: "$777" }, { label: "Community", price: "$555" }, { label: "Scholarship", price: "Available" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
+    ctaLabel: "Apply Through Eventbrite", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/level5", image: level5Initiation, imagePosition: "center 50%",
     phase: "The Initiation",
   },
@@ -85,8 +80,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "Your Body Has Been Waiting for This Day",
     description: "A full day of body practices, sound ceremony, sacred nourishment, yoga, and ceremonial closing. From sunrise to sunset, every moment held.",
     icon: <Sun className="h-5 w-5" />, tags: ["Full Day", "Restoration", "Body"],
-    pricing: [{ label: "Sustainer", price: "$111" }, { label: "Community", price: "$88" }, { label: "All Welcome", price: "Free" }],
-    ctaLabel: "Coming Soon", ctaHref: "#", ctaReady: false,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/spa", image: sanctuaryDay5Spa, imagePosition: "center 62%",
     phase: "The Rest",
   },
@@ -95,8 +89,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "You Are Already Part of This Family",
     description: "Integration circle, Sacred Tea House open all evening, and a potluck table where the conversation goes somewhere real. Bring a dish. Come as you are.",
     icon: <Users className="h-5 w-5" />, tags: ["Free", "Everyone Welcome", "Community"],
-    pricing: [{ label: "All Welcome", price: "Free" }],
-    ctaLabel: "Register Free", ctaHref: "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-transformation-registration-1119491141139", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/potluck", image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Belonging",
   },
@@ -105,8 +98,7 @@ const timelineDays: TimelineDay[] = [
     subtitle: "You Already Know How to Surrender",
     description: "90 minutes of ceremonial yin yoga with sound ceremony and breathwork. Not exercise, ceremony in the body. All levels welcome.",
     icon: <Mountain className="h-5 w-5" />, tags: ["All Levels", "Sound", "Nervous System"],
-    pricing: [{ label: "Sustainer", price: "$33" }, { label: "Community", price: "$22" }],
-    ctaLabel: "Register Now", ctaHref: "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609", ctaReady: true,
+    ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/yin-yoga", image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     phase: "The Integration",
   },
