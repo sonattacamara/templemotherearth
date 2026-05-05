@@ -29,8 +29,6 @@ const ImmersionPlaceholder = ({
   ctaLabel = "Join the Waitlist",
   ctaExternal = false,
 }: ImmersionPlaceholderProps) => {
-  const PrimaryCTA = ctaExternal ? "a" : Link;
-
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -73,12 +71,23 @@ const ImmersionPlaceholder = ({
               Future home: <span className="font-mono text-primary/80">{futureSubdomain}</span>
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <PrimaryCTA
-                {...(ctaExternal ? { href: ctaHref, target: "_blank", rel: "noopener noreferrer" } : { to: ctaHref })}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-              >
-                {ctaLabel} <ArrowRight className="h-4 w-4" />
-              </PrimaryCTA>
+              {ctaExternal ? (
+                <a
+                  href={ctaHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  {ctaLabel} <ArrowRight className="h-4 w-4" />
+                </a>
+              ) : (
+                <Link
+                  to={ctaHref}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
+                >
+                  {ctaLabel} <ArrowRight className="h-4 w-4" />
+                </Link>
+              )}
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-xl border border-input px-7 py-3 text-sm font-semibold text-foreground transition hover:bg-accent"
