@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {
   Heart, Leaf, Sun, Moon, Sparkles, Shield, Star, Users,
   Calendar, Clock, Music, Palette, Mountain, Coffee, Flame,
-  ChevronDown, ArrowRight, Gem, Crown
+  ChevronDown, ArrowRight, Gem, Crown, FileText
 } from "lucide-react";
 import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
@@ -721,7 +721,7 @@ const SanctuaryWeek = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
-              { title: "Step 1 · Sacred Intake", desc: "Complete the medical and spiritual intake form so our facilitators can understand who you are and how to hold you.", icon: <FileTextIcon /> },
+              { title: "Step 1 · Sacred Intake", desc: "Complete the medical and spiritual intake form so our facilitators can understand who you are and how to hold you.", icon: <FileText className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Step 2 · 1:1 Discernment Call", desc: "A heart-to-heart conversation with Sonatta or James to feel into mutual readiness.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Step 3 · Sacred Reciprocity", desc: "Once accepted, we share the energy exchange privately and walk you through the Community Care tiers — including scholarship.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Step 4 · Begin Preparation", desc: "Receive the preparation guide, dietary protocols, and 1:1 integration support — held from beginning to end.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
