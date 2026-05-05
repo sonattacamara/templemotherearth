@@ -97,7 +97,7 @@ const RetreatsInquiry = () => {
                 culture while being held in a sacred container by our experienced facilitators.
               </p>
             </div>
-            <p className="mt-4 text-sm text-muted-foreground italic">Details and pricing coming soon. Submit your interest below to be the first to know.</p>
+            <p className="mt-4 text-sm text-muted-foreground italic">Details are opening through the appropriate immersion portal. Submit your interest below to be the first to know.</p>
           </div>
 
           {/* Sayulita Photo Gallery */}
@@ -136,7 +136,7 @@ const RetreatsInquiry = () => {
                 Express Your Interest
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
-                Fill out this form and our team will reach out with immersion details, pricing, and preparation guidelines.
+                Fill out this form and our team will reach out with immersion details, preparation guidance, and next steps.
                 All immersion participants will also need to complete a medical intake before ceremony.
               </p>
               <form className="mt-10 space-y-5" onSubmit={async (e) => {
@@ -208,7 +208,7 @@ const RetreatsInquiry = () => {
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
               <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred One</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Your immersion interest has been received. Our team will reach out with details, pricing, and next steps. 
+                Your immersion interest has been received. Our team will reach out with details and next steps. 
                 Keep an eye on your email!
               </p>
               <Link to="/" className="mt-8 inline-block rounded-xl bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80">
