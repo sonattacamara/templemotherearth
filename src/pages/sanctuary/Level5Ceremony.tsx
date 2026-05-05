@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
@@ -40,7 +40,7 @@ const whoCards = [
 ];
 
 const Level5Ceremony = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Level 5 — The Complete Initiation | Temple Mother Earth"
     description="The most powerful ceremonial offering at Temple Mother Earth. Multi-sacrament initiation including Kambo. By application only."
   >
@@ -226,7 +226,7 @@ const Level5Ceremony = () => (
         This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
       </p>
     </div>
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default Level5Ceremony;

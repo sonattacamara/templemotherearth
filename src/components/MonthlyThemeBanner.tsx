@@ -31,7 +31,7 @@ const MonthlyThemeBanner = () => {
         transition={{ duration: 0.6 }}
       >
         <Link
-          to="/sanctuary-week"
+          to="/sacred-series"
           className="group block rounded-2xl border border-primary/20 bg-card p-6 md:p-8 text-center transition-all hover:border-primary/40 hover:shadow-lg"
         >
           <div className="flex items-center justify-center gap-2 mb-3">

@@ -3,14 +3,14 @@ import SEOHead from "@/components/SEOHead";
 import { usePageTracking } from "@/hooks/useAnalytics";
 import { Link } from "react-router-dom";
 
-interface SanctuaryWeekLayoutProps {
+interface SacredSeriesLayoutProps {
   children: React.ReactNode;
   title: string;
   description: string;
   showBackLink?: boolean;
 }
 
-const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true }: SanctuaryWeekLayoutProps) => {
+const SacredSeriesLayout = ({ children, title, description, showBackLink = true }: SacredSeriesLayoutProps) => {
   usePageTracking();
 
   return (
@@ -28,7 +28,7 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
       {showBackLink && (
         <div className="px-6 md:px-12 py-3 border-b border-[hsl(100,25%,18%)]">
           <Link
-            to="/sanctuary-week"
+            to="/sacred-series"
             className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,20%,45%)] hover:text-[hsl(45,70%,55%)] transition-colors"
           >
             &larr; Sacred Series
@@ -54,4 +54,4 @@ const SanctuaryWeekLayout = ({ children, title, description, showBackLink = true
   );
 };
 
-export default SanctuaryWeekLayout;
+export default SacredSeriesLayout;

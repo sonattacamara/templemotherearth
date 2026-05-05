@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
@@ -7,7 +7,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 const EVENTBRITE_FFF = "https://www.eventbrite.com/e/frequency-fungi-flow-a-journey-of-sound-movement-and-connection-registration-1097503254779?aff=oddtdtcreator&keep_tld=true";
 
 const FrequencyFungiFlow = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Frequency, Fungi & Flow · Temple Mother Earth"
     description="A sacred journey of sound, movement, and connection. Third Saturday of every month, 7–11 PM. Temple Mother Earth, Washington DC."
   >
@@ -55,7 +55,7 @@ const FrequencyFungiFlow = () => (
       ctaHref={EVENTBRITE_FFF}
       note="All bodies welcome · Substance-free sacred space · Community Care Model"
     />
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default FrequencyFungiFlow;

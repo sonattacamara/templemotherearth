@@ -36,7 +36,7 @@ import WebhookChecklist from "./pages/WebhookChecklist";
 import SacredBlueprint from "./pages/SacredBlueprint";
 import Donate from "./pages/Donate";
 import ScrollToTop from "@/components/ScrollToTop";
-import SanctuaryWeek from "./pages/SanctuaryWeek";
+import SacredSeries from "./pages/SacredSeries";
 import HapeCeremony from "./pages/sanctuary/HapeCeremony";
 import SacredTeaCeremony from "./pages/sanctuary/SacredTeaCeremony";
 import InnerAlchemySpa from "./pages/sanctuary/InnerAlchemySpa";
@@ -114,7 +114,7 @@ const App = () => (
             <Route path="/kambo" element={<KamboRedirect />} />
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
-            <Route path="/sanctuary-week" element={<SanctuaryWeek />} />
+            <Route path="/sacred-series" element={<SacredSeries />} />
             <Route path="/hape" element={<HapeCeremony />} />
             <Route path="/sacred-tea" element={<SacredTeaCeremony />} />
             <Route path="/spa" element={<InnerAlchemySpa />} />

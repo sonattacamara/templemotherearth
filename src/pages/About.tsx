@@ -816,7 +816,7 @@ const About = () => {
       <EventbriteCTA />
 
       <InternalLinkingFooter links={[
-        { label: "Sacred Series", href: "/sanctuary-week" },
+        { label: "Sacred Series", href: "/sacred-series" },
         { label: "Sacred Intake Form", href: "/ceremony-intake" },
         { label: "Membership", href: "/membership" },
         { label: "Journal", href: "/journal" },

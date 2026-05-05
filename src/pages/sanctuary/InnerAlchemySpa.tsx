@@ -1,11 +1,11 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
 const InnerAlchemySpa = () => (
-  <SanctuaryWeekLayout
+  <SacredSeriesLayout
     title="Inner Alchemy Wellness Spa Day · Temple Mother Earth"
     description="A full day of sacred rest and restoration. Body practices, sound ceremony, nourishment, and ceremony. Held at Spa World."
   >
@@ -46,7 +46,7 @@ const InnerAlchemySpa = () => (
       ctaHref="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
       note="Community Care Model · Full day · Registration required to confirm your place"
     />
-  </SanctuaryWeekLayout>
+  </SacredSeriesLayout>
 );
 
 export default InnerAlchemySpa;

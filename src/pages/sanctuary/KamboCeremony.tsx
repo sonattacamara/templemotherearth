@@ -1,4 +1,4 @@
-import SanctuaryWeekLayout from "@/components/sanctuary/SanctuaryWeekLayout";
+import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
@@ -113,7 +113,7 @@ const KamboCeremony = () => {
   const heroRef = useRef(null);
 
   return (
-    <SanctuaryWeekLayout
+    <SacredSeriesLayout
       title="Kambo Ceremony — The Great Purifier | Temple Mother Earth"
       description="Kambo sacred purification ceremony at Temple Mother Earth, Washington DC. 508(c)(1)(A) sacred church. By application only."
     >
@@ -272,7 +272,7 @@ const KamboCeremony = () => {
       </div>
 
       <CeremonyExploreNav variant="dark" />
-    </SanctuaryWeekLayout>
+    </SacredSeriesLayout>
   );
 };
 
