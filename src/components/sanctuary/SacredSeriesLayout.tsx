@@ -8,14 +8,15 @@ interface SacredSeriesLayoutProps {
   title: string;
   description: string;
   showBackLink?: boolean;
+  path?: string;
 }
 
-const SacredSeriesLayout = ({ children, title, description, showBackLink = true }: SacredSeriesLayoutProps) => {
+const SacredSeriesLayout = ({ children, title, description, showBackLink = true, path = "/sacred-series" }: SacredSeriesLayoutProps) => {
   usePageTracking();
 
   return (
     <div className="sanctuary-spring min-h-screen bg-[hsl(114,36%,10%)] text-[hsl(40,30%,92%)]">
-      <SEOHead title={title} description={description} />
+      <SEOHead title={title} description={description} path={path} />
       <Navigation />
 
       {/* Sacred Series Announce Bar */}
