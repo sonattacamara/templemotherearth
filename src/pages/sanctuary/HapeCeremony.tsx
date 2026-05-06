@@ -5,12 +5,36 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
+import { Helmet } from "react-helmet-async";
+
+const hapeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Hapé Ceremony",
+  name: "Hapé Community Ceremony at Temple Mother Earth",
+  description: "Sacramental Amazonian Hapé ceremony held within a 508(c)(1)(A) sacred church in Washington, DC. Offered as a religious practice protected under RFRA.",
+  url: "https://templemotherearth.org/hape",
+  areaServed: { "@type": "City", name: "Washington, DC" },
+  provider: {
+    "@type": "ReligiousOrganization",
+    name: "Temple Mother Earth",
+    url: "https://templemotherearth.org",
+  },
+  offers: {
+    "@type": "Offer",
+    url: "https://bit.ly/HapeCircle",
+    availability: "https://schema.org/InStock",
+  },
+};
 
 const HapeCeremony = () => (
   <SacredSeriesLayout
     title="Hapé Community Ceremony · Temple Mother Earth"
     description="Sacred Amazonian snuff ceremony. Ground, clear, and return to yourself. Temple Mother Earth, Washington DC."
   >
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(hapeJsonLd)}</script>
+    </Helmet>
     <SanctuaryHero
       dateBadge="Recurring Offering"
       eyebrow="Hapé Community Ceremony"
