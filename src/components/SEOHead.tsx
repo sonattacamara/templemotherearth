@@ -23,6 +23,37 @@ const SEOHead = ({
   const fullTitle = title ? `${title} | Temple Mother Earth` : DEFAULT_TITLE;
   const url = `${BASE_URL}${path}`;
 
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["Church", "ReligiousOrganization"],
+    name: "Temple Mother Earth",
+    alternateName: "Temple of Mother Earth",
+    url: BASE_URL,
+    logo: `${BASE_URL}/og-logo.png`,
+    image: DEFAULT_IMAGE,
+    description: DEFAULT_DESC,
+    foundingDate: "2020",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "2415 32nd St SE",
+      addressLocality: "Washington",
+      addressRegion: "DC",
+      postalCode: "20020",
+      addressCountry: "US",
+    },
+    sameAs: [
+      "https://www.instagram.com/templemotherearth/",
+      "https://www.facebook.com/TempleMotherEarth2020/",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "askus@templemotherearth.org",
+      contactType: "general inquiries",
+      areaServed: "US",
+      availableLanguage: ["English"],
+    },
+  };
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -44,6 +75,9 @@ const SEOHead = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {/* Organization schema (LLM + Google Knowledge Graph) */}
+      <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
     </Helmet>
   );
 };

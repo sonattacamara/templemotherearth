@@ -4,14 +4,38 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import { Helmet } from "react-helmet-async";
 
 const EVENTBRITE_PLACEHOLDER = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
+
+const sacredTeaJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Sacred Tea Ceremony",
+  name: "Sacred Tea Ceremony at Temple Mother Earth",
+  description: "A multi-tiered sacramental tea ceremony held within a 508(c)(1)(A) sacred church in Washington, DC. Offered as a religious practice protected under RFRA.",
+  url: "https://templemotherearth.org/sacred-tea",
+  areaServed: { "@type": "City", name: "Washington, DC" },
+  provider: {
+    "@type": "ReligiousOrganization",
+    name: "Temple Mother Earth",
+    url: "https://templemotherearth.org",
+  },
+  offers: {
+    "@type": "Offer",
+    url: EVENTBRITE_PLACEHOLDER,
+    availability: "https://schema.org/InStock",
+  },
+};
 
 const SacredTeaCeremony = () => (
   <SacredSeriesLayout
     title="Sacred Tea Ceremony · Temple Mother Earth"
     description="The Fruit of the Gods. A multi-tiered sacred ceremony at Temple Mother Earth, Washington DC."
   >
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(sacredTeaJsonLd)}</script>
+    </Helmet>
     <SanctuaryHero
       dateBadge="Recurring Offering"
       eyebrow="Sacred Tea Ceremony"
