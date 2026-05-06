@@ -20,5 +20,6 @@ Disallow: /reset-password
 Disallow: /donation-success
 Disallow: /donation-canceled
 Disallow: /webhook-checklist
+Disallow: /sanctuary-week
 
 Sitemap: https://templemotherearth.org/sitemap.xml

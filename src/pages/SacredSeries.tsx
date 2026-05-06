@@ -270,8 +270,9 @@ const SacredSeries = () => {
 
   return (
     <SacredSeriesLayout
-      title="Sacred Series · Temple Mother Earth"
-      description="A recurring 7-day series of sacred ceremonies, community gatherings, and body practices. Temple Mother Earth, Washington DC."
+      title="The Sacred Series — 7 Days of Ceremony"
+      description="The Sacred Series: a recurring 7-day arc of sacramental ceremonies, community gatherings, and body practices at Temple Mother Earth, Washington DC. Cacao, Hapé, Sacred Tea, Sacred Fungi, and more."
+      path="/sacred-series"
       showBackLink={false}
     >
       {/* ═══ HERO ═══ */}
