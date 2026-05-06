@@ -8,6 +8,7 @@ import {
   ChevronDown, ArrowRight, Gem, Crown, FileText
 } from "lucide-react";
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
+import { Helmet } from "react-helmet-async";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import MonthlyThemeCard from "@/components/sanctuary/MonthlyThemeCard";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
@@ -18,6 +19,45 @@ import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 import kamboFrogArt from "@/assets/kambo-frog-art.png";
 
 const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/sacred-series-week-vol-5-new-earth-rising-registration-1985533292527?aff=ebdsoporgprofile";
+
+const sacredSeriesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "The Sacred Series — 7 Days of Ceremony",
+  description:
+    "A recurring 7-day arc of sacramental ceremonies, community gatherings, and body practices at Temple Mother Earth, Washington DC. Cacao, Hapé, Sacred Tea, Sacred Fungi, Kambo, and more.",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventSchedule: {
+    "@type": "Schedule",
+    repeatFrequency: "P1M",
+    byMonth: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  },
+  location: {
+    "@type": "Place",
+    name: "Temple Mother Earth",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "2415 32nd St SE",
+      addressLocality: "Washington",
+      addressRegion: "DC",
+      addressCountry: "US",
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "Temple Mother Earth",
+    url: "https://templemotherearth.org",
+  },
+  url: "https://templemotherearth.org/sacred-series",
+  offers: {
+    "@type": "Offer",
+    url: SACRED_SERIES_EVENTBRITE,
+    availability: "https://schema.org/InStock",
+    category: "Donation / Sacred Reciprocity",
+  },
+  image: "https://templemotherearth.org/og-logo.png",
+};
 
 /* ─── Timeline Day Data ─── */
 interface TimelineDay {
@@ -275,6 +315,9 @@ const SacredSeries = () => {
       path="/sacred-series"
       showBackLink={false}
     >
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(sacredSeriesJsonLd)}</script>
+      </Helmet>
       {/* ═══ HERO ═══ */}
       <section ref={heroRef} className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
         <img

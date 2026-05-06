@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, MapPin, Sparkles } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
@@ -29,6 +30,25 @@ const ImmersionPlaceholder = ({
   ctaLabel = "Join the Waitlist",
   ctaExternal = false,
 }: ImmersionPlaceholderProps) => {
+  const eventJsonLd =
+    dates && dates !== "Dates opening soon"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          name: `${name} Sacred Immersion · Temple Mother Earth`,
+          description,
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          location: { "@type": "Place", name: region, address: region },
+          organizer: {
+            "@type": "Organization",
+            name: "Temple Mother Earth",
+            url: "https://templemotherearth.org",
+          },
+          url: `https://templemotherearth.org${path}`,
+          image: "https://templemotherearth.org/og-logo.png",
+        }
+      : null;
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -36,6 +56,11 @@ const ImmersionPlaceholder = ({
         description={`${description} Sacred earth-medicine immersion in ${region}.`}
         path={path}
       />
+      {eventJsonLd && (
+        <Helmet>
+          <script type="application/ld+json">{JSON.stringify(eventJsonLd)}</script>
+        </Helmet>
+      )}
       <Navigation />
       <section className="relative px-4 pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="mx-auto max-w-3xl text-center">

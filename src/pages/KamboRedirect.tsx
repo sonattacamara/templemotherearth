@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion, type Easing } from "framer-motion";
-import { Shield, Droplets, Brain, Heart, Sparkles, Leaf, ChevronDown, ArrowRight } from "lucide-react";
+import { Shield, Droplets, Brain, Heart, Sparkles, Leaf, ChevronDown, ArrowRight, Mail } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
@@ -108,6 +108,13 @@ const KamboRedirect = () => {
             >
               Visit Kambo Portal
             </a>
+          </motion.div>
+          <motion.div variants={fadeUp} className="mt-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-primary/40 bg-foreground/40 px-5 py-2 text-sm">
+            <Mail className="h-4 w-4 text-primary" />
+            <span className="text-primary-foreground/80">Questions about Kambo?</span>
+            <Link to="/contact" className="font-semibold text-primary underline-offset-4 hover:underline">
+              Ask us anything →
+            </Link>
           </motion.div>
         </motion.div>
       </section>
