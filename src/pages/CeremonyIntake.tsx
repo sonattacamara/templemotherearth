@@ -547,6 +547,13 @@ const CeremonyIntake = () => {
           <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
             As a 508(c)(1)(A) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
           </motion.p>
+          <motion.div variants={fadeUp} className="mx-auto mt-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2 text-sm">
+            <Mail className="h-4 w-4 text-primary" />
+            <span className="text-foreground/80">Questions before you start?</span>
+            <Link to="/contact" className="font-semibold text-primary underline-offset-4 hover:underline">
+              Ask us anything →
+            </Link>
+          </motion.div>
         </motion.div>
       </section>
 

@@ -131,7 +131,7 @@ const Index = () => {
           ═══════════════════════════════════════════ */}
       <section
         id="hero"
-        className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
+        className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-12 text-center md:min-h-[82vh]"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
