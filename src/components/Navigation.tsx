@@ -50,7 +50,7 @@ const navStructure: NavEntry[] = [
   {
     label: "Immersions",
     items: [
-      { label: "Mexico · Oct 31–Nov 5, 2026", href: "/immersions/sayulita", isRoute: true },
+      { label: "Sayulita, Nayarit · Oct 31–Nov 5, 2026", href: "/immersions/sayulita", isRoute: true },
       { label: "Panama · Dates Opening Soon", href: "/immersions/panama", isRoute: true },
       { label: "Egypt · Dates Opening Soon", href: "/immersions/egypt", isRoute: true },
       { label: "Peru · Dates Opening Soon", href: "/immersions/peru", isRoute: true },
