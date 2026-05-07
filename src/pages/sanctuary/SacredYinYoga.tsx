@@ -29,7 +29,7 @@ const SacredYinYoga = () => (
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>Yin yoga asks you to stay. That is the entire practice. Postures are held for three to five minutes, long enough to move past the surface layer of muscle and reach the deep connective tissue, the fascia, the ligaments, the energetic meridians.</p>
         <p>Most of us have been trained to push through. Yin asks for the opposite: <strong className="text-[hsl(45,70%,49%)]">to arrive, to feel, and to let the body open in its own time.</strong></p>
-        <p>Sacred Yin at Temple Mother Earth is ceremony. Sound healing woven throughout. Breathwork at the opening and close. The facilitator holds the space as a sacred container, not just a fitness class.</p>
+        <p>Sacred Yin at Temple Mother Earth is ceremony. Sound healing woven throughout. Breathwork at the opening and close. Camara holds the space as a sacred container · this is devotional practice, not a fitness class.</p>
       </div>
     </SanctuarySection>
 
@@ -41,16 +41,17 @@ const SacredYinYoga = () => (
           <h3 className="font-serif text-3xl text-[hsl(40,30%,95%)] mb-2 leading-tight">The Softening</h3>
           <p className="text-sm uppercase tracking-wider text-[hsl(40,30%,75%)] mb-5">A Restorative Evening of Yin, Sacred Tea &amp; Nervous System Renewal</p>
           <div className="text-[hsl(40,30%,85%)] font-serif space-y-3 mb-6 flex-1">
-            <p>Held one Tuesday a month, this is a sacramental yin ceremony for women only. Camara holds the container as the body softens, the nervous system unwinds, and the Sacred Fungi sacrament is woven gently throughout the practice. (Sacred Tea House gathers separately on Mondays.)</p>
+            <p>Held the fourth Tuesday of each month, this is a sacramental yin gathering for women only. Camara holds the container as a sacred tea ceremony opens the circle, then flows into yin yoga and closes with integration · the body softens, the nervous system unwinds, and the feminine returns home to herself. (Sacred Tea House gathers separately on Mondays.)</p>
             <p>This is not yoga as fitness. It is yoga as prayer · a slow, devotional return to the body, the breath, and the feminine knowing that lives in the womb space.</p>
           </div>
           <ul className="text-sm text-[hsl(40,30%,75%)] space-y-1.5 mb-6 border-t border-[hsl(45,70%,49%)]/20 pt-5">
             <li><span className="text-[hsl(45,70%,49%)]">Held by</span> Camara</li>
             <li><span className="text-[hsl(45,70%,49%)]">Rhythm</span> 4th Tuesday monthly</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Arc</span> Sacred Tea · Yin · Integration</li>
             <li><span className="text-[hsl(45,70%,49%)]">Location</span> Temple Mother Earth, Washington DC</li>
             <li><span className="text-[hsl(45,70%,49%)]">Sacred Reciprocity</span> $44</li>
           </ul>
-          <a href={EVENTBRITE_SOFTENING} target={EVENTBRITE_SOFTENING.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="inline-block text-center bg-[hsl(45,70%,49%)] text-[hsl(150,30%,8%)] px-6 py-3 font-medium uppercase tracking-wider text-sm hover:bg-[hsl(45,70%,55%)] transition">Reserve Your Mat</a>
+          <a href={EVENTBRITE_SOFTENING} target={EVENTBRITE_SOFTENING.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="inline-block text-center bg-[hsl(45,70%,49%)] text-[hsl(150,30%,8%)] px-6 py-3 font-medium uppercase tracking-wider text-sm hover:bg-[hsl(45,70%,55%)] transition">Fourth Tuesday · In Person</a>
         </div>
 
         {/* Art of Surrender · Wednesday Virtual */}
@@ -68,7 +69,7 @@ const SacredYinYoga = () => (
             <li><span className="text-[hsl(45,70%,49%)]">Location</span> Virtual · Join from anywhere</li>
             <li><span className="text-[hsl(45,70%,49%)]">Sacred Reciprocity</span> Donation based</li>
           </ul>
-          <a href={EVENTBRITE_WEDNESDAY} target="_blank" rel="noopener noreferrer" className="inline-block text-center bg-[hsl(45,70%,49%)] text-[hsl(150,30%,8%)] px-6 py-3 font-medium uppercase tracking-wider text-sm hover:bg-[hsl(45,70%,55%)] transition">Join Wednesday Yin</a>
+          <a href={EVENTBRITE_WEDNESDAY} target="_blank" rel="noopener noreferrer" className="inline-block text-center bg-[hsl(45,70%,49%)] text-[hsl(150,30%,8%)] px-6 py-3 font-medium uppercase tracking-wider text-sm hover:bg-[hsl(45,70%,55%)] transition">Wednesday · Virtual</a>
         </div>
       </div>
     </SanctuarySection>
@@ -85,8 +86,8 @@ const SacredYinYoga = () => (
       eyebrow="Two Containers · One Practice"
       title={<>Your Body<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready to Rest</em></>}
       description="You don't need experience. You don't need flexibility. You need ninety minutes and a willingness to arrive. That's all."
-      ctaLabel="View Both Offerings"
-      ctaHref="#offerings"
+      ctaLabel="Fourth Tuesday · In Person"
+      ctaHref={EVENTBRITE_SOFTENING}
       note="All levels welcome · Community Care Model · Registration confirms your place"
     />
   </SacredSeriesLayout>
