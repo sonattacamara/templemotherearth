@@ -14,6 +14,7 @@ import RetreatsInquiry from "./pages/RetreatsInquiry";
 import TravelingCeremonies from "./pages/TravelingCeremonies";
 import PrivateCeremonies from "./pages/PrivateCeremonies";
 import Volunteer from "./pages/Volunteer";
+import Scholarship from "./pages/Scholarship";
 import JoinFacilitator from "./pages/JoinFacilitator";
 import Sponsor from "./pages/Sponsor";
 import Preparation from "./pages/Preparation";
@@ -97,6 +98,7 @@ const App = () => (
             <Route path="/traveling-ceremonies" element={<TravelingCeremonies />} />
             <Route path="/private-ceremonies" element={<PrivateCeremonies />} />
             <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/scholarship" element={<Scholarship />} />
             <Route path="/join-facilitator" element={<JoinFacilitator />} />
             <Route path="/sponsor" element={<Sponsor />} />
             <Route path="/preparation" element={<Preparation />} />
