@@ -116,6 +116,12 @@ const KamboRedirect = () => {
               Ask us anything →
             </Link>
           </motion.div>
+          <motion.p variants={fadeUp} className="mt-5 text-sm text-primary-foreground/70">
+            Sister, a women-only Kambo circle is held the third Saturday of every month ·{" "}
+            <a href="#women-only" className="text-primary underline-offset-4 hover:underline">
+              learn more ↓
+            </a>
+          </motion.p>
         </motion.div>
       </section>
 
@@ -230,6 +236,22 @@ const KamboRedirect = () => {
 
       {/* FAQ */}
       <section className="px-4 py-16 md:py-20">
+        <motion.div id="women-only" className="mx-auto max-w-3xl mb-16 rounded-2xl border border-primary/30 bg-card/60 p-8 md:p-10 scroll-mt-24" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger}>
+          <motion.p variants={fadeUp} className="font-body text-[10px] font-bold uppercase tracking-[0.35em] text-primary mb-3">
+            Sister Circle · Third Saturday Monthly · 8:00 AM
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="font-display text-2xl font-bold text-foreground md:text-3xl mb-4">
+            Kambo · For Women Only
+          </motion.h2>
+          <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed mb-5">
+            A sacred container free of masculine energy, where women gather to release, surrender, and remember the wisdom of the body in the presence of sisterhood. Held by Camara on the third Saturday of every month at 8:00 AM.
+          </motion.p>
+          <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
+            <Link to="/ceremony-intake" className="rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80">
+              Reserve Your Seat
+            </Link>
+          </motion.div>
+        </motion.div>
         <motion.div className="mx-auto max-w-3xl" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={stagger}>
           <motion.h2 variants={fadeUp} className="text-center font-display text-2xl font-bold text-foreground md:text-4xl mb-10">
             Kambo FAQ
