@@ -136,8 +136,8 @@ const App = () => (
             <Route path="/level-5" element={<Level5Ceremony />} />
             <Route path="/mens-circle" element={<MensCircle />} />
             <Route path="/womens-circle" element={<WomensCircle />} />
-            <Route path="/kambo-women" element={<KamboWomen />} />
-            <Route path="/kambo-for-women" element={<KamboWomen />} />
+            <Route path="/kambo-women" element={<Navigate to="/kambo#women-only" replace />} />
+            <Route path="/kambo-for-women" element={<Navigate to="/kambo#women-only" replace />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:slug" element={<JournalPost />} />
