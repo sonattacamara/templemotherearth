@@ -52,7 +52,7 @@ const SacredTeaCeremony = () => (
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>Sacred Tea has been carried through thousands of years of ceremonial tradition as the most profound conversation a human being can have with the intelligence of the plant kingdom. It is not a drug. It is not a shortcut. It is a sacrament.</p>
         <p>What arrives in ceremony is specific to what you are carrying. <strong className="text-[hsl(45,70%,49%)]">It gives each person exactly what they are ready to receive.</strong></p>
-        <p>We hold this sacrament within our 508(c)(1)(A) sacred church, with trained facilitators, full RFRA compliance documentation, emergency protocols, and a deeply established ceremonial container.</p>
+        <p>You are held. From the moment you arrive, you are met by elders and guardians who have walked this path for years. The room is prepared with prayer. The fire is tended. The medicine is poured by hands that know what they are doing. Nothing here is improvised. Everything here is sacred.</p>
       </div>
     </SanctuarySection>
 
@@ -92,7 +92,7 @@ const SacredTeaCeremony = () => (
         </p>
       </div>
       <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-muted-foreground leading-relaxed">
-        This sacred ceremony is a protected religious practice of Temple Mother Earth under RFRA and the First Amendment.
+        A sacred religious practice of Temple Mother Earth · Held in reverence, protected in spirit.
       </p>
     </div>
   </SacredSeriesLayout>
