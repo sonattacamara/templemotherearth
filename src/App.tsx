@@ -51,7 +51,6 @@ import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
 import MensCircle from "./pages/sanctuary/MensCircle";
 import WomensCircle from "./pages/sanctuary/WomensCircle";
-import KamboWomen from "./pages/sanctuary/KamboWomen";
 import KamboRedirect from "./pages/KamboRedirect";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
