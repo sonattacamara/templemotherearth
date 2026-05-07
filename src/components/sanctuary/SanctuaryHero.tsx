@@ -1,4 +1,5 @@
 import { motion, type Easing } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 interface SanctuaryHeroProps {
   dateBadge?: string;
@@ -39,6 +40,9 @@ const SanctuaryHero = ({
   <section className="relative isolate min-h-[92vh] flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden bg-[hsl(100,20%,5%)]">
     {backgroundVideo && (
       <>
+        <Helmet>
+          <link rel="preload" as="video" href={backgroundVideo} type="video/mp4" />
+        </Helmet>
         <video
           src={backgroundVideo}
           poster={videoPoster}
@@ -46,7 +50,7 @@ const SanctuaryHero = ({
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.9] -z-10"
           onError={(e) => console.error("Hero video failed to load", e)}
         />
