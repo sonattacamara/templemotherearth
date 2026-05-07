@@ -14,7 +14,7 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone, interests, availability, experience, whyJoin } = body;
+    const { firstName, lastName, email, phone, interests, availability, experience, whyJoin, roleTags, source } = body;
 
     if (!firstName || !lastName || !email) {
       return new Response(JSON.stringify({ error: "First name, last name, and email are required." }), {
@@ -22,14 +22,22 @@ serve(async (req) => {
       });
     }
 
+    const tags = ["volunteer-application"];
+    if (Array.isArray(roleTags)) {
+      for (const t of roleTags) {
+        if (typeof t === "string" && t.length < 60) tags.push(t);
+      }
+    }
+    if (source === "scholarship-page") tags.push("scholarship-applicant");
+
     const ghlResult = await upsertGHLContact({
       firstName: String(firstName).trim(),
       lastName: String(lastName).trim(),
       name: `${String(firstName).trim()} ${String(lastName).trim()}`,
       email: String(email).trim().toLowerCase(),
       phone: String(phone || "").trim(),
-      tags: ["volunteer-application"],
-      source: "volunteer-page",
+      tags,
+      source: source === "scholarship-page" ? "scholarship-page" : "volunteer-page",
     });
 
     // Log volunteer details for follow-up (visible in edge function logs until GHL custom field IDs are wired)

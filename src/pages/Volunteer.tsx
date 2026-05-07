@@ -1,5 +1,5 @@
 import { motion, type Easing } from "framer-motion";
-import { Heart, Users, Leaf, ArrowRight, CheckCircle2, Loader2, Sparkles, CalendarHeart, Megaphone, Palette, HeartHandshake, TreePine, Hammer } from "lucide-react";
+import { Heart, Users, Leaf, ArrowRight, CheckCircle2, Loader2, Sparkles, CalendarHeart, Megaphone, Palette, HeartHandshake, TreePine, Hammer, GraduationCap } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
-import communityImg from "@/assets/community.jpg";
+import volunteerHero from "@/assets/community-women-blessing.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -20,50 +20,57 @@ const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const SACRED_ROLES = [
   {
     icon: Sparkles,
-    title: "Guardian of Sacred Hospitality",
-    short: "Reception · Welcoming · Holding the Threshold",
+    title: "Greeter",
+    tag: "greeter",
+    short: "Welcome guests · Hold the threshold",
     body: "Stand as a sentinel at the gateway of our temple. Greet every visitor as an honored guest, extending the warmth of our spiritual community to all who cross the threshold. A vessel through which the energies of harmony and connection flow.",
     serve: ["Welcome guests at the door", "Hold space for arrivals", "Tend to refreshments and comfort"],
   },
   {
     icon: CalendarHeart,
-    title: "Weavers of Sacred Gatherings",
-    short: "Events Team · Ceremony Setup · Flow",
+    title: "Events Team",
+    tag: "events",
+    short: "Ceremony setup · Flow · Logistics",
     body: "Master weavers of sacred gatherings. Sculpt ethereal landscapes of experience, orchestrating moments of divine communion. With each event, weave threads of unity and invoke the presence of the sacred in the very air we breathe.",
     serve: ["Pre and post ceremony setup", "Event flow and logistics", "Volunteer coordination on the day"],
   },
   {
     icon: Megaphone,
-    title: "Alchemists of Digital Vibration",
-    short: "Social Media · Content · Posting",
+    title: "Social Media",
+    tag: "social-media",
+    short: "Posts · Stories · Community engagement",
     body: "Transmute images and words into potent elixirs that resonate with the souls of seekers. With every post, craft incantations that ripple through the collective consciousness, drawing kindred spirits to our temple's embrace.",
     serve: ["Instagram and Facebook posts", "Story coverage of ceremonies", "Community engagement and replies"],
   },
   {
     icon: Palette,
-    title: "Scribes of Visual Revelation",
-    short: "Graphic Design · Flyers · Visual Identity",
+    title: "Graphic Design",
+    tag: "graphic-design",
+    short: "Flyers · Banners · Visual identity",
     body: "Inscribe sacred narratives onto the canvas of existence. Magicians of imagery who evoke emotion and awaken dormant understanding, manifesting the ineffable into forms the human eye and heart can apprehend.",
     serve: ["Ceremony flyers and banners", "Social media graphics", "Brand and visual stewardship"],
   },
   {
     icon: HeartHandshake,
-    title: "Emissaries of Unity",
-    short: "Community Outreach · Partnerships · Ambassadorship",
+    title: "Community Outreach",
+    tag: "outreach",
+    short: "Partnerships · Tabling · Ambassadorship",
     body: "An emissary of unity, a bridge between our sanctuary and the wider world. Reach out to neighboring realms, form alliances, and cultivate a fertile garden where the seeds of empathy and transformation can flourish.",
     serve: ["Partner outreach in the DMV", "Tabling at local events", "Building bridges with allied communities"],
   },
   {
     icon: TreePine,
-    title: "Guardians of Gaia's Heartbeat",
-    short: "Land Stewardship · Forest Cleanup · Garden",
+    title: "Land Steward",
+    tag: "land-steward",
+    short: "Garden · Grounds · Forest cleanup",
     body: "Hear the ancient heartbeat of the wild and act as its steward. Through your labor, you cleanse the earthly temple and commune with the spirit of the land that holds us.",
     serve: ["Garden tending and planting", "Forest and grounds cleanup days", "Sacred land stewardship"],
   },
   {
     icon: Hammer,
-    title: "Architects of Divine Restoration",
-    short: "Construction · Repair · Building Work",
+    title: "Build Team",
+    tag: "build-team",
+    short: "Carpentry · Repair · Renovation",
     body: "Architects of divine restoration. Hands attuned to both material and ethereal, mending the temple's physical abode and mirroring the healing of spiritual fractures. Each nail driven becomes a sacred act of devotion.",
     serve: ["Carpentry and repairs", "Painting and finishing", "Sacred build and renovation projects"],
   },
@@ -94,7 +101,7 @@ const Volunteer = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${communityImg})` }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${volunteerHero})` }} />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.div variants={fadeUp} className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
@@ -207,8 +214,11 @@ const Volunteer = () => {
                 }
                 setSubmitting(true);
                 try {
+                  const selectedTags = SACRED_ROLES
+                    .filter((r) => form.interests.includes(r.title))
+                    .map((r) => `volunteer-${r.tag}`);
                   const { error } = await supabase.functions.invoke("submit-volunteer", {
-                    body: { ...form, interests: form.interests.join(" · ") },
+                    body: { ...form, interests: form.interests.join(" · "), roleTags: selectedTags },
                   });
                   if (error) throw error;
                   setSubmitted(true);
@@ -274,10 +284,10 @@ const Volunteer = () => {
               <h3 className="font-display text-base font-semibold text-card-foreground group-hover:text-primary transition">Become a Member</h3>
               <p className="mt-2 text-xs text-muted-foreground">Join the Temple community and walk the membership pathway.</p>
             </Link>
-            <Link to="/sacred-series" className="rounded-xl border border-border bg-card p-6 hover:border-primary/50 transition text-left group">
-              <Sparkles className="h-6 w-6 text-primary mb-3" />
-              <h3 className="font-display text-base font-semibold text-card-foreground group-hover:text-primary transition">Sacred Series</h3>
-              <p className="mt-2 text-xs text-muted-foreground">Step into the seven day cycle of ceremony and integration.</p>
+            <Link to="/scholarship" className="rounded-xl border-2 border-primary/40 bg-primary/5 p-6 hover:border-primary transition text-left group">
+              <GraduationCap className="h-6 w-6 text-primary mb-3" />
+              <h3 className="font-display text-base font-semibold text-card-foreground group-hover:text-primary transition">Apply for Scholarship</h3>
+              <p className="mt-2 text-xs text-muted-foreground">Cannot afford full reciprocity? Earn your seat through energy exchange.</p>
             </Link>
             <Link to="/donate" className="rounded-xl border border-border bg-card p-6 hover:border-primary/50 transition text-left group">
               <Heart className="h-6 w-6 text-primary mb-3" />
