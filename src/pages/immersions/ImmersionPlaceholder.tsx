@@ -126,11 +126,12 @@ const ImmersionPlaceholder = ({
             Explore other sacred journeys:
             <div className="mt-3 flex flex-wrap justify-center gap-2">
               {[
-                { label: "Sayulita, Mexico", href: "/immersions/sayulita" },
+                { label: "Costa Rica", href: "/immersions/costa-rica" },
                 { label: "Panama", href: "/immersions/panama" },
+                { label: "Sayulita, Mexico", href: "/immersions/sayulita" },
+                { label: "Ecuador", href: "/immersions/ecuador" },
                 { label: "Egypt", href: "/immersions/egypt" },
                 { label: "Peru", href: "/immersions/peru" },
-                { label: "Costa Rica", href: "/immersions/costa-rica" },
               ]
                 .filter((l) => l.href !== path)
                 .map((l) => (

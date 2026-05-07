@@ -53,11 +53,12 @@ const navStructure: NavEntry[] = [
   {
     label: "Immersions",
     items: [
-      { label: "Sayulita, Nayarit · Oct 31·Nov 5, 2026", href: "/immersions/sayulita", isRoute: true },
-      { label: "Panama · Dates Opening Soon", href: "/immersions/panama", isRoute: true },
-      { label: "Egypt · Dates Opening Soon", href: "/immersions/egypt", isRoute: true },
-      { label: "Peru · Dates Opening Soon", href: "/immersions/peru", isRoute: true },
       { label: "Costa Rica · Aug 2·8, 2026", href: "/immersions/costa-rica", isRoute: true },
+      { label: "Panama · Aug 8·15, 2026", href: "/immersions/panama", isRoute: true },
+      { label: "Sayulita, Nayarit · Oct 31·Nov 5, 2026", href: "/immersions/sayulita", isRoute: true },
+      { label: "Ecuador · Dec 26, 2026", href: "/immersions/ecuador", isRoute: true },
+      { label: "Egypt · Feb 27, 2027", href: "/immersions/egypt", isRoute: true },
+      { label: "Peru · Dates Opening Soon", href: "/immersions/peru", isRoute: true },
       { label: "All Retreats", href: "/retreats-inquiry", isRoute: true },
     ],
   },
