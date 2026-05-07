@@ -19,6 +19,7 @@ import facilitatorJala from "@/assets/facilitator-jala.jpg";
 import facilitatorRama from "@/assets/facilitator-rama.jpg";
 import communityCircleGrass from "@/assets/upload-community-group.png";
 import kingJamesFacilitator from "@/assets/upload-king-james-facilitator.png";
+import facilitatorSonattaInnerAlchemy from "@/assets/facilitator-sonatta-inner-alchemy.png";
 import logo from "@/assets/logo.png";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -677,6 +678,13 @@ const About = () => {
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
+              {
+                name: "Dr. Sonatta Camara",
+                role: "Inner Alchemy Guide",
+                img: facilitatorSonattaInnerAlchemy,
+                imgAlt: "Dr. Sonatta Camara, Inner Alchemy Guide and co-founder of Temple Mother Earth",
+                desc: "Founder, High Priestess, and Inner Alchemy Guide of Temple Mother Earth. Dr. Sonatta holds many sacred roles · weaving ceremony, nervous system restoration, yin practice, and the 7 Pillars of inner alchemy into a path of remembrance for those ready to return to the body as temple.",
+              },
               {
                 name: "Debra Owens",
                 role: "Yoga & Sound Ceremony Guide",
