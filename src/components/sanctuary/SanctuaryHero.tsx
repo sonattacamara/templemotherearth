@@ -36,7 +36,7 @@ const SanctuaryHero = ({
   backgroundVideo,
   videoPoster,
 }: SanctuaryHeroProps) => (
-  <section className="relative min-h-[92vh] flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
+  <section className="relative isolate min-h-[92vh] flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden bg-[hsl(100,20%,5%)]">
     {backgroundVideo && (
       <>
         <video
@@ -48,6 +48,7 @@ const SanctuaryHero = ({
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.9] -z-10"
+          onError={(e) => console.error("Hero video failed to load", e)}
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[hsla(100,20%,5%,0.25)] via-[hsla(100,20%,5%,0.45)] to-[hsla(100,20%,5%,0.9)]" />
       </>
