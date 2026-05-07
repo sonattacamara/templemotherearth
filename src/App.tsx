@@ -48,6 +48,8 @@ import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
 import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
+import MensCircle from "./pages/sanctuary/MensCircle";
+import WomensCircle from "./pages/sanctuary/WomensCircle";
 import KamboRedirect from "./pages/KamboRedirect";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
@@ -128,6 +130,8 @@ const App = () => (
             <Route path="/cacao" element={<CacaoCeremony />} />
             <Route path="/level5" element={<Level5Ceremony />} />
             <Route path="/level-5" element={<Level5Ceremony />} />
+            <Route path="/mens-circle" element={<MensCircle />} />
+            <Route path="/womens-circle" element={<WomensCircle />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:slug" element={<JournalPost />} />

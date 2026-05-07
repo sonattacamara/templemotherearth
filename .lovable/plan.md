@@ -1,83 +1,44 @@
-## Goals
+# Add Men's & Women's Integration Circle Pages
 
-1. Make sure each step of `/ceremony-intake` validates correctly with clear inline errors (no more silent "stuck on step 3").
-2. Add a protected `/admin/intakes` page that lists, searches and filters submitted ceremony intakes from `form_submissions`.
+Two new sanctuary pages with Eventbrite CTAs, added to the Experiences dropdown.
 
----
+## New Pages
 
-## Part 1 — Ceremony Intake validation hardening
+**1. `/mens-circle` — The Cove: A Men's Healing Reflection Circle**
+- Hero: brotherhood, reflection, sacred masculine
+- Sections: What it is · Who it's for · What to expect · Sacred reciprocity
+- CTA button → `https://www.eventbrite.com/e/the-cove-a-mens-healing-reflection-circle-tickets-1982328123781?aff=ebdsoporgprofile`
+- Secondary CTA → `/ceremony-intake`
 
-The form already uses Zod + `validationErrors` + a toast, but only Step 1 fields render the `data-error` wrapper. When a Step 2/3/4/6 field fails, the auto-scroll falls through to "scroll to top of form," which on long Step 4 looks like nothing happened — this is the "stuck" symptom.
+**2. `/womens-circle` — Women's Wellness Wednesdays**
+- Hero: sisterhood, weekly rhythm, feminine wisdom
+- Sections: What it is · Who it's for · What to expect · Sacred reciprocity
+- CTA button → `https://www.eventbrite.com/e/womens-wellness-wednesdays-tickets-1513680431919?aff=oddtdtcreator&keep_tld=true`
+- Secondary CTA → `/ceremony-intake`
 
-Fixes in `src/pages/CeremonyIntake.tsx`:
+Both built with existing `SanctuaryHero`, `SanctuarySection`, `SanctuaryCTA`, `SanctuaryColCards`, `SanctuaryPullQuote` components for visual consistency with other ceremony pages. RFRA-safe language throughout (sacred reflection, integration, community — no clinical/therapy terms).
 
-- Step 2 (emergency contact) and Step 3 (ceremony selection): wrap each required field's container with `data-error={!!validationErrors.<field>}` and add the red ring + inline `<p className="text-xs text-destructive">` message under each. Currently only `ceremonyType`/`experienceLevel`/`intentions` show inline messages; do the same for `emergencyName`, `emergencyPhone`, `emergencyRelation`.
-- Step 4: add `data-error` wrappers around every field that `getStep4ValidationErrors()` can flag (medications block, mental health block, substances block, allergies/body, ceremony experience, Kambo block). Today only the toast shows — users can't see which radio is missing. Add inline `<p className="text-xs text-destructive">` under each field group.
-- Step 6 agreements: add the same `data-error` wrapper + inline message under each unchecked required checkbox so users immediately see which box blocks submission.
-- `scrollToValidationTarget()` already targets `[data-error="true"]` — no change needed once the wrappers exist.
-- Show a persistent banner at the top of any step that has errors: "Please complete the highlighted fields below" so the user has a visual cue beyond the toast.
-- Keep the existing `canProceed()` button-dim behavior, but always allow clicking "Continue" so `validateStep()` runs and surfaces messages (right now the button is dimmed but still clickable — fine; just ensure styling reads as actionable).
+## Navigation
 
-No schema or backend change needed for Part 1.
+Add two entries to the **Experiences** dropdown in `src/components/Navigation.tsx` (alphabetical-ish, grouped naturally):
+- Men's Circle (The Cove)
+- Women's Wellness Wednesdays
 
----
+## Routing
 
-## Part 2 — Admin Intakes review page
+Register both routes in `src/App.tsx`:
+- `/mens-circle` → `MensCircle`
+- `/womens-circle` → `WomensCircle`
 
-### Database
+## SEO
 
-`form_submissions` already exists with RLS: `Only admins can read form submissions` using `has_role(auth.uid(), 'admin')`. The `app_role` enum has `{admin, user}`. No migration required for the table itself.
+Each page gets `<SEOHead>` with unique title/description and is added to `public/sitemap.xml`.
 
-To grant access I'll need at least one admin row in `user_roles`. Plan:
-- Add an `is_current_user_admin()` SQL helper (optional convenience) — or just reuse `has_role`.
-- Provide a migration that inserts an admin row for the user-specified email (will ask which email at implementation time, or the user can run it themselves from Cloud).
+## Files
 
-### Route + page
+- **Create**: `src/pages/sanctuary/MensCircle.tsx`, `src/pages/sanctuary/WomensCircle.tsx`
+- **Edit**: `src/App.tsx` (routes), `src/components/Navigation.tsx` (Experiences dropdown), `public/sitemap.xml`
 
-New file `src/pages/AdminIntakes.tsx`, registered at `/admin/intakes` in `src/App.tsx`.
+## Open question
 
-Behavior:
-- Requires login (redirect to `/member/auth` if no `user`).
-- Checks `user_roles` for `admin` (same pattern as `Analytics.tsx`). Non-admins see an "Access denied" panel.
-- Loads `form_submissions` where `form_name = 'ceremony-intake'`, ordered by `created_at desc`, limit 200.
-- Top toolbar:
-  - Free-text search (matches name, email, phone in `metadata`).
-  - Filter by `ceremonyType` (dropdown of distinct values).
-  - Date range (last 7 / 30 / 90 / all).
-  - "Flagged only" toggle (any flagged condition or Kambo contraindication).
-  - CSV export of the filtered list.
-- Table columns: Submitted, Name, Email, Phone, Ceremony, Experience, Flags badge, "View" button.
-- Clicking a row opens a side `Sheet` (shadcn) showing the full intake nicely sectioned (Personal, Emergency, Ceremony, Health, Mental Health, Substances, Body, Previous Ceremony, Kambo, Intentions, Inner Landscape, Agreements). Render straight from `metadata` JSON using a small label map.
-- "Open in GHL" link if a GHL contact ID is saved (skip if not present).
-
-### Navigation
-
-Add a small "Admin" section to the member portal sidebar / header that's only visible to admins, with links to `/analytics` and `/admin/intakes`. Pure UI gating; security stays server-side via RLS.
-
----
-
-## Technical details
-
-Files to edit:
-- `src/pages/CeremonyIntake.tsx` — add `data-error` + inline error text on Step 2, 3, 4, 6 fields; add error banner at top of each step.
-
-Files to create:
-- `src/pages/AdminIntakes.tsx` — admin-gated review UI.
-- `src/components/admin/IntakeDetailSheet.tsx` — formatted full-intake view.
-
-Files to update:
-- `src/App.tsx` — add `/admin/intakes` route.
-- `src/components/Navigation.tsx` (or portal header) — conditional Admin link.
-
-Migration:
-- Insert an admin role in `user_roles` for the designated user (will confirm email when implementing).
-
-No edge function changes. No changes to `submit-intake` or GHL integration.
-
----
-
-## Out of scope
-
-- Editing or deleting submissions (table has no UPDATE/DELETE policies; intakes are immutable by design).
-- Re-architecting the intake form structure or wording.
-- Adding email notifications on new intake.
+Do you want hero imagery for these pages? If yes, I can generate two on-brand watercolor images (one circle of men, one circle of women) — otherwise I'll use a clean typographic hero matching the Sacred Tea / Hapé pages.
