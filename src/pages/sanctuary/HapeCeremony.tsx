@@ -6,6 +6,7 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
+import EventbriteCheckout from "@/components/EventbriteCheckout";
 import { Helmet } from "react-helmet-async";
 
 const hapeJsonLd = {
@@ -80,14 +81,26 @@ const HapeCeremony = () => (
       </div>
     </SanctuarySection>
 
-    <SanctuaryCTA
-      eyebrow="Recurring Offering · Washington, DC"
-      title={<>The Forest<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Has Been Waiting</em></>}
-      description="You already know if this is for you. Secure your place and begin your preparation. The circle holds what arrives."
-      ctaLabel="Secure Your Place"
-      ctaHref="https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true"
-      note="Community Care Model · Suggested sacred contribution · Scholarship available · Ask us"
-    />
+    <section className="bg-[hsl(140,28%,4%)] border-t border-[hsla(45,70%,49%,0.1)] px-6 md:px-12 py-20 text-center">
+      <p className="font-sans text-[10px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] mb-3">
+        Recurring Offering · Washington, DC
+      </p>
+      <h2 className="font-display text-3xl md:text-5xl text-[hsl(40,30%,90%)] mb-5 leading-tight">
+        The Forest<br />
+        <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Has Been Waiting</em>
+      </h2>
+      <p className="max-w-[640px] mx-auto text-[hsl(35,30%,82%)] font-serif text-lg leading-relaxed mb-8">
+        You already know if this is for you. Secure your place and begin your preparation. The circle holds what arrives.
+      </p>
+      <EventbriteCheckout
+        eventId="946929721287"
+        label="Secure Your Place"
+        fallbackUrl="https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287"
+      />
+      <p className="mt-6 font-sans text-[10px] tracking-[2px] uppercase text-[hsl(35,30%,55%)]">
+        Community Care Model · Suggested sacred contribution · Scholarship available · Ask us
+      </p>
+    </section>
 
     {/* RFRA Statement */}
     <div className="bg-[hsl(140,28%,4%)] border-t border-[hsla(45,70%,49%,0.1)] py-8 px-6 md:px-12">
