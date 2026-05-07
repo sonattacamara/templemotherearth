@@ -18,7 +18,7 @@ const DonationCanceled = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Donation Not Completed"
-        description="Your donation to Temple Mother Earth was not completed. We understand — there are many ways to support our mission."
+        description="Your donation to Temple Mother Earth was not completed. We understand · there are many ways to support our mission."
         path="/donation-canceled"
       />
       <Navigation />
@@ -63,7 +63,7 @@ const DonationCanceled = () => {
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground"
           >
-            We understand — and there's absolutely no pressure. The Temple is here for you whenever
+            We understand · and there's absolutely no pressure. The Temple is here for you whenever
             you're ready, and there are many ways to support our mission beyond financial contributions.
           </motion.p>
 
@@ -173,7 +173,7 @@ const DonationCanceled = () => {
               },
               {
                 q: "Is there a minimum donation?",
-                a: "There is no minimum. Every offering — no matter the size — is received with gratitude and makes a meaningful difference.",
+                a: "There is no minimum. Every offering · no matter the size · is received with gratitude and makes a meaningful difference.",
               },
               {
                 q: "Can I donate by check or other means?",

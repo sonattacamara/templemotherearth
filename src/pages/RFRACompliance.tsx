@@ -26,7 +26,7 @@ const sections = [
     content: [
       "The **Religious Freedom Restoration Act of 1993** (42 U.S.C. § 2000bb et seq.) prohibits the federal government from substantially burdening a person's exercise of religion unless it demonstrates a compelling governmental interest and uses the least restrictive means.",
       "Temple Mother Earth's ceremonial use of plant sacraments constitutes sincere religious practice protected under RFRA.",
-      "Our ceremonies are conducted with the highest standards of safety, preparation, and sacred intention — not for recreational or commercial purposes.",
+      "Our ceremonies are conducted with the highest standards of safety, preparation, and sacred intention · not for recreational or commercial purposes.",
       "Every participant undergoes thorough sacred screening and preparation before engaging in any ceremonial sacrament.",
     ],
   },
@@ -46,7 +46,7 @@ const sections = [
     content: [
       "All ceremonies are facilitated by trained, experienced practitioners with deep knowledge of the sacraments they serve.",
       "Mandatory **sacred intake screening** ensures the physical, psychological, and spiritual readiness of every participant.",
-      "Medical contraindications and safety protocols are strictly observed — no exceptions.",
+      "Medical contraindications and safety protocols are strictly observed · no exceptions.",
       "Emergency protocols are in place for every ceremony, with facilitators trained in crisis response.",
       "We maintain a strict **21+ age policy** for all sacramental ceremonies.",
     ],
@@ -55,7 +55,7 @@ const sections = [
     icon: Scroll,
     title: "Sacramental Framework",
     content: [
-      "Our plant sacraments — including Kambo, Cacao, Hapé, Ayahuasca, and others — are used exclusively within structured ceremonial contexts.",
+      "Our plant sacraments · including Kambo, Cacao, Hapé, Ayahuasca, and others · are used exclusively within structured ceremonial contexts.",
       "Sacraments are never distributed for personal or recreational use outside of ceremony.",
       "Each ceremony follows established ritual protocols rooted in ancestral tradition and adapted for our community's needs.",
       "Participation requires Temple membership, completion of the sacred intake form, and facilitator approval.",
@@ -67,7 +67,7 @@ const sections = [
     title: "Community Standards",
     content: [
       "All members and participants agree to our **Code of Conduct**, which upholds the dignity, safety, and sacredness of our community.",
-      "Confidentiality is paramount — what happens in ceremony stays in ceremony.",
+      "Confidentiality is paramount · what happens in ceremony stays in ceremony.",
       "We operate on a sliding-scale contribution model to ensure access is not limited by financial means.",
       "Integration support is provided after every ceremony to ensure participants process their experiences safely.",
       "We maintain transparency in our organizational governance and financial stewardship.",

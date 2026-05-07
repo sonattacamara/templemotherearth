@@ -58,7 +58,7 @@ const PrivateCeremonies = () => {
       <section className="px-4 py-16">
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
-            { icon: Shield, title: "Undivided Attention", desc: "Your facilitator's complete focus is on you — your needs, your pace, your journey. No group dynamics to navigate." },
+            { icon: Shield, title: "Undivided Attention", desc: "Your facilitator's complete focus is on you · your needs, your pace, your journey. No group dynamics to navigate." },
             { icon: Sparkles, title: "Deeply Personalized", desc: "Every element of the ceremony is tailored to your specific intentions, transformation goals, and spiritual path." },
             { icon: Users, title: "Flexible Setting", desc: "Private ceremonies can be held at our DC sanctuary or at your preferred location. We create the sacred container wherever you need it." },
           ].map((item) => (
@@ -105,7 +105,7 @@ const PrivateCeremonies = () => {
                 <input className={inputClass} type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => update("phone", e.target.value)} required />
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">What type of ceremony are you seeking? *</label>
-                  {["Kambo Purification Ceremony", "Hapé Session", "Sacred Mother Earth Ceremony", "Not sure — I'd like guidance from a facilitator"].map((opt) => (
+                  {["Kambo Purification Ceremony", "Hapé Session", "Sacred Mother Earth Ceremony", "Not sure · I'd like guidance from a facilitator"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="ceremonyType" className="mr-3 h-4 w-4 accent-primary" checked={form.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} required />
                       {opt}
@@ -114,7 +114,7 @@ const PrivateCeremonies = () => {
                 </div>
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Earth Medicine experience level</label>
-                  {["First time — I'm new to Earth Medicine", "Some experience (1-3 ceremonies)", "Experienced practitioner"].map((opt) => (
+                  {["First time · I'm new to Earth Medicine", "Some experience (1-3 ceremonies)", "Experienced practitioner"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="experience" className="mr-3 h-4 w-4 accent-primary" checked={form.experience === opt} onChange={() => update("experience", opt)} />
                       {opt}

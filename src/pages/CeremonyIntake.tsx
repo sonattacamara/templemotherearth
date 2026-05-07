@@ -24,20 +24,20 @@ const fadeUp = {
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
 const CONTRAINDICATED_MEDICATIONS = [
-  { key: "ssri", label: "SSRIs (Selective Serotonin Reuptake Inhibitors) — e.g., Prozac, Zoloft, Lexapro, Celexa, Paxil" },
-  { key: "snri", label: "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors) — e.g., Effexor, Cymbalta, Pristiq" },
-  { key: "maoi", label: "MAOIs (Monoamine Oxidase Inhibitors) — e.g., Nardil, Parnate, Marplan, Selegiline, Emsam" },
-  { key: "ndri", label: "NDRIs (Norepinephrine-Dopamine Reuptake Inhibitors) — e.g., Wellbutrin, Bupropion, Focalin" },
-  { key: "tca", label: "Tricyclic Antidepressants — e.g., Amitriptyline, Nortriptyline, Imipramine, Anafranil" },
+  { key: "ssri", label: "SSRIs (Selective Serotonin Reuptake Inhibitors) · e.g., Prozac, Zoloft, Lexapro, Celexa, Paxil" },
+  { key: "snri", label: "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors) · e.g., Effexor, Cymbalta, Pristiq" },
+  { key: "maoi", label: "MAOIs (Monoamine Oxidase Inhibitors) · e.g., Nardil, Parnate, Marplan, Selegiline, Emsam" },
+  { key: "ndri", label: "NDRIs (Norepinephrine-Dopamine Reuptake Inhibitors) · e.g., Wellbutrin, Bupropion, Focalin" },
+  { key: "tca", label: "Tricyclic Antidepressants · e.g., Amitriptyline, Nortriptyline, Imipramine, Anafranil" },
   { key: "lithium", label: "Lithium (mood stabilizer)" },
-  { key: "benzodiazepines", label: "Benzodiazepines — e.g., Xanax, Klonopin, Ativan, Valium" },
-  { key: "antipsychotics", label: "Antipsychotics — e.g., Seroquel, Risperdal, Zyprexa, Abilify" },
-  { key: "stimulants", label: "Stimulants / ADHD Medications — e.g., Adderall, Ritalin, Vyvanse, Concerta" },
-  { key: "bloodThinners", label: "Blood Thinners / Anticoagulants — e.g., Warfarin, Heparin, Eliquis" },
-  { key: "bloodPressureMeds", label: "Blood Pressure Medications — e.g., Lisinopril, Metoprolol, Amlodipine" },
-  { key: "opioids", label: "Opioids / Narcotic Pain Medications — e.g., Oxycodone, Vicodin, Codeine, Fentanyl, Methadone, Tramadol" },
-  { key: "immunosuppressants", label: "Immunosuppressants — e.g., Methotrexate, Prednisone (long-term)" },
-  { key: "sleepAids", label: "Sleep Medications — e.g., Ambien, Trazodone, Lunesta" },
+  { key: "benzodiazepines", label: "Benzodiazepines · e.g., Xanax, Klonopin, Ativan, Valium" },
+  { key: "antipsychotics", label: "Antipsychotics · e.g., Seroquel, Risperdal, Zyprexa, Abilify" },
+  { key: "stimulants", label: "Stimulants / ADHD Medications · e.g., Adderall, Ritalin, Vyvanse, Concerta" },
+  { key: "bloodThinners", label: "Blood Thinners / Anticoagulants · e.g., Warfarin, Heparin, Eliquis" },
+  { key: "bloodPressureMeds", label: "Blood Pressure Medications · e.g., Lisinopril, Metoprolol, Amlodipine" },
+  { key: "opioids", label: "Opioids / Narcotic Pain Medications · e.g., Oxycodone, Vicodin, Codeine, Fentanyl, Methadone, Tramadol" },
+  { key: "immunosuppressants", label: "Immunosuppressants · e.g., Methotrexate, Prednisone (long-term)" },
+  { key: "sleepAids", label: "Sleep Medications · e.g., Ambien, Trazodone, Lunesta" },
   { key: "asthmaInhaler", label: "Asthma Inhalers / Asthma Medications" },
   { key: "lTryptophan", label: "L-Tryptophan supplements" },
   { key: "herbsSupplements", label: "5-HTP, St. John's Wort, or other serotonergic supplements" },
@@ -774,7 +774,7 @@ const CeremonyIntake = () => {
               <h3 className="font-display text-xl font-bold text-card-foreground">Ceremony Selection</h3>
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Which ceremony are you seeking? *</label>
-                {["Sacred Series (Monthly 7-Day Series)", "Kambo Ceremony", "Hapé Circle", "Sacred Tea Ceremony", "Sacred Mother Earth Ceremony", "Cacao Ceremony", "Level 5 — The Complete Initiation", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure — I'd like guidance"].map((opt) => (
+                {["Sacred Series (Monthly 7-Day Series)", "Kambo Ceremony", "Hapé Circle", "Sacred Tea Ceremony", "Sacred Mother Earth Ceremony", "Cacao Ceremony", "Level 5 · The Complete Initiation", "Integration Circle", "Private / 1-on-1 Ceremony", "Not sure · I'd like guidance"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="ceremonyType" className={radioClass} checked={formData.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} />
                     {opt}
@@ -784,7 +784,7 @@ const CeremonyIntake = () => {
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-foreground">Experience Level *</label>
-                {["First time — I'm new to Earth Medicine", "I've participated in 1-3 ceremonies", "Experienced — I've sat in many ceremonies", "Practitioner / Facilitator"].map((opt) => (
+                {["First time · I'm new to Earth Medicine", "I've participated in 1-3 ceremonies", "Experienced · I've sat in many ceremonies", "Practitioner / Facilitator"].map((opt) => (
                   <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                     <input type="radio" name="experienceLevel" className={radioClass} checked={formData.experienceLevel === opt} onChange={() => update("experienceLevel", opt)} />
                     {opt}
@@ -800,17 +800,17 @@ const CeremonyIntake = () => {
 
               <div>
                 <label className="mb-1 block text-sm font-medium text-foreground">How did you find us? Please state full name if you were referred by someone. *</label>
-                <input className={inputClass} placeholder="e.g. Instagram, Friend referral — Jane Smith" value={formData.referralName} onChange={(e) => update("referralName", e.target.value)} />
+                <input className={inputClass} placeholder="e.g. Instagram, Friend referral · Jane Smith" value={formData.referralName} onChange={(e) => update("referralName", e.target.value)} />
               </div>
 
               <div>
                 <label className="mb-1 block text-sm font-medium text-foreground">Can you tell us about the current challenges you're navigating in your life?</label>
-                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Optional — share what feels right" value={formData.currentChallenges} onChange={(e) => update("currentChallenges", e.target.value)} />
+                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Optional · share what feels right" value={formData.currentChallenges} onChange={(e) => update("currentChallenges", e.target.value)} />
               </div>
 
               <div>
                 <label className="mb-1 block text-sm font-medium text-foreground">Would you like to inform us of any triggers related to past trauma?</label>
-                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Optional — this helps our facilitators hold space for you safely" value={formData.traumaTriggers} onChange={(e) => update("traumaTriggers", e.target.value)} />
+                <textarea className={inputClass + " min-h-[80px] resize-none"} placeholder="Optional · this helps our facilitators hold space for you safely" value={formData.traumaTriggers} onChange={(e) => update("traumaTriggers", e.target.value)} />
               </div>
 
               <div>
@@ -878,7 +878,7 @@ const CeremonyIntake = () => {
 
                 {/* Contraindicated Medications Checklist */}
                 <div>
-                  <label className="mb-2 block text-sm font-medium text-foreground">Contraindicated Medications — Are you currently taking any of the following?</label>
+                  <label className="mb-2 block text-sm font-medium text-foreground">Contraindicated Medications · Are you currently taking any of the following?</label>
                   <div className="rounded-lg bg-destructive/10 p-3 text-sm text-destructive mb-3">
                     <AlertTriangle className="inline h-4 w-4 mr-1" /> <strong>Critical Warning:</strong> Many of these medications can cause <strong>serotonin syndrome</strong> or other life-threatening reactions. <strong>Do not stop any medication without consulting your doctor.</strong>
                   </div>
@@ -1552,12 +1552,12 @@ const CeremonyIntake = () => {
               <div className="rounded-lg border border-primary/20 bg-primary/5 p-4 text-sm text-foreground space-y-3">
                 <p className="font-semibold font-display text-base">Our Statement of Beliefs</p>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• We believe that the Earth is sacred and that her medicines — Kambo, Hapé, Cacao, and sacred plant allies — are divine gifts given to humanity for healing, spiritual growth, and reconnection with the Creator within.</li>
-                  <li>• We believe that every human being is a sovereign being — a divine essence having a human experience — and that each person carries the God within.</li>
+                  <li>• We believe that the Earth is sacred and that her medicines · Kambo, Hapé, Cacao, and sacred plant allies · are divine gifts given to humanity for healing, spiritual growth, and reconnection with the Creator within.</li>
+                  <li>• We believe that every human being is a sovereign being · a divine essence having a human experience · and that each person carries the God within.</li>
                   <li>• We believe in the power of ceremony as a sincere religious exercise, practiced in community with intention, reverence, and accountability.</li>
                   <li>• We believe that healing is a personal responsibility and that Earth Medicine, when used sacramentally, is a pathway to spiritual awakening, not a substitute for medical care.</li>
                   <li>• We believe in ethical reciprocity with indigenous wisdom keepers who carry these ancestral traditions, and we honor their lineages through partnership and giving back.</li>
-                  <li>• We believe in radical inclusivity — welcoming all seekers regardless of race, gender, background, or status — while remaining rooted in the BIPOC community that founded this temple.</li>
+                  <li>• We believe in radical inclusivity · welcoming all seekers regardless of race, gender, background, or status · while remaining rooted in the BIPOC community that founded this temple.</li>
                 </ul>
               </div>
               {/* Eligibility Statement */}
@@ -1688,7 +1688,7 @@ const CeremonyIntake = () => {
         </div>
       </section>
 
-      {/* Keyword-rich SEO section — visible to crawlers, hidden from users */}
+      {/* Keyword-rich SEO section · visible to crawlers, hidden from users */}
       <section className="sr-only" aria-label="Earth Medicine Ceremony Information">
         <h2>Sacred Earth Medicine Ceremonies at Temple Mother Earth</h2>
         <p>

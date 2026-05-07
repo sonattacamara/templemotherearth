@@ -50,11 +50,11 @@ const Conduct = () => {
                 <h2 className="font-display text-xl font-bold text-foreground">Sacred Space Agreement</h2>
               </div>
               <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                <p>By entering Temple Mother Earth — physically or through our virtual community — you agree to honor the following principles:</p>
+                <p>By entering Temple Mother Earth · physically or through our virtual community · you agree to honor the following principles:</p>
                 <ul className="space-y-2 pl-4">
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I honor the sovereignty of every being present.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I will treat all members, facilitators, and guests with respect and compassion.</li>
-                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I understand that what is shared in circle stays in circle — confidentiality is sacred.</li>
+                  <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I understand that what is shared in circle stays in circle · confidentiality is sacred.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I will not attend ceremonies under the influence of alcohol or non-sacramental substances.</li>
                   <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />I take full personal responsibility for my ceremonial journey.</li>
                 </ul>
@@ -72,7 +72,7 @@ const Conduct = () => {
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />No photography or recording during sacred ceremonies unless explicitly permitted.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Remain within the ceremonial space until the facilitator closes the ceremony.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />If you feel unsafe or uncomfortable at any time, communicate with your facilitator immediately.</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Respect the space — leave it cleaner than you found it.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Respect the space · leave it cleaner than you found it.</li>
               </ul>
             </motion.div>
 
@@ -84,7 +84,7 @@ const Conduct = () => {
               <ul className="space-y-2 pl-4 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />No harassment, discrimination, or disrespect of any kind will be tolerated.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Honor the lived experiences and ceremonial journeys of others without judgment.</li>
-                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Practice active listening — hold space rather than offering unsolicited advice.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Practice active listening · hold space rather than offering unsolicited advice.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Respect the physical boundaries of all community members at all times.</li>
                 <li className="flex items-start gap-2"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />Children are welcome at family-friendly events only (Community Day, Soulful Sundays, Cacao Ceremony). All Earth Medicine ceremonies are 21+.</li>
               </ul>

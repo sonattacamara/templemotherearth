@@ -122,7 +122,7 @@ const DonationSuccess = () => {
               {
                 icon: Leaf,
                 title: "Funds Allocated",
-                desc: "Your donation is designated to its intended purpose — whether veteran sponsorship, ceremony scholarships, or the general Temple fund — and deployed within the current operating cycle.",
+                desc: "Your donation is designated to its intended purpose · whether veteran sponsorship, ceremony scholarships, or the general Temple fund · and deployed within the current operating cycle.",
               },
               {
                 icon: Heart,

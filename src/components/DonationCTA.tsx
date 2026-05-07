@@ -86,7 +86,7 @@ const DonationCTA = ({
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 rounded-xl px-8 py-3.5 font-body text-sm font-semibold shadow-lg transition ${s.button}`}
-            aria-label={`${buttonLabel} — donate to Temple Mother Earth via PayPal`}
+            aria-label={`${buttonLabel} · donate to Temple Mother Earth via PayPal`}
           >
             <HandHeart className="h-4 w-4" />
             {buttonLabel}

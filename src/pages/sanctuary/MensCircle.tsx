@@ -11,7 +11,7 @@ const EVENTBRITE_URL =
 const MensCircle = () => (
   <SacredSeriesLayout
     title="The Cove · Men's Reflection Circle · Temple Mother Earth"
-    description="The Cove — a sacred men's reflection and integration circle held at Temple Mother Earth, Washington DC. Brotherhood, presence, and the embodied masculine."
+    description="The Cove · a sacred men's reflection and integration circle held at Temple Mother Earth, Washington DC. Brotherhood, presence, and the embodied masculine."
     path="/mens-circle"
   >
     <SanctuaryHero
@@ -26,7 +26,7 @@ const MensCircle = () => (
         </>
       }
       subtitle=""
-      lead="The Cove is a men's reflection and integration circle — a sanctuary where brothers gather in honesty, in stillness, and in the courage it takes to be fully seen."
+      lead="The Cove is a men's reflection and integration circle · a sanctuary where brothers gather in honesty, in stillness, and in the courage it takes to be fully seen."
       primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: true }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
       backgroundImage="https://images.pexels.com/photos/2422294/pexels-photo-2422294.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
@@ -46,7 +46,7 @@ const MensCircle = () => (
     >
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>
-          The Cove is a sacred container for men who are tired of carrying everything alone — and who are ready to remember that the embodied masculine is built in circle, not in isolation.
+          The Cove is a sacred container for men who are tired of carrying everything alone · and who are ready to remember that the embodied masculine is built in circle, not in isolation.
         </p>
         <p>
           Each gathering opens with grounding practice and moves into guided reflection, council-style sharing, and integration. What is spoken in The Cove stays in The Cove.
@@ -74,7 +74,7 @@ const MensCircle = () => (
           {
             title: "The Seeker",
             description:
-              "Men in transition — career, fatherhood, partnership, loss — who feel the call to gather with others walking the same threshold.",
+              "Men in transition · career, fatherhood, partnership, loss · who feel the call to gather with others walking the same threshold.",
             note: "ALL ARE WELCOME",
           },
           {
@@ -107,7 +107,7 @@ const MensCircle = () => (
           <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Waiting For You</em>
         </>
       }
-      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it — write to us."
+      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us."
       ctaLabel="Reserve Your Seat"
       ctaHref={EVENTBRITE_URL}
       note="21+ · Pre-registration required · Confidentiality honored"

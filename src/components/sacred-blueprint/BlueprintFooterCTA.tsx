@@ -22,7 +22,7 @@ const BlueprintFooterCTA = () => (
         Not Sure Where to Begin?
       </motion.h3>
       <motion.p variants={fadeUp} className="mt-4 text-muted-foreground leading-relaxed">
-        Start with a free Welcome Circle membership. Explore the Temple, get to know our community, and feel if this space resonates with your spirit — no commitment required.
+        Start with a free Welcome Circle membership. Explore the Temple, get to know our community, and feel if this space resonates with your spirit · no commitment required.
       </motion.p>
       <motion.div variants={fadeUp} className="mt-8">
         <Link

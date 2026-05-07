@@ -27,7 +27,7 @@ const CommunityPotluck = () => (
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>There is a particular kind of loneliness that comes from doing deep work alone. You have experiences that can't be explained to most people. You are looking for people who understand without explanation.</p>
         <p><strong className="text-[hsl(45,70%,49%)]">People who have sat in ceremony and are integrating. People who are curious and drawn but haven't stepped in yet. People who are just looking for a table where the conversation goes somewhere real.</strong></p>
-        <p>The Sacred Tea House will be open throughout the evening. The integration circle creates space for what you are carrying. And the potluck — food made with intention, shared with people who are genuinely present — is its own form of ceremony.</p>
+        <p>The Sacred Tea House will be open throughout the evening. The integration circle creates space for what you are carrying. And the potluck · food made with intention, shared with people who are genuinely present · is its own form of ceremony.</p>
       </div>
     </SanctuarySection>
 

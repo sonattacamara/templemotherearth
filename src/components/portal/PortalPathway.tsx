@@ -30,13 +30,13 @@ const pathwaySteps = [
     stage: "Train", tier: "Environment Collective", icon: Leaf,
     color: "text-emerald-500", bgColor: "bg-emerald-500/10",
     description: "Deepen your practice. Build the daily discipline that prepares your body, mind, and spirit for deeper ceremony work.",
-    includes: ["Everything in Community Rhythm", "Live virtual Qi Gong (Mon–Fri)", "Breathwork & movement sessions", "Wellness workshops & skill shares", "Access to facilitator Q&A sessions"],
+    includes: ["Everything in Community Rhythm", "Live virtual Qi Gong (Mon·Fri)", "Breathwork & movement sessions", "Wellness workshops & skill shares", "Access to facilitator Q&A sessions"],
     action: "Join Environment Collective →",
   },
   {
     stage: "Prepare", tier: "Preparation Path", icon: Shield,
     color: "text-blue-500", bgColor: "bg-blue-500/10",
-    description: "Enter the preparation phase. This is where the real inner work begins — clearing, cleansing, and readying yourself for ceremony.",
+    description: "Enter the preparation phase. This is where the real inner work begins · clearing, cleansing, and readying yourself for ceremony.",
     includes: ["Everything in Environment Collective", "Ceremony eligibility after 3 months", "1-on-1 facilitator guidance", "Sacred intake & medical screening", "Preparation circles & education", "Integration support sessions"],
     action: "Begin Preparation Path →",
   },
@@ -63,7 +63,7 @@ const PortalPathway = () => (
           Your Pathway of Evolution
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-          Temple Mother Earth membership follows a sacred progression — each stage represents a threshold of inner evolution and readiness.
+          Temple Mother Earth membership follows a sacred progression · each stage represents a threshold of inner evolution and readiness.
           Move at your own pace. There is no rush; only remembering.
         </p>
       </motion.div>

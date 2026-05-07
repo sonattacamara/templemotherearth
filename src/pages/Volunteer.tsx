@@ -56,7 +56,7 @@ const Volunteer = () => {
       <section className="px-4 py-16">
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
-            { icon: Leaf, title: "Sacred Grounds", desc: "Help maintain our temple grounds, garden, and sacred spaces — tending to the Earth that sustains us." },
+            { icon: Leaf, title: "Sacred Grounds", desc: "Help maintain our temple grounds, garden, and sacred spaces · tending to the Earth that sustains us." },
             { icon: Users, title: "Community Events", desc: "Support our ceremonies, potlucks, yoga sessions, and community days with setup, greeting, and coordination." },
             { icon: Heart, title: "Outreach & Growth", desc: "Help spread the word, welcome newcomers, and build bridges with the broader DC community." },
           ].map((item) => (
@@ -85,7 +85,7 @@ const Volunteer = () => {
             sacred ceremony participation.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Whether it's tending the grounds, supporting events, preparing meals, or lending your professional skills —
+            Whether it's tending the grounds, supporting events, preparing meals, or lending your professional skills ·
             your energy is valued and honored. By exchanging energy in service to the community, you open the door to
             your own sacred path. No one is turned away.
           </p>

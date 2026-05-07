@@ -13,7 +13,7 @@ const PULL = "text-[20px] md:text-[22px] text-[hsl(45,70%,72%)] italic font-seri
 const CommunityCare = () => (
   <SacredSeriesLayout
     title="Sacred Reciprocity · A Philosophy of Energy · Temple Mother Earth"
-    description="Everything is energy. Time, money, prayer, presence. Discover how sacred reciprocity holds the temple — and how you are invited to participate."
+    description="Everything is energy. Time, money, prayer, presence. Discover how sacred reciprocity holds the temple · and how you are invited to participate."
     showBackLink={true}
   >
     {/* ═══════ HERO ═══════ */}
@@ -28,7 +28,7 @@ const CommunityCare = () => (
           <em className="font-serif italic text-[hsl(45,70%,62%)] text-[1.1em]">Reciprocity</em>
         </h1>
         <p className="font-serif italic text-[clamp(19px,2vw,24px)] text-[hsl(40,30%,88%)] max-w-[640px] mx-auto leading-relaxed mb-6">
-          This is not a pricing page. This is a philosophy of energy — yours, ours, and the unseen current that flows between us.
+          This is not a pricing page. This is a philosophy of energy · yours, ours, and the unseen current that flows between us.
         </p>
         <p className="text-[16px] text-[hsl(40,25%,80%)] max-w-[600px] mx-auto leading-relaxed font-serif">
           Time is energy. Money is energy. Prayer is energy. Presence is energy. The temple is held by the careful, sacred circulation of all of it.
@@ -43,13 +43,13 @@ const CommunityCare = () => (
     >
       <div className="max-w-[760px] mx-auto text-center space-y-6">
         <p className={BODY}>
-          When you arrive, the doors open. The candles are lit. The space feels held. What you may not feel — what you cannot see — is the river of energy that flowed for weeks before you walked in.
+          When you arrive, the doors open. The candles are lit. The space feels held. What you may not feel · what you cannot see · is the river of energy that flowed for weeks before you walked in.
         </p>
         <p className={BODY_SOFT}>
           The Sanctuary buildings and grounds were tended. The altars were rebuilt. The sacred earth offerings were prayed over by lineage holders before they ever reached our hands. Facilitators sat in their own ceremonies, completed their own integration work, and dedicated years to becoming a vessel safe enough to hold yours.
         </p>
         <p className={BODY_SOFT}>
-          Firewood was split. Linens were washed. Food was prepared with intention. Safety protocols, medical screenings, and sacred protections were renewed. Prayers were spoken into every corner of the room — long before your name was on the list.
+          Firewood was split. Linens were washed. Food was prepared with intention. Safety protocols, medical screenings, and sacred protections were renewed. Prayers were spoken into every corner of the room · long before your name was on the list.
         </p>
         <p className={`${PULL} mt-8`}>
           What you experience as "one ceremony" is months of energy converging in a single sacred container. Your offering honors the unseen current that made your seat possible.
@@ -72,7 +72,7 @@ const CommunityCare = () => (
           Your time is energy. Your money is energy. Your prayers are energy. Your presence in the circle is energy. When any of these flow toward the temple, they ripple back out to the next seeker who needs what you needed.
         </p>
         <p className={BODY_SOFT}>
-          This is not transactional. This is ceremonial. The same way a river only stays alive because water keeps moving — sacred community only stays alive because energy keeps moving through it.
+          This is not transactional. This is ceremonial. The same way a river only stays alive because water keeps moving · sacred community only stays alive because energy keeps moving through it.
         </p>
         <div className="mt-10 p-8 md:p-10 border border-[hsla(45,70%,49%,0.3)] rounded-2xl bg-[hsla(45,70%,49%,0.06)]">
           <p className="text-[20px] text-[hsl(45,70%,72%)] italic leading-relaxed font-serif">
@@ -91,7 +91,7 @@ const CommunityCare = () => (
     >
       <div className="max-w-[760px] mx-auto text-center space-y-6">
         <p className={BODY}>
-          Temple Mother Earth is not a business. We are a village. And every village needs guardians — people whose energy keeps the fire lit, the doors open, and the table set.
+          Temple Mother Earth is not a business. We are a village. And every village needs guardians · people whose energy keeps the fire lit, the doors open, and the table set.
         </p>
         <p className={BODY_SOFT}>
           Your offering does not buy you a seat. It sustains the energy that made your seat possible. When you give as a Sustainer, you are holding the door open for the seeker who comes behind you. When you receive a scholarship, someone before you held that door open for you.
@@ -139,7 +139,7 @@ const CommunityCare = () => (
           <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,25%,75%)] mb-2">The True Cost Of The Ceremony</p>
           <p className="text-[12px] text-[hsl(45,60%,60%)] mb-5 italic font-serif">e.g. Cacao at $44</p>
           <p className="text-[15px] text-[hsl(40,30%,88%)] leading-relaxed font-serif mb-6 flex-1">
-            This is the actual energy required to hold one seat — the buildings and grounds, the facilitators, the sacred earth offerings, the integration support. When you give here, you cover yourself fully and honor the sacred infrastructure.
+            This is the actual energy required to hold one seat · the buildings and grounds, the facilitators, the sacred earth offerings, the integration support. When you give here, you cover yourself fully and honor the sacred infrastructure.
           </p>
           <p className="text-[14px] text-[hsl(45,70%,72%)] font-serif italic">
             Sustaining the temple. Honoring the work.
@@ -167,7 +167,7 @@ const CommunityCare = () => (
           <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,25%,75%)] mb-2">Energy Exchange · Two Per Ceremony</p>
           <p className="text-[12px] text-[hsl(45,60%,60%)] mb-5 italic font-serif">No financial offering required</p>
           <p className="text-[15px] text-[hsl(40,30%,88%)] leading-relaxed font-serif mb-6 flex-1">
-            Two scholarship seats are held in every ceremony. You contribute your energy in exchange — setting up the sanctuary, washing linens, helping with food, holding the door for the next seeker. The exchange honors the circle.
+            Two scholarship seats are held in every ceremony. You contribute your energy in exchange · setting up the sanctuary, washing linens, helping with food, holding the door for the next seeker. The exchange honors the circle.
           </p>
           <p className="text-[14px] text-[hsl(45,70%,72%)] font-serif italic">
             The medicine does not check your bank account.
@@ -190,7 +190,7 @@ const CommunityCare = () => (
 
     <hr className="border-t border-[hsla(45,70%,49%,0.15)] mx-6 md:mx-12" />
 
-    {/* ═══════ SECTION 4B: ENERGY EXCHANGE — TELLING THE STORY ═══════ */}
+    {/* ═══════ SECTION 4B: ENERGY EXCHANGE · TELLING THE STORY ═══════ */}
     <SanctuarySection
       eyebrow="The Story Of The Scholarship Seat"
       title={<>Energy For<br /><em className="font-serif italic text-[hsl(45,70%,62%)] text-[1.1em]">Energy</em></>}
@@ -200,7 +200,7 @@ const CommunityCare = () => (
           Imagine a seeker who feels the call. Their heart is open. Their intention is sincere. But this season, money is not flowing for them. In another temple, the door would close. In ours, the door opens differently.
         </p>
         <p className={BODY_SOFT}>
-          We hold two scholarship seats in every ceremony. They are not free — they are paid in a different currency. The seeker offers their hands, their time, their presence in service of the circle. They might arrive early to set up the sanctuary. Stay late to break it down. Wash the ceremonial linens. Help prepare nourishment. Greet the next seeker at the door.
+          We hold two scholarship seats in every ceremony. They are not free · they are paid in a different currency. The seeker offers their hands, their time, their presence in service of the circle. They might arrive early to set up the sanctuary. Stay late to break it down. Wash the ceremonial linens. Help prepare nourishment. Greet the next seeker at the door.
         </p>
         <p className={BODY_SOFT}>
           By the end, they have not received charity. They have participated in the sacred infrastructure that holds everyone else. They leave knowing they belong, because they helped build the circle that held them.
@@ -234,7 +234,7 @@ const CommunityCare = () => (
           {[
             { label: "Facilitator Care", desc: "Honoring the facilitators who have given years of training, personal ceremony, and inner work to become a vessel safe enough to hold yours." },
             { label: "Sacred Earth Offerings", desc: "Ethically sourced from trusted lineage holders, with fair exchange and sustainable harvesting practices that honor the original keepers." },
-            { label: "Sanctuary Buildings & Grounds", desc: "Tending the sacred space itself — the buildings that house ceremony, the grounds that hold us, utilities, altars, sacred objects, firewood, ceremonial supplies, and the quiet care that keeps the doors open." },
+            { label: "Sanctuary Buildings & Grounds", desc: "Tending the sacred space itself · the buildings that house ceremony, the grounds that hold us, utilities, altars, sacred objects, firewood, ceremonial supplies, and the quiet care that keeps the doors open." },
             { label: "The Community Fund", desc: "Energy flowing from Supporter and Sustainer offerings directly funds the scholarship seats and community-tier seats so no called soul is turned away." },
             { label: "Integration & Support", desc: "Integration circles, 1-on-1 sessions, preparation guides, and the long-arc support that holds you long after the ceremony closes." },
             { label: "Sacred Protections", desc: "Maintaining our 508(c)(1)(A) standing, RFRA protections, sacred safety protocols, and the legal infrastructure that keeps the temple sovereign and safe." },
@@ -266,7 +266,7 @@ const CommunityCare = () => (
           "What is the most generous expression of my current reality?"
         </p>
         <p className={BODY_SOFT}>
-          If you can give more, give more. Not because we ask you to. Because your generosity is part of your ceremony — an act of trust, of faith, and of love for the seeker behind you who may not be able to give a dollar.
+          If you can give more, give more. Not because we ask you to. Because your generosity is part of your ceremony · an act of trust, of faith, and of love for the seeker behind you who may not be able to give a dollar.
         </p>
         <p className={BODY_SOFT}>
           If you cannot give more, come anyway. Do not let money be the reason you miss your calling. That is not what this temple is for.

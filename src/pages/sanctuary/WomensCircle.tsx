@@ -11,7 +11,7 @@ const EVENTBRITE_URL =
 const WomensCircle = () => (
   <SacredSeriesLayout
     title="Women's Wellness Wednesdays · Temple Mother Earth"
-    description="Women's Wellness Wednesdays — a weekly sisterhood circle for reflection, restoration, and the embodied feminine, held at Temple Mother Earth, Washington DC."
+    description="Women's Wellness Wednesdays · a weekly sisterhood circle for reflection, restoration, and the embodied feminine, held at Temple Mother Earth, Washington DC."
     path="/womens-circle"
   >
     <SanctuaryHero
@@ -80,14 +80,14 @@ const WomensCircle = () => (
           {
             title: "The Practitioner",
             description:
-              "Healers, facilitators, and women in service who need a circle of their own — somewhere to lay the work down and simply be.",
+              "Healers, facilitators, and women in service who need a circle of their own · somewhere to lay the work down and simply be.",
             note: "SANCTUARY",
             featured: true,
           },
           {
             title: "The Seeker",
             description:
-              "Women in transition or remembering — returning to body, to cycle, to sisterhood, to the wisdom that has always lived in you.",
+              "Women in transition or remembering · returning to body, to cycle, to sisterhood, to the wisdom that has always lived in you.",
             note: "ROOM FOR YOU",
           },
         ]}
@@ -107,7 +107,7 @@ const WomensCircle = () => (
           <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Waiting For You</em>
         </>
       }
-      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it — write to us."
+      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us."
       ctaLabel="Reserve Your Seat"
       ctaHref={EVENTBRITE_URL}
       note="21+ · Pre-registration required · Confidentiality honored"

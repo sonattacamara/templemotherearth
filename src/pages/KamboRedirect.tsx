@@ -31,14 +31,14 @@ const benefits = [
 
 const whatToExpect = [
   { title: "Preparation", desc: "Complete the Sacred Intake Form, follow dietary guidelines for 48 hours, and arrive hydrated. Your facilitator will review your health history." },
-  { title: "The Ceremony", desc: "Small points are applied to the skin. The Kambo secretion is administered and the body's natural purging process begins — typically lasting 20–40 minutes." },
+  { title: "The Ceremony", desc: "Small points are applied to the skin. The Kambo secretion is administered and the body's natural purging process begins · typically lasting 20·40 minutes." },
   { title: "Aftercare & Integration", desc: "Rest deeply after ceremony. Drink nourishing fluids, journal your experience, and attend integration circles to process insights." },
 ];
 
 const faqs = [
   { q: "Is Kambo safe?", a: "When facilitated by trained practitioners with proper medical screening, Kambo is safe. All participants must complete our Sacred Intake Form, which screens for contraindications including heart conditions, blood pressure medications, and psychiatric medications." },
-  { q: "How do I prepare for Kambo?", a: "Fast from food for 10–12 hours before ceremony. Drink 1.5–2 liters of water the morning of ceremony. Avoid blood thinners, NSAIDs, and anti-inflammatory medications for 48+ hours prior. Full guidelines are on our Preparation page." },
-  { q: "How long does a Kambo session last?", a: "The active purging phase typically lasts 20–40 minutes. The entire ceremony, including preparation, intention setting, and post-ceremony rest, is approximately 2–3 hours." },
+  { q: "How do I prepare for Kambo?", a: "Fast from food for 10·12 hours before ceremony. Drink 1.5·2 liters of water the morning of ceremony. Avoid blood thinners, NSAIDs, and anti-inflammatory medications for 48+ hours prior. Full guidelines are on our Preparation page." },
+  { q: "How long does a Kambo session last?", a: "The active purging phase typically lasts 20·40 minutes. The entire ceremony, including preparation, intention setting, and post-ceremony rest, is approximately 2·3 hours." },
   { q: "Who should NOT do Kambo?", a: "Kambo is contraindicated for those with serious heart conditions, those who are pregnant or breastfeeding, those on blood thinners or psychiatric medications, and those who have had a stroke or aneurysm. Our intake form screens for all contraindications." },
   { q: "Will I hallucinate or lose control?", a: "No. Kambo does not alter your state of mind. You maintain full consciousness and mental clarity throughout the entire process. This is a physical purification, not a psychedelic experience." },
   { q: "Is Kambo legal?", a: "Kambo is not a controlled substance. Temple Mother Earth operates as a 508(c)(1)(A) temple under the Religious Freedom Restoration Act (RFRA), and our ceremonies are conducted as bona fide religious practices." },
@@ -91,7 +91,7 @@ const KamboRedirect = () => {
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
             Experience the ancient purification medicine of the Giant Monkey Tree Frog.
-            A sacred cleansing of body, mind, and spirit — held in ceremony with reverence and care.
+            A sacred cleansing of body, mind, and spirit · held in ceremony with reverence and care.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
@@ -128,13 +128,13 @@ const KamboRedirect = () => {
           <motion.div variants={fadeUp} className="mt-8 grid gap-8 md:grid-cols-2 items-center">
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Kambo is the sacred secretion of the <em>Phyllomedusa bicolor</em> — the Giant Monkey Tree Frog
+                Kambo is the sacred secretion of the <em>Phyllomedusa bicolor</em> · the Giant Monkey Tree Frog
                 found deep in the Amazon rainforest. For thousands of years, indigenous peoples have used Kambo
                 for physical detoxification, emotional clearing, and spiritual purification.
               </p>
               <p>
                 The secretion contains a complex cocktail of bioactive peptides that work directly with the body's
-                immune, endocrine, and nervous systems. Unlike psychedelics, Kambo does not alter your state of mind —
+                immune, endocrine, and nervous systems. Unlike psychedelics, Kambo does not alter your state of mind ·
                 you remain fully conscious and aware throughout the entire process.
               </p>
               <p>

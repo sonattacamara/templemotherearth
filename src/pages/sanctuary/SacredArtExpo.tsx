@@ -107,9 +107,9 @@ const MEDIUMS = [
 ];
 
 const EVENTS = [
-  "Spring Equinox — March 28, 2026",
-  "Fall Equinox — Fall 2026",
-  "Canvas & Ceremony — July 2026",
+  "Spring Equinox · March 28, 2026",
+  "Fall Equinox · Fall 2026",
+  "Canvas & Ceremony · July 2026",
   "All of the above",
 ];
 
@@ -216,7 +216,7 @@ const SacredArtExpo = () => {
             style={{ color: "#F5F0E6cc" }}
           >
             Temple Mother Earth invites artists of all mediums to bring their work into our
-            sacred space. The Art Expo is a living gallery — where creativity, community, and
+            sacred space. The Art Expo is a living gallery · where creativity, community, and
             ceremony converge.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-10">
@@ -249,7 +249,7 @@ const SacredArtExpo = () => {
           <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-[720px] space-y-6 font-serif text-lg leading-[1.85]" style={{ color: "#B8A07Aaa" }}>
             <p>
               The Temple Mother Earth Art Expo is a bi-annual sacred art exhibition held at the Spring and Fall
-              Equinox — moments of balance, beauty, and transition. Each expo features local DC-area
+              Equinox · moments of balance, beauty, and transition. Each expo features local DC-area
               artists across all mediums: painting, sculpture, photography, digital art, fiber arts,
               and beyond.
             </p>
@@ -266,8 +266,8 @@ const SacredArtExpo = () => {
               {
                 icon: Flower2,
                 title: "Spring Equinox",
-                detail: "March 28, 2026 · 7–10 PM",
-                intention: "A celebration of renewal and rebirth. As the Earth awakens, we gather to honor the creative spirit within — displaying art that reflects transformation, new beginnings, and the sacredness of spring.",
+                detail: "March 28, 2026 · 7·10 PM",
+                intention: "A celebration of renewal and rebirth. As the Earth awakens, we gather to honor the creative spirit within · displaying art that reflects transformation, new beginnings, and the sacredness of spring.",
                 link: "https://bit.ly/ARTExpo",
               },
               {
@@ -281,7 +281,7 @@ const SacredArtExpo = () => {
                 icon: Brush,
                 title: "Canvas & Ceremony",
                 detail: "July 2026 · Immersive art + ceremony",
-                intention: "An immersive evening where art-making becomes ceremony. Guests create alongside artists in a guided, sacred space — blending live painting, sound healing, and communal expression.",
+                intention: "An immersive evening where art-making becomes ceremony. Guests create alongside artists in a guided, sacred space · blending live painting, sound healing, and communal expression.",
                 link: "https://bit.ly/ARTExpo",
               },
             ].map((e) => (
@@ -345,7 +345,7 @@ const SacredArtExpo = () => {
             We're Calling All Artists
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl font-serif text-base leading-relaxed" style={{ color: "#B8A07Aaa" }}>
-            Whether you paint, sculpt, photograph, illustrate, weave, or create digitally — if
+            Whether you paint, sculpt, photograph, illustrate, weave, or create digitally · if
             your work carries soul, there is a place for it here. We welcome artists of all
             backgrounds, disciplines, and experience levels. No piece is too sacred. No voice is
             too small.
@@ -485,7 +485,7 @@ const SacredArtExpo = () => {
                     rows={3}
                     maxLength={500}
                     className="border-[#c9a84c33] bg-[#0d0b08] text-[#F5F0E6] placeholder:text-[#B8A07A66] resize-none"
-                    placeholder="Tell us about your work in 2–3 sentences…"
+                    placeholder="Tell us about your work in 2·3 sentences…"
                   />
                 </motion.div>
 

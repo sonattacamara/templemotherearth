@@ -6,7 +6,7 @@ const Sayulita = () => (
     region="Pacific Coast · Riviera Nayarit"
     futureSubdomain="sayulita.templemotherearth.org"
     path="/immersions/sayulita"
-    dates="October 31–November 5, 2026"
+    dates="October 31·November 5, 2026"
     poetic="Where jungle meets the ocean, and the ocean meets your soul."
     description="A beachfront sanctuary immersion held on the warm Pacific shores of Sayulita. Days of sacred ceremony, breath, ocean cleansing, plant ally circles, and the kind of stillness that lets your nervous system finally exhale."
   />

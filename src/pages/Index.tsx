@@ -60,7 +60,7 @@ const offerings = [
   {
     icon: Globe,
     title: "International Immersions",
-    desc: "Journey with us to Sayulita, Mexico (Oct 31–Nov 7, 2026) and the sacred shores of Costa Rica (Aug 2–8, 2026). Immersive Earth Medicine experiences in breathtaking sacred landscapes.",
+    desc: "Journey with us to Sayulita, Mexico (Oct 31·Nov 7, 2026) and the sacred shores of Costa Rica (Aug 2·8, 2026). Immersive Earth Medicine experiences in breathtaking sacred landscapes.",
     img: offeringRetreat,
     imgAlt: "Life's Best Yes Immersion in Sayulita Mexico and Costa Rica sacred retreat",
     link: "/retreats-inquiry",
@@ -120,14 +120,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-earth">
       <SEOHead
-        title="Temple Mother Earth — Sacred Ceremony Church · Washington, DC"
+        title="Temple Mother Earth · Sacred Ceremony Church · Washington, DC"
         description="A sacred ceremony church offering sacramental Earth Medicine ceremony, spiritual education, and congregational community in Washington DC. Organized under 508(c)(1)(A). Est. 2020."
         path="/"
       />
       <Navigation />
 
       {/* ═══════════════════════════════════════════
-          STAGE I — THE CALL
+          STAGE I · THE CALL
           ═══════════════════════════════════════════ */}
       <section
         id="hero"
@@ -174,7 +174,7 @@ const Index = () => {
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/75 md:text-xl"
           >
-            You are a sovereign being — whole, divine, and powerful beyond measure. Temple Mother Earth
+            You are a sovereign being · whole, divine, and powerful beyond measure. Temple Mother Earth
             exists to help you remember that truth. Through sacred ceremony, Earth Medicine, and intentional
             community, we hold space for your return to the wisdom that has always lived within you.
           </motion.p>
@@ -231,7 +231,7 @@ const Index = () => {
             The Faces of Temple Mother Earth
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-center text-muted-foreground">
-            Real moments from our ceremonies, immersions, and gatherings — a diverse community united by the path of transformation and higher consciousness.
+            Real moments from our ceremonies, immersions, and gatherings · a diverse community united by the path of transformation and higher consciousness.
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
@@ -260,7 +260,7 @@ const Index = () => {
       <JourneyConnector />
 
 
-      {/* ── FIND YOUR PATH — Quick Engagement ── */}
+      {/* ── FIND YOUR PATH · Quick Engagement ── */}
       <section className="bg-gradient-warm px-4 py-12 md:py-16">
         <motion.div
           className="mx-auto max-w-5xl"
@@ -337,7 +337,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
-          STAGE II — THE AWAKENING
+          STAGE II · THE AWAKENING
           ═══════════════════════════════════════════ */}
       <section id="awakening" className="px-4 py-14 md:py-20 bg-gradient-sanctuary">
         <motion.div
@@ -420,7 +420,7 @@ const Index = () => {
               In 2020, when the pandemic brought the world to a standstill and fear kept people isolated behind closed doors, 
               <span className="font-semibold text-foreground"> we opened ours</span>. There was a great need for community, restoration, 
               and connection to the God within. What began as intimate sacred circles during the darkest days of COVID grew into 
-              Temple Mother Earth — a sacred sanctuary where sovereign beings reconnect with the Earth, honor the divine within, 
+              Temple Mother Earth · a sacred sanctuary where sovereign beings reconnect with the Earth, honor the divine within, 
               and walk the path of transformation together.
             </p>
             <a
@@ -436,7 +436,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
-          STAGE III — CHOOSE YOUR PATH
+          STAGE III · CHOOSE YOUR PATH
           ═══════════════════════════════════════════ */}
       <section id="offerings" className="bg-gradient-warm px-4 py-14 md:py-20">
         <motion.div
@@ -523,7 +523,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
-          STAGE IV — THE TRANSFORMATION
+          STAGE IV · THE TRANSFORMATION
           ═══════════════════════════════════════════ */}
       <section className="px-4 py-14 md:py-20">
         <motion.div
@@ -563,7 +563,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
-          STAGE V — JOIN THE CIRCLE
+          STAGE V · JOIN THE CIRCLE
           ═══════════════════════════════════════════ */}
       <section id="membership" className="relative overflow-hidden px-4 py-14 md:py-20">
         <div
@@ -626,7 +626,7 @@ const Index = () => {
       <JourneyConnector />
 
       {/* ═══════════════════════════════════════════
-          STAGE VI — THE INVITATION
+          STAGE VI · THE INVITATION
           ═══════════════════════════════════════════ */}
       <section id="community" className="relative overflow-hidden px-4 py-14 md:py-20">
         <div
@@ -757,9 +757,9 @@ const Index = () => {
               <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-left space-y-3">
                 <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🌿 International Immersion</p>
                 <h3 className="font-display text-lg font-bold text-foreground">
-                  Wide Open Immersion — Costa Rica
+                  Wide Open Immersion · Costa Rica
                 </h3>
-                <p className="text-sm text-muted-foreground">August 2–8, 2026 · Nicoya Peninsula · 7 days</p>
+                <p className="text-sm text-muted-foreground">August 2·8, 2026 · Nicoya Peninsula · 7 days</p>
                 <a
                   href="https://costarica.templemotherearth.org"
                   target="_blank"
@@ -772,9 +772,9 @@ const Index = () => {
               <div className="rounded-xl border border-border bg-card p-6 text-left space-y-3">
                 <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🇲🇽 International Immersion</p>
                 <h3 className="font-display text-lg font-bold text-foreground">
-                  Life's Best Yes — Sayulita, Mexico
+                  Life's Best Yes · Sayulita, Mexico
                 </h3>
-                <p className="text-sm text-muted-foreground">October 31 – November 7, 2026 · Interest list open</p>
+                <p className="text-sm text-muted-foreground">October 31 · November 7, 2026 · Interest list open</p>
                 <Link
                   to="/retreats-inquiry"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
@@ -892,7 +892,7 @@ const Index = () => {
                 year: "2023",
               },
               {
-                quote: "As a veteran, I had tried everything. Talk therapy, medication, meditation. The Sacred Series gave me back something I did not know I had lost — my sense of belonging on this earth. Dr. Sonatta and King James saved my life.",
+                quote: "As a veteran, I had tried everything. Talk therapy, medication, meditation. The Sacred Series gave me back something I did not know I had lost · my sense of belonging on this earth. Dr. Sonatta and King James saved my life.",
                 name: "David",
                 ceremony: "Veterans Sacred Series",
                 year: "2024",
@@ -914,7 +914,7 @@ const Index = () => {
                   &ldquo;{story.quote}&rdquo;
                 </p>
                 <div className="mt-6 flex items-baseline justify-between border-t border-primary/10 pt-4">
-                  <p className="font-body text-sm font-semibold text-foreground">— {story.name}</p>
+                  <p className="font-body text-sm font-semibold text-foreground">· {story.name}</p>
                   <p className="font-body text-xs uppercase tracking-[0.18em] text-muted-foreground">
                     {story.ceremony} · {story.year}
                   </p>
@@ -955,7 +955,7 @@ const Index = () => {
           <motion.div variants={fadeUp} className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
             <h3 className="font-display text-xl font-bold text-card-foreground">Receive Temple Transmissions</h3>
             <p className="mt-2 text-sm text-muted-foreground max-w-md mx-auto">
-              Philosophy, preparation guidance, pathway maps, and invitations — delivered with intention to your inbox.
+              Philosophy, preparation guidance, pathway maps, and invitations · delivered with intention to your inbox.
             </p>
             <form className="mt-4 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => { e.preventDefault(); const form = e.target as HTMLFormElement; const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value; if (email) { supabase.functions.invoke("submit-newsletter", { body: { email } }).then(({ error }) => { if (error) throw error; form.reset(); alert("Welcome! You've been added to Temple Transmissions."); }).catch(() => { alert("Something went wrong. Please try again."); }); } }}>
               <input

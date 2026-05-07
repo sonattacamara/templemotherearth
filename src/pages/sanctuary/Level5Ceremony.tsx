@@ -26,9 +26,9 @@ const sacraments = [
 
 const ritualSteps = [
   { time: "Morning", title: "The Threshold", body: "You arrive having fasted. Facilitators greet each participant. A brief orienting circle where each person names what they are arriving with." },
-  { time: "Opening", title: "Sacred Space & Hapé", body: "Ceremony opened with prayer and invocation. Hapé is administered — a grounding, clearing sacrament that prepares body and mind." },
+  { time: "Opening", title: "Sacred Space & Hapé", body: "Ceremony opened with prayer and invocation. Hapé is administered · a grounding, clearing sacrament that prepares body and mind." },
   { time: "The Anchor", title: "Kambo Ceremony", body: "The anchor sacrament. Small burns made on skin. The secretion applied. Within minutes, heat, intensity, purging. Facilitators present throughout." },
-  { time: "Heart Opening", title: "Rest, Cacao & Sound Healing", body: "Ceremonial cacao offered — the heart sacrament that meets the openness the purge creates. Sound healing begins." },
+  { time: "Heart Opening", title: "Rest, Cacao & Sound Healing", body: "Ceremonial cacao offered · the heart sacrament that meets the openness the purge creates. Sound healing begins." },
   { time: "Restoration", title: "Sacred Nourishment", body: "Mineral broth, whole foods, medicinal teas. What fills the emptied vessel now matters." },
   { time: "Closing", title: "Integration Circle & Departure", body: "Each participant names what they experienced. Being witnessed seals the initiation. You leave carrying your 30-Day Integration Guide." },
 ];
@@ -41,7 +41,7 @@ const whoCards = [
 
 const Level5Ceremony = () => (
   <SacredSeriesLayout
-    title="Level 5 — The Complete Initiation | Temple Mother Earth"
+    title="Level 5 · The Complete Initiation | Temple Mother Earth"
     description="The most powerful ceremonial offering at Temple Mother Earth. Multi-sacrament initiation including Kambo. By application only."
   >
     {/* Warning Announce */}
@@ -105,7 +105,7 @@ const Level5Ceremony = () => (
     {/* Event Strip */}
     <div className="bg-[#0B140A] flex justify-center border-b border-[rgba(200,160,48,0.08)] flex-wrap">
       {[
-        { label: "Format", val: "Full Day (8–10 hrs)" },
+        { label: "Format", val: "Full Day (8·10 hrs)" },
         { label: "Access", val: "By Application Only" },
         { label: "Seats", val: "Strictly Limited" },
         { label: "Location", val: "Temple Mother Earth, DC" },
@@ -124,8 +124,8 @@ const Level5Ceremony = () => (
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
         <div className="text-[17px] leading-[1.9] text-[#F0EAD6] opacity-90 space-y-6">
-          <p>There is a reason that every indigenous culture on Earth developed initiation rites. The human psyche requires <strong className="text-[#C8A030]">threshold experiences</strong> — moments where the old self is formally dissolved and a new self emerges.</p>
-          <p>Level 5 is a <strong className="text-[#C8A030]">full initiation</strong>. Kambo purifies what you cannot purify through discipline alone. You come in one person. You leave another. Not better — truer.</p>
+          <p>There is a reason that every indigenous culture on Earth developed initiation rites. The human psyche requires <strong className="text-[#C8A030]">threshold experiences</strong> · moments where the old self is formally dissolved and a new self emerges.</p>
+          <p>Level 5 is a <strong className="text-[#C8A030]">full initiation</strong>. Kambo purifies what you cannot purify through discipline alone. You come in one person. You leave another. Not better · truer.</p>
           <p>This is for those who have done the preliminary work and are ready for the next threshold. It is not a beginner ceremony. It is a <strong className="text-[#C8A030]">graduation.</strong></p>
         </div>
         <div className="flex flex-col gap-0.5">
@@ -203,7 +203,7 @@ const Level5Ceremony = () => (
           Level 5<br /><span className="text-[#C8A030]">Awaits</span>
         </h2>
         <p className="font-serif italic text-[22px] text-[#F0EAD6] opacity-75 max-w-[600px] mx-auto mb-14 leading-[1.7]">
-          Not everyone is called to initiation. If you have read this far and something in you is still saying yes — that is not curiosity. That is preparation.
+          Not everyone is called to initiation. If you have read this far and something in you is still saying yes · that is not curiosity. That is preparation.
         </p>
         <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
           Apply for Your Seat

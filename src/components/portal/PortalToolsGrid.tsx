@@ -16,7 +16,7 @@ const tools = [
   {
     icon: BookOpen,
     title: "Sacred Learning Library",
-    description: "Deep-dive education on Kambo, Hapé, Sacred Mother Earth Ceremony, and Cacao — covering preparation, ceremony, and integration.",
+    description: "Deep-dive education on Kambo, Hapé, Sacred Mother Earth Ceremony, and Cacao · covering preparation, ceremony, and integration.",
     link: "/member/education",
     linkText: "Enter the Library",
   },
@@ -31,7 +31,7 @@ const tools = [
   {
     icon: Shield,
     title: "Sacred Intake Form",
-    description: "Complete your medical and spiritual intake — required for all ceremony participants. Your safety is our highest priority.",
+    description: "Complete your medical and spiritual intake · required for all ceremony participants. Your safety is our highest priority.",
     link: "/ceremony-intake",
     linkText: "Begin Intake",
   },
@@ -73,7 +73,7 @@ const PortalToolsGrid = () => (
           Your Integration Tools
         </h2>
         <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
-          Free resources available to every member — no tier required.
+          Free resources available to every member · no tier required.
         </p>
       </motion.div>
 
@@ -126,7 +126,7 @@ const PortalToolsGrid = () => (
               Add the Integration Portal to Your Phone
             </h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Access your daily tools instantly — no app store needed.
+              Access your daily tools instantly · no app store needed.
             </p>
 
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -136,7 +136,7 @@ const PortalToolsGrid = () => (
                   <li className="flex gap-2"><span className="font-semibold text-foreground">1.</span> Open <a href="https://integration.templemotherearth.org/auth" className="text-primary underline" target="_blank" rel="noopener noreferrer">integration.templemotherearth.org</a> in Safari</li>
                   <li className="flex gap-2"><span className="font-semibold text-foreground">2.</span> Tap the <strong className="text-foreground">Share</strong> button (square with arrow)</li>
                   <li className="flex gap-2"><span className="font-semibold text-foreground">3.</span> Scroll down and tap <strong className="text-foreground">"Add to Home Screen"</strong></li>
-                  <li className="flex gap-2"><span className="font-semibold text-foreground">4.</span> Tap <strong className="text-foreground">"Add"</strong> — done!</li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">4.</span> Tap <strong className="text-foreground">"Add"</strong> · done!</li>
                 </ol>
               </div>
 
@@ -146,13 +146,13 @@ const PortalToolsGrid = () => (
                   <li className="flex gap-2"><span className="font-semibold text-foreground">1.</span> Open <a href="https://integration.templemotherearth.org/auth" className="text-primary underline" target="_blank" rel="noopener noreferrer">integration.templemotherearth.org</a> in Chrome</li>
                   <li className="flex gap-2"><span className="font-semibold text-foreground">2.</span> Tap the <strong className="text-foreground">three-dot menu</strong> (top right)</li>
                   <li className="flex gap-2"><span className="font-semibold text-foreground">3.</span> Tap <strong className="text-foreground">"Add to Home screen"</strong></li>
-                  <li className="flex gap-2"><span className="font-semibold text-foreground">4.</span> Tap <strong className="text-foreground">"Add"</strong> — done!</li>
+                  <li className="flex gap-2"><span className="font-semibold text-foreground">4.</span> Tap <strong className="text-foreground">"Add"</strong> · done!</li>
                 </ol>
               </div>
             </div>
 
             <p className="mt-4 text-xs text-muted-foreground">
-              Once added, the portal opens like a native app — full screen, fast, and always at your fingertips. <Heart className="inline h-3.5 w-3.5" />
+              Once added, the portal opens like a native app · full screen, fast, and always at your fingertips. <Heart className="inline h-3.5 w-3.5" />
             </p>
           </div>
         </div>

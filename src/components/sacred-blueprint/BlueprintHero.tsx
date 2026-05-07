@@ -29,7 +29,7 @@ const BlueprintHero = () => (
         Discover Your Sacred Blueprint
       </motion.h1>
       <motion.p variants={fadeUp} className="font-body mx-auto mt-5 max-w-xl text-lg leading-relaxed text-primary-foreground/80">
-        Your Human Design chart is more than data — it's a sacred map of your soul's design. Discover how you're built to move, heal, and transform.
+        Your Human Design chart is more than data · it's a sacred map of your soul's design. Discover how you're built to move, heal, and transform.
       </motion.p>
       <motion.a
         variants={fadeUp}

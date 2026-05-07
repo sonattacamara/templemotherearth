@@ -19,7 +19,7 @@ const Journal = () => {
   return (
     <>
       <SEOHead
-        title="Transmissions — Temple Mother Earth Journal"
+        title="Transmissions · Temple Mother Earth Journal"
         description="Sacred writings on Kambo detox, Cacao ceremonies, Ayahuasca integration, and plant medicine wisdom from Temple Mother Earth in Washington DC, Maryland, and Virginia."
         path="/journal"
       />

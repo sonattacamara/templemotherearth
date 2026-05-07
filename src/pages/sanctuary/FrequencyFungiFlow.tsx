@@ -9,10 +9,10 @@ const EVENTBRITE_FFF = "https://www.eventbrite.com/e/frequency-fungi-flow-a-jour
 const FrequencyFungiFlow = () => (
   <SacredSeriesLayout
     title="Frequency, Fungi & Flow · Temple Mother Earth"
-    description="A sacred journey of sound, movement, and connection. Third Saturday of every month, 7–11 PM. Temple Mother Earth, Washington DC."
+    description="A sacred journey of sound, movement, and connection. Third Saturday of every month, 7·11 PM. Temple Mother Earth, Washington DC."
   >
     <SanctuaryHero
-      dateBadge="3rd Saturday Monthly · 7–11 PM"
+      dateBadge="3rd Saturday Monthly · 7·11 PM"
       eyebrow="Frequency · Fungi · Flow"
       title={<>Come Dance With Us<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Soul, Body & Spirit</em></>}
       subtitle=""
@@ -34,7 +34,7 @@ const FrequencyFungiFlow = () => (
       <SanctuaryColCards cards={[
         { title: "Sacred Opening · 7 PM", description: "Arrival, grounding, and ceremonial intention. Breathwork to transition out of ordinary time and into the temple's frequency. Your nervous system begins to soften the moment the circle is opened." },
         { title: "The Wave Rises · 8 PM", description: "Curated soundscapes carry you from gentle awakening to ecstatic release. Move how your body asks. Close your eyes. Let the rhythm rearrange what the week stacked on top of you." },
-        { title: "Flow & Communion · 9 PM", description: "Peak frequency. The room becomes one breathing organism. This is where the medicine lives — in the unspoken connection that arises when strangers move together in sacred space." },
+        { title: "Flow & Communion · 9 PM", description: "Peak frequency. The room becomes one breathing organism. This is where the medicine lives · in the unspoken connection that arises when strangers move together in sacred space." },
         { title: "Integration & Close · 10 PM", description: "The wave gently descends into stillness. Sound bath. Quiet pulse. A closing circle for those who feel called to share. You leave feeling alive, returned, and a little more yourself." },
       ]} />
     </SanctuarySection>
@@ -48,9 +48,9 @@ const FrequencyFungiFlow = () => (
     </SanctuarySection>
 
     <SanctuaryCTA
-      eyebrow="3rd Saturday · 7–11 PM · Washington, DC"
+      eyebrow="3rd Saturday · 7·11 PM · Washington, DC"
       title={<>Your Soul Is<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Already on the Floor</em></>}
-      description="The frequency is rising. The circle is forming. Your spot is waiting. Come connect with your soul, your body, your spirit — and a community that moves as one."
+      description="The frequency is rising. The circle is forming. Your spot is waiting. Come connect with your soul, your body, your spirit · and a community that moves as one."
       ctaLabel="Reserve Your Sacred Spot"
       ctaHref={EVENTBRITE_FFF}
       note="All bodies welcome · Substance-free sacred space · Community Care Model"

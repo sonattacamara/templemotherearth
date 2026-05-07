@@ -26,10 +26,10 @@ const KamboWomen = () => (
         </>
       }
       subtitle=""
-      lead="A sacred container free of masculine energy — where women gather to release, to surrender, and to remember the wisdom of the body, held in the presence of sisterhood."
+      lead="A sacred container free of masculine energy · where women gather to release, to surrender, and to remember the wisdom of the body, held in the presence of sisterhood."
       primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: EVENTBRITE_URL.startsWith("http") }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/6541381/pexels-photo-6541381.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo="/video/kambo-women-hero.mp4"
     />
 
     <SanctuarySection
@@ -49,10 +49,10 @@ const KamboWomen = () => (
           There is something that opens in a women-only circle that cannot open anywhere else. No performance. No tending. No filtering through the eyes of the masculine. Only the raw, honest, unedited truth of what the body has been holding.
         </p>
         <p>
-          This is Kambo Purification offered exclusively for women — a sacred ceremony for releasing what no longer serves, in the presence of sisters who understand without explanation.
+          This is Kambo Purification offered exclusively for women · a sacred ceremony for releasing what no longer serves, in the presence of sisters who understand without explanation.
         </p>
         <p>
-          <strong className="text-[hsl(45,70%,49%)]">Held the third Saturday of every month at 8:00 AM.</strong> A monthly rhythm — a returning home to your body, in community.
+          <strong className="text-[hsl(45,70%,49%)]">Held the third Saturday of every month at 8:00 AM.</strong> A monthly rhythm · a returning home to your body, in community.
         </p>
       </div>
     </SanctuarySection>
@@ -74,13 +74,13 @@ const KamboWomen = () => (
           {
             title: "The Carrier",
             description:
-              "Women holding stored grief, generational weight, or grief that has never had a safe place to land. The body remembers — and is ready to let go.",
+              "Women holding stored grief, generational weight, or grief that has never had a safe place to land. The body remembers · and is ready to let go.",
             note: "WITNESSED HERE",
           },
           {
             title: "The Mother",
             description:
-              "Mothers and caregivers who pour out daily and need a sacred reset — a morning held entirely for you, with no one needing anything from you.",
+              "Mothers and caregivers who pour out daily and need a sacred reset · a morning held entirely for you, with no one needing anything from you.",
             note: "RESTORED HERE",
             featured: true,
           },
@@ -105,7 +105,7 @@ const KamboWomen = () => (
     >
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>
-          Sonatta Camara holds this offering as a dedicated space for women — a sacred ceremony shaped by the rhythms, the silences, and the wisdom that arise when sisters gather without the presence of masculine energy.
+          Sonatta Camara holds this offering as a dedicated space for women · a sacred ceremony shaped by the rhythms, the silences, and the wisdom that arise when sisters gather without the presence of masculine energy.
         </p>
         <p>
           Her guidance is gentle, grounded, and deeply attuned to the truth that some of what a woman is here to release can only be released in the company of other women.
@@ -129,7 +129,7 @@ const KamboWomen = () => (
     >
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>
-          Kambo Purification asks the body to be ready. Please review our preparation guidance before reserving your seat — it includes hydration, fasting, and the spiritual preparation that allows the ceremony to do its sacred work.
+          Kambo Purification asks the body to be ready. Please review our preparation guidance before reserving your seat · it includes hydration, fasting, and the spiritual preparation that allows the ceremony to do its sacred work.
         </p>
         <p>
           <a href="/preparation" className="text-[hsl(45,70%,49%)] underline underline-offset-4 hover:text-[hsl(45,70%,58%)]">Read the full preparation protocol →</a>
@@ -145,7 +145,7 @@ const KamboWomen = () => (
           <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Waiting For You</em>
         </>
       }
-      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it — write to us through our contact page."
+      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us through our contact page."
       ctaLabel="Reserve Your Seat"
       ctaHref={EVENTBRITE_URL}
       external={EVENTBRITE_URL.startsWith("http")}

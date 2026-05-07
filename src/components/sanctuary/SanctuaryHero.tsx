@@ -9,6 +9,8 @@ interface SanctuaryHeroProps {
   primaryCTA: { label: string; href: string; external?: boolean };
   secondaryCTA?: { label: string; href: string };
   backgroundImage?: string;
+  backgroundVideo?: string;
+  videoPoster?: string;
 }
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -31,8 +33,26 @@ const SanctuaryHero = ({
   primaryCTA,
   secondaryCTA,
   backgroundImage,
+  backgroundVideo,
+  videoPoster,
 }: SanctuaryHeroProps) => (
   <section className="relative min-h-[92vh] flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
+    {backgroundVideo && (
+      <>
+        <video
+          src={backgroundVideo}
+          poster={videoPoster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover saturate-[0.9] -z-10"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[hsla(100,20%,5%,0.25)] via-[hsla(100,20%,5%,0.45)] to-[hsla(100,20%,5%,0.9)]" />
+      </>
+    )}
     {backgroundImage && (
       <>
         <img
