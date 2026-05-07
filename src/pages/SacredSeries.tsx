@@ -339,7 +339,7 @@ const SacredSeries = () => {
             <em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Series</em>
           </h1>
           <p className="font-serif italic text-[clamp(18px,2vw,24px)] text-[hsl(35,30%,72%)] max-w-[580px] leading-relaxed mb-6">
-            A living 7-day sanctuary rhythm for the seeker who is ready to be witnessed, held, and reminded that they already belong. Each doorway stands on its own. Choose what calls your body, soul, and spirit.
+            A living 7-day sanctuary rhythm for the soul who is ready to be witnessed, held, and reminded that they already belong. Each doorway stands on its own. Choose what calls your body, soul, and spirit.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
             This month’s circle is New Earth Rising · a call for those who can feel something changing within them and want to rise in community, not isolation.
@@ -466,7 +466,7 @@ const SacredSeries = () => {
                 backContent: [
                   "April is the Grand Reopening · the first Sacred Series of the year. The energy in the temple is electric. New beginnings are sacred here.",
                   "Cacao opens the heart you closed during the cold months. Hapé clears the static so you can hear your own voice again. Sacred Tea invites you deeper than thought.",
-                  "If you missed last year · this is the month to come home. The seekers who arrive in April set the tone for everything that follows.",
+                  "If you missed last year · this is the month to come home. The souls who arrive in April set the tone for everything that follows.",
                 ],
               },
               {
@@ -480,11 +480,11 @@ const SacredSeries = () => {
               },
               {
                 month: "June 2026", theme: "The Sovereignty", icon: <Crown className="h-6 w-6" />,
-                desc: "You are the authority of your own becoming. This month we honor the sacred autonomy of every seeker who walks through the temple doors.",
+                desc: "You are the authority of your own becoming. This month we honor the sacred autonomy of every soul who walks through the temple doors.",
                 backContent: [
                   "June is the month of standing fully in your own power. No guru. No intermediary. The divine speaks directly through you.",
                   "This month's ceremonies focus on boundaries, self-trust, and the courage to claim your own spiritual authority.",
-                  "Level 5 · The Complete Initiation · finds its deepest expression here, as seekers step fully into their sovereignty.",
+                  "Level 5 · The Complete Initiation · finds its deepest expression here, as souls step fully into their sovereignty.",
                 ],
               },
               {
@@ -492,7 +492,7 @@ const SacredSeries = () => {
                 desc: "You were never meant to do this alone. This is the month the circle widens, the table lengthens, and the family you didn't know you were missing finds you.",
                 backContent: [
                   "July is when the temple breathes its fullest. The Community Potluck, the Sacred Art Expo, the extended Tea House evenings · the whole family comes home.",
-                  "Alumni return to break bread with new seekers. Stories are exchanged. Phone numbers are exchanged. Lifelong friendships begin around our long wooden table.",
+                  "Alumni return to break bread with new souls. Stories are exchanged. Phone numbers are exchanged. Lifelong friendships begin around our long wooden table.",
                   "If you have ever felt spiritually homeless · July is the month you stop looking. Your people are already here, saving you a seat.",
                 ],
               },
@@ -510,7 +510,7 @@ const SacredSeries = () => {
                 desc: "The light begins to shift. This month we honor the courage it takes to stand at the doorway between who you have been and who you are becoming.",
                 backContent: [
                   "September marks the Autumn Equinox · the balance point. Equal light, equal dark. A time to assess what must be released before winter.",
-                  "Kambo and Level 5 carry particular power this month as seekers are invited to burn away what no longer serves their becoming.",
+                  "Kambo and Level 5 carry particular power this month as souls are invited to burn away what no longer serves their becoming.",
                   "The temple holds a special equinox ceremony to honor the turning of the wheel and the sacred act of letting go.",
                 ],
               },
@@ -519,7 +519,7 @@ const SacredSeries = () => {
                 desc: "The veil thins. The ones who walked before you draw close. This is the month they speak · and the month you finally have the stillness to listen.",
                 backContent: [
                   "October is the most mystical month in the temple year. Sacred Tea and Hapé carry prayers across the veil. The grandmothers and grandfathers come close.",
-                  "Seekers consistently report October ceremonies as the most spiritually profound of the year. Lineages are honored. Names are spoken. Burdens long carried are finally laid down.",
+                  "Souls consistently report October ceremonies as the most spiritually profound of the year. Lineages are honored. Names are spoken. Burdens long carried are finally laid down.",
                   "The Sacred Art Expo turns visionary · paintings, songs, and prayers born from dreams and ancestral communion. This is not a month to miss.",
                 ],
               },
@@ -603,7 +603,7 @@ const SacredSeries = () => {
       <SanctuarySection eyebrow="Your First Ceremony" title={<>A Gentle<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Opening</em></>}>
         <div className="text-xl leading-[1.85] text-[hsl(35,30%,68%)] max-w-[720px] mx-auto text-center font-serif space-y-6">
           <p>We understand that the call to sacred practice can bring both excitement and hesitation. Your first experience is designed to be a gentle, nourishing invitation to connect with your inner truth.</p>
-          <p>Many seekers find that their fears soften into peace once they are held within our circle. You are deeply welcomed here, exactly as you are.</p>
+          <p>Many souls find that their fears soften into peace once they are held within our circle. You are deeply welcomed here, exactly as you are.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-12">
           {[
@@ -682,7 +682,7 @@ const SacredSeries = () => {
             The Sacred Series<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Invitation</em>
           </h2>
           <p className="text-xl text-[hsl(35,30%,68%)] leading-relaxed max-w-[640px] mx-auto mb-12 font-serif">
-            The Sacred Series is held in sacred trust with each seeker. Before we discuss anything practical, we want to meet you, understand your readiness, and ensure this container is the right fit for your spirit.
+            The Sacred Series is held in sacred trust with each soul. Before we discuss anything practical, we want to meet you, understand your readiness, and ensure this container is the right fit for your spirit.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5 mb-12 text-left">
             {[
@@ -709,7 +709,7 @@ const SacredSeries = () => {
             </Link>
           </div>
           <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(35,20%,42%)] mt-6">
-            Limited to 8 seekers · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Sacred Reciprocity</Link> · Scholarships available
+            Limited to 8 souls · <Link to="/community-care" className="text-[hsl(45,70%,49%)] hover:underline">Sacred Reciprocity</Link> · Scholarships available
           </p>
         </div>
       </section>

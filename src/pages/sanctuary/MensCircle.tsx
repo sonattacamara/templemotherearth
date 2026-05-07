@@ -72,7 +72,7 @@ const MensCircle = () => (
       <SanctuaryColCards
         cards={[
           {
-            title: "The Seeker",
+            title: "The Soul",
             description:
               "Men in transition · career, fatherhood, partnership, loss · who feel the call to gather with others walking the same threshold.",
             note: "ALL ARE WELCOME",

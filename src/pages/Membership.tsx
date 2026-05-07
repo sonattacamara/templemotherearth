@@ -188,7 +188,7 @@ const Membership = () => {
 
   return (
     <div className="min-h-screen bg-gradient-earth">
-      <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of seekers and practitioners." path="/membership" />
+      <SEOHead title="Membership | Join Temple Mother Earth Community" description="Become a member of Temple Mother Earth. Access ceremonies, integration circles, retreats, and a sovereign community of souls and practitioners." path="/membership" />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Membership" }]} />
 
