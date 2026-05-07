@@ -5,8 +5,8 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
 const EVENTBRITE_WEDNESDAY = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";
-// Pending: Eventbrite link for The Softening (Tuesday women's sacrament yin)
-const EVENTBRITE_SOFTENING = "/ceremony-intake";
+// The Softening · Tuesday women's sacrament yin (Eventbrite draft live)
+const EVENTBRITE_SOFTENING = "https://www.eventbrite.com/e/the-softening-tickets-1989036537828";
 
 const SacredYinYoga = () => (
   <SacredSeriesLayout
