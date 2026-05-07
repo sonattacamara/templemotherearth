@@ -14,7 +14,7 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone } = body;
+    const { firstName, lastName, email, phone, interests, availability, experience, whyJoin } = body;
 
     if (!firstName || !lastName || !email) {
       return new Response(JSON.stringify({ error: "First name, last name, and email are required." }), {
@@ -30,6 +30,12 @@ serve(async (req) => {
       phone: String(phone || "").trim(),
       tags: ["volunteer-application"],
       source: "volunteer-page",
+      customFields: {
+        volunteer_interests: String(interests || "").slice(0, 1000),
+        volunteer_availability: String(availability || "").slice(0, 500),
+        volunteer_experience: String(experience || "").slice(0, 2000),
+        volunteer_why_join: String(whyJoin || "").slice(0, 2000),
+      },
     });
 
     if (!ghlResult.success) {
