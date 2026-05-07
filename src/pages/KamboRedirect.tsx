@@ -118,9 +118,9 @@ const KamboRedirect = () => {
           </motion.div>
           <motion.p variants={fadeUp} className="mt-5 text-sm text-primary-foreground/70">
             Sister, a women-only Kambo circle is held the third Saturday of every month ·{" "}
-            <Link to="/kambo-women" className="text-primary underline-offset-4 hover:underline">
-              learn more →
-            </Link>
+            <a href="#women-only" className="text-primary underline-offset-4 hover:underline">
+              learn more ↓
+            </a>
           </motion.p>
         </motion.div>
       </section>
