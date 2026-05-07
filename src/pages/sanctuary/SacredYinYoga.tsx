@@ -41,11 +41,11 @@ const SacredYinYoga = () => (
           <h3 className="font-serif text-3xl text-[hsl(40,30%,95%)] mb-2 leading-tight">The Softening</h3>
           <p className="text-sm uppercase tracking-wider text-[hsl(40,30%,75%)] mb-5">A Restorative Evening of Yin, Sacred Tea &amp; Nervous System Renewal</p>
           <div className="text-[hsl(40,30%,85%)] font-serif space-y-3 mb-6 flex-1">
-            <p>Held one Tuesday a month following Sacred Tea House, this is a sacramental yin ceremony for women only. Sonatta Camara holds the container as the body softens, the nervous system unwinds, and the Sacred Fungi sacrament is woven gently throughout the practice.</p>
+            <p>Held one Tuesday a month, this is a sacramental yin ceremony for women only. Camara holds the container as the body softens, the nervous system unwinds, and the Sacred Fungi sacrament is woven gently throughout the practice. (Sacred Tea House gathers separately on Mondays.)</p>
             <p>This is not yoga as fitness. It is yoga as prayer · a slow, devotional return to the body, the breath, and the feminine knowing that lives in the womb space.</p>
           </div>
           <ul className="text-sm text-[hsl(40,30%,75%)] space-y-1.5 mb-6 border-t border-[hsl(45,70%,49%)]/20 pt-5">
-            <li><span className="text-[hsl(45,70%,49%)]">Held by</span> Sonatta Camara</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Held by</span> Camara</li>
             <li><span className="text-[hsl(45,70%,49%)]">Rhythm</span> 4th Tuesday monthly</li>
             <li><span className="text-[hsl(45,70%,49%)]">Location</span> Temple Mother Earth, Washington DC</li>
             <li><span className="text-[hsl(45,70%,49%)]">Sacred Reciprocity</span> $44</li>
