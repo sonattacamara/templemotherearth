@@ -211,7 +211,7 @@ const Scholarship = () => {
             <Link to="/donate" className="rounded-xl border border-border bg-card p-6 hover:border-primary/50 transition text-left group">
               <Heart className="h-6 w-6 text-primary mb-3" />
               <h3 className="font-display text-base font-semibold text-card-foreground group-hover:text-primary transition">Fund a Scholarship</h3>
-              <p className="mt-2 text-xs text-muted-foreground">Hold the door open for the next seeker.</p>
+              <p className="mt-2 text-xs text-muted-foreground">Hold the door open for the next soul.</p>
             </Link>
           </div>
         </div>

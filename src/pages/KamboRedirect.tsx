@@ -227,7 +227,7 @@ const KamboRedirect = () => {
                 for the sacrament with rigorous safety protocols, ensuring every participant is held in a
                 container of care, prayer, and intention. James's journey with Kambo began through his own
                 path of transformation, and he now dedicates his life to sharing this sacred sacrament with warriors,
-                seekers, and those called to purification.
+                souls, and those called to purification.
               </p>
             </div>
           </motion.div>

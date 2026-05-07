@@ -4,11 +4,11 @@ export const journalPosts = [
     title: "The Warrior's Reset: Understanding the Sacred Science of Kambo",
     date: "March 12, 2026",
     excerpt:
-      "Kambo · the secretion of the giant monkey frog · has been used by indigenous Amazonian tribes for centuries as a powerful warrior's reset. Now, seekers across the Washington DC, Maryland, and Virginia region are discovering its transformative potential for detoxification, clarity, and spiritual renewal.",
+      "Kambo · the secretion of the giant monkey frog · has been used by indigenous Amazonian tribes for centuries as a powerful warrior's reset. Now, souls across the Washington DC, Maryland, and Virginia region are discovering its transformative potential for detoxification, clarity, and spiritual renewal.",
     image: "/src/assets/offering-ceremony.jpg",
     body: `There is a reason the Matsés, Mayoruna, and other indigenous peoples of the Amazon call Kambo "the vaccine of the forest." For centuries, hunters would administer the secretion of the Phyllomedusa bicolor · the giant monkey frog · before a hunt. It sharpened their senses, cleared their bodies of illness, and reconnected them to the intelligence of the jungle.
 
-Today, this ancient warrior's medicine has found its way to seekers around the world · including right here in the DMV (Washington DC, Maryland, and Virginia). At Temple Mother Earth, we hold Kambo ceremonies with the reverence, safety, and sacred container this powerful medicine demands.
+Today, this ancient warrior's medicine has found its way to souls around the world · including right here in the DMV (Washington DC, Maryland, and Virginia). At Temple Mother Earth, we hold Kambo ceremonies with the reverence, safety, and sacred container this powerful medicine demands.
 
 **What is Kambo?**
 
@@ -40,7 +40,7 @@ This is not recreational. This is sacred practice.
 
 **Who is Kambo For?**
 
-Kambo is for the seeker who is ready to shed what is heavy. It is for veterans carrying the weight of service. It is for mothers, fathers, practitioners, and seekers who know that something needs to shift at a level deeper than the mind can reach.
+Kambo is for the soul who is ready to shed what is heavy. It is for veterans carrying the weight of service. It is for mothers, fathers, practitioners, and souls who know that something needs to shift at a level deeper than the mind can reach.
 
 If you are in Washington DC, Maryland, Virginia, or anywhere in the greater DMV area and feel the call, we invite you to explore this ancient warrior's reset with us.
 
@@ -82,7 +82,7 @@ Come home to your heart. Come home to the circle.
     title: "Beyond the Ceremony: The Vital Art of Integration",
     date: "March 8, 2026",
     excerpt:
-      "The ceremony ends, but the medicine continues. For seekers in Washington DC, Maryland, and Virginia, understanding Ayahuasca aftercare and plant medicine integration is the difference between a powerful experience and a lasting transformation.",
+      "The ceremony ends, but the medicine continues. For souls in Washington DC, Maryland, and Virginia, understanding Ayahuasca aftercare and plant medicine integration is the difference between a powerful experience and a lasting transformation.",
     image: "/src/assets/community-circle-grass.jpg",
     body: `The candle is blown out. The songs fade. You step back into the world carrying something new · something raw, luminous, and not yet fully understood. This is where the real work begins.
 
@@ -108,7 +108,7 @@ In the modern world · especially for those of us living in the fast-paced DMV c
 
 **The Integration Gap in the DMV**
 
-One of the reasons Temple Mother Earth exists is to fill the integration gap in the greater Washington DC, Maryland, and Virginia region. Many seekers travel to Peru, Costa Rica, or Mexico for Ayahuasca retreats · but return home without a support system. The insights from ceremony begin to fade. Old patterns reassert themselves. The transformation that felt so certain in the maloca becomes a distant memory.
+One of the reasons Temple Mother Earth exists is to fill the integration gap in the greater Washington DC, Maryland, and Virginia region. Many souls travel to Peru, Costa Rica, or Mexico for Ayahuasca retreats · but return home without a support system. The insights from ceremony begin to fade. Old patterns reassert themselves. The transformation that felt so certain in the maloca becomes a distant memory.
 
 Our community provides ongoing integration circles, one-on-one support, and a network of practitioners who understand that the medicine path is not a single event · it is a lifelong practice.
 

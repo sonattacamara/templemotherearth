@@ -69,7 +69,7 @@ const CommunityCare = () => (
           In every Indigenous tradition we have studied, the principle is the same: when you receive something sacred, you give something back. Not as payment. As participation. The exchange itself is part of the medicine.
         </p>
         <p className={BODY_SOFT}>
-          Your time is energy. Your money is energy. Your prayers are energy. Your presence in the circle is energy. When any of these flow toward the temple, they ripple back out to the next seeker who needs what you needed.
+          Your time is energy. Your money is energy. Your prayers are energy. Your presence in the circle is energy. When any of these flow toward the temple, they ripple back out to the next soul who needs what you needed.
         </p>
         <p className={BODY_SOFT}>
           This is not transactional. This is ceremonial. The same way a river only stays alive because water keeps moving · sacred community only stays alive because energy keeps moving through it.
@@ -94,7 +94,7 @@ const CommunityCare = () => (
           Temple Mother Earth is not a business. We are a village. And every village needs guardians · people whose energy keeps the fire lit, the doors open, and the table set.
         </p>
         <p className={BODY_SOFT}>
-          Your offering does not buy you a seat. It sustains the energy that made your seat possible. When you give as a Sustainer, you are holding the door open for the seeker who comes behind you. When you receive a scholarship, someone before you held that door open for you.
+          Your offering does not buy you a seat. It sustains the energy that made your seat possible. When you give as a Sustainer, you are holding the door open for the soul who comes behind you. When you receive a scholarship, someone before you held that door open for you.
         </p>
         <p className={BODY_SOFT}>
           This is the Guardian energy. Not charity. Not sympathy. Sacred responsibility, passed from one soul to the next, like a torch around the fire circle.
@@ -167,7 +167,7 @@ const CommunityCare = () => (
           <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,25%,75%)] mb-2">Energy Exchange · Two Per Ceremony</p>
           <p className="text-[12px] text-[hsl(45,60%,60%)] mb-5 italic font-serif">No financial offering required</p>
           <p className="text-[15px] text-[hsl(40,30%,88%)] leading-relaxed font-serif mb-6 flex-1">
-            Two scholarship seats are held in every ceremony. You contribute your energy in exchange · setting up the sanctuary, washing linens, helping with food, holding the door for the next seeker. The exchange honors the circle.
+            Two scholarship seats are held in every ceremony. You contribute your energy in exchange · setting up the sanctuary, washing linens, helping with food, holding the door for the next soul. The exchange honors the circle.
           </p>
           <p className="text-[14px] text-[hsl(45,70%,72%)] font-serif italic">
             The medicine does not check your bank account.
@@ -197,10 +197,10 @@ const CommunityCare = () => (
     >
       <div className="max-w-[760px] mx-auto space-y-6 text-center">
         <p className={BODY}>
-          Imagine a seeker who feels the call. Their heart is open. Their intention is sincere. But this season, money is not flowing for them. In another temple, the door would close. In ours, the door opens differently.
+          Imagine a soul who feels the call. Their heart is open. Their intention is sincere. But this season, money is not flowing for them. In another temple, the door would close. In ours, the door opens differently.
         </p>
         <p className={BODY_SOFT}>
-          We hold two scholarship seats in every ceremony. They are not free · they are paid in a different currency. The seeker offers their hands, their time, their presence in service of the circle. They might arrive early to set up the sanctuary. Stay late to break it down. Wash the ceremonial linens. Help prepare nourishment. Greet the next seeker at the door.
+          We hold two scholarship seats in every ceremony. They are not free · they are paid in a different currency. The soul offers their hands, their time, their presence in service of the circle. They might arrive early to set up the sanctuary. Stay late to break it down. Wash the ceremonial linens. Help prepare nourishment. Greet the next soul at the door.
         </p>
         <p className={BODY_SOFT}>
           By the end, they have not received charity. They have participated in the sacred infrastructure that holds everyone else. They leave knowing they belong, because they helped build the circle that held them.
@@ -266,7 +266,7 @@ const CommunityCare = () => (
           "What is the most generous expression of my current reality?"
         </p>
         <p className={BODY_SOFT}>
-          If you can give more, give more. Not because we ask you to. Because your generosity is part of your ceremony · an act of trust, of faith, and of love for the seeker behind you who may not be able to give a dollar.
+          If you can give more, give more. Not because we ask you to. Because your generosity is part of your ceremony · an act of trust, of faith, and of love for the soul behind you who may not be able to give a dollar.
         </p>
         <p className={BODY_SOFT}>
           If you cannot give more, come anyway. Do not let money be the reason you miss your calling. That is not what this temple is for.

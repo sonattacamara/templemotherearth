@@ -1557,7 +1557,7 @@ const CeremonyIntake = () => {
                   <li>• We believe in the power of ceremony as a sincere religious exercise, practiced in community with intention, reverence, and accountability.</li>
                   <li>• We believe that healing is a personal responsibility and that Earth Medicine, when used sacramentally, is a pathway to spiritual awakening, not a substitute for medical care.</li>
                   <li>• We believe in ethical reciprocity with indigenous wisdom keepers who carry these ancestral traditions, and we honor their lineages through partnership and giving back.</li>
-                  <li>• We believe in radical inclusivity · welcoming all seekers regardless of race, gender, background, or status · while remaining rooted in the BIPOC community that founded this temple.</li>
+                  <li>• We believe in radical inclusivity · welcoming all souls regardless of race, gender, background, or status · while remaining rooted in the BIPOC community that founded this temple.</li>
                 </ul>
               </div>
               {/* Eligibility Statement */}
@@ -1642,7 +1642,7 @@ const CeremonyIntake = () => {
           {step === 7 && (
             <div className="text-center py-8">
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
-              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Seeker</h3>
+              <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred Soul</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
                 Your Sacred Intake has been submitted successfully. Our facilitators will review your screening and reach out if they need any additional information. You are now ready to enter the ceremony.
               </p>

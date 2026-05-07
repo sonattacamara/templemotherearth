@@ -39,7 +39,7 @@ const SACRED_ROLES = [
     title: "Social Media",
     tag: "social-media",
     short: "Posts · Stories · Community engagement",
-    body: "Transmute images and words into potent elixirs that resonate with the souls of seekers. With every post, craft incantations that ripple through the collective consciousness, drawing kindred spirits to our temple's embrace.",
+    body: "Transmute images and words into potent elixirs that resonate with the souls of souls. With every post, craft incantations that ripple through the collective consciousness, drawing kindred spirits to our temple's embrace.",
     serve: ["Instagram and Facebook posts", "Story coverage of ceremonies", "Community engagement and replies"],
   },
   {

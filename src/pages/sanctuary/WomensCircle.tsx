@@ -85,7 +85,7 @@ const WomensCircle = () => (
             featured: true,
           },
           {
-            title: "The Seeker",
+            title: "The Soul",
             description:
               "Women in transition or remembering · returning to body, to cycle, to sisterhood, to the wisdom that has always lived in you.",
             note: "ROOM FOR YOU",
