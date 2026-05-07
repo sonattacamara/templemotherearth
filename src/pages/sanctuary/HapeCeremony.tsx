@@ -41,7 +41,7 @@ const HapeCeremony = () => (
       title={<>The Noise Stops.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">You Remember.</em></>}
       subtitle=""
       lead="Not the thought of yourself. Not the story you've been running. The actual you, underneath all of it, quiet, present, grounded in your body on this earth. Hapé has been clearing this path for thousands of years. It knows exactly where to go."
-      primaryCTA={{ label: "Secure Your Place", href: "https://bit.ly/HapeCircle", external: true }}
+      primaryCTA={{ label: "Secure Your Place", href: "https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true", external: true }}
       secondaryCTA={{ label: "Learn More ↓", href: "#about" }}
       backgroundImage="https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
     />
@@ -84,7 +84,7 @@ const HapeCeremony = () => (
       title={<>The Forest<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Has Been Waiting</em></>}
       description="You already know if this is for you. Secure your place and begin your preparation. The circle holds what arrives."
       ctaLabel="Secure Your Place"
-      ctaHref="https://bit.ly/HapeCircle"
+      ctaHref="https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true"
       note="Community Care Model · Suggested sacred contribution · Scholarship available · Ask us"
     />
 
