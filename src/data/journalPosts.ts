@@ -4,26 +4,26 @@ export const journalPosts = [
     title: "The Warrior's Reset: Understanding the Sacred Science of Kambo",
     date: "March 12, 2026",
     excerpt:
-      "Kambo — the secretion of the giant monkey frog — has been used by indigenous Amazonian tribes for centuries as a powerful warrior's reset. Now, seekers across the Washington DC, Maryland, and Virginia region are discovering its transformative potential for detoxification, clarity, and spiritual renewal.",
+      "Kambo · the secretion of the giant monkey frog · has been used by indigenous Amazonian tribes for centuries as a powerful warrior's reset. Now, seekers across the Washington DC, Maryland, and Virginia region are discovering its transformative potential for detoxification, clarity, and spiritual renewal.",
     image: "/src/assets/offering-ceremony.jpg",
-    body: `There is a reason the Matsés, Mayoruna, and other indigenous peoples of the Amazon call Kambo "the vaccine of the forest." For centuries, hunters would administer the secretion of the Phyllomedusa bicolor — the giant monkey frog — before a hunt. It sharpened their senses, cleared their bodies of illness, and reconnected them to the intelligence of the jungle.
+    body: `There is a reason the Matsés, Mayoruna, and other indigenous peoples of the Amazon call Kambo "the vaccine of the forest." For centuries, hunters would administer the secretion of the Phyllomedusa bicolor · the giant monkey frog · before a hunt. It sharpened their senses, cleared their bodies of illness, and reconnected them to the intelligence of the jungle.
 
-Today, this ancient warrior's medicine has found its way to seekers around the world — including right here in the DMV (Washington DC, Maryland, and Virginia). At Temple Mother Earth, we hold Kambo ceremonies with the reverence, safety, and sacred container this powerful medicine demands.
+Today, this ancient warrior's medicine has found its way to seekers around the world · including right here in the DMV (Washington DC, Maryland, and Virginia). At Temple Mother Earth, we hold Kambo ceremonies with the reverence, safety, and sacred container this powerful medicine demands.
 
 **What is Kambo?**
 
-Kambo is a bioactive peptide secretion collected ethically from the Phyllomedusa bicolor frog. The frog is not harmed in this process — it is gently captured, its secretion is collected, and it is returned to the forest. The secretion contains a complex cocktail of peptides that interact with the human body in profound ways:
+Kambo is a bioactive peptide secretion collected ethically from the Phyllomedusa bicolor frog. The frog is not harmed in this process · it is gently captured, its secretion is collected, and it is returned to the forest. The secretion contains a complex cocktail of peptides that interact with the human body in profound ways:
 
-• **Dermorphin** — 30–40x more potent than morphine, providing deep pain relief
-• **Phyllomedusin** — stimulates the gut and digestive system
-• **Dermaseptin** — a powerful antimicrobial agent
-• **Adenoregulin** — works with the adenosine receptor, impacting mood and energy
+• **Dermorphin** · 30·40x more potent than morphine, providing deep pain relief
+• **Phyllomedusin** · stimulates the gut and digestive system
+• **Dermaseptin** · a powerful antimicrobial agent
+• **Adenoregulin** · works with the adenosine receptor, impacting mood and energy
 
-When applied to small superficial burns on the skin, these peptides enter the lymphatic system directly. What follows is an intense but brief purge — typically lasting 20 to 40 minutes — that many describe as a deep cellular reset.
+When applied to small superficial burns on the skin, these peptides enter the lymphatic system directly. What follows is an intense but brief purge · typically lasting 20 to 40 minutes · that many describe as a deep cellular reset.
 
 **The Purge is the Medicine**
 
-In Western culture, we have been conditioned to fear the purge. But in indigenous sacramental traditions, the purge is sacred. It is the body's intelligent release of what no longer serves — stagnant energy, stored grief, and even physical illness.
+In Western culture, we have been conditioned to fear the purge. But in indigenous sacramental traditions, the purge is sacred. It is the body's intelligent release of what no longer serves · stagnant energy, stored grief, and even physical illness.
 
 Our community members in the DC, Maryland, and Virginia area consistently report:
 • Dramatic increases in mental clarity and focus
@@ -51,27 +51,27 @@ If you are in Washington DC, Maryland, Virginia, or anywhere in the greater DMV 
     title: "Opening the Heart: Our First Cacao Ceremony of the Year",
     date: "March 15, 2026",
     excerpt:
-      "As the Spring Equinox approaches, we return to the circle. This Wednesday marks the opening of our 2026 Cacao season — a ceremony rooted in the frequency of the heart, community, and remembrance.",
+      "As the Spring Equinox approaches, we return to the circle. This Wednesday marks the opening of our 2026 Cacao season · a ceremony rooted in the frequency of the heart, community, and remembrance.",
     image: "/src/assets/offering-ceremony.jpg",
-    body: `The heart knows before the mind can catch up. That is the medicine of Cacao — Mama Cacao, as she is called in the Mesoamerican traditions that have honored her for thousands of years.
+    body: `The heart knows before the mind can catch up. That is the medicine of Cacao · Mama Cacao, as she is called in the Mesoamerican traditions that have honored her for thousands of years.
 
-This Wednesday, Temple Mother Earth opens the 2026 ceremonial season with our first Cacao Ceremony. It is not a coincidence that this falls near the Spring Equinox — a moment when light and dark find balance, when seeds buried in winter darkness finally push toward the sun.
+This Wednesday, Temple Mother Earth opens the 2026 ceremonial season with our first Cacao Ceremony. It is not a coincidence that this falls near the Spring Equinox · a moment when light and dark find balance, when seeds buried in winter darkness finally push toward the sun.
 
 **What is Ceremonial Cacao?**
 
-Ceremonial-grade Cacao is not the processed chocolate you find on store shelves. It is minimally processed, stone-ground, and prepared with intention. The active compound theobromine — literally "food of the gods" — gently opens the cardiovascular system, increases blood flow, and creates a warm, expansive feeling in the chest. Combined with sacred intention, breathwork, and community, Cacao becomes a powerful heart-opening sacrament.
+Ceremonial-grade Cacao is not the processed chocolate you find on store shelves. It is minimally processed, stone-ground, and prepared with intention. The active compound theobromine · literally "food of the gods" · gently opens the cardiovascular system, increases blood flow, and creates a warm, expansive feeling in the chest. Combined with sacred intention, breathwork, and community, Cacao becomes a powerful heart-opening sacrament.
 
 **The Frequency of the Heart**
 
 In our ceremonies, we work with Cacao as a bridge. A bridge between the thinking mind and the feeling heart. A bridge between isolation and community. A bridge between who you have been and who you are becoming.
 
-Many of our community members describe Cacao ceremonies as the most gentle yet profound entry point into sacred ceremonial work. There is no purging, no intensity — only warmth, connection, music, and the quiet courage to feel.
+Many of our community members describe Cacao ceremonies as the most gentle yet profound entry point into sacred ceremonial work. There is no purging, no intensity · only warmth, connection, music, and the quiet courage to feel.
 
 **Returning to the Circle**
 
 For six years, this community has gathered in circle. Through a global pandemic, through personal storms, through seasons of grief and seasons of joy. The circle holds it all.
 
-This Wednesday, we invite you back. Whether you are a seasoned ceremonial participant or someone feeling the first whisper of curiosity — you belong here. The circle is not complete without you.
+This Wednesday, we invite you back. Whether you are a seasoned ceremonial participant or someone feeling the first whisper of curiosity · you belong here. The circle is not complete without you.
 
 Come home to your heart. Come home to the circle.
 
@@ -84,7 +84,7 @@ Come home to your heart. Come home to the circle.
     excerpt:
       "The ceremony ends, but the medicine continues. For seekers in Washington DC, Maryland, and Virginia, understanding Ayahuasca aftercare and plant medicine integration is the difference between a powerful experience and a lasting transformation.",
     image: "/src/assets/community-circle-grass.jpg",
-    body: `The candle is blown out. The songs fade. You step back into the world carrying something new — something raw, luminous, and not yet fully understood. This is where the real work begins.
+    body: `The candle is blown out. The songs fade. You step back into the world carrying something new · something raw, luminous, and not yet fully understood. This is where the real work begins.
 
 At Temple Mother Earth, we say: the ceremony is the seed. Integration is the soil, the water, and the sunlight. Without it, even the most profound plant medicine experience can wither before it takes root.
 
@@ -96,21 +96,21 @@ After working with powerful Earth sacraments like Ayahuasca, Kambo, Psilocybin, 
 
 **Why Integration Matters**
 
-In indigenous traditions, the days and weeks following ceremony are considered sacred. The Shipibo practitioners call this period the "dieta" — a time of dietary, behavioral, and energetic discipline that allows the sacrament to continue its work.
+In indigenous traditions, the days and weeks following ceremony are considered sacred. The Shipibo practitioners call this period the "dieta" · a time of dietary, behavioral, and energetic discipline that allows the sacrament to continue its work.
 
-In the modern world — especially for those of us living in the fast-paced DMV corridor of Washington DC, Maryland, and Virginia — returning to daily life after a deep Ayahuasca or Kambo ceremony can feel disorienting. Integration practices anchor the experience:
+In the modern world · especially for those of us living in the fast-paced DMV corridor of Washington DC, Maryland, and Virginia · returning to daily life after a deep Ayahuasca or Kambo ceremony can feel disorienting. Integration practices anchor the experience:
 
-• **Journaling** — capturing visions, emotions, and insights before the mind reframes them
-• **Somatic practices** — yoga, breathwork, and movement to process what the body is holding
-• **Community circles** — sharing your experience with others who understand the territory
-• **Nature immersion** — returning to the Earth that provided the medicine
-• **Professional support** — working with integration coaches or practitioners trained in ceremonial aftercare
+• **Journaling** · capturing visions, emotions, and insights before the mind reframes them
+• **Somatic practices** · yoga, breathwork, and movement to process what the body is holding
+• **Community circles** · sharing your experience with others who understand the territory
+• **Nature immersion** · returning to the Earth that provided the medicine
+• **Professional support** · working with integration coaches or practitioners trained in ceremonial aftercare
 
 **The Integration Gap in the DMV**
 
-One of the reasons Temple Mother Earth exists is to fill the integration gap in the greater Washington DC, Maryland, and Virginia region. Many seekers travel to Peru, Costa Rica, or Mexico for Ayahuasca retreats — but return home without a support system. The insights from ceremony begin to fade. Old patterns reassert themselves. The transformation that felt so certain in the maloca becomes a distant memory.
+One of the reasons Temple Mother Earth exists is to fill the integration gap in the greater Washington DC, Maryland, and Virginia region. Many seekers travel to Peru, Costa Rica, or Mexico for Ayahuasca retreats · but return home without a support system. The insights from ceremony begin to fade. Old patterns reassert themselves. The transformation that felt so certain in the maloca becomes a distant memory.
 
-Our community provides ongoing integration circles, one-on-one support, and a network of practitioners who understand that the medicine path is not a single event — it is a lifelong practice.
+Our community provides ongoing integration circles, one-on-one support, and a network of practitioners who understand that the medicine path is not a single event · it is a lifelong practice.
 
 **Signs You Need Integration Support**
 
@@ -124,7 +124,7 @@ Our community provides ongoing integration circles, one-on-one support, and a ne
 
 We do not believe in spiritual bypassing. Integration is not about "good vibes only." It is about having the courage to sit with discomfort, to grieve what needs to be released, and to rebuild your life in alignment with what the medicine revealed.
 
-Whether you sat with Ayahuasca in the Amazon, experienced Kambo in a local ceremony, or worked with sacred Psilocybin in a private setting — you deserve support on the other side.
+Whether you sat with Ayahuasca in the Amazon, experienced Kambo in a local ceremony, or worked with sacred Psilocybin in a private setting · you deserve support on the other side.
 
 *If you are in the DC, Maryland, or Virginia area and seeking integration support, reach out through our Contact page or join one of our community circles.*`,
   },

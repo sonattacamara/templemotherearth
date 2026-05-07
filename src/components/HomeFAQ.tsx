@@ -89,11 +89,11 @@ const categories: FAQCategory[] = [
       },
       {
         q: "What are the membership tiers?",
-        a: "We offer five pathways: Welcome Circle — community access and newsletter. Community Rhythm — full portal access, monthly teachings, ceremony attendance. Environment Collective — daily Qi Gong, replay library, embodiment workshops. Preparation Path — guided 3-month preparation container, ceremony eligibility. Temple Immersion Path — quarterly immersion eligibility, deep integration support. Visit our Membership page to learn about each pathway.",
+        a: "We offer five pathways: Welcome Circle · community access and newsletter. Community Rhythm · full portal access, monthly teachings, ceremony attendance. Environment Collective · daily Qi Gong, replay library, embodiment workshops. Preparation Path · guided 3-month preparation container, ceremony eligibility. Temple Immersion Path · quarterly immersion eligibility, deep integration support. Visit our Membership page to learn about each pathway.",
       },
       {
         q: "How do contributions work?",
-        a: "Each offering's sacred contribution is shared at the point of registration via Eventbrite, or — for offerings by application — confirmed during the application process. We operate as a 508(c)(1)(A) sacred ceremony church, and all contributions support our mission. Our Sacred Energy Exchange and scholarship offerings ensure no one is turned away for inability to contribute.",
+        a: "Each offering's sacred contribution is shared at the point of registration via Eventbrite, or · for offerings by application · confirmed during the application process. We operate as a 508(c)(1)(A) sacred ceremony church, and all contributions support our mission. Our Sacred Energy Exchange and scholarship offerings ensure no one is turned away for inability to contribute.",
       },
       {
         q: "Do you offer veteran scholarships?",

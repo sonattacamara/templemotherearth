@@ -143,7 +143,7 @@ const GoogleReviewsWidget = () => {
         </div>
       </motion.div>
 
-      {/* Review cards — Google API returns max 5, pad with fallbacks to always show 6 */}
+      {/* Review cards · Google API returns max 5, pad with fallbacks to always show 6 */}
       <div className="grid gap-6 md:grid-cols-3">
       {(() => {
         const apiReviews = data.reviews.slice(0, 6);

@@ -59,7 +59,7 @@ const About = () => {
             Our Story
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/75">
-            Born during the pandemic, when the world was closing its doors, Temple Mother Earth opened ours — 
+            Born during the pandemic, when the world was closing its doors, Temple Mother Earth opened ours · 
             bringing community together to restore with Mother Earth when it was needed most.
           </motion.p>
         </motion.div>
@@ -87,7 +87,7 @@ const About = () => {
                   In 2020, when the pandemic brought the world to a standstill and fear kept people isolated 
                    behind closed doors, Dr. Sonatta Camara and King James made a radical choice: they opened 
                    their doors. What began as intimate ceremonial circles during the darkest days of the pandemic 
-                   grew into Temple Mother Earth — a sacred sanctuary where sovereign beings come to reconnect 
+                   grew into Temple Mother Earth · a sacred sanctuary where sovereign beings come to reconnect 
                    with the Earth, honor the God within, and walk the path of transformation together.
                 </p>
                 <p>
@@ -144,7 +144,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Restoring the Sacred Within Every Person</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  The mission of Temple Mother Earth is to guide individuals back to the place where true transformation begins — within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
+                  The mission of Temple Mother Earth is to guide individuals back to the place where true transformation begins · within themselves. We believe that every human being carries an inner source of wisdom, clarity, and divine intelligence.
                 </p>
                 <p>
                   Our work is to help people reconnect with this inner truth through sacred Earth sacrament, spiritual practice, and intentional self-discovery.
@@ -177,7 +177,7 @@ const About = () => {
               <h3 className="mt-6 font-display text-2xl font-bold text-foreground">Building Community Through Connection & Consciousness</h3>
               <div className="mt-4 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
-                  At Temple Mother Earth, we know that transformation does not happen in isolation — it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
+                  At Temple Mother Earth, we know that transformation does not happen in isolation · it happens in community. Our mission includes fostering a spiritual family where people can be seen, heard, and held without judgment. Through circles, classes, ceremonies, and communal gatherings, we nurture environments where individuals can grow together, learn together, and remember their interconnectedness.
                 </p>
                 <p>
                   We hold a vision of community built on respect, compassion, sovereignty, and shared awakening.
@@ -228,7 +228,7 @@ const About = () => {
                 label: "Value 1",
                 title: "Reverence for the Earth & the Sacred",
                 desc: "At Temple Mother Earth, we honor the Earth as our first teacher, our sacrament, and our guide. Every ceremony, circle, and gathering begins with a deep acknowledgment of the land, the elements, and the unseen forces that support our lives. We believe that transformation happens when we return to harmony with nature and with the God within.",
-                detail: "Our work is built on humility, respect, and gratitude — honoring the sacred lineages, teachings, and Earth sacraments that make our restoration possible.",
+                detail: "Our work is built on humility, respect, and gratitude · honoring the sacred lineages, teachings, and Earth sacraments that make our restoration possible.",
               },
               {
                 icon: Shield,
@@ -242,7 +242,7 @@ const About = () => {
                 label: "Value 3",
                 title: "Community, Connection & Collective Remembrance",
                 desc: "Our community is at the heart of everything we do. We believe that transformation deepens when we are witnessed, supported, and held in sacred community. Temple Mother Earth brings people together to cultivate connection, emotional maturity, accountability, and mutual care.",
-                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together — honoring the truth that we restore in relationship, not in isolation.",
+                detail: "In our circles, each person is welcomed as family. We grow together, learn together, and rise together · honoring the truth that we restore in relationship, not in isolation.",
               },
               {
                 icon: Heart,
@@ -256,13 +256,13 @@ const About = () => {
                 label: "Value 5",
                 title: "Emotional Maturity & Inner Accountability",
                 desc: "Transformation requires courage, honesty, and a willingness to take responsibility for one's own path. We support individuals in developing emotional intelligence, communication skills, self-awareness, and the capacity to navigate life with clarity.",
-                detail: "We believe emotional maturity is a spiritual practice — a way of aligning our actions with our highest self. Every offering, from ceremonies to classes, is designed to help people return to their inner truth with integrity and compassion.",
+                detail: "We believe emotional maturity is a spiritual practice · a way of aligning our actions with our highest self. Every offering, from ceremonies to classes, is designed to help people return to their inner truth with integrity and compassion.",
               },
               {
                 icon: Globe,
                 label: "Value 6",
                 title: "Inclusivity, Belonging & Universal Humanity",
-                desc: "Temple Mother Earth is an inclusive community where all people are welcome. We do not see you as a category — not male or female, not Black or white, not labels or roles. We recognize you as a human being, a divine soul, and a carrier of wisdom and purpose.",
+                desc: "Temple Mother Earth is an inclusive community where all people are welcome. We do not see you as a category · not male or female, not Black or white, not labels or roles. We recognize you as a human being, a divine soul, and a carrier of wisdom and purpose.",
                 detail: "",
               },
             ].map((value) => (
@@ -360,7 +360,7 @@ const About = () => {
                 <iframe
                   className="absolute inset-0 h-full w-full"
                   src="https://www.youtube.com/embed/gpwuq5wOvwI"
-                  title="The Four Agreements — Temple Mother Earth"
+                  title="The Four Agreements · Temple Mother Earth"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
@@ -370,7 +370,7 @@ const About = () => {
           </motion.div>
 
           <motion.p variants={fadeUp} className="mt-10 text-center text-sm text-muted-foreground italic">
-            Based on the wisdom of Don Miguel Ruiz — "The Four Agreements"
+            Based on the wisdom of Don Miguel Ruiz · "The Four Agreements"
           </motion.p>
         </motion.div>
       </section>
@@ -397,12 +397,12 @@ const About = () => {
             <div className="rounded-2xl border border-border bg-card p-8 space-y-4">
               <p>
                 We believe that the Earth is sacred, alive, and a source of medicine, wisdom, and spiritual sustenance 
-                for all human beings. We believe that the Creator — known by many names across cultures — has placed 
+                for all human beings. We believe that the Creator · known by many names across cultures · has placed 
                 within every person a divine spark, an inner intelligence, and the innate capacity for healing and transformation.
               </p>
               <p>
-                We believe that Earth Medicine ceremonies — including but not limited to Kambo, Hapé, Cacao, and Sacred Plant 
-                ceremonies — are sacramental practices that connect the human spirit to the divine, to nature, and to the 
+                We believe that Earth Medicine ceremonies · including but not limited to Kambo, Hapé, Cacao, and Sacred Plant 
+                ceremonies · are sacramental practices that connect the human spirit to the divine, to nature, and to the 
                 truth within. These practices are central to our religious and spiritual expression.
               </p>
               <p>
@@ -410,7 +410,7 @@ const About = () => {
                 sacred traditions, and to gather in community for prayer, ceremony, and collective awakening.
               </p>
               <p>
-                We believe that healing is not about fixing what is broken — it is about remembering what has always been whole. 
+                We believe that healing is not about fixing what is broken · it is about remembering what has always been whole. 
                 Our ceremonies and gatherings are held with reverence, prayer, safety, and deep respect for the ancestral 
                 and indigenous lineages that carry these sacred traditions.
               </p>
@@ -443,7 +443,7 @@ const About = () => {
                 <p>
                Temple Mother Earth is proudly rooted in the BIPOC community. We were founded by and for people
                   who are seeking higher states of consciousness and lasting transformation, while welcoming all sovereign beings who resonate with our mission.
-                  Our community is radically inclusive — intentionally moving beyond labels of gender, race, or status.
+                  Our community is radically inclusive · intentionally moving beyond labels of gender, race, or status.
                 </p>
                 <p>
                   As it says upon our temple door: <em className="font-semibold text-foreground">"You are not a man.
@@ -502,21 +502,21 @@ const About = () => {
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Dr. Sonatta Camara, PhD is a visionary educator and spiritual guide whose lineage traces
-                  to West Africa — Guinea — and Cairo, Egypt, where East meets West, shaping the foundation
+                  to West Africa · Guinea · and Cairo, Egypt, where East meets West, shaping the foundation
                   of who she is. Her journey into Earth Medicine began as a personal quest for reconnection
                   and quickly evolved into a sacred calling. With a background that bridges academia and
                   ancestral wisdom, Dr. Camara brings a unique depth to her work as co-founder and spiritual
                   director of Temple Mother Earth.
                 </p>
                 <p>
-                  Her approach is rooted in the understanding that we are sovereign beings — divine
+                  Her approach is rooted in the understanding that we are sovereign beings · divine
                   essences having a human experience. She guides individuals through sacred ceremonies including
                   Kambo, Hapé, and other Earth Medicine traditions, creating containers of profound safety,
                   love, and transformation.
                 </p>
                 <p>
                   Through her own healing journey, Dr. Camara discovered the transformative power of self-regulating 
-                  the nervous system — a practice she now brings to the many women, especially executives and high-achievers, 
+                  the nervous system · a practice she now brings to the many women, especially executives and high-achievers, 
                   who carry the invisible weight of stress, burnout, and disconnection. Her mission is rooted in the 
                   understanding that when we learn to regulate our own systems, we unlock a deeper capacity for joy, 
                   purpose, and authentic leadership.
@@ -544,14 +544,14 @@ const About = () => {
                 <p>
                    King James is a native Washingtonian, born and raised in the DC area. A retired United States Air Force veteran, accomplished black belt martial artist,
                    ceremony facilitator, and co-founder of Temple Mother Earth, his military service
-                   instilled a warrior's discipline and unwavering commitment to service — qualities he now channels
+                   instilled a warrior's discipline and unwavering commitment to service · qualities he now channels
                    into holding sacred space for healing and transformation.
                 </p>
                 <p>
                    James specializes in working with veterans and individuals navigating PTSD, drawing from his own
                    journey of healing through Earth Medicine to guide others through their darkest chapters. His deep
-                   understanding of the veteran experience — the invisible wounds, the isolation, the search for purpose
-                   after service — makes him a uniquely powerful facilitator for those who have served.
+                   understanding of the veteran experience · the invisible wounds, the isolation, the search for purpose
+                   after service · makes him a uniquely powerful facilitator for those who have served.
                 </p>
                 <p>
                    As a master beekeeper, James embodies the sacred relationship between humanity and the natural world,
@@ -562,8 +562,8 @@ const About = () => {
                 <p>
                    As the operational force behind Temple Mother Earth, James oversees community engagement,
                    immersion coordination, and the expansion of Temple Mother Earth's Veterans Transformation Program. His vision
-                   is to bring sacred healing to communities that have been historically underserved — especially
-                   fellow veterans and those carrying the weight of trauma — ensuring that Earth Medicine
+                   is to bring sacred healing to communities that have been historically underserved · especially
+                   fellow veterans and those carrying the weight of trauma · ensuring that Earth Medicine
                    is accessible to all who seek it.
                 </p>
               </div>
@@ -619,13 +619,13 @@ const About = () => {
               </p>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  A shaman, priest, physician, and scholar warrior, Dr. George Xavier Love, Jr. serves as the High Priest of Temple Mother Earth — the spiritual anchor who carries the Kemetic and Taoist wisdom traditions that guide our community's deepest work.
+                  A shaman, priest, physician, and scholar warrior, Dr. George Xavier Love, Jr. serves as the High Priest of Temple Mother Earth · the spiritual anchor who carries the Kemetic and Taoist wisdom traditions that guide our community's deepest work.
                 </p>
                 <p>
-                  Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides individuals toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi — the life force — as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.
+                  Dr. Love's spiritual foundation is rooted in Taoism and Qigong. Through his practice of Blue Dragon Immortal Qigong, he guides individuals toward harmony with nature and spiritual elevation through chanting, body drumming, and trance dancing. Integrating Tibetan Buddhist Psychiatry and Taoist Psychology, he views Qi · the life force · as the fundamental energy of the universe, and teaches the creative power of emptiness as a path to transcendence and fearlessness.
                 </p>
                 <p>
-                  As the keeper of our Kemetic teachings, Dr. Love illuminates the ancient Egyptian wisdom that forms the theological backbone of Temple Mother Earth — teaching the Body as Temple philosophy, the sacred significance of Kemet as the birthplace of humanity and medicine, and the Kemetic Trinity that connects us to our divine origins.
+                  As the keeper of our Kemetic teachings, Dr. Love illuminates the ancient Egyptian wisdom that forms the theological backbone of Temple Mother Earth · teaching the Body as Temple philosophy, the sacred significance of Kemet as the birthplace of humanity and medicine, and the Kemetic Trinity that connects us to our divine origins.
                 </p>
                 <p>
                   His presence in ceremony is both grounding and transcendent, holding space with a depth of knowledge that spans thousands of years of wisdom traditions.
@@ -682,14 +682,14 @@ const About = () => {
                 role: "Yoga & Sound Ceremony Guide",
                 img: facilitatorDebra,
                 imgAlt: "Debra Owens, yoga and sound ceremony guide at Temple Mother Earth for Cacao and Blue Lotus ceremony integration",
-                desc: "Certified yoga instructor and sound ceremony practitioner devoted to guiding others toward strength, flexibility, and inner peace — nurturing the body, calming the mind, and awakening the spirit.",
+                desc: "Certified yoga instructor and sound ceremony practitioner devoted to guiding others toward strength, flexibility, and inner peace · nurturing the body, calming the mind, and awakening the spirit.",
               },
               {
                 name: "Walter Spencer",
                 role: "Poet & Facilitator",
                 img: facilitatorSpencer,
                 imgAlt: "Walter Spencer, poet and Kambo ceremony facilitator at Temple Mother Earth, creator of The Cove men's integration circle",
-                desc: "A multi-medium artist from Prince George's County rooted in creativity and transformation. Through poetry, plant sacrament and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle — inviting men to slow down, soften, and be held.",
+                desc: "A multi-medium artist from Prince George's County rooted in creativity and transformation. Through poetry, plant sacrament and beyond, he centers the voices of Black and Indigenous people. His offering to the Temple is The Cove: A Men's Integration & Reflection Circle · inviting men to slow down, soften, and be held.",
               },
               {
                 name: "Samira Davis",
@@ -779,13 +779,13 @@ const About = () => {
             <p>
               The Divine resides within you. Whether you call it God, Source, Universe, Spirit, 
               the Most High, the Creator, the Ancestors, the Great Mystery, Jah, Allah, Yahweh, 
-              Brahman, the Sacred, or simply Love — that infinite intelligence lives within your 
+              Brahman, the Sacred, or simply Love · that infinite intelligence lives within your 
               very being. You have always had the power to connect to it.
             </p>
             <p>
               At Temple Mother Earth, we are human beings dedicated to providing space for YOU to do
               your OWN work with sacred tools, wisdom, guidance, and practices. This is not a quick fix 
-              — it is called sacrament for a specific reason. Transformation is a lifestyle 
+              · it is called sacrament for a specific reason. Transformation is a lifestyle 
               and a continuous journey.
             </p>
             <p className="font-display text-xl font-semibold text-foreground italic">
@@ -809,7 +809,7 @@ const About = () => {
         variant="dark"
         eyebrow="Sustain the Temple"
         headline="Help Us Continue This Sacred Work"
-        body="Your generosity sustains a living sanctuary — funding ceremonies, facilitator training, and community access for those who need it most."
+        body="Your generosity sustains a living sanctuary · funding ceremonies, facilitator training, and community access for those who need it most."
         buttonLabel="Support the Temple"
       />
 

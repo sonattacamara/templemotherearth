@@ -20,10 +20,10 @@ const BlueprintIntro = () => (
         What Is Sacred Blueprint?
       </motion.h2>
       <motion.p variants={fadeUp} className="mt-6 text-base leading-relaxed text-muted-foreground">
-        Human Design is a synthesis of ancient wisdom and modern science — combining astrology, the I Ching, Kabbalah, and the Chakra system. Your Sacred Blueprint is the unique map created at the exact moment of your birth. It reveals your energy type, your decision-making authority, and the sacred design of how you are meant to live, heal, and transform.
+        Human Design is a synthesis of ancient wisdom and modern science · combining astrology, the I Ching, Kabbalah, and the Chakra system. Your Sacred Blueprint is the unique map created at the exact moment of your birth. It reveals your energy type, your decision-making authority, and the sacred design of how you are meant to live, heal, and transform.
       </motion.p>
       <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-muted-foreground">
-        At Temple Mother Earth, we read your Blueprint through a sacred lens — connecting your design to your healing path, your ceremony journey, and the transformation that is already calling you home.
+        At Temple Mother Earth, we read your Blueprint through a sacred lens · connecting your design to your healing path, your ceremony journey, and the transformation that is already calling you home.
       </motion.p>
     </motion.div>
   </section>

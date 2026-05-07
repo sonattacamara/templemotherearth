@@ -146,8 +146,8 @@ const SECTIONS: Array<{ title: string; fields: Array<[string, string]> }> = [
 ];
 
 const formatValue = (v: unknown): string => {
-  if (v === null || v === undefined || v === "") return "—";
-  if (Array.isArray(v)) return v.length ? v.join(", ") : "—";
+  if (v === null || v === undefined || v === "") return "·";
+  if (Array.isArray(v)) return v.length ? v.join(", ") : "·";
   if (typeof v === "boolean") return v ? "Yes" : "No";
   return String(v);
 };
@@ -352,7 +352,7 @@ const AdminIntakes = () => {
                         <td className="px-4 py-3 text-foreground">{m.firstName} {m.lastName}</td>
                         <td className="px-4 py-3 text-foreground">{m.email}</td>
                         <td className="px-4 py-3 text-muted-foreground">{m.phone}</td>
-                        <td className="px-4 py-3 text-foreground">{m.ceremonyType ?? "—"}</td>
+                        <td className="px-4 py-3 text-foreground">{m.ceremonyType ?? "·"}</td>
                         <td className="px-4 py-3">
                           {flagged ? (
                             <Badge variant="destructive">Flagged</Badge>
@@ -373,7 +373,7 @@ const AdminIntakes = () => {
             </div>
             <div className="flex items-center justify-between px-4 py-3 text-xs text-muted-foreground border-t border-border">
               <span>
-                Showing {filtered.length === 0 ? 0 : (page - 1) * PAGE_SIZE + 1}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length} (total {submissions.length})
+                Showing {filtered.length === 0 ? 0 : (page - 1) * PAGE_SIZE + 1}·{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length} (total {submissions.length})
               </span>
               <div className="flex items-center gap-2">
                 <Button variant="outline" size="sm" disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))}>

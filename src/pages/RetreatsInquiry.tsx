@@ -65,7 +65,7 @@ const RetreatsInquiry = () => {
         <div className="mx-auto max-w-4xl">
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              { icon: MapPin, title: "Sacred Destinations", desc: "We travel to locations chosen for their spiritual energy and cultural significance — from Mexico to West Africa and beyond." },
+              { icon: MapPin, title: "Sacred Destinations", desc: "We travel to locations chosen for their spiritual energy and cultural significance · from Mexico to West Africa and beyond." },
               { icon: Calendar, title: "Immersive Experience", desc: "Multi-day immersions include Earth Medicine ceremonies, integration circles, cultural activities, nourishing meals, and community bonding." },
               { icon: Users, title: "Intimate Groups", desc: "Small group sizes ensure personalized attention from our facilitators and a deeply supportive container for your journey." },
             ].map((item) => (
@@ -78,8 +78,8 @@ const RetreatsInquiry = () => {
           </div>
 
           <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
-            <h3 className="font-display text-xl font-bold text-foreground">🇲🇽 Life's Best Yes Immersion — Sayulita, Mexico</h3>
-            <p className="mt-2 text-lg text-muted-foreground">October 31 – November 5, 2026</p>
+            <h3 className="font-display text-xl font-bold text-foreground">🇲🇽 Life's Best Yes Immersion · Sayulita, Mexico</h3>
+            <p className="mt-2 text-lg text-muted-foreground">October 31 · November 5, 2026</p>
             <div className="mx-auto mt-4 max-w-xl space-y-3 text-sm text-muted-foreground text-left">
               <p>
                 Join Temple Mother Earth in the vibrant coastal village of <strong className="text-foreground">Sayulita, Mexico</strong> for 
@@ -89,7 +89,7 @@ const RetreatsInquiry = () => {
                 This immersion is designed to help you <strong className="text-foreground">regulate your nervous system</strong>, release 
                 stored trauma from the body, and reclaim your natural state of peace. Through guided breathwork, 
                 body napping (deep somatic rest), movement practices, and sacred ceremony, you'll learn to{" "}
-                <strong className="text-foreground">return your body to its natural baseline</strong> — not just during the immersion, but as a
+                <strong className="text-foreground">return your body to its natural baseline</strong> · not just during the immersion, but as a
                 way of life.
               </p>
               <p>
@@ -162,11 +162,11 @@ const RetreatsInquiry = () => {
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Which immersion interests you? *</label>
                   {[
-                    "Mexico: Life's Best Yes Immersion (Oct 31 – Nov 5, 2026)",
+                    "Mexico: Life's Best Yes Immersion (Oct 31 · Nov 5, 2026)",
                     "Costa Rica Immersion",
                     "Peru Immersion",
-                    "Future immersions — notify me of upcoming destinations",
-                    "All — notify me of every upcoming immersion",
+                    "Future immersions · notify me of upcoming destinations",
+                    "All · notify me of every upcoming immersion",
                   ].map((opt) => (
                     <div key={opt} className="mb-2">
                       <label className="flex items-center text-sm text-foreground cursor-pointer">
@@ -187,7 +187,7 @@ const RetreatsInquiry = () => {
                 <input className={inputClass} placeholder="Traveling solo or with a group? How many?" value={form.groupSize} onChange={(e) => update("groupSize", e.target.value)} />
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">Earth Medicine experience level</label>
-                  {["First time — I'm new to Earth Medicine", "Some experience (1-3 ceremonies)", "Experienced practitioner"].map((opt) => (
+                  {["First time · I'm new to Earth Medicine", "Some experience (1-3 ceremonies)", "Experienced practitioner"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="experience" className="mr-3 h-4 w-4 accent-primary" checked={form.experience === opt} onChange={() => update("experience", opt)} />
                       {opt}
@@ -219,7 +219,7 @@ const RetreatsInquiry = () => {
         </div>
       </section>
 
-      {/* Keyword-rich SEO section — visible to crawlers, hidden from users */}
+      {/* Keyword-rich SEO section · visible to crawlers, hidden from users */}
       <section className="sr-only" aria-label="International Plant Medicine Retreats">
         <h2>International Ayahuasca Retreats & Plant Medicine Immersions</h2>
         <p>

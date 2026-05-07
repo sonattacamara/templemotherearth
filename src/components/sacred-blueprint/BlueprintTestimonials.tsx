@@ -18,7 +18,7 @@ const testimonials = [
     name: "Marcus T., Temple Member since 2024",
   },
   {
-    quote: "I had no idea Human Design could explain so much about why plant medicine hit me the way it did. The reading connected everything — my type, my authority, my ceremony experience. Life-changing.",
+    quote: "I had no idea Human Design could explain so much about why plant medicine hit me the way it did. The reading connected everything · my type, my authority, my ceremony experience. Life-changing.",
     name: "Denise W., Kambo + Ayahuasca Graduate",
   },
 ];
@@ -44,7 +44,7 @@ const BlueprintTestimonials = () => (
               ))}
             </div>
             <p className="text-base text-foreground leading-relaxed italic">"{t.quote}"</p>
-            <p className="mt-4 text-sm font-semibold text-muted-foreground">— {t.name}</p>
+            <p className="mt-4 text-sm font-semibold text-muted-foreground">· {t.name}</p>
           </motion.div>
         ))}
       </div>

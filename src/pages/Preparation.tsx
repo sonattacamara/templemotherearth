@@ -56,7 +56,7 @@ const Preparation = () => {
               {[
                 {
                   icon: Apple,
-                  title: "Diet — 7 Days Before Ceremony",
+                  title: "Diet · 7 Days Before Ceremony",
                   items: [
                     "Begin transitioning to a clean, whole-foods diet rich in fresh fruits, vegetables, and whole grains",
                     "Eliminate processed foods, fast food, and anything with artificial additives or preservatives",
@@ -66,20 +66,20 @@ const Preparation = () => {
                     "Stay well-hydrated with water, coconut water, and herbal teas (chamomile, ginger, peppermint)",
                     "Avoid dairy products and overly spicy foods, which can burden digestion",
                     "Minimize salt intake and avoid fermented foods (soy sauce, kimchi, sauerkraut)",
-                    "Consider eliminating sexual activity for 3–7 days prior to preserve and focus your energy",
+                    "Consider eliminating sexual activity for 3·7 days prior to preserve and focus your energy",
                   ],
                 },
                 {
                   icon: Moon,
                   title: "3 Days Before Ceremony",
                   items: [
-                    "Simplify your meals further — soups, steamed vegetables, fruits, rice, and light broths are ideal",
+                    "Simplify your meals further · soups, steamed vegetables, fruits, rice, and light broths are ideal",
                     "Completely stop all alcohol, cannabis, and recreational substances",
                     "Begin limiting screen time, especially social media and news, to quiet the nervous system",
-                    "Start a journaling practice — write about your intentions, fears, and what you wish to release",
+                    "Start a journaling practice · write about your intentions, fears, and what you wish to release",
                     "Spend time in nature: walk barefoot on the earth, sit beneath trees, or be near water",
-                    "Begin reducing social obligations and overstimulation — create space for inner stillness",
-                    "Drink at least 2–3 liters of water daily to support your body's natural cleansing process",
+                    "Begin reducing social obligations and overstimulation · create space for inner stillness",
+                    "Drink at least 2·3 liters of water daily to support your body's natural cleansing process",
                     "Avoid arguments, confrontation, and high-stress situations as much as possible",
                   ],
                 },
@@ -87,14 +87,14 @@ const Preparation = () => {
                   icon: Sun,
                   title: "Day Before Ceremony",
                   items: [
-                    "Eat a light, clean dinner — nothing heavy after 5–6 PM",
+                    "Eat a light, clean dinner · nothing heavy after 5·6 PM",
                     "No alcohol, cannabis, or any recreational substances",
                     "Spend dedicated time in quiet reflection, prayer, or meditation",
-                    "Write down your ceremony intentions clearly — what do you seek? What are you ready to release?",
-                    "Take a cleansing bath or shower with intention — some add sea salt or Florida water for spiritual cleansing",
-                    "Get adequate, quality rest — aim for a full night's sleep in a calm environment",
+                    "Write down your ceremony intentions clearly · what do you seek? What are you ready to release?",
+                    "Take a cleansing bath or shower with intention · some add sea salt or Florida water for spiritual cleansing",
+                    "Get adequate, quality rest · aim for a full night's sleep in a calm environment",
                     "Prepare your ceremony items the night before: comfortable clothing, blanket, pillow, water bottle, journal, and any personal sacred items",
-                    "Limit phone use and digital consumption — begin entering a contemplative, sacred mindset",
+                    "Limit phone use and digital consumption · begin entering a contemplative, sacred mindset",
                   ],
                 },
                 {
@@ -102,11 +102,11 @@ const Preparation = () => {
                   title: "Day of Ceremony",
                   items: [
                     "Fast from food beginning the night before (water and herbal tea are okay unless otherwise instructed)",
-                    "Wear comfortable, loose-fitting clothing — white or light-colored garments are preferred",
+                    "Wear comfortable, loose-fitting clothing · white or light-colored garments are preferred",
                     "Bring your blanket, pillow, journal, pen, water bottle, and any personal sacred items (crystals, photos, prayer beads)",
-                    "Arrive on time or early — late arrivals may not be admitted once the sacred container is opened",
+                    "Arrive on time or early · late arrivals may not be admitted once the sacred container is opened",
                     "Silence your phone completely and leave it in your vehicle or designated area",
-                    "Leave expectations at the door and trust the process — surrender is the gateway",
+                    "Leave expectations at the door and trust the process · surrender is the gateway",
                     "Approach the space with reverence, gratitude, and respect for the facilitators and your fellow participants",
                     "Be prepared for emotional releases, crying, shaking, and deep breathing are natural parts of the ceremonial process",
                   ],
@@ -115,29 +115,29 @@ const Preparation = () => {
                   icon: Droplets,
                   title: "Kambo-Specific Preparation",
                   items: [
-                    "Drink 1.5–2 liters of water upon waking the morning of ceremony, before arriving",
-                    "Do NOT eat for at least 10–12 hours before your Kambo session",
+                    "Drink 1.5·2 liters of water upon waking the morning of ceremony, before arriving",
+                    "Do NOT eat for at least 10·12 hours before your Kambo session",
                     "Avoid blood thinners, NSAIDs (ibuprofen, aspirin), and anti-inflammatory medications for 48+ hours prior",
                     "Wear shorts or clothing that exposes the arm or leg for the application of burns",
                     "Bring a towel, as purging is a central part of the Kambo experience",
                     "Inform your facilitator of ALL medications, supplements, and health conditions during your intake review",
-                    "Avoid heavy exercise or strenuous activity the day of — conserve your energy for ceremony",
+                    "Avoid heavy exercise or strenuous activity the day of · conserve your energy for ceremony",
                     "Your facilitator will review your medical intake form and assess readiness before proceeding",
                   ],
                 },
                 {
                   icon: Heart,
-                  title: "After Ceremony — Integration",
+                  title: "After Ceremony · Integration",
                   items: [
-                    "Rest deeply — your body, mind, and spirit need time to process the experience",
+                    "Rest deeply · your body, mind, and spirit need time to process the experience",
                     "Journal your experience while it's fresh: visions, emotions, messages, and physical sensations",
-                    "Maintain a clean, gentle diet for at least 48–72 hours after ceremony",
+                    "Maintain a clean, gentle diet for at least 48·72 hours after ceremony",
                     "Drink plenty of water and nourishing fluids to support your body's continued cleansing",
                     "Avoid alcohol, cannabis, and recreational substances for a minimum of 3 days post-ceremony",
-                    "Limit social media and overstimulation — protect your energetic field as it recalibrates",
+                    "Limit social media and overstimulation · protect your energetic field as it recalibrates",
                     "Attend integration circles (Mondays at 7 PM) to process your experience with community support",
-                    "Be patient and compassionate with yourself — integration unfolds over days, weeks, and even months",
-                    "Reach out to your facilitator if you need additional support — you are never alone in this journey",
+                    "Be patient and compassionate with yourself · integration unfolds over days, weeks, and even months",
+                    "Reach out to your facilitator if you need additional support · you are never alone in this journey",
                   ],
                 },
               ].map((section) => (
@@ -177,7 +177,7 @@ const Preparation = () => {
                   facilitators to prepare the appropriate sacred container for your experience.
                 </p>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  Certain medications — including SSRIs, MAOIs, blood pressure medications, and others — may be contraindicated
+                  Certain medications · including SSRIs, MAOIs, blood pressure medications, and others · may be contraindicated
                   with specific Earth Medicines. Please be fully transparent in your intake form. Your safety is our highest priority.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">

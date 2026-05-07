@@ -23,7 +23,7 @@ const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/sacred-series-wee
 const sacredSeriesJsonLd = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "The Sacred Series — 7 Days of Ceremony",
+  name: "The Sacred Series · 7 Days of Ceremony",
   description:
     "A recurring 7-day arc of sacramental ceremonies, community gatherings, and body practices at Temple Mother Earth, Washington DC. Cacao, Hapé, Sacred Tea, Sacred Fungi, Kambo, and more.",
   eventStatus: "https://schema.org/EventScheduled",
@@ -107,7 +107,7 @@ const timelineDays: TimelineDay[] = [
     phase: "The Opening",
   },
   {
-    day: 4, date: "", weekday: "", name: "Level 5 — The Complete Initiation",
+    day: 4, date: "", weekday: "", name: "Level 5 · The Complete Initiation",
     subtitle: "You Have Not Come This Far to Stop Here",
     description: "Every sacrament. One full-day container. Kambo included. For those who are genuinely ready to go all the way. By application only.",
     icon: <Flame className="h-5 w-5" />, tags: ["Advanced", "Kambo", "Application Required"],
@@ -310,7 +310,7 @@ const SacredSeries = () => {
 
   return (
     <SacredSeriesLayout
-      title="The Sacred Series — 7 Days of Ceremony"
+      title="The Sacred Series · 7 Days of Ceremony"
       description="The Sacred Series: a recurring 7-day arc of sacramental ceremonies, community gatherings, and body practices at Temple Mother Earth, Washington DC. Cacao, Hapé, Sacred Tea, Sacred Fungi, and more."
       path="/sacred-series"
       showBackLink={false}
@@ -342,7 +342,7 @@ const SacredSeries = () => {
             A living 7-day sanctuary rhythm for the seeker who is ready to be witnessed, held, and reminded that they already belong. Each doorway stands on its own. Choose what calls your body, soul, and spirit.
           </p>
           <p className="font-serif text-[16px] text-[hsl(35,20%,55%)] max-w-[520px] leading-relaxed mb-12">
-            This month’s circle is New Earth Rising — a call for those who can feel something changing within them and want to rise in community, not isolation.
+            This month’s circle is New Earth Rising · a call for those who can feel something changing within them and want to rise in community, not isolation.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="#timeline" className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all">
@@ -377,7 +377,7 @@ const SacredSeries = () => {
           </p>
         </div>
 
-        <PhaseMarker title="The Opening" days="Days 1–3" />
+        <PhaseMarker title="The Opening" days="Days 1·3" />
         {timelineDays.slice(0, 3).map((day, i) => (
           <TimelineNode key={day.day} day={day} index={i} />
         ))}
@@ -419,7 +419,7 @@ const SacredSeries = () => {
 
 
 
-      {/* ═══ ENERGY OF SIX — FEATURED CALLOUT ═══ */}
+      {/* ═══ ENERGY OF SIX · FEATURED CALLOUT ═══ */}
       <section className="py-20 md:py-28 px-6 md:px-12 bg-gradient-to-b from-[hsl(114,36%,10%)] to-[hsl(105,30%,8%)]">
         <motion.div
           className="max-w-[900px] mx-auto"
@@ -526,7 +526,7 @@ const SacredSeries = () => {
               The Sacred<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Calendar</em>
             </h2>
             <p className="font-serif italic text-[19px] text-[hsl(35,30%,68%)] max-w-[580px] mx-auto mt-6 leading-relaxed">
-              Each month carries its own spiritual theme — a lens through which every ceremony, gathering, and practice is held.
+              Each month carries its own spiritual theme · a lens through which every ceremony, gathering, and practice is held.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5">
@@ -535,18 +535,18 @@ const SacredSeries = () => {
                 month: "April 2026", theme: "The Awakening", icon: <Sun className="h-6 w-6" />,
                 desc: "The doors swing open after the long winter rest. Your body has been waiting. Your spirit has been waiting. This is your reentry into yourself.",
                 backContent: [
-                  "April is the Grand Reopening — the first Sacred Series of the year. The energy in the temple is electric. New beginnings are sacred here.",
+                  "April is the Grand Reopening · the first Sacred Series of the year. The energy in the temple is electric. New beginnings are sacred here.",
                   "Cacao opens the heart you closed during the cold months. Hapé clears the static so you can hear your own voice again. Sacred Tea invites you deeper than thought.",
-                  "If you missed last year — this is the month to come home. The seekers who arrive in April set the tone for everything that follows.",
+                  "If you missed last year · this is the month to come home. The seekers who arrive in April set the tone for everything that follows.",
                 ],
               },
               {
                 month: "May 2026", theme: "The Remembrance", icon: <Moon className="h-6 w-6" />,
                 desc: "We return to what the body already knows. Ancestral wisdom rises. This month we honor lineage, memory, and the prayers that carried us here.",
                 backContent: [
-                  "May invites us to look backward before moving forward — to honor the ancestors, the lineages, and the unseen hands that guide this work.",
+                  "May invites us to look backward before moving forward · to honor the ancestors, the lineages, and the unseen hands that guide this work.",
                   "Ceremonies deepen into ancestral connection, grief tending, and the remembrance of who you were before the world told you to forget.",
-                  "The Sacred Tea Ceremony becomes the month's anchor — a doorway into the deeper layers of memory held in your body and spirit.",
+                  "The Sacred Tea Ceremony becomes the month's anchor · a doorway into the deeper layers of memory held in your body and spirit.",
                 ],
               },
               {
@@ -555,23 +555,23 @@ const SacredSeries = () => {
                 backContent: [
                   "June is the month of standing fully in your own power. No guru. No intermediary. The divine speaks directly through you.",
                   "This month's ceremonies focus on boundaries, self-trust, and the courage to claim your own spiritual authority.",
-                  "Level 5 — The Complete Initiation — finds its deepest expression here, as seekers step fully into their sovereignty.",
+                  "Level 5 · The Complete Initiation · finds its deepest expression here, as seekers step fully into their sovereignty.",
                 ],
               },
               {
                 month: "July 2026", theme: "The Belonging", icon: <Users className="h-6 w-6" />,
                 desc: "You were never meant to do this alone. This is the month the circle widens, the table lengthens, and the family you didn't know you were missing finds you.",
                 backContent: [
-                  "July is when the temple breathes its fullest. The Community Potluck, the Sacred Art Expo, the extended Tea House evenings — the whole family comes home.",
+                  "July is when the temple breathes its fullest. The Community Potluck, the Sacred Art Expo, the extended Tea House evenings · the whole family comes home.",
                   "Alumni return to break bread with new seekers. Stories are exchanged. Phone numbers are exchanged. Lifelong friendships begin around our long wooden table.",
-                  "If you have ever felt spiritually homeless — July is the month you stop looking. Your people are already here, saving you a seat.",
+                  "If you have ever felt spiritually homeless · July is the month you stop looking. Your people are already here, saving you a seat.",
                 ],
               },
               {
                 month: "August 2026", theme: "The Harvest", icon: <Leaf className="h-6 w-6" />,
                 desc: "The seeds planted in spring bear fruit. This month we honor the abundance that arrives when you stay on the path long enough to receive it.",
                 backContent: [
-                  "August is the month of receiving — of allowing the work you have done to show itself in your body, your relationships, and your clarity.",
+                  "August is the month of receiving · of allowing the work you have done to show itself in your body, your relationships, and your clarity.",
                   "Ceremonies focus on gratitude, embodiment, and the sacred art of allowing blessings to land without deflecting them.",
                   "Alumni share their harvest stories. The circle witnesses each person's growth as a sacrament in itself.",
                 ],
@@ -580,32 +580,32 @@ const SacredSeries = () => {
                 month: "September 2026", theme: "The Threshold", icon: <Flame className="h-6 w-6" />,
                 desc: "The light begins to shift. This month we honor the courage it takes to stand at the doorway between who you have been and who you are becoming.",
                 backContent: [
-                  "September marks the Autumn Equinox — the balance point. Equal light, equal dark. A time to assess what must be released before winter.",
+                  "September marks the Autumn Equinox · the balance point. Equal light, equal dark. A time to assess what must be released before winter.",
                   "Kambo and Level 5 carry particular power this month as seekers are invited to burn away what no longer serves their becoming.",
                   "The temple holds a special equinox ceremony to honor the turning of the wheel and the sacred act of letting go.",
                 ],
               },
               {
                 month: "October 2026", theme: "The Ancestors", icon: <Star className="h-6 w-6" />,
-                desc: "The veil thins. The ones who walked before you draw close. This is the month they speak — and the month you finally have the stillness to listen.",
+                desc: "The veil thins. The ones who walked before you draw close. This is the month they speak · and the month you finally have the stillness to listen.",
                 backContent: [
                   "October is the most mystical month in the temple year. Sacred Tea and Hapé carry prayers across the veil. The grandmothers and grandfathers come close.",
                   "Seekers consistently report October ceremonies as the most spiritually profound of the year. Lineages are honored. Names are spoken. Burdens long carried are finally laid down.",
-                  "The Sacred Art Expo turns visionary — paintings, songs, and prayers born from dreams and ancestral communion. This is not a month to miss.",
+                  "The Sacred Art Expo turns visionary · paintings, songs, and prayers born from dreams and ancestral communion. This is not a month to miss.",
                 ],
               },
               {
                 month: "November 2026", theme: "The Gratitude", icon: <Heart className="h-6 w-6" />,
                 desc: "Before the temple closes, we give thanks. This month we honor every breath, every tear, every breakthrough, and every soul who walked through the doors.",
                 backContent: [
-                  "November is the temple's season of thanksgiving — not a holiday, but a living practice of radical gratitude for the year's journey.",
+                  "November is the temple's season of thanksgiving · not a holiday, but a living practice of radical gratitude for the year's journey.",
                   "Community Potluck becomes the centerpiece, expanding into a full day of shared nourishment, story, and celebration.",
                   "Integration circles deepen as the year's participants reflect on the distance traveled from their first ceremony to now.",
                 ],
               },
               {
                 month: "December 2026", theme: "The Surrender", icon: <Sparkles className="h-6 w-6" />,
-                desc: "The longest night approaches. This month we honor the sacred act of release — trusting that what dies in the dark will be reborn in the light.",
+                desc: "The longest night approaches. This month we honor the sacred act of release · trusting that what dies in the dark will be reborn in the light.",
                 backContent: [
                   "December holds the final ceremonies before the Winter Solstice closing. Every offering carries the weight of completion and the tenderness of farewell.",
                   "The closing ceremony marks the moment the temple turns inward. Candles are lit. Prayers are spoken. The doors close gently.",
@@ -742,7 +742,7 @@ const SacredSeries = () => {
 
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
-      {/* ═══ SACRED SERIES INVITATION — APPLY ONLY ═══ */}
+      {/* ═══ SACRED SERIES INVITATION · APPLY ONLY ═══ */}
       <section
         id="apply"
         className="bg-gradient-to-br from-[hsl(105,30%,13%)] via-[hsl(110,25%,11%)] to-[hsl(114,36%,10%)] border-t border-b border-[hsla(45,70%,49%,0.15)] py-20 md:py-24 px-6 md:px-12 text-center"
@@ -759,8 +759,8 @@ const SacredSeries = () => {
             {[
               { title: "Step 1 · Sacred Intake", desc: "Complete the medical and spiritual intake form so our facilitators can understand who you are and how to hold you.", icon: <FileText className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
               { title: "Step 2 · 1:1 Discernment Call", desc: "A heart-to-heart conversation with Sonatta or James to feel into mutual readiness.", icon: <Heart className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Step 3 · Sacred Reciprocity", desc: "Once accepted, we share the energy exchange privately and walk you through the Community Care tiers — including scholarship.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
-              { title: "Step 4 · Begin Preparation", desc: "Receive the preparation guide, dietary protocols, and 1:1 integration support — held from beginning to end.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 3 · Sacred Reciprocity", desc: "Once accepted, we share the energy exchange privately and walk you through the Community Care tiers · including scholarship.", icon: <Star className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
+              { title: "Step 4 · Begin Preparation", desc: "Receive the preparation guide, dietary protocols, and 1:1 integration support · held from beginning to end.", icon: <Sparkles className="h-5 w-5 text-[hsl(45,70%,49%)]" /> },
             ].map((item) => (
               <div key={item.title} className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.12)] p-7 flex gap-4">
                 <div className="mt-1 shrink-0">{item.icon}</div>

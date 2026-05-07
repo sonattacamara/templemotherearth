@@ -58,8 +58,8 @@ const TravelingCeremonies = () => {
       <section className="px-4 py-16">
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
-            { icon: MapPin, title: "We Travel to You", desc: "Whether it's your home, immersion center, or community space — we bring the sacred container to your location anywhere in the US and beyond." },
-            { icon: Shield, title: "Full Facilitation", desc: "Our experienced facilitators handle everything — from altar setup and sacred space preparation to ceremony facilitation and post-ceremony integration." },
+            { icon: MapPin, title: "We Travel to You", desc: "Whether it's your home, immersion center, or community space · we bring the sacred container to your location anywhere in the US and beyond." },
+            { icon: Shield, title: "Full Facilitation", desc: "Our experienced facilitators handle everything · from altar setup and sacred space preparation to ceremony facilitation and post-ceremony integration." },
             { icon: Heart, title: "Custom Ceremonies", desc: "Each traveling ceremony is designed around your group's intentions, experience level, and spiritual goals. No two ceremonies are alike." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">
@@ -106,7 +106,7 @@ const TravelingCeremonies = () => {
                 <input className={inputClass} placeholder="City / State / Location *" value={form.location} onChange={(e) => update("location", e.target.value)} required />
                 <div>
                   <label className="mb-2 block text-sm font-medium text-foreground">What type of ceremony are you seeking? *</label>
-                  {["Kambo Purification Ceremony", "Hapé Circle", "Sacred Mother Earth Ceremony", "Multiple ceremonies (weekend format)", "Not sure — I'd like guidance"].map((opt) => (
+                  {["Kambo Purification Ceremony", "Hapé Circle", "Sacred Mother Earth Ceremony", "Multiple ceremonies (weekend format)", "Not sure · I'd like guidance"].map((opt) => (
                     <label key={opt} className="mb-2 flex items-center text-sm text-foreground cursor-pointer">
                       <input type="radio" name="ceremonyType" className="mr-3 h-4 w-4 accent-primary" checked={form.ceremonyType === opt} onChange={() => update("ceremonyType", opt)} required />
                       {opt}

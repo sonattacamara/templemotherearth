@@ -19,9 +19,9 @@ const kamboSections = [
     id: "overview",
     title: "What is Kambo?",
     icon: Leaf,
-    content: `Kambo is the waxy secretion of the Giant Monkey Frog (Phyllomedusa bicolor), found in the upper Amazon rainforest. For thousands of years, indigenous tribes — particularly the Matsés, Katukina, and Yawanawá — have used Kambo as a powerful cleansing medicine to sharpen the senses, increase strength, and remove "panema" (dark or heavy energy) from the body.
+    content: `Kambo is the waxy secretion of the Giant Monkey Frog (Phyllomedusa bicolor), found in the upper Amazon rainforest. For thousands of years, indigenous tribes · particularly the Matsés, Katukina, and Yawanawá · have used Kambo as a powerful cleansing medicine to sharpen the senses, increase strength, and remove "panema" (dark or heavy energy) from the body.
 
-Kambo is not a psychedelic. It works primarily on the physical body through bioactive peptides that interact with the immune, endocrine, and nervous systems. The experience is typically intense but short-lived (20–40 minutes), followed by a period of deep rest and rejuvenation.
+Kambo is not a psychedelic. It works primarily on the physical body through bioactive peptides that interact with the immune, endocrine, and nervous systems. The experience is typically intense but short-lived (20·40 minutes), followed by a period of deep rest and rejuvenation.
 
 At Temple Mother Earth, Kambo is administered with deep reverence for its indigenous origins and the sacred relationship between humanity and the frog nation.`,
   },
@@ -31,13 +31,13 @@ At Temple Mother Earth, Kambo is administered with deep reverence for its indige
     icon: Heart,
     content: `Kambo has been traditionally used for:
 
-• **Deep physical detoxification** — Kambo purges stored impurities, heavy metals, and parasites from the body through a natural purging process.
-• **Immune system activation** — The bioactive peptides in Kambo stimulate the immune system, helping the body fight infection and illness.
-• **Mental clarity & focus** — Many participants report heightened mental clarity, improved focus, and a sense of "lifting" from brain fog.
-• **Emotional release** — Stored emotional trauma and grief often release during the ceremony, creating space for new energy.
-• **Pain relief** — Kambo contains powerful natural peptides that support the body's own pain management systems.
-• **Energy & vitality** — After the initial purge and rest, many people experience a significant increase in energy and vitality.
-• **Spiritual alignment** — Kambo is often described as a "reset button" that clears energetic blockages and realigns the spirit.
+• **Deep physical detoxification** · Kambo purges stored impurities, heavy metals, and parasites from the body through a natural purging process.
+• **Immune system activation** · The bioactive peptides in Kambo stimulate the immune system, helping the body fight infection and illness.
+• **Mental clarity & focus** · Many participants report heightened mental clarity, improved focus, and a sense of "lifting" from brain fog.
+• **Emotional release** · Stored emotional trauma and grief often release during the ceremony, creating space for new energy.
+• **Pain relief** · Kambo contains powerful natural peptides that support the body's own pain management systems.
+• **Energy & vitality** · After the initial purge and rest, many people experience a significant increase in energy and vitality.
+• **Spiritual alignment** · Kambo is often described as a "reset button" that clears energetic blockages and realigns the spirit.
 
 Scientific research has identified over 100 bioactive peptides in Kambo, including dermaseptins (antimicrobial), phyllocaerulein (anti-inflammatory), and phyllomedusin (vasodilator).`,
   },
@@ -47,19 +47,19 @@ Scientific research has identified over 100 bioactive peptides in Kambo, includi
     icon: BookOpen,
     content: `Preparation is essential for a safe and meaningful Kambo experience:
 
-**3–7 Days Before:**
-• Begin eating clean, whole foods — reduce processed foods, sugar, alcohol, and caffeine.
+**3·7 Days Before:**
+• Begin eating clean, whole foods · reduce processed foods, sugar, alcohol, and caffeine.
 • Increase water intake to support hydration and detoxification.
 • Avoid recreational substances including cannabis and alcohol.
-• Set your intention — journal, meditate, or pray about what you're seeking from the ceremony.
+• Set your intention · journal, meditate, or pray about what you're seeking from the ceremony.
 
 **24 Hours Before:**
-• Eat a light dinner the evening before. Your last meal should be at least 10–12 hours before ceremony.
+• Eat a light dinner the evening before. Your last meal should be at least 10·12 hours before ceremony.
 • Avoid alcohol, cannabis, and all recreational substances.
 • Get plenty of rest.
 
 **Day of Ceremony:**
-• **Fast from food for 10–12 hours** before ceremony. You may have small sips of water the morning of.
+• **Fast from food for 10·12 hours** before ceremony. You may have small sips of water the morning of.
 • Wear comfortable, loose clothing.
 • Bring a water bottle, towel, and change of clothes.
 • Arrive with an open heart and willingness to surrender to the process.
@@ -83,7 +83,7 @@ The ceremony begins with prayer, intention setting, and energetic clearing of th
 Small burns (called "gates" or "points") are made on the surface of the skin using a small vine stick. The outer layer of skin is gently removed, creating tiny openings. Kambo is then applied to these points.
 
 **The Purge:**
-Within minutes, you will begin to feel the effects — facial swelling, increased heart rate, warmth, and nausea. The purging process (vomiting into a bucket) typically lasts 20–40 minutes. You will be drinking water throughout to support the purge.
+Within minutes, you will begin to feel the effects · facial swelling, increased heart rate, warmth, and nausea. The purging process (vomiting into a bucket) typically lasts 20·40 minutes. You will be drinking water throughout to support the purge.
 
 **Rest & Integration:**
 After the purge is complete, the Kambo is removed. You will rest, often falling into a deep sleep. When you awaken, most people feel clear, light, and renewed.
@@ -92,7 +92,7 @@ After the purge is complete, the Kambo is removed. You will rest, often falling 
 The ceremony closes with gratitude, prayer, and gentle integration discussion. Light food and electrolyte drinks are provided.
 
 **Number of Points:**
-First-time participants typically receive 3–5 points. Experienced practitioners may receive more. Your facilitator will always start conservatively and adjust based on your body's response.`,
+First-time participants typically receive 3·5 points. Experienced practitioners may receive more. Your facilitator will always start conservatively and adjust based on your body's response.`,
   },
   {
     id: "contraindications",
@@ -124,24 +124,24 @@ If you are unsure whether Kambo is safe for you, please reach out through our co
     icon: Heart,
     content: `Integration is where the real transformation happens. The ceremony opens the door; integration is walking through it.
 
-**First 24–48 Hours:**
+**First 24·48 Hours:**
 • Rest deeply. Your body has done powerful work.
-• Eat light, nourishing foods — soups, fruits, and whole grains.
+• Eat light, nourishing foods · soups, fruits, and whole grains.
 • Hydrate well with water and electrolytes.
 • Avoid alcohol, cannabis, and heavy foods for at least 48 hours.
-• Journal about your experience — what came up, what released, what you felt.
+• Journal about your experience · what came up, what released, what you felt.
 
 **First Week:**
 • Continue clean eating and adequate hydration.
-• Spend time in nature — walk barefoot, sit with trees, connect with the Earth.
+• Spend time in nature · walk barefoot, sit with trees, connect with the Earth.
 • Meditate or pray daily, even if just for 5 minutes.
-• Share your experience with a trusted person — a facilitator, partner, or fellow community member.
+• Share your experience with a trusted person · a facilitator, partner, or fellow community member.
 
 **Ongoing Integration:**
 • Attend Temple Mother Earth integration circles (virtual or in-person).
 • Continue journaling and tracking shifts in your emotional landscape.
 • Notice changes in habits, relationships, and energy levels.
-• Be gentle with yourself — transformation is not linear.
+• Be gentle with yourself · transformation is not linear.
 
 **Community Support:**
 As a Temple Mother Earth member, you have access to:
@@ -178,7 +178,7 @@ const MemberEducation = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title="Kambo Education" description="Learn about Kambo frog medicine — benefits, preparation, safety guidelines, and what to expect during ceremony at Temple Mother Earth." path="/member/education" />
+      <SEOHead title="Kambo Education" description="Learn about Kambo frog medicine · benefits, preparation, safety guidelines, and what to expect during ceremony at Temple Mother Earth." path="/member/education" />
       <Navigation />
 
       {/* Header */}
@@ -243,7 +243,7 @@ const MemberEducation = () => {
           <motion.div variants={fadeUp} className="rounded-2xl border border-primary/20 bg-primary/5 p-8 mb-10">
             <h2 className="font-display text-2xl font-bold text-foreground">Kambo: The Giant Monkey Frog Medicine</h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              This comprehensive guide covers everything you need to know about Kambo — from its indigenous origins
+              This comprehensive guide covers everything you need to know about Kambo · from its indigenous origins
               and scientific properties to preparation, ceremony, and integration. Take your time with each section
               and return as often as you need.
             </p>

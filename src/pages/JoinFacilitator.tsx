@@ -56,7 +56,7 @@ const JoinFacilitator = () => {
         <div className="mx-auto max-w-4xl grid gap-8 md:grid-cols-3">
           {[
             { icon: Shield, title: "Trained & Experienced", desc: "We seek facilitators with established training and experience in Earth Medicine, yoga, sound healing, or related modalities." },
-            { icon: Heart, title: "Heart-Centered", desc: "Our facilitators lead from the heart — holding sacred space with compassion, integrity, and a deep commitment to service." },
+            { icon: Heart, title: "Heart-Centered", desc: "Our facilitators lead from the heart · holding sacred space with compassion, integrity, and a deep commitment to service." },
             { icon: Users, title: "Community-Minded", desc: "You'll join a team dedicated to centering Black and Indigenous voices while welcoming all sovereign beings." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-border bg-card p-6 text-center">

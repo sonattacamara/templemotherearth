@@ -12,12 +12,12 @@ const reveals = [
   {
     icon: Flame,
     title: "Energy Type",
-    desc: "Discover whether you're a Generator, Projector, Manifestor, or Reflector — and what that means for how you engage with the world.",
+    desc: "Discover whether you're a Generator, Projector, Manifestor, or Reflector · and what that means for how you engage with the world.",
   },
   {
     icon: Shield,
     title: "Authority",
-    desc: "Learn your unique decision-making compass — the inner guidance system your body was designed to follow.",
+    desc: "Learn your unique decision-making compass · the inner guidance system your body was designed to follow.",
   },
   {
     icon: Star,

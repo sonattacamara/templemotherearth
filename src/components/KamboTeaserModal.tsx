@@ -80,7 +80,7 @@ const KamboTeaserModal = () => {
             </div>
 
             <p className="mt-4 font-body text-xs text-primary-foreground/40">
-              Free consultation included • Groups of 6–8
+              Free consultation included • Groups of 6·8
             </p>
           </motion.div>
         </>

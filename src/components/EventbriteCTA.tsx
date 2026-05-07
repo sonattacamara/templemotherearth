@@ -10,7 +10,7 @@ const EventbriteCTA = () => (
         Welcome Home
       </h2>
       <p className="mx-auto mt-3 max-w-lg text-sm text-primary-foreground/75">
-        Come and join us — browse upcoming ceremonies, immersions, and community gatherings.
+        Come and join us · browse upcoming ceremonies, immersions, and community gatherings.
       </p>
       <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <a

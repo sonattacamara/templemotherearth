@@ -23,7 +23,7 @@ const InnerAlchemySpa = () => (
     <SanctuarySection id="about" eyebrow="The Day" title={<>From Sunrise to Sunset.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Every Moment Held.</em></>}>
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>Inner Alchemy is a full Spa Day held at Spa World. You arrive and you do not have to manage anything. The day is designed. The treatments are sequenced. The nourishment is prepared.</p>
-        <p>The seven wellness pillars — juicing, detox, water, microdose, nervous system, sun, and DNA upgrade — are woven through every aspect of the day. <strong className="text-[hsl(45,70%,49%)]">This is not pampering. This is restoration.</strong></p>
+        <p>The seven wellness pillars · juicing, detox, water, microdose, nervous system, sun, and DNA upgrade · are woven through every aspect of the day. <strong className="text-[hsl(45,70%,49%)]">This is not pampering. This is restoration.</strong></p>
       </div>
     </SanctuarySection>
 

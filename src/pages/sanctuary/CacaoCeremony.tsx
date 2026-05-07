@@ -33,12 +33,12 @@ const STitle = ({ children }: { children: React.ReactNode }) => (
 );
 
 const faqItems = [
-  { q: "Is this ceremony psychedelic?", a: "No. Ceremonial cacao is non-psychedelic. It does not produce hallucinations or altered states in the psychedelic sense. The experience is one of heightened emotional sensitivity, heart-opening, and presence — all while remaining completely conscious and functional." },
+  { q: "Is this ceremony psychedelic?", a: "No. Ceremonial cacao is non-psychedelic. It does not produce hallucinations or altered states in the psychedelic sense. The experience is one of heightened emotional sensitivity, heart-opening, and presence · all while remaining completely conscious and functional." },
   { q: "I'm on antidepressants. Can I come?", a: "If you are on SSRIs, MAOIs, or other antidepressants, please contact us before registering. Cacao can increase serotonin levels and combining it with serotonergic medications requires careful consideration." },
   { q: "I've never done any kind of ceremony before. Is this for me?", a: "Absolutely yes. The Cacao Community Ceremony is specifically designed to be the perfect entry point into sacred ceremony culture. You will be held by experienced facilitators, supported by a loving community, and guided through every step." },
-  { q: "What does my contribution cover?", a: "Your contribution covers: ceremonial grade cacao (40–60g dose), full facilitation by trained ceremony leaders, sacred space preparation, sound journey, integration circle, and your place in our ongoing community." },
-  { q: "How is Temple Mother Earth's cacao sourced?", a: "We source exclusively from small-scale indigenous and traditional farming communities who cultivate cacao using ancestral methods — no pesticides, no industrial processing. Our primary sourcing is ceremonial grade Guatemalan Criollo cacao." },
-  { q: "Can I bring a friend?", a: "Yes — and we encourage it. Ceremony is always more powerful when shared with someone you trust. Both guests will need to register individually and complete their own health intake forms." },
+  { q: "What does my contribution cover?", a: "Your contribution covers: ceremonial grade cacao (40·60g dose), full facilitation by trained ceremony leaders, sacred space preparation, sound journey, integration circle, and your place in our ongoing community." },
+  { q: "How is Temple Mother Earth's cacao sourced?", a: "We source exclusively from small-scale indigenous and traditional farming communities who cultivate cacao using ancestral methods · no pesticides, no industrial processing. Our primary sourcing is ceremonial grade Guatemalan Criollo cacao." },
+  { q: "Can I bring a friend?", a: "Yes · and we encourage it. Ceremony is always more powerful when shared with someone you trust. Both guests will need to register individually and complete their own health intake forms." },
   { q: "Is this a religious ceremony?", a: "Yes. Temple Mother Earth is a 508(c)(1)(A) recognized sacred church. All ceremonies are held as sincere religious and spiritual practice, protected under the Religious Freedom Restoration Act (RFRA)." },
 ];
 
@@ -85,7 +85,7 @@ const CacaoCeremony = () => {
           </h1>
           <div className="w-[60px] h-px bg-gradient-to-r from-transparent via-[#C9963A] to-transparent mx-auto my-8" />
           <p className="text-[22px] italic text-[#F5EDD8] max-w-[600px] mx-auto mb-12 leading-relaxed">
-            The Aztecs called it <em>Theobroma</em> — "Food of the Gods." Tonight, you will remember why.
+            The Aztecs called it <em>Theobroma</em> · "Food of the Gods." Tonight, you will remember why.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href={EVENTBRITE_CACAO} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C9963A] text-[#0E0A06] px-[52px] py-[18px] font-sans text-[12px] tracking-[3px] uppercase border-2 border-[#C9963A] hover:bg-transparent hover:text-[#C9963A] transition-all">
@@ -117,27 +117,27 @@ const CacaoCeremony = () => {
         <Eyebrow>The Sacred Sacrament</Eyebrow>
         <STitle>Everything You Need to Know<br /><em className="text-[#C9963A]">About Ceremonial Cacao</em></STitle>
         <p className="text-xl leading-[1.8] text-[#C4B49A] max-w-[720px] italic mb-16">
-          This isn't hot chocolate. This is one of the oldest sacred plant sacraments in human history — and you are about to experience why civilizations revered it as a gift from the gods.
+          This isn't hot chocolate. This is one of the oldest sacred plant sacraments in human history · and you are about to experience why civilizations revered it as a gift from the gods.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
           <div className="space-y-5 text-[17px] leading-[1.85] text-[#C4B49A]">
             <h3 className="font-display text-[28px] italic text-[#F5EDD8] mb-5">What Is Cacao?</h3>
             <p>Theobroma cacao is a small tropical tree native to the deep forests of Central and South America. Its fruit pods contain seeds that have been harvested, fermented, and used in ceremony for over 4,000 years by the Olmec, Maya, and Aztec civilizations.</p>
-            <p>Ceremonial grade cacao is entirely different from commercial chocolate. It is raw, minimally processed, and prepared at a dose (40–60g) that activates its full pharmacological and spiritual profile.</p>
+            <p>Ceremonial grade cacao is entirely different from commercial chocolate. It is raw, minimally processed, and prepared at a dose (40·60g) that activates its full pharmacological and spiritual profile.</p>
             <p>At Temple Mother Earth, we source only the highest-quality ceremonial grade cacao from indigenous farming communities who grow it the traditional way.</p>
             <h3 className="font-display text-[28px] italic text-[#F5EDD8] mt-10 mb-5">How Does It Work in Your Body?</h3>
             <p>The primary compound, <strong className="text-[#C9963A]">Theobromine</strong>, is a gentle stimulant that increases blood flow to the brain and heart. Unlike caffeine, theobromine does not spike adrenaline or crash the nervous system.</p>
-            <p>Cacao also contains <strong className="text-[#C9963A]">Anandamide</strong> — the "bliss molecule" — and PEA (phenylethylamine), which triggers dopamine and serotonin release, creating feelings of joy, love, and connection.</p>
+            <p>Cacao also contains <strong className="text-[#C9963A]">Anandamide</strong> · the "bliss molecule" · and PEA (phenylethylamine), which triggers dopamine and serotonin release, creating feelings of joy, love, and connection.</p>
           </div>
 
           <div className="bg-[#2C1810] p-12 relative overflow-hidden">
             <span className="absolute -top-5 right-5 text-[120px] text-[rgba(201,150,58,0.05)]">☽</span>
             {[
-              { icon: "🌱", label: "Origin", desc: "Theobroma cacao — native to Central & South America. Cultivated for over 4,000 years." },
+              { icon: "🌱", label: "Origin", desc: "Theobroma cacao · native to Central & South America. Cultivated for over 4,000 years." },
               { icon: "🔬", label: "Key Compounds", desc: "Theobromine (heart stimulant), Anandamide (bliss molecule), PEA (mood elevator), Magnesium" },
               { icon: "💓", label: "Primary Effect", desc: "Increases blood flow to heart and brain by up to 40%. Activates the endocannabinoid system." },
-              { icon: "⏱", label: "Onset & Duration", desc: "Effects begin in 20–30 minutes and build over 1–2 hours. The ceremony window is typically 3 hours." },
+              { icon: "⏱", label: "Onset & Duration", desc: "Effects begin in 20·30 minutes and build over 1·2 hours. The ceremony window is typically 3 hours." },
               { icon: "🔒", label: "Safety Profile", desc: "Non-psychedelic. Gentle and beginner-friendly. Contraindicated with SSRIs and antidepressants." },
             ].map((fact) => (
               <div key={fact.label} className="py-5 border-b border-[rgba(201,150,58,0.15)] last:border-b-0 grid grid-cols-[32px_1fr] gap-4 items-start">
@@ -158,12 +158,12 @@ const CacaoCeremony = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-4 bg-[#C9963A]">
           {[
-            { icon: "💓", title: "Cardiovascular", body: "Theobromine dilates blood vessels, increasing circulation to the heart. You'll feel warmth in your chest — the literal heart-opening." },
+            { icon: "💓", title: "Cardiovascular", body: "Theobromine dilates blood vessels, increasing circulation to the heart. You'll feel warmth in your chest · the literal heart-opening." },
             { icon: "🧠", title: "Neurological", body: "Increased cerebral blood flow enhances focus, creativity, and sensory perception. Thoughts become more organized." },
             { icon: "😌", title: "Emotional", body: "PEA and anandamide create a gentle bliss state. Emotional blocks soften. Buried feelings surface safely." },
             { icon: "⚡", title: "Energetic", body: "Unlike caffeine, theobromine provides sustained energy without the crash. Deeply energized yet completely calm." },
             { icon: "🌀", title: "Spiritual", body: "In ceremonial context, cacao acts as a bridge between ordinary consciousness and deeper states of presence." },
-            { icon: "🦴", title: "Physical", body: "Rich in magnesium — the most deficient mineral in modern bodies. Relaxes muscles and supports nervous system." },
+            { icon: "🦴", title: "Physical", body: "Rich in magnesium · the most deficient mineral in modern bodies. Relaxes muscles and supports nervous system." },
           ].map((card) => (
             <div key={card.title} className="bg-[#1A1208] p-10 hover:bg-[#2C1810] transition-colors">
               <span className="text-[28px] block mb-4">{card.icon}</span>
@@ -183,8 +183,8 @@ const CacaoCeremony = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-[rgba(201,150,58,0.15)]">
           {[
-            { type: "The One Who Leads With Fire", body: "You carry enormous creative power — and often a quiet isolation. Cacao's heart-opening works specifically on this. It softens the armor without diminishing the power." },
-            { type: "The One Whose Body Used to Know", body: "There was a time when you knew — not intellectually, but in your body. Cacao opens the heart center and reconnects you to what genuinely lights you up." },
+            { type: "The One Who Leads With Fire", body: "You carry enormous creative power · and often a quiet isolation. Cacao's heart-opening works specifically on this. It softens the armor without diminishing the power." },
+            { type: "The One Whose Body Used to Know", body: "There was a time when you knew · not intellectually, but in your body. Cacao opens the heart center and reconnects you to what genuinely lights you up." },
             { type: "The One Who Feels Everything", body: "You feel the emotional temperature of every room. Cacao is one of the gentlest sacraments for someone like you. It nourishes rather than overwhelms." },
           ].map((card) => (
             <div key={card.type} className="bg-[rgba(14,10,6,0.8)] p-11 border-t-[3px] border-transparent hover:border-[#C9963A] transition-colors">
@@ -207,10 +207,10 @@ const CacaoCeremony = () => {
           {[
             { time: "Arrival · 30 minutes before", title: "Arrival, Grounding & Sacred Space", body: "Arrive early to settle your nervous system. The space is prepared with altar, sacred objects, candles, and incense." },
             { time: "Opening · First 30 minutes", title: "Ceremony Opening & Intention", body: "The facilitator opens sacred space through prayer, invocation, and land acknowledgment. The circle is cast." },
-            { time: "Sacrament · The Heart of It", title: "Receiving the Cacao", body: "The cacao is prepared ceremonially — ground, warmed, and infused with prayer. Each cup is blessed individually." },
-            { time: "Peak · Hours 1–2", title: "Movement, Sound & Inner Journey", body: "Live or curated music carries the ceremony. Movement is invited — let your body lead." },
-            { time: "Landing · Final Hour", title: "Integration & Sharing Circle", body: "A sharing circle allows participants to voice what they experienced — witnessed by the group." },
-            { time: "After", title: "The Days That Follow", body: "Cacao integration continues for 24–72 hours. Journal. Sleep well. Drink water. The sacrament continues working." },
+            { time: "Sacrament · The Heart of It", title: "Receiving the Cacao", body: "The cacao is prepared ceremonially · ground, warmed, and infused with prayer. Each cup is blessed individually." },
+            { time: "Peak · Hours 1·2", title: "Movement, Sound & Inner Journey", body: "Live or curated music carries the ceremony. Movement is invited · let your body lead." },
+            { time: "Landing · Final Hour", title: "Integration & Sharing Circle", body: "A sharing circle allows participants to voice what they experienced · witnessed by the group." },
+            { time: "After", title: "The Days That Follow", body: "Cacao integration continues for 24·72 hours. Journal. Sleep well. Drink water. The sacrament continues working." },
           ].map((step) => (
             <div key={step.time} className="relative pb-14 last:pb-0">
               <div className="absolute -left-[52px] top-2 w-2.5 h-2.5 rounded-full bg-[#C9963A] shadow-[0_0_0_4px_rgba(201,150,58,0.15)]" />
@@ -230,7 +230,7 @@ const CacaoCeremony = () => {
           <div>
             <h3 className="font-display text-[22px] italic text-[#F5EDD8] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)]">The Day Before</h3>
             <ul className="space-y-0">
-              {["Eat clean. Whole foods, fruits, vegetables.", "No alcohol — 24 hours minimum.", "Limit caffeine to prevent overstimulation.", "Set your intention quietly.", "Rest well. Sleep is the foundation."].map((item) => (
+              {["Eat clean. Whole foods, fruits, vegetables.", "No alcohol · 24 hours minimum.", "Limit caffeine to prevent overstimulation.", "Set your intention quietly.", "Rest well. Sleep is the foundation."].map((item) => (
                 <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(201,150,58,0.08)] text-base text-[#C4B49A]">
                   <span className="text-[#C9963A] text-[8px] mt-1.5 shrink-0">◆</span>{item}
                 </li>
@@ -238,7 +238,7 @@ const CacaoCeremony = () => {
             </ul>
             <h3 className="font-display text-[22px] italic text-[#F5EDD8] mb-7 pb-4 border-b border-[rgba(201,150,58,0.3)] mt-10">Day of Ceremony</h3>
             <ul className="space-y-0">
-              {["Eat lightly. No heavy meals 3–4 hours before.", "Hydrate throughout the day.", "Arrive 15 min early.", "Wear comfortable, natural fabrics.", "Bring a journal for insights."].map((item) => (
+              {["Eat lightly. No heavy meals 3·4 hours before.", "Hydrate throughout the day.", "Arrive 15 min early.", "Wear comfortable, natural fabrics.", "Bring a journal for insights."].map((item) => (
                 <li key={item} className="flex items-start gap-4 py-3.5 border-b border-[rgba(201,150,58,0.08)] text-base text-[#C4B49A]">
                   <span className="text-[#C9963A] text-[8px] mt-1.5 shrink-0">◆</span>{item}
                 </li>

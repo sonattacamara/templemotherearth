@@ -47,13 +47,13 @@ const kingdoms: KingdomData[] = [
     titleColor: "#C4B8E8", eyebrowColor: "#7B6FA0", factBg: "#1A1625", factLabelColor: "#9B8FCC",
     cardBg: "#1A1625", cardNameColor: "#C4B8E8", statNumColor: "#C4B8E8", quoteColor: "#C4B8E8", quoteCite: "#7B6FA0",
     sections: [
-      { title: "The Body Is a Mineral Vessel", content: "Your body requires over 60 minerals to function. Minerals regulate every enzymatic reaction, every nerve signal, every heartbeat. Honoring the body means feeding it what it was built from — sea moss, shilajit, structured water, trace elements." },
-      { title: "Why We're Running on Empty", content: "Industrial agriculture has stripped topsoil of mineral content. Magnesium deficiency alone drives anxiety, insomnia, muscle tension — and over 80% of Americans are deficient." },
+      { title: "The Body Is a Mineral Vessel", content: "Your body requires over 60 minerals to function. Minerals regulate every enzymatic reaction, every nerve signal, every heartbeat. Honoring the body means feeding it what it was built from · sea moss, shilajit, structured water, trace elements." },
+      { title: "Why We're Running on Empty", content: "Industrial agriculture has stripped topsoil of mineral content. Magnesium deficiency alone drives anxiety, insomnia, muscle tension · and over 80% of Americans are deficient." },
     ],
     facts: [
       { icon: Droplets, label: "Sea Moss", val: "Contains 92 of the 102 minerals the human body is made of." },
       { icon: Mountain, label: "Shilajit", val: "Ancient mineral resin with 85+ minerals and fulvic acid." },
-      { icon: Droplet, label: "Structured Water", val: "Water in its fourth phase — H3O2 — hydrates at the cellular level." },
+      { icon: Droplet, label: "Structured Water", val: "Water in its fourth phase · H3O2 · hydrates at the cellular level." },
       { icon: Magnet, label: "Magnesium", val: "Involved in over 300 enzymatic reactions. 80%+ Americans deficient." },
     ],
     cards: [
@@ -67,22 +67,22 @@ const kingdoms: KingdomData[] = [
       { num: "80%", label: "Americans magnesium deficient" },
       { num: "70%", label: "Of your body is water" },
     ],
-    quote: { text: "The body does not lie. Give it back what the Earth made it from — and watch what it remembers how to do.", cite: "Temple Mother Earth · 7 Pillars" },
+    quote: { text: "The body does not lie. Give it back what the Earth made it from · and watch what it remembers how to do.", cite: "Temple Mother Earth · 7 Pillars" },
     ceremonyLink: { tag: "Mineral Kingdom in the 7 Pillars", name: "Juicing · Detox · Water · DNA Upgrade · Sun", href: "/#offerings" },
   },
   {
     id: "plant", num: "Two", name: "PLANT", subtitle: "the oldest pharmacy on earth",
-    lead: "The Plant Kingdom is the bridge between the mineral world and the animal world — rooted in Earth, reaching toward light. Plants are alchemists.",
+    lead: "The Plant Kingdom is the bridge between the mineral world and the animal world · rooted in Earth, reaching toward light. Plants are alchemists.",
     titleColor: "#8FD67A", eyebrowColor: "#3D7835", factBg: "#0A140A", factLabelColor: "#5BA84A",
     cardBg: "#0A140A", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7835",
     sections: [
       { title: "Plants as Sacrament", content: "75% of the world's population still relies primarily on plant sacrament for healthcare. Of 25,000+ plant species, approximately 80,000 have medicinal properties." },
-      { title: "Ceremonial Plants at TME", content: "Cacao (Theobroma cacao) — the heart opener. Hapé — sacred Amazonian snuff. Blue Lotus — the sacred flower of ancient Egypt. Kava — the peace plant of the Pacific." },
+      { title: "Ceremonial Plants at TME", content: "Cacao (Theobroma cacao) · the heart opener. Hapé · sacred Amazonian snuff. Blue Lotus · the sacred flower of ancient Egypt. Kava · the peace plant of the Pacific." },
     ],
     facts: [
       { icon: Leaf, label: "Species", val: "Over 390,000 plant species known. 80,000+ medicinal." },
-      { icon: Dna, label: "Phytochemistry", val: "Plants produce 200,000+ secondary metabolites — alkaloids, terpenes, flavonoids." },
-      { icon: Sun, label: "Photosynthesis", val: "Plants convert light into matter — when we eat plants, we ingest sunlight." },
+      { icon: Dna, label: "Phytochemistry", val: "Plants produce 200,000+ secondary metabolites · alkaloids, terpenes, flavonoids." },
+      { icon: Sun, label: "Photosynthesis", val: "Plants convert light into matter · when we eat plants, we ingest sunlight." },
       { icon: Pill, label: "Pharmaceutical Debt", val: "Over 50% of all pharmaceutical drugs derived from plant compounds." },
     ],
     cards: [
@@ -101,7 +101,7 @@ const kingdoms: KingdomData[] = [
   },
   {
     id: "fungi", num: "Three", name: "FUNGI", subtitle: "the internet of the forest floor",
-    lead: "Fungi are neither plant nor animal. They are their own kingdom — and arguably the most intelligent one.",
+    lead: "Fungi are neither plant nor animal. They are their own kingdom · and arguably the most intelligent one.",
     titleColor: "#D4A060", eyebrowColor: "#9B6B3A", factBg: "#120D08", factLabelColor: "#C8883A",
     cardBg: "#120D08", cardNameColor: "#D4A060", statNumColor: "#D4A060", quoteColor: "#D4A060", quoteCite: "#9B6B3A",
     sections: [
@@ -110,7 +110,7 @@ const kingdoms: KingdomData[] = [
     ],
     facts: [
       { icon: Globe, label: "Mycelial Network", val: "A single teaspoon of soil contains miles of mycelial threads." },
-      { icon: Brain, label: "Lion's Mane", val: "The only food known to stimulate NGF and BDNF — grows new neurons." },
+      { icon: Brain, label: "Lion's Mane", val: "The only food known to stimulate NGF and BDNF · grows new neurons." },
       { icon: ShieldCheck, label: "Beta-Glucans", val: "Used as approved pharmaceutical drugs in Japan, China, South Korea." },
       { icon: Zap, label: "Cordyceps", val: "Increases cellular ATP production by up to 28%." },
     ],
@@ -134,7 +134,7 @@ const kingdoms: KingdomData[] = [
     titleColor: "#8FD67A", eyebrowColor: "#3D7A3D", factBg: "#060D06", factLabelColor: "#5BA84A",
     cardBg: "#060D06", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7A3D",
     sections: [
-      { title: "The Frog · Kambo", content: "Phyllomedusa bicolor — over 70 bioactive peptides found nowhere else in nature. The frog is never harmed. The relationship is symbiotic, not extractive." },
+      { title: "The Frog · Kambo", content: "Phyllomedusa bicolor · over 70 bioactive peptides found nowhere else in nature. The frog is never harmed. The relationship is symbiotic, not extractive." },
       { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous wisdom keepers have known for millennia." },
     ],
     facts: [
@@ -164,7 +164,7 @@ const kingdoms: KingdomData[] = [
     cardBg: "#100808", cardNameColor: "#E8C868", statNumColor: "#E8C868", quoteColor: "#E8C868", quoteCite: "#8A4A3A",
     sections: [
       { title: "The Human as Temple", content: "The human body is the most complex living system known to science. It contains every mineral, every element, every frequency. When properly restored and ceremonially activated, the body becomes what it was designed to be: a living temple." },
-      { title: "TME's Role", content: "Temple Mother Earth exists to restore the human being to its rightful place in the web of kingdoms — not above, not below, but woven in. Conscious. Humble. Powerful." },
+      { title: "TME's Role", content: "Temple Mother Earth exists to restore the human being to its rightful place in the web of kingdoms · not above, not below, but woven in. Conscious. Humble. Powerful." },
     ],
     facts: [
       { icon: Dna, label: "DNA", val: "3.2 billion base pairs. Contains the blueprint of the universe in miniature." },
@@ -257,7 +257,7 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
         {/* Quote */}
         <blockquote className="border-l-[3px] p-8 md:p-10 my-16 bg-[rgba(255,255,255,0.02)]" style={{ borderColor: k.quoteCite }}>
           <p className="font-serif italic text-[22px] leading-[1.7] mb-3" style={{ color: k.quoteColor }}>{k.quote.text}</p>
-          <cite className="font-sans text-[9px] tracking-[3px] uppercase not-italic" style={{ color: k.quoteCite }}>— {k.quote.cite}</cite>
+          <cite className="font-sans text-[9px] tracking-[3px] uppercase not-italic" style={{ color: k.quoteCite }}>· {k.quote.cite}</cite>
         </blockquote>
 
         {/* Ceremony Link */}
@@ -280,7 +280,7 @@ const EarthKingdoms = () => {
     <div className="min-h-screen bg-[#050604] text-[#F0EAD6]" style={{ fontFamily: "'EB Garamond', serif" }}>
       <SEOHead
         title="The Earth Kingdoms | Temple Mother Earth"
-        description="Discover the five Earth Kingdoms — Mineral, Plant, Fungi, Animal, and Kingdom of Man — the living intelligence behind every ceremony."
+        description="Discover the five Earth Kingdoms · Mineral, Plant, Fungi, Animal, and Kingdom of Man · the living intelligence behind every ceremony."
       />
       <Navigation />
 

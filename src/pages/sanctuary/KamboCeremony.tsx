@@ -53,7 +53,7 @@ const panels = [
         <ul className="space-y-0">
           {["Heart conditions, cardiovascular disease, or high blood pressure", "Current use of SSRIs, MAOIs, or immunosuppressants", "Blood pressure medications (consult your physician)", "History of seizures, stroke, or epilepsy", "Pregnancy or breastfeeding", "Active psychosis or severe untreated mental illness", "Liver or kidney disease", "Eating disorders involving purging"].map((item) => (
             <li key={item} className="py-2.5 border-b border-[hsla(255,255,255,0.06)] text-[16px] text-[hsl(35,30%,68%)] flex gap-3.5 items-start font-serif">
-              <span className="text-[hsl(110,40%,46%)] shrink-0 mt-0.5">—</span>
+              <span className="text-[hsl(110,40%,46%)] shrink-0 mt-0.5">·</span>
               {item}
             </li>
           ))}
@@ -67,7 +67,7 @@ const panels = [
       <ul className="space-y-0">
         {["Fast 8 hours minimum, water only until ceremony", "Disclose ALL medications on your intake form, no exceptions", "Arrive hydrated (the day before), no excess water morning of", "Wear comfortable clothing you don't mind getting on the floor", "Tell someone trusted where you are going and who to contact", "Set your intention the night before, write it down, don't share it yet", "Do not schedule anything demanding for the 24 hours after ceremony"].map((item) => (
           <li key={item} className="py-2.5 border-b border-[hsla(255,255,255,0.06)] text-[16px] text-[hsl(35,30%,68%)] flex gap-3.5 items-start font-serif">
-            <span className="text-[hsl(110,40%,46%)] shrink-0 mt-0.5">—</span>
+            <span className="text-[hsl(110,40%,46%)] shrink-0 mt-0.5">·</span>
             {item}
           </li>
         ))}
@@ -75,14 +75,14 @@ const panels = [
     ),
   },
   {
-    title: "Integration — The 7 Days After",
+    title: "Integration · The 7 Days After",
     content: (
       <div>
         <p className="text-[17px] text-[hsl(35,30%,68%)] leading-relaxed font-serif mb-5">What happens in the week after Kambo matters as much as the ceremony itself.</p>
         <ul className="space-y-0">
           {["Rest for 24 hours minimum, cancel what you can", "Eat lightly, warm broth, fruit, simple nourishing foods", "Journal before talking to others about your experience", "Expect vivid dreams for 3-7 days, they are part of the process", "No major decisions for 72 hours", "Contact your facilitator if anything feels unresolved", "Integration support is available, you are held after as well as during"].map((item) => (
             <li key={item} className="py-2.5 border-b border-[hsla(255,255,255,0.06)] text-[16px] text-[hsl(35,30%,68%)] flex gap-3.5 items-start font-serif">
-              <span className="text-[hsl(110,40%,46%)] shrink-0 mt-0.5">—</span>
+              <span className="text-[hsl(110,40%,46%)] shrink-0 mt-0.5">·</span>
               {item}
             </li>
           ))}
@@ -114,7 +114,7 @@ const KamboCeremony = () => {
 
   return (
     <SacredSeriesLayout
-      title="Kambo Ceremony — The Great Purifier | Temple Mother Earth"
+      title="Kambo Ceremony · The Great Purifier | Temple Mother Earth"
       description="Kambo sacred purification ceremony at Temple Mother Earth, Washington DC. 508(c)(1)(A) sacred church. By application only."
     >
       {/* Hero */}

@@ -29,7 +29,7 @@ const solarCycle = [
     icon: Sunrise,
     neter: "Tehuti + Khepera",
     practice: "Ankh Activation",
-    desc: "The transformative power of Khepera restoring the Sun each morning. Activate the Ankh — the key of life — as the sun rises.",
+    desc: "The transformative power of Khepera restoring the Sun each morning. Activate the Ankh · the key of life · as the sun rises.",
     gradient: "from-amber-300/20 to-orange-400/20",
     accent: "text-amber-400",
   },
@@ -64,8 +64,8 @@ const solarCycle = [
 
 /* ── Affirmation Cards ── */
 const affirmations = [
-  { text: "I am safe.", isfet: "When you are NOT safe, the limbic system activates survival mode. This creates Wekhedu — stagnation that blocks the Metou." },
-  { text: "I am warm.", isfet: "When you lack warmth — physical or emotional — the body contracts. Circulation slows, creating blockage in the Metou." },
+  { text: "I am safe.", isfet: "When you are NOT safe, the limbic system activates survival mode. This creates Wekhedu · stagnation that blocks the Metou." },
+  { text: "I am warm.", isfet: "When you lack warmth · physical or emotional · the body contracts. Circulation slows, creating blockage in the Metou." },
   { text: "My hunger and thirst are satisfied.", isfet: "Unmet nourishment creates primal anxiety. The body hoards energy, disrupting the natural flow of life force." },
   { text: "I am fertile or virile.", isfet: "When creative and regenerative energy is blocked, stagnation manifests as depression, disconnection, and loss of purpose." },
   { text: "I like myself.", isfet: "Self-rejection is the deepest Isfet. It poisons every Metou pathway, creating chaos that radiates outward into all relationships." },
@@ -98,12 +98,12 @@ const trinity = [
 
 /* ── Future Teachings ── */
 const futureTeachings = [
-  "Ptah — The Creator",
-  "Sekhmet — The Warrior Protector",
-  "IamHetep — The Divine Physician",
+  "Ptah · The Creator",
+  "Sekhmet · The Warrior Protector",
+  "IamHetep · The Divine Physician",
   "The Daily Practice Guide",
   "Wekhedu in Modern Life",
-  "Maat vs. Isfet — Balance & Chaos",
+  "Maat vs. Isfet · Balance & Chaos",
   "The Kemetic Origin of Chinese Medicine",
   "Qi Gong and the Metou",
 ];
@@ -218,7 +218,7 @@ const KemeticTeachings = () => {
               Kemetic Teachings
             </motion.h1>
             <motion.p variants={fadeUp} className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-4">
-              Our temple is rooted in the ancient spiritual practices of Kemet — honoring Mother Earth as the sacred source of all transformation, wisdom, and restoration.
+              Our temple is rooted in the ancient spiritual practices of Kemet · honoring Mother Earth as the sacred source of all transformation, wisdom, and restoration.
             </motion.p>
             <motion.p variants={fadeUp} className="font-body text-sm text-secondary/80 italic">
               High Priest of Kemetic Wisdom · Keeper of the Wisdom of IamHetep
@@ -235,7 +235,7 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="font-body text-base md:text-lg text-primary-foreground/80 leading-relaxed space-y-6">
             <p>
-              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth — the original mother, provider, and source of all wisdom. Our ancestors in{" "}
+              Temple Mother Earth is founded on the ancient Kemetic practices of living in sacred relationship with the Earth · the original mother, provider, and source of all wisdom. Our ancestors in{" "}
               <Tooltip>
                 <TooltipTrigger asChild>
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Kemet</strong>
@@ -247,7 +247,7 @@ const KemeticTeachings = () => {
               (ancient Egypt) understood that the Earth herself is sacrament, and that true transformation begins when we align ourselves with her rhythms, her seasons, and her wisdom.
             </p>
             <p>
-              Kemetism is the spiritual practice of awareness, connection, and elevation through these Kemetic spiritual principles — creating the balance of{" "}
+              Kemetism is the spiritual practice of awareness, connection, and elevation through these Kemetic spiritual principles · creating the balance of{" "}
               <Tooltip>
                 <TooltipTrigger asChild>
                   <strong className="text-secondary cursor-help border-b border-dashed border-secondary/40">Maat</strong>
@@ -322,7 +322,7 @@ const KemeticTeachings = () => {
       </section>
 
 
-      {/* ── SECTION B: DAILY PRACTICE — SOLAR CYCLE ── */}
+      {/* ── SECTION B: DAILY PRACTICE · SOLAR CYCLE ── */}
       <section id="daily-cycle" className="py-16 md:py-24 bg-foreground">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger} className="mx-auto max-w-5xl px-4">
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
@@ -380,14 +380,14 @@ const KemeticTeachings = () => {
         </motion.div>
       </section>
 
-      {/* ── SECTION C: EYE OF HORUS — AFFIRMATION CARDS ── */}
+      {/* ── SECTION C: EYE OF HORUS · AFFIRMATION CARDS ── */}
       <section id="eye-of-horus" className="py-16 md:py-24 bg-foreground/95">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger} className="mx-auto max-w-5xl px-4">
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
-            The Inner Wisdom — Eye of Horus
+            The Inner Wisdom · Eye of Horus
           </motion.h2>
           <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/60 mb-4 max-w-2xl mx-auto">
-            With IamHetep, your sleep regeneration reveals the inner wisdom Eye of Horus — reflecting the Limbic System:
+            With IamHetep, your sleep regeneration reveals the inner wisdom Eye of Horus · reflecting the Limbic System:
           </motion.p>
           <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/40 text-sm mb-12">
             Tap each affirmation to reveal what happens when it is not true
@@ -496,14 +496,14 @@ const KemeticTeachings = () => {
               </Tooltip>.
             </p>
             <p>
-              IamHetep — first god of medicine and a real person, architect of the first pyramid — described these Metou during the Third Dynasty, approximately 4500 BC.
+              IamHetep · first god of medicine and a real person, architect of the first pyramid · described these Metou during the Third Dynasty, approximately 4500 BC.
             </p>
             <div className="rounded-xl border border-secondary/20 bg-secondary/5 p-6 md:p-8">
               <p className="font-display text-lg font-semibold text-secondary mb-2">
                 The Origin of Equilibrium Medicine
               </p>
               <p className="text-primary-foreground/70">
-                This is the <strong className="text-primary-foreground">KEMETIC (African Egyptian) origin</strong> of Chinese medicine, called Equilibrium Medicine. The Metou are the predecessors of what the Chinese call meridians — energy pathways mapped over 4,500 years ago by IamHetep himself.
+                This is the <strong className="text-primary-foreground">KEMETIC (African Egyptian) origin</strong> of Chinese medicine, called Equilibrium Medicine. The Metou are the predecessors of what the Chinese call meridians · energy pathways mapped over 4,500 years ago by IamHetep himself.
               </p>
             </div>
           </motion.div>
@@ -514,7 +514,7 @@ const KemeticTeachings = () => {
       <section id="the-trinity" className="py-16 md:py-24 bg-foreground/95">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={stagger} className="mx-auto max-w-5xl px-4">
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-secondary">
-            The Trinity — Ptah, Sekhmet, IamHetep
+            The Trinity · Ptah, Sekhmet, IamHetep
           </motion.h2>
           <motion.p variants={fadeUp} className="font-body text-center text-primary-foreground/40 text-sm mb-12">
             Tap each card to reveal the teaching
@@ -541,7 +541,7 @@ const KemeticTeachings = () => {
                     </div>
                   ) : (
                     <div>
-                      <h3 className="font-display text-lg font-bold text-secondary mb-1">{t.name} — {t.role}</h3>
+                      <h3 className="font-display text-lg font-bold text-secondary mb-1">{t.name} · {t.role}</h3>
                       <p className="font-body text-sm text-primary-foreground/80 leading-relaxed">{t.desc}</p>
                     </div>
                   )}
@@ -552,7 +552,7 @@ const KemeticTeachings = () => {
 
           <motion.div variants={fadeUp} className="mt-10 text-center">
             <blockquote className="font-body text-primary-foreground/70 italic max-w-2xl mx-auto border-l-4 border-secondary/40 pl-6 text-left">
-              They were worshipped as a triune. Our Kemetic temple is based upon the trinity of Ptah–Sekhmet–IamHetep.
+              They were worshipped as a triune. Our Kemetic temple is based upon the trinity of Ptah·Sekhmet·IamHetep.
             </blockquote>
           </motion.div>
         </motion.div>
@@ -566,7 +566,7 @@ const KemeticTeachings = () => {
           </motion.h2>
           <motion.div variants={fadeUp} className="font-body text-primary-foreground/80 leading-relaxed space-y-4 mb-8">
             <p>
-              We have sacred service weekly Saturday nights 9 PM – 12 AM to express gratitude and joy for the week. Followed by a sunrise service at the beach to merge with divine.
+              We have sacred service weekly Saturday nights 9 PM · 12 AM to express gratitude and joy for the week. Followed by a sunrise service at the beach to merge with divine.
             </p>
             <p>
               When you join the temple, you can avail yourself of the sacred services of our ordained priests and priestesses.
@@ -603,7 +603,7 @@ const KemeticTeachings = () => {
                   A trance drummer for ancestral soul retrieval, author of 10 books, and international lecturer, Dr. Love has studied Ayurveda, Unani Tibb, Tibetan, Persian, and West African sacred systems.
                 </p>
                 <p>
-                  Dr. Love is the living bridge between the Kemetic sacred tradition and Chinese/Oriental medicine — embodying the Metou-to-Meridian wisdom pathway that IamHetep first described nearly 4,500 years ago.
+                  Dr. Love is the living bridge between the Kemetic sacred tradition and Chinese/Oriental medicine · embodying the Metou-to-Meridian wisdom pathway that IamHetep first described nearly 4,500 years ago.
                 </p>
               </div>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-body text-primary-foreground/50">

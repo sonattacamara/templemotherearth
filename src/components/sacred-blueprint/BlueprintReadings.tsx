@@ -40,7 +40,7 @@ const BlueprintReadings = () => (
         Book a Sacred Blueprint Reading
       </motion.h2>
       <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
-    Your chart is just the beginning. A Sacred Blueprint Reading goes deep — connecting your Human Design to your healing journey, your medicine path, and your next sacred step. All sessions are 90 minutes via Zoom.
+    Your chart is just the beginning. A Sacred Blueprint Reading goes deep · connecting your Human Design to your healing journey, your medicine path, and your next sacred step. All sessions are 90 minutes via Zoom.
       </motion.p>
 
       <div className="mt-12 grid gap-8 md:grid-cols-2">

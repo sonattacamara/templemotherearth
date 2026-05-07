@@ -49,7 +49,7 @@ const SacredTeaHouse = () => (
         </h1>
         <p className="font-serif italic text-[hsl(45,70%,49%)] text-[0.65em] tracking-[3px] text-2xl mt-2 mb-6">Sacred Sacrament Sanctuary</p>
         <p className="font-serif italic text-xl leading-relaxed text-[hsl(40,24%,78%)] max-w-[560px] mx-auto mb-10">
-          Step into the stillness. The Sacred Tea House is a slow, sacred, sensory experience — a ceremonial tea space where plant sacrament, community, and contemplative practice meet.
+          Step into the stillness. The Sacred Tea House is a slow, sacred, sensory experience · a ceremonial tea space where plant sacrament, community, and contemplative practice meet.
         </p>
         <a
           href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"

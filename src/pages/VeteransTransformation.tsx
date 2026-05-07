@@ -53,7 +53,7 @@ const painPoints = [
   {
     icon: <Leaf className="h-6 w-6" />,
     title: "Substance Dependence",
-    text: "The drinking, the pills, the substances you use to numb it all — those are not your weakness. They are the only coping tools a broken system gave you. We offer something different.",
+    text: "The drinking, the pills, the substances you use to numb it all · those are not your weakness. They are the only coping tools a broken system gave you. We offer something different.",
   },
   {
     icon: <Shield className="h-6 w-6" />,
@@ -89,15 +89,15 @@ const schedule = [
 
 /* ─── FAQ ─── */
 const faqs = [
-  { q: "Is Kambo safe for veterans on VA medications?", a: "We require a comprehensive pre-screening process that evaluates all current medications and health conditions. Our intake process is designed to identify any contraindications. Certain medications may require a washout period. Your safety is our first priority — we will be transparent about what is and is not appropriate for your specific situation." },
-  { q: "Will I lose control or hallucinate?", a: "No. Kambo does not alter your state of mind. You maintain full consciousness and mental clarity throughout the entire process. This is a physical purification. You will be aware, present, and in control at all times — the same tactical awareness you are used to." },
+  { q: "Is Kambo safe for veterans on VA medications?", a: "We require a comprehensive pre-screening process that evaluates all current medications and health conditions. Our intake process is designed to identify any contraindications. Certain medications may require a washout period. Your safety is our first priority · we will be transparent about what is and is not appropriate for your specific situation." },
+  { q: "Will I lose control or hallucinate?", a: "No. Kambo does not alter your state of mind. You maintain full consciousness and mental clarity throughout the entire process. This is a physical purification. You will be aware, present, and in control at all times · the same tactical awareness you are used to." },
   { q: "Is this legal?", a: "Temple Mother Earth operates as a 508(c)(1)(A) temple under the Religious Freedom Restoration Act (RFRA). Our ceremonies are conducted as bona fide religious practices protected under the First Amendment. Kambo itself is not a controlled substance." },
   { q: "I have TBI. Is this safe for me?", a: "Pre-screening is required for all participants, especially those with TBI. We are transparent about what conditions require additional medical clearance. We work with each veteran individually to determine the safest approach." },
   { q: "Do you accept VA benefits or insurance?", a: "Currently, our ceremonies are not covered by VA benefits or insurance. However, we offer a Veteran Scholarship Fund and flexible sacred reciprocity options. No warrior will be turned away for inability to contribute." },
   { q: "What if I am in crisis right now?", a: "Please call the Veterans Crisis Line immediately: dial 988, press 1. You can also chat at VeteransCrisisLine.net or text 838255. When you are ready for the next step, we are here." },
   { q: "Can I bring my spouse or partner?", a: "Affirmative. We understand that military service impacts entire families. We offer couples ceremonies and encourage partners to participate when appropriate. Your family has been carrying this too." },
-  { q: "What if I have never done anything like this?", a: "Most of our veterans had not either. This program is built for first-timers. Kambo is the ideal starting point — you stay fully aware and in control the entire time. No surprises." },
-  { q: "How is this different from the VA?", a: "Our approach is personalized, sacred, and community-based. We work on root causes, not just symptoms. One transformative weekend can accomplish what years of conventional approaches could not. You are not a number here — you are a warrior who deserves to come home to yourself." },
+  { q: "What if I have never done anything like this?", a: "Most of our veterans had not either. This program is built for first-timers. Kambo is the ideal starting point · you stay fully aware and in control the entire time. No surprises." },
+  { q: "How is this different from the VA?", a: "Our approach is personalized, sacred, and community-based. We work on root causes, not just symptoms. One transformative weekend can accomplish what years of conventional approaches could not. You are not a number here · you are a warrior who deserves to come home to yourself." },
   { q: "What does a typical Kambo ceremony involve?", a: "A Kambo ceremony lasts approximately 20 to 40 minutes. Small points are applied to the skin, and the secretion of the Giant Monkey Frog is administered. You will experience a powerful physical purge that cleanses stored impurities from your body. The entire process is held in sacred, supportive space by trained facilitators. Think of it as a system reboot." },
 ];
 
@@ -106,7 +106,7 @@ const branches = ["U.S. Army", "U.S. Navy", "U.S. Air Force", "U.S. Marine Corps
 
 const struggles = ["PTSD", "Chronic Pain", "Substance Dependence", "Suicidal Thoughts", "TBI / Brain Injury", "Relationship Issues", "Loss of Purpose", "Anxiety / Depression", "Sleep Disorders / Insomnia", "Anger / Emotional Dysregulation", "Moral Injury", "Other"];
 
-const serviceEras = ["Post-9/11 (2001–Present)", "Gulf War (1990–2001)", "Cold War (1947–1991)", "Vietnam Era", "Other"];
+const serviceEras = ["Post-9/11 (2001·Present)", "Gulf War (1990·2001)", "Cold War (1947·1991)", "Vietnam Era", "Other"];
 
 const dischargeTypes = ["Honorable", "General (Under Honorable)", "Other Than Honorable", "Medical", "Retired", "Currently Serving", "Prefer Not to Say"];
 
@@ -114,7 +114,7 @@ const currentSupport = ["VA Healthcare", "Private Therapist", "Support Group", "
 
 const hearAbout = ["Google Search", "Social Media", "Another Veteran", "Podcast", "Therapist / Counselor Referral", "VA / Military Organization", "Other"];
 
-const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset Weekend", "Full Transformation Pathway", "Not Sure — Help Me Decide"];
+const programInterest = ["Kambo Purification (Single Session)", "Relax & Reset Weekend", "Full Transformation Pathway", "Not Sure · Help Me Decide"];
 
 const VeteransTransformation = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -294,7 +294,7 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.2 }}
             className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B] mb-6"
           >
-            Temple Mother Earth — Veterans Transformation Program
+            Temple Mother Earth · Veterans Transformation Program
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -311,7 +311,7 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.7 }}
             className="mx-auto mt-8 max-w-2xl font-body text-lg text-white/80 leading-relaxed"
           >
-            When the VA, the pills, and the therapy sessions have not been enough — there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Ancient medicine for the modern warrior.
+            When the VA, the pills, and the therapy sessions have not been enough · there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Ancient medicine for the modern warrior.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -386,7 +386,7 @@ const VeteransTransformation = () => {
           <motion.div variants={fadeUp} className="mt-8 rounded-xl bg-[#556B2F]/20 border border-[#556B2F]/40 p-6 text-center">
             <p className="font-body text-[#F5F0E6]/90">
               <strong>If you are in crisis right now:</strong>{" "}
-              <a href="tel:988" className="text-[#B8860B] font-bold underline">Veterans Crisis Line — Dial 988, Press 1</a>
+              <a href="tel:988" className="text-[#B8860B] font-bold underline">Veterans Crisis Line · Dial 988, Press 1</a>
             </p>
           </motion.div>
         </motion.div>
@@ -579,7 +579,7 @@ const VeteransTransformation = () => {
             <p className="font-display text-xl italic text-[#2F4F4F] leading-relaxed md:text-2xl">
               "Kambo pulls issues out by the root. It can be an excellent medicine for someone looking for something beyond what the system has offered them."
             </p>
-            <footer className="mt-6 font-body text-sm text-[#556B2F]">— Veteran Community Member</footer>
+            <footer className="mt-6 font-body text-sm text-[#556B2F]">· Veteran Community Member</footer>
           </motion.blockquote>
 
           <motion.div variants={fadeUp} className="mt-8">
@@ -654,7 +654,7 @@ const VeteransTransformation = () => {
                 Kambo is <strong className="text-[#F5F0E6]">not a controlled substance</strong>. It is a natural secretion used for centuries by Indigenous peoples. Our facilitators are trained practitioners who conduct thorough pre-screening for every participant.
               </p>
               <p>
-                Your intake includes a comprehensive health assessment, medication review, and contraindication screening. Veterans are trained to assess risk — we give you all the intel you need to trust this operation.
+                Your intake includes a comprehensive health assessment, medication review, and contraindication screening. Veterans are trained to assess risk · we give you all the intel you need to trust this operation.
               </p>
             </div>
           </motion.div>
@@ -969,7 +969,7 @@ const VeteransTransformation = () => {
 
               <div>
                 <label className="block font-body text-sm font-semibold text-[#F5F0E6] mb-2">Anything else you want us to know?</label>
-                <textarea value={formData.additionalInfo} onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })} rows={3} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your story matters. Share whatever feels right — we are listening." />
+                <textarea value={formData.additionalInfo} onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })} rows={3} className="w-full rounded-lg border border-[#556B2F]/30 bg-[#2F4F4F]/20 px-4 py-3 font-body text-[#F5F0E6] placeholder:text-[#F5F0E6]/30 focus:border-[#B8860B] focus:outline-none focus:ring-1 focus:ring-[#B8860B]" placeholder="Your story matters. Share whatever feels right · we are listening." />
               </div>
 
               {formError && (
@@ -1013,7 +1013,7 @@ const VeteransTransformation = () => {
         variant="olive"
         eyebrow="No Warrior Left Behind"
         headline="Send a Veteran Into Healing"
-        body="Your contribution directly funds a veteran's transformation weekend — covering ceremony, lodging, meals, and aftercare. Every dollar goes to a warrior who gave everything for this country."
+        body="Your contribution directly funds a veteran's transformation weekend · covering ceremony, lodging, meals, and aftercare. Every dollar goes to a warrior who gave everything for this country."
         buttonLabel="Sponsor a Veteran"
         donateUrl="https://www.paypal.com/donate?campaign_id=R877JP38Q4F8S"
       />

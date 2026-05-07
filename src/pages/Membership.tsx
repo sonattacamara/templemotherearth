@@ -70,7 +70,7 @@ const tiers = [
     period: "",
     icon: Heart,
     commitment: "30-day introduction",
-    philosophy: "This is where it all begins. Experience the warmth of our community, get to know our philosophy, and feel if this space resonates with your spirit. No commitment — just an open door.",
+    philosophy: "This is where it all begins. Experience the warmth of our community, get to know our philosophy, and feel if this space resonates with your spirit. No commitment · just an open door.",
     includes: [
       "Limited integration portal access for 30 days",
       "Community announcements & event calendar",
@@ -88,7 +88,7 @@ const tiers = [
     period: "/month",
     icon: Leaf,
     commitment: "",
-    philosophy: "You've felt the resonance. Now stay connected. This is your ongoing home within the Temple — where you deepen your understanding, stay informed, and grow at your own pace.",
+    philosophy: "You've felt the resonance. Now stay connected. This is your ongoing home within the Temple · where you deepen your understanding, stay informed, and grow at your own pace.",
     includes: [
       "Full member portal access",
       "Community announcements & event calendar",
@@ -109,7 +109,7 @@ const tiers = [
     philosophy: "For those ready to build a daily practice. This container supports your nervous system, strengthens your body-mind connection, and helps you cultivate the inner resilience that lasting transformation requires.",
     includes: [
       "Everything in Community Rhythm",
-      "Live virtual Qi Gong (Monday–Friday)",
+      "Live virtual Qi Gong (Monday·Friday)",
       "Replay library access",
       "Monthly embodiment workshop",
       "Practice tracker & streak counter",
@@ -125,7 +125,7 @@ const tiers = [
     period: "/month",
     icon: Shield,
     commitment: "3-month journey",
-    philosophy: "A guided container of preparation for those who feel called to deeper ceremonial work. After three months of practice, you become eligible for a full-day ceremony — when you feel ready and your facilitators agree.",
+    philosophy: "A guided container of preparation for those who feel called to deeper ceremonial work. After three months of practice, you become eligible for a full-day ceremony · when you feel ready and your facilitators agree.",
     includes: [
       "Everything in Environment Collective",
       "Guided 3-month preparation container",
@@ -249,7 +249,7 @@ const Membership = () => {
           <motion.div variants={fadeUp} className="mt-10 space-y-8 text-base leading-relaxed text-muted-foreground">
             <p>
               Real transformation isn't something you can rush. It asks for presence, practice, and 
-              a safe container to hold what arises. That's why we've created a pathway — not to limit access, 
+              a safe container to hold what arises. That's why we've created a pathway · not to limit access, 
               but to honor the depth of this sacred work and ensure everyone who walks it is truly supported.
             </p>
             <p>
@@ -261,7 +261,7 @@ const Membership = () => {
           <motion.div variants={fadeUp} className="mt-14 grid gap-6 sm:grid-cols-2">
             {[
               { icon: Shield, title: "Safety & Nervous System Care", desc: "Your body knows what it needs. We create spaces where your nervous system can feel safe enough to release, restore, and integrate at your own pace." },
-              { icon: Heart, title: "Integration & Wholeness", desc: "Every experience is held in a container of care — preparation before, integration after — so insights become lasting transformation, not fleeting moments." },
+              { icon: Heart, title: "Integration & Wholeness", desc: "Every experience is held in a container of care · preparation before, integration after · so insights become lasting transformation, not fleeting moments." },
               { icon: Sparkles, title: "Intentional & Sacred", desc: "Each step on this path is a conscious choice. We honor that by ensuring you feel informed, supported, and never rushed." },
               { icon: Users, title: "Community & Connection", desc: "Transformation doesn't happen in isolation. You are surrounded by kindred spirits who see you, hold space for you, and walk alongside you." },
             ].map((v) => (
@@ -328,7 +328,7 @@ const Membership = () => {
             className="mx-auto mt-6 max-w-lg text-center text-muted-foreground"
           >
             There's no rush, no pressure, and no wrong place to start. 
-            Each stage unfolds naturally as you grow. Move at your own pace — 
+            Each stage unfolds naturally as you grow. Move at your own pace · 
             we're here every step of the way.
           </motion.p>
 
@@ -411,7 +411,7 @@ const Membership = () => {
             variants={fadeUp}
             className="mt-12 text-center text-sm text-muted-foreground"
           >
-            Your membership supports Temple Mother Earth's 508(c)(1)(A) sacred mission — keeping sacred space alive for all.
+            Your membership supports Temple Mother Earth's 508(c)(1)(A) sacred mission · keeping sacred space alive for all.
           </motion.p>
         </motion.div>
       </section>
@@ -436,19 +436,19 @@ const Membership = () => {
             {[
               {
                 q: "Is there really a free option?",
-                a: "Yes! Our Welcome Circle gives you 30 days to explore the Temple, attend a community gathering, and feel whether this space is right for you. No payment required — just an open heart.",
+                a: "Yes! Our Welcome Circle gives you 30 days to explore the Temple, attend a community gathering, and feel whether this space is right for you. No payment required · just an open heart.",
               },
               {
                 q: "How does ceremony preparation work?",
-                a: "Earth Medicine ceremonies are deeply sacred and require preparation for your safety and wellbeing. After three months in the Preparation Path, you'll have a conversation with a facilitator to ensure you feel truly ready. This isn't a test — it's a caring check-in to support your experience.",
+                a: "Earth Medicine ceremonies are deeply sacred and require preparation for your safety and wellbeing. After three months in the Preparation Path, you'll have a conversation with a facilitator to ensure you feel truly ready. This isn't a test · it's a caring check-in to support your experience.",
               },
               {
                 q: "What is the 3-month journey?",
-                a: "The Preparation Path and Temple Immersion Path include a 3-month guided container. This time allows your nervous system to build the capacity for deeper work. Think of it as tending a garden — you plant seeds, nurture them, and trust the timing of the bloom.",
+                a: "The Preparation Path and Temple Immersion Path include a 3-month guided container. This time allows your nervous system to build the capacity for deeper work. Think of it as tending a garden · you plant seeds, nurture them, and trust the timing of the bloom.",
               },
               {
                 q: "Can I change my membership level?",
-                a: "Absolutely. You can move forward whenever you feel called. If you step into the Preparation Path or Temple Immersion Path, the 3-month journey begins from that point. You can also adjust at any time — changes take effect at your next billing cycle.",
+                a: "Absolutely. You can move forward whenever you feel called. If you step into the Preparation Path or Temple Immersion Path, the 3-month journey begins from that point. You can also adjust at any time · changes take effect at your next billing cycle.",
               },
               {
                 q: "Are contributions tax-deductible?",
@@ -456,7 +456,7 @@ const Membership = () => {
               },
               {
                 q: "What if I'm not sure where to start?",
-                a: "Start with the Welcome Circle — it's free and gives you space to explore without any pressure. Join our community circles and we'll help you find the right fit for where you are right now.",
+                a: "Start with the Welcome Circle · it's free and gives you space to explore without any pressure. Join our community circles and we'll help you find the right fit for where you are right now.",
               },
             ].map((item) => (
               <motion.div
@@ -522,7 +522,7 @@ const Membership = () => {
       <DonationCTA
         eyebrow="Beyond Membership"
         headline="Plant a Seed of Abundance"
-        body="Not ready for membership? A one-time gift still makes a powerful difference — funding scholarships, community days, and sacred gatherings."
+        body="Not ready for membership? A one-time gift still makes a powerful difference · funding scholarships, community days, and sacred gatherings."
         buttonLabel="Plant a Seed"
       />
 

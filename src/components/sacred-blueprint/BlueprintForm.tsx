@@ -68,7 +68,7 @@ const BlueprintForm = () => {
         {submitted ? (
           <motion.div variants={fadeUp} className="rounded-2xl border border-border bg-background p-8 shadow-lg md:p-12 text-center">
             <p className="font-display text-2xl font-bold text-foreground md:text-3xl">
-              Thank you — your Sacred Blueprint request is received.
+              Thank you · your Sacred Blueprint request is received.
             </p>
             <p className="mt-4 font-body text-muted-foreground text-lg">
               Your Human Design report will be emailed to you with your next steps.
@@ -115,7 +115,7 @@ const BlueprintForm = () => {
                 <div className="space-y-2">
                   <Label htmlFor="birthTime" className="text-foreground">Exact Time of Birth</Label>
                   <Input id="birthTime" name="birthTime" type="time" value={formData.birthTime} onChange={handleChange} className="bg-card" />
-                  <p className="text-xs text-muted-foreground italic">Don't know? Your chart still works — share your best guess.</p>
+                  <p className="text-xs text-muted-foreground italic">Don't know? Your chart still works · share your best guess.</p>
                 </div>
               </div>
 
