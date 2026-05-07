@@ -4,7 +4,9 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-const EVENTBRITE_YIN = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";
+const EVENTBRITE_WEDNESDAY = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";
+// Pending: Eventbrite link for The Softening (Tuesday women's sacrament yin)
+const EVENTBRITE_SOFTENING = "/ceremony-intake";
 
 const SacredYinYoga = () => (
   <SacredSeriesLayout
@@ -17,8 +19,8 @@ const SacredYinYoga = () => (
       title={<>You Already Know<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">How to Surrender</em></>}
       subtitle=""
       lead="Your body has been asking you to stop. Not forever. Not dramatically. Just long enough to feel what's been accumulating in the tissue, in the fascia, in the places where you have been carrying tension so long it has started to feel like you."
-      primaryCTA={{ label: "Secure Your Place", href: EVENTBRITE_YIN, external: true }}
-      secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
+      primaryCTA={{ label: "View Offerings ↓", href: "#offerings" }}
+      secondaryCTA={{ label: "What Yin Is ↓", href: "#about" }}
       backgroundImage="https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
     />
 
@@ -30,7 +32,47 @@ const SacredYinYoga = () => (
       </div>
     </SanctuarySection>
 
-    <SanctuarySection eyebrow="The 90-Minute Journey" title={<>Meditation<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">in Motion</em></>}>
+    <SanctuarySection id="offerings" eyebrow="Two Sacred Offerings" title={<>Choose Your<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Container</em></>}>
+      <div className="grid md:grid-cols-2 gap-6 max-w-[1100px]">
+        {/* The Softening · Tuesday Women's Ceremony */}
+        <div className="border border-[hsl(45,70%,49%)]/30 bg-[hsl(150,30%,8%)]/60 p-8 rounded-sm flex flex-col">
+          <div className="text-xs uppercase tracking-[0.2em] text-[hsl(45,70%,49%)] mb-3">In Person · Women Only</div>
+          <h3 className="font-serif text-3xl text-[hsl(40,30%,95%)] mb-2 leading-tight">The Softening</h3>
+          <p className="text-sm uppercase tracking-wider text-[hsl(40,30%,75%)] mb-5">A Restorative Evening of Yin, Sacred Tea &amp; Nervous System Renewal</p>
+          <div className="text-[hsl(40,30%,85%)] font-serif space-y-3 mb-6 flex-1">
+            <p>Held one Tuesday a month following Sacred Tea House, this is a sacramental yin ceremony for women only. Sonatta Camara holds the container as the body softens, the nervous system unwinds, and the Sacred Fungi sacrament is woven gently throughout the practice.</p>
+            <p>This is not yoga as fitness. It is yoga as prayer · a slow, devotional return to the body, the breath, and the feminine knowing that lives in the womb space.</p>
+          </div>
+          <ul className="text-sm text-[hsl(40,30%,75%)] space-y-1.5 mb-6 border-t border-[hsl(45,70%,49%)]/20 pt-5">
+            <li><span className="text-[hsl(45,70%,49%)]">Held by</span> Sonatta Camara</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Rhythm</span> 4th Tuesday monthly</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Location</span> Temple Mother Earth, Washington DC</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Sacred Reciprocity</span> $44</li>
+          </ul>
+          <a href={EVENTBRITE_SOFTENING} target={EVENTBRITE_SOFTENING.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="inline-block text-center bg-[hsl(45,70%,49%)] text-[hsl(150,30%,8%)] px-6 py-3 font-medium uppercase tracking-wider text-sm hover:bg-[hsl(45,70%,55%)] transition">Reserve Your Mat</a>
+        </div>
+
+        {/* Art of Surrender · Wednesday Virtual */}
+        <div className="border border-[hsl(45,70%,49%)]/30 bg-[hsl(150,30%,8%)]/60 p-8 rounded-sm flex flex-col">
+          <div className="text-xs uppercase tracking-[0.2em] text-[hsl(45,70%,49%)] mb-3">Virtual · All Welcome</div>
+          <h3 className="font-serif text-3xl text-[hsl(40,30%,95%)] mb-2 leading-tight">The Art of Surrender</h3>
+          <p className="text-sm uppercase tracking-wider text-[hsl(40,30%,75%)] mb-5">A Weekly Virtual Yin &amp; Restorative Practice</p>
+          <div className="text-[hsl(40,30%,85%)] font-serif space-y-3 mb-6 flex-1">
+            <p>Every Wednesday evening, Chaka opens a virtual yin container from wherever you are. Long, ground holds. Soft music. Guided breath. A weekly ritual of returning to the body before the week carries you somewhere else.</p>
+            <p>Open to all bodies, all levels, all genders. Donation based, so no one is turned away. Roll out your mat at home and join the circle.</p>
+          </div>
+          <ul className="text-sm text-[hsl(40,30%,75%)] space-y-1.5 mb-6 border-t border-[hsl(45,70%,49%)]/20 pt-5">
+            <li><span className="text-[hsl(45,70%,49%)]">Held by</span> Chaka</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Rhythm</span> Every Wednesday, 6:00 PM</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Location</span> Virtual · Join from anywhere</li>
+            <li><span className="text-[hsl(45,70%,49%)]">Sacred Reciprocity</span> Donation based</li>
+          </ul>
+          <a href={EVENTBRITE_WEDNESDAY} target="_blank" rel="noopener noreferrer" className="inline-block text-center bg-[hsl(45,70%,49%)] text-[hsl(150,30%,8%)] px-6 py-3 font-medium uppercase tracking-wider text-sm hover:bg-[hsl(45,70%,55%)] transition">Join Wednesday Yin</a>
+        </div>
+      </div>
+    </SanctuarySection>
+
+    <SanctuarySection eyebrow="The 90-Minute Arc" title={<>Meditation<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">in Motion</em></>}>
       <SanctuaryColCards cards={[
         { title: "Sacred Opening", description: "Prayer, intention, and breathwork to transition out of ordinary time and into ceremonial space. Your nervous system begins to shift from the moment the space is opened." },
         { title: "The Yin Sequence", description: "A carefully sequenced series of postures held long enough to reach the deep tissue. Sound healing woven throughout. Your body opens in layers." },
@@ -39,11 +81,11 @@ const SacredYinYoga = () => (
     </SanctuarySection>
 
     <SanctuaryCTA
-      eyebrow="Recurring Offering · Washington, DC"
+      eyebrow="Two Containers · One Practice"
       title={<>Your Body<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready to Rest</em></>}
       description="You don't need experience. You don't need flexibility. You need ninety minutes and a willingness to arrive. That's all."
-      ctaLabel="Secure Your Place"
-      ctaHref={EVENTBRITE_YIN}
+      ctaLabel="View Both Offerings"
+      ctaHref="#offerings"
       note="All levels welcome · Community Care Model · Registration confirms your place"
     />
   </SacredSeriesLayout>
