@@ -68,7 +68,6 @@ import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
 import MobileStickyBar from "@/components/MobileStickyBar";
-import KamboTeaserModal from "@/components/KamboTeaserModal";
 
 const queryClient = new QueryClient();
 
@@ -85,7 +84,6 @@ const App = () => (
           <DonationButton />
           <CrisisFloatingButton />
           <MobileStickyBar />
-          <KamboTeaserModal />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
