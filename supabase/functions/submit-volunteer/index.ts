@@ -14,7 +14,7 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone } = body;
+    const { firstName, lastName, email, phone, interests, availability, experience, whyJoin } = body;
 
     if (!firstName || !lastName || !email) {
       return new Response(JSON.stringify({ error: "First name, last name, and email are required." }), {
@@ -30,6 +30,15 @@ serve(async (req) => {
       phone: String(phone || "").trim(),
       tags: ["volunteer-application"],
       source: "volunteer-page",
+    });
+
+    // Log volunteer details for follow-up (visible in edge function logs until GHL custom field IDs are wired)
+    console.log("Volunteer application details:", {
+      email: String(email).trim().toLowerCase(),
+      interests: String(interests || ""),
+      availability: String(availability || ""),
+      experience: String(experience || "").slice(0, 500),
+      whyJoin: String(whyJoin || "").slice(0, 500),
     });
 
     if (!ghlResult.success) {

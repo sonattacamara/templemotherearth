@@ -74,6 +74,7 @@ const navStructure: NavEntry[] = [
     ],
   },
   { label: "Membership", href: "/membership", isRoute: true },
+  { label: "Volunteer", href: "/volunteer", isRoute: true },
 ];
 
 /* ─── Desktop Dropdown ─── */

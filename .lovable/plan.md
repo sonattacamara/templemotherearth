@@ -1,50 +1,74 @@
-# Kambo for Women Only — Dedicated Sanctuary Page
+## Heads up · we already have a /volunteer page
 
-A standalone page honoring Sonatta Camara's monthly women-only Kambo Purification circle — a sacred container free of masculine energy where women can fully release.
+You may not have realized it, but Temple Mother Earth already has a working volunteer page at `/volunteer` with a hero, "Sacred Energy Exchange" explainer, and a form that pipes directly into GoHighLevel (via the `submit-volunteer` edge function). The Google Sites version is older and has more depth in one area you don't yet have on Lovable: **the seven sacred role descriptions**.
 
-## What we'll build
+So the work here is not "build from scratch" · it's **upgrade what exists** to match (and surpass) the Google Sites depth, and then promote it properly.
 
-**Route:** `/kambo-women` (with `/kambo-for-women` as alias)
+---
 
-**Page structure** (matches existing sanctuary pages — Hapé, Sacred Tea, Men's Circle):
+## Recommendation on Linktree
 
-1. **Hero** — "Kambo · For Women Only" with eyebrow "A Sonatta Camara Offering" and a soft poetic line about sacred feminine release
-2. **About the Circle** — what makes a women-only container different: safety, surrender, sisterhood, no performance
-3. **The Rhythm** — held the **third Saturday of every month at 8:00 AM** (evergreen — no specific dates, per project rules)
-4. **Who It's For** — three-column cards (women carrying stored grief · mothers needing reset · sisters seeking deep release)
-5. **Sonatta Camara** — short honoring of her as the holder of this offering
-6. **Sacred Reciprocity / Preparation** — link to `/preparation`
-7. **Pull quote** — feminine wisdom line
-8. **CTA** — Eventbrite button (placeholder URL until you provide it) + secondary CTA to `/ceremony-intake`
+**Do not put `/volunteer` on Linktree.** That contradicts your Core Strategy memory ("Single source of truth site, no Linktree, native integration"). Linktree fragments your funnel, makes analytics impossible, and trains people to leave your site. Volunteer should be a first-class destination on `templemotherearth.org` itself, surfaced everywhere it's relevant.
 
-**RFRA-safe language throughout** — sacred ceremony, purification, release, sisterhood. No clinical/medical terms.
+---
 
-## Navigation placement
+## What the upgraded /volunteer page will include
 
-Add under the **Ceremonies** dropdown (not Experiences) since Kambo is a ceremony — placed directly under "Kambo Purification":
-- Kambo Purification
-- **Kambo · Women Only** ← new
-- Cacao Ceremony
-- ...
+### 1. Hero (refined)
+Keep the existing hero structure. Tighten the copy to lead with mission ("Service is the Sacrament") and add a single primary CTA that scrolls to the sacred roles grid.
 
-## SEO
+### 2. The Seven Sacred Roles (NEW · the missing piece)
+A premium grid of role cards, each with a Lucide icon, sacred title, and the poetic description from the Google Sites version (lightly edited for tone). One card per role:
 
-Unique `<SEOHead>` title/description, added to `public/sitemap.xml`.
+1. **Guardian of Sacred Hospitality** · Reception, greeting, holding the threshold
+2. **Weavers of Sacred Gatherings** · Events team, ceremony setup, flow
+3. **Alchemists of Digital Vibration** · Social media, content posting
+4. **Scribes of Visual Revelation** · Graphic design, flyers, visual identity
+5. **Emissaries of Unity** · Community outreach, partnerships, ambassadorship
+6. **Guardians of Gaia's Heartbeat** · Land stewardship, forest cleanup, garden
+7. **Architects of Divine Restoration** · Construction, repair, building work
 
-## Files
+Each card also has a "How you'd serve" bullet list and an "Energy Exchange" line so volunteers see the tangible give-and-receive.
 
-- **Create:** `src/pages/sanctuary/KamboWomen.tsx`
-- **Edit:** `src/App.tsx` (route), `src/components/Navigation.tsx` (Ceremonies dropdown), `public/sitemap.xml`
+### 3. Sacred Energy Exchange (kept)
+The existing Serve · Receive Blessings · Heal triptych stays as the values band. We'll move it directly under the roles so the flow is: see the roles → understand the exchange → apply.
 
-## Two things I need from you
+### 4. Application form (upgraded)
+The existing form already syncs to GHL · we'll extend the "Areas of interest" radio so it matches the seven sacred role names, and flip it from radio (one only) to checkbox (multi · most volunteers want to serve in more than one area).
 
-1. **The Eventbrite URL** — once you have it I'll wire the CTA button. Until then I'll use a placeholder linking to `/ceremony-intake` so the page is fully functional on launch.
-2. **Hero imagery?** — Options: (a) clean typographic hero matching Men's/Women's Circle pages, (b) generate an on-brand watercolor of a women's circle, or (c) reuse an existing Kambo image with a feminine treatment.
+### 5. Closing CTA
+A "Continue Your Journey" footer linking to Membership, Sacred Series, and Donate · same pattern used on ceremony pages.
 
-## Recommendation
+---
 
-Yes — absolutely build this its own page. Here's why:
-- A women-only container is a **distinct offering** with a different energy and audience than mixed Kambo
-- Sonatta deserves attribution as the holder
-- Monthly recurring rhythm = an evergreen page that compounds SEO over time
-- Gives you a clean URL to share in Women's Wellness Wednesdays, the Women's Circle Telegram, and Instagram
+## Promotion plan · how /volunteer gets discovered
+
+We'll expose /volunteer in five places, all native:
+
+1. **Top nav · Get Involved dropdown** · add "Volunteer · Serve the Temple" entry alongside Membership and Donate
+2. **Homepage Get Involved band** · already exists; ensure Volunteer card has its own tile with a clear CTA, not just a footer link
+3. **Footer** · Volunteer link already lives in the Get Involved column · keep
+4. **Membership page** · add a "Can't afford full reciprocity? Serve in exchange" callout pointing to /volunteer (this is Sacred Energy Exchange in practice)
+5. **Sacred Series & ceremony pages** · subtle "Volunteer for this ceremony" line in the Continue Your Journey grid for those who want to serve specific events
+
+---
+
+## Technical notes (for the implementation pass)
+
+- Page: `src/pages/Volunteer.tsx` · refactor in place, add `RolesGrid` section between Hero and Sacred Energy Exchange
+- Icons: `Sparkles, CalendarHeart, Megaphone, Palette, HeartHandshake, TreePine, Hammer` (Lucide)
+- Form: change `interests` from string → `string[]`; update `submit-volunteer` edge function to accept array and join with " · " when posting to GHL
+- Imagery: each role card gets a small Lucide icon · no role photos needed (avoids stock-photo trap and keeps load fast)
+- SEO: title stays "Volunteer | Serve Temple Mother Earth Community"; add JSON-LD `VolunteerOpportunity` schema for each role
+- Promotion edits:
+  - `src/components/Navigation.tsx` · add Volunteer to Get Involved dropdown
+  - `src/pages/Membership.tsx` · add "Serve in exchange" callout
+  - Homepage Get Involved tile already exists · confirm link
+
+---
+
+## Questions before implementation
+
+1. **Roles to include** · ship all seven from Google Sites, or do you want to add/remove any (e.g. Kitchen Stewards, Photographers/Videographers, Sound Healers)?
+2. **Form interests** · keep it simple (one selection) or upgrade to multi-select checkboxes?
+3. **Membership / Energy Exchange callout** · should volunteer hours convert to actual ceremony credits (tracked), or stay as informal "we'll honor your service" language for now?
