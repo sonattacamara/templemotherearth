@@ -52,7 +52,7 @@ const SacredTeaCeremony = () => (
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>Sacred Tea has been carried through thousands of years of ceremonial tradition as the most profound conversation a human being can have with the intelligence of the plant kingdom. It is not a drug. It is not a shortcut. It is a sacrament.</p>
         <p>What arrives in ceremony is specific to what you are carrying. <strong className="text-[hsl(45,70%,49%)]">It gives each person exactly what they are ready to receive.</strong></p>
-        <p>We hold this sacrament within our 508(c)(1)(A) sacred church, with trained facilitators, full RFRA compliance documentation, emergency protocols, and a ceremonial container built over six years of practice.</p>
+        <p>We hold this sacrament within our 508(c)(1)(A) sacred church, with trained facilitators, full RFRA compliance documentation, emergency protocols, and a deeply established ceremonial container.</p>
       </div>
     </SanctuarySection>
 
