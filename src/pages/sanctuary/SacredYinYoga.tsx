@@ -42,7 +42,7 @@ const SacredYinYoga = () => (
           <h3 className="font-serif text-3xl text-[hsl(40,30%,95%)] mb-2 leading-tight">The Softening</h3>
           <p className="text-sm uppercase tracking-wider text-[hsl(40,30%,75%)] mb-5">A Restorative Evening of Yin, Sacred Tea &amp; Nervous System Renewal</p>
           <div className="text-[hsl(40,30%,85%)] font-serif space-y-3 mb-6 flex-1">
-            <p>Held the fourth Tuesday of each month, this is a sacramental yin gathering for women only. Camara holds the container as a sacred tea ceremony opens the circle, then flows into yin yoga and closes with integration · the body softens, the nervous system unwinds, and the feminine returns home to herself. (Sacred Tea House gathers separately on Mondays.)</p>
+            <p>Held the fourth Tuesday of each month, this is a sacramental yin gathering for women only. Camara holds the container as a sacred tea ceremony opens the circle, then flows into yin yoga and closes with integration · the body softens, the nervous system unwinds, and the feminine returns home to herself. (<Link to="/sacred-tea-house" className="text-[hsl(45,70%,49%)] underline hover:text-[hsl(45,70%,58%)] transition-colors">Sacred Tea House</Link> gathers separately on Mondays.)</p>
             <p>This is not yoga as fitness. It is yoga as prayer · a slow, devotional return to the body, the breath, and the feminine knowing that lives in the womb space.</p>
           </div>
           <ul className="text-sm text-[hsl(40,30%,75%)] space-y-1.5 mb-6 border-t border-[hsl(45,70%,49%)]/20 pt-5">
