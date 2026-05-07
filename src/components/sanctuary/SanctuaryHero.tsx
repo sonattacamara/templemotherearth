@@ -46,7 +46,6 @@ const SanctuaryHero = ({
           muted
           loop
           playsInline
-          controls
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover saturate-[0.9] -z-10"
         />
