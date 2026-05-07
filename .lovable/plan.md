@@ -1,44 +1,50 @@
-# Add Men's & Women's Integration Circle Pages
+# Kambo for Women Only — Dedicated Sanctuary Page
 
-Two new sanctuary pages with Eventbrite CTAs, added to the Experiences dropdown.
+A standalone page honoring Sonatta Camara's monthly women-only Kambo Purification circle — a sacred container free of masculine energy where women can fully release.
 
-## New Pages
+## What we'll build
 
-**1. `/mens-circle` — The Cove: A Men's Healing Reflection Circle**
-- Hero: brotherhood, reflection, sacred masculine
-- Sections: What it is · Who it's for · What to expect · Sacred reciprocity
-- CTA button → `https://www.eventbrite.com/e/the-cove-a-mens-healing-reflection-circle-tickets-1982328123781?aff=ebdsoporgprofile`
-- Secondary CTA → `/ceremony-intake`
+**Route:** `/kambo-women` (with `/kambo-for-women` as alias)
 
-**2. `/womens-circle` — Women's Wellness Wednesdays**
-- Hero: sisterhood, weekly rhythm, feminine wisdom
-- Sections: What it is · Who it's for · What to expect · Sacred reciprocity
-- CTA button → `https://www.eventbrite.com/e/womens-wellness-wednesdays-tickets-1513680431919?aff=oddtdtcreator&keep_tld=true`
-- Secondary CTA → `/ceremony-intake`
+**Page structure** (matches existing sanctuary pages — Hapé, Sacred Tea, Men's Circle):
 
-Both built with existing `SanctuaryHero`, `SanctuarySection`, `SanctuaryCTA`, `SanctuaryColCards`, `SanctuaryPullQuote` components for visual consistency with other ceremony pages. RFRA-safe language throughout (sacred reflection, integration, community — no clinical/therapy terms).
+1. **Hero** — "Kambo · For Women Only" with eyebrow "A Sonatta Camara Offering" and a soft poetic line about sacred feminine release
+2. **About the Circle** — what makes a women-only container different: safety, surrender, sisterhood, no performance
+3. **The Rhythm** — held the **third Saturday of every month at 8:00 AM** (evergreen — no specific dates, per project rules)
+4. **Who It's For** — three-column cards (women carrying stored grief · mothers needing reset · sisters seeking deep release)
+5. **Sonatta Camara** — short honoring of her as the holder of this offering
+6. **Sacred Reciprocity / Preparation** — link to `/preparation`
+7. **Pull quote** — feminine wisdom line
+8. **CTA** — Eventbrite button (placeholder URL until you provide it) + secondary CTA to `/ceremony-intake`
 
-## Navigation
+**RFRA-safe language throughout** — sacred ceremony, purification, release, sisterhood. No clinical/medical terms.
 
-Add two entries to the **Experiences** dropdown in `src/components/Navigation.tsx` (alphabetical-ish, grouped naturally):
-- Men's Circle (The Cove)
-- Women's Wellness Wednesdays
+## Navigation placement
 
-## Routing
-
-Register both routes in `src/App.tsx`:
-- `/mens-circle` → `MensCircle`
-- `/womens-circle` → `WomensCircle`
+Add under the **Ceremonies** dropdown (not Experiences) since Kambo is a ceremony — placed directly under "Kambo Purification":
+- Kambo Purification
+- **Kambo · Women Only** ← new
+- Cacao Ceremony
+- ...
 
 ## SEO
 
-Each page gets `<SEOHead>` with unique title/description and is added to `public/sitemap.xml`.
+Unique `<SEOHead>` title/description, added to `public/sitemap.xml`.
 
 ## Files
 
-- **Create**: `src/pages/sanctuary/MensCircle.tsx`, `src/pages/sanctuary/WomensCircle.tsx`
-- **Edit**: `src/App.tsx` (routes), `src/components/Navigation.tsx` (Experiences dropdown), `public/sitemap.xml`
+- **Create:** `src/pages/sanctuary/KamboWomen.tsx`
+- **Edit:** `src/App.tsx` (route), `src/components/Navigation.tsx` (Ceremonies dropdown), `public/sitemap.xml`
 
-## Open question
+## Two things I need from you
 
-Do you want hero imagery for these pages? If yes, I can generate two on-brand watercolor images (one circle of men, one circle of women) — otherwise I'll use a clean typographic hero matching the Sacred Tea / Hapé pages.
+1. **The Eventbrite URL** — once you have it I'll wire the CTA button. Until then I'll use a placeholder linking to `/ceremony-intake` so the page is fully functional on launch.
+2. **Hero imagery?** — Options: (a) clean typographic hero matching Men's/Women's Circle pages, (b) generate an on-brand watercolor of a women's circle, or (c) reuse an existing Kambo image with a feminine treatment.
+
+## Recommendation
+
+Yes — absolutely build this its own page. Here's why:
+- A women-only container is a **distinct offering** with a different energy and audience than mixed Kambo
+- Sonatta deserves attribution as the holder
+- Monthly recurring rhythm = an evergreen page that compounds SEO over time
+- Gives you a clean URL to share in Women's Wellness Wednesdays, the Women's Circle Telegram, and Instagram
