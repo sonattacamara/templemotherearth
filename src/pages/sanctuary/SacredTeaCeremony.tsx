@@ -1,5 +1,6 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
+import teaVideo from "@/assets/video-tea-hero.mp4.asset.json";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
@@ -44,7 +45,7 @@ const SacredTeaCeremony = () => (
       lead="You've been standing in front of it for longer than you know. This ceremony doesn't take you somewhere new. It returns you to the part of yourself that has always known."
       primaryCTA={{ label: "Secure Your Place", href: EVENTBRITE_PLACEHOLDER, external: true }}
       secondaryCTA={{ label: "Choose Your Level ↓", href: "#levels" }}
-      backgroundImage="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo={teaVideo.url}
     />
 
     <SanctuarySection id="about" eyebrow="The Sacrament" title={<>What the Ancients Called<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">The Fruit of the Gods</em></>}>

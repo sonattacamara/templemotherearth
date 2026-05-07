@@ -4,6 +4,7 @@ import { usePageTracking } from "@/hooks/useAnalytics";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
+import cacaoVideo from "@/assets/video-cacao-hero.mp4.asset.json";
 
 const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117";
 
@@ -60,12 +61,14 @@ const CacaoCeremony = () => {
 
       {/* HERO */}
       <section className="relative min-h-screen grid place-items-center overflow-hidden bg-[#2C1810]">
-        <img
-          src="https://images.pexels.com/photos/6542704/pexels-photo-6542704.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Ceremonial cacao in sacred space"
+        <video
+          src={cacaoVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.5) brightness(0.3)" }}
-          loading="eager"
+          style={{ filter: "saturate(0.6) brightness(0.45)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810] via-[rgba(44,24,16,0.7)] to-[rgba(44,24,16,0.3)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_30%,rgba(201,150,58,0.18)_0%,transparent_55%)]" />

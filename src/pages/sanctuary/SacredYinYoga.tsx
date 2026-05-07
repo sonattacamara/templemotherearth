@@ -1,5 +1,6 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
+import yogaVideo from "@/assets/video-yoga-hero.mp4.asset.json";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
@@ -21,7 +22,7 @@ const SacredYinYoga = () => (
       lead="Your body has been asking you to stop. Not forever. Not dramatically. Just long enough to feel what's been accumulating in the tissue, in the fascia, in the places where you have been carrying tension so long it has started to feel like you."
       primaryCTA={{ label: "View Offerings ↓", href: "#offerings" }}
       secondaryCTA={{ label: "What Yin Is ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo={yogaVideo.url}
     />
 
     <SanctuarySection id="about" eyebrow="What Sacred Yin Is" title={<>Not Exercise.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Ceremony in the Body.</em></>}>

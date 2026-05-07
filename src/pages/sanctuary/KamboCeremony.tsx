@@ -4,6 +4,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import kamboVideo from "@/assets/video-kambo-hero.mp4.asset.json";
 
 const EVENTBRITE_KAMBO = "https://www.eventbrite.com/e/kambo-sacred-ceremony-registration-822085920117";
 
@@ -119,12 +120,13 @@ const KamboCeremony = () => {
     >
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/975354/pexels-photo-975354.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Dense Amazon rainforest for Kambo, Ayahuasca, and Bobinsana sacred Earth Medicine ceremonies"
-          className="absolute inset-0 w-full h-full object-cover saturate-[0.35] brightness-[0.4] -z-10"
-          style={{ filter: "saturate(0.35) brightness(0.4) hue-rotate(-20deg)" }}
-          loading="eager"
+        <video
+          src={kamboVideo.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover saturate-[0.5] brightness-[0.55] -z-10"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(150,25%,3%,1)] via-[hsla(150,25%,3%,0.75)] to-[hsla(150,25%,3%,0.2)] -z-10" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,transparent_40%,hsla(150,25%,3%,0.8)_100%)] -z-10" />
