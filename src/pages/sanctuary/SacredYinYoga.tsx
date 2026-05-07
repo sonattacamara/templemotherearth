@@ -82,14 +82,24 @@ const SacredYinYoga = () => (
       ]} />
     </SanctuarySection>
 
-    <SanctuaryCTA
-      eyebrow="Two Containers · One Practice"
-      title={<>Your Body<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready to Rest</em></>}
-      description="You don't need experience. You don't need flexibility. You need ninety minutes and a willingness to arrive. That's all."
-      ctaLabel="Fourth Tuesday · In Person"
-      ctaHref={EVENTBRITE_SOFTENING}
-      note="All levels welcome · Community Care Model · Registration confirms your place"
-    />
+    <section className="bg-gradient-to-br from-[hsl(105,30%,13%)] to-[hsl(110,25%,15%)] py-20 md:py-24 px-6 md:px-12 text-center border-t border-[hsl(100,25%,18%)]">
+      <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Two Containers · One Practice</p>
+      <h2 className="font-sans text-[clamp(24px,4vw,52px)] font-light leading-[1.1] mb-6 text-[hsl(40,30%,90%)]">
+        Your Body<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready to Rest</em>
+      </h2>
+      <p className="text-[hsl(90,15%,65%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
+        You don't need experience. You don't need flexibility. You need ninety minutes and a willingness to arrive. That's all.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md sm:max-w-none mx-auto">
+        <a href={EVENTBRITE_SOFTENING} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all duration-300">
+          Fourth Tuesday · In Person
+        </a>
+        <a href={EVENTBRITE_WEDNESDAY} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 border border-[hsl(45,70%,49%)] text-[hsl(45,70%,49%)] hover:bg-[hsl(45,70%,49%)] hover:text-[hsl(105,30%,5%)] transition-all duration-300">
+          Wednesday · Virtual
+        </a>
+      </div>
+      <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,15%,45%)] mt-8">All levels welcome · Community Care Model · Registration confirms your place</p>
+    </section>
   </SacredSeriesLayout>
 );
 
