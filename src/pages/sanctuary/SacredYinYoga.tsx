@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import yogaVideo from "@/assets/video-yoga-hero.mp4.asset.json";
