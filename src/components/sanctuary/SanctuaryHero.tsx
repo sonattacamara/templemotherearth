@@ -46,8 +46,9 @@ const SanctuaryHero = ({
           muted
           loop
           playsInline
+          controls
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover saturate-[0.85] -z-10"
+          className="absolute inset-0 w-full h-full object-cover saturate-[0.9] -z-10"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[hsla(100,20%,5%,0.25)] via-[hsla(100,20%,5%,0.45)] to-[hsla(100,20%,5%,0.9)]" />
       </>
