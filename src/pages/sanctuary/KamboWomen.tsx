@@ -29,7 +29,7 @@ const KamboWomen = () => (
       lead="A sacred container free of masculine energy · where women gather to release, to surrender, and to remember the wisdom of the body, held in the presence of sisterhood."
       primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: EVENTBRITE_URL.startsWith("http") }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/6541381/pexels-photo-6541381.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo="/video/kambo-women-hero.mp4"
     />
 
     <SanctuarySection
