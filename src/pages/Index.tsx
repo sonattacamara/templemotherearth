@@ -120,8 +120,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-earth">
       <SEOHead
-        title="Temple Mother Earth · Sacred Ceremony Church · Washington, DC"
-        description="A sacred ceremony church offering sacramental Earth Medicine ceremony, spiritual education, and congregational community in Washington DC. Organized under 508(c)(1)(A). Est. 2020."
+        title="Temple Mother Earth · Sacred Ceremony · Washington, DC"
+        description="508(c)(1)(A) sacred ceremony church in Washington, DC. Earth Medicine ceremony, spiritual education, and congregational community. Est. 2020."
         path="/"
       />
       <Navigation />
