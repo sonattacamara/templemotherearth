@@ -22,6 +22,13 @@ const logStep = (step: string, details?: any) => {
   console.log(`[CREATE-CHECKOUT] ${step}${detailsStr}`);
 };
 
+const ALLOWED_PRICE_IDS = new Set([
+  "price_1T050aIsbHRagMNSiz4udrdB",
+  "price_1T050cIsbHRagMNSBTyAojHz",
+  "price_1T050eIsbHRagMNSnIWAtIby",
+  "price_1T050gIsbHRagMNSb6oS6Xzl",
+]);
+
 serve(async (req) => {
   const corsHeaders = getCorsHeaders(req);
 
@@ -49,6 +56,9 @@ serve(async (req) => {
 
     const { priceId } = await req.json();
     if (!priceId) throw new Error("priceId is required");
+    if (typeof priceId !== "string" || !ALLOWED_PRICE_IDS.has(priceId)) {
+      throw new Error("Invalid price ID");
+    }
     logStep("Price ID received", { priceId });
 
     const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
