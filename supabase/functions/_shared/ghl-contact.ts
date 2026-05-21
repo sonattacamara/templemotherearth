@@ -39,12 +39,16 @@ export async function upsertGHLContact(
   // Step 1: Lookup existing contact by email
   let existingContactId: string | null = null;
   try {
-    const lookupUrl = `${GHL_API_BASE}/contacts/lookup/email/${encodeURIComponent(email)}?locationId=${GHL_LOCATION_ID}`;
+    // GHL v2 search endpoint — the older `/contacts/lookup/email/...` path returns 404.
+    const lookupUrl = `${GHL_API_BASE}/contacts/?locationId=${GHL_LOCATION_ID}&query=${encodeURIComponent(email)}&limit=1`;
     const lookupRes = await fetch(lookupUrl, { method: "GET", headers });
     if (lookupRes.ok) {
       const lookupData = await lookupRes.json();
-      if (lookupData?.contacts?.[0]?.id) {
-        existingContactId = lookupData.contacts[0].id;
+      const match = (lookupData?.contacts || []).find(
+        (c: { email?: string; id?: string }) => (c.email || "").trim().toLowerCase() === email
+      );
+      if (match?.id) {
+        existingContactId = match.id;
       }
     }
   } catch (e) {
