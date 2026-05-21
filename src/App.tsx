@@ -46,7 +46,6 @@ import SacredYinYoga from "./pages/sanctuary/SacredYinYoga";
 import SacredArtExpo from "./pages/sanctuary/SacredArtExpo";
 import FrequencyFungiFlow from "./pages/sanctuary/FrequencyFungiFlow";
 import SacredTeaHouse from "./pages/sanctuary/SacredTeaHouse";
-import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
 import MensCircle from "./pages/sanctuary/MensCircle";
