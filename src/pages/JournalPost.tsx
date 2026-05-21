@@ -52,7 +52,7 @@ const JournalPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead title={post.title} description={post.excerpt} path={`/journal/${post.slug}`} />
+      <SEOHead title={post.title} description={post.excerpt} path={`/journal/${post.slug}`} type="article" />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>

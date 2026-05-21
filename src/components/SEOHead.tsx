@@ -9,8 +9,8 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = "https://templemotherearth.org";
-const DEFAULT_TITLE = "Temple Mother Earth · A Temple of Higher Consciousness · Washington, DC";
-const DEFAULT_DESC = "A 508(c)(1)(A) temple of higher consciousness offering sacramental ceremony, spiritual education, and congregational community in Washington DC. Est. 2020.";
+const DEFAULT_TITLE = "Temple Mother Earth · Sacred Ceremony · Washington, DC";
+const DEFAULT_DESC = "A 508(c)(1)(A) sacred ceremony church offering Earth Medicine ceremony and congregational community in Washington, DC. Est. 2020.";
 const DEFAULT_IMAGE = `${BASE_URL}/og-logo.png`;
 
 const SEOHead = ({
@@ -20,7 +20,11 @@ const SEOHead = ({
   type = "website",
   image = DEFAULT_IMAGE,
 }: SEOHeadProps) => {
-  const fullTitle = title ? `${title} | Temple Mother Earth` : DEFAULT_TITLE;
+  const fullTitle = title
+    ? title.includes("Temple Mother Earth")
+      ? title
+      : `${title} | Temple Mother Earth`
+    : DEFAULT_TITLE;
   const url = `${BASE_URL}${path}`;
 
   const orgJsonLd = {
