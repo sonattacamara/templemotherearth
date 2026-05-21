@@ -36,12 +36,38 @@ serve(async (req) => {
       { auth: { persistSession: false } }
     );
 
+    // Require authenticated user
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader?.startsWith("Bearer ")) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+    const token = authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabase.auth.getUser(token);
+    if (!user?.email) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     const { email, firstName, lastName, full_name, user_id } = await req.json();
 
     const emailStr = String(email || "").trim();
     if (!emailStr || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailStr) || emailStr.length > 255) {
       throw new Error("Valid email is required");
     }
+
+    // Ensure submitted email matches the authenticated user
+    if (emailStr.toLowerCase() !== user.email.toLowerCase()) {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     const firstNameStr = String(firstName || "").trim().slice(0, 100);
     const lastNameStr = String(lastName || "").trim().slice(0, 100);
     const nameStr = String(full_name || `${firstNameStr} ${lastNameStr}`).trim().slice(0, 200);
