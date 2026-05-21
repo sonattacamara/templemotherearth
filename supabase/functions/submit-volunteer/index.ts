@@ -40,15 +40,6 @@ serve(async (req) => {
       source: source === "scholarship-page" ? "scholarship-page" : "volunteer-page",
     });
 
-    // Log volunteer details for follow-up (visible in edge function logs until GHL custom field IDs are wired)
-    console.log("Volunteer application details:", {
-      email: String(email).trim().toLowerCase(),
-      interests: String(interests || ""),
-      availability: String(availability || ""),
-      experience: String(experience || "").slice(0, 500),
-      whyJoin: String(whyJoin || "").slice(0, 500),
-    });
-
     if (!ghlResult.success) {
       console.error("GHL upsert failed:", ghlResult.error);
     }
