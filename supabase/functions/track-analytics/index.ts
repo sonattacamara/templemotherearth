@@ -32,12 +32,29 @@ serve(async (req) => {
     const action = url.searchParams.get("action");
 
     if (req.method === "POST" && action === "track") {
-      const { path, referrer, userAgent, formName, metadata } = await req.json();
+      const body = await req.json().catch(() => ({}));
+      const path = typeof body.path === "string" ? body.path.slice(0, 500) : null;
+      const referrer = typeof body.referrer === "string" ? body.referrer.slice(0, 500) : null;
+      const userAgent = typeof body.userAgent === "string" ? body.userAgent.slice(0, 500) : null;
+      const formName = typeof body.formName === "string" ? body.formName.slice(0, 100) : null;
+      const metadata =
+        body.metadata && typeof body.metadata === "object" && !Array.isArray(body.metadata)
+          ? body.metadata
+          : {};
+
+      // Cap metadata size to prevent abuse
+      const metaStr = JSON.stringify(metadata);
+      const safeMetadata = metaStr.length > 2000 ? {} : metadata;
 
       if (formName) {
-        await supabase.from("form_submissions").insert({ form_name: formName, metadata: metadata || {} });
+        await supabase.from("form_submissions").insert({ form_name: formName, metadata: safeMetadata });
       } else if (path) {
-        await supabase.from("page_views").insert({ path, referrer: referrer || null, user_agent: userAgent || null });
+        await supabase.from("page_views").insert({ path, referrer, user_agent: userAgent });
+      } else {
+        return new Response(JSON.stringify({ error: "path or formName required" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
       }
 
       return new Response(JSON.stringify({ success: true }), {
