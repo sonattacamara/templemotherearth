@@ -325,7 +325,7 @@ const KamboCeremony = () => (
       </div>
     </section>
 
-    <CeremonyExploreNav currentPath="/kambo" />
+    <CeremonyExploreNav variant="dark" />
   </SacredSeriesLayout>
 );
 
