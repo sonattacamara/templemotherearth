@@ -1,42 +1,47 @@
-# Grant admin access to sonattacamara@gmail.com
 
-## Status check
+# Unified Admin Submissions Dashboard
 
-I looked up `sonattacamara@gmail.com` in the account system and **no account exists yet** for that email. Without an account, there is no `user_id` to attach the admin role to.
+Build a new admin page at `/admin/submissions` that shows **every** form submission across all form types in one readable place, complementing the existing `/admin/intakes` (which stays as-is for ceremony intakes only).
 
-## Step 1 — You sign up (required first)
+## What gets built
 
-1. Go to https://templemotherearth.org/member/auth
-2. Sign up with **sonattacamara@gmail.com** (email + password, or Google sign-in using that same Gmail address)
-3. Confirm the signup (check inbox if email confirmation is required)
-4. Reply here with "done"
+**New route:** `/admin/submissions` (added to `src/App.tsx`)
 
-## Step 2 — I grant admin (after you confirm signup)
+**New page:** `src/pages/AdminSubmissions.tsx`
 
-Once your account exists, I will run a one-line database migration that inserts a row into `public.user_roles`:
+Features:
+- Admin-only access (same `has_role(auth.uid(), 'admin')` gate as `/admin/intakes`; non-admins see "Access Denied")
+- Lists every row in `public.form_submissions`, newest first
+- **Form-type filter** dropdown with all known form names: `ceremony-intake`, `volunteer`, `sponsor`, `facilitator`, `contact`, `veterans`, `retreats-inquiry`, `private-ceremony`, `traveling-ceremony`, `art-expo`, `newsletter`, `sacred-blueprint`
+- **Search box** (filters by name, email, phone across the `metadata` JSON)
+- **Date range filter** (last 7 / 30 / 90 days / all)
+- Table columns: Date · Form Type · Name · Email · Phone · Actions
+- **"View Details"** button opens a side drawer that converts the `metadata` JSON into a readable key/value list (every question + answer, formatted like the intake dashboard)
+- **"Export CSV"** button — exports the currently filtered rows (flattens metadata into columns)
+- Pagination (50 rows per page)
 
-```sql
-INSERT INTO public.user_roles (user_id, role)
-SELECT id, 'admin'::app_role
-FROM auth.users
-WHERE email = 'sonattacamara@gmail.com'
-ON CONFLICT (user_id, role) DO NOTHING;
-```
+## What is NOT changed
 
-This is the only change. No edits to:
-- the intake form
-- the website design
-- how submissions are saved
-- any unrelated code or publishing
-
-## Step 3 — Verify
-
-After the role is added, I will:
-1. Query `public.user_roles` to confirm the admin row exists for your `user_id`
-2. Confirm `has_role(user_id, 'admin')` returns `true`
-3. Tell you to visit https://templemotherearth.org/admin/intakes — you'll see the readable dashboard with all ceremony intakes (search, filter, view details, export CSV)
+- No edits to any form (ceremony intake or otherwise)
+- No edits to how submissions are saved
+- No schema changes — `form_submissions` table and RLS policies stay exactly as they are
+- `/admin/intakes` stays untouched and keeps working for ceremony intakes
+- No website design changes
+- No publishing of unrelated changes
+- Admin role for `sonattacamara@gmail.com` is still pending your signup at `/member/auth` (separate step — once you sign up and confirm, I'll grant the role and both `/admin/intakes` and `/admin/submissions` become accessible)
 
 ## Technical notes
 
-- `user_roles` has no public INSERT policy by design (prevents privilege escalation), which is why this must be done via a server-side migration.
-- The `has_role` function and the `/admin/intakes` SELECT policy on `form_submissions` are already in place — no schema changes needed beyond the single INSERT.
+- Uses existing Supabase client (`@/integrations/supabase/client`)
+- Query: `supabase.from('form_submissions').select('*').order('created_at', { ascending: false })`
+- RLS already enforces admin-only SELECT — no new policies needed
+- Drawer uses existing `@/components/ui/sheet` or `dialog`
+- CSV export done client-side (no edge function needed)
+- Reuses the readable-metadata formatting pattern from `src/pages/AdminIntakes.tsx`
+
+## Files touched
+
+- `src/App.tsx` — add one `<Route>` for `/admin/submissions`
+- `src/pages/AdminSubmissions.tsx` — new file (the dashboard)
+
+That's it. Two files.
