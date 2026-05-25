@@ -51,7 +51,7 @@ import CacaoCeremony from "./pages/sanctuary/CacaoCeremony";
 import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
 import MensCircle from "./pages/sanctuary/MensCircle";
 import WomensCircle from "./pages/sanctuary/WomensCircle";
-import KamboPortalRedirect from "./pages/KamboPortalRedirect";
+import KamboCeremony from "./pages/sanctuary/KamboCeremony";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
 import JournalPost from "./pages/JournalPost";
@@ -115,7 +115,7 @@ const App = () => (
             <Route path="/donate/ceremony" element={<CeremonyDonate />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/kemetic-teachings" element={<KemeticTeachings />} />
-            <Route path="/kambo" element={<KamboPortalRedirect />} />
+            <Route path="/kambo" element={<KamboCeremony />} />
             <Route path="/sacred-blueprint" element={<SacredBlueprint />} />
             <Route path="/webhook-checklist" element={<WebhookChecklist />} />
             <Route path="/sacred-series" element={<SacredSeries />} />
@@ -134,8 +134,8 @@ const App = () => (
             <Route path="/level-5" element={<Level5Ceremony />} />
             <Route path="/mens-circle" element={<MensCircle />} />
             <Route path="/womens-circle" element={<WomensCircle />} />
-            <Route path="/kambo-women" element={<KamboPortalRedirect hash="#women-only" />} />
-            <Route path="/kambo-for-women" element={<KamboPortalRedirect hash="#women-only" />} />
+            <Route path="/kambo-women" element={<KamboCeremony />} />
+            <Route path="/kambo-for-women" element={<KamboCeremony />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:slug" element={<JournalPost />} />
