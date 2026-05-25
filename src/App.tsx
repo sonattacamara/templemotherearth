@@ -24,6 +24,7 @@ import MemberEducation from "./pages/MemberEducation";
 import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
 import AdminIntakes from "./pages/AdminIntakes";
+import AdminSubmissions from "./pages/AdminSubmissions";
 
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
@@ -103,6 +104,7 @@ const App = () => (
             <Route path="/member/education" element={<MemberEducation />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/admin/intakes" element={<AdminIntakes />} />
+            <Route path="/admin/submissions" element={<AdminSubmissions />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
