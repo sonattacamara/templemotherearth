@@ -243,7 +243,6 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
-              { src: communityImg, alt: "Temple Mother Earth sacred community gathering in Washington DC" },
               { src: communityCeremonyGroup, alt: "King James in outdoor sacred ceremony with community support at Temple Mother Earth" },
               { src: communityCircleGrass, alt: "Community dialogue circle on the lawn during sacred ceremony integration" },
               { src: communityGatheringIndoor, alt: "Temple Mother Earth group community photo during outdoor gathering" },
