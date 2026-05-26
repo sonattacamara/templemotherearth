@@ -52,7 +52,7 @@ const navStructure: NavEntry[] = [
   {
     label: "Immersions",
     items: [
-      { label: "Costa Rica · Wide Open Immersion", href: "https://wideopenimmersion.com", isRoute: false },
+      { label: "Costa Rica · Wide Open Immersion", href: "/immersions/costa-rica", isRoute: true },
       { label: "Panama · Aug 8·15, 2026", href: "/immersions/panama", isRoute: true },
       { label: "Sayulita, Nayarit · Oct 31·Nov 5, 2026", href: "/immersions/sayulita", isRoute: true },
       { label: "Ecuador · Dec 26, 2026", href: "/immersions/ecuador", isRoute: true },
