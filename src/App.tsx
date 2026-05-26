@@ -63,19 +63,13 @@ import Panama from "./pages/immersions/Panama";
 import Egypt from "./pages/immersions/Egypt";
 import Peru from "./pages/immersions/Peru";
 import Ecuador from "./pages/immersions/Ecuador";
+import CostaRica from "./pages/immersions/CostaRica";
 import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
 import MobileStickyBar from "@/components/MobileStickyBar";
 
 const queryClient = new QueryClient();
-
-const ExternalRedirect = ({ to }: { to: string }) => {
-  if (typeof window !== "undefined") {
-    window.location.replace(to);
-  }
-  return null;
-};
 
 const App = () => (
   <HelmetProvider>
@@ -152,10 +146,7 @@ const App = () => (
             <Route path="/immersions/panama" element={<Panama />} />
             <Route path="/immersions/egypt" element={<Egypt />} />
             <Route path="/immersions/peru" element={<Peru />} />
-            <Route
-              path="/immersions/costa-rica"
-              element={<ExternalRedirect to="https://wideopenimmersion.com" />}
-            />
+            <Route path="/immersions/costa-rica" element={<CostaRica />} />
             <Route path="/immersions/ecuador" element={<Ecuador />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

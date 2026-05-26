@@ -1,6 +1,6 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
-import teaVideoUrl from "@/assets/video-teahouse-hero-v2.mp4?url";
+import teaVideoUrl from "@/assets/video-sacred-tea-ceremony.mp4?url";
 const teaVideo = { url: teaVideoUrl };
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
