@@ -26,6 +26,7 @@ import Analytics from "./pages/Analytics";
 import AdminIntakes from "./pages/AdminIntakes";
 import AdminSubmissions from "./pages/AdminSubmissions";
 import AdminJournal from "./pages/AdminJournal";
+import AdminAnalyticsPeaks from "./pages/AdminAnalyticsPeaks";
 
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
@@ -106,6 +107,7 @@ const App = () => (
             <Route path="/admin/intakes" element={<AdminIntakes />} />
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
             <Route path="/admin/journal" element={<AdminJournal />} />
+            <Route path="/admin/analytics-peaks" element={<AdminAnalyticsPeaks />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
