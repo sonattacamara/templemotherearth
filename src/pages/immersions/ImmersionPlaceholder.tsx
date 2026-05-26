@@ -16,6 +16,7 @@ interface ImmersionPlaceholderProps {
   ctaHref?: string;
   ctaLabel?: string;
   ctaExternal?: boolean;
+  heroVideo?: string;
 }
 
 const ImmersionPlaceholder = ({
@@ -29,6 +30,7 @@ const ImmersionPlaceholder = ({
   ctaHref = "/retreats-inquiry",
   ctaLabel = "Join the Waitlist",
   ctaExternal = false,
+  heroVideo,
 }: ImmersionPlaceholderProps) => {
   const eventJsonLd =
     dates && dates !== "Dates opening soon"
@@ -62,8 +64,21 @@ const ImmersionPlaceholder = ({
         </Helmet>
       )}
       <Navigation />
-      <section className="relative px-4 pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="mx-auto max-w-3xl text-center">
+      <section className="relative px-4 pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        {heroVideo && (
+          <>
+            <video
+              src={heroVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-background/60" />
+          </>
+        )}
+        <div className="relative mx-auto max-w-3xl text-center">
           <img
             src={logo}
             alt="Temple Mother Earth"
@@ -128,7 +143,6 @@ const ImmersionPlaceholder = ({
               {[
                 { label: "The Crossing · Panama", href: "/immersions/panama" },
                 { label: "Sayulita, Mexico", href: "/immersions/sayulita" },
-                { label: "Ecuador", href: "/immersions/ecuador" },
                 { label: "Egypt", href: "/immersions/egypt" },
                 { label: "Peru", href: "/immersions/peru" },
               ]
