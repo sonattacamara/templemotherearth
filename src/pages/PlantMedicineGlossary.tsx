@@ -473,6 +473,25 @@ const PlantMedicineGlossary = () => {
         )}
       </main>
 
+      {/* ═══ MACHINE-READABLE FULL TEXT (for AI crawlers · visually hidden, semantic) ═══ */}
+      <div className="sr-only" aria-hidden="true">
+        <h2>Full Sacred Plant Medicine Glossary · Complete Reference</h2>
+        {glossaryData.map((cat) => (
+          <section key={cat.category}>
+            <h3>{cat.category}</h3>
+            <p>{cat.description}</p>
+            {cat.entries.map((entry) => (
+              <article key={entry.name}>
+                <h4>{entry.name}</h4>
+                <p><strong>Botanical:</strong> {entry.botanical}</p>
+                <p><strong>Origin:</strong> {entry.origin}</p>
+                <p>{entry.description}</p>
+              </article>
+            ))}
+          </section>
+        ))}
+      </div>
+
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ INTERNATIONAL LOCATIONS ═══ */}
@@ -532,11 +551,14 @@ const PlantMedicineGlossary = () => {
 
       {/* ─── RFRA Footer ─── */}
       <footer className="bg-[hsl(105,30%,8%)] border-t border-[hsl(100,25%,18%)] py-8 px-6 md:px-12 text-center">
+        <p className="font-sans text-[8px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] leading-loose mb-3 font-bold">
+          Sacred Sacrament Reference · Religious Use Only
+        </p>
+        <p className="font-serif text-[12px] text-[hsl(35,30%,60%)] leading-relaxed max-w-[860px] mx-auto mb-4">
+          This glossary describes sacred sacraments as understood within the theology of Temple Mother Earth, a 508(c)(1)(A) protected autonomous religious institution. All references describe their ceremonial and theological significance within our congregation's legally protected religious practice under the Religious Freedom Restoration Act (RFRA), 42 U.S.C. § 2000bb et seq., and the First Amendment to the United States Constitution. Nothing on this page constitutes medical advice, legal advice, or encouragement of any activity outside of our protected religious ceremonies.
+        </p>
         <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,15%,40%)] leading-loose">
           &copy; 2026 Temple Mother Earth · 508(c)(1)(A) Sacred Church · Washington, DC
-        </p>
-        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,15%,40%)] leading-loose mt-2">
-          All ceremonies held in sincere religious practice under protection of the Religious Freedom Restoration Act (RFRA) · Not a substitute for medical or psychological guidance
         </p>
       </footer>
     </div>
