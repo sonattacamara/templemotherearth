@@ -243,7 +243,7 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
-              { src: heroBg, alt: "Temple Mother Earth sacred ceremony sanctuary in Washington DC" },
+              { src: communityImg, alt: "Temple Mother Earth sacred community gathering in Washington DC" },
               { src: communityCeremonyGroup, alt: "King James in outdoor sacred ceremony with community support at Temple Mother Earth" },
               { src: communityCircleGrass, alt: "Community dialogue circle on the lawn during sacred ceremony integration" },
               { src: communityGatheringIndoor, alt: "Temple Mother Earth group community photo during outdoor gathering" },
@@ -576,7 +576,7 @@ const Index = () => {
       <section id="membership" className="relative overflow-hidden px-4 py-14 md:py-20">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${communityImg})` }}
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
