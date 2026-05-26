@@ -15,10 +15,10 @@ const WOMENS_URL = "https://www.eventbrite.com/e/kambo-for-women-the-sacred-rele
 const kamboJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Sacred Kambo Ceremony",
-  name: "Sacred Kambo Ceremony at Temple Mother Earth",
+  serviceType: "Kambo Purification Fire Ceremony",
+  name: "Kambo · The Purification Fire at Temple Mother Earth",
   description:
-    "Sacramental Sacred Frog ceremony held within a 508(c)(1)(A) sacred church in Washington, DC. Offered as a religious practice protected under RFRA.",
+    "Kambo · the Purification Fire. A traditional Amazonian ceremony held at Temple Mother Earth in Washington, DC, where the body's natural intelligence is invited to reset, clear, and return to baseline.",
   url: "https://templemotherearth.org/kambo",
   areaServed: { "@type": "City", name: "Washington, DC" },
   provider: {
@@ -117,8 +117,8 @@ const PathCard = ({
 
 const KamboCeremony = () => (
   <SacredSeriesLayout
-    title="Sacred Kambo Ceremony · Temple Mother Earth"
-    description="Sacred Frog ceremony in Washington, DC. Deep purification of body, mind, and spirit. Co-ed and Women's Only sittings held in sacred container."
+    title="Kambo · The Purification Fire · Temple Mother Earth"
+    description="Kambo · the Purification Fire. Traditional Amazonian ceremony in Washington, DC. Deep purification of body, mind, and spirit. Co-ed and Women's Only sittings."
     showBackLink={false}
     path="/kambo"
   >
@@ -128,7 +128,7 @@ const KamboCeremony = () => (
 
     <SanctuaryHero
       dateBadge="Recurring Sacrament"
-      eyebrow="Sacred Kambo Ceremony"
+      eyebrow="Kambo · The Purification Fire"
       title={
         <>
           The Body Remembers.<br />
@@ -136,7 +136,7 @@ const KamboCeremony = () => (
         </>
       }
       subtitle=""
-      lead="Sacred Kambo is one of the most direct purification rites known to the Amazon. Held here as religious sacrament in our Washington, DC sanctuary, it clears the body, quiets the mind, and returns you to the version of yourself you forgot was waiting underneath."
+      lead="Kambo is one of the most direct purification rites known to the Amazon · the Purification Fire. Held here in our Washington, DC temple, it clears the body, quiets the mind, and returns you to the version of yourself you forgot was waiting underneath."
       primaryCTA={{ label: "Choose Your Ceremony ↓", href: "#choose" }}
       secondaryCTA={{ label: "Learn More ↓", href: "#signals" }}
       backgroundVideo={kamboVideo.url}
@@ -236,7 +236,7 @@ const KamboCeremony = () => (
     {/* SACRAMENT INFO */}
     <SanctuarySection
       id="about"
-      eyebrow="The Sacrament"
+      eyebrow="The Tradition"
       title={
         <>
           The Frog's<br />
@@ -246,13 +246,13 @@ const KamboCeremony = () => (
     >
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[760px] font-serif space-y-6">
         <p>
-          Sacred Kambo is the ceremonial offering of the giant monkey frog, gathered with prayer and consent by the indigenous peoples of the Amazon. It has been received as a purification rite for generations · long before the modern world had language for what it does.
+          Kambo is the ceremonial offering of the giant monkey frog, gathered with prayer and consent by the indigenous peoples of the Amazon. It has been received as a purification rite for generations · long before the modern world had language for what it does.
         </p>
         <p>
-          The sacrament is applied through small openings on the surface of the skin. Within minutes, the body begins its ancient work · moving, releasing, returning. The ceremony is brief but complete. What follows is days of clarity, weeks of altered baseline, and a body that knows it has been visited.
+          The offering is applied through small openings on the surface of the skin. Within minutes, the body begins its ancient work · moving, releasing, returning. The ceremony is brief but complete. What follows is days of clarity, weeks of altered baseline, and a body that knows it has been visited.
         </p>
         <p>
-          Here it is held as <strong className="text-[hsl(45,70%,49%)]">religious sacrament</strong>, in sincere spiritual practice, within a 508(c)(1)(A) sacred church under the protection of the Religious Freedom Restoration Act.
+          Here it is held as a <strong className="text-[hsl(45,70%,49%)]">ceremonial practice</strong> within a 508(c)(1)(A) sacred church, in sincere spiritual tradition protected under the Religious Freedom Restoration Act. Kambo is not a medical treatment and no medical claims are made.
         </p>
       </div>
     </SanctuarySection>
