@@ -14,6 +14,7 @@ import MonthlyThemeBanner from "@/components/MonthlyThemeBanner";
 
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
+import homeHeroVideo from "@/assets/video-home-hero.mp4?url";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
 import sacredSpace from "@/assets/sacred-space.jpg";
 import communityImg from "@/assets/community.jpg";
@@ -133,9 +134,15 @@ const Index = () => {
         id="hero"
         className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden px-4 pt-24 pb-12 text-center md:min-h-[82vh]"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBg})` }}
+        <video
+          src={homeHeroVideo}
+          poster={heroBg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
@@ -236,6 +243,7 @@ const Index = () => {
 
           <motion.div variants={fadeUp} className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
+              { src: heroBg, alt: "Temple Mother Earth sacred ceremony sanctuary in Washington DC" },
               { src: communityCeremonyGroup, alt: "King James in outdoor sacred ceremony with community support at Temple Mother Earth" },
               { src: communityCircleGrass, alt: "Community dialogue circle on the lawn during sacred ceremony integration" },
               { src: communityGatheringIndoor, alt: "Temple Mother Earth group community photo during outdoor gathering" },
