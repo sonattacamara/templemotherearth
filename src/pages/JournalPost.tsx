@@ -41,13 +41,41 @@ const JournalPost = () => {
     description: post.excerpt,
     datePublished: post.date,
     author: {
-      "@type": "Organization",
-      name: "Temple Mother Earth",
+      "@type": "Person",
+      name: "Sonatta",
+      jobTitle: "Founder & High Priestess",
+      affiliation: {
+        "@type": "Organization",
+        name: "Temple Mother Earth",
+      },
+      url: "https://templemotherearth.org/about",
     },
     publisher: {
       "@type": "Organization",
       name: "Temple Mother Earth",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://templemotherearth.org/og-logo.png",
+      },
     },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://templemotherearth.org/journal/${post.slug}`,
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "article p"],
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://templemotherearth.org/" },
+      { "@type": "ListItem", position: 2, name: "Journal", item: "https://templemotherearth.org/journal" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://templemotherearth.org/journal/${post.slug}` },
+    ],
   };
 
   return (
@@ -55,6 +83,7 @@ const JournalPost = () => {
       <SEOHead title={post.title} description={post.excerpt} path={`/journal/${post.slug}`} type="article" />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
       <Navigation />
 
@@ -71,6 +100,8 @@ const JournalPost = () => {
             <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
               <Calendar className="h-4 w-4" />
               <time>{post.date}</time>
+              <span className="mx-2 opacity-50">·</span>
+              <span>By <Link to="/about" className="text-primary hover:underline">Sonatta</Link>, Founder & High Priestess</span>
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
               {post.title}
