@@ -54,7 +54,7 @@ const SacredTeaHouse = () => (
         transition={{ duration: 0.8 }}
         className="relative z-10 max-w-[600px]"
       >
-        <p className="font-display text-[10px] tracking-[5px] uppercase text-[hsl(45,70%,49%)] mb-6">Ongoing · Monthly Offering</p>
+        <p className="font-display text-[10px] tracking-[5px] uppercase text-[hsl(45,70%,49%)] mb-6">4th Monday of Each Month</p>
         <Coffee className="mx-auto h-16 w-16 text-[hsl(45,70%,49%)] mb-5" />
         <h1 className="font-display text-[clamp(32px,5vw,68px)] font-semibold text-[hsl(40,30%,90%)] leading-[1.1] mb-2">
           Sacred Tea House
@@ -77,7 +77,7 @@ const SacredTeaHouse = () => (
     {/* Event Bar */}
     <div className="bg-[hsl(120,26%,12%)] px-6 md:px-10 py-5 flex justify-center gap-12 flex-wrap border-y border-[hsla(45,70%,49%,0.15)]">
       {[
-        { label: "Frequency", val: "Monthly" },
+        { label: "Rhythm", val: "4th Monday Monthly" },
         { label: "Capacity", val: "Intimate / Limited" },
         { label: "Location", val: "Temple Mother Earth, DC" },
       ].map((item) => (
