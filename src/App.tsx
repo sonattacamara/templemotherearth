@@ -25,6 +25,7 @@ import NotFound from "./pages/NotFound";
 import Analytics from "./pages/Analytics";
 import AdminIntakes from "./pages/AdminIntakes";
 import AdminSubmissions from "./pages/AdminSubmissions";
+import AdminJournal from "./pages/AdminJournal";
 
 import Contact from "./pages/Contact";
 import PlantMedicineGlossary from "./pages/PlantMedicineGlossary";
@@ -104,6 +105,7 @@ const App = () => (
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/admin/intakes" element={<AdminIntakes />} />
             <Route path="/admin/submissions" element={<AdminSubmissions />} />
+            <Route path="/admin/journal" element={<AdminJournal />} />
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/plant-medicine-glossary" element={<PlantMedicineGlossary />} />
