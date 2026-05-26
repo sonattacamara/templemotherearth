@@ -7,7 +7,7 @@ import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { Helmet } from "react-helmet-async";
 
-const EVENTBRITE_PLACEHOLDER = "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477";
+const EVENTBRITE_PLACEHOLDER = "https://www.eventbrite.com/e/sacred-tea-ceremony-the-fruit-of-the-gods-tickets-1989026406525?aff=ebdsoporgprofile";
 
 const sacredTeaJsonLd = {
   "@context": "https://schema.org",
@@ -43,7 +43,7 @@ const SacredTeaCeremony = () => (
       title={<>The Door Has<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Always Been There</em></>}
       subtitle=""
       lead="You've been standing in front of it for longer than you know. This ceremony doesn't take you somewhere new. It returns you to the part of yourself that has always known."
-      primaryCTA={{ label: "Secure Your Place", href: EVENTBRITE_PLACEHOLDER, external: true }}
+      primaryCTA={{ label: "Answer the Call", href: EVENTBRITE_PLACEHOLDER, external: true }}
       secondaryCTA={{ label: "Choose Your Level ↓", href: "#levels" }}
       backgroundVideo={teaVideo.url}
     />
@@ -78,7 +78,7 @@ const SacredTeaCeremony = () => (
       eyebrow="Recurring Offering · Washington, DC"
       title={<>The Sacrament<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready For You</em></>}
       description="Choose your level. Secure your place. Your preparation begins the moment you register."
-      ctaLabel="Secure Your Place"
+      ctaLabel="Take Your Sacred Seat"
       ctaHref={EVENTBRITE_PLACEHOLDER}
       note="Health screening required for Sacred Circle & Fruit of the Gods levels · Registration required for all levels"
     />

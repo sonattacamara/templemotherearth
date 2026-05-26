@@ -4,7 +4,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-const APPLY_URL = "/ceremony-intake";
+const APPLY_URL = "https://www.eventbrite.com/e/level-5-the-initiation-tickets-1989119802876?aff=ebdsoporgprofile";
 const KAMBO_INFO_URL = "/kambo";
 
 const includes = [
@@ -84,7 +84,7 @@ const Level5Ceremony = () => (
           You have been in preparation for this whether you knew it or not. Mother Earth does not call everyone. She called you.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
+          <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
             Apply for Your Seat
           </a>
           <a href={KAMBO_INFO_URL} className="inline-block bg-transparent text-[#F0EAD6] px-10 py-[18px] font-sans text-[10px] tracking-[3px] uppercase border border-[rgba(240,234,214,0.2)] hover:border-[#C8A030] hover:text-[#C8A030] transition-all">
@@ -205,7 +205,7 @@ const Level5Ceremony = () => (
         <p className="font-serif italic text-[22px] text-[#F0EAD6] opacity-75 max-w-[600px] mx-auto mb-14 leading-[1.7]">
           Not everyone is called to initiation. If you have read this far and something in you is still saying yes · that is not curiosity. That is preparation.
         </p>
-        <a href={APPLY_URL} className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
+        <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
           Apply for Your Seat
         </a>
         <p className="font-sans text-[9px] tracking-[3px] uppercase text-[#F0EAD6] opacity-50 mt-7">

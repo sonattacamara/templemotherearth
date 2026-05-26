@@ -5,7 +5,9 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-const EVENTBRITE_POTLUCK = "https://www.eventbrite.com/e/soulful-connections-a-community-potluck-for-growth-and-healing-registration-1119491141139";
+import potluckVideo from "@/assets/video-potluck-hero.mp4.asset.json";
+
+const EVENTBRITE_POTLUCK = "https://www.eventbrite.com/e/sacred-table-potluck-integration-registration-1324534401049?aff=ebdsoporgprofile";
 
 const CommunityPotluck = () => (
   <SacredSeriesLayout
@@ -20,7 +22,7 @@ const CommunityPotluck = () => (
       lead="You don't need to have done ceremony here. You don't need to know anyone. You don't need to bring anything except something to share at the table and whoever you are right now. The door is open. The table is set. Come."
       primaryCTA={{ label: "Register Free", href: EVENTBRITE_POTLUCK, external: true }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo={potluckVideo.url}
     />
 
     <SanctuarySection id="about" eyebrow="What This Is" title={<>Not a Networking Event.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">A Home.</em></>}>

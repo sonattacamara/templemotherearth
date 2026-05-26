@@ -5,6 +5,8 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
+import mensVideo from "@/assets/video-mens-circle-hero.mp4.asset.json";
+
 const EVENTBRITE_URL =
   "https://www.eventbrite.com/e/the-cove-a-mens-healing-reflection-circle-tickets-1982328123781?aff=ebdsoporgprofile";
 
@@ -29,7 +31,7 @@ const MensCircle = () => (
       lead="The Cove is a men's reflection and integration circle · a sanctuary where brothers gather in honesty, in stillness, and in the courage it takes to be fully seen."
       primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: true }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/2422294/pexels-photo-2422294.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo={mensVideo.url}
     />
 
     <SanctuarySection

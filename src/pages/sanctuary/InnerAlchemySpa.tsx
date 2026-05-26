@@ -4,6 +4,10 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
+import spaVideo from "@/assets/video-spa-hero.mp4.asset.json";
+
+const SPA_EVENTBRITE = "https://www.eventbrite.com/e/inner-alchemy-wellness-spa-day-a-sacred-restoration-experience-tickets-1989403346964?aff=ebdsoporgprofile";
+
 const InnerAlchemySpa = () => (
   <SacredSeriesLayout
     title="Inner Alchemy Wellness Spa Day · Temple Mother Earth"
@@ -15,9 +19,9 @@ const InnerAlchemySpa = () => (
       title={<>Your Body Has Been<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Waiting for This Day</em></>}
       subtitle=""
       lead="Not a massage appointment. Not a wellness class. A full day inside a sacred container, where the only thing asked of you is to receive. Rest. Be tended to. Remember what it feels like when the body is honored rather than used."
-      primaryCTA={{ label: "Secure Your Place", href: "https://www.eventbrite.com/o/temple-of-mother-earth-29347213477", external: true }}
+      primaryCTA={{ label: "Reserve Your Day of Restoration", href: SPA_EVENTBRITE, external: true }}
       secondaryCTA={{ label: "What's Included ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo={spaVideo.url}
     />
 
     <SanctuarySection id="about" eyebrow="The Day" title={<>From Sunrise to Sunset.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Every Moment Held.</em></>}>
@@ -41,9 +45,9 @@ const InnerAlchemySpa = () => (
     <SanctuaryCTA
       eyebrow="Recurring Offering · Full Day Experience"
       title={<>You Have Earned<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">This Day</em></>}
-      description="Not as a reward. As a necessity. Your body knows the difference. Secure your place and let the day begin with that decision."
-      ctaLabel="Secure Your Place"
-      ctaHref="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
+      description="Not as a reward. As a necessity. Your body knows the difference. Receive your day and let the restoration begin with that one decision."
+      ctaLabel="Reserve Your Day of Restoration"
+      ctaHref={SPA_EVENTBRITE}
       note="Community Care Model · Full day · Registration required to confirm your place"
     />
   </SacredSeriesLayout>

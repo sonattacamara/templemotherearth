@@ -25,10 +25,10 @@ const isGroup = (entry: NavEntry): entry is NavGroup => "items" in entry;
 const navStructure: NavEntry[] = [
   { label: "About", href: "/about", isRoute: true },
   {
-    label: "Ceremonies",
+    label: "About Ceremonies",
     items: [
       { label: "Sacred Series", href: "/sacred-series", isRoute: true },
-      { label: "Kambo Purification", href: "/kambo", isRoute: true },
+      { label: "Kambo · Purification Fire", href: "/kambo", isRoute: true },
       { label: "Cacao Ceremony", href: "/cacao", isRoute: true },
       { label: "Hapé Ceremony", href: "/hape", isRoute: true },
       { label: "Sacred Tea Ceremony", href: "/sacred-tea", isRoute: true },
@@ -36,7 +36,7 @@ const navStructure: NavEntry[] = [
     ],
   },
   {
-    label: "Experiences",
+    label: "Integration",
     items: [
       { label: "Sacred Yin Yoga", href: "/yin-yoga", isRoute: true },
       { label: "Frequency, Fungi & Flow", href: "/frequencyfungiflow", isRoute: true },
