@@ -53,10 +53,10 @@ const navStructure: NavEntry[] = [
     label: "Immersions",
     items: [
       { label: "Costa Rica · Wide Open Immersion", href: "/immersions/costa-rica", isRoute: true },
-      { label: "Panama · The Crossing · Aug 8·15, 2026", href: "/immersions/panama", isRoute: true },
-      { label: "Sayulita · Infinite Yes · Oct 31·Nov 5, 2026", href: "/immersions/sayulita", isRoute: true },
-      { label: "Egypt · The Remembrance · Feb 2027", href: "/immersions/egypt", isRoute: true },
-      { label: "Peru · The Returning · Apr 2027", href: "/immersions/peru", isRoute: true },
+      { label: "Panama · The Crossing", href: "/immersions/panama", isRoute: true },
+      { label: "Sayulita · Infinite Yes", href: "/immersions/sayulita", isRoute: true },
+      { label: "Egypt · The Remembrance", href: "/immersions/egypt", isRoute: true },
+      { label: "Peru · The Returning", href: "/immersions/peru", isRoute: true },
     ],
   },
   {
