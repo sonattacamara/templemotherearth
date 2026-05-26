@@ -219,13 +219,22 @@ const SacredArtExpo = () => {
             sacred space. The Art Expo is a living gallery · where creativity, community, and
             ceremony converge.
           </motion.p>
-          <motion.div variants={fadeUp} className="mt-10">
+          <motion.div variants={fadeUp} className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#art-form"
-              className="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider transition"
+              className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider transition hover:opacity-90"
               style={{ background: "#c9a84c", color: "#0d0b08" }}
             >
-              Submit Your Art <ArrowDown className="h-4 w-4" />
+              I'm an Artist · Apply <ArrowDown className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.eventbrite.com/e/frequency-fungi-flow-a-sacred-ecstatic-dance-temple-gathering-registration-1097503254779?aff=ebdsoporgprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider border-2 transition hover:bg-[#c9a84c] hover:text-[#0d0b08]"
+              style={{ borderColor: "#c9a84c", color: "#c9a84c", background: "transparent" }}
+            >
+              I Want to See the Art · Get Tickets <ArrowRight className="h-4 w-4" />
             </a>
           </motion.div>
         </motion.div>

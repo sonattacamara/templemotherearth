@@ -196,6 +196,78 @@ const KamboCeremony = () => (
       <SanctuaryColCards cards={benefits} />
     </SanctuarySection>
 
+    {/* WHAT SCIENCE OBSERVES · PEPTIDE EDUCATION */}
+    <SanctuarySection
+      id="science"
+      eyebrow="What Science Observes"
+      title={
+        <>
+          The Peptide Intelligence<br />
+          <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">of the Frog</em>
+        </>
+      }
+    >
+      <p className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[760px] font-serif">
+        Modern research has identified more than seventy bioactive peptides in the Kambo offering · molecular messengers the body recognizes immediately. These peptides have been studied for their unique interaction with the immune, lymphatic, cardiovascular, and central nervous systems. We share the science not as a promise, but as context for what the body intelligently does on its own.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        {[
+          {
+            title: "Phyllomedusin · Lymphatic Movement",
+            description:
+              "Researchers observe rapid stimulation of the smooth muscle and lymphatic system · which is what the traditional ceremony has always called the purge. The body moves what it has been storing.",
+          },
+          {
+            title: "Dermorphin & Deltorphin · Receptor Affinity",
+            description:
+              "These peptides have been studied for their remarkable affinity with the body's own opioid and pain-modulation receptors · among the strongest naturally occurring binding profiles documented in science.",
+          },
+          {
+            title: "Phyllocaerulein · Nervous System Reset",
+            description:
+              "Observed to engage the gastrointestinal tract and stress-response axis. The body downshifts. The nervous system is invited to recalibrate after the brief ceremonial intensity passes.",
+          },
+          {
+            title: "Adenoregulin · Cellular Communication",
+            description:
+              "Studied for its interaction with adenosine receptors involved in energy regulation and cellular signaling. The body re-establishes baseline conversation between its own systems.",
+          },
+          {
+            title: "Bradykinins · Vascular Response",
+            description:
+              "Researchers observe brief vasodilation and circulatory engagement. This is the warmth and flush participants describe · the body's own circulatory reset, not an external chemical effect.",
+          },
+          {
+            title: "Tryptophyllins · Antimicrobial Profile",
+            description:
+              "Studied for natural antimicrobial properties at the cellular level. The frog evolved these peptides as part of its own defense intelligence · the body simply recognizes the language.",
+          },
+        ].map((p) => (
+          <div
+            key={p.title}
+            className="p-8 border border-[hsl(100,25%,18%)] bg-[hsl(105,30%,11%)]"
+          >
+            <h3 className="font-sans text-[12px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mb-3">
+              {p.title}
+            </h3>
+            <p className="text-[15px] text-[hsl(90,15%,68%)] leading-relaxed font-serif">
+              {p.description}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-12 max-w-[760px] p-6 border border-[hsla(45,70%,49%,0.2)] bg-[hsla(45,70%,49%,0.04)]">
+        <p className="font-sans text-[10px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] mb-2">
+          Important Note
+        </p>
+        <p className="font-serif italic text-[15px] text-[hsl(40,30%,90%)] leading-relaxed">
+          Temple Mother Earth offers Kambo as a ceremonial and spiritual practice, not as a medical treatment. The above describes observations from published peptide research and does not constitute medical advice or any claim to diagnose, treat, cure, or prevent any condition. Please consult your physician before participating.
+        </p>
+      </div>
+    </SanctuarySection>
+
+    <hr className="border-t border-[hsl(100,25%,18%)] mx-6 md:mx-12" />
+
     {/* CHOOSE YOUR CEREMONY · DUAL CTA */}
     <section id="choose" className="bg-gradient-to-br from-[hsl(105,30%,13%)] to-[hsl(110,25%,15%)] border-t border-[hsl(100,25%,18%)] py-20 md:py-28 px-6 md:px-12">
       <div className="max-w-[1100px] mx-auto">
