@@ -6,6 +6,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import ceremonyImg from "@/assets/offering-ceremony.jpg";
+import prepVideo from "@/assets/video-preparation-hero-v2.mp4";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 
@@ -25,7 +26,15 @@ const Preparation = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${ceremonyImg})` }} />
+        <video
+          src={prepVideo}
+          poster={ceremonyImg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.div variants={fadeUp} className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
