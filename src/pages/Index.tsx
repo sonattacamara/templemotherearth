@@ -764,7 +764,7 @@ const Index = () => {
               <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-left space-y-3">
                 <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🌿 International Immersion</p>
                 <h3 className="font-display text-lg font-bold text-foreground">
-                  Wide Open Immersion · Costa Rica
+                  Wide Open · Costa Rica
                 </h3>
                 <p className="text-sm text-muted-foreground">August 2·8, 2026 · Nicoya Peninsula · 7 days</p>
                 <a

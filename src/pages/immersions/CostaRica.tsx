@@ -41,7 +41,7 @@ const CostaRica = () => {
     try {
       await supabase.functions.invoke("submit-costa-rica", { body: form });
       setSubmitted(true);
-      // Hand off to Wide Open Immersion after a brief confirmation
+      // Hand off to Wide Open after a brief confirmation
       setTimeout(handoff, 1800);
     } catch (err) {
       console.error(err);
@@ -54,7 +54,7 @@ const CostaRica = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Costa Rica · WIDE OPEN Immersion · August 2 · 8, 2026 | Temple Mother Earth"
-        description="WIDE OPEN · a sacred Costa Rica immersion August 2 through August 8, 2026. Held in partnership with Wide Open Immersion · jungle, ocean, ceremony, and deep nervous system restoration."
+        description="WIDE OPEN · a sacred Costa Rica immersion August 2 through August 8, 2026. Held in partnership with Wide Open · jungle, ocean, ceremony, and deep nervous system restoration."
         path="/immersions/costa-rica"
       />
       <Navigation />
@@ -85,7 +85,7 @@ const CostaRica = () => {
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/80">
             Temple Mother Earth holds Costa Rica in sacred partnership with{" "}
-            <span className="text-primary">Wide Open Immersion</span> · jungle, ocean, ceremony,
+            <span className="text-primary">Wide Open</span> · jungle, ocean, ceremony,
             and the deep remembering of who you have always been.
           </motion.p>
           <motion.a
@@ -138,7 +138,7 @@ const CostaRica = () => {
                 Receive Your Invitation
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-center text-sm text-muted-foreground">
-                Costa Rica is held through our partner sanctuary <strong className="text-foreground">Wide Open Immersion</strong>.
+                Costa Rica is held through our partner sanctuary <strong className="text-foreground">Wide Open</strong>.
                 Share your details and we will hand you off · with a warm introduction · directly to their booking portal.
               </p>
               <form className="mt-10 space-y-4" onSubmit={submit}>
@@ -156,7 +156,7 @@ const CostaRica = () => {
                   {submitting ? (
                     <><Loader2 className="h-4 w-4 animate-spin" /> Sending you over…</>
                   ) : (
-                    <>Continue to Wide Open Immersion <ExternalLink className="h-4 w-4" /></>
+                    <>Continue to Wide Open <ExternalLink className="h-4 w-4" /></>
                   )}
                 </button>
                 <p className="text-center text-xs text-muted-foreground">
@@ -169,7 +169,7 @@ const CostaRica = () => {
               <CheckCircle2 className="mx-auto h-16 w-16 text-primary" />
               <h3 className="mt-6 font-display text-2xl font-bold text-card-foreground">Thank You, Sacred One</h3>
               <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-                Sending you over to <strong className="text-foreground">Wide Open Immersion</strong> now…
+                Sending you over to <strong className="text-foreground">Wide Open</strong> now…
               </p>
               <a
                 href={WIDE_OPEN_URL}
@@ -185,7 +185,7 @@ const CostaRica = () => {
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. Costa Rica held in partnership with Wide Open Immersion.
+            © {new Date().getFullYear()} Temple Mother Earth. A 508(c)(1)(A) sacred ceremony church. Costa Rica held in partnership with Wide Open.
           </p>
         </div>
       </footer>
