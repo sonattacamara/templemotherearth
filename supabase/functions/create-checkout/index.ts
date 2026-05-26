@@ -93,9 +93,16 @@ serve(async (req) => {
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     logStep("ERROR", { message: errorMessage });
-    return new Response(JSON.stringify({ error: errorMessage }), {
+    const isAuthError = /not authenticated|authorization header/i.test(errorMessage);
+    const isInvalidPrice = /invalid price|priceId is required/i.test(errorMessage);
+    const clientMessage = isAuthError
+      ? "Not authenticated"
+      : isInvalidPrice
+      ? "Invalid request"
+      : "An unexpected error occurred";
+    return new Response(JSON.stringify({ error: clientMessage }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500,
+      status: isAuthError ? 401 : isInvalidPrice ? 400 : 500,
     });
   }
 });
