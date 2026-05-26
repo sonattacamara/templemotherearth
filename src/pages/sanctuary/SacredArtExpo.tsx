@@ -4,6 +4,7 @@ import { Palette, Music, Users, Sparkles, Send, ArrowRight, ArrowDown, Flower2, 
 import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import artExpoHero from "@/assets/art-expo-hero.jpeg";
+import artExpoVideo from "@/assets/video-art-expo-hero.mp4?url";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -172,14 +173,18 @@ const SacredArtExpo = () => {
       <Navigation />
 
       {/* ── HERO ── */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${artExpoHero})`,
-          }}
+      <section className="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center bg-[#0d0b08]">
+        <video
+          src={artExpoVideo}
+          poster={artExpoHero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 z-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#0d0b08]/80" />
+        <div className="absolute inset-0 z-[1] bg-[#0d0b08]/70 pointer-events-none" />
 
         <motion.div
           className="relative z-10 max-w-3xl"
