@@ -64,15 +64,15 @@ const Peru = () => {
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
             Sacred Immersion · Andes &amp; Amazon
           </motion.p>
+          <motion.div variants={fadeUp} className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            April 2027
+          </motion.div>
           <motion.h1 variants={fadeUp} className="mt-3 font-display text-4xl font-bold text-primary-foreground md:text-6xl">
             The Returning
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-2xl text-lg italic text-primary-foreground/80">
             The mountains are listening · the river is teaching · the carriers have
             been waiting for you to come home to the source.
-          </motion.p>
-          <motion.p variants={fadeUp} className="mx-auto mt-4 text-sm tracking-[2px] uppercase text-primary/80">
-            April 2027
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-base text-primary-foreground/70">
             A sacred immersion in the Sacred Valley and the Amazon heart · the
