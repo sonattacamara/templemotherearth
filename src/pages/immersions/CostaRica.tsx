@@ -81,7 +81,7 @@ const CostaRica = () => {
             August 2 · August 8, 2026
           </motion.div>
           <motion.h1 variants={fadeUp} className="mt-3 font-display text-3xl font-bold text-primary-foreground md:text-5xl">
-            The Jungle Is Calling You Home
+            Wide Open
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-lg text-primary-foreground/80">
             Temple Mother Earth holds Costa Rica in sacred partnership with{" "}
