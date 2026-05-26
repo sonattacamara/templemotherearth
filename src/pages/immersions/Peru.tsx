@@ -126,10 +126,10 @@ const Peru = () => {
           </div>
 
           <div className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl"><img src={peruAndes} alt="Sacred Valley of the Andes at golden hour" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={peruAmazon} alt="Amazon rainforest in morning mist" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={peruAltar} alt="Shipibo textile and ceremonial altar" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={peruMachu} alt="Machu Picchu at sunrise" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruAndes} alt="Quechua wisdom carrier overlooking the Sacred Valley of the Andes" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruAmazon} alt="Candlelit ceremony inside an Amazonian maloca" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruAltar} alt="Andean lineage carrier in ceremonial offering by the waterfall" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruMachu} alt="Quechua elder in prayer with sacred flute" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
           </div>
         </div>
       </section>
