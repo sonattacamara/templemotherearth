@@ -134,22 +134,22 @@ const kingdoms: KingdomData[] = [
     titleColor: "#8FD67A", eyebrowColor: "#3D7A3D", factBg: "#060D06", factLabelColor: "#5BA84A",
     cardBg: "#060D06", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7A3D",
     sections: [
-      { title: "The Frog · Kambo", content: "Phyllomedusa bicolor · over 70 bioactive peptides found nowhere else in nature. The frog is never harmed. The relationship is symbiotic, not extractive." },
-      { title: "Sacred Animal Covenant", content: "These animals produce the most pharmacologically complex secretions in the biological world. Science is only beginning to map what indigenous wisdom keepers have known for millennia." },
+      { title: "The Frog · Kambo", content: "The giant monkey frog carries a sacred secretion unlike anything else in the natural world. The frog is never harmed. The relationship is symbiotic, not extractive." },
+      { title: "Sacred Animal Covenant", content: "These animals carry ancient intelligences in their sacred secretions. Indigenous wisdom keepers have known their power for millennia." },
     ],
     facts: [
-      { icon: Cat, label: "Kambo Peptides", val: "70+ bioactive peptides found nowhere else in nature." },
+      { icon: Cat, label: "Kambo Peptides", val: "A sacred secretion unlike anything else in the natural world." },
       { icon: Snail, label: "Sacred Toad · God Molecule", val: "The most intense non-ordinary state of consciousness accessible." },
       { icon: Sparkles, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
       { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ancient sacred compounds studied by modern science." },
     ],
     cards: [
-      { icon: Cat, name: "The Frog", body: "Kambo. 70+ peptides. The Great Purifier." },
+      { icon: Cat, name: "The Frog", body: "Kambo. The Great Purifier. Sacred secretion of deep cleansing." },
       { icon: Snail, name: "The Toad", body: "The God Molecule. Direct encounter with pure being." },
       { icon: Sparkles, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
     ],
     stats: [
-      { num: "70+", label: "Kambo bioactive peptides" },
+      { num: "70+", label: "Sacred compounds in Kambo secretion" },
       { num: "50+", label: "Amazonian tribes use Kambo" },
       { num: "4,000+", label: "Years of sacred use" },
       { num: "100+", label: "Sacred animal sacraments documented" },

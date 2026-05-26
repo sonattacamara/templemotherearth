@@ -136,7 +136,7 @@ const KamboCeremony = () => (
         </>
       }
       subtitle=""
-      lead="Sacred Kambo is one of the most direct purification rites known to the Amazon. Held here as religious sacrament, it clears the body, quiets the mind, and returns you to the version of yourself you forgot was waiting underneath."
+      lead="Sacred Kambo is one of the most direct purification rites known to the Amazon. Held here as religious sacrament in our Washington, DC sanctuary, it clears the body, quiets the mind, and returns you to the version of yourself you forgot was waiting underneath."
       primaryCTA={{ label: "Choose Your Ceremony ↓", href: "#choose" }}
       secondaryCTA={{ label: "Learn More ↓", href: "#signals" }}
       backgroundVideo={kamboVideo.url}
@@ -226,7 +226,7 @@ const KamboCeremony = () => (
           />
         </div>
         <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,15%,45%)] mt-12 text-center">
-          Registration confirms your seat · Intake form follows your reservation
+          Held in our sacred DC sanctuary · Registration confirms your seat · Intake form follows your reservation
         </p>
       </div>
     </section>
