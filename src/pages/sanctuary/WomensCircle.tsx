@@ -5,7 +5,7 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-import womensVideo from "@/assets/video-womens-circle-hero-v3.mp4.asset.json";
+import womensVideo from "@/assets/video-womens-circle-hero-v4.mp4?url";
 
 const EVENTBRITE_URL =
   "https://www.eventbrite.com/e/womens-wellness-wednesdays-tickets-1513680431919?aff=oddtdtcreator&keep_tld=true";
@@ -31,7 +31,7 @@ const WomensCircle = () => (
       lead="A mid-week return to yourself. Sisterhood, breath, reflection, and the practices that restore the nervous system and open the heart."
       primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: true }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
-      backgroundVideo={womensVideo.url}
+      backgroundVideo={womensVideo}
     />
 
     <SanctuarySection
