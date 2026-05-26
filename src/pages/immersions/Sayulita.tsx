@@ -65,15 +65,15 @@ const Sayulita = () => {
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
             Sacred Immersion · Sayulita, Riviera Nayarit
           </motion.p>
+          <motion.div variants={fadeUp} className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            October 31 · November 5, 2026
+          </motion.div>
           <motion.h1 variants={fadeUp} className="mt-3 font-display text-4xl font-bold text-primary-foreground md:text-6xl">
             Infinite Yes
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-2xl text-lg italic text-primary-foreground/80">
             At the edge of the Pacific, where the ancestors walk between worlds · the
             soul finally says yes to the life it has been quietly dreaming of.
-          </motion.p>
-          <motion.p variants={fadeUp} className="mx-auto mt-4 text-sm tracking-[2px] uppercase text-primary/80">
-            October 31 · November 5, 2026
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-base text-primary-foreground/70">
             A beachfront sanctuary immersion held across the sacred threshold of Día de
