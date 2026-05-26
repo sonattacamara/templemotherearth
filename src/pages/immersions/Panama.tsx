@@ -59,6 +59,7 @@ const Panama = () => {
           loop
           muted
           playsInline
+          preload="metadata"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/75" />
@@ -73,7 +74,7 @@ const Panama = () => {
             The Crossing
           </motion.h1>
           <motion.p variants={fadeUp} className="mx-auto mt-5 max-w-2xl text-lg italic text-primary-foreground/80">
-            At the isthmus where two oceans meet · the soul lays down what it carried,
+            Where two oceans meet · the soul lays down what it carried,
             and the body remembers it is home.
           </motion.p>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-base text-primary-foreground/70">

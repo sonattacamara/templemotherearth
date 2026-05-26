@@ -73,6 +73,7 @@ const ImmersionPlaceholder = ({
               loop
               muted
               playsInline
+          preload="metadata"
               className="absolute inset-0 h-full w-full object-cover opacity-30"
             />
             <div className="absolute inset-0 bg-background/60" />
