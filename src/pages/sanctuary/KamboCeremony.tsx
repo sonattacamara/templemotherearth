@@ -7,6 +7,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
+import FAQSchema, { FAQItem } from "@/components/FAQSchema";
 import kamboVideoUrl from "@/assets/video-kambo-hero-v2.mp4?url";
 const kamboVideo = { url: kamboVideoUrl };
 
@@ -126,6 +127,7 @@ const KamboCeremony = () => (
     <Helmet>
       <script type="application/ld+json">{JSON.stringify(kamboJsonLd)}</script>
     </Helmet>
+    <FAQSchema faqs={kamboFaqs} />
 
     <SanctuaryHero
       dateBadge="Recurring Sacrament"
