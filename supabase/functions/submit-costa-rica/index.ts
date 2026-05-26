@@ -14,7 +14,7 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone, intentions } = body;
+    const { firstName, lastName, email, phone } = body;
 
     if (!firstName || !lastName || !email) {
       return new Response(
@@ -31,7 +31,6 @@ serve(async (req) => {
       phone: String(phone || "").trim(),
       tags: ["costa-rica-immersion", "wide-open-immersion"],
       source: "costa-rica-interstitial",
-      customFields: intentions ? { intentions: String(intentions).trim().slice(0, 1000) } : undefined,
     });
 
     if (!ghlResult.success) {
