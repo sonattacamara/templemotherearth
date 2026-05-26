@@ -4,6 +4,7 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion } from "framer-motion";
 import { Leaf, Flower2, Moon, Sun, Sprout, Sparkles, Coffee } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import teaHouseVideo from "@/assets/video-teahouse-hero.mp4.asset.json";
 
 const teaMenu: { icon: LucideIcon; name: string; properties: string; desc: string }[] = [
   { icon: Leaf, name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
@@ -35,6 +36,16 @@ const SacredTeaHouse = () => (
   >
     {/* Hero - dark theme for readability */}
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-10 py-20 text-center overflow-hidden bg-[hsl(108,28%,8%)]">
+      <video
+        src={teaHouseVideo.url}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsla(108,28%,8%,0.55)] via-[hsla(108,28%,8%,0.65)] to-[hsla(108,28%,8%,0.92)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_20%,hsla(110,25%,20%,0.2),transparent_60%)]" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
