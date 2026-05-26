@@ -35,6 +35,63 @@ export type Database = {
         }
         Relationships: []
       }
+      journal_posts: {
+        Row: {
+          ai_model: string | null
+          body: string
+          created_at: string
+          cta_label: string | null
+          cta_url: string | null
+          excerpt: string
+          generation_prompt: string | null
+          id: string
+          post_type: Database["public"]["Enums"]["journal_post_type"]
+          published_at: string | null
+          scheduled_for: string | null
+          slug: string
+          status: Database["public"]["Enums"]["journal_post_status"]
+          title: string
+          topic_bucket: string | null
+          updated_at: string
+        }
+        Insert: {
+          ai_model?: string | null
+          body: string
+          created_at?: string
+          cta_label?: string | null
+          cta_url?: string | null
+          excerpt: string
+          generation_prompt?: string | null
+          id?: string
+          post_type: Database["public"]["Enums"]["journal_post_type"]
+          published_at?: string | null
+          scheduled_for?: string | null
+          slug: string
+          status?: Database["public"]["Enums"]["journal_post_status"]
+          title: string
+          topic_bucket?: string | null
+          updated_at?: string
+        }
+        Update: {
+          ai_model?: string | null
+          body?: string
+          created_at?: string
+          cta_label?: string | null
+          cta_url?: string | null
+          excerpt?: string
+          generation_prompt?: string | null
+          id?: string
+          post_type?: Database["public"]["Enums"]["journal_post_type"]
+          published_at?: string | null
+          scheduled_for?: string | null
+          slug?: string
+          status?: Database["public"]["Enums"]["journal_post_status"]
+          title?: string
+          topic_bucket?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       page_views: {
         Row: {
           created_at: string
@@ -122,6 +179,8 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "user"
+      journal_post_status: "draft" | "published" | "archived"
+      journal_post_type: "long" | "short"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -250,6 +309,8 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
+      journal_post_status: ["draft", "published", "archived"],
+      journal_post_type: ["long", "short"],
     },
   },
 } as const
