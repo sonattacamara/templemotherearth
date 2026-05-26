@@ -7,10 +7,26 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "include": [
+      "/immersions/costa-rica",
+      "/immersions/sayulita",
+      "/immersions/panama",
+      "/immersions/peru",
+      "/immersions/egypt"
+    ],
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "skipThirdPartyRequests": true,
+    "inlineCss": false,
+    "minifyHtml": { "collapseWhitespace": false, "removeComments": false },
+    "headless": true
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
