@@ -1,6 +1,6 @@
 import { motion, type Easing } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import sacredArtGoddess from "@/assets/upload-art-goddess-snake.png";
+import blueprintVideo from "@/assets/video-sacred-blueprint.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -11,8 +11,16 @@ const stagger = { visible: { transition: { staggerChildren: 0.15 } } };
 
 const BlueprintHero = () => (
   <section className="relative flex min-h-[55vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center bg-foreground">
-    <img src={sacredArtGoddess} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-10" loading="lazy" />
-    <div className="absolute inset-0 bg-foreground/90" />
+    <video
+      src={blueprintVideo}
+      autoPlay
+      loop
+      muted
+      playsInline
+      aria-hidden="true"
+      className="absolute inset-0 h-full w-full object-cover opacity-30"
+    />
+    <div className="absolute inset-0 bg-foreground/70" />
     <motion.div
       className="relative z-10 max-w-3xl"
       initial="hidden"
