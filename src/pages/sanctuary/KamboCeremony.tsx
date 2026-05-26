@@ -226,7 +226,7 @@ const KamboCeremony = () => (
           />
         </div>
         <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(90,15%,45%)] mt-12 text-center">
-          Registration confirms your seat · Intake form follows your reservation
+          Held in our sacred DC sanctuary · Registration confirms your seat · Intake form follows your reservation
         </p>
       </div>
     </section>
