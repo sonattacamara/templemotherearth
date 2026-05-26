@@ -50,7 +50,7 @@ const Egypt = () => {
       <PageBreadcrumb items={[{ label: "Immersions" }, { label: "The Remembrance · Egypt" }]} />
 
       <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <video src={egyptVideo} autoPlay loop muted playsInline className="absolute inset-0 h-full w-full object-cover" />
+        <video src={egyptVideo} autoPlay loop muted playsInline preload="metadata" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
