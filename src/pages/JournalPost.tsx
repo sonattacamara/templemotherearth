@@ -100,6 +100,8 @@ const JournalPost = () => {
             <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
               <Calendar className="h-4 w-4" />
               <time>{post.date}</time>
+              <span className="mx-2 opacity-50">·</span>
+              <span>By <Link to="/about" className="text-primary hover:underline">Sonatta</Link>, Founder & High Priestess</span>
             </div>
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
               {post.title}
