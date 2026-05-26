@@ -52,7 +52,7 @@ const navStructure: NavEntry[] = [
   {
     label: "Immersions",
     items: [
-      { label: "Costa Rica · Wide Open Immersion", href: "/immersions/costa-rica", isRoute: true },
+      { label: "Costa Rica · Wide Open", href: "/immersions/costa-rica", isRoute: true },
       { label: "Panama · The Crossing", href: "/immersions/panama", isRoute: true },
       { label: "Sayulita · Infinite Yes", href: "/immersions/sayulita", isRoute: true },
       { label: "Egypt · The Remembrance", href: "/immersions/egypt", isRoute: true },
