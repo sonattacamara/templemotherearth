@@ -4,7 +4,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-import fffVideo from "@/assets/video-fff-hero-v3.mp4.asset.json";
+import fffVideo from "@/assets/video-fff-hero-v4.mp4.asset.json";
 
 const EVENTBRITE_FFF = "https://www.eventbrite.com/e/frequency-fungi-flow-a-sacred-ecstatic-dance-temple-gathering-registration-1097503254779?aff=ebdsoporgprofile";
 
