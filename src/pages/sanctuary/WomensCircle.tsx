@@ -5,7 +5,7 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-import womensVideo from "@/assets/video-womens-circle-hero-v2.mp4.asset.json";
+import womensVideo from "@/assets/video-womens-circle-hero-v3.mp4.asset.json";
 
 const EVENTBRITE_URL =
   "https://www.eventbrite.com/e/womens-wellness-wednesdays-tickets-1513680431919?aff=oddtdtcreator&keep_tld=true";
