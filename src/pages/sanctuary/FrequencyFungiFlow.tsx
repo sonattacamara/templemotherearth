@@ -4,7 +4,9 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-const EVENTBRITE_FFF = "https://www.eventbrite.com/e/frequency-fungi-flow-a-journey-of-sound-movement-and-connection-registration-1097503254779?aff=oddtdtcreator&keep_tld=true";
+import fffVideo from "@/assets/video-fff-hero.mp4.asset.json";
+
+const EVENTBRITE_FFF = "https://www.eventbrite.com/e/frequency-fungi-flow-a-sacred-ecstatic-dance-temple-gathering-registration-1097503254779?aff=ebdsoporgprofile";
 
 const FrequencyFungiFlow = () => (
   <SacredSeriesLayout
@@ -17,9 +19,9 @@ const FrequencyFungiFlow = () => (
       title={<>Come Dance With Us<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Soul, Body & Spirit</em></>}
       subtitle=""
       lead="There is a frequency your body remembers. A rhythm that lives beneath the noise of the week, beneath the words you have been carrying, beneath the version of yourself you wear in the world. When the music begins to move through you, that frequency rises, and you remember who you are."
-      primaryCTA={{ label: "Reserve Your Sacred Spot", href: EVENTBRITE_FFF, external: true }}
+      primaryCTA={{ label: "Come Move With Us", href: EVENTBRITE_FFF, external: true }}
       secondaryCTA={{ label: "What Awaits You ↓", href: "#about" }}
-      backgroundImage="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+      backgroundVideo={fffVideo.url}
     />
 
     <SanctuarySection id="about" eyebrow="What This Journey Is" title={<>Not a Class.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">A Sacred Frequency.</em></>}>
@@ -51,7 +53,7 @@ const FrequencyFungiFlow = () => (
       eyebrow="3rd Saturday · 7·11 PM · Washington, DC"
       title={<>Your Soul Is<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Already on the Floor</em></>}
       description="The frequency is rising. The circle is forming. Your spot is waiting. Come connect with your soul, your body, your spirit · and a community that moves as one."
-      ctaLabel="Reserve Your Sacred Spot"
+      ctaLabel="Come Dance With Us"
       ctaHref={EVENTBRITE_FFF}
       note="All bodies welcome · Substance-free sacred space · Community Care Model"
     />
