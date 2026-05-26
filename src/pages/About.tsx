@@ -8,6 +8,7 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import aboutHero from "@/assets/about-hero.jpg";
+import aboutHeroVideo from "@/assets/video-about-hero.mp4?url";
 import sacredSpace from "@/assets/sacred-space.jpg";
 import founderSonatta from "@/assets/founder-sonatta.jpg";
 import founderJames from "@/assets/founder-james.jpg";
@@ -42,9 +43,15 @@ const About = () => {
 
       {/* ───── HERO ───── */}
       <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${aboutHero})` }}
+        <video
+          src={aboutHeroVideo}
+          poster={aboutHero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/75" />
         <motion.div
