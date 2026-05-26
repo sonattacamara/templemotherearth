@@ -17,6 +17,7 @@ import sanctuaryDay3SacredTea from "@/assets/sanctuary-day3-sacred-tea.png";
 import level5Initiation from "@/assets/level5-initiation.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 import kamboFrogArt from "@/assets/kambo-frog-art.png";
+import sacredSeriesHeroVideo from "@/assets/video-sacred-series-hero.mp4?url";
 
 const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/sacred-series-week-vol-5-new-earth-rising-registration-1985533292527?aff=ebdsoporgprofile";
 
@@ -320,11 +321,14 @@ const SacredSeries = () => {
       </Helmet>
       {/* ═══ HERO ═══ */}
       <section ref={heroRef} className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Sacred ceremony sanctuary space at Temple Mother Earth"
-          className="absolute inset-0 w-full h-full object-cover saturate-50 brightness-[0.35] -z-10"
-          loading="eager"
+        <video
+          src={sacredSeriesHeroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover saturate-50 brightness-[0.45] -z-10"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
