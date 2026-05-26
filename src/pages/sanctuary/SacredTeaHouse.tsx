@@ -4,7 +4,8 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion } from "framer-motion";
 import { Leaf, Flower2, Moon, Sun, Sprout, Sparkles, Coffee } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import teaHouseVideo from "@/assets/video-teahouse-hero-v2.mp4.asset.json";
+import teaHouseVideoUrl from "@/assets/video-teahouse-hero-v2.mp4?url";
+const teaHouseVideo = { url: teaHouseVideoUrl };
 
 const teaMenu: { icon: LucideIcon; name: string; properties: string; desc: string }[] = [
   { icon: Leaf, name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
