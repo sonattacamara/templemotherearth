@@ -6,11 +6,10 @@ import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
-import beachHero from "@/assets/costa-rica-palms-beach.jpg";
-import mexicoBeach from "@/assets/immersion-mexico-beach.jpg";
-import mexicoOfrenda from "@/assets/immersion-mexico-ofrenda.jpg";
-import mexicoCacao from "@/assets/immersion-mexico-cacao.jpg";
-import mexicoVilla from "@/assets/immersion-mexico-villa.jpg";
+import sayulitaSunrise from "@/assets/sayulita-pacific-sunrise.jpg";
+import sayulitaPalapaGanesh from "@/assets/sayulita-palapa-ganesh.jpg";
+import sayulitaOceanSkull from "@/assets/sayulita-ocean-skull.jpg";
+import sayulitaSugarSkullAltar from "@/assets/sayulita-sugar-skull-altar.jpg";
 import sayulitaVideo from "@/assets/video-sayulita-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -53,7 +52,7 @@ const Sayulita = () => {
       <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-4 pt-20">
         <video
           src={sayulitaVideo}
-          poster={beachHero}
+          poster={sayulitaSunrise}
           autoPlay
           muted
           loop
@@ -127,10 +126,10 @@ const Sayulita = () => {
           </div>
 
           <div className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl"><img src={mexicoBeach} alt="Sayulita Pacific beach at sunset" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={mexicoOfrenda} alt="Día de los Muertos ofrenda with marigolds and candles" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={mexicoCacao} alt="Sacred cacao in clay cup with marigold petals" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={mexicoVilla} alt="Beachfront sanctuary villa at golden hour" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={sayulitaSunrise} alt="Pacific sunrise over Sayulita beach, Riviera Nayarit" loading="lazy" width={1280} height={1707} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={sayulitaPalapaGanesh} alt="Temple Mother Earth founders at Palapa Ganesh, Sayulita Mexico" loading="lazy" width={1280} height={1707} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={sayulitaOceanSkull} alt="Día de los Muertos ocean skull · ancestral sanctuary in Sayulita" loading="lazy" width={1280} height={1707} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={sayulitaSugarSkullAltar} alt="Sacred sugar skull altar with marigolds and butterflies" loading="lazy" width={1280} height={1707} className="h-72 w-full object-cover md:h-80" /></div>
           </div>
         </div>
       </section>
