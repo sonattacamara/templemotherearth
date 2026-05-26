@@ -5,7 +5,8 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
-import potluckVideo from "@/assets/video-potluck-hero.mp4.asset.json";
+import potluckVideoUrl from "@/assets/video-potluck-hero-v2.mp4?url";
+const potluckVideo = { url: potluckVideoUrl };
 
 const EVENTBRITE_POTLUCK = "https://www.eventbrite.com/e/sacred-table-potluck-integration-registration-1324534401049?aff=ebdsoporgprofile";
 
@@ -15,7 +16,7 @@ const CommunityPotluck = () => (
     description="Free community gathering, integration circle, and Sacred Tea House. Temple Mother Earth, Washington DC."
   >
     <SanctuaryHero
-      dateBadge="Recurring · Free & Open"
+      dateBadge="4th Monday of Every Month · Free & Open"
       eyebrow="Community Integration Potluck"
       title={<>You Are Already<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Part of This Family</em></>}
       subtitle=""
@@ -47,7 +48,7 @@ const CommunityPotluck = () => (
     />
 
     <SanctuaryCTA
-      eyebrow="Recurring · Free & Open to All"
+      eyebrow="4th Monday of Every Month · Free & Open"
       title={<>The Table<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Already Set For You</em></>}
       description="Register so we know you're coming. Bring something to share. Come as you are. The family is already gathering."
       ctaLabel="Register Free"
