@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ShieldCheck, Heart, AlertTriangle, FileText, ArrowRight, CheckCircle2, Mail, CalendarIcon } from "lucide-react";
 import { toast } from "sonner";
@@ -15,6 +15,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
+import { trackForm } from "@/hooks/useAnalytics";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -112,6 +113,13 @@ const step3Schema = z.object({
 
 const CeremonyIntake = () => {
   const [step, setStep] = useState(1);
+
+  // Track form opens so we can measure abandonment vs submission, not just submission alone.
+  // Fires once per page mount.
+  useEffect(() => {
+    trackForm("ceremony-intake-started");
+  }, []);
+
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
   const [formData, setFormData] = useState({
