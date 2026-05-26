@@ -320,7 +320,7 @@ const SacredSeries = () => {
         <script type="application/ld+json">{JSON.stringify(sacredSeriesJsonLd)}</script>
       </Helmet>
       {/* ═══ HERO ═══ */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden">
+      <section ref={heroRef} className="relative isolate min-h-screen flex flex-col justify-end px-6 md:px-12 py-16 md:py-20 overflow-hidden bg-[hsl(114,36%,5%)]">
         <video
           src={sacredSeriesHeroVideo}
           autoPlay
@@ -328,9 +328,9 @@ const SacredSeries = () => {
           loop
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover saturate-50 brightness-[0.45] -z-10"
+          className="absolute inset-0 w-full h-full object-cover saturate-50 brightness-[0.45] z-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] -z-10" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[hsla(114,36%,10%,0.97)] via-[hsla(114,36%,10%,0.7)] to-[hsla(114,36%,10%,0.3)] pointer-events-none" />
         <motion.div className="relative z-10 max-w-[860px]" style={{ opacity: heroOpacity, y: heroY }}>
           <span className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[4px] uppercase px-5 py-2 mb-8">
             Sacred Series · Seven Days
