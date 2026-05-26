@@ -7,8 +7,10 @@ import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
 import egyptVideo from "@/assets/video-egypt-hero-v2.mp4";
-import jungleHero from "@/assets/community-retreat-jungle.jpg";
-import jungleGroup from "@/assets/community-jungle-group.jpg";
+import egyptPyramids from "@/assets/immersion-egypt-pyramids.jpg";
+import egyptTemple from "@/assets/immersion-egypt-temple.jpg";
+import egyptNile from "@/assets/immersion-egypt-nile.jpg";
+import egyptDendera from "@/assets/immersion-egypt-dendera.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } };
@@ -113,9 +115,11 @@ const Egypt = () => {
             ))}
           </div>
 
-          <div className="mt-14 grid gap-4 grid-cols-1 md:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl"><img src={jungleHero} alt="Sacred ceremony space" className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={jungleGroup} alt="Sacred community in ceremony" className="h-72 w-full object-cover md:h-80" /></div>
+          <div className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl"><img src={egyptPyramids} alt="Great Pyramids of Giza at sunrise" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptTemple} alt="Sunlight inside an ancient Kemetic temple" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptNile} alt="Felucca sailing the Nile at sunset" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptDendera} alt="Dendera ceiling with sacred zodiac" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
           </div>
         </div>
       </section>

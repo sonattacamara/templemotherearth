@@ -6,8 +6,10 @@ import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
-import jungleHero from "@/assets/community-retreat-jungle.jpg";
-import jungleGroup from "@/assets/community-jungle-group.jpg";
+import peruAndes from "@/assets/immersion-peru-andes.jpg";
+import peruAmazon from "@/assets/immersion-peru-amazon.jpg";
+import peruAltar from "@/assets/immersion-peru-altar.jpg";
+import peruMachu from "@/assets/immersion-peru-machu.jpg";
 import peruVideo from "@/assets/video-peru-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -50,7 +52,7 @@ const Peru = () => {
       <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-4 pt-20">
         <video
           src={peruVideo}
-          poster={jungleHero}
+          poster={peruAndes}
           autoPlay
           muted
           loop
@@ -122,9 +124,11 @@ const Peru = () => {
             ))}
           </div>
 
-          <div className="mt-14 grid gap-4 grid-cols-1 md:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl"><img src={jungleHero} alt="Sacred Valley sanctuary" className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={jungleGroup} alt="Community in sacred ceremony" className="h-72 w-full object-cover md:h-80" /></div>
+          <div className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl"><img src={peruAndes} alt="Sacred Valley of the Andes at golden hour" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruAmazon} alt="Amazon rainforest in morning mist" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruAltar} alt="Shipibo textile and ceremonial altar" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={peruMachu} alt="Machu Picchu at sunrise" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
           </div>
         </div>
       </section>
