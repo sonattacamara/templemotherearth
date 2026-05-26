@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import cacaoVideo from "@/assets/video-cacao-hero.mp4.asset.json";
 
-const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-sacred-ceremony-registration-822085920117";
+const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-the-heart-opener-registration-890335636857?aff=ebdsoporgprofile";
 
 const Section = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);

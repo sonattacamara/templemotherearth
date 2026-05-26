@@ -52,7 +52,7 @@ const SacredTeaHouse = () => (
           Step into the stillness. The Sacred Tea House is a slow, sacred, sensory experience · a ceremonial tea space where plant sacrament, community, and contemplative practice meet.
         </p>
         <a
-          href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
+          href="https://www.eventbrite.com/e/sacred-tea-house-tea-stillness-community-tickets-1989410295748?aff=ebdsoporgprofile"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(108,28%,8%)] px-12 py-4.5 font-display text-[13px] tracking-[3px] uppercase font-bold border-2 border-[hsl(45,70%,49%)] hover:bg-transparent hover:text-[hsl(45,70%,49%)] transition-all"
@@ -133,7 +133,7 @@ const SacredTeaHouse = () => (
       <h2 className="font-display text-[clamp(22px,3vw,40px)] text-[hsl(40,30%,90%)] mb-4 font-normal">The Tea House Awaits</h2>
       <p className="text-[hsl(40,24%,78%)] font-serif italic text-xl mb-10">A monthly sanctuary of slowness and sacred sacrament</p>
       <a
-        href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477"
+        href="https://www.eventbrite.com/e/sacred-tea-house-tea-stillness-community-tickets-1989410295748?aff=ebdsoporgprofile"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(108,28%,8%)] px-12 py-4.5 font-display text-[13px] tracking-[3px] uppercase font-bold border-2 border-[hsl(45,70%,49%)] hover:bg-transparent hover:text-[hsl(45,70%,49%)] transition-all"
