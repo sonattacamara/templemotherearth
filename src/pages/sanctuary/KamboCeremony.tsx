@@ -9,6 +9,49 @@ import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import FAQSchema, { FAQItem } from "@/components/FAQSchema";
 import kamboVideoUrl from "@/assets/video-kambo-hero-v2.mp4?url";
+
+const kamboFaqs: FAQItem[] = [
+  {
+    question: "What is Kambo?",
+    answer:
+      "Kambo is the sacred secretion of the Phyllomedusa bicolor (giant monkey frog) of the Amazon rainforest. It has been used for centuries by indigenous Amazonian peoples · the Matsés, Mayoruna, Yawanawá and others · as a sacramental purification. At Temple Mother Earth we hold Kambo as a First Amendment protected sacrament inside a sacred container.",
+  },
+  {
+    question: "Is the frog harmed when Kambo is collected?",
+    answer:
+      "No. Kambo is collected ethically and traditionally. The frog is gently and briefly held, the secretion is collected from its back, and the frog is returned unharmed to the same tree. The frog is treated as a sacred relative, not a resource.",
+  },
+  {
+    question: "What happens during a Kambo ceremony?",
+    answer:
+      "After intake, hydration, and prayer, small superficial points are opened on the skin and the Kambo sacrament is applied. The body responds with a brief but intense purification cycle, typically 20 to 40 minutes. A trained facilitator holds space throughout. Rest, integration, and grounding follow the active phase.",
+  },
+  {
+    question: "Who should not sit with Kambo?",
+    answer:
+      "Kambo is not held for those who are pregnant or nursing, those with serious heart conditions, recent stroke or surgery, severe mental health crisis, or who are taking certain medications. A thorough intake screening determines eligibility for every seeker.",
+  },
+  {
+    question: "How do I prepare for Kambo at Temple Mother Earth?",
+    answer:
+      "Members complete the ceremony intake form, follow the 7-day preparation protocol (clean eating, hydration, prayer, abstinence from alcohol and recreational substances), and arrive fasted the morning of ceremony with at least 1.5 liters of water.",
+  },
+  {
+    question: "Where are Kambo ceremonies held?",
+    answer:
+      "Temple Mother Earth holds Kambo ceremonies at the sanctuary in Washington, DC, serving the DMV (Washington DC, Maryland, Virginia) congregation. We also hold Kambo sittings on international immersions in Costa Rica, Panama, Mexico, Egypt, and Peru.",
+  },
+  {
+    question: "Is Kambo legal in the United States?",
+    answer:
+      "Kambo itself is not a federally scheduled substance. Temple Mother Earth holds all sacramental work as a 508(c)(1)(A) church under the First Amendment and the Religious Freedom Restoration Act (RFRA), which protect sincere religious exercise.",
+  },
+  {
+    question: "Do you offer women-only Kambo ceremonies?",
+    answer:
+      "Yes. We hold both co-ed Kambo sittings (with King James) and dedicated Women's Only Kambo sittings to honor the distinct sacred container many women need.",
+  },
+];
 const kamboVideo = { url: kamboVideoUrl };
 
 const COED_URL = "https://www.eventbrite.com/e/kambo-a-sacred-cleansing-ceremony-registration-822085920117?aff=ebdsoporgprofile";
