@@ -6,9 +6,10 @@ import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
-import immersionAerial from "@/assets/immersion-aerial.jpg";
-import immersionPalapa from "@/assets/immersion-palapa.jpg";
-import immersionHammock from "@/assets/immersion-hammock.jpg";
+import crPalmsBeach from "@/assets/costa-rica-palms-beach.jpg";
+import crYogaShala from "@/assets/costa-rica-yoga-shala.jpg";
+import crPoolPalms from "@/assets/costa-rica-pool-palms.jpg";
+import crHorsesBeach from "@/assets/costa-rica-horses-beach.jpg";
 
 const WIDE_OPEN_URL = "https://wideopenimmersion.com";
 
@@ -60,7 +61,7 @@ const CostaRica = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${immersionAerial})` }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${crPalmsBeach})` }} />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
@@ -101,10 +102,11 @@ const CostaRica = () => {
             ))}
           </div>
 
-          <div className="mt-12 grid gap-4 grid-cols-2">
+          <div className="mt-12 grid gap-4 grid-cols-2 md:grid-cols-3">
             {[
-              { src: immersionPalapa, alt: "Beachfront ceremony palapa in Costa Rica" },
-              { src: immersionHammock, alt: "Costa Rica jungle hammock sanctuary" },
+              { src: crPoolPalms, alt: "Beachfront pool framed by palms in Costa Rica" },
+              { src: crYogaShala, alt: "Open-air yoga shala in the Costa Rica jungle" },
+              { src: crHorsesBeach, alt: "Horseback riders on a Costa Rica Pacific beach" },
             ].map((img) => (
               <div key={img.src} className="overflow-hidden rounded-2xl">
                 <img src={img.src} alt={img.alt} className="h-64 w-full object-cover md:h-72" />
