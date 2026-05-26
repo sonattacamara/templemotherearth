@@ -19,6 +19,7 @@ import facilitatorGeorge from "@/assets/facilitator-george-new.jpg";
 import facilitatorJala from "@/assets/facilitator-jala.jpg";
 import facilitatorRama from "@/assets/facilitator-rama.jpg";
 import communityCircleGrass from "@/assets/upload-community-group.png";
+import sovereignPainting from "@/assets/about-sovereign-painting.png";
 import kingJamesFacilitator from "@/assets/upload-king-james-facilitator.png";
 import facilitatorSonattaInnerAlchemy from "@/assets/facilitator-sonatta-inner-alchemy.png";
 import logo from "@/assets/logo.png";
@@ -107,8 +108,8 @@ const About = () => {
             </motion.div>
             <motion.div variants={fadeUp} className="relative">
               <img
-                src={sacredSpace}
-                alt="Temple Mother Earth sacred sanctuary space for Kambo, Ayahuasca, and Hapé ceremonies in Washington DC"
+                src={sovereignPainting}
+                alt="Sacred sovereign being painting · vibrant portrait honoring the divine within at Temple Mother Earth"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
@@ -462,8 +463,8 @@ const About = () => {
             </motion.div>
             <motion.div variants={fadeUp}>
               <img
-                src={communityCircleGrass}
-                alt="Community integration circle for Ayahuasca, Kambo, and Cacao ceremony participants at Temple Mother Earth"
+                src={sacredSpace}
+                alt="Temple Mother Earth physical sanctuary in Washington DC · sacred home for sovereign beings on the path of transformation"
                 className="rounded-2xl shadow-xl"
                 loading="lazy"
               />
