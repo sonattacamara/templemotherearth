@@ -10,6 +10,7 @@ import crPalmsBeach from "@/assets/costa-rica-palms-beach.jpg";
 import crYogaShala from "@/assets/costa-rica-yoga-shala.jpg";
 import crPoolPalms from "@/assets/costa-rica-pool-palms.jpg";
 import crHorsesBeach from "@/assets/costa-rica-horses-beach.jpg";
+import costaRicaVideo from "@/assets/video-costa-rica-hero.mp4";
 
 const WIDE_OPEN_URL = "https://wideopenimmersion.com";
 
@@ -61,11 +62,22 @@ const CostaRica = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${crPalmsBeach})` }} />
+        <video
+          src={costaRicaVideo}
+          poster={crPalmsBeach}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
             Sacred Immersion · Costa Rica
+          </motion.p>
+          <motion.p variants={fadeUp} className="mt-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            August 2 · 8, 2026
           </motion.p>
           <motion.h1 variants={fadeUp} className="mt-3 font-display text-3xl font-bold text-primary-foreground md:text-5xl">
             The Jungle Is Calling You Home

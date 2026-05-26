@@ -8,6 +8,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
 import jungleHero from "@/assets/community-retreat-jungle.jpg";
 import jungleGroup from "@/assets/community-jungle-group.jpg";
+import panamaVideo from "@/assets/video-panama-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -51,7 +52,15 @@ const Panama = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${jungleHero})` }} />
+        <video
+          src={panamaVideo}
+          poster={jungleHero}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-foreground/75" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
