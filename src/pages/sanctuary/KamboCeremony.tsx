@@ -7,7 +7,8 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
-import kamboVideo from "@/assets/video-kambo-hero.mp4.asset.json";
+import kamboVideoUrl from "@/assets/video-kambo-hero-v2.mp4?url";
+const kamboVideo = { url: kamboVideoUrl };
 
 const COED_URL = "https://www.eventbrite.com/e/kambo-a-sacred-cleansing-ceremony-registration-822085920117?aff=ebdsoporgprofile";
 const WOMENS_URL = "https://www.eventbrite.com/e/kambo-for-women-the-sacred-release-tickets-1989115971416?aff=ebdsoporgprofile";
