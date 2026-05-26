@@ -7,10 +7,10 @@ import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
 import egyptVideo from "@/assets/video-egypt-hero-v2.mp4";
-import egyptPyramids from "@/assets/immersion-egypt-pyramids.jpg";
-import egyptTemple from "@/assets/immersion-egypt-temple.jpg";
-import egyptNile from "@/assets/immersion-egypt-nile.jpg";
-import egyptDendera from "@/assets/immersion-egypt-dendera.jpg";
+import egyptCairoMosque from "@/assets/immersion-egypt-cairo-mosque.jpg";
+import egyptCourtyard from "@/assets/immersion-egypt-courtyard.jpg";
+import egyptSphinxSelfie from "@/assets/immersion-egypt-sphinx-selfie.jpg";
+import egyptFeast from "@/assets/immersion-egypt-feast.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } };
@@ -116,10 +116,10 @@ const Egypt = () => {
           </div>
 
           <div className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl"><img src={egyptPyramids} alt="Great Pyramids of Giza at sunrise" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={egyptTemple} alt="Sunlight inside an ancient Kemetic temple" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={egyptNile} alt="Felucca sailing the Nile at sunset" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
-            <div className="overflow-hidden rounded-2xl"><img src={egyptDendera} alt="Dendera ceiling with sacred zodiac" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptCairoMosque} alt="Sacred Cairo skyline with mosque domes and minarets" loading="lazy" className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptCourtyard} alt="Sacred courtyard of an ancient Cairo mosque with green dome" loading="lazy" className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptSphinxSelfie} alt="Pilgrim standing in the presence of the Great Sphinx of Giza" loading="lazy" className="h-72 w-full object-cover md:h-80" /></div>
+            <div className="overflow-hidden rounded-2xl"><img src={egyptFeast} alt="Traditional Egyptian feast shared in sacred community" loading="lazy" className="h-72 w-full object-cover md:h-80" /></div>
           </div>
         </div>
       </section>
