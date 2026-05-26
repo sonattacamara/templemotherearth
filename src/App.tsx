@@ -70,6 +70,13 @@ import MobileStickyBar from "@/components/MobileStickyBar";
 
 const queryClient = new QueryClient();
 
+const ExternalRedirect = ({ to }: { to: string }) => {
+  if (typeof window !== "undefined") {
+    window.location.replace(to);
+  }
+  return null;
+};
+
 const App = () => (
   <HelmetProvider>
   <QueryClientProvider client={queryClient}>
