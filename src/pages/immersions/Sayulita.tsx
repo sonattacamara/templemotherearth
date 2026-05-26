@@ -9,6 +9,7 @@ import Navigation from "@/components/Navigation";
 import beachHero from "@/assets/costa-rica-palms-beach.jpg";
 import jungleHero from "@/assets/community-retreat-jungle.jpg";
 import jungleGroup from "@/assets/community-jungle-group.jpg";
+import sayulitaVideo from "@/assets/video-sayulita-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } };
@@ -48,7 +49,15 @@ const Sayulita = () => {
       <PageBreadcrumb items={[{ label: "Immersions" }, { label: "Infinite Yes · Sayulita" }]} />
 
       <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <img src={beachHero} alt="Sayulita Pacific shore at golden hour" className="absolute inset-0 h-full w-full object-cover" />
+        <video
+          src={sayulitaVideo}
+          poster={beachHero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">

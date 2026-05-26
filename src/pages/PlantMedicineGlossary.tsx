@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
+import { Helmet } from "react-helmet-async";
 
 /* ─── Category Icons & Colors ─── */
 const categoryMeta: Record<string, { icon: React.ReactNode; accent: string }> = {
@@ -294,6 +295,25 @@ const PlantMedicineGlossary = () => {
 
   const hasFilters = searchQuery || activeCategory || activeRegion;
 
+  /* ─── Structured data for AI scrapers & search engines ─── */
+  const definedTermSetJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    name: "Sacred Plant Medicine Glossary",
+    description:
+      "Reference glossary of sacred earth sacraments, entheogenic plant teachers, master plant dieta plants, cleansing allies, and sacred fungi honored within global ceremonial traditions.",
+    url: "https://templemotherearth.org/plant-medicine-glossary",
+    inDefinedTermSet: glossaryData.flatMap((cat) =>
+      cat.entries.map((entry) => ({
+        "@type": "DefinedTerm",
+        name: entry.name,
+        alternateName: entry.botanical,
+        description: `${entry.description} Origin: ${entry.origin}.`,
+        inDefinedTermSet: cat.category,
+      })),
+    ),
+  };
+
   return (
     <div className="min-h-screen bg-[hsl(114,36%,10%)] text-[hsl(40,30%,92%)]">
       <SEOHead
@@ -301,24 +321,13 @@ const PlantMedicineGlossary = () => {
         description="Comprehensive guide to sacred plant sacraments including Kambo, Sacred Vine, Sacred Fungi, San Pedro, cacao, and traditional ceremonial practices worldwide."
         path="/plant-medicine-glossary"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(definedTermSetJsonLd)}</script>
+      </Helmet>
       <Navigation />
 
-      {/* ═══ RFRA DISCLAIMER ═══ */}
-      <div className="bg-[hsl(105,30%,8%)] border-b border-[hsla(45,70%,49%,0.15)] pt-24 pb-0">
-        <div className="max-w-[860px] mx-auto px-6 md:px-12">
-          <div className="bg-[hsl(105,30%,12%)] border border-[hsla(45,70%,49%,0.25)] p-6 md:p-8">
-            <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-3 text-center font-bold">
-              Sacred Sacrament Reference · Religious Use Only
-            </p>
-            <p className="font-serif text-[14px] text-[hsl(35,30%,68%)] leading-relaxed text-center">
-              This glossary describes sacred sacraments as understood within the theology of Temple Mother Earth, a 508(c)(1)(A) protected autonomous religious institution. All references to sacred medicines describe their ceremonial and theological significance within our congregation's legally protected religious practice under the Religious Freedom Restoration Act (RFRA), 42 U.S.C. § 2000bb et seq., and the First Amendment to the United States Constitution. Nothing on this page constitutes medical advice, legal advice, or encouragement of any activity outside of our protected religious ceremonies.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* ═══ HERO ═══ */}
-      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 px-6 md:px-12 overflow-hidden">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[hsla(114,36%,6%,0.9)] via-[hsla(114,36%,10%,0.5)] to-[hsl(114,36%,10%)] -z-10" />
         <div className="absolute inset-0 opacity-[0.03] -z-10"
           style={{
@@ -464,6 +473,25 @@ const PlantMedicineGlossary = () => {
         )}
       </main>
 
+      {/* ═══ MACHINE-READABLE FULL TEXT (for AI crawlers · visually hidden, semantic) ═══ */}
+      <div className="sr-only" aria-hidden="true">
+        <h2>Full Sacred Plant Medicine Glossary · Complete Reference</h2>
+        {glossaryData.map((cat) => (
+          <section key={cat.category}>
+            <h3>{cat.category}</h3>
+            <p>{cat.description}</p>
+            {cat.entries.map((entry) => (
+              <article key={entry.name}>
+                <h4>{entry.name}</h4>
+                <p><strong>Botanical:</strong> {entry.botanical}</p>
+                <p><strong>Origin:</strong> {entry.origin}</p>
+                <p>{entry.description}</p>
+              </article>
+            ))}
+          </section>
+        ))}
+      </div>
+
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ INTERNATIONAL LOCATIONS ═══ */}
@@ -523,11 +551,14 @@ const PlantMedicineGlossary = () => {
 
       {/* ─── RFRA Footer ─── */}
       <footer className="bg-[hsl(105,30%,8%)] border-t border-[hsl(100,25%,18%)] py-8 px-6 md:px-12 text-center">
+        <p className="font-sans text-[8px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] leading-loose mb-3 font-bold">
+          Sacred Sacrament Reference · Religious Use Only
+        </p>
+        <p className="font-serif text-[12px] text-[hsl(35,30%,60%)] leading-relaxed max-w-[860px] mx-auto mb-4">
+          This glossary describes sacred sacraments as understood within the theology of Temple Mother Earth, a 508(c)(1)(A) protected autonomous religious institution. All references describe their ceremonial and theological significance within our congregation's legally protected religious practice under the Religious Freedom Restoration Act (RFRA), 42 U.S.C. § 2000bb et seq., and the First Amendment to the United States Constitution. Nothing on this page constitutes medical advice, legal advice, or encouragement of any activity outside of our protected religious ceremonies.
+        </p>
         <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,15%,40%)] leading-loose">
           &copy; 2026 Temple Mother Earth · 508(c)(1)(A) Sacred Church · Washington, DC
-        </p>
-        <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,15%,40%)] leading-loose mt-2">
-          All ceremonies held in sincere religious practice under protection of the Religious Freedom Restoration Act (RFRA) · Not a substitute for medical or psychological guidance
         </p>
       </footer>
     </div>
