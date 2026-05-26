@@ -25,7 +25,7 @@ const isGroup = (entry: NavEntry): entry is NavGroup => "items" in entry;
 const navStructure: NavEntry[] = [
   { label: "About", href: "/about", isRoute: true },
   {
-    label: "About Ceremonies",
+    label: "Ceremonies",
     items: [
       { label: "Sacred Series", href: "/sacred-series", isRoute: true },
       { label: "Kambo · Purification Fire", href: "/kambo", isRoute: true },
