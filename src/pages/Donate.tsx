@@ -10,8 +10,7 @@ import DonateCTA from "@/components/donate/DonateCTA";
 import DonateDisclosureModal from "@/components/donate/DonateDisclosureModal";
 import sacredSpaceImg from "@/assets/sacred-space.jpg";
 
-const PAYPAL_DONATE_URL =
-  "https://www.paypal.com/donate?token=NXLlyiujSJagIrl9uk8qrPC1eutuXlYi84XbzMEIMVb1EasE5b-TxfSz6XcEwmtr_Bk0lXZ-X6ph23t-qhv_9x_2VK8&useraction=commit%2Fdonate%2F&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWxvYmplY3RzLmNvbS9kb25hdGUvc2RrL2RvbmF0ZS1zZGsuanMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9wb2t1aW9tbmJnc293cGhpc2F1Z2VianVpb21iamsifX0&targetMeta=eyJ6b2lkVmVyc2lvbiI6IjlfMF81OCIsInRhcmdldCI6IkRPTkFURSIsInNka1ZlcnNpb24iOiIwLjkuMCJ9";
+const PAYPAL_DONATE_URL = "https://www.paypal.com/paypalme/TempleMotherEarth";
 
 const impactCards = [
   {
