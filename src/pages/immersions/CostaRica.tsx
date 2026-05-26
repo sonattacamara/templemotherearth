@@ -53,8 +53,8 @@ const CostaRica = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Costa Rica Sacred Immersion · Wide Open Immersion"
-        description="A sacred Costa Rica immersion held in partnership with Wide Open Immersion · jungle, ocean, ceremony, and deep nervous system restoration."
+        title="Costa Rica · WIDE OPEN Immersion · August 2 · 8, 2026 | Temple Mother Earth"
+        description="WIDE OPEN · a sacred Costa Rica immersion August 2 through August 8, 2026. Held in partnership with Wide Open Immersion · jungle, ocean, ceremony, and deep nervous system restoration."
         path="/immersions/costa-rica"
       />
       <Navigation />
@@ -74,11 +74,11 @@ const CostaRica = () => {
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.p variants={fadeUp} className="font-body text-xs tracking-[3px] uppercase text-primary/80">
-            Sacred Immersion · Costa Rica
+            Sacred Immersion · Costa Rica · WIDE OPEN
           </motion.p>
-          <motion.p variants={fadeUp} className="mt-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-            August 2 · 8, 2026
-          </motion.p>
+          <motion.div variants={fadeUp} className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            August 2 · August 8, 2026
+          </motion.div>
           <motion.h1 variants={fadeUp} className="mt-3 font-display text-3xl font-bold text-primary-foreground md:text-5xl">
             The Jungle Is Calling You Home
           </motion.h1>
