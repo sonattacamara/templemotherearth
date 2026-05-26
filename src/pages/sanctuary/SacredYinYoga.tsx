@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
-import yogaVideo from "@/assets/video-yoga-hero.mp4.asset.json";
+import yogaVideoUrl from "@/assets/video-yoga-hero-v2.mp4?url";
+const yogaVideo = { url: yogaVideoUrl };
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
