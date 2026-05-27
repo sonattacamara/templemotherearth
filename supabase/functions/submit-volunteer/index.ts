@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { upsertGHLContact } from "../_shared/ghl-contact.ts";
+import { validateLead } from "../_shared/validation.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -14,13 +15,14 @@ serve(async (req) => {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone, interests, availability, experience, whyJoin, roleTags, source } = body;
-
-    if (!firstName || !lastName || !email) {
-      return new Response(JSON.stringify({ error: "First name, last name, and email are required." }), {
+    const { interests, availability, experience, whyJoin, roleTags, source } = body;
+    const v = validateLead(body);
+    if (!v.ok) {
+      return new Response(JSON.stringify({ error: v.error }), {
         status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
+    const { firstName, lastName, email, phone } = v.value;
 
     const tags = ["volunteer-application"];
     if (Array.isArray(roleTags)) {
@@ -31,11 +33,11 @@ serve(async (req) => {
     if (source === "scholarship-page") tags.push("scholarship-applicant");
 
     const ghlResult = await upsertGHLContact({
-      firstName: String(firstName).trim(),
-      lastName: String(lastName).trim(),
-      name: `${String(firstName).trim()} ${String(lastName).trim()}`,
-      email: String(email).trim().toLowerCase(),
-      phone: String(phone || "").trim(),
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`,
+      email,
+      phone,
       tags,
       source: source === "scholarship-page" ? "scholarship-page" : "volunteer-page",
     });
