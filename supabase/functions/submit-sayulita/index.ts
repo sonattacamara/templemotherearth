@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { upsertGHLContact } from "../_shared/ghl-contact.ts";
+import { validateLead } from "../_shared/validation.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -10,17 +11,19 @@ const corsHeaders = {
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
   try {
-    const { firstName, lastName, email, phone } = await req.json();
-    if (!firstName || !lastName || !email) {
-      return new Response(JSON.stringify({ error: "First name, last name, and email are required." }),
+    const body = await req.json();
+    const v = validateLead(body);
+    if (!v.ok) {
+      return new Response(JSON.stringify({ error: v.error }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
+    const { firstName, lastName, email, phone } = v.value;
     const result = await upsertGHLContact({
-      firstName: String(firstName).trim(),
-      lastName: String(lastName).trim(),
-      name: `${String(firstName).trim()} ${String(lastName).trim()}`,
-      email: String(email).trim().toLowerCase(),
-      phone: String(phone || "").trim(),
+      firstName,
+      lastName,
+      name: `${firstName} ${lastName}`,
+      email,
+      phone,
       tags: ["sayulita-immersion", "infinite-yes", "mexico-2026"],
       source: "sayulita-infinite-yes-application",
     });
