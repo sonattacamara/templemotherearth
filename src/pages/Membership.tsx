@@ -15,6 +15,9 @@ import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
 import membershipVideo from "@/assets/video-membership-hero.mp4";
+import walkingVideoAsset from "@/assets/video-membership-walking.mp4.asset.json";
+
+const walkingVideo = walkingVideoAsset.url;
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
