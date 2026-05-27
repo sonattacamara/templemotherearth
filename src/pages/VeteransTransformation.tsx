@@ -6,6 +6,7 @@ import { Shield, Heart, Brain, Users, Phone, MessageCircle, ChevronDown, Chevron
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/veterans-hero.jpg";
+import veteransVideo from "@/assets/video-veterans-hero.mp4";
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 
@@ -284,7 +285,16 @@ const VeteransTransformation = () => {
       {/* ═══════ HERO ═══════ */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Silhouette of a warrior at sunrise in the forest" className="h-full w-full object-cover" />
+          <video
+            src={veteransVideo}
+            poster={heroImg}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="h-full w-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/70 via-[#1A1A1A]/50 to-[#1A1A1A]" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center pt-24 pb-16">
@@ -406,6 +416,15 @@ const VeteransTransformation = () => {
             <h2 className="mt-4 font-display text-3xl font-bold text-[#2F4F4F] md:text-5xl">
               Kambo: The Warrior's Medicine That Heals What Pills Cannot
             </h2>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mx-auto max-w-4xl mb-12 overflow-hidden rounded-2xl shadow-2xl">
+            <img
+              src={heroImg}
+              alt="Silhouette of a warrior at sunrise in the forest, awakening to sacred earth medicine"
+              className="w-full h-[280px] md:h-[420px] object-cover"
+              loading="lazy"
+            />
           </motion.div>
 
           <motion.div variants={fadeUp} className="mx-auto max-w-3xl space-y-6 font-body text-[#2F4F4F]/80 leading-relaxed">

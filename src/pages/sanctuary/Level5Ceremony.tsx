@@ -3,6 +3,9 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import level5VideoHero from "@/assets/video-level5-3.mp4";
+import level5VideoA from "@/assets/video-level5-1.mp4";
+import level5VideoB from "@/assets/video-level5-2.mp4";
 
 const APPLY_URL = "https://www.eventbrite.com/e/level-5-the-initiation-tickets-1989119802876?aff=ebdsoporgprofile";
 const KAMBO_INFO_URL = "/kambo";
@@ -51,12 +54,15 @@ const Level5Ceremony = () => (
 
     {/* HERO */}
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050804]">
-      <img
-        src="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-        alt="Sacred ceremony space with candlelight for Kambo, Hapé, and Sananga purification rituals"
+      <video
+        src={level5VideoHero}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: "saturate(0.3) brightness(0.25) hue-rotate(-10deg)" }}
-        loading="eager"
+        style={{ filter: "saturate(0.55) brightness(0.45)" }}
       />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_60%,rgba(45,74,40,0.4)_0%,transparent_60%),radial-gradient(ellipse_100%_50%_at_50%_100%,rgba(91,168,74,0.08)_0%,transparent_50%)]" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#050804] via-[rgba(5,8,4,0.6)] to-[rgba(5,8,4,0.3)]" />
