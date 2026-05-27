@@ -100,7 +100,7 @@ const fadeUp = {
 };
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 
-const EVENTBRITE_TICKET = "https://bit.ly/ARTExpo";
+const EVENTBRITE_TICKET = "https://www.eventbrite.com/e/1989536196320/?aff=oddtdtcreator";
 
 const MEDIUMS = [
   "Painting", "Sculpture", "Photography", "Digital Art", "Mixed Media",
@@ -233,7 +233,7 @@ const SacredArtExpo = () => {
               I'm an Artist · Apply <ArrowDown className="h-4 w-4" />
             </a>
             <a
-              href="https://www.eventbrite.com/e/frequency-fungi-flow-a-sacred-ecstatic-dance-temple-gathering-registration-1097503254779?aff=ebdsoporgprofile"
+              href="https://www.eventbrite.com/e/1989536196320/?aff=oddtdtcreator"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider border-2 transition hover:bg-[#c9a84c] hover:text-[#0d0b08]"
