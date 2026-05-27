@@ -11,16 +11,59 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import { trackForm } from "@/hooks/useAnalytics";
+
+const EVENTBRITE_TICKET = "https://www.eventbrite.com/e/1989536196320/?aff=oddtdtcreator";
+
+/** Reusable ticket-purchase anchor with loading/disabled state + analytics. */
+const TicketLink = ({
+  source,
+  className,
+  style,
+  children,
+}: {
+  source: string;
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}) => {
+  const [clicked, setClicked] = useState(false);
+  const handle = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (clicked) {
+      e.preventDefault();
+      return;
+    }
+    setClicked(true);
+    // Fire analytics (don't block navigation)
+    void trackForm("art-expo-ticket-click", { source, url: EVENTBRITE_TICKET });
+    // Re-enable after 4s in case the new tab is blocked / user returns
+    window.setTimeout(() => setClicked(false), 4000);
+  };
+  return (
+    <a
+      href={EVENTBRITE_TICKET}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={handle}
+      aria-disabled={clicked}
+      data-loading={clicked || undefined}
+      className={className}
+      style={{ ...style, ...(clicked ? { opacity: 0.65, pointerEvents: "none" } : {}) }}
+    >
+      {clicked ? "Opening…" : children}
+    </a>
+  );
+};
 
 interface FlipCardProps {
   icon: React.ElementType;
   title: string;
   detail: string;
   intention: string;
-  link: string;
+  source: string;
 }
 
-const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardProps) => {
+const EventFlipCard = ({ icon: Icon, title, detail, intention, source }: FlipCardProps) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -77,16 +120,13 @@ const EventFlipCard = ({ icon: Icon, title, detail, intention, link }: FlipCardP
               {intention}
             </p>
           </div>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
+          <TicketLink
+            source={`flipcard-${source}`}
             className="mt-4 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 font-sans text-xs font-bold uppercase tracking-wider transition hover:opacity-90"
             style={{ background: "#c9a84c", color: "#0d0b08" }}
           >
             Reserve Your Experience <ArrowRight className="h-3.5 w-3.5" />
-          </a>
+          </TicketLink>
         </div>
       </motion.div>
     </motion.div>
@@ -99,8 +139,6 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
 };
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
-
-const EVENTBRITE_TICKET = "https://www.eventbrite.com/e/1989536196320/?aff=oddtdtcreator";
 
 const MEDIUMS = [
   "Painting", "Sculpture", "Photography", "Digital Art", "Mixed Media",
@@ -232,15 +270,13 @@ const SacredArtExpo = () => {
             >
               I'm an Artist · Apply <ArrowDown className="h-4 w-4" />
             </a>
-            <a
-              href="https://www.eventbrite.com/e/1989536196320/?aff=oddtdtcreator"
-              target="_blank"
-              rel="noopener noreferrer"
+            <TicketLink
+              source="hero"
               className="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider border-2 transition hover:bg-[#c9a84c] hover:text-[#0d0b08]"
               style={{ borderColor: "#c9a84c", color: "#c9a84c", background: "transparent" }}
             >
               I Want to See the Art · Get Tickets <ArrowRight className="h-4 w-4" />
-            </a>
+            </TicketLink>
           </motion.div>
         </motion.div>
       </section>
@@ -282,24 +318,24 @@ const SacredArtExpo = () => {
                 title: "Spring Equinox",
                 detail: "March 28, 2026 · 7·10 PM",
                 intention: "A celebration of renewal and rebirth. As the Earth awakens, we gather to honor the creative spirit within · displaying art that reflects transformation, new beginnings, and the sacredness of spring.",
-                link: "https://bit.ly/ARTExpo",
+                source: "spring-equinox",
               },
               {
                 icon: LeafIcon,
                 title: "Fall Equinox",
                 detail: "Date TBD · Fall 2026",
                 intention: "A ceremony of harvest and reflection. As the seasons shift, we invite art that speaks to gratitude, ancestral wisdom, and the beauty found in surrender and letting go.",
-                link: "https://bit.ly/ARTExpo",
+                source: "fall-equinox",
               },
               {
                 icon: Brush,
                 title: "Canvas & Ceremony",
                 detail: "July 2026 · Immersive art + ceremony",
                 intention: "An immersive evening where art-making becomes ceremony. Guests create alongside artists in a guided, sacred space · blending live painting, sound healing, and communal expression.",
-                link: "https://bit.ly/ARTExpo",
+                source: "canvas-ceremony",
               },
             ].map((e) => (
-              <EventFlipCard key={e.title} icon={e.icon} title={e.title} detail={e.detail} intention={e.intention} link={e.link} />
+              <EventFlipCard key={e.title} icon={e.icon} title={e.title} detail={e.detail} intention={e.intention} source={e.source} />
             ))}
           </div>
         </motion.div>
@@ -577,15 +613,13 @@ const SacredArtExpo = () => {
             Not an artist? Come experience the expo.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-6">
-            <a
-              href={EVENTBRITE_TICKET}
-              target="_blank"
-              rel="noopener noreferrer"
+            <TicketLink
+              source="bottom-cta"
               className="inline-flex items-center gap-2 rounded-xl px-8 py-4 font-sans text-sm font-bold uppercase tracking-wider transition"
               style={{ background: "#c9a84c", color: "#0d0b08" }}
             >
               Get Your Ticket <ArrowRight className="h-4 w-4" />
-            </a>
+            </TicketLink>
           </motion.div>
           <motion.p variants={fadeUp} className="mt-4 text-sm" style={{ color: "#B8A07A66" }}>
             Questions?{" "}

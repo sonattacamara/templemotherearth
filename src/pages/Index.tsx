@@ -144,7 +144,9 @@ const Index = () => {
           preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero-overlay" />
+        {/* Lighter overlay so the video reads through the words */}
+        <div className="absolute inset-0 bg-foreground/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-foreground/20 pointer-events-none" />
 
         <motion.div
           className="relative z-10 max-w-3xl"

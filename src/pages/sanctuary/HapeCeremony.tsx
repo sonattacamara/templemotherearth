@@ -1,6 +1,6 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
-import hapeVideo from "@/assets/video-hape-hero.mp4.asset.json";
+import hapeVideo from "@/assets/video-hape-hero.mp4?url";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
@@ -45,7 +45,7 @@ const HapeCeremony = () => (
       lead="Not the thought of yourself. Not the story you've been running. The actual you, underneath all of it, quiet, present, grounded in your body on this earth. Hapé has been clearing this path for thousands of years. It knows exactly where to go."
       primaryCTA={{ label: "Secure Your Place", href: "https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true", external: true }}
       secondaryCTA={{ label: "Learn More ↓", href: "#about" }}
-      backgroundVideo={hapeVideo.url}
+      backgroundVideo={hapeVideo}
     />
 
     <SanctuarySection id="about" eyebrow="What Hapé Is" title={<>The Forest's Most<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Direct Transmission</em></>}>
