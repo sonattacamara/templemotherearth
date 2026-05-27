@@ -14,6 +14,8 @@ import { useToast } from "@/hooks/use-toast";
 import drGeorge from "@/assets/facilitator-george-new.jpg";
 import logo from "@/assets/logo.png";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
+import egyptVideo from "@/assets/video-egypt-hero.mp4?url";
+import kemeticVideo from "@/assets/video-kemetic-hero.mp4?url";
 // Hero now uses the founder image as a full-bleed background (user request).
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];

@@ -24,7 +24,7 @@ const hapeJsonLd = {
   },
   offers: {
     "@type": "Offer",
-    url: "https://bit.ly/HapeCircle",
+    url: "https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true",
     availability: "https://schema.org/InStock",
   },
 };

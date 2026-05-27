@@ -12,13 +12,13 @@ const EVENTBRITE_URL =
 
 const WomensCircle = () => (
   <SacredSeriesLayout
-    title="Women's Wellness Wednesdays · Temple Mother Earth"
-    description="Women's Wellness Wednesdays · a weekly sisterhood circle for reflection, restoration, and the embodied feminine, held at Temple Mother Earth, Washington DC."
+    title="The Circle · A Wombman Sanctuary · Temple Mother Earth"
+    description="The Circle · A Wombman Sanctuary · a weekly sisterhood gathering for reflection, restoration, and the embodied feminine, held at Temple Mother Earth, Washington DC."
     path="/womens-circle"
   >
     <SanctuaryHero
       dateBadge="Weekly · Wednesdays"
-      eyebrow="Women's Wellness Wednesdays"
+      eyebrow="The Circle · A Wombman Sanctuary"
       title={
         <>
           A Weekly Sanctuary for<br />
@@ -48,7 +48,7 @@ const WomensCircle = () => (
     >
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>
-          Women's Wellness Wednesdays is a weekly gathering for women who want to step out of the noise of the week and into a sanctuary of presence, breath, and shared wisdom.
+          The Circle · A Wombman Sanctuary is a weekly gathering for women who want to step out of the noise of the week and into a sanctuary of presence, breath, and shared wisdom.
         </p>
         <p>
           Each circle weaves together grounding practice, somatic restoration, intentional reflection, and the kind of conversation that only happens when women hold space for one another.
@@ -98,7 +98,7 @@ const WomensCircle = () => (
 
     <SanctuaryPullQuote
       quote="Wednesdays used to be the day I survived. Now it's the day I come home. I didn't realize how starved I was for sisterhood until I sat in this circle."
-      attribution="Women's Wellness Wednesdays · Washington, DC"
+      attribution="The Circle · A Wombman Sanctuary · Washington, DC"
     />
 
     <SanctuaryCTA
