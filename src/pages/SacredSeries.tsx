@@ -19,7 +19,7 @@ import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 import kamboFrogArt from "@/assets/kambo-frog-art.png";
 import sacredSeriesHeroVideo from "@/assets/video-sacred-series-hero.mp4?url";
 
-const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/sacred-series-week-vol-5-new-earth-rising-registration-1985533292527?aff=ebdsoporgprofile";
+const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/1990210417935/?aff=oddtdtcreator";
 
 const sacredSeriesJsonLd = {
   "@context": "https://schema.org",
