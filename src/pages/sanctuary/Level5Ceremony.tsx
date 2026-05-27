@@ -62,10 +62,10 @@ const Level5Ceremony = () => (
         playsInline
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: "saturate(0.55) brightness(0.45)" }}
+        style={{ filter: "saturate(0.75) brightness(0.7)" }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_60%,rgba(45,74,40,0.4)_0%,transparent_60%),radial-gradient(ellipse_100%_50%_at_50%_100%,rgba(91,168,74,0.08)_0%,transparent_50%)]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#050804] via-[rgba(5,8,4,0.6)] to-[rgba(5,8,4,0.3)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_60%,rgba(45,74,40,0.25)_0%,transparent_60%)]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#050804] via-[rgba(5,8,4,0.35)] to-transparent" />
 
       <motion.div
         className="relative z-10 text-center px-10 max-w-[1000px]"
@@ -170,7 +170,7 @@ const Level5Ceremony = () => (
         playsInline
         preload="auto"
         className="w-full h-[55vh] md:h-[70vh] object-cover"
-        style={{ filter: "saturate(0.7) brightness(0.7)" }}
+        style={{ filter: "saturate(0.9) brightness(0.85)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#050804]/40 via-transparent to-[#050804]/80 pointer-events-none" />
     </section>
@@ -199,7 +199,7 @@ const Level5Ceremony = () => (
         playsInline
         preload="auto"
         className="w-full h-[55vh] md:h-[70vh] object-cover"
-        style={{ filter: "saturate(0.7) brightness(0.7)" }}
+        style={{ filter: "saturate(0.9) brightness(0.85)" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-[#050804]/40 via-transparent to-[#050804]/80 pointer-events-none" />
     </section>

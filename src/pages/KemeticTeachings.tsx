@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import drGeorge from "@/assets/facilitator-george-new.jpg";
 import logo from "@/assets/logo.png";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
-import kemeticVideo from "@/assets/video-kemetic-hero.mp4";
+// Hero now uses the founder image as a full-bleed background (user request).
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -203,25 +203,18 @@ const KemeticTeachings = () => {
         <motion.div className="h-full bg-secondary" style={{ width: `${scrollProgress}%` }} />
       </div>
 
-      {/* ── HERO ── */}
-      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
-        <video
-          src={kemeticVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.85) brightness(0.5)" }}
+      {/* ── HERO · image-as-background with letters on top ── */}
+      <section className="relative min-h-[78vh] flex items-center justify-center overflow-hidden">
+        <img
+          src={drGeorge}
+          alt="Dr. George Xavier Love, Jr., Kemetic wisdom keeper at Temple Mother Earth"
+          className="absolute inset-0 w-full h-full object-cover object-[center_22%]"
+          style={{ filter: "saturate(0.95) brightness(0.55)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/80 via-foreground/70 to-foreground" />
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_30%,hsl(48_70%_50%/0.3),transparent_70%)]" />
-        <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/40 to-foreground/85" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_40%,hsl(48_70%_50%/0.18),transparent_70%)]" />
+        <div className="relative z-10 mx-auto max-w-5xl px-4 text-center py-28 md:py-36">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
-            <motion.div variants={fadeUp} className="flex justify-center mb-6">
-              <img src={drGeorge} alt="Dr. George Xavier Love, Jr., Kemetic wisdom keeper and Qigong master at Temple Mother Earth" className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover object-[center_15%] border-4 border-secondary/40 shadow-xl" />
-            </motion.div>
             <motion.p variants={fadeUp} className="text-secondary font-body text-sm tracking-[0.25em] uppercase mb-4">
               Temple Mother Earth Presents
             </motion.p>
