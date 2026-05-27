@@ -16,6 +16,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import logo from "@/assets/logo.png";
 import { supabase } from "@/integrations/supabase/client";
 import { trackForm } from "@/hooks/useAnalytics";
+import beginJourneyVideoAsset from "@/assets/video-begin-journey.mp4.asset.json";
+
+const beginJourneyVideo = beginJourneyVideoAsset.url;
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -544,18 +547,31 @@ const CeremonyIntake = () => {
       <SEOHead title="Begin Your Journey | Sacred Intake Form" description="Complete your sacred intake form to start your healing journey with Temple Mother Earth. Kambo, ayahuasca, and plant medicine ceremonies in DC." path="/ceremony-intake" />
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative flex items-center justify-center px-4 pt-32 pb-16 md:pt-40 md:pb-24">
-        <motion.div className="mx-auto max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
-          <motion.img variants={fadeUp} src={logo} alt="Temple Mother Earth" className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/30" />
+      {/* Hero · with full-bleed walking-together video */}
+      <section className="relative flex items-center justify-center px-4 pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden min-h-[70vh]">
+        <video
+          src={beginJourneyVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/95" />
+        <motion.div className="relative z-10 mx-auto max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
+          <motion.img variants={fadeUp} src={logo} alt="Temple Mother Earth" className="mx-auto mb-6 h-20 w-20 rounded-full object-cover shadow-lg ring-2 ring-primary/40" />
+          <motion.p variants={fadeUp} className="font-body text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">
+            You Don't Walk This Alone
+          </motion.p>
           <motion.h1 variants={fadeUp} className="font-display text-3xl font-bold text-foreground md:text-5xl">Begin Your Journey</motion.h1>
-          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+          <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-lg text-foreground/85">
             Your safety and sacred experience are our highest priority. This intake process helps our facilitators prepare the most supportive sacred journey for your healing.
           </motion.p>
-          <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground/80">
+          <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-sm text-foreground/65">
             As a 508(c)(1)(A) religious organization operating under the Religious Freedom Restoration Act (RFRA), Temple Mother Earth is committed to responsible, ethical, and legally compliant facilitation of Earth Medicine ceremonies.
           </motion.p>
-          <motion.div variants={fadeUp} className="mx-auto mt-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2 text-sm">
+          <motion.div variants={fadeUp} className="mx-auto mt-6 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-primary/40 bg-background/80 px-5 py-2 text-sm backdrop-blur">
             <Mail className="h-4 w-4 text-primary" />
             <span className="text-foreground/80">Questions before you start?</span>
             <Link to="/contact" className="font-semibold text-primary underline-offset-4 hover:underline">
