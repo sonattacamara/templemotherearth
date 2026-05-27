@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import drGeorge from "@/assets/facilitator-george-new.jpg";
 import logo from "@/assets/logo.png";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
+import kemeticVideo from "@/assets/video-kemetic-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -204,7 +205,17 @@ const KemeticTeachings = () => {
 
       {/* ── HERO ── */}
       <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground via-foreground/95 to-foreground" />
+        <video
+          src={kemeticVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.85) brightness(0.5)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/80 via-foreground/70 to-foreground" />
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_30%,hsl(48_70%_50%/0.3),transparent_70%)]" />
         <div className="relative z-10 mx-auto max-w-5xl px-4 text-center">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
@@ -223,6 +234,19 @@ const KemeticTeachings = () => {
             <motion.p variants={fadeUp} className="font-body text-sm text-secondary/80 italic">
               High Priest of Kemetic Wisdom · Keeper of the Wisdom of IamHetep
             </motion.p>
+            <motion.div variants={fadeUp} className="mt-10">
+              <Link
+                to="/immersions/egypt"
+                className="inline-flex items-center gap-3 rounded-xl border-2 border-secondary/60 bg-secondary/10 px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.2em] text-secondary backdrop-blur transition hover:bg-secondary hover:text-secondary-foreground"
+              >
+                <Sun className="h-4 w-4" />
+                Walk the Land of Kemet · February Sacred Egypt Pilgrimage
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <p className="mt-3 font-body text-xs text-primary-foreground/50 italic">
+                Join us in February on a sacred pilgrimage to Egypt · the living source of these teachings.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>

@@ -8,6 +8,7 @@ import {
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
 import { Helmet } from "react-helmet-async";
+import plantGlossaryVideoAsset from "@/assets/video-plant-glossary-hero.mp4.asset.json";
 
 /* ─── Category Icons & Colors ─── */
 const categoryMeta: Record<string, { icon: React.ReactNode; accent: string }> = {
@@ -328,7 +329,17 @@ const PlantMedicineGlossary = () => {
 
       {/* ═══ HERO ═══ */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsla(114,36%,6%,0.9)] via-[hsla(114,36%,10%,0.5)] to-[hsl(114,36%,10%)] -z-10" />
+        <video
+          src={plantGlossaryVideoAsset.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover -z-20"
+          style={{ filter: "saturate(0.85) brightness(0.45)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsla(114,36%,6%,0.85)] via-[hsla(114,36%,10%,0.7)] to-[hsl(114,36%,10%)] -z-10" />
         <div className="absolute inset-0 opacity-[0.03] -z-10"
           style={{
             backgroundImage: `radial-gradient(circle at 25% 50%, hsl(45,70%,49%) 1px, transparent 1px), radial-gradient(circle at 75% 30%, hsl(45,70%,49%) 1px, transparent 1px)`,

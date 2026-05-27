@@ -14,6 +14,7 @@ import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
+import membershipVideo from "@/assets/video-membership-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -194,9 +195,15 @@ const Membership = () => {
 
       {/* ───── HERO ───── */}
       <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${communityImg})` }}
+        <video
+          src={membershipVideo}
+          poster={communityImg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero-overlay" />
 
