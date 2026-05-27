@@ -6,7 +6,7 @@ const BANNER = {
   text: "Sacred Series · Seven Days of Sacred Offerings",
   subtext: "Washington DC · Space limited · Reserve your place now",
   ctaLabel: "Reserve Your Place →",
-  ctaHref: "https://www.eventbrite.com/e/sacred-series-week-vol-5-new-earth-rising-registration-1985533292527?aff=ebdsoporgprofile",
+  ctaHref: "https://www.eventbrite.com/e/1990210417935/?aff=oddtdtcreator",
 };
 
 const SeasonalBanner = () => {
