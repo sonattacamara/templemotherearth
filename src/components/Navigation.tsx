@@ -45,7 +45,7 @@ const navStructure: NavEntry[] = [
       { label: "Sacred Tea House", href: "/tea-house", isRoute: true },
       { label: "Community Potluck", href: "/potluck", isRoute: true },
       { label: "The Cove · Men's Circle", href: "/mens-circle", isRoute: true },
-      { label: "Women's Wellness Wednesdays", href: "/womens-circle", isRoute: true },
+      { label: "The Circle · A Wombman Sanctuary", href: "/womens-circle", isRoute: true },
       { label: "Veterans Program", href: "/veterans-transformation-program", isRoute: true },
     ],
   },

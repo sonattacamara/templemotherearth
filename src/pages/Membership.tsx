@@ -15,6 +15,9 @@ import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
 import membershipVideo from "@/assets/video-membership-hero.mp4";
+import walkingVideoAsset from "@/assets/video-membership-walking.mp4.asset.json";
+
+const walkingVideo = walkingVideoAsset.url;
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -338,6 +341,36 @@ const Membership = () => {
             Each stage unfolds naturally as you grow. Move at your own pace · 
             we're here every step of the way.
           </motion.p>
+
+          {/* ── Walking video · Your Journey Starts with a Single Step ── */}
+          <motion.div
+            variants={fadeUp}
+            className="relative mt-12 overflow-hidden rounded-2xl border border-primary/20 shadow-2xl aspect-[16/9]"
+          >
+            <video
+              src={walkingVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/40 to-foreground/30" />
+            <div className="absolute inset-0 flex items-end justify-center p-6 md:p-10">
+              <div className="text-center max-w-xl">
+                <p className="font-body text-[10px] font-bold uppercase tracking-[0.3em] text-primary mb-3">
+                  One Step at a Time
+                </p>
+                <h3 className="font-display text-2xl md:text-4xl font-semibold text-primary-foreground leading-tight">
+                  Your Journey Starts with a Single Step
+                </h3>
+                <p className="mt-3 text-sm md:text-base text-primary-foreground/85 italic">
+                  Every great journey begins right here. Walk with us.
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Sequential Tier Stages */}
           <div className="mt-16">

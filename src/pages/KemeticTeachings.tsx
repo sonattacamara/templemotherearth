@@ -14,6 +14,8 @@ import { useToast } from "@/hooks/use-toast";
 import drGeorge from "@/assets/facilitator-george-new.jpg";
 import logo from "@/assets/logo.png";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
+import egyptVideo from "@/assets/video-egypt-hero.mp4?url";
+import kemeticVideo from "@/assets/video-kemetic-hero.mp4?url";
 // Hero now uses the founder image as a full-bleed background (user request).
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -695,18 +697,34 @@ const KemeticTeachings = () => {
       {/* ── FOOTER CTA ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={ctaFooterImg} alt="Temple Mother Earth sacred ceremony community gathering for Cacao and Hapé ceremonies" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-foreground/85" />
+          <video
+            src={egyptVideo}
+            poster={ctaFooterImg}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-foreground/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-foreground/40 via-foreground/60 to-foreground/90" />
         </div>
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Welcome Home</h2>
-          <p className="font-body text-primary-foreground/70 mb-8">
-            The teachings of Kemet are alive in our temple. Come, remember what your ancestors always knew.
+          <p className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-secondary mb-4">Walk the Land of Kemet</p>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-primary-foreground mb-4">Welcome Home</h2>
+          <p className="font-body text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+            The teachings of Kemet are alive in our temple · and alive in the land itself. Come, remember what your ancestors always knew.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/ceremony-intake">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80 font-body w-full sm:w-auto">
                 Begin Your Journey
+              </Button>
+            </Link>
+            <Link to="/immersions/egypt">
+              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 font-body w-full sm:w-auto">
+                Join Us in Egypt · February <ArrowRight size={16} className="ml-2" />
               </Button>
             </Link>
             <a href="https://www.eventbrite.com/o/temple-of-mother-earth-29347213477" target="_blank" rel="noopener noreferrer">
