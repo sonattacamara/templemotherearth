@@ -9,6 +9,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import volunteerHero from "@/assets/community-women-blessing.jpg";
+import volunteerVideo from "@/assets/video-volunteer-hero.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 const fadeUp = {
@@ -101,7 +102,16 @@ const Volunteer = () => {
 
       {/* Hero */}
       <section className="relative flex min-h-[50vh] items-center justify-center overflow-hidden px-4 pt-20">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${volunteerHero})` }} />
+        <video
+          src={volunteerVideo}
+          poster={volunteerHero}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-foreground/70" />
         <motion.div className="relative z-10 max-w-3xl text-center" initial="hidden" animate="visible" variants={stagger}>
           <motion.div variants={fadeUp} className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">

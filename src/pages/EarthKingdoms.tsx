@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Droplets, Mountain, Droplet, Magnet, Leaf, Dna, Sun, Pill, Candy, Flower2, Globe, Brain, ShieldCheck, Zap, Cat, Snail, Bug, Sparkles, HeartPulse, Gem, Eye } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import earthVideo from "@/assets/video-earth-hero.mp4";
 
 const RevealSection = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);
@@ -286,12 +287,15 @@ const EarthKingdoms = () => {
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Ancient forest canopy for Sacred Vine, Sacred Fungi, and sacred earth medicine journeys"
+        <video
+          src={earthVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.4) brightness(0.22) hue-rotate(-15deg)" }}
-          loading="eager"
+          style={{ filter: "saturate(0.55) brightness(0.45)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050604] via-[rgba(5,6,4,0.6)] to-[rgba(5,6,4,0.3)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_100%,rgba(45,120,35,0.15)_0%,transparent_60%)]" />
