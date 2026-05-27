@@ -160,6 +160,21 @@ const Level5Ceremony = () => (
       </div>
     </SanctuarySection>
 
+    {/* Cinematic Band A */}
+    <section className="relative w-full overflow-hidden bg-[#050804]">
+      <video
+        src={level5VideoA}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="w-full h-[55vh] md:h-[70vh] object-cover"
+        style={{ filter: "saturate(0.7) brightness(0.7)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050804]/40 via-transparent to-[#050804]/80 pointer-events-none" />
+    </section>
+
     {/* WHO THIS IS FOR */}
     <SanctuarySection className="bg-[#111D0F]" eyebrow="Who This Initiation Is For" title={<>See Yourself<br /><em className="font-serif italic text-[#C8A030] text-[1.1em]">In This Initiation</em></>}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-[rgba(200,160,48,0.06)] mt-16">
@@ -173,6 +188,21 @@ const Level5Ceremony = () => (
         ))}
       </div>
     </SanctuarySection>
+
+    {/* Cinematic Band B */}
+    <section className="relative w-full overflow-hidden bg-[#050804]">
+      <video
+        src={level5VideoB}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="w-full h-[55vh] md:h-[70vh] object-cover"
+        style={{ filter: "saturate(0.7) brightness(0.7)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050804]/40 via-transparent to-[#050804]/80 pointer-events-none" />
+    </section>
 
     {/* RITUAL MAP */}
     <SanctuarySection className="bg-[#0B140A]" eyebrow="The Arc of the Day" title={<><span className="text-[hsl(40,30%,90%)]">The Ritual</span> <em className="font-serif italic text-[#C8A030]">Map</em></>}>
