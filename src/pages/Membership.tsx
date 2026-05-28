@@ -15,7 +15,6 @@ import MidImageBanner from "@/components/story/MidImageBanner";
 import midMembershipImg from "@/assets/image-mid-membership.jpg";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
-import ctaFooterImg from "@/assets/cta-footer.jpg";
 import membershipVideo from "@/assets/video-membership-hero.mp4";
 import walkingVideoAsset from "@/assets/video-membership-walking.mp4.asset.json";
 
