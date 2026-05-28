@@ -9,6 +9,8 @@ import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
 import { Helmet } from "react-helmet-async";
 import plantGlossaryVideoAsset from "@/assets/video-plant-glossary-hero.mp4.asset.json";
+import callVideo2 from "@/assets/video-call-2.mp4";
+import hugVideo2 from "@/assets/video-hug-2.mp4";
 
 /* ─── Category Icons & Colors ─── */
 const categoryMeta: Record<string, { icon: React.ReactNode; accent: string }> = {
