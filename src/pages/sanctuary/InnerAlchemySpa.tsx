@@ -2,9 +2,9 @@ import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
-import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
-
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import spaVideo from "@/assets/video-spa-hero.mp4.asset.json";
+import spaFooterVideoUrl from "@/assets/video-spa-footer.mp4?url";
 
 const SPA_EVENTBRITE = "https://www.eventbrite.com/e/inner-alchemy-wellness-spa-day-a-sacred-restoration-experience-tickets-1989403346964?aff=ebdsoporgprofile";
 
@@ -42,13 +42,13 @@ const InnerAlchemySpa = () => (
       ]} />
     </SanctuarySection>
 
-    <SanctuaryCTA
+    <FooterVideoBanner
+      video={spaFooterVideoUrl}
       eyebrow="Recurring Offering · Full Day Experience"
-      title={<>You Have Earned<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">This Day</em></>}
-      description="Not as a reward. As a necessity. Your body knows the difference. Receive your day and let the restoration begin with that one decision."
+      headline={<>You Have Earned<br /><em className="font-serif italic text-[hsl(35,65%,55%)] text-[1.1em]">This Day</em></>}
+      body="Not as a reward. As a necessity. Your body knows the difference. Receive your day and let the restoration begin with that one decision."
       ctaLabel="Reserve Your Day of Restoration"
       ctaHref={SPA_EVENTBRITE}
-      note="Community Care Model · Full day · Registration required to confirm your place"
     />
   </SacredSeriesLayout>
 );
