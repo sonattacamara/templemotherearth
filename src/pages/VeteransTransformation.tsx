@@ -316,8 +316,8 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="font-display text-4xl font-bold text-white md:text-6xl lg:text-7xl leading-tight"
           >
-            You Survived the Battlefield.{" "}
-            <span className="text-[#B8860B]">Now Survive the War Within.</span>
+            You Came Home.{" "}
+            <span className="text-[#B8860B]">But Something Stayed Over There.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -325,7 +325,7 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.7 }}
             className="mx-auto mt-8 max-w-2xl font-body text-lg text-white/80 leading-relaxed"
           >
-            When the VA, the pills, and the therapy sessions have not been enough · there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Ancient medicine for the modern warrior.
+            For the veteran who is done with the waiting room, the pill bottle, and the 3 AM ceiling. Done being passed from doctor to doctor, prescription to prescription, with no one asking the question that actually matters: <em>what is your body still carrying from over there?</em> This program was built by veterans, for veterans, to reach the root · not manage the symptom.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
