@@ -10,6 +10,7 @@ import { X } from "lucide-react";
  *   <EventbriteCheckout
  *     eventId="946929721287"
  *     label="Secure Your Place"
+ *     // (default label is now "Reserve Your Seat in the Circle")
  *   />
  */
 
@@ -52,7 +53,7 @@ export interface EventbriteCheckoutProps {
 
 export default function EventbriteCheckout({
   eventId,
-  label = "Secure Your Place",
+  label = "Reserve Your Seat in the Circle",
   fallbackUrl,
   className,
   onOrderComplete,
@@ -117,7 +118,7 @@ export default function EventbriteCheckout({
           >
             <div className="flex items-center justify-between px-5 py-3 border-b border-[hsla(45,70%,49%,0.15)]">
               <p className="font-sans text-[10px] tracking-[3px] uppercase text-[hsl(45,70%,49%)]">
-                Secure Your Place
+                Reserve Your Seat
               </p>
               <button
                 type="button"
