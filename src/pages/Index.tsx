@@ -260,7 +260,7 @@ const Index = () => {
 
             {/* Door 2 · Ready */}
             <Link
-              to="/offerings"
+              to="/#offerings"
               className="group relative flex flex-col rounded-2xl border border-primary/40 bg-primary/10 p-6 backdrop-blur transition hover:border-primary hover:bg-primary/15 md:p-7"
             >
               <Flame className="h-6 w-6 text-primary" />
