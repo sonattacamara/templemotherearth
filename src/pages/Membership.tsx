@@ -287,33 +287,6 @@ const Membership = () => {
         </motion.div>
       </section>
 
-      {/* ───── SACRED BLUEPRINT CALLOUT ───── */}
-      <section className="px-4 py-12">
-        <motion.div
-          className="mx-auto max-w-2xl"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={stagger}
-        >
-          <motion.div variants={fadeUp} className="rounded-2xl border border-primary/20 bg-primary/5 p-8 md:p-10 text-center">
-            <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">New</p>
-            <h3 className="font-display text-xl font-bold text-foreground md:text-2xl">
-              Discover Your Sacred Blueprint
-            </h3>
-            <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-lg mx-auto">
-              Your Human Design chart decoded through a sacred lens, connecting your unique energy type to the perfect membership path for your sacred journey.
-            </p>
-            <Link
-              to="/sacred-blueprint"
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary/80"
-            >
-              Get My Free Blueprint →
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
-
       {/* ───── AVATAR MIRROR · Where Are You on the Path? ───── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-card to-background px-4 py-20 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
@@ -542,15 +515,6 @@ const Membership = () => {
         headline={<>Belonging Is Built <em className="font-serif italic text-primary">One Circle at a Time</em></>}
         body="This is not a subscription. It is a vow to show up for yourself and for the people who are becoming your people."
         ctaLabel="Sit With Us"
-        ctaHref="/membership#tiers"
-      />
-
-      <FooterVideoBanner
-        video={footerMembershipVideoAsset.url}
-        eyebrow="Your Place at the Table"
-        headline={<>Become Part of<br /><em className="font-serif italic text-primary">The Family</em></>}
-        body="The circle is open. The table is set. Your seat has been waiting longer than you know."
-        ctaLabel="Become a Member"
         ctaHref="/membership#tiers"
       />
 
