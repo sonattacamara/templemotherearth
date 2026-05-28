@@ -12,9 +12,7 @@ import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import MonthlyThemeBanner from "@/components/MonthlyThemeBanner";
 import MidImageBanner from "@/components/story/MidImageBanner";
-import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import midHomeImg from "@/assets/image-mid-home.jpg";
-import footerHomeVideoAsset from "@/assets/video-footer-home-threshold.mp4.asset.json";
 
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -739,7 +737,7 @@ const Index = () => {
             Upcoming Ceremonies & Offerings
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-xl text-muted-foreground">
-             Explore our upcoming Earth Medicine ceremonies, community gatherings, and international immersions.
+             Explore our upcoming Earth Medicine ceremonies and community gatherings here in Washington, DC.
             Honor the call and step into the sacred.
           </motion.p>
 
@@ -765,48 +763,16 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Upcoming Experiences */}
-            <div className="grid gap-6 md:grid-cols-2 mb-8">
-              <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-left space-y-3">
-                <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary inline-flex items-center gap-2"><Leaf className="h-3.5 w-3.5" /> International Immersion</p>
-                <h3 className="font-display text-lg font-bold text-foreground">
-                  Wide Open · Costa Rica
-                </h3>
-                <p className="text-sm text-muted-foreground">August 2·8, 2026 · Nicoya Peninsula · 7 days</p>
-                <a
-                  href="https://costarica.templemotherearth.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                >
-                  Learn More → <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              </div>
-              <div className="rounded-xl border border-border bg-card p-6 text-left space-y-3">
-                <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🇲🇽 International Immersion</p>
-                <h3 className="font-display text-lg font-bold text-foreground">
-                  Life's Best Yes · Sayulita, Mexico
-                </h3>
-                <p className="text-sm text-muted-foreground">October 31 · November 7, 2026 · Interest list open</p>
-                <Link
-                  to="/retreats-inquiry"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-                >
-                  Express Your Interest → <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-            </div>
-
             {/* Eventbrite CTA */}
             <div className="w-full rounded-xl border border-primary/10 bg-card/30 p-8 text-center space-y-6">
               <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                 <Calendar className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-display text-xl font-bold text-foreground">
-                Browse All Upcoming Ceremonies
+                Browse This Week's Sacred Gatherings
               </h3>
               <p className="mx-auto max-w-md text-sm text-muted-foreground">
-                View our full calendar of Earth Medicine ceremonies, community gatherings, and sacred experiences on Eventbrite.
+                View our full calendar of Earth Medicine ceremonies and community gatherings.
               </p>
               <a
                 href="https://www.eventbrite.com/o/29347213477#events"
@@ -1061,15 +1027,6 @@ const Index = () => {
         eyebrow="The Threshold"
         headline={<>The Door Is Open · <em className="font-serif italic text-primary">Walk In</em></>}
         body="You did not arrive here by accident. Something in you has been listening for this. Cross the threshold when you are ready."
-        ctaLabel="Begin Your Journey"
-        ctaHref="/ceremony-intake"
-      />
-
-      <FooterVideoBanner
-        video={footerHomeVideoAsset.url}
-        eyebrow="Your Seat Is Waiting"
-        headline={<>Come Home to<br /><em className="font-serif italic text-primary">Mother Earth</em></>}
-        body="The fire is lit. The circle is forming. Take the first step and the rest will be held for you."
         ctaLabel="Begin Your Journey"
         ctaHref="/ceremony-intake"
       />

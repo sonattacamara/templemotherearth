@@ -78,7 +78,7 @@ const SacredTeaCeremony = () => (
     <SanctuaryCTA
       eyebrow="Recurring Offering · Washington, DC"
       title={<>The Sacrament<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Ready For You</em></>}
-      description="Choose your level. Secure your place. Your preparation begins the moment you register."
+      description="Choose your level. Reserve your seat in the circle. Your preparation begins the moment you register."
       ctaLabel="Take Your Sacred Seat"
       ctaHref={EVENTBRITE_PLACEHOLDER}
       note="Health screening required for Sacred Circle & Fruit of the Gods levels · Registration required for all levels"

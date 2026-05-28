@@ -2,7 +2,8 @@ import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
-import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import fffFooterVideo from "@/assets/video-fff-footer.mp4?url";
 
 import fffVideoUrl from "@/assets/video-fff-hero-v5.mp4?url";
 const fffVideo = { url: fffVideoUrl };
@@ -50,13 +51,22 @@ const FrequencyFungiFlow = () => (
       </div>
     </SanctuarySection>
 
-    <SanctuaryCTA
+    <SanctuarySection eyebrow="Ways to Move" title={<>However Your<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Body Calls You</em></>}>
+      <SanctuaryColCards cards={[
+        { title: "Static Stand", description: "Feet rooted, eyes closed, let the frequency move you from the inside. No choreography. No floor travel. Just presence in the body, breath in the chest, and the bass moving through your bones." },
+        { title: "Contact Dance", description: "Slow, consensual partner-led movement. Shoulder, palm, back, the points where two bodies meet become the conversation. Listening through the skin. No words. No leading. Just presence." },
+        { title: "Free Flow", description: "Your own rhythm, full floor, no rules. Spin if you need to spin. Drop low if you need to drop low. The body leads and the mind finally gets to follow." },
+        { title: "Stillness as Movement", description: "Sit, lie down, breathe. The frequency does the work. Stillness is sacred on this floor and held with the same reverence as the dance itself." },
+      ]} />
+    </SanctuarySection>
+
+    <FooterVideoBanner
+      video={fffFooterVideo}
       eyebrow="3rd Saturday · 7·11 PM · Washington, DC"
-      title={<>Your Soul Is<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Already on the Floor</em></>}
-      description="The frequency is rising. The circle is forming. Your spot is waiting. Come connect with your soul, your body, your spirit · and a community that moves as one."
+      headline={<>Your Soul Is<br /><em className="font-serif italic text-primary">Already on the Floor</em></>}
+      body="The frequency is rising. The circle is forming. Your spot is waiting. Come connect with your soul, your body, your spirit, and a community that moves as one."
       ctaLabel="Come Dance With Us"
       ctaHref={EVENTBRITE_FFF}
-      note="All bodies welcome · Substance-free sacred space · Community Care Model"
     />
   </SacredSeriesLayout>
 );
