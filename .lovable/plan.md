@@ -1,50 +1,61 @@
-# Plan: Avatar-Centered Copy + Video Flow Cleanup
+# Remove Transactional Language · Speak Only in Spirit
 
-## 1. Token / cost estimate for glossary background video
-You asked first about token cost. Two options:
+## What's wrong today
 
-- **Reuse uploaded clips (free)** — Use the three videos you just attached (`call2.mp4`, `call3.mp4`, `hug2.mp4`) plus existing plant/forest clips already in `src/assets/`. Stitched into a soft cross-fading loop behind the glossary header. **Zero generation cost, zero tokens beyond this planning loop.**
-- **Generate new plant-focused loop** with `videogen` (8-second 1080p clip of drifting sacred plants, leaves, mushrooms, cacao pods): ~1 generation call. Roughly equivalent to a single premium image gen in credit terms — small, but not free.
+Even when copy says "this is not transactional" or "this is not a business," it still names the very thing we want absent. The avatar's nervous system hears the word, not the negation. We will rewrite every one of these into affirmative, mirror-style language so the avatar only sees who they already are and what the Temple already is.
 
-**Recommendation:** Start with Option A (reuse uploads + existing forest footage). Zero cost, and the hug/call clips match the "Answer the Call" emotional beat better than abstract plant b-roll.
+## Words being retired site-wide
 
-## 2. Plant Medicine Glossary — "Answer the Call" section
-- Add a looping background video behind the bottom "Answer the Call" CTA block on `/plant-medicine-glossary`.
-- Source: `call2.mp4` + `call3.mp4` + `hug2.mp4` cross-fading (use existing `FooterVideoBanner` pattern or a new lightweight `<video autoplay muted loop playsinline>` with a dark overlay).
-- Rewrite the CTA copy so the seeker sees themselves. Draft:
-  > **"You didn't land on this page by accident."**
-  > You've been carrying something the world doesn't have language for — a quiet knowing that there's more, a body that's been holding too much for too long, a soul that's ready to come home. The plants have been waiting. The Sanctuary has been waiting. **The only question left is whether you're ready to answer.**
-  > → *Speak with a Guide* (routes to `/contact`)
+transactional · business · pricing · cost (as price) · customer · client · purchase · buy · checkout (in copy, not Stripe code) · sale · conversion · convert · funnel · lead · marketing · brand (as noun) · product · ROI · investment · deal · offer expires
 
-## 3. Volunteer page
-- **Remove** the existing footer video.
-- Rewrite the closing copy so a prospective volunteer sees themselves. Draft direction:
-  > **"You've always been the one who shows up."**
-  > You're the friend people call when they're falling apart. You hold space without being asked. You've felt the pull to serve something larger than yourself — and the Sanctuary is asking for hands like yours. Sacred reciprocity isn't transactional; it's how the Temple breathes.
-  > → *Step Into Service*
+(Stripe / Eventbrite internal code keeps its technical names · these only affect words the avatar reads.)
 
-## 4. Membership page
-- **Remove** the "Common Questions" / FAQ block.
-- Restructure the page so the avatar (the seeker considering becoming a member) sees themselves at every scroll point:
-  - Open with a "you" mirror — name the ache, the longing, the readiness.
-  - Replace feature-list framing of tiers with **"Where are you on the path?"** — each tier becomes a self-recognition statement (e.g. *"I'm just arriving"* → Welcome, *"I'm ready to belong"* → Belong, *"I'm called to train"* → Train, etc.).
-  - Close with an emotional invitation, not a pricing recap.
+## Specific rewrites
 
-## 5. Site-wide video flow audit (light pass)
-Quick check that every remaining footer video matches its page's emotional arc:
-- Women's Circle → cushion clip ✓
-- Men's Circle, Hapé, Sacred Tea, Kambo, Veterans → confirm each footer video still belongs; flag any that feel off so you can decide.
+**1. Volunteer page · `src/pages/Volunteer.tsx` line 337**
+Old: "Sacred reciprocity isn't transactional. It's how the Temple breathes."
+New: "Sacred reciprocity is how the Temple breathes · the current of giving and receiving that keeps the fire lit."
 
-## Files to touch (build phase)
-- `src/pages/PlantMedicineGlossary.tsx` (or wherever the glossary lives — confirm path during build)
-- `src/pages/Volunteer.tsx`
-- `src/pages/Membership.tsx` (or 2026 membership pathway page)
-- Copy `user-uploads://call2.mp4`, `call3.mp4`, `hug2.mp4` → `src/assets/`
-- Possibly a small new `<GlossaryAnswerCall />` component for the looped background block.
+**2. Community Care · `src/pages/CommunityCare.tsx`**
+- Line 31 ("This is not a pricing page...") → "This is a philosophy of energy · yours, ours, and the unseen current that moves between us. What you offer here becomes the door someone else will one day walk through."
+- Line 75 ("This is not transactional. This is ceremonial...") → "This is ceremonial. The way a river only stays alive because water keeps moving, sacred community only stays alive because energy keeps moving through it."
+- Line 94 ("Temple Mother Earth is not a business. We are a village...") → "Temple Mother Earth is a village. Every village needs guardians · souls whose presence keeps the fire lit, the doors open, and the table set."
+- Line 97 ("Your offering does not buy you a seat...") → "Your offering sustains the energy that made your seat possible. When you give as a Sustainer, you hold the door open for the one walking behind you. When you receive a scholarship, someone before you held that door open for you."
+- Line 139 ("The True Cost Of The Ceremony") → "What The Ceremony Truly Asks"
 
-## Out of scope (per your instruction)
-- No new video generation right now.
-- No changes to ceremony pages beyond the audit flag list.
+**3. Privacy Policy · `src/pages/PrivacyPolicy.tsx` line 42**
+"...for marketing purposes" → "...for outside purposes"
 
-## One clarifying question before I build
-For the glossary "Answer the Call" CTA, do you want the button to go to **`/contact`** (Speak with a Guide form) or to **`/membership`** (start the path)? Both fit — just need your call.
+**4. Volunteer · `src/pages/Volunteer.tsx` line 54**
+"Brand and visual stewardship" → "Visual stewardship of the sanctuary's image"
+
+**5. Sacred Series · `src/pages/SacredSeries.tsx` line 654 comment**
+Code comment "SACRED PATHWAYS PRICING" → "SACRED PATHWAYS OFFERINGS" (non-visible but keeps our standard).
+
+**6. Index / footer · `src/pages/Index.tsx` line 1040**
+Comment "Brand" → "Sanctuary mark" (non-visible cleanup).
+
+**7. Membership intro · re-read and reword any remaining tier copy that uses "subscribe," "subscription," "plan," "checkout" in visible text → "join the path," "walk this tier," "step in."**
+
+**8. Ceremony Intake form · `src/pages/CeremonyIntake.tsx` line 1353**
+"Do you have unfinished business with friends, family, or community?" → "Is there anything unresolved between you and another · friend, family, or community · that you are still carrying?"
+(Field key `unfinishedBusiness` stays internal so GHL mapping doesn't break.)
+
+## What I'm NOT touching
+
+- Stripe / Eventbrite SDK function names, route names like `create-checkout`, webhook event names (`checkout.session.completed`), `EventbriteCheckout` component name · these are invisible to the avatar.
+- Admin-only pages (`WebhookChecklist`, `Admin*`) · internal tools, no avatar exposure.
+- TypeScript types from Supabase generated files.
+
+## Retiring my own phrasing too
+
+In future analytics/strategy answers I'll stop saying "conversion," "funnel," "lead," "capture." Replacement vocabulary I'll use with you:
+- conversion → "the moment they say yes to themselves"
+- funnel → "the path home"
+- capture email → "open a thread of contact"
+- 14-day sequence → "a fourteen-day thread of transmissions that keeps the doorway lit until they're ready to walk through"
+
+## Verification after build
+
+- `rg -i "transactional|\bbusiness\b|pricing|customer|purchase|\bbuy\b|conversion|\bfunnel\b|\bbrand\b|marketing"` against `src/pages` and `src/components` returns only code/technical hits, no visible copy.
+- Manually open Volunteer, Community Care, Membership, Privacy, Ceremony Intake in preview to confirm the new wording reads as spiritual mirror language.

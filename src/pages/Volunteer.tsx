@@ -51,7 +51,7 @@ const SACRED_ROLES = [
     tag: "graphic-design",
     short: "Flyers · Banners · Visual identity",
     body: "Inscribe sacred narratives onto the canvas of existence. Magicians of imagery who evoke emotion and awaken dormant understanding, manifesting the ineffable into forms the human eye and heart can apprehend.",
-    serve: ["Ceremony flyers and banners", "Social media graphics", "Brand and visual stewardship"],
+    serve: ["Ceremony flyers and banners", "Social media graphics", "Visual stewardship of the sanctuary's image"],
   },
   {
     icon: HeartHandshake,
@@ -334,7 +334,7 @@ const Volunteer = () => {
               You've felt the pull to serve something larger than yourself, something with roots. The Sanctuary has been asking for hands like yours.
             </p>
             <p className="font-serif text-lg md:text-xl text-primary leading-relaxed font-semibold">
-              Sacred reciprocity isn't transactional. It's how the Temple breathes.
+              Sacred reciprocity is how the Temple breathes · the current of giving and receiving that keeps the fire lit.
             </p>
           </div>
           <div className="mt-10">

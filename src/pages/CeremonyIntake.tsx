@@ -1350,7 +1350,7 @@ const CeremonyIntake = () => {
                   <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.holdTension} onChange={(e) => update("holdTension", e.target.value)} />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-foreground">Do you have unfinished business with friends, family, or community?</label>
+                  <label className="mb-1 block text-sm font-medium text-foreground">Is there anything unresolved between you and another · friend, family, or community · that you are still carrying?</label>
                   <textarea className={inputClass + " min-h-[60px] resize-none"} value={formData.unfinishedBusiness} onChange={(e) => update("unfinishedBusiness", e.target.value)} />
                 </div>
                 <div>

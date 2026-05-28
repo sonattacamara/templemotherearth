@@ -39,7 +39,7 @@ const sections = [
       "Sacred intake forms and ceremony records are stored in secured, access-controlled databases.",
       "Only authorized facilitators and Temple leadership have access to sensitive ceremony data.",
       "We conduct regular security reviews of our systems and third-party integrations.",
-      "We never sell, rent, or share your personal information with third parties for marketing purposes.",
+      "We never share your personal information with outside parties for any outreach purposes.",
     ],
   },
   {
