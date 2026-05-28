@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Navigate, Link } from "react-router-dom";
-import { Search, Download, AlertTriangle, Eye, ArrowLeft, Filter, ArrowUp, ArrowDown, ChevronsUpDown, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, Download, AlertTriangle, Eye, ArrowLeft, Filter, ArrowUp, ArrowDown, ChevronsUpDown, ChevronLeft, ChevronRight, Check, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
