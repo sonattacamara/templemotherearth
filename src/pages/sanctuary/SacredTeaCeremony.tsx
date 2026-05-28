@@ -45,7 +45,7 @@ const SacredTeaCeremony = () => (
       title={<>You've Been Carrying<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">Something Heavy</em><br />For Too Long</>}
       subtitle=""
       lead="You don't need another book, another podcast, another weekend of trying to think your way out. Sacred Tea is an ancient practice · a cup poured in ceremony · that helps the part of you that already knows finally be heard."
-      primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_PLACEHOLDER, external: true }}
+      primaryCTA={{ label: "Take Your Seat at the Table", href: EVENTBRITE_PLACEHOLDER, external: true }}
       secondaryCTA={{ label: "Is This For Me? ↓", href: "#for-you" }}
       backgroundVideo={teaVideo.url}
     />
@@ -110,7 +110,7 @@ const SacredTeaCeremony = () => (
       eyebrow="Recurring Offering · Washington, DC"
       headline={<>A Seat Has Been<br /><em className="font-serif italic text-primary">Saved For You</em></>}
       body="The kettle is on. The circle is forming. When you're ready, the door opens from your side."
-      ctaLabel="Reserve Your Seat"
+      ctaLabel="Take Your Seat at the Table"
       ctaHref={EVENTBRITE_PLACEHOLDER}
     />
 
