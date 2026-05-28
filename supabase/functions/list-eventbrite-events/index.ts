@@ -5,21 +5,16 @@ Deno.serve(async (req) => {
   const token = Deno.env.get('EVENTBRITE_PRIVATE_TOKEN');
   if (!token) return new Response(JSON.stringify({ error: 'no token' }), { status: 500, headers: corsHeaders });
   try {
-    const me = await fetch('https://www.eventbriteapi.com/v3/users/me/organizations/', {
+    const url = new URL(req.url);
+    const q = (url.searchParams.get('q') || '').toLowerCase();
+    const owned = await fetch('https://www.eventbriteapi.com/v3/users/me/owned_events/?status=all&order_by=start_desc&page_size=200', {
       headers: { Authorization: `Bearer ${token}` },
     }).then((r) => r.json());
-    const orgs = me.organizations || [];
-    const results: any[] = [];
-    for (const o of orgs) {
-      const events = await fetch(
-        `https://www.eventbriteapi.com/v3/organizations/${o.id}/events/?status=live,started,ended,draft&order_by=start_desc&page_size=200`,
-        { headers: { Authorization: `Bearer ${token}` } },
-      ).then((r) => r.json());
-      for (const e of events.events || []) {
-        results.push({ id: e.id, name: e.name?.text, status: e.status, start: e.start?.local, url: e.url });
-      }
-    }
-    return new Response(JSON.stringify({ orgs, events: results }), {
+    let events = (owned.events || []).map((e: any) => ({
+      id: e.id, name: e.name?.text, status: e.status, start: e.start?.local, url: e.url,
+    }));
+    if (q) events = events.filter((e: any) => (e.name || '').toLowerCase().includes(q));
+    return new Response(JSON.stringify({ events, raw_error: owned.error || null }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (err) {
