@@ -2,7 +2,6 @@ import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
-import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import fffFooterVideo from "@/assets/video-fff-footer.mp4?url";
 

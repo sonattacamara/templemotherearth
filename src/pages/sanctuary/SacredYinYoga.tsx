@@ -5,7 +5,6 @@ import yogaVideoUrl from "@/assets/video-yoga-hero-v2.mp4?url";
 const yogaVideo = { url: yogaVideoUrl };
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
-import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import yinFooterVideo from "@/assets/video-yin-footer.mp4?url";
 
