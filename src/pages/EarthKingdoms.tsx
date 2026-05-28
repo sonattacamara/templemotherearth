@@ -216,7 +216,19 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.9 }}
     >
-      <div className="max-w-[1100px] mx-auto">
+      {k.bgImage && (
+        <>
+          <img
+            src={k.bgImage}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-20"
+          />
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[rgba(5,6,4,0.85)] via-[rgba(5,6,4,0.78)] to-[rgba(5,6,4,0.92)]" />
+        </>
+      )}
+      <div className="max-w-[1100px] mx-auto relative z-10">
         <p className="font-sans text-[9px] tracking-[5px] uppercase mb-4 font-normal" style={{ color: k.eyebrowColor }}>
           Kingdom {k.num}
         </p>
@@ -238,7 +250,11 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
           <div className="flex flex-col" style={{ background: k.factBg }}>
             {k.facts.map((f) => (
               <div key={f.label} className="py-[22px] px-7 border-b border-[rgba(200,160,48,0.06)] last:border-b-0 grid grid-cols-[36px_1fr] gap-4">
-                <f.icon className="h-5 w-5 mt-0.5" style={{ color: k.factLabelColor }} />
+                {f.iconImg ? (
+                  <img src={f.iconImg} alt="" aria-hidden="true" className="h-7 w-7 object-contain mt-0.5" loading="lazy" />
+                ) : (
+                  <f.icon className="h-5 w-5 mt-0.5" style={{ color: k.factLabelColor }} />
+                )}
                 <div>
                   <div className="font-sans text-[8px] tracking-[3px] uppercase mb-1 font-normal" style={{ color: k.factLabelColor }}>{f.label}</div>
                   <div className="text-[15px] text-[#F0EAD6] leading-relaxed opacity-80">{f.val}</div>
@@ -252,7 +268,11 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-16 bg-[rgba(200,160,48,0.06)]">
           {k.cards.map((c) => (
             <div key={c.name} className="p-9 hover:-translate-y-1 transition-transform" style={{ background: k.cardBg }}>
-              <c.icon className="h-7 w-7 mb-3.5" style={{ color: k.cardNameColor }} />
+              {c.iconImg ? (
+                <img src={c.iconImg} alt="" aria-hidden="true" className="h-12 w-12 object-contain mb-3.5" loading="lazy" />
+              ) : (
+                <c.icon className="h-7 w-7 mb-3.5" style={{ color: k.cardNameColor }} />
+              )}
               <h4 className="font-serif text-xl italic mb-2.5" style={{ color: k.cardNameColor }}>{c.name}</h4>
               <p className="text-sm leading-[1.75] opacity-75 text-[#F0EAD6]">{c.body}</p>
             </div>
