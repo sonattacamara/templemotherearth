@@ -54,6 +54,7 @@ import Level5Ceremony from "./pages/sanctuary/Level5Ceremony";
 import MensCircle from "./pages/sanctuary/MensCircle";
 import WomensCircle from "./pages/sanctuary/WomensCircle";
 import KamboCeremony from "./pages/sanctuary/KamboCeremony";
+import ForestCircle from "./pages/integration/ForestCircle";
 import EarthKingdoms from "./pages/EarthKingdoms";
 import Journal from "./pages/Journal";
 import JournalPost from "./pages/JournalPost";
@@ -141,6 +142,7 @@ const App = () => (
             <Route path="/womens-circle" element={<WomensCircle />} />
             <Route path="/kambo-women" element={<KamboCeremony />} />
             <Route path="/kambo-for-women" element={<KamboCeremony />} />
+            <Route path="/forest-circle" element={<ForestCircle />} />
             <Route path="/earth-kingdoms" element={<EarthKingdoms />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/journal/:slug" element={<JournalPost />} />
