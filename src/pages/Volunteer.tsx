@@ -9,9 +9,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
 import MidImageBanner from "@/components/story/MidImageBanner";
-import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import midVolunteerImg from "@/assets/image-mid-volunteer.jpg";
-import footerVolunteerVideoAsset from "@/assets/video-footer-volunteer.mp4.asset.json";
 import volunteerHero from "@/assets/community-women-blessing.jpg";
 import volunteerVideo from "@/assets/video-volunteer-hero.mp4";
 
@@ -321,14 +319,34 @@ const Volunteer = () => {
         ctaHref="#apply"
       />
 
-      <FooterVideoBanner
-        video={footerVolunteerVideoAsset.url}
-        eyebrow="Step In"
-        headline={<>The Temple Is<br /><em className="font-serif italic text-primary">Held by Us</em></>}
-        body="Every candle lit, every chair placed, every guest welcomed is a prayer. Add yours."
-        ctaLabel="Step In"
-        ctaHref="#apply"
-      />
+      {/* ─── Avatar Mirror · You Are the One ─── */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-background via-card to-background px-4 py-24 md:py-32">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="font-body text-[10px] uppercase tracking-[0.4em] text-primary mb-6">A Mirror, Not a Mission</p>
+          <h2 className="font-display text-3xl md:text-5xl font-light text-foreground leading-tight mb-8">
+            You've Always Been<br /><em className="font-serif italic text-primary">the One Who Shows Up</em>
+          </h2>
+          <div className="space-y-5 text-left md:text-center">
+            <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed">
+              You're the friend people call when they're falling apart. You hold space without being asked. You notice the candle that's gone out before anyone else does.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed">
+              You've felt the pull to serve something larger than yourself, something with roots. The Sanctuary has been asking for hands like yours.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-primary leading-relaxed font-semibold">
+              Sacred reciprocity isn't transactional. It's how the Temple breathes.
+            </p>
+          </div>
+          <div className="mt-10">
+            <a
+              href="#apply"
+              className="inline-block rounded-xl bg-primary px-10 py-4 font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground shadow-lg transition hover:bg-primary/80"
+            >
+              Step Into Service
+            </a>
+          </div>
+        </div>
+      </section>
 
       <EventbriteCTA />
 
