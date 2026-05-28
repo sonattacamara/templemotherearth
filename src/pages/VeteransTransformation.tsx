@@ -163,7 +163,7 @@ const VeteransTransformation = () => {
     { id: "weekend", label: "Weekend" },
     { id: "voices", label: "Voices" },
     { id: "faq", label: "FAQ" },
-    { id: "apply", label: "Apply" },
+    { id: "apply", label: "Reserve Your Seat" },
   ];
 
   useEffect(() => {
