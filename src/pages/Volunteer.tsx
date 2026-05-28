@@ -8,6 +8,10 @@ import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
+import MidImageBanner from "@/components/story/MidImageBanner";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import midVolunteerImg from "@/assets/image-mid-volunteer.jpg";
+import footerVolunteerVideoAsset from "@/assets/video-footer-volunteer.mp4.asset.json";
 import volunteerHero from "@/assets/community-women-blessing.jpg";
 import volunteerVideo from "@/assets/video-volunteer-hero.mp4";
 
@@ -307,6 +311,24 @@ const Volunteer = () => {
           </div>
         </div>
       </section>
+
+      <MidImageBanner
+        image={midVolunteerImg}
+        eyebrow="The Sacred Path"
+        headline={<>Service Is the <em className="font-serif italic text-primary">Shortest Path</em></>}
+        body="The temple is held by hands that choose to hold it. Lend yours and discover what arrives in return."
+        ctaLabel="Lend Your Hands"
+        ctaHref="#apply"
+      />
+
+      <FooterVideoBanner
+        video={footerVolunteerVideoAsset.url}
+        eyebrow="Step In"
+        headline={<>The Temple Is<br /><em className="font-serif italic text-primary">Held by Us</em></>}
+        body="Every candle lit, every chair placed, every guest welcomed is a prayer. Add yours."
+        ctaLabel="Step In"
+        ctaHref="#apply"
+      />
 
       <EventbriteCTA />
 

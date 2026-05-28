@@ -8,6 +8,10 @@ import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import EventbriteCTA from "@/components/EventbriteCTA";
 import Navigation from "@/components/Navigation";
+import MidImageBanner from "@/components/story/MidImageBanner";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import midFacilitatorImg from "@/assets/image-mid-facilitator.jpg";
+import footerFacilitatorVideoAsset from "@/assets/video-footer-facilitator.mp4.asset.json";
 import sacredSpace from "@/assets/sacred-space.jpg";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
@@ -130,6 +134,24 @@ const JoinFacilitator = () => {
           )}
         </div>
       </section>
+
+      <MidImageBanner
+        image={midFacilitatorImg}
+        eyebrow="The Calling"
+        headline={<>Hold Space, <em className="font-serif italic text-primary">Become Space</em></>}
+        body="The facilitators we are looking for are not looking for a job. They are answering a calling. If this stirs something in you, do not turn away."
+        ctaLabel="Join the Stewards"
+        ctaHref="#apply"
+      />
+
+      <FooterVideoBanner
+        video={footerFacilitatorVideoAsset.url}
+        eyebrow="Walk With Us"
+        headline={<>Step Onto<br /><em className="font-serif italic text-primary">The Path</em></>}
+        body="We are a circle of facilitators learning, growing, and holding sacred work together. Come walk with us."
+        ctaLabel="Begin the Path"
+        ctaHref="#apply"
+      />
 
       <EventbriteCTA />
 

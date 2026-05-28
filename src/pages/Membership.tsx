@@ -570,6 +570,24 @@ const Membership = () => {
         buttonLabel="Plant a Seed"
       />
 
+      <MidImageBanner
+        image={midMembershipImg}
+        eyebrow="Belonging"
+        headline={<>Belonging Is Built <em className="font-serif italic text-primary">One Circle at a Time</em></>}
+        body="This is not a subscription. It is a vow to show up for yourself and for the people who are becoming your people."
+        ctaLabel="Sit With Us"
+        ctaHref="/membership#tiers"
+      />
+
+      <FooterVideoBanner
+        video={footerMembershipVideoAsset.url}
+        eyebrow="Your Place at the Table"
+        headline={<>Become Part of<br /><em className="font-serif italic text-primary">The Family</em></>}
+        body="The circle is open. The table is set. Your seat has been waiting longer than you know."
+        ctaLabel="Become a Member"
+        ctaHref="/membership#tiers"
+      />
+
       <EventbriteCTA />
 
       <InternalLinkingFooter
