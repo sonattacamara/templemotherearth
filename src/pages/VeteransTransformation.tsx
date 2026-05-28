@@ -316,8 +316,8 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="font-display text-4xl font-bold text-white md:text-6xl lg:text-7xl leading-tight"
           >
-            You Survived the Battlefield.{" "}
-            <span className="text-[#B8860B]">Now Survive the War Within.</span>
+            You Came Home.{" "}
+            <span className="text-[#B8860B]">But Something Stayed Over There.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -325,7 +325,7 @@ const VeteransTransformation = () => {
             transition={{ delay: 0.7 }}
             className="mx-auto mt-8 max-w-2xl font-body text-lg text-white/80 leading-relaxed"
           >
-            When the VA, the pills, and the therapy sessions have not been enough · there is another way. Temple Mother Earth's Veterans Transformation Program uses sacred earth medicine and ancient purification practices to help warriors reclaim their bodies, their minds, and their lives. No more waiting rooms. No more band-aids. Ancient medicine for the modern warrior.
+            For the veteran who is done with the waiting room, the pill bottle, and the 3 AM ceiling. Done being passed from doctor to doctor, prescription to prescription, with no one asking the question that actually matters: <em>what is your body still carrying from over there?</em> This program was built by veterans, for veterans, to reach the root · not manage the symptom.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -337,7 +337,7 @@ const VeteransTransformation = () => {
               href="#apply"
               className="rounded-lg bg-[#556B2F] px-8 py-4 font-body text-base font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg"
             >
-              Begin Your Transformation
+              Apply · King James Reads Every One
             </a>
             <a
               href="tel:988"
@@ -372,10 +372,21 @@ const VeteransTransformation = () => {
           className="mx-auto max-w-6xl"
         >
           <motion.div variants={fadeUp} className="text-center mb-16">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">Alternative PTSD Treatment for Veterans</p>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">If You're Reading This</p>
             <h2 className="mt-4 font-display text-3xl font-bold text-[#F5F0E6] md:text-5xl">
-              We Know What You Are Carrying
+              We Know · Because We've Been There
             </h2>
+            <div className="mx-auto mt-8 max-w-2xl font-body text-[#F5F0E6]/80 leading-relaxed space-y-4 text-left md:text-center">
+              <p>
+                You've sat in the VA waiting room until the chairs felt like part of you. You've watched the pill bottles multiply on the counter. You've answered the same intake questions for the tenth provider who doesn't remember your name.
+              </p>
+              <p>
+                You came home, but the war didn't. It lives in your shoulders. In the way you scan a parking lot. In the silence at the dinner table you used to fill with stories. In the brothers and sisters whose faces still visit you at 3 AM.
+              </p>
+              <p className="text-[#B8860B] font-semibold">
+                This isn't another program. It's a sanctuary. And it was built by a 22-year retired veteran · King James · who walked this path before he started holding it for others.
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -725,10 +736,13 @@ const VeteransTransformation = () => {
           className="mx-auto max-w-2xl"
         >
           <motion.div variants={fadeUp} className="text-center mb-12">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">Take the First Step</p>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">The Form Below Goes Straight To King James</p>
             <h2 className="mt-4 font-display text-3xl font-bold text-[#F5F0E6] md:text-5xl">
-              Your Mission Is Not Over. It Is Just Beginning.
+              You Survived the War.<br />Now Come Home to Yourself.
             </h2>
+            <p className="mx-auto mt-6 max-w-2xl font-body text-[#F5F0E6]/70 leading-relaxed">
+              King James is a 22-year retired veteran. He reads every application personally and reaches out within 24 hours. Nothing here is automated. You will hear back from a brother.
+            </p>
           </motion.div>
 
           {formSubmitted ? (
@@ -1043,9 +1057,9 @@ const VeteransTransformation = () => {
 
       <FooterVideoBanner
         video={footerVeteransVideoAsset.url}
-        eyebrow="Stand Down, Soldier"
-        headline={<>The Mission<br /><em className="font-serif italic text-primary">Is Coming Home</em></>}
-        body="The same courage that took you into combat can take you into healing. Take the first step."
+        eyebrow="From One Veteran To Another"
+        headline={<>You Survived the War.<br /><em className="font-serif italic text-primary">Now Come Home to Yourself.</em></>}
+        body="King James walked this road before he started holding it for others. Twenty-two years in uniform, and the work of coming all the way home started here. Your seat is saved."
         ctaLabel="Reserve Your Seat"
         ctaHref="/ceremony-intake"
       />
