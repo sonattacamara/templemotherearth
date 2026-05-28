@@ -7,6 +7,8 @@ import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
 import potluckVideoUrl from "@/assets/video-potluck-hero-v2.mp4?url";
 const potluckVideo = { url: potluckVideoUrl };
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import potluckFooterVideoUrl from "@/assets/video-potluck-footer.mp4?url";
 
 const EVENTBRITE_POTLUCK = "https://www.eventbrite.com/e/sacred-table-potluck-integration-registration-1324534401049?aff=ebdsoporgprofile";
 
@@ -47,13 +49,13 @@ const CommunityPotluck = () => (
       attribution="Community member · Alexandria, VA"
     />
 
-    <SanctuaryCTA
+    <FooterVideoBanner
+      video={potluckFooterVideoUrl}
       eyebrow="4th Monday of Every Month · Free & Open"
-      title={<>The Table<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Is Already Set For You</em></>}
-      description="Register so we know you're coming. Bring something to share. Come as you are. The family is already gathering."
+      headline={<>The Table Is Already<br /><em className="font-serif italic">Set For You</em></>}
+      body="Register so we know you're coming. Bring something to share. Come as you are. The family is already gathering."
       ctaLabel="Register Free"
       ctaHref={EVENTBRITE_POTLUCK}
-      note="Free & open to all · Registration helps us prepare the space · Bring a dish to share"
     />
   </SacredSeriesLayout>
 );
