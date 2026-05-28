@@ -533,28 +533,67 @@ const PlantMedicineGlossary = () => {
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ CTA ═══ */}
-      <section className="py-20 md:py-28 px-6 md:px-12 text-center bg-gradient-to-t from-[hsl(105,30%,8%)] to-[hsl(114,36%,10%)]">
-        <div className="max-w-[600px] mx-auto">
-          <Flame className="h-8 w-8 text-[hsl(45,70%,49%)] mx-auto mb-6" />
-          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">Your Sacred Journey Begins Here</p>
-          <h2 className="font-sans text-[clamp(28px,4.5vw,52px)] font-extralight leading-[1.05] text-[hsl(40,30%,92%)] mb-6">
-            Answer<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">the Call</em>
+      <section className="relative overflow-hidden py-24 md:py-32 px-6 md:px-12 text-center">
+        {/* Background video loop */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="h-full w-full object-cover"
+            poster=""
+          >
+            <source src={callVideo2} type="video/mp4" />
+          </video>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-screen"
+            style={{ animation: "glossaryCtaFade 18s ease-in-out infinite" }}
+          >
+            <source src={hugVideo2} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-[hsla(105,30%,5%,0.85)] via-[hsla(105,30%,6%,0.78)] to-[hsla(105,30%,5%,0.95)]" />
+        </div>
+
+        <style>{`
+          @keyframes glossaryCtaFade {
+            0%, 45%, 100% { opacity: 0; }
+            55%, 90% { opacity: 0.55; }
+          }
+        `}</style>
+
+        <div className="relative z-10 max-w-[640px] mx-auto">
+          <Flame className="h-8 w-8 text-[hsl(0,72%,58%)] mx-auto mb-6 drop-shadow-[0_0_18px_hsla(0,72%,55%,0.5)]" />
+          <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(0,72%,62%)] mb-4">This Page Found You for a Reason</p>
+          <h2 className="font-sans text-[clamp(30px,5vw,58px)] font-extralight leading-[1.05] text-[hsl(40,30%,94%)] mb-8">
+            You Didn't Land Here<br /><em className="font-serif italic text-[hsl(0,72%,62%)] text-[1.1em]">by Accident</em>
           </h2>
-          <p className="text-[18px] text-[hsl(35,30%,68%)] leading-relaxed font-serif mb-10">
-            Whether you are called to Kambo, Hapé, sacred vine, cacao, or another earth sacrament, the first step is completing our Sacred Intake Form.
-          </p>
+          <div className="space-y-5 text-left sm:text-center mb-10">
+            <p className="text-[18px] text-[hsl(40,30%,86%)] leading-relaxed font-serif">
+              You've been carrying something the world doesn't have language for. A quiet knowing that there is more. A body that has been holding too much for too long. A soul that is ready to come home.
+            </p>
+            <p className="text-[18px] text-[hsl(40,30%,86%)] leading-relaxed font-serif">
+              The plants have been waiting. The Sanctuary has been waiting. The only question left is whether <em className="text-[hsl(0,72%,68%)] not-italic font-semibold">you</em> are ready to answer.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/ceremony-intake"
-              className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all"
-            >
-              Begin Your Journey
-            </Link>
-            <Link
               to="/contact"
-              className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 border border-[hsla(45,70%,49%,0.4)] text-[hsl(45,70%,49%)] hover:bg-[hsla(45,70%,49%,0.1)] transition-all"
+              className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(0,72%,52%)] text-[hsl(40,30%,96%)] hover:bg-[hsl(0,72%,60%)] transition-all shadow-[0_0_30px_hsla(0,72%,50%,0.4)]"
             >
               Speak With a Guide
+            </Link>
+            <Link
+              to="/ceremony-intake"
+              className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-10 py-4 border border-[hsla(45,70%,55%,0.5)] text-[hsl(45,70%,62%)] hover:bg-[hsla(45,70%,49%,0.12)] transition-all"
+            >
+              Begin Your Journey
             </Link>
           </div>
         </div>
