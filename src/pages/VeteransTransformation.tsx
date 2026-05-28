@@ -736,10 +736,13 @@ const VeteransTransformation = () => {
           className="mx-auto max-w-2xl"
         >
           <motion.div variants={fadeUp} className="text-center mb-12">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">Take the First Step</p>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">The Form Below Goes Straight To King James</p>
             <h2 className="mt-4 font-display text-3xl font-bold text-[#F5F0E6] md:text-5xl">
-              Your Mission Is Not Over. It Is Just Beginning.
+              You Survived the War.<br />Now Come Home to Yourself.
             </h2>
+            <p className="mx-auto mt-6 max-w-2xl font-body text-[#F5F0E6]/70 leading-relaxed">
+              King James is a 22-year retired veteran. He reads every application personally and reaches out within 24 hours. Nothing here is automated. You will hear back from a brother.
+            </p>
           </motion.div>
 
           {formSubmitted ? (
