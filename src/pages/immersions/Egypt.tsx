@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ArrowRight, CheckCircle2, Loader2, Sun, Eye, Sparkles, Crown } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
+import FAQSchema from "@/components/FAQSchema";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import egyptVideo from "@/assets/video-egypt-hero-v2.mp4";
 import egyptCairoMosque from "@/assets/immersion-egypt-cairo-mosque.jpg";
 import egyptCourtyard from "@/assets/immersion-egypt-courtyard.jpg";
@@ -39,6 +43,54 @@ const Egypt = () => {
     }
   };
 
+  const galleryImages = [
+    { url: egyptCairoMosque, caption: "Sacred Cairo skyline with mosque domes and minarets" },
+    { url: egyptCourtyard, caption: "Sacred courtyard of an ancient Cairo mosque with green dome" },
+    { url: egyptSphinxSelfie, caption: "Pilgrim standing in the presence of the Great Sphinx of Giza" },
+    { url: egyptFeast, caption: "Traditional Egyptian feast shared in sacred community" },
+  ];
+
+  const imageGalleryJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "The Remembrance · Kemetic Pilgrimage Through Egypt",
+    description:
+      "A visual gallery from the Temple Mother Earth Kemetic pilgrimage through Cairo, Giza, and the sacred temples of Egypt.",
+    image: galleryImages.map((img) => ({
+      "@type": "ImageObject",
+      contentUrl: `https://templemotherearth.org${img.url}`,
+      caption: img.caption,
+    })),
+  };
+
+  const faqs = [
+    {
+      question: "When is The Remembrance Egypt pilgrimage?",
+      answer:
+        "The Remembrance is held in February 2027 as a sacred Kemetic pilgrimage through Cairo, Giza, Saqqara, Abydos, Dendera, and the Valley of the Kings.",
+    },
+    {
+      question: "Who is The Remembrance Egypt pilgrimage for?",
+      answer:
+        "It is for the ones who have felt Egypt living inside their dreams and imagery for as long as they can remember, and who are ready to receive transmission in the body rather than only in books.",
+    },
+    {
+      question: "What sacred sites does the Kemet pilgrimage visit?",
+      answer:
+        "The pilgrimage includes the Giza Plateau and the Great Sphinx, Saqqara, Abydos, Dendera, the Valley of the Kings, and days on the Nile, with ceremony held inside the temples themselves.",
+    },
+    {
+      question: "Who leads the Kemetic pilgrimage?",
+      answer:
+        "The corridor is held by Kemetic teachers and indigenous Egyptian guides who carry the lineage and transmit the wisdom in person, the way it has always been transmitted.",
+    },
+    {
+      question: "How do I apply for The Remembrance?",
+      answer:
+        "The Remembrance is held in a small sacred circle. You apply through the sacred application form on this page and our temple team reaches out personally with the itinerary and preparation pathway.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -46,6 +98,10 @@ const Egypt = () => {
         description="The Remembrance · a Kemetic pilgrimage through the sacred sites of Egypt. February 2027. Walk where the priesthoods walked. Remember what your blood already knows."
         path="/immersions/egypt"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(imageGalleryJsonLd)}</script>
+      </Helmet>
+      <FAQSchema faqs={faqs} />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Immersions" }, { label: "The Remembrance · Egypt" }]} />
 
@@ -184,6 +240,41 @@ const Egypt = () => {
           )}
         </div>
       </section>
+
+      <section className="px-4 py-12 bg-card/40">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="font-body text-xs tracking-[3px] uppercase text-primary/80">Continue The Pilgrimage</p>
+          <h2 className="mt-3 font-display text-2xl font-bold text-foreground md:text-3xl">
+            Other Sacred Lands Calling Your Name
+          </h2>
+          <p className="mt-4 text-base text-foreground/80">
+            If Egypt is stirring you awake, you may also feel the pull of the{" "}
+            <Link to="/immersions/peru" className="text-primary underline-offset-4 hover:underline font-semibold">
+              Andean mountains of Peru
+            </Link>{" "}
+            or the{" "}
+            <Link to="/immersions/sayulita" className="text-primary underline-offset-4 hover:underline font-semibold">
+              jungle and coastline of Mexico
+            </Link>
+            . Many pilgrims also study the{" "}
+            <Link to="/plant-medicine-glossary" className="text-primary underline-offset-4 hover:underline font-semibold">
+              Sacred Plant Medicine Glossary
+            </Link>{" "}
+            to deepen their relationship with the earth allies before they travel.
+          </p>
+        </div>
+      </section>
+
+      <InternalLinkingFooter
+        heading="Continue Your Journey"
+        links={[
+          { label: "Sacred Plant Medicine Glossary", href: "/plant-medicine-glossary" },
+          { label: "Peru · Andean Pilgrimage", href: "/immersions/peru" },
+          { label: "Mexico · Sayulita Immersion", href: "/immersions/sayulita" },
+          { label: "Kemetic Teachings", href: "/kemetic-teachings" },
+          { label: "All Sacred Immersions", href: "/#immersions" },
+        ]}
+      />
 
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
