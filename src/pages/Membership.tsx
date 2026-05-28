@@ -455,53 +455,6 @@ const Membership = () => {
         </motion.div>
       </section>
 
-      {/* ───── BOTTOM CTA ───── */}
-      <section className="relative overflow-hidden px-4 py-24 md:py-32">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${ctaFooterImg})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-hero-overlay" />
-
-        <motion.div
-          className="relative z-10 mx-auto max-w-xl text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={stagger}
-        >
-          <motion.h2
-            variants={fadeUp}
-            className="font-display text-3xl font-bold text-primary-foreground md:text-4xl leading-tight"
-          >
-            Your Journey Starts with a Single Step
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="mt-6 text-base text-primary-foreground/70 leading-relaxed"
-          >
-            You don't need to have it all figured out.
-            <br />
-            You just need to be willing to begin. We'll walk with you.
-          </motion.p>
-          <motion.div variants={fadeUp} className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="rounded-xl bg-primary px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary/80"
-            >
-              Choose Your Pathway
-            </a>
-            <a
-              href="/#contact"
-              className="rounded-xl border border-primary-foreground/30 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition hover:bg-primary-foreground/10"
-            >
-              Questions? Reach Out
-            </a>
-          </motion.div>
-        </motion.div>
-      </section>
-
       <DonationCTA
         eyebrow="Beyond Membership"
         headline="Plant a Seed of Abundance"
@@ -555,7 +508,6 @@ const Membership = () => {
               <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Get Involved</h4>
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
                 <Link to="/volunteer" className="text-primary-foreground/60 hover:text-primary transition-colors">Volunteer</Link>
-                <Link to="/join-facilitator" className="text-primary-foreground/60 hover:text-primary transition-colors">Join as Facilitator</Link>
                 <Link to="/sponsor" className="text-primary-foreground/60 hover:text-primary transition-colors">Become a Sponsor</Link>
                 <Link to="/preparation" className="text-primary-foreground/60 hover:text-primary transition-colors">Ceremony Preparation</Link>
                 <Link to="/conduct" className="text-primary-foreground/60 hover:text-primary transition-colors">Code of Conduct</Link>
