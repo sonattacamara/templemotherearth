@@ -241,6 +241,41 @@ const Egypt = () => {
         </div>
       </section>
 
+      <section className="px-4 py-12 bg-card/40">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="font-body text-xs tracking-[3px] uppercase text-primary/80">Continue The Pilgrimage</p>
+          <h2 className="mt-3 font-display text-2xl font-bold text-foreground md:text-3xl">
+            Other Sacred Lands Calling Your Name
+          </h2>
+          <p className="mt-4 text-base text-foreground/80">
+            If Egypt is stirring you awake, you may also feel the pull of the{" "}
+            <Link to="/immersions/peru" className="text-primary underline-offset-4 hover:underline font-semibold">
+              Andean mountains of Peru
+            </Link>{" "}
+            or the{" "}
+            <Link to="/immersions/sayulita" className="text-primary underline-offset-4 hover:underline font-semibold">
+              jungle and coastline of Mexico
+            </Link>
+            . Many pilgrims also study the{" "}
+            <Link to="/plant-medicine-glossary" className="text-primary underline-offset-4 hover:underline font-semibold">
+              Sacred Plant Medicine Glossary
+            </Link>{" "}
+            to deepen their relationship with the earth allies before they travel.
+          </p>
+        </div>
+      </section>
+
+      <InternalLinkingFooter
+        heading="Continue Your Journey"
+        links={[
+          { label: "Sacred Plant Medicine Glossary", href: "/plant-medicine-glossary" },
+          { label: "Peru · Andean Pilgrimage", href: "/immersions/peru" },
+          { label: "Mexico · Sayulita Immersion", href: "/immersions/sayulita" },
+          { label: "Kemetic Teachings", href: "/kemetic-teachings" },
+          { label: "All Sacred Immersions", href: "/#immersions" },
+        ]}
+      />
+
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
