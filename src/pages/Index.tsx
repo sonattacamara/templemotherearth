@@ -1104,24 +1104,6 @@ const Index = () => {
 
       <EventbriteCTA />
 
-      {/* ───── FACILITATOR RAIL ───── */}
-      <section className="border-y border-primary/15 bg-foreground/60 px-4 py-10">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
-          <div>
-            <p className="font-body text-[11px] uppercase tracking-[0.3em] text-primary mb-1">For the called</p>
-            <p className="font-display text-lg md:text-xl text-primary-foreground">
-              Already certified · already serving? <span className="italic text-primary-foreground/80">Come hold sacred work in sanctuary.</span>
-            </p>
-          </div>
-          <Link
-            to="/join-facilitator"
-            className="shrink-0 rounded-xl border border-primary/60 px-6 py-3 font-body text-sm font-semibold uppercase tracking-wider text-primary transition hover:bg-primary hover:text-primary-foreground"
-          >
-            Answer the Call
-          </Link>
-        </div>
-      </section>
-
       {/* ───── FOOTER ───── */}
       <footer className="bg-foreground px-4 py-16">
         <div className="mx-auto max-w-6xl">
@@ -1154,7 +1136,6 @@ const Index = () => {
               <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">Get Involved</h4>
               <div className="mt-4 flex flex-col gap-2.5 text-sm">
                 <Link to="/volunteer" className="text-primary-foreground/60 hover:text-primary transition-colors">Volunteer</Link>
-                <Link to="/join-facilitator" className="text-primary-foreground/60 hover:text-primary transition-colors">Join as Facilitator</Link>
                 <Link to="/sponsor" className="text-primary-foreground/60 hover:text-primary transition-colors">Become a Sponsor</Link>
                 <Link to="/preparation" className="text-primary-foreground/60 hover:text-primary transition-colors">Ceremony Preparation</Link>
                 <Link to="/conduct" className="text-primary-foreground/60 hover:text-primary transition-colors">Code of Conduct</Link>

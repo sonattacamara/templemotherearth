@@ -350,25 +350,6 @@ const Volunteer = () => {
 
       <EventbriteCTA />
 
-      <section className="bg-foreground/60 border-y border-primary/15 px-4 py-12">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="font-body text-[11px] uppercase tracking-[0.3em] text-primary mb-3">A Different Path</p>
-          <h3 className="font-display text-2xl md:text-3xl text-primary-foreground">
-            Already certified in your craft?
-          </h3>
-          <p className="mt-4 font-body text-base text-primary-foreground/75">
-            If you are a trained facilitator answering a calling to hold sacred work in community,
-            walk this path instead. We hold the container · you bring the calling.
-          </p>
-          <Link
-            to="/join-facilitator"
-            className="mt-6 inline-block rounded-xl border border-primary/60 px-8 py-3 font-body text-sm font-semibold uppercase tracking-wider text-primary transition hover:bg-primary hover:text-primary-foreground"
-          >
-            Become a Facilitator
-          </Link>
-        </div>
-      </section>
-
       <footer className="bg-foreground px-4 py-12">
         <div className="mx-auto max-w-4xl text-center">
           <p className="font-body text-xs text-primary-foreground/40">
