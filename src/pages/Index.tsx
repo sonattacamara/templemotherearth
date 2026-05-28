@@ -226,6 +226,77 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* ───── THREE DOORS · SELF-SELECT ───── */}
+      <section aria-labelledby="three-doors-heading" className="relative bg-gradient-warm px-4 py-12 md:py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-8 text-center md:mb-10">
+            <p className="font-body text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">A Mirror at the Door</p>
+            <h2 id="three-doors-heading" className="mt-3 font-display text-2xl font-light leading-tight text-foreground md:text-4xl">
+              Which door<br className="md:hidden" /> <em className="font-serif italic text-primary">are you standing at?</em>
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl font-serif text-sm text-foreground/75 md:text-base">
+              Pause. Breathe. Choose the one that feels closest to true · the rest of the path will open from there.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
+            {/* Door 1 · Discerning */}
+            <Link
+              to="/ceremony-intake"
+              className="group relative flex flex-col rounded-2xl border border-primary/20 bg-card/70 p-6 backdrop-blur transition hover:border-primary/60 hover:bg-card md:p-7"
+            >
+              <Eye className="h-6 w-6 text-primary" />
+              <p className="mt-4 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-primary/80">Door One</p>
+              <h3 className="mt-2 font-display text-xl font-light text-foreground md:text-2xl">
+                <em className="font-serif italic">I'm Listening</em>
+              </h3>
+              <p className="mt-2 flex-1 font-serif text-sm leading-relaxed text-foreground/80">
+                Something has been calling you and you haven't said it out loud yet. Begin with the sacred intake · a quiet way to be heard before you ever walk through our doors.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary transition group-hover:gap-3">
+                Begin the sacred intake <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            {/* Door 2 · Ready */}
+            <Link
+              to="/offerings"
+              className="group relative flex flex-col rounded-2xl border border-primary/40 bg-primary/10 p-6 backdrop-blur transition hover:border-primary hover:bg-primary/15 md:p-7"
+            >
+              <Flame className="h-6 w-6 text-primary" />
+              <p className="mt-4 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-primary">Door Two</p>
+              <h3 className="mt-2 font-display text-xl font-light text-foreground md:text-2xl">
+                <em className="font-serif italic">I'm Ready to Sit</em>
+              </h3>
+              <p className="mt-2 flex-1 font-serif text-sm leading-relaxed text-foreground/80">
+                You already know what is asking to move through you. Find the ceremony that matches the season you are in · Kambo, Hapé, Cacao, Sacred Tea, Yin, or the Sacred Series.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary transition group-hover:gap-3">
+                See the sacred calendar <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            {/* Door 3 · Belonging */}
+            <Link
+              to="/membership"
+              className="group relative flex flex-col rounded-2xl border border-primary/20 bg-card/70 p-6 backdrop-blur transition hover:border-primary/60 hover:bg-card md:p-7"
+            >
+              <HandHeart className="h-6 w-6 text-primary" />
+              <p className="mt-4 font-body text-[10px] font-semibold uppercase tracking-[0.25em] text-primary/80">Door Three</p>
+              <h3 className="mt-2 font-display text-xl font-light text-foreground md:text-2xl">
+                <em className="font-serif italic">I'm Looking for My People</em>
+              </h3>
+              <p className="mt-2 flex-1 font-serif text-sm leading-relaxed text-foreground/80">
+                The work is not meant to be carried alone. Step into the village · a path of belonging, practice, and the souls who are walking this with you.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary transition group-hover:gap-3">
+                Walk the membership path <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ───── COMMUNITY GALLERY ───── */}
       <section className="px-4 py-14 md:py-20">
         <motion.div
