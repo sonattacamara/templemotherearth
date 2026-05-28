@@ -1,73 +1,50 @@
-## Goal
+# Plan: Avatar-Centered Copy + Video Flow Cleanup
 
-Bring every Eventbrite ticketing flow inside the website, pull live event data (date, price, seats, description) from the Eventbrite API into our ceremony pages, add a standalone Forest Circle integration page, move Veterans into the Ceremonies nav, and reposition the cushion video so more of the cushion shows.
+## 1. Token / cost estimate for glossary background video
+You asked first about token cost. Two options:
 
----
+- **Reuse uploaded clips (free)** — Use the three videos you just attached (`call2.mp4`, `call3.mp4`, `hug2.mp4`) plus existing plant/forest clips already in `src/assets/`. Stitched into a soft cross-fading loop behind the glossary header. **Zero generation cost, zero tokens beyond this planning loop.**
+- **Generate new plant-focused loop** with `videogen` (8-second 1080p clip of drifting sacred plants, leaves, mushrooms, cacao pods): ~1 generation call. Roughly equivalent to a single premium image gen in credit terms — small, but not free.
 
-## 1. Embed every Eventbrite link (no more leaving the site)
+**Recommendation:** Start with Option A (reuse uploads + existing forest footage). Zero cost, and the hug/call clips match the "Answer the Call" emotional beat better than abstract plant b-roll.
 
-Replace every external `https://www.eventbrite.com/...` anchor with the existing `EventbriteCheckout` modal so the checkout opens in an in-site overlay.
+## 2. Plant Medicine Glossary — "Answer the Call" section
+- Add a looping background video behind the bottom "Answer the Call" CTA block on `/plant-medicine-glossary`.
+- Source: `call2.mp4` + `call3.mp4` + `hug2.mp4` cross-fading (use existing `FooterVideoBanner` pattern or a new lightweight `<video autoplay muted loop playsinline>` with a dark overlay).
+- Rewrite the CTA copy so the seeker sees themselves. Draft:
+  > **"You didn't land on this page by accident."**
+  > You've been carrying something the world doesn't have language for — a quiet knowing that there's more, a body that's been holding too much for too long, a soul that's ready to come home. The plants have been waiting. The Sanctuary has been waiting. **The only question left is whether you're ready to answer.**
+  > → *Speak with a Guide* (routes to `/contact`)
 
-Pages to convert (hero + footer CTAs both):
-- Hapé (hero CTA is the one still leaking out)
-- Women's Circle
-- Men's Circle
-- Sacred Tea Ceremony
-- Sacred Tea House
-- Sacred Series (and Level 5 alias)
-- Kambo (both Co-ed and Women's Only)
-- FFF
-- Community Potluck
+## 3. Volunteer page
+- **Remove** the existing footer video.
+- Rewrite the closing copy so a prospective volunteer sees themselves. Draft direction:
+  > **"You've always been the one who shows up."**
+  > You're the friend people call when they're falling apart. You hold space without being asked. You've felt the pull to serve something larger than yourself — and the Sanctuary is asking for hands like yours. Sacred reciprocity isn't transactional; it's how the Temple breathes.
+  > → *Step Into Service*
 
-Mechanism: pass the numeric event ID into `<EventbriteCheckout eventId="..." label="..." fallbackUrl="..." />`. Hero `SanctuaryHero` will get a small new prop `primaryCTAComponent` so the hero button can render the embedded checkout instead of a plain `<a>`.
+## 4. Membership page
+- **Remove** the "Common Questions" / FAQ block.
+- Restructure the page so the avatar (the seeker considering becoming a member) sees themselves at every scroll point:
+  - Open with a "you" mirror — name the ache, the longing, the readiness.
+  - Replace feature-list framing of tiers with **"Where are you on the path?"** — each tier becomes a self-recognition statement (e.g. *"I'm just arriving"* → Welcome, *"I'm ready to belong"* → Belong, *"I'm called to train"* → Train, etc.).
+  - Close with an emotional invitation, not a pricing recap.
 
-## 2. Live Eventbrite content sync (so our page mirrors the Eventbrite page)
+## 5. Site-wide video flow audit (light pass)
+Quick check that every remaining footer video matches its page's emotional arc:
+- Women's Circle → cushion clip ✓
+- Men's Circle, Hapé, Sacred Tea, Kambo, Veterans → confirm each footer video still belongs; flag any that feel off so you can decide.
 
-Build a thin server-side bridge so our ceremony pages always show the current date, price, capacity remaining, and Eventbrite description without anyone editing code.
+## Files to touch (build phase)
+- `src/pages/PlantMedicineGlossary.tsx` (or wherever the glossary lives — confirm path during build)
+- `src/pages/Volunteer.tsx`
+- `src/pages/Membership.tsx` (or 2026 membership pathway page)
+- Copy `user-uploads://call2.mp4`, `call3.mp4`, `hug2.mp4` → `src/assets/`
+- Possibly a small new `<GlossaryAnswerCall />` component for the looped background block.
 
-- Add secret `EVENTBRITE_PRIVATE_TOKEN` (user provides a private OAuth token from eventbrite.com → Account → Developer Links → API Keys).
-- New edge function `fetch-eventbrite-event` (verify_jwt = false, CORS enabled):
-  - Input: `{ eventId }`
-  - Calls `GET https://www.eventbriteapi.com/v3/events/{id}/?expand=ticket_classes,venue`
-  - Returns `{ name, start, end, timezone, status, url, ticket_classes: [{ name, cost, on_sale_status, quantity_total, quantity_sold }], description_html, logo_url }`
-  - 5-minute in-memory cache per event id to stay under rate limits.
-- New hook `useEventbriteEvent(eventId)` (React Query, 5 min stale time).
-- New shared components:
-  - `<EventbriteLiveMeta eventId>` — shows next date, time, price range, "X seats remaining" badge. Drop-in under each ceremony hero.
-  - `EventbriteCheckout` gets an optional `eventId`-driven label like `Take Your Seat · Mar 14 · $44`.
+## Out of scope (per your instruction)
+- No new video generation right now.
+- No changes to ceremony pages beyond the audit flag list.
 
-Our hand-written ceremony storytelling stays. Only the live data (date, price, seats) is pulled from Eventbrite. The raw Eventbrite description is NOT rendered (keeps RFRA voice consistent).
-
-## 3. New `/forest-circle` integration page
-
-Standalone integration page. Not linked to Hapé.
-
-- Route: `/forest-circle`
-- Nav placement: under **Integration** menu.
-- Page sections: Hero (forest video bg, "The Forest Circle"), What It Is (a recurring community integration day), Who It's For, What to Expect (arrival, sitting, sharing, food, closing), Sacred Reciprocity, Contact/RSVP via `/contact` (no Eventbrite tie-in for now).
-
-## 4. Move Veterans Transformation Program under Ceremonies
-
-- Navigation: move the Veterans link from its current placement into the Ceremonies dropdown alongside Hapé, Kambo, Sacred Tea, etc.
-- `InternalLinkingFooter` and `CeremonyExploreNav` get a Veterans card.
-- Page route `/veterans` stays the same — only nav grouping changes.
-
-## 5. Cushion video reposition
-
-`FooterVideoBanner` on Women's Circle currently centers the video. Add `object-position` prop (default `center`) and pass `center 75%` on Women's Circle so the cushion is visible instead of being cropped off the bottom.
-
----
-
-## Technical notes
-
-- **Files touched** (edits): `SanctuaryHero.tsx`, `HapeCeremony.tsx`, `WomensCircle.tsx`, `MensCircle.tsx`, `SacredTeaCeremony.tsx`, `SacredTeaHouse.tsx`, `SacredSeriesLayout.tsx`, `KamboCeremony.tsx`, `FrequencyFungiFlow.tsx`, `CommunityPotluck.tsx`, `Navigation.tsx`, `InternalLinkingFooter.tsx`, `CeremonyExploreNav.tsx`, `FooterVideoBanner.tsx`, `App.tsx` (route).
-- **New files**: `supabase/functions/fetch-eventbrite-event/index.ts`, `src/hooks/useEventbriteEvent.ts`, `src/components/EventbriteLiveMeta.tsx`, `src/pages/integration/ForestCircle.tsx`.
-- **New secret**: `EVENTBRITE_PRIVATE_TOKEN` (requested after plan approval).
-- **No DB changes.**
-- **RFRA**: Eventbrite description is NOT auto-rendered, only metadata; our copy stays untouched.
-
-## Out of scope (flag, ask later)
-
-- Auto-syncing Eventbrite description text into our pages (intentionally skipped — keeps voice control).
-- Scraping Eventbrite via Firecrawl (rejected in favor of API).
-- Linking Forest Circle to Hapé (explicitly out).
+## One clarifying question before I build
+For the glossary "Answer the Call" CTA, do you want the button to go to **`/contact`** (Speak with a Guide form) or to **`/membership`** (start the path)? Both fit — just need your call.
