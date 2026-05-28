@@ -3,7 +3,6 @@ import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
-import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
 import mensVideo from "@/assets/video-mens-circle-hero-v2.mp4?url";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
