@@ -14,6 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
+import contactVideo from "@/assets/video-call-2.mp4";
 
 const ease: Easing = [0.25, 0.1, 0.25, 1];
 
@@ -98,8 +99,17 @@ const Contact = () => {
       <PageBreadcrumb items={[{ label: "Contact" }]} />
 
       {/* HERO */}
-      <section className="relative flex min-h-[45vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center bg-foreground">
-        <div className="absolute inset-0 bg-foreground/90" />
+      <section className="relative flex min-h-[45vh] flex-col items-center justify-center overflow-hidden px-4 pt-20 text-center">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src={contactVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-foreground/75" />
         <motion.div
           className="relative z-10 max-w-3xl"
           initial="hidden"
