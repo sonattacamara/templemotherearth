@@ -11,6 +11,10 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import MonthlyThemeBanner from "@/components/MonthlyThemeBanner";
+import MidImageBanner from "@/components/story/MidImageBanner";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import midHomeImg from "@/assets/image-mid-home.jpg";
+import footerHomeVideoAsset from "@/assets/video-footer-home.mp4.asset.json";
 
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -1050,6 +1054,24 @@ const Index = () => {
         headline="Your Offerings Keep the Temple Alive"
         body="As a tax-exempt sacred ceremony church organized under 508(c)(1)(A), every offering sustains ceremonies, community programs, and sacred spaces for kindred spirits everywhere."
         buttonLabel="Offerings & Tithes"
+      />
+
+      <MidImageBanner
+        image={midHomeImg}
+        eyebrow="The Threshold"
+        headline={<>The Door Is Open · <em className="font-serif italic text-primary">Walk In</em></>}
+        body="You did not arrive here by accident. Something in you has been listening for this. Cross the threshold when you are ready."
+        ctaLabel="Begin Your Journey"
+        ctaHref="/ceremony-intake"
+      />
+
+      <FooterVideoBanner
+        video={footerHomeVideoAsset.url}
+        eyebrow="Your Seat Is Waiting"
+        headline={<>Come Home to<br /><em className="font-serif italic text-primary">Mother Earth</em></>}
+        body="The fire is lit. The circle is forming. Take the first step and the rest will be held for you."
+        ctaLabel="Begin Your Journey"
+        ctaHref="/ceremony-intake"
       />
 
       <EventbriteCTA />

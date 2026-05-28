@@ -11,6 +11,10 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import InternalLinkingFooter from "@/components/InternalLinkingFooter";
+import MidImageBanner from "@/components/story/MidImageBanner";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import midMembershipImg from "@/assets/image-mid-membership.jpg";
+import footerMembershipVideoAsset from "@/assets/video-footer-membership.mp4.asset.json";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import ctaFooterImg from "@/assets/cta-footer.jpg";
@@ -564,6 +568,24 @@ const Membership = () => {
         headline="Plant a Seed of Abundance"
         body="Not ready for membership? A one-time gift still makes a powerful difference · funding scholarships, community days, and sacred gatherings."
         buttonLabel="Plant a Seed"
+      />
+
+      <MidImageBanner
+        image={midMembershipImg}
+        eyebrow="Belonging"
+        headline={<>Belonging Is Built <em className="font-serif italic text-primary">One Circle at a Time</em></>}
+        body="This is not a subscription. It is a vow to show up for yourself and for the people who are becoming your people."
+        ctaLabel="Sit With Us"
+        ctaHref="/membership#tiers"
+      />
+
+      <FooterVideoBanner
+        video={footerMembershipVideoAsset.url}
+        eyebrow="Your Place at the Table"
+        headline={<>Become Part of<br /><em className="font-serif italic text-primary">The Family</em></>}
+        body="The circle is open. The table is set. Your seat has been waiting longer than you know."
+        ctaLabel="Become a Member"
+        ctaHref="/membership#tiers"
       />
 
       <EventbriteCTA />
