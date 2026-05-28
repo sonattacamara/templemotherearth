@@ -48,7 +48,7 @@ const SacredSeriesLayout = ({ children, title, description, showBackLink = true,
           All ceremonies held in sincere religious practice under protection of the Religious Freedom Restoration Act (RFRA) · Not a substitute for medical or psychological treatment
         </p>
         <p className="font-sans text-[8px] tracking-[2px] uppercase text-[hsl(90,15%,40%)] leading-loose mt-2">
-          Ceremony space is held for those who register in advance. Reserve your seat in the circle and let your preparation begin.
+          Ceremony space is held for those who register in advance. Take your seat in the circle, and let your preparation begin.
         </p>
       </footer>
     </div>
