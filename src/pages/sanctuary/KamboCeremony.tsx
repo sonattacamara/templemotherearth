@@ -8,6 +8,7 @@ import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import FAQSchema, { FAQItem } from "@/components/FAQSchema";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import kamboVideoUrl from "@/assets/video-kambo-hero-v2.mp4?url";
 import takeASeatVideoUrl from "@/assets/video-kambo-takeaseat.mp4?url";
 
@@ -455,6 +456,9 @@ const KamboCeremony = () => (
         </div>
       </div>
     </section>
+
+    <EventbriteDetails eventKey="kambo-coed" title="Kambo Co-ed · Sacred Logistics" />
+    <EventbriteDetails eventKey="kambo-womens" title="Kambo for Women · Sacred Logistics" />
 
     <CeremonyExploreNav variant="dark" />
   </SacredSeriesLayout>

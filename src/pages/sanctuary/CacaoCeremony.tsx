@@ -282,6 +282,8 @@ const CacaoCeremony = () => {
         </p>
       </div>
 
+      <EventbriteDetails eventKey="cacao" title="Cacao Circle · Sacred Logistics" />
+
       <CeremonyExploreNav variant="dark" />
 
       {/* Footer */}
