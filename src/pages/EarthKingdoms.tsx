@@ -114,6 +114,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "fungi", num: "Three", name: "FUNGI", subtitle: "the internet of the forest floor",
     lead: "Fungi are neither plant nor animal. They are their own kingdom · and arguably the most intelligent one.",
+    bgImage: bgFungi,
     titleColor: "#D4A060", eyebrowColor: "#9B6B3A", factBg: "#120D08", factLabelColor: "#C8883A",
     cardBg: "#120D08", cardNameColor: "#D4A060", statNumColor: "#D4A060", quoteColor: "#D4A060", quoteCite: "#9B6B3A",
     sections: [
@@ -143,6 +144,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "animal", num: "Four", name: "ANIMAL", subtitle: "sacred messengers & sacrament carriers",
     lead: "The Animal Kingdom is not a source of exploitation, it is a community of teachers. The frog, toad, snake, scorpion, ancient sacred intelligences.",
+    bgImage: bgAnimal,
     titleColor: "#8FD67A", eyebrowColor: "#3D7A3D", factBg: "#060D06", factLabelColor: "#5BA84A",
     cardBg: "#060D06", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7A3D",
     sections: [
@@ -150,15 +152,15 @@ const kingdoms: KingdomData[] = [
       { title: "Sacred Animal Covenant", content: "These animals carry ancient intelligences in their sacred secretions. Indigenous wisdom keepers have known their power for millennia." },
     ],
     facts: [
-      { icon: Cat, label: "Kambo Peptides", val: "A sacred secretion unlike anything else in the natural world." },
-      { icon: Snail, label: "Sacred Toad · God Molecule", val: "The most intense non-ordinary state of consciousness accessible." },
-      { icon: Sparkles, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
+      { icon: Cat, iconImg: iconFrog, label: "Kambo Peptides", val: "A sacred secretion unlike anything else in the natural world." },
+      { icon: Snail, iconImg: iconToad, label: "Sacred Toad · God Molecule", val: "The most intense non-ordinary state of consciousness accessible." },
+      { icon: Sparkles, iconImg: iconSnake, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
       { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ancient sacred compounds studied by modern science." },
     ],
     cards: [
-      { icon: Cat, name: "The Frog", body: "Kambo. The Great Purifier. Sacred secretion of deep cleansing." },
-      { icon: Snail, name: "The Toad", body: "The God Molecule. Direct encounter with pure being." },
-      { icon: Sparkles, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
+      { icon: Cat, iconImg: iconFrog, name: "The Frog", body: "Kambo. The Great Purifier. Sacred secretion of deep cleansing." },
+      { icon: Snail, iconImg: iconToad, name: "The Toad", body: "The God Molecule. Direct encounter with pure being." },
+      { icon: Sparkles, iconImg: iconSnake, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
     ],
     stats: [
       { num: "70+", label: "Sacred compounds in Kambo secretion" },
@@ -172,6 +174,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "human", num: "Five", name: "KINGDOM OF MAN", subtitle: "the conscious steward",
     lead: "You are not separate from the five kingdoms. You are the fifth one. The one with the capacity to be conscious of its place in the web.",
+    bgImage: bgHuman,
     titleColor: "#E8C868", eyebrowColor: "#8A4A3A", factBg: "#100808", factLabelColor: "#C8783A",
     cardBg: "#100808", cardNameColor: "#E8C868", statNumColor: "#E8C868", quoteColor: "#E8C868", quoteCite: "#8A4A3A",
     sections: [
