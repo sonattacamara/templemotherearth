@@ -11,6 +11,10 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import MonthlyThemeBanner from "@/components/MonthlyThemeBanner";
+import MidImageBanner from "@/components/story/MidImageBanner";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import midHomeImg from "@/assets/image-mid-home.jpg";
+import footerHomeVideoAsset from "@/assets/video-footer-home.mp4.asset.json";
 
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
