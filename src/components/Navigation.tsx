@@ -48,6 +48,7 @@ const navStructure: NavEntry[] = [
       { label: "The Cove · Men's Circle", href: "/mens-circle", isRoute: true },
       { label: "The Circle · A Wombman Sanctuary", href: "/womens-circle", isRoute: true },
       { label: "Forest Circle", href: "/forest-circle", isRoute: true },
+      { label: "Sacred Blueprint", href: "/sacred-blueprint", isRoute: true },
     ],
   },
   {
@@ -65,7 +66,6 @@ const navStructure: NavEntry[] = [
     items: [
       { label: "Kemetic Teachings", href: "/kemetic-teachings", isRoute: true },
       { label: "Earth Kingdoms", href: "/earth-kingdoms", isRoute: true },
-      { label: "Sacred Blueprint", href: "/sacred-blueprint", isRoute: true },
       { label: "Journal", href: "/journal", isRoute: true },
       { label: "Preparation", href: "/preparation", isRoute: true },
       { label: "Plant Sacrament Glossary", href: "/plant-medicine-glossary", isRoute: true },
