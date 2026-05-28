@@ -421,8 +421,8 @@ const AdminIntakes = () => {
                   <ul className="text-sm space-y-1">
                     {["eligibilityStatement","communityGuidelines","ageConfirmation21","rfrAgreement","liabilityWaiver","truthfulness","confidentiality","preparationCompliance","emergencyAuth"].map((k) => (
                       <li key={k} className="text-muted-foreground">
-                        <span className={selected.metadata?.[k] ? "text-primary" : "text-destructive"}>
-                          {selected.metadata?.[k] ? "✓" : "✗"}
+                        <span className={`inline-flex items-center ${selected.metadata?.[k] ? "text-primary" : "text-destructive"}`}>
+                          {selected.metadata?.[k] ? <Check className="h-3.5 w-3.5" /> : <X className="h-3.5 w-3.5" />}
                         </span>{" "}
                         {k}
                       </li>

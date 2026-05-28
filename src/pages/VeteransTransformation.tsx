@@ -854,7 +854,7 @@ const VeteransTransformation = () => {
                   {struggles.map((s) => (
                     <label key={s} className="flex items-center gap-2 cursor-pointer group">
                       <span className={`h-5 w-5 rounded border-2 flex items-center justify-center transition flex-shrink-0 ${formData.struggles.includes(s) ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
-                        {formData.struggles.includes(s) && <span className="text-white text-xs font-bold">✓</span>}
+                        {formData.struggles.includes(s) && <Check className="h-3 w-3 text-white" strokeWidth={3} />}
                       </span>
                       <span className="font-body text-sm text-[#F5F0E6]/80">{s}</span>
                       <input type="checkbox" checked={formData.struggles.includes(s)} onChange={() => handleCheckboxToggle("struggles", s)} className="sr-only" />
@@ -872,7 +872,7 @@ const VeteransTransformation = () => {
                   {currentSupport.map((cs) => (
                     <label key={cs} className="flex items-center gap-2 cursor-pointer group">
                       <span className={`h-5 w-5 rounded border-2 flex items-center justify-center transition flex-shrink-0 ${formData.currentSupport.includes(cs) ? "border-[#B8860B] bg-[#B8860B]" : "border-[#556B2F]/50 group-hover:border-[#B8860B]/50"}`}>
-                        {formData.currentSupport.includes(cs) && <span className="text-white text-xs font-bold">✓</span>}
+                        {formData.currentSupport.includes(cs) && <Check className="h-3 w-3 text-white" strokeWidth={3} />}
                       </span>
                       <span className="font-body text-sm text-[#F5F0E6]/80">{cs}</span>
                       <input type="checkbox" checked={formData.currentSupport.includes(cs)} onChange={() => handleCheckboxToggle("currentSupport", cs)} className="sr-only" />

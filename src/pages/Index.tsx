@@ -14,7 +14,7 @@ import MonthlyThemeBanner from "@/components/MonthlyThemeBanner";
 import MidImageBanner from "@/components/story/MidImageBanner";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import midHomeImg from "@/assets/image-mid-home.jpg";
-import footerHomeVideoAsset from "@/assets/video-footer-home.mp4.asset.json";
+import footerHomeVideoAsset from "@/assets/video-footer-home-threshold.mp4.asset.json";
 
 import logo from "@/assets/logo.png";
 import heroBg from "@/assets/hero-bg-new.jpg";
@@ -768,7 +768,7 @@ const Index = () => {
             {/* Upcoming Experiences */}
             <div className="grid gap-6 md:grid-cols-2 mb-8">
               <div className="rounded-xl border border-primary/20 bg-primary/5 p-6 text-left space-y-3">
-                <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">🌿 International Immersion</p>
+                <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary inline-flex items-center gap-2"><Leaf className="h-3.5 w-3.5" /> International Immersion</p>
                 <h3 className="font-display text-lg font-bold text-foreground">
                   Wide Open · Costa Rica
                 </h3>
