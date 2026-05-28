@@ -44,7 +44,7 @@ const HapeCeremony = () => (
       title={<>The Noise Stops.<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.15em]">You Remember.</em></>}
       subtitle=""
       lead="Not the thought of yourself. Not the story you've been running. The actual you, underneath all of it, quiet, present, grounded in your body on this earth. Hapé has been clearing this path for thousands of years. It knows exactly where to go."
-      primaryCTA={{ label: "Enter the Forest Circle", href: "https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true", external: true }}
+      primaryCTA={{ label: "Enter the Hapé Circle", href: "https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287?aff=oddtdtcreator&keep_tld=true", external: true }}
       secondaryCTA={{ label: "Learn More ↓", href: "#about" }}
       backgroundVideo={hapeVideo}
     />
@@ -106,7 +106,7 @@ const HapeCeremony = () => (
         </p>
         <EventbriteCheckout
           eventId="946929721287"
-          label="Enter the Forest Circle"
+          label="Enter the Hapé Circle"
           fallbackUrl="https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287"
         />
         <p className="mt-6 font-sans text-[10px] tracking-[2px] uppercase text-[hsl(40,25%,72%)]">

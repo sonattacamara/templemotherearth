@@ -11,8 +11,6 @@ import EventbriteCTA from "@/components/EventbriteCTA";
 import DonationCTA from "@/components/DonationCTA";
 import Navigation from "@/components/Navigation";
 import InternalLinkingFooter from "@/components/InternalLinkingFooter";
-import MidImageBanner from "@/components/story/MidImageBanner";
-import midMembershipImg from "@/assets/image-mid-membership.jpg";
 import logo from "@/assets/logo.png";
 import communityImg from "@/assets/community.jpg";
 import membershipVideo from "@/assets/video-membership-hero.mp4";
@@ -459,15 +457,6 @@ const Membership = () => {
         headline="Plant a Seed of Abundance"
         body="Not ready for membership? A one-time gift still makes a powerful difference · funding scholarships, community days, and sacred gatherings."
         buttonLabel="Plant a Seed"
-      />
-
-      <MidImageBanner
-        image={midMembershipImg}
-        eyebrow="Belonging"
-        headline={<>Belonging Is Built <em className="font-serif italic text-primary">One Circle at a Time</em></>}
-        body="This is not a subscription. It is a vow to show up for yourself and for the people who are becoming your people."
-        ctaLabel="Sit With Us"
-        ctaHref="/membership#tiers"
       />
 
       <EventbriteCTA />
