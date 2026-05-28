@@ -1,6 +1,7 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import { motion } from "framer-motion";
 import { Leaf, Flower2, Moon, Sun, Sprout, Sparkles, Coffee } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -140,6 +141,8 @@ const SacredTeaHouse = () => (
         </div>
       </div>
     </section>
+
+    <EventbriteDetails eventKey="sacred-tea-house" title="The Tea House · Sacred Logistics" />
 
     {/* CTA · Video Footer */}
     <section className="relative overflow-hidden border-t border-[hsla(45,70%,49%,0.1)]">

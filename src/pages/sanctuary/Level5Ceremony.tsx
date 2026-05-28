@@ -1,6 +1,7 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import level5VideoHero from "@/assets/video-level5-3.mp4";
@@ -251,6 +252,8 @@ const Level5Ceremony = () => (
         </p>
       </div>
     </section>
+
+    <EventbriteDetails eventKey="level5" title="Level 5 · Sacred Logistics" />
 
     {/* RFRA Statement */}
     <div className="bg-[#050804] border-t border-[rgba(200,160,48,0.1)] py-8 px-6 md:px-12">

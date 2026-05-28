@@ -3,6 +3,7 @@ import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 
 import potluckVideoUrl from "@/assets/video-potluck-hero-v2.mp4?url";
 const potluckVideo = { url: potluckVideoUrl };
@@ -47,6 +48,8 @@ const CommunityPotluck = () => (
       quote="I came not knowing anyone. I left with people I will know for the rest of my life. That's not an exaggeration. This community is different. The conversations are different."
       attribution="Community member · Alexandria, VA"
     />
+
+    <EventbriteDetails eventKey="potluck" title="The Potluck · Sacred Logistics" />
 
     <FooterVideoBanner
       video={potluckFooterVideoUrl}

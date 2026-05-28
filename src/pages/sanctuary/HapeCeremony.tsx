@@ -50,7 +50,7 @@ const HapeCeremony = () => (
       backgroundVideo={hapeVideo}
     />
 
-    <SanctuarySection id="about" eyebrow="What Hapé Is" title={<>The Forest's Most<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Direct Transmission</em></>}>
+    <SanctuarySection id="about" eyebrow="What Hapé Is" title={<>The Amazon's Most<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Direct Transmission</em></>}>
       <div className="text-xl leading-[1.85] text-[hsl(40,30%,90%)] max-w-[720px] font-serif space-y-6">
         <p>Hapé, pronounced <em>ha-PAY</em>, is a sacred snuff prepared by Amazonian peoples from ceremonially harvested tobacco and plant ashes. It is administered through the nostrils using a pipe called a <em>tepi</em> or <em>kuripe</em>. The experience is immediate, specific, and unlike anything else.</p>
         <p>Within moments, <strong className="text-[hsl(45,70%,49%)]">the mind goes quiet.</strong> Not suppressed, cleared. The third eye opens. The body drops into the earth. The frantic noise of ordinary life falls away and what remains is you, unadorned, present, exactly here.</p>
@@ -105,7 +105,7 @@ const HapeCeremony = () => (
           <em className="font-serif italic text-[hsl(35,65%,55%)] text-[1.1em]">Is Waiting for the Silence It Already Knows</em>
         </h2>
         <p className="max-w-[640px] mx-auto text-[hsl(40,25%,85%)] font-serif text-lg leading-relaxed mb-8">
-          You already know if this is for you. Take your place. Bring your breath. Let the forest's most direct transmission meet you where you are.
+          You already know if this is for you. Take your place. Bring your breath. Let this ancient transmission meet you where you are.
         </p>
         <EventbriteCheckout
           eventId="946929721287"

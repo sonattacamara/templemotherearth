@@ -4,6 +4,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryClickableCards from "@/components/sanctuary/SanctuaryClickableCards";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import fffFooterVideo from "@/assets/video-fff-footer.mp4?url";
 
 import fffVideoUrl from "@/assets/video-fff-hero-v5.mp4?url";
@@ -107,6 +108,8 @@ const FrequencyFungiFlow = () => (
         },
       ]} />
     </SanctuarySection>
+
+    <EventbriteDetails eventKey="fff" title="Frequency Fungi Flow · Sacred Logistics" />
 
     <FooterVideoBanner
       video={fffFooterVideo}
