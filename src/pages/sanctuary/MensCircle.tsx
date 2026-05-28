@@ -6,6 +6,8 @@ import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 
 import mensVideo from "@/assets/video-mens-circle-hero-v2.mp4?url";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import mensFooterVideoUrl from "@/assets/video-mens-circle-footer.mp4?url";
 
 const EVENTBRITE_URL =
   "https://www.eventbrite.com/e/the-cove-a-mens-healing-reflection-circle-tickets-1982328123781?aff=ebdsoporgprofile";
@@ -101,18 +103,13 @@ const MensCircle = () => (
       attribution="The Cove · Washington, DC"
     />
 
-    <SanctuaryCTA
-      eyebrow="Recurring Offering · Washington, DC"
-      title={
-        <>
-          The Circle Is<br />
-          <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Waiting For You</em>
-        </>
-      }
-      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us."
+    <FooterVideoBanner
+      video={mensFooterVideoUrl}
+      eyebrow="Recurring Brotherhood Circle · Washington, DC"
+      headline={<>The Circle Is<br /><em className="font-serif italic">Waiting For You</em></>}
+      body="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us."
       ctaLabel="Reserve Your Seat"
       ctaHref={EVENTBRITE_URL}
-      note="21+ · Pre-registration required · Confidentiality honored"
     />
   </SacredSeriesLayout>
 );
