@@ -82,7 +82,7 @@ const Scholarship = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { n: "1", title: "Apply", desc: "Tell us which ceremony you feel called to and how you can serve." },
+              { n: "1", title: "Tell Us Your Calling", desc: "Share which ceremony is calling you and how you can serve the Temple in return." },
               { n: "2", title: "Serve", desc: "Commit to energy exchange at the Temple. Setup, kitchen, grounds, or whatever your gifts allow." },
               { n: "3", title: "Receive", desc: "Your seat is held. You arrive in dignity, knowing you have already given." },
             ].map((s) => (
