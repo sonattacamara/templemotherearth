@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 import { Droplets, Mountain, Droplet, Magnet, Leaf, Dna, Sun, Pill, Candy, Flower2, Globe, Brain, ShieldCheck, Zap, Cat, Snail, Bug, Sparkles, HeartPulse, Gem, Eye } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import earthVideo from "@/assets/video-earth-hero.mp4";
+import bgMineral from "@/assets/earth-kingdom-mineral.jpg";
+import bgPlant from "@/assets/earth-kingdom-plant.jpg";
+import bgFungi from "@/assets/earth-kingdom-fungi.jpg";
+import bgAnimal from "@/assets/earth-kingdom-animal.jpg";
+import bgHuman from "@/assets/earth-kingdom-human.jpg";
+import iconToad from "@/assets/icon-sacred-toad.png";
+import iconSnake from "@/assets/icon-sacred-snake.png";
+import iconFrog from "@/assets/icon-sacred-frog.png";
 
 const RevealSection = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);
@@ -24,6 +32,7 @@ interface KingdomData {
   name: string;
   subtitle: string;
   lead: string;
+  bgImage?: string;
   titleColor: string;
   eyebrowColor: string;
   factBg: string;
@@ -34,8 +43,8 @@ interface KingdomData {
   quoteColor: string;
   quoteCite: string;
   sections: { title: string; content: string }[];
-  facts: { icon: LucideIcon; label: string; val: string }[];
-  cards: { icon: LucideIcon; name: string; body: string }[];
+  facts: { icon: LucideIcon; iconImg?: string; label: string; val: string }[];
+  cards: { icon: LucideIcon; iconImg?: string; name: string; body: string }[];
   stats: { num: string; label: string }[];
   quote: { text: string; cite: string };
   ceremonyLink: { tag: string; name: string; href: string };
