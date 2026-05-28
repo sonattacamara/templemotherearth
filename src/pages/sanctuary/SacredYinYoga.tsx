@@ -6,7 +6,6 @@ const yogaVideo = { url: yogaVideoUrl };
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
-import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import yinFooterVideo from "@/assets/video-yin-footer.mp4?url";
 
 const EVENTBRITE_WEDNESDAY = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";
@@ -85,22 +84,6 @@ const SacredYinYoga = () => (
         { title: "Integration & Close", description: "Extended savasana with sound bath. A closing sharing circle for those who feel called to speak. You leave feeling like you have been returned to yourself." },
       ]} />
     </SanctuarySection>
-
-    <MidScrollCommitment
-      eyebrow="You've Been Holding It All Week"
-      headline={<>The Mat Is Already<br /><em className="font-serif italic text-primary">Rolled Out For You</em></>}
-      body={
-        <>
-          <p>You can keep scrolling, or you can let your body finally exhale. The sacred intake is the gentlest door · four minutes, so we know how to hold you when you arrive.</p>
-          <p>You don't have to come in strong. You just have to come in honest.</p>
-        </>
-      }
-      ctaLabel="Begin The Sacred Intake"
-      ctaHref="/ceremony-intake"
-      secondaryCtaLabel="Speak With A Guide"
-      secondaryCtaHref="/contact"
-      reassurance="Held in confidence · read only by the facilitators who will sit with you."
-    />
 
     <FooterVideoBanner
       video={yinFooterVideo}

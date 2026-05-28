@@ -10,7 +10,6 @@ import {
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import { Helmet } from "react-helmet-async";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
-import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import MonthlyThemeCard from "@/components/sanctuary/MonthlyThemeCard";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";
@@ -653,22 +652,6 @@ const SacredSeries = () => {
       <hr className="border-t border-[hsla(45,70%,49%,0.1)] mx-6 md:mx-12" />
 
       {/* ═══ SACRED PATHWAYS PRICING (moved to bottom) ═══ */}
-      <MidScrollCommitment
-        eyebrow="If Their Words Sound Familiar"
-        headline={<>You Are Not Reading<br /><em className="font-serif italic text-primary">By Accident</em></>}
-        body={
-          <>
-            <p>The voices you just read were once where you are right now · scrolling, wondering, half-decided. What moved them through the door was one small honest step.</p>
-            <p>The sacred intake is four minutes. We listen. We pray over it. Then we meet you exactly where you are.</p>
-          </>
-        }
-        ctaLabel="Begin The Sacred Intake"
-        ctaHref="/ceremony-intake"
-        secondaryCtaLabel="Speak With A Guide"
-        secondaryCtaHref="/contact"
-        reassurance="Held in confidence · read only by the facilitators who will sit with you."
-      />
-
       <SanctuarySection eyebrow="Sacred Pathways" title={<>Find Your<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">Pathway of Participation</em></>}>
         <p className="text-center text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif max-w-[640px] mx-auto mb-12">
           The Sacred Series is a recurring 7-day series of sacred ceremonies, body practices, and community gatherings. Each offering is its own doorway. Choose the path your spirit is ready to walk.
