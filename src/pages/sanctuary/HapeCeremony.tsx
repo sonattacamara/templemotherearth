@@ -8,6 +8,7 @@ import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import EventbriteCheckout from "@/components/EventbriteCheckout";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import { Helmet } from "react-helmet-async";
 
 const hapeJsonLd = {
