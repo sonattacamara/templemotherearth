@@ -127,9 +127,10 @@ const ForestCircle = () => (
 
     <SanctuaryCTA
       title="A Place Has Been Kept"
-      body="Forest Circle is offered on a sliding sacred reciprocity model so the day is reachable for those whose path requires it. Write to us to learn the next gathering date and reserve your place."
-      buttonLabel="Begin the Conversation"
-      buttonHref="/contact"
+      description="Forest Circle is offered on a sliding sacred reciprocity model so the day is reachable for those whose path requires it. Write to us to learn the next gathering date and reserve your place."
+      ctaLabel="Begin the Conversation"
+      ctaHref="/contact"
+      external={false}
     />
 
     <div className="bg-[hsl(140,28%,4%)] border-t border-[hsla(45,70%,49%,0.1)] py-8 px-6 md:px-12">
