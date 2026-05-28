@@ -18,6 +18,7 @@ import level5Initiation from "@/assets/level5-initiation.png";
 import sanctuaryDay5Spa from "@/assets/sanctuary-day5-spa.png";
 import kamboFrogArt from "@/assets/kambo-frog-art.png";
 import sacredSeriesHeroVideo from "@/assets/video-sacred-series-hero.mp4?url";
+import sacredSeriesAnswerCallVideo from "@/assets/video-sacred-series-answercall.mp4?url";
 
 const SACRED_SERIES_EVENTBRITE = "https://www.eventbrite.com/e/1990210417935/?aff=oddtdtcreator";
 
@@ -748,14 +749,24 @@ const SacredSeries = () => {
         </div>
       </SanctuarySection>
 
-      {/* ═══ FINAL CTA ═══ */}
-      <section className="py-20 md:py-28 px-6 md:px-12 text-center bg-gradient-to-t from-[hsl(105,30%,8%)] to-[hsl(114,36%,10%)]">
-        <div className="max-w-[640px] mx-auto">
+      {/* ═══ FINAL CTA · ANSWER THE CALL (video background) ═══ */}
+      <section className="relative overflow-hidden py-20 md:py-28 px-6 md:px-12 text-center">
+        <video
+          src={sacredSeriesAnswerCallVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(105,30%,5%)] via-[hsla(105,30%,8%,0.78)] to-[hsla(114,36%,10%,0.7)]" />
+        <div className="relative z-10 max-w-[640px] mx-auto">
           <p className="font-sans text-[9px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-6">Your Soul Knows</p>
           <h2 className="font-sans text-[clamp(28px,4.5vw,56px)] font-extralight leading-[1.05] text-[hsl(40,30%,92%)] mb-6">
             Will You Answer<br /><em className="font-serif italic text-[hsl(45,70%,55%)] text-[1.1em]">the Call?</em>
           </h2>
-          <p className="text-[19px] text-[hsl(35,30%,68%)] leading-relaxed font-serif mb-12">
+          <p className="text-[19px] text-[hsl(40,30%,88%)] leading-relaxed font-serif mb-12">
             When you feel ready, a space of compassion is waiting for you. We are here to help you discern your next steps with kindness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

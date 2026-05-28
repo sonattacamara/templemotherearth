@@ -182,7 +182,7 @@ const KemeticTeachings = () => {
     setSubmitting(true);
     try {
       await supabase.functions.invoke("submit-newsletter", { body: { email, source: "kemetic-teachings" } });
-      toast({ title: "Blessed! 🌿", description: "You'll receive new teachings from Dr. Love." });
+      toast({ title: "Blessed!", description: "You'll receive new teachings from Dr. Love." });
       setEmail("");
     } catch {
       toast({ title: "Something went wrong", description: "Please try again.", variant: "destructive" });
@@ -431,7 +431,7 @@ const KemeticTeachings = () => {
                     {!flippedCards.has(i) ? (
                       <div className="text-center">
                         <Sparkles className="mx-auto mb-3 text-secondary" size={24} />
-                        <p className="font-display text-xl font-semibold text-primary-foreground">✦ {a.text}</p>
+                        <p className="font-display text-xl font-semibold text-primary-foreground">{a.text}</p>
                       </div>
                     ) : (
                       <div>
@@ -467,7 +467,7 @@ const KemeticTeachings = () => {
                       {!flippedCards.has(i) ? (
                         <div className="text-center">
                           <Sparkles className="mx-auto mb-3 text-secondary" size={24} />
-                          <p className="font-display text-xl font-semibold text-primary-foreground">✦ {a.text}</p>
+                          <p className="font-display text-xl font-semibold text-primary-foreground">{a.text}</p>
                         </div>
                       ) : (
                         <div>

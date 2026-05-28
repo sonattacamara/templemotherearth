@@ -330,14 +330,14 @@ const KamboCeremony = () => (
           <PathCard
             eyebrow="Co-ed Circle"
             title="Co-ed Kambo with King James"
-            description="A mixed-gender circle held by King James, our High Priest. For seekers of any path who are ready to meet the frog in shared sacred space."
+            description="Sundays · 8:00 AM. A mixed-gender circle held by King James, our High Priest. For seekers of any path who are ready to meet the frog in shared sacred space."
             url={COED_URL}
             icon={Users}
           />
           <PathCard
             eyebrow="Women's Only"
             title="Women's Only · The Sacred Release"
-            description="A women-only container. Tender, fierce, and held for the body that carries lineage. Space for what only sisters can witness."
+            description="Saturdays · 8:00 AM. A women-only container. Tender, fierce, and held for the body that carries lineage. Space for what only sisters can witness."
             url={WOMENS_URL}
             icon={Flower2}
             delay={0.1}
@@ -430,7 +430,7 @@ const KamboCeremony = () => (
           rel="noopener noreferrer"
           className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-8 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
         >
-          Co-ed with King James
+          Co-ed with King James · Sundays 8 AM
         </a>
         <a
           href={WOMENS_URL}
@@ -438,7 +438,7 @@ const KamboCeremony = () => (
           rel="noopener noreferrer"
           className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-8 py-4 border border-[hsl(45,70%,49%)] text-[hsl(45,70%,55%)] hover:bg-[hsl(45,70%,49%)] hover:text-[hsl(105,30%,5%)] transition-all duration-300"
         >
-          Women's Only Sitting
+          Women's Only · Saturdays 8 AM
         </a>
       </div>
     </section>
