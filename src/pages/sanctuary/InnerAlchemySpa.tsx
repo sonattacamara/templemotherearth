@@ -3,6 +3,7 @@ import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import spaVideo from "@/assets/video-spa-hero.mp4.asset.json";
 import spaFooterVideoUrl from "@/assets/video-spa-footer.mp4?url";
 
@@ -41,6 +42,8 @@ const InnerAlchemySpa = () => (
         { title: "Community & Rest", description: "Space to simply be. With others who have chosen to rest. To restore. Just breathing." },
       ]} />
     </SanctuarySection>
+
+    <EventbriteDetails eventKey="spa" title="Inner Alchemy · Sacred Logistics" />
 
     <FooterVideoBanner
       video={spaFooterVideoUrl}

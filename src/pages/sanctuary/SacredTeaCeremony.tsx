@@ -6,6 +6,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import teaSeekerVideoUrl from "@/assets/video-teahouse-seeker.mp4?url";
 import { Helmet } from "react-helmet-async";
 
@@ -104,6 +105,8 @@ const SacredTeaCeremony = () => (
       quote="I came thinking I'd have an interesting experience. What I had was a reckoning. Something I'd been carrying for fifteen years was gone. Not processed, gone. I walked out into the morning and everything looked different."
       attribution="Sacred Circle level · Baltimore, MD"
     />
+
+    <EventbriteDetails eventKey="sacred-tea-ceremony" title="Sacred Tea Ceremony · Sacred Logistics" />
 
     <FooterVideoBanner
       video={teaSeekerVideoUrl}

@@ -6,6 +6,7 @@ const yogaVideo = { url: yogaVideoUrl };
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import yinFooterVideo from "@/assets/video-yin-footer.mp4?url";
 
 const EVENTBRITE_WEDNESDAY = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";
@@ -84,6 +85,9 @@ const SacredYinYoga = () => (
         { title: "Integration & Close", description: "Extended savasana with sound bath. A closing sharing circle for those who feel called to speak. You leave feeling like you have been returned to yourself." },
       ]} />
     </SanctuarySection>
+
+    <EventbriteDetails eventKey="yin-softening" title="The Softening · Sacred Logistics" />
+    <EventbriteDetails eventKey="yin-surrender" title="The Art of Surrender · Sacred Logistics" />
 
     <FooterVideoBanner
       video={yinFooterVideo}

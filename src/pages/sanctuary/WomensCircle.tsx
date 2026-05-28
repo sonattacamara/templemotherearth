@@ -4,6 +4,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 
 import womensVideo from "@/assets/video-womens-circle-hero-v4.mp4?url";
 import womensFooterVideoUrl from "@/assets/video-womens-circle-cushion.mp4?url";
@@ -101,6 +102,8 @@ const WomensCircle = () => (
       quote="Wednesdays used to be the day I survived. Now it's the day I come home. I didn't realize how starved I was for sisterhood until I sat in this circle."
       attribution="The Circle · A Wombman Sanctuary · Washington, DC"
     />
+
+    <EventbriteDetails eventKey="womens-circle" title="The Circle · Sacred Logistics" />
 
     <FooterVideoBanner
       video={womensFooterVideoUrl}

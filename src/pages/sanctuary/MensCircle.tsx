@@ -6,6 +6,7 @@ import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 
 import mensVideo from "@/assets/video-mens-circle-hero-v2.mp4?url";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 import mensFooterVideoUrl from "@/assets/video-mens-circle-footer.mp4?url";
 
 const EVENTBRITE_URL =
@@ -101,6 +102,8 @@ const MensCircle = () => (
       quote="I came in expecting to listen. I left having said the thing I'd been holding in my chest for two years. No one fixed me. They just witnessed me. That was the medicine."
       attribution="The Cove · Washington, DC"
     />
+
+    <EventbriteDetails eventKey="mens-cove" title="The Cove · Sacred Logistics" />
 
     <FooterVideoBanner
       video={mensFooterVideoUrl}
