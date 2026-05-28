@@ -337,7 +337,7 @@ const VeteransTransformation = () => {
               href="#apply"
               className="rounded-lg bg-[#556B2F] px-8 py-4 font-body text-base font-semibold text-white transition hover:bg-[#6B8E23] shadow-lg"
             >
-              Begin Your Transformation
+              Apply · King James Reads Every One
             </a>
             <a
               href="tel:988"
