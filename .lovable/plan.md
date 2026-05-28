@@ -1,82 +1,100 @@
-## Part 1 · Video Footer Placements (4 uploaded videos)
+# Three-Page Update Plan
 
-Reuse the existing `FooterVideoBanner` pattern (dark overlay + headline + CTA) used on Kambo, Hape, Spa, etc.
+## 1. Frequency, Fungi & Flow · Clickable "Ways to Move" Cards
 
-1. **Sacred Tea House** (`tea2.mp4`)
-   - Copy to `src/assets/video-teahouse-footer.mp4`
-   - Replace the closing "The Tea House Awaits" gradient section in `SacredTeaHouse.tsx` with a video banner
-   - Superimposed: eyebrow "Monthly Offering · Washington, DC" · headline **"The Tea House Awaits"** · subline "A monthly sanctuary of slowness and sacred sacrament" · CTA "Reserve Your Seat" → existing Eventbrite link
+The "Ways to Move" section currently uses static `SanctuaryColCards`. Convert each card into a clickable tile that opens a Dialog (shadcn) with a richer description and a "What to Expect" panel.
 
-2. **Community Potluck** (`tabel_set.mp4`)
-   - Copy to `src/assets/video-potluck-footer.mp4`
-   - Replace the final `SanctuaryCTA` block in `CommunityPotluck.tsx`
-   - Superimposed: eyebrow "4th Monday · Free & Open" · headline **"The Table Is Already Set For You"** · CTA "Register Free" → existing Eventbrite link
+**New component:** `src/components/sanctuary/SanctuaryClickableCards.tsx`
+- Accepts cards with: `title`, `shortDescription`, `longDescription`, `whatToExpect[]` (bullets).
+- Tile reuses the existing card visual (border, gold accent, hover lift) and adds a subtle "Tap to learn more →" affordance.
+- On click opens a shadcn `Dialog` styled in the dark sanctuary palette (Dark Jungle Green bg, gold accent border, cream text, serif headline) with two stacked blocks: "The Practice" (paragraph) and "What to Expect" (icon-led list using Lucide).
 
-3. **Men's Circle / The Cove** (`circle_men.mp4`)
-   - Copy to `src/assets/video-mens-circle-footer.mp4`
-   - Replace the final `SanctuaryCTA` in `MensCircle.tsx`
-   - Superimposed: eyebrow "Recurring Brotherhood Circle" · headline **"The Circle Is Waiting For You"** · CTA "Reserve Your Seat" → existing Eventbrite link
+**Content for 4 cards** (Static Stand, Contact Dance, Free Flow, Stillness as Movement) — short copy stays as today; long copy adds preparation, posture/safety guidance, and 3·5 "what to expect" bullets each (e.g., for Contact Dance: opt-in only, eye-contact pause, right to leave the contact at any moment).
 
-4. **`woman_circle2.mp4`** — held, no placement was specified. Will save to `src/assets/video-womens-circle-footer.mp4` and await your placement instruction (likely the Women's Circle footer CTA — confirm before I wire it).
+Only this one section changes. Other FFF copy untouched.
 
----
+## 2. Sacred Tea Ceremony · Rewrite in Seeker Language + New Footer Video
 
-## Part 2 · Earth Kingdoms background imagery
+Goal: the avatar (a tired, curious newcomer) sees themselves on the page, understands what "sacrament" means in their own words, and feels "this is exactly what I need."
 
-Add a layered background image to each `KingdomSection` (positioned absolute behind the content, with a dark gradient overlay so text stays legible). Pattern: `<img className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity">` + existing dark section bg.
+**New video asset:** copy `user-uploads://sacred_tea_house-3.mp4` → `src/assets/video-teahouse-seeker.mp4`. Use it as a new closing `FooterVideoBanner` titled **"A Seat Has Been Saved For You"** (replacing the current `SanctuaryCTA` text-only block). The existing `video-sacred-tea-ceremony.mp4` remains the hero background.
 
-Images to generate (no existing assets match — will use `imagegen` at standard quality, 1920×1080):
+**Copy rewrites (RFRA-safe · no chemical names · no em dashes):**
 
-| Kingdom | Background image prompt |
-|---|---|
-| Mineral | Cluster of raw quartz, amethyst, and shilajit crystals on dark stone, cinematic moody lighting |
-| Plant | Old-growth forest canopy of towering trees, shafts of golden light through mist |
-| Fungi | Wild mushrooms (amanita, psilocybe, lion's mane) on mossy forest floor, macro, soft fog |
-| Animal | Tree frog and serpent coiled on a mossy branch together, dark jungle backdrop |
-| Kingdom of Man | *See proposal below* |
+- **Hero**
+  - Eyebrow: `The Fruit of the Gods · A Sacred Tea Ceremony`
+  - Title: `You've Been Carrying / Something Heavy / For Too Long`
+  - Lead: "You don't need another book, another podcast, another weekend of trying to think your way out. Sacred Tea is an ancient practice · a cup poured in ceremony · that helps the part of you that already knows finally be heard."
 
-**Inline imagery fixes within Animal Kingdom content cards:**
-- "Sacred Toad" card currently uses a snail icon → swap to a toad image/icon
-- "Kundalini Serpent" card → snake image
-- "Kambo" card → frog image
-- I will generate small (512×512) thematic illustrations for these three cards and replace the lucide icons with `<img>` tags, OR keep lucide and swap to correct lucide icons (`lucide-react` doesn't have toad/frog/snake — so generated images are the right call). Confirm direction.
+- **New "Is This For You?" section** (above "What the Ancients Called…") with a 6-bullet "You may be here because…" list written in plain language:
+  - You feel tired in a way sleep does not fix.
+  - You've done the therapy, the journaling, the breathwork · and something is still stuck.
+  - You're curious about ceremony but the words feel foreign.
+  - You want to feel something real again.
+  - You're ready to listen to your body instead of override it.
+  - You don't want a high. You want the truth.
 
----
+- **"What Is a Sacrament?" plain-language explainer** (replaces dense paragraph):
+  - One sentence: "A sacrament is a sacred substance taken in ceremony · with intention, with reverence, with people who know how to hold space · so that what you drink becomes a doorway, not a drug."
+  - Followed by a 3-card row (reuse `SanctuaryColCards`): **The Cup** · **The Circle** · **The Container** explaining each in human terms.
 
-## Part 3 · "Kingdom of Man" background — my thoughts
+- **"What a Night Looks Like" timeline** (4 cards): Arrival & Grounding · The Pour · The Journey Inward · Return & Integration. Concrete, hour-by-hour language so a first-timer can picture it.
 
-The other four kingdoms are non-human nature. Man is the conscious witness · the integrator. Three directions to choose from:
+- **Three Levels section**: keep the structure but rename to seeker-friendly subtitles · "Community · Your First Cup" · "Sacred Circle · Going Deeper" · "Fruit of the Gods · The Full Journey" · and rewrite descriptions in "you" voice.
 
-- **A · The Reverent Human** — silhouette of a BIPOC figure standing barefoot on earth at dawn, arms open, mist rising, mountains behind. Conveys "the temple is the body."
-- **B · The Web of Kingdoms** — a human figure at center, faintly translucent, with roots, mycelium, crystals, and animals woven around them. Conveys "woven in, not above."
-- **C · Hands of Earth** — close-up of hands cupping soil with a small seedling, crystals, and a tiny mushroom. Symbolic of stewardship.
+- **Pull quote**: keep existing.
 
-My recommendation: **A** · matches the existing BIPOC sanctuary-seeker visual direction (per memory) and the page's "you are the temple" subtitle.
+- **New Footer Video Banner** (replaces `SanctuaryCTA`):
+  - eyebrow: `Recurring Offering · Washington, DC`
+  - headline: `A Seat Has Been / Saved For You`
+  - body: "The kettle is on. The circle is forming. When you're ready, the door opens from your side."
+  - cta: `Reserve Your Seat`
 
----
+## 3. Veterans Transformation Program · Rewrite for King James Avatar
 
-## Part 4 · "Kingdoms Are Waiting For You" footer video — concept only (NOT generating)
+King James, 22-year retired veteran. The page should read like it was written by someone who has been where he is: tired of the VA loop, tired of being passed doctor-to-doctor, ready to stop managing symptoms and start healing the root · the pain, the suffering, the war still living in the body.
 
-You asked for thoughts, not generation. Concept for when you're ready:
-- 10-second cinematic montage: macro crystal facet → forest canopy pan → mushroom cap pushing through moss → frog blinking on a leaf → BIPOC hand pressing into earth → fade to title card.
-- Could be assembled from existing site footage or generated via `videogen` later as a single clip with a slow drifting camera through a forest threshold where each kingdom subtly appears.
-- Placement: replaces the current gradient "Kingdoms Are Waiting for You" footer with a `FooterVideoBanner`.
-- I'll wait for your go-ahead before generating.
+**Scope:** rewrite copy in `src/pages/VeteransTransformation.tsx`. Keep all routing, form structure (firstName/lastName split, GHL webhook, honeypot, 3s timer), images, video, and CTA buttons. Only text content and section ordering change. No business logic touched.
 
----
+**New voice & through-line:**
+- Speak directly to the veteran in second person. No clinical, no chemical, no "treatment" language (RFRA).
+- Acknowledge the specific touch points: the VA waiting room, the pill bottles on the counter, the 3 AM ceiling, the family that doesn't recognize you anymore, the brothers and sisters who didn't come home, the silence after the uniform comes off.
 
-## Technical notes
+**New section flow:**
 
-- All four uploaded videos: copy from `user-uploads://` → `src/assets/`, import via `?url`, render as muted/autoplay/loop/playsInline `<video>` with absolute positioning and dark overlay.
-- New section bg images: imported via ES module, rendered inside each `KingdomSection` as absolute layer with `pointer-events-none` and tuned opacity per palette so type contrast is preserved.
-- No data, route, or business-logic changes. Presentation only.
-- Follows existing RFRA-safe copy rules (no chemical names, no em-dashes, no emojis).
+1. **Hero** · "You Came Home. / But Something Stayed Over There." · subline: "For the veteran who is done with the waiting room, the pill bottle, and the question · is this all that's left for me?"
 
----
+2. **"If You're Reading This"** · short paragraph block naming the avatar's reality without flinching: VA appointments that don't move the needle, doctors who don't ask the right questions, nights that don't end, a body that won't stand down.
 
-## Open questions before I build
+3. **"What the VA Was Never Built to Reach"** · 4 cards: The War Still In Your Body · The Brothers You Carry · The Silence At Home · The Self You Left Behind. Each card names the wound in veteran language and points to how ceremony meets it.
 
-1. **Kingdom of Man background**: A, B, or C above?
-2. **Animal Kingdom card icons** (Toad / Snake / Frog): replace lucide icons with generated illustrations? (recommended)
-3. **`woman_circle2.mp4`**: confirm Women's Circle footer placement with headline "The Circle Is Waiting For You" (matching men's pattern)?
-4. **"Kingdoms Are Waiting For You" footer video**: hold for now and just add still images this round?
+4. **"This Is Not Another Program"** · plain-language explainer of what Temple Mother Earth offers veterans: a sanctuary, not a clinic; a circle, not a clipboard; Mother Earth, not another prescription. Name King James as a 22-year retired veteran who walks this path with you (founder-led credibility).
+
+5. **"What the Path Looks Like"** · timeline cards: Apply · Sit With Us · Ceremony · Integration · Brotherhood / Sisterhood. Concrete, no jargon.
+
+6. **"What Other Veterans Found"** · keep existing testimonial structure, rewrite intros in seeker voice.
+
+7. **"Energy Exchange & Scholarship"** · keep current Sacred Reciprocity language, restated for veterans: no veteran turned away for cost.
+
+8. **Application Form** · unchanged structurally; rewrite the section intro: "The form below goes to King James directly. He reads every one."
+
+9. **Closing CTA / footer banner** · keep existing video and CTA component, rewrite headline to: `You Survived the War. / Now Come Home to Yourself.`
+
+**Compliance guardrails (re-confirmed in every rewrite):**
+- No: medicine, treatment, cure, heal (as verb in clinical sense), poison, toxin, venom, PTSD-as-diagnosis claims, no promises of outcomes.
+- Yes: sacred ceremony, earth medicine, sacred practice, sanctuary, return, remember, reconnect.
+- No em dashes · no en dashes · middle dot or comma.
+- No mailto/tel links · route any contact to `/contact`.
+- Founder name: **Sonatta**. King James referenced as 22-year retired veteran and ceremony brother.
+
+## Technical Notes
+
+- New component: `SanctuaryClickableCards.tsx` (shadcn Dialog · Tailwind semantic tokens only · keyboard accessible · `aria-label` on each trigger).
+- New asset: `src/assets/video-teahouse-seeker.mp4` copied from upload.
+- `SacredTeaCeremony.tsx` swaps `SanctuaryCTA` → `FooterVideoBanner` and adds 2 new `SanctuarySection`s.
+- `VeteransTransformation.tsx`: copy-only edits across existing sections plus reordering. No new routes, no schema changes, no edge function changes.
+- All forms untouched. All GHL/Stripe/Eventbrite integrations untouched.
+
+## Open Question
+
+For the Sacred Tea hero, do you want me to also generate or source a still image of "the lady drinking tea" as a secondary hero visual (e.g., poster frame for the video, or a side image in the "What Is a Sacrament?" section)? If yes, upload the photo or confirm and I'll generate one matching the BIPOC sanctuary direction.
