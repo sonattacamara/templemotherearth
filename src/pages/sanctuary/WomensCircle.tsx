@@ -3,9 +3,10 @@ import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
-import SanctuaryCTA from "@/components/sanctuary/SanctuaryCTA";
+import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 
 import womensVideo from "@/assets/video-womens-circle-hero-v4.mp4?url";
+import womensFooterVideoUrl from "@/assets/video-womens-circle-cushion.mp4?url";
 
 const EVENTBRITE_URL =
   "https://www.eventbrite.com/e/womens-wellness-wednesdays-tickets-1513680431919?aff=oddtdtcreator&keep_tld=true";
@@ -29,7 +30,7 @@ const WomensCircle = () => (
       }
       subtitle=""
       lead="A mid-week return to yourself. Sisterhood, breath, reflection, and the practices that restore the nervous system and open the heart."
-      primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: true }}
+      primaryCTA={{ label: "Take Your Seat in the Circle", href: EVENTBRITE_URL, external: true }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
       backgroundVideo={womensVideo}
     />
@@ -101,18 +102,13 @@ const WomensCircle = () => (
       attribution="The Circle · A Wombman Sanctuary · Washington, DC"
     />
 
-    <SanctuaryCTA
+    <FooterVideoBanner
+      video={womensFooterVideoUrl}
       eyebrow="Weekly Offering · Washington, DC"
-      title={
-        <>
-          The Circle Is<br />
-          <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Waiting For You</em>
-        </>
-      }
-      description="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us."
-      ctaLabel="Reserve Your Seat"
+      headline={<>The Circle Is<br /><em className="font-serif italic">Waiting For You</em></>}
+      body="A soft place to land mid-week. Come breathe with your sisters and remember what it is to be held. Sacred reciprocity offered for those whose path requires it · write to us."
+      ctaLabel="Take Your Seat in the Circle"
       ctaHref={EVENTBRITE_URL}
-      note="21+ · Pre-registration required · Confidentiality honored"
     />
   </SacredSeriesLayout>
 );

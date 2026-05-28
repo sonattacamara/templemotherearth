@@ -30,7 +30,7 @@ const MensCircle = () => (
       }
       subtitle=""
       lead="The Cove is a men's reflection and integration circle · a sanctuary where brothers gather in honesty, in stillness, and in the courage it takes to be fully seen."
-      primaryCTA={{ label: "Reserve Your Seat", href: EVENTBRITE_URL, external: true }}
+      primaryCTA={{ label: "Step Into The Cove", href: EVENTBRITE_URL, external: true }}
       secondaryCTA={{ label: "What to Expect ↓", href: "#about" }}
       backgroundVideo={mensVideo}
     />
@@ -106,8 +106,8 @@ const MensCircle = () => (
       video={mensFooterVideoUrl}
       eyebrow="Recurring Brotherhood Circle · Washington, DC"
       headline={<>The Circle Is<br /><em className="font-serif italic">Waiting For You</em></>}
-      body="Reserve your seat through Eventbrite. Sacred reciprocity offered for those whose path requires it · write to us."
-      ctaLabel="Reserve Your Seat"
+      body="Lay the armor down for an evening. Brothers are already gathering. Sacred reciprocity offered for those whose path requires it · write to us."
+      ctaLabel="Step Into The Cove"
       ctaHref={EVENTBRITE_URL}
     />
   </SacredSeriesLayout>

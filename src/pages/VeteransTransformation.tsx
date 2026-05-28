@@ -11,6 +11,8 @@ import footerVeteransVideoAsset from "@/assets/video-footer-veterans.mp4.asset.j
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/veterans-hero.jpg";
 import veteransVideo from "@/assets/video-veterans-hero.mp4";
+import kamboBgVideo from "@/assets/video-kambo-hero-v2.mp4";
+import kamboBgImg from "@/assets/kambo-ceremony-altar.jpg";
 import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 
@@ -418,64 +420,69 @@ const VeteransTransformation = () => {
       </section>
 
       {/* ═══════ WHAT IS KAMBO ═══════ */}
-      <section id="kambo" className="bg-[#F5F0E6] px-4 py-24 md:py-32">
+      <section id="kambo" className="relative overflow-hidden">
+        {/* Full-bleed Kambo background */}
+        <video
+          src={kamboBgVideo}
+          poster={kamboBgImg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/85 via-[#1A1A1A]/75 to-[#1A1A1A]/95" />
+
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={stagger}
-          className="mx-auto max-w-6xl"
+          className="relative z-10 mx-auto max-w-6xl px-4 py-24 md:py-32"
         >
-          <motion.div variants={fadeUp} className="text-center mb-16">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#556B2F]">Sacred Earth Medicine for Veterans</p>
-            <h2 className="mt-4 font-display text-3xl font-bold text-[#2F4F4F] md:text-5xl">
-              Kambo: The Warrior's Medicine That Heals What Pills Cannot
+          <motion.div variants={fadeUp} className="text-center mb-12">
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">Sacred Earth Medicine for Veterans</p>
+            <h2 className="mt-4 font-display text-3xl font-bold text-[#F5F0E6] md:text-5xl lg:text-6xl leading-tight max-w-4xl mx-auto">
+              The Sacred Sacrament <br className="hidden md:block" />
+              <span className="text-[#B8860B]">That Reaches Where Pills Cannot</span>
             </h2>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="mx-auto max-w-4xl mb-12 overflow-hidden rounded-2xl shadow-2xl">
-            <img
-              src={heroImg}
-              alt="Silhouette of a warrior at sunrise in the forest, awakening to sacred earth medicine"
-              className="w-full h-[280px] md:h-[420px] object-cover"
-              loading="lazy"
-            />
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="mx-auto max-w-3xl space-y-6 font-body text-[#2F4F4F]/80 leading-relaxed">
+          <motion.div variants={fadeUp} className="mx-auto max-w-3xl space-y-6 font-body text-[#F5F0E6]/85 leading-relaxed text-lg">
             <p>
-              Kambo does <strong>not alter your state of mind</strong>. You will not hallucinate. You will not lose control. For someone trained to maintain tactical awareness, this matters.
+              Kambo does <strong className="text-[#B8860B]">not alter your state of mind</strong>. You stay sharp. You stay in control. For someone trained to maintain tactical awareness, that matters.
             </p>
             <p>
-              It is a physical purification from the secretion of the Giant Monkey Frog (<em>Phyllomedusa bicolor</em>), used by Amazonian warriors for centuries to sharpen their senses before hunts.
+              It is a sacred purification offered by the Giant Monkey Frog of the Amazon, received by warrior cultures for centuries before the hunt, before the council, before the long walk home.
             </p>
             <p>
-              Kambo contains <strong>16 bioactive peptides</strong> that stimulate the immune system, reduce inflammation, release pain-fighting compounds stronger than morphine (without addiction), and reset the body's detox systems.
+              Researchers have identified more than seventy bioactive peptides in this sacrament · molecular messengers the body recognizes immediately. The body moves what it has been storing. The nervous system is invited to recalibrate.
             </p>
             <p>
-              It purges stored impurities, pharmaceutical residue, and stagnant energy from the body. Veterans who have been on years of VA medications often report feeling <em>"clean"</em> for the first time.
+              Veterans who have carried years of prescriptions and stored weight often describe one word afterward: <em className="text-[#B8860B]">clean</em>. Not numb. Not managed. Clean.
             </p>
             <p>
-              It takes approximately <strong>20 to 40 minutes</strong>. Not weeks. Not months. One powerful session.
+              The active ceremony lasts roughly <strong className="text-[#B8860B]">20 to 40 minutes</strong>. Not weeks. Not months. One sacred container, held with reverence by people who have walked this before you.
             </p>
           </motion.div>
 
           {/* Fears vs Reality Table */}
           <motion.div variants={fadeUp} className="mt-16">
-            <h3 className="text-center font-display text-2xl font-bold text-[#2F4F4F] mb-8">Why Veterans Choose Kambo First</h3>
+            <h3 className="text-center font-display text-2xl font-bold text-[#F5F0E6] mb-8">Why Veterans Choose Kambo First</h3>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full border-collapse backdrop-blur-sm">
                 <thead>
                   <tr className="bg-[#556B2F] text-white">
                     <th className="p-4 text-left font-body font-semibold rounded-tl-lg">What You Fear</th>
-                    <th className="p-4 text-left font-body font-semibold rounded-tr-lg">What Kambo Actually Is</th>
+                    <th className="p-4 text-left font-body font-semibold rounded-tr-lg">What This Sacrament Actually Is</th>
                   </tr>
                 </thead>
                 <tbody>
                   {kamboFears.map((item, i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#F5F0E6]"}>
-                      <td className="p-4 font-body text-[#2F4F4F] italic">{item.fear}</td>
-                      <td className="p-4 font-body text-[#2F4F4F]/80">{item.reality}</td>
+                    <tr key={i} className={i % 2 === 0 ? "bg-[#1A1A1A]/70" : "bg-[#2F4F4F]/50"}>
+                      <td className="p-4 font-body text-[#F5F0E6]/90 italic">{item.fear}</td>
+                      <td className="p-4 font-body text-[#F5F0E6]/80">{item.reality}</td>
                     </tr>
                   ))}
                 </tbody>
