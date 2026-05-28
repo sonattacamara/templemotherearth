@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import SEOHead from "@/components/SEOHead";
 import artExpoHero from "@/assets/art-expo-hero.jpeg";
 import artExpoVideo from "@/assets/video-art-expo-hero.mp4?url";
+import artistsVideoUrl from "@/assets/video-art-expo-artists.mp4?url";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -380,13 +381,24 @@ const SacredArtExpo = () => {
       </section>
 
       {/* ── WHO WE'RE LOOKING FOR ── */}
-      <section className="px-4 py-16 md:py-24">
+      <section className="relative overflow-hidden px-4 py-20 md:py-28">
+        <video
+          src={artistsVideoUrl}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0d0b08]/75" />
         <motion.div
           className="mx-auto max-w-3xl text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={stagger}
+          style={{ position: "relative", zIndex: 10 }}
         >
           <motion.p variants={fadeUp} className="font-sans text-[10px] font-bold uppercase tracking-[0.4em]" style={{ color: "#c9a84c" }}>
             The Call

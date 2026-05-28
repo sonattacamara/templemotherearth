@@ -1,6 +1,7 @@
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import hapeVideo from "@/assets/video-hape-hero.mp4?url";
+import forestVideoUrl from "@/assets/video-hape-forest.mp4?url";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
@@ -81,25 +82,37 @@ const HapeCeremony = () => (
       </div>
     </SanctuarySection>
 
-    <section className="bg-[hsl(140,28%,4%)] border-t border-[hsla(45,70%,49%,0.1)] px-6 md:px-12 py-20 text-center">
-      <p className="font-sans text-[10px] tracking-[3px] uppercase text-[hsl(45,70%,49%)] mb-3">
-        Recurring Offering · Washington, DC
-      </p>
-      <h2 className="font-display text-3xl md:text-5xl text-[hsl(40,30%,90%)] mb-5 leading-tight">
-        The Forest<br />
-        <em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Has Been Waiting</em>
-      </h2>
-      <p className="max-w-[640px] mx-auto text-[hsl(35,30%,82%)] font-serif text-lg leading-relaxed mb-8">
-        You already know if this is for you. Reserve your seat and let your preparation begin. The circle holds what arrives.
-      </p>
-      <EventbriteCheckout
-        eventId="946929721287"
-        label="Reserve Your Seat in the Circle"
-        fallbackUrl="https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287"
+    <section className="relative overflow-hidden border-t border-[hsla(45,70%,49%,0.1)]">
+      <video
+        src={forestVideoUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 h-full w-full object-cover"
       />
-      <p className="mt-6 font-sans text-[10px] tracking-[2px] uppercase text-[hsl(35,30%,55%)]">
-        Community Care Model · Suggested sacred contribution · Scholarship available · Ask us
-      </p>
+      <div className="absolute inset-0 bg-[hsl(140,28%,4%)]/75" />
+      <div className="relative z-10 px-6 md:px-12 py-24 md:py-32 text-center">
+        <p className="font-sans text-[10px] tracking-[3px] uppercase text-[hsl(45,70%,55%)] mb-3">
+          Recurring Offering · Washington, DC
+        </p>
+        <h2 className="font-display text-3xl md:text-5xl text-[hsl(40,30%,95%)] mb-5 leading-tight">
+          The Forest<br />
+          <em className="font-serif italic text-[hsl(35,65%,55%)] text-[1.1em]">Has Been Waiting</em>
+        </h2>
+        <p className="max-w-[640px] mx-auto text-[hsl(40,25%,85%)] font-serif text-lg leading-relaxed mb-8">
+          You already know if this is for you. Reserve your seat and let your preparation begin. The circle holds what arrives.
+        </p>
+        <EventbriteCheckout
+          eventId="946929721287"
+          label="Reserve Your Seat in the Circle"
+          fallbackUrl="https://www.eventbrite.com/e/hape-the-silencer-registration-946929721287"
+        />
+        <p className="mt-6 font-sans text-[10px] tracking-[2px] uppercase text-[hsl(40,25%,72%)]">
+          Community Care Model · Suggested sacred contribution · Scholarship available · Ask us
+        </p>
+      </div>
     </section>
 
     {/* RFRA Statement */}

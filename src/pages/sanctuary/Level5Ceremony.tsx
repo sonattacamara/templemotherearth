@@ -80,14 +80,14 @@ const Level5Ceremony = () => (
           5
         </div>
         <h1 className="font-sans text-[clamp(28px,5vw,56px)] font-bold text-[#F0EAD6] tracking-[4px] uppercase leading-[1.1]">
-          The Complete<br />Initiation
+          Meet the God<br />Within
         </h1>
         <p className="font-serif italic text-[clamp(16px,2vw,22px)] text-[#C8A030] tracking-[3px] mt-2">
-          Multi-Sacrament · Kambo Included · By Application Only
+          The Complete Initiation · Multi-Sacrament · By Application Only
         </p>
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C8A030] to-transparent mx-auto my-8" />
         <p className="font-serif italic text-[clamp(18px,2vw,22px)] text-[#F0EAD6] max-w-[680px] mx-auto mb-12 leading-[1.7]">
-          You have been in preparation for this whether you knew it or not. Mother Earth does not call everyone. She called you.
+          Level 5 does not introduce you to something outside of yourself. It clears the noise until the divinity already living inside you can be heard. Mother Earth does not call everyone. She called you to remember the God within.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C8A030] text-[#050804] px-[52px] py-[18px] font-sans text-[10px] tracking-[3px] uppercase font-bold border-2 border-[#C8A030] hover:bg-transparent hover:text-[#C8A030] transition-all">
@@ -126,13 +126,13 @@ const Level5Ceremony = () => (
     {/* WHAT IS LEVEL 5 */}
     <SanctuarySection eyebrow="The Offering" title={<><span className="text-[hsl(40,30%,90%)]">This Is Not a Workshop.</span><br /><em className="font-serif italic text-[#C8A030] text-[1.1em]">It Is an Initiation.</em></>}>
       <p className="font-serif italic text-xl text-[#C8A030] max-w-[680px] leading-[1.8] mb-16">
-        Level 5 is the most comprehensive ceremonial offering at Temple Mother Earth. A full-day sacred container weaving multiple plant sacraments into one complete arc.
+        Level 5 is the most comprehensive ceremonial offering at Temple Mother Earth. A full-day sacred container that strips away every layer between you and the God already living within you.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
         <div className="text-[17px] leading-[1.9] text-[#F0EAD6] opacity-90 space-y-6">
-          <p>There is a reason that every indigenous culture on Earth developed initiation rites. The human psyche requires <strong className="text-[#C8A030]">threshold experiences</strong> · moments where the old self is formally dissolved and a new self emerges.</p>
-          <p>Level 5 is a <strong className="text-[#C8A030]">full initiation</strong>. Kambo purifies what you cannot purify through discipline alone. You come in one person. You leave another. Not better · truer.</p>
-          <p>This is for those who have walked the path of preparation and are ready for the next threshold. It is not a beginner ceremony. It is a <strong className="text-[#C8A030]">consecration.</strong></p>
+          <p>Every indigenous tradition on Earth developed initiation rites for the same reason · the human soul requires <strong className="text-[#C8A030]">threshold experiences</strong> to meet the divinity it forgot it was carrying. The old self is dissolved. The God within is met directly.</p>
+          <p>Level 5 is a <strong className="text-[#C8A030]">full initiation into your own divine nature</strong>. The sacraments purify what discipline alone cannot reach, until what remains is the sovereign, sacred being you have always been underneath. You come in seeking. You leave knowing.</p>
+          <p>This is for those who have walked the path of preparation and are ready to meet the God within. It is not a beginner ceremony. It is a <strong className="text-[#C8A030]">consecration of the divinity that already lives in you.</strong></p>
         </div>
         <div className="flex flex-col gap-0.5">
           {includes.map((item) => (

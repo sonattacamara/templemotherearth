@@ -9,6 +9,7 @@ import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import FAQSchema, { FAQItem } from "@/components/FAQSchema";
 import kamboVideoUrl from "@/assets/video-kambo-hero-v2.mp4?url";
+import takeASeatVideoUrl from "@/assets/video-kambo-takeaseat.mp4?url";
 
 const kamboFaqs: FAQItem[] = [
   {
@@ -412,34 +413,46 @@ const KamboCeremony = () => (
       />
     </SanctuarySection>
 
-    {/* FINAL CTA → back to choose */}
-    <section className="bg-gradient-to-br from-[hsl(105,30%,13%)] to-[hsl(110,25%,15%)] py-20 md:py-24 px-6 md:px-12 text-center border-t border-[hsl(100,25%,18%)]">
-      <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,49%)] mb-4">
-        The Frog Is Calling
-      </p>
-      <h2 className="font-sans text-[clamp(24px,4vw,48px)] font-light leading-[1.1] mb-6 text-[hsl(40,30%,90%)]">
-        Take Your <em className="font-serif italic text-[hsl(35,55%,42%)]">Seat</em>
-      </h2>
-      <p className="text-[hsl(90,15%,65%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
-        You read this far for a reason. The body already knows.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a
-          href={COED_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-8 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
-        >
-          Co-ed with King James · Sundays 8 AM
-        </a>
-        <a
-          href={WOMENS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-8 py-4 border border-[hsl(45,70%,49%)] text-[hsl(45,70%,55%)] hover:bg-[hsl(45,70%,49%)] hover:text-[hsl(105,30%,5%)] transition-all duration-300"
-        >
-          Women's Only · Saturdays 8 AM
-        </a>
+    {/* FINAL CTA · The Frog Is Calling · video background */}
+    <section className="relative overflow-hidden border-t border-[hsl(100,25%,18%)]">
+      <video
+        src={takeASeatVideoUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[hsl(105,30%,5%)]/70" />
+      <div className="relative z-10 py-24 md:py-32 px-6 md:px-12 text-center">
+        <p className="font-sans text-[8px] tracking-[4px] uppercase text-[hsl(45,70%,55%)] mb-4">
+          The Frog Is Calling
+        </p>
+        <h2 className="font-sans text-[clamp(28px,5vw,56px)] font-light leading-[1.1] mb-6 text-[hsl(40,30%,95%)]">
+          Take Your <em className="font-serif italic text-[hsl(35,65%,55%)]">Seat</em>
+        </h2>
+        <p className="text-[hsl(40,25%,82%)] text-xl max-w-[560px] mx-auto mb-12 font-serif italic">
+          You read this far for a reason. The body already knows.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href={COED_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-8 py-4 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
+          >
+            Co-ed with King James · Sundays 8 AM
+          </a>
+          <a
+            href={WOMENS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-sans text-[10px] tracking-[3px] uppercase px-8 py-4 border border-[hsl(45,70%,55%)] text-[hsl(40,30%,95%)] hover:bg-[hsl(45,70%,49%)] hover:text-[hsl(105,30%,5%)] transition-all duration-300"
+          >
+            Women's Only · Saturdays 8 AM
+          </a>
+        </div>
       </div>
     </section>
 
