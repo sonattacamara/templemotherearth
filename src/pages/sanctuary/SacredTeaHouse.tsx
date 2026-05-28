@@ -142,6 +142,8 @@ const SacredTeaHouse = () => (
       </div>
     </section>
 
+    <EventbriteDetails eventKey="sacred-tea-house" title="The Tea House · Sacred Logistics" />
+
     {/* CTA · Video Footer */}
     <section className="relative overflow-hidden border-t border-[hsla(45,70%,49%,0.1)]">
       <video

@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import { Heart, Users, Music, Moon, Flame, Sparkles, Coffee } from "lucide-react";
 import cacaoVideo from "@/assets/video-cacao-hero.mp4.asset.json";
+import EventbriteDetails from "@/components/sanctuary/EventbriteDetails";
 
 const EVENTBRITE_CACAO = "https://www.eventbrite.com/e/cacao-the-heart-opener-registration-890335636857?aff=ebdsoporgprofile";
 
