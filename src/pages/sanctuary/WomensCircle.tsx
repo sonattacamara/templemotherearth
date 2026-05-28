@@ -109,6 +109,7 @@ const WomensCircle = () => (
       body="A soft place to land mid-week. Come breathe with your sisters and remember what it is to be held. Sacred reciprocity offered for those whose path requires it · write to us."
       ctaLabel="Take Your Seat in the Circle"
       ctaHref={EVENTBRITE_URL}
+      videoObjectPosition="center 75%"
     />
   </SacredSeriesLayout>
 );

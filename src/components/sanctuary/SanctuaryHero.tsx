@@ -1,5 +1,8 @@
 import { motion, type Easing } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import EventbriteCheckout from "@/components/EventbriteCheckout";
+import EventbriteLiveMeta from "@/components/EventbriteLiveMeta";
+import { extractEventbriteId } from "@/hooks/useEventbriteEvent";
 
 interface SanctuaryHeroProps {
   dateBadge?: string;
@@ -113,30 +116,57 @@ const SanctuaryHero = ({
       {lead}
     </motion.p>
 
-    <motion.div
-      custom={4}
-      variants={fadeUp}
-      initial="hidden"
-      animate="visible"
-      className="flex gap-4 flex-wrap"
-    >
-      <a
-        href={primaryCTA.href}
-        target={primaryCTA.external ? "_blank" : undefined}
-        rel={primaryCTA.external ? "noopener noreferrer" : undefined}
-        className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(100,20%,5%)] font-bold hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
-      >
-        {primaryCTA.label}
-      </a>
-      {secondaryCTA && (
-        <a
-          href={secondaryCTA.href}
-          className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsl(40,30%,70%)] text-[hsl(40,30%,90%)] hover:bg-[hsla(40,30%,90%,0.1)] hover:border-[hsl(45,70%,49%)] transition-all duration-300"
-        >
-          {secondaryCTA.label}
-        </a>
-      )}
-    </motion.div>
+    {(() => {
+      const ebId = extractEventbriteId(primaryCTA.href);
+      return (
+        <>
+          {ebId && (
+            <motion.div
+              custom={3.5}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="mb-6"
+            >
+              <EventbriteLiveMeta eventId={ebId} />
+            </motion.div>
+          )}
+          <motion.div
+            custom={4}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="flex gap-4 flex-wrap items-center"
+          >
+            {ebId ? (
+              <EventbriteCheckout
+                eventId={ebId}
+                label={primaryCTA.label}
+                fallbackUrl={primaryCTA.href}
+                className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(100,20%,5%)] font-bold hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
+              />
+            ) : (
+              <a
+                href={primaryCTA.href}
+                target={primaryCTA.external ? "_blank" : undefined}
+                rel={primaryCTA.external ? "noopener noreferrer" : undefined}
+                className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-[hsl(45,70%,49%)] text-[hsl(100,20%,5%)] font-bold hover:bg-[hsl(45,70%,58%)] transition-all duration-300"
+              >
+                {primaryCTA.label}
+              </a>
+            )}
+            {secondaryCTA && (
+              <a
+                href={secondaryCTA.href}
+                className="inline-block font-sans text-[9px] tracking-[3px] uppercase px-10 py-4 bg-transparent border border-[hsl(40,30%,70%)] text-[hsl(40,30%,90%)] hover:bg-[hsla(40,30%,90%,0.1)] hover:border-[hsl(45,70%,49%)] transition-all duration-300"
+              >
+                {secondaryCTA.label}
+              </a>
+            )}
+          </motion.div>
+        </>
+      );
+    })()}
   </section>
 );
 

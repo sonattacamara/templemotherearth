@@ -33,6 +33,7 @@ const navStructure: NavEntry[] = [
       { label: "Hapé Ceremony", href: "/hape", isRoute: true },
       { label: "Sacred Tea Ceremony", href: "/sacred-tea", isRoute: true },
       { label: "Level 5 Initiation", href: "/level5", isRoute: true },
+      { label: "Veterans Program", href: "/veterans-transformation-program", isRoute: true },
     ],
   },
   {
@@ -46,7 +47,7 @@ const navStructure: NavEntry[] = [
       { label: "Community Potluck", href: "/potluck", isRoute: true },
       { label: "The Cove · Men's Circle", href: "/mens-circle", isRoute: true },
       { label: "The Circle · A Wombman Sanctuary", href: "/womens-circle", isRoute: true },
-      { label: "Veterans Program", href: "/veterans-transformation-program", isRoute: true },
+      { label: "Forest Circle", href: "/forest-circle", isRoute: true },
     ],
   },
   {
