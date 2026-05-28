@@ -1032,6 +1032,24 @@ const VeteransTransformation = () => {
         </div>
       </footer>
 
+      <MidImageBanner
+        image={midVeteransImg}
+        eyebrow="Warrior, Welcome Home"
+        headline={<>You Came Home <em className="font-serif italic text-primary">For a Reason</em></>}
+        body="You did not survive what you survived to keep carrying it alone. The medicine is here. The brothers and sisters are here. The reason is here."
+        ctaLabel="Reserve Your Seat"
+        ctaHref="/ceremony-intake"
+      />
+
+      <FooterVideoBanner
+        video={footerVeteransVideoAsset.url}
+        eyebrow="Stand Down, Soldier"
+        headline={<>The Mission<br /><em className="font-serif italic text-primary">Is Coming Home</em></>}
+        body="The same courage that took you into combat can take you into healing. Take the first step."
+        ctaLabel="Reserve Your Seat"
+        ctaHref="/ceremony-intake"
+      />
+
       <DonationCTA
         variant="olive"
         eyebrow="No Warrior Left Behind"
