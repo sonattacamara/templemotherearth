@@ -831,6 +831,34 @@ const About = () => {
 
       <EventbriteCTA />
 
+      {/* ───── BOTTOM CTA PAIR · TWO DOORS HOME ───── */}
+      <section aria-labelledby="about-bottom-cta" className="bg-gradient-warm px-4 py-16 md:py-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="font-body text-[11px] font-semibold uppercase tracking-[0.35em] text-primary">Now That You Know Us</p>
+          <h2 id="about-bottom-cta" className="mt-3 font-display text-3xl font-light leading-tight text-foreground md:text-4xl">
+            You've Read Our Story.<br />
+            <em className="font-serif italic text-primary">What Does Yours Need Next?</em>
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl font-serif text-base leading-relaxed text-foreground/75">
+            Two doors · one for the soul ready to sit in ceremony, one for the soul still listening. Both are open.
+          </p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+            <Link
+              to="/ceremony-intake"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground shadow-lg transition hover:bg-primary/90"
+            >
+              Begin The Sacred Intake
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-primary/50 px-8 py-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary transition hover:bg-primary/10"
+            >
+              Speak With A Guide
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <InternalLinkingFooter links={[
         { label: "Sacred Series", href: "/sacred-series" },
         { label: "Sacred Intake Form", href: "/ceremony-intake" },
