@@ -2,6 +2,7 @@ import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
+import SanctuaryClickableCards from "@/components/sanctuary/SanctuaryClickableCards";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
 import fffFooterVideo from "@/assets/video-fff-footer.mp4?url";
 
@@ -52,11 +53,58 @@ const FrequencyFungiFlow = () => (
     </SanctuarySection>
 
     <SanctuarySection eyebrow="Ways to Move" title={<>However Your<br /><em className="font-serif italic text-[hsl(35,55%,42%)] text-[1.1em]">Body Calls You</em></>}>
-      <SanctuaryColCards cards={[
-        { title: "Static Stand", description: "Feet rooted, eyes closed, let the frequency move you from the inside. No choreography. No floor travel. Just presence in the body, breath in the chest, and the bass moving through your bones." },
-        { title: "Contact Dance", description: "Slow, consensual partner-led movement. Shoulder, palm, back, the points where two bodies meet become the conversation. Listening through the skin. No words. No leading. Just presence." },
-        { title: "Free Flow", description: "Your own rhythm, full floor, no rules. Spin if you need to spin. Drop low if you need to drop low. The body leads and the mind finally gets to follow." },
-        { title: "Stillness as Movement", description: "Sit, lie down, breathe. The frequency does the work. Stillness is sacred on this floor and held with the same reverence as the dance itself." },
+      <p className="font-sans text-[12px] tracking-[2px] uppercase text-[hsl(45,70%,49%)] mt-4 mb-2">
+        Tap any practice to learn more
+      </p>
+      <SanctuaryClickableCards cards={[
+        {
+          title: "Static Stand",
+          shortDescription: "Feet rooted, eyes closed, let the frequency move you from the inside. No choreography. No floor travel. Just presence in the body.",
+          longDescription: "The simplest doorway in. Plant your feet shoulder-width apart, soften your knees, let your eyes close. Your only job is to feel the bass arrive in your bones and let it pass through. No one is watching. No one is waiting for you to do something. The frequency is the practice; your stillness is the prayer.",
+          whatToExpect: [
+            "Standing in one spot for as long as you want · the floor is yours",
+            "Subtle sway, breath dropping deeper, shoulders releasing on their own",
+            "Emotion may rise · tears, laughter, a long exhale you have been holding for years",
+            "No pressure to move bigger · the frequency is doing the work",
+            "You can shift to another practice at any moment without explanation",
+          ],
+        },
+        {
+          title: "Contact Dance",
+          shortDescription: "Slow, consensual partner-led movement. Shoulder, palm, back · the points where two bodies meet become the conversation.",
+          longDescription: "An invitation, never a demand. You meet another body in slow, listening movement · a palm finds a palm, a back leans against a back. The skin becomes the language. There is no leader, no follower, no performance. Either person can pause, soften, or step away at any moment with a simple hand on the heart. This is consent practiced in the body.",
+          whatToExpect: [
+            "Every contact is opt-in · a nod, a soft eye-meet, an open palm",
+            "A hand on your own heart is the universal signal to pause or close",
+            "No talking on the floor · the listening happens through breath and touch",
+            "You are free to decline any invitation without explanation, ever",
+            "Sanctuary guardians are present and watching · you are held",
+          ],
+        },
+        {
+          title: "Free Flow",
+          shortDescription: "Your own rhythm, full floor, no rules. Spin if you need to spin. Drop low if you need to drop low. The body leads, the mind follows.",
+          longDescription: "This is where the cage door opens. There is no right way to move. No choreography to learn. No mirror to check yourself against. If your hips want to circle, let them. If your arms want to reach for the ceiling, let them. If you need to drop to the floor and crawl, the floor is sacred and it will hold you. The body has been waiting a long time to be allowed.",
+          whatToExpect: [
+            "Full floor permission · travel, spin, jump, crawl, whatever rises",
+            "No skill required · awkward is welcome, weird is welcome, wild is welcome",
+            "Sweat, breath, sound (no words) all encouraged",
+            "Energy waves come and go · you can rest in stillness mid-dance",
+            "You may leave the floor changed in ways you did not expect",
+          ],
+        },
+        {
+          title: "Stillness as Movement",
+          shortDescription: "Sit, lie down, breathe. The frequency does the work. Stillness is sacred on this floor and held with the same reverence as the dance.",
+          longDescription: "Some of the deepest movement happens when the body finally gets to be still. Find a corner, a wall, a cushion at the edge of the floor. Lie down and let the bass become a lullaby. Let the frequency move through you while your body rests. This is not opting out · this is opting all the way in. The nervous system is allowed to soften here.",
+          whatToExpect: [
+            "Cushions, blankets, and rest space available along the edges of the floor",
+            "Permission to lie down at any point in the four-hour arc",
+            "Sanctuary guardians will gently check on you, never disturb you",
+            "Sound bath frequencies will reach you wherever you are",
+            "Returning to movement when ready · or staying in stillness the whole night",
+          ],
+        },
       ]} />
     </SanctuarySection>
 
