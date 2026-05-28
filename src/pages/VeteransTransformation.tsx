@@ -1057,9 +1057,9 @@ const VeteransTransformation = () => {
 
       <FooterVideoBanner
         video={footerVeteransVideoAsset.url}
-        eyebrow="Stand Down, Soldier"
-        headline={<>The Mission<br /><em className="font-serif italic text-primary">Is Coming Home</em></>}
-        body="The same courage that took you into combat can take you into healing. Take the first step."
+        eyebrow="From One Veteran To Another"
+        headline={<>You Survived the War.<br /><em className="font-serif italic text-primary">Now Come Home to Yourself.</em></>}
+        body="King James walked this road before he started holding it for others. Twenty-two years in uniform, and the work of coming all the way home started here. Your seat is saved."
         ctaLabel="Reserve Your Seat"
         ctaHref="/ceremony-intake"
       />
