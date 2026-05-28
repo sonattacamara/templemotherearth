@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 import { Droplets, Mountain, Droplet, Magnet, Leaf, Dna, Sun, Pill, Candy, Flower2, Globe, Brain, ShieldCheck, Zap, Cat, Snail, Bug, Sparkles, HeartPulse, Gem, Eye } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import earthVideo from "@/assets/video-earth-hero.mp4";
+import bgMineral from "@/assets/earth-kingdom-mineral.jpg";
+import bgPlant from "@/assets/earth-kingdom-plant.jpg";
+import bgFungi from "@/assets/earth-kingdom-fungi.jpg";
+import bgAnimal from "@/assets/earth-kingdom-animal.jpg";
+import bgHuman from "@/assets/earth-kingdom-human.jpg";
+import iconToad from "@/assets/icon-sacred-toad.png";
+import iconSnake from "@/assets/icon-sacred-snake.png";
+import iconFrog from "@/assets/icon-sacred-frog.png";
 
 const RevealSection = ({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) => {
   const ref = useRef(null);
@@ -24,6 +32,7 @@ interface KingdomData {
   name: string;
   subtitle: string;
   lead: string;
+  bgImage?: string;
   titleColor: string;
   eyebrowColor: string;
   factBg: string;
@@ -34,8 +43,8 @@ interface KingdomData {
   quoteColor: string;
   quoteCite: string;
   sections: { title: string; content: string }[];
-  facts: { icon: LucideIcon; label: string; val: string }[];
-  cards: { icon: LucideIcon; name: string; body: string }[];
+  facts: { icon: LucideIcon; iconImg?: string; label: string; val: string }[];
+  cards: { icon: LucideIcon; iconImg?: string; name: string; body: string }[];
   stats: { num: string; label: string }[];
   quote: { text: string; cite: string };
   ceremonyLink: { tag: string; name: string; href: string };
@@ -45,6 +54,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "mineral", num: "One", name: "MINERAL", subtitle: "you are the temple",
     lead: "You are not separate from the Earth. You are made of it. The calcium in your bones is the same calcium in limestone. The iron in your blood is the same iron in the Earth's core.",
+    bgImage: bgMineral,
     titleColor: "#C4B8E8", eyebrowColor: "#7B6FA0", factBg: "#1A1625", factLabelColor: "#9B8FCC",
     cardBg: "#1A1625", cardNameColor: "#C4B8E8", statNumColor: "#C4B8E8", quoteColor: "#C4B8E8", quoteCite: "#7B6FA0",
     sections: [
@@ -74,6 +84,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "plant", num: "Two", name: "PLANT", subtitle: "the oldest pharmacy on earth",
     lead: "The Plant Kingdom is the bridge between the mineral world and the animal world · rooted in Earth, reaching toward light. Plants are alchemists.",
+    bgImage: bgPlant,
     titleColor: "#8FD67A", eyebrowColor: "#3D7835", factBg: "#0A140A", factLabelColor: "#5BA84A",
     cardBg: "#0A140A", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7835",
     sections: [
@@ -103,6 +114,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "fungi", num: "Three", name: "FUNGI", subtitle: "the internet of the forest floor",
     lead: "Fungi are neither plant nor animal. They are their own kingdom · and arguably the most intelligent one.",
+    bgImage: bgFungi,
     titleColor: "#D4A060", eyebrowColor: "#9B6B3A", factBg: "#120D08", factLabelColor: "#C8883A",
     cardBg: "#120D08", cardNameColor: "#D4A060", statNumColor: "#D4A060", quoteColor: "#D4A060", quoteCite: "#9B6B3A",
     sections: [
@@ -132,6 +144,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "animal", num: "Four", name: "ANIMAL", subtitle: "sacred messengers & sacrament carriers",
     lead: "The Animal Kingdom is not a source of exploitation, it is a community of teachers. The frog, toad, snake, scorpion, ancient sacred intelligences.",
+    bgImage: bgAnimal,
     titleColor: "#8FD67A", eyebrowColor: "#3D7A3D", factBg: "#060D06", factLabelColor: "#5BA84A",
     cardBg: "#060D06", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7A3D",
     sections: [
@@ -139,15 +152,15 @@ const kingdoms: KingdomData[] = [
       { title: "Sacred Animal Covenant", content: "These animals carry ancient intelligences in their sacred secretions. Indigenous wisdom keepers have known their power for millennia." },
     ],
     facts: [
-      { icon: Cat, label: "Kambo Peptides", val: "A sacred secretion unlike anything else in the natural world." },
-      { icon: Snail, label: "Sacred Toad · God Molecule", val: "The most intense non-ordinary state of consciousness accessible." },
-      { icon: Sparkles, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
+      { icon: Cat, iconImg: iconFrog, label: "Kambo Peptides", val: "A sacred secretion unlike anything else in the natural world." },
+      { icon: Snail, iconImg: iconToad, label: "Sacred Toad · God Molecule", val: "The most intense non-ordinary state of consciousness accessible." },
+      { icon: Sparkles, iconImg: iconSnake, label: "Snake · Kundalini", val: "Universal symbol of transformation. Shedding the skin that no longer fits." },
       { icon: Bug, label: "Scorpion · Sacred Protocols", val: "Over 130,000 species. Ancient sacred compounds studied by modern science." },
     ],
     cards: [
-      { icon: Cat, name: "The Frog", body: "Kambo. The Great Purifier. Sacred secretion of deep cleansing." },
-      { icon: Snail, name: "The Toad", body: "The God Molecule. Direct encounter with pure being." },
-      { icon: Sparkles, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
+      { icon: Cat, iconImg: iconFrog, name: "The Frog", body: "Kambo. The Great Purifier. Sacred secretion of deep cleansing." },
+      { icon: Snail, iconImg: iconToad, name: "The Toad", body: "The God Molecule. Direct encounter with pure being." },
+      { icon: Sparkles, iconImg: iconSnake, name: "The Snake", body: "Kundalini energy. Shedding. Transformation." },
     ],
     stats: [
       { num: "70+", label: "Sacred compounds in Kambo secretion" },
@@ -161,6 +174,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "human", num: "Five", name: "KINGDOM OF MAN", subtitle: "the conscious steward",
     lead: "You are not separate from the five kingdoms. You are the fifth one. The one with the capacity to be conscious of its place in the web.",
+    bgImage: bgHuman,
     titleColor: "#E8C868", eyebrowColor: "#8A4A3A", factBg: "#100808", factLabelColor: "#C8783A",
     cardBg: "#100808", cardNameColor: "#E8C868", statNumColor: "#E8C868", quoteColor: "#E8C868", quoteCite: "#8A4A3A",
     sections: [
@@ -202,7 +216,19 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.9 }}
     >
-      <div className="max-w-[1100px] mx-auto">
+      {k.bgImage && (
+        <>
+          <img
+            src={k.bgImage}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-20"
+          />
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[rgba(5,6,4,0.85)] via-[rgba(5,6,4,0.78)] to-[rgba(5,6,4,0.92)]" />
+        </>
+      )}
+      <div className="max-w-[1100px] mx-auto relative z-10">
         <p className="font-sans text-[9px] tracking-[5px] uppercase mb-4 font-normal" style={{ color: k.eyebrowColor }}>
           Kingdom {k.num}
         </p>
@@ -224,7 +250,11 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
           <div className="flex flex-col" style={{ background: k.factBg }}>
             {k.facts.map((f) => (
               <div key={f.label} className="py-[22px] px-7 border-b border-[rgba(200,160,48,0.06)] last:border-b-0 grid grid-cols-[36px_1fr] gap-4">
-                <f.icon className="h-5 w-5 mt-0.5" style={{ color: k.factLabelColor }} />
+                {f.iconImg ? (
+                  <img src={f.iconImg} alt="" aria-hidden="true" className="h-7 w-7 object-contain mt-0.5" loading="lazy" />
+                ) : (
+                  <f.icon className="h-5 w-5 mt-0.5" style={{ color: k.factLabelColor }} />
+                )}
                 <div>
                   <div className="font-sans text-[8px] tracking-[3px] uppercase mb-1 font-normal" style={{ color: k.factLabelColor }}>{f.label}</div>
                   <div className="text-[15px] text-[#F0EAD6] leading-relaxed opacity-80">{f.val}</div>
@@ -238,7 +268,11 @@ const KingdomSection = ({ k, even }: { k: KingdomData; even: boolean }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 mt-16 bg-[rgba(200,160,48,0.06)]">
           {k.cards.map((c) => (
             <div key={c.name} className="p-9 hover:-translate-y-1 transition-transform" style={{ background: k.cardBg }}>
-              <c.icon className="h-7 w-7 mb-3.5" style={{ color: k.cardNameColor }} />
+              {c.iconImg ? (
+                <img src={c.iconImg} alt="" aria-hidden="true" className="h-12 w-12 object-contain mb-3.5" loading="lazy" />
+              ) : (
+                <c.icon className="h-7 w-7 mb-3.5" style={{ color: k.cardNameColor }} />
+              )}
               <h4 className="font-serif text-xl italic mb-2.5" style={{ color: k.cardNameColor }}>{c.name}</h4>
               <p className="text-sm leading-[1.75] opacity-75 text-[#F0EAD6]">{c.body}</p>
             </div>
