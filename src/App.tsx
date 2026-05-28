@@ -70,6 +70,7 @@ import DonationButton from "@/components/DonationButton";
 import CrisisFloatingButton from "@/components/CrisisFloatingButton";
 import SeasonalBanner from "@/components/SeasonalBanner";
 import MobileStickyBar from "@/components/MobileStickyBar";
+import ThreadOpener from "@/components/ThreadOpener";
 
 const queryClient = new QueryClient();
 
@@ -86,6 +87,7 @@ const App = () => (
           <DonationButton />
           <CrisisFloatingButton />
           <MobileStickyBar />
+          <ThreadOpener />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />

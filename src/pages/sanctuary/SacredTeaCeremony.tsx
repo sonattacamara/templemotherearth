@@ -6,6 +6,7 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
+import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import teaSeekerVideoUrl from "@/assets/video-teahouse-seeker.mp4?url";
 import { Helmet } from "react-helmet-async";
 
@@ -99,6 +100,22 @@ const SacredTeaCeremony = () => (
         Community Care Model applies to all levels · Scholarship fund available · Ask us
       </p>
     </SanctuarySection>
+
+    <MidScrollCommitment
+      eyebrow="You've Read This Far For A Reason"
+      headline={<>Something In You<br /><em className="font-serif italic text-primary">Already Said Yes</em></>}
+      body={
+        <>
+          <p>You did not land on this page by accident. The part of you that has been quietly carrying everything has been looking for a room exactly like this · a circle, a cup, a witness, an exhale.</p>
+          <p>The sacred intake is four soft minutes. No commitment, no pressure · just a way for us to hear you before you walk through the door.</p>
+        </>
+      }
+      ctaLabel="Begin The Sacred Intake"
+      ctaHref="/ceremony-intake"
+      secondaryCtaLabel="Speak With A Guide"
+      secondaryCtaHref="/contact"
+      reassurance="Held in confidence · read only by the facilitators who will sit with you."
+    />
 
     <SanctuaryPullQuote
       quote="I came thinking I'd have an interesting experience. What I had was a reckoning. Something I'd been carrying for fifteen years was gone. Not processed, gone. I walked out into the morning and everything looked different."

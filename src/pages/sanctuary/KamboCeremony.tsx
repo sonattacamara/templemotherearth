@@ -6,6 +6,7 @@ import SanctuaryHero from "@/components/sanctuary/SanctuaryHero";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
+import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import CeremonyExploreNav from "@/components/CeremonyExploreNav";
 import FAQSchema, { FAQItem } from "@/components/FAQSchema";
 import kamboVideoUrl from "@/assets/video-kambo-hero-v2.mp4?url";
@@ -242,6 +243,22 @@ const KamboCeremony = () => (
       </p>
       <SanctuaryColCards cards={benefits} />
     </SanctuarySection>
+
+    <MidScrollCommitment
+      eyebrow="The Moment You Recognize Yourself"
+      headline={<>If You Are Still Reading,<br /><em className="font-serif italic text-primary">Your Body Already Knows</em></>}
+      body={
+        <>
+          <p>Most seekers scroll past pages like this. You haven't. Something in you · older than your thoughts · is leaning in.</p>
+          <p>The sacred intake takes four minutes. It is how the Temple meets you · so when you arrive, we already know how to hold you.</p>
+        </>
+      }
+      ctaLabel="Begin The Sacred Intake"
+      ctaHref="/ceremony-intake"
+      secondaryCtaLabel="Speak With A Guide"
+      secondaryCtaHref="/contact"
+      reassurance="Held in confidence · read only by the facilitators who will sit with you."
+    />
 
     {/* WHAT SCIENCE OBSERVES · PEPTIDE EDUCATION */}
     <SanctuarySection
