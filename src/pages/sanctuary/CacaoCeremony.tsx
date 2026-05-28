@@ -273,7 +273,7 @@ const CacaoCeremony = () => {
         <div className="max-w-[760px] mx-auto mb-6 p-6 border border-[rgba(201,150,58,0.2)] rounded-lg bg-[rgba(201,150,58,0.04)] text-center">
           <p className="font-sans text-[10px] tracking-[3px] uppercase text-[#C9963A] mb-2">Sacred Access</p>
           <p className="font-serif italic text-[15px] text-[#F5EDD8] leading-relaxed">
-            We believe healing is a birthright, not a privilege. Sliding scale and scholarship offerings are available for those called to ceremony. Write to <a href="mailto:askus@templemotherearth.org" className="text-[#C9963A] underline">askus@templemotherearth.org</a> to begin the conversation.
+            We believe sanctuary is a birthright, not a privilege. Sliding scale and scholarship offerings are available for those called to the cushion. <a href="/contact" className="text-[#C9963A] underline">Write to us</a> to begin the conversation.
           </p>
         </div>
         <p className="max-w-[760px] mx-auto text-center font-serif italic text-[13px] text-[#8A7A5A] leading-relaxed">
