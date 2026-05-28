@@ -83,6 +83,8 @@ const HapeCeremony = () => (
       </div>
     </SanctuarySection>
 
+    <EventbriteDetails eventKey="hape" title="The Hapé Circle · Sacred Logistics" />
+
     <section className="relative overflow-hidden border-t border-[hsla(45,70%,49%,0.1)]">
       <video
         src={forestVideoUrl}
