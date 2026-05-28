@@ -1,61 +1,107 @@
-# Remove Transactional Language · Speak Only in Spirit
+# Facilitator Page — Rewrite & Conversion Plan
 
-## What's wrong today
+## 1. Discovery (how someone gets there)
 
-Even when copy says "this is not transactional" or "this is not a business," it still names the very thing we want absent. The avatar's nervous system hears the word, not the negation. We will rewrite every one of these into affirmative, mirror-style language so the avatar only sees who they already are and what the Temple already is.
+Today `/join-facilitator` is only linked from three footers. No one finds it. Add real entry points:
 
-## Words being retired site-wide
+- **Navigation**: Add "Facilitators" under the "Get Involved" / Community group in `Navigation.tsx` (desktop + mobile drawer).
+- **Homepage**: Add a small "Are you a facilitator?" rail near the bottom of `Index.tsx` (after community, before footer) — one line + link, not a full block.
+- **About page**: Add a "Called to facilitate?" inline CTA near the team / facilitator roster section.
+- **Community Care / Volunteer**: Add a sibling card "If you're already certified and called to lead, walk this path instead → /join-facilitator".
+- **MemberPortal**: Add a quiet link in the Quick-Access area for members who are practitioners.
 
-transactional · business · pricing · cost (as price) · customer · client · purchase · buy · checkout (in copy, not Stripe code) · sale · conversion · convert · funnel · lead · marketing · brand (as noun) · product · ROI · investment · deal · offer expires
+This is the highest-leverage change — copy can't convert traffic that never arrives.
 
-(Stripe / Eventbrite internal code keeps its technical names · these only affect words the avatar reads.)
+## 2. Replace the image
 
-## Specific rewrites
+- Remove `image-mid-facilitator.jpg` (the white man pouring a cup) from `MidImageBanner`.
+- Replace with a BIPOC-aligned sanctuary image already in the asset library (candidates: a sanctuary threshold, hands-on-altar, or a facilitator-in-circle shot). I'll pick one consistent with the Video Direction memory (no drones, no aerial, BIPOC seekers, candlelight, sanctuary objects).
+- Keep the footer video (`video-footer-facilitator.mp4`) as-is — user approved.
 
-**1. Volunteer page · `src/pages/Volunteer.tsx` line 337**
-Old: "Sacred reciprocity isn't transactional. It's how the Temple breathes."
-New: "Sacred reciprocity is how the Temple breathes · the current of giving and receiving that keeps the fire lit."
+## 3. Rewrite the page around the facilitator avatar
 
-**2. Community Care · `src/pages/CommunityCare.tsx`**
-- Line 31 ("This is not a pricing page...") → "This is a philosophy of energy · yours, ours, and the unseen current that moves between us. What you offer here becomes the door someone else will one day walk through."
-- Line 75 ("This is not transactional. This is ceremonial...") → "This is ceremonial. The way a river only stays alive because water keeps moving, sacred community only stays alive because energy keeps moving through it."
-- Line 94 ("Temple Mother Earth is not a business. We are a village...") → "Temple Mother Earth is a village. Every village needs guardians · souls whose presence keeps the fire lit, the doors open, and the table set."
-- Line 97 ("Your offering does not buy you a seat...") → "Your offering sustains the energy that made your seat possible. When you give as a Sustainer, you hold the door open for the one walking behind you. When you receive a scholarship, someone before you held that door open for you."
-- Line 139 ("The True Cost Of The Ceremony") → "What The Ceremony Truly Asks"
+The avatar is a **certified, experienced practitioner with their own modality** who needs **space + community + a held container** to offer their work. They are not job-seekers; they're answering a calling. Page restructured top-to-bottom:
 
-**3. Privacy Policy · `src/pages/PrivacyPolicy.tsx` line 42**
-"...for marketing purposes" → "...for outside purposes"
+### a. Hero — mirror, not pitch
+- Eyebrow: "For the called"
+- H1: "You already do the work. You're looking for the temple to do it in."
+- Sub: "Space. Sangha. Sanctuary. We hold the container — you bring the calling."
+- Primary CTA: "Answer the Call" → scrolls to form
+- Secondary CTA: "Walk Through the Doors" → /about
 
-**4. Volunteer · `src/pages/Volunteer.tsx` line 54**
-"Brand and visual stewardship" → "Visual stewardship of the sanctuary's image"
+### b. "Does this mirror you?" pain-point block (avatar recognition)
+Six short mirrors (two columns), each one-line:
+- You hold sacred work but you're holding it alone.
+- You're tired of renting yoga studios that don't understand what you do.
+- You've built your craft. You need a community that's already gathered.
+- You want to focus on the work, not on marketing, booking, and logistics.
+- You want elders, peers, and a lineage to be accountable to.
+- You're ready to stop "selling sessions" and start serving in ceremony.
 
-**5. Sacred Series · `src/pages/SacredSeries.tsx` line 654 comment**
-Code comment "SACRED PATHWAYS PRICING" → "SACRED PATHWAYS OFFERINGS" (non-visible but keeps our standard).
+### c. "What we hold for you" — the offer (needs)
+Replace the generic "Trained / Heart-Centered / Community-Minded" trio with what the facilitator actually gets:
+- **Sanctuary Space** — consecrated rooms, altar, sound, fire. Show up and serve.
+- **A Gathered Community** — our members are already arriving. You meet souls, not strangers.
+- **A Held Container** — intake, screening, integration, aftercare handled by the temple.
+- **Lineage & Eldership** — Dr. George Love, Sonatta, and the council to walk with you.
+- **Sacred Reciprocity** — energy exchange that honors your craft (no specifics, RFRA-safe wording).
+- **Legal Covering** — facilitate inside a 508(c)(1)(A) sacred ceremony church.
 
-**6. Index / footer · `src/pages/Index.tsx` line 1040**
-Comment "Brand" → "Sanctuary mark" (non-visible cleanup).
+### d. "Who we are listening for" — the standard
+Soften "requirements" into discernment language:
+- Certified / lineage-trained in your modality (Earth Medicine, Kambo, Hapé, Cacao, breathwork, yin, sound, integration, somatic, etc.)
+- Years of personal practice and held ceremonies
+- Insurance / paperwork where your modality requires it
+- A heart aligned with our six Sacred Values
+- Willingness to sit in circle as a student before serving as a steward
 
-**7. Membership intro · re-read and reword any remaining tier copy that uses "subscribe," "subscription," "plan," "checkout" in visible text → "join the path," "walk this tier," "step in."**
+### e. "Walk Through the Doors" — process (removes friction)
+Four steps:
+1. Share your calling (the form)
+2. Council reviews and reaches out
+3. Sit in our circle as a guest (we meet your energy)
+4. Be invited to facilitate in sanctuary
 
-**8. Ceremony Intake form · `src/pages/CeremonyIntake.tsx` line 1353**
-"Do you have unfinished business with friends, family, or community?" → "Is there anything unresolved between you and another · friend, family, or community · that you are still carrying?"
-(Field key `unfinishedBusiness` stays internal so GHL mapping doesn't break.)
+### f. Application form (kept, lightly rewritten)
+- Same fields, same edge function `submit-facilitator` — no backend change.
+- Section headline: "Share Your Calling"
+- Field labels rewritten in mirror language ("The modality I'm called to hold", "How I've been trained and held", "What's stirring this calling right now").
+- Submit button: "Send the Smoke Signal" (keep CTA poetic, RFRA-safe).
+- Success state: "The council has received your calling."
 
-## What I'm NOT touching
+### g. Mid-image banner (new image, refined copy)
+- Eyebrow: "The Calling"
+- Headline: "Hold Space. **Become** Space."
+- Body: "The facilitators we're listening for aren't looking for a job. They're answering a calling. If this stirs something in you, don't turn away — walk toward it."
+- CTA: "Answer the Call" → #apply
 
-- Stripe / Eventbrite SDK function names, route names like `create-checkout`, webhook event names (`checkout.session.completed`), `EventbriteCheckout` component name · these are invisible to the avatar.
-- Admin-only pages (`WebhookChecklist`, `Admin*`) · internal tools, no avatar exposure.
-- TypeScript types from Supabase generated files.
+### h. Footer video banner (kept)
+- Headline tightened: "Step Onto **The Path**"
+- Body: "We're a circle of facilitators learning, growing, and holding sacred work together. Come walk with us."
 
-## Retiring my own phrasing too
+### i. Remove the Eventbrite ceremony list at the bottom
+It dilutes the page intent. Replace with a single quiet line: "Not a facilitator? **Sit in circle with us first →** /offerings".
 
-In future analytics/strategy answers I'll stop saying "conversion," "funnel," "lead," "capture." Replacement vocabulary I'll use with you:
-- conversion → "the moment they say yes to themselves"
-- funnel → "the path home"
-- capture email → "open a thread of contact"
-- 14-day sequence → "a fourteen-day thread of transmissions that keeps the doorway lit until they're ready to walk through"
+## 4. SEO + meta
+- Title: "Facilitators · Answer the Call to Serve in Sanctuary"
+- Description: rewritten around "certified practitioners called to facilitate inside a sacred ceremony church."
+- Single H1, semantic sections, alt text on the new image.
 
-## Verification after build
+## 5. Files touched
 
-- `rg -i "transactional|\bbusiness\b|pricing|customer|purchase|\bbuy\b|conversion|\bfunnel\b|\bbrand\b|marketing"` against `src/pages` and `src/components` returns only code/technical hits, no visible copy.
-- Manually open Volunteer, Community Care, Membership, Privacy, Ceremony Intake in preview to confirm the new wording reads as spiritual mirror language.
+- `src/pages/JoinFacilitator.tsx` — full rewrite of copy/structure (form logic unchanged)
+- `src/components/Navigation.tsx` — add "Facilitators" link
+- `src/pages/Index.tsx` — add small facilitator rail
+- `src/pages/About.tsx` — add inline CTA
+- `src/pages/Volunteer.tsx` and/or `CommunityCare.tsx` — add sibling card
+- `src/pages/MemberPortal.tsx` — quiet link
+- New image swap in `MidImageBanner` (pick from existing assets; no new generation unless you'd like one)
+
+No database, edge function, or form-logic changes. Pure UX + copy + discovery.
+
+---
+
+**Two quick choices before I build:**
+
+1. **Image for the mid-banner** — want me to (a) pick the best existing BIPOC sanctuary asset already in the project, or (b) generate a new on-brand image (candlelit hands on altar, facilitator in circle)?
+2. **Nav placement** — add "Facilitators" as a top-level nav item, or nest it under a "Get Involved" dropdown alongside Volunteer / Membership / Donate?
