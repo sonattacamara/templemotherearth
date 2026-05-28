@@ -52,7 +52,7 @@ const EventbriteLiveMeta = ({ eventId, className }: Props) => {
       ? null
       : prices.length === 1
       ? prices[0]
-      : `${prices[0]} \u00b7 ${prices[prices.length - 1]}`;
+      : `${prices[0]} · ${prices[prices.length - 1]}`;
 
   const totalAvail = (data.ticket_classes ?? []).reduce((sum, t) => {
     if (t.quantity_total != null && t.quantity_sold != null) {
@@ -74,7 +74,7 @@ const EventbriteLiveMeta = ({ eventId, className }: Props) => {
     >
       {items.map((label, i) => (
         <span key={i} className="flex items-center gap-3">
-          {i > 0 && <span aria-hidden className="opacity-50">\u00b7</span>}
+          {i > 0 && <span aria-hidden className="opacity-50">·</span>}
           <span>{label}</span>
         </span>
       ))}
