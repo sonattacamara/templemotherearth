@@ -24,7 +24,7 @@ serve(async (req) => {
   }
 
   try {
-    const { email } = await req.json();
+    const { email, firstName, calling, source: clientSource } = await req.json();
 
     if (!email || typeof email !== "string") {
       return new Response(JSON.stringify({ error: "Email is required" }), {
@@ -39,10 +39,37 @@ serve(async (req) => {
       });
     }
 
+    // Optional · validate and tag "what called you here" radio choice
+    const ALLOWED_CALLINGS = new Set([
+      "purification",     // Kambo / cleansing
+      "stillness",        // Yin / rest
+      "ceremony",         // Sacred Tea / cacao / hapé
+      "community",        // Membership / village
+      "guidance",         // 1:1 / Blueprint / private
+      "still-listening",  // not sure yet
+    ]);
+    const tags = ["temple-transmissions-newsletter"];
+    let safeCalling: string | null = null;
+    if (typeof calling === "string" && ALLOWED_CALLINGS.has(calling)) {
+      safeCalling = calling;
+      tags.push(`calling-${calling}`);
+    }
+
+    const safeFirstName =
+      typeof firstName === "string" && firstName.trim().length > 0 && firstName.trim().length <= 80
+        ? firstName.trim()
+        : undefined;
+
+    const safeSource =
+      typeof clientSource === "string" && clientSource.trim().length > 0 && clientSource.trim().length <= 80
+        ? clientSource.trim()
+        : "temple_transmissions";
+
     const ghlResult = await upsertGHLContact({
       email: trimmedEmail,
-      tags: ["temple-transmissions-newsletter"],
-      source: "temple_transmissions",
+      ...(safeFirstName && { firstName: safeFirstName }),
+      tags,
+      source: safeSource,
     });
 
     if (!ghlResult.success) {
@@ -52,7 +79,7 @@ serve(async (req) => {
       });
     }
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, calling: safeCalling }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
