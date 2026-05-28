@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { motion, type Easing } from "framer-motion";
 import { ArrowRight, CheckCircle2, Loader2, Sun, Eye, Sparkles, Crown } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import Navigation from "@/components/Navigation";
+import FAQSchema from "@/components/FAQSchema";
+import InternalLinkingFooter from "@/components/InternalLinkingFooter";
 import egyptVideo from "@/assets/video-egypt-hero-v2.mp4";
 import egyptCairoMosque from "@/assets/immersion-egypt-cairo-mosque.jpg";
 import egyptCourtyard from "@/assets/immersion-egypt-courtyard.jpg";
@@ -39,6 +43,54 @@ const Egypt = () => {
     }
   };
 
+  const galleryImages = [
+    { url: egyptCairoMosque, caption: "Sacred Cairo skyline with mosque domes and minarets" },
+    { url: egyptCourtyard, caption: "Sacred courtyard of an ancient Cairo mosque with green dome" },
+    { url: egyptSphinxSelfie, caption: "Pilgrim standing in the presence of the Great Sphinx of Giza" },
+    { url: egyptFeast, caption: "Traditional Egyptian feast shared in sacred community" },
+  ];
+
+  const imageGalleryJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "The Remembrance · Kemetic Pilgrimage Through Egypt",
+    description:
+      "A visual gallery from the Temple Mother Earth Kemetic pilgrimage through Cairo, Giza, and the sacred temples of Egypt.",
+    image: galleryImages.map((img) => ({
+      "@type": "ImageObject",
+      contentUrl: `https://templemotherearth.org${img.url}`,
+      caption: img.caption,
+    })),
+  };
+
+  const faqs = [
+    {
+      question: "When is The Remembrance Egypt pilgrimage?",
+      answer:
+        "The Remembrance is held in February 2027 as a sacred Kemetic pilgrimage through Cairo, Giza, Saqqara, Abydos, Dendera, and the Valley of the Kings.",
+    },
+    {
+      question: "Who is The Remembrance Egypt pilgrimage for?",
+      answer:
+        "It is for the ones who have felt Egypt living inside their dreams and imagery for as long as they can remember, and who are ready to receive transmission in the body rather than only in books.",
+    },
+    {
+      question: "What sacred sites does the Kemet pilgrimage visit?",
+      answer:
+        "The pilgrimage includes the Giza Plateau and the Great Sphinx, Saqqara, Abydos, Dendera, the Valley of the Kings, and days on the Nile, with ceremony held inside the temples themselves.",
+    },
+    {
+      question: "Who leads the Kemetic pilgrimage?",
+      answer:
+        "The corridor is held by Kemetic teachers and indigenous Egyptian guides who carry the lineage and transmit the wisdom in person, the way it has always been transmitted.",
+    },
+    {
+      question: "How do I apply for The Remembrance?",
+      answer:
+        "The Remembrance is held in a small sacred circle. You apply through the sacred application form on this page and our temple team reaches out personally with the itinerary and preparation pathway.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -46,6 +98,10 @@ const Egypt = () => {
         description="The Remembrance · a Kemetic pilgrimage through the sacred sites of Egypt. February 2027. Walk where the priesthoods walked. Remember what your blood already knows."
         path="/immersions/egypt"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(imageGalleryJsonLd)}</script>
+      </Helmet>
+      <FAQSchema faqs={faqs} />
       <Navigation />
       <PageBreadcrumb items={[{ label: "Immersions" }, { label: "The Remembrance · Egypt" }]} />
 
