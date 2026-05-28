@@ -160,8 +160,8 @@ const Level5Ceremony = () => (
       </div>
     </SanctuarySection>
 
-    {/* Cinematic Band A */}
-    <section className="relative w-full overflow-hidden bg-[#050804]">
+    {/* WHO THIS IS FOR · cinematic video sits behind the typography as a watermark */}
+    <div className="relative overflow-hidden bg-[#111D0F]">
       <video
         src={level5VideoA}
         autoPlay
@@ -169,14 +169,13 @@ const Level5Ceremony = () => (
         loop
         playsInline
         preload="auto"
-        className="w-full h-[55vh] md:h-[70vh] object-cover"
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-screen pointer-events-none"
         style={{ filter: "saturate(0.9) brightness(0.85)" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050804]/40 via-transparent to-[#050804]/80 pointer-events-none" />
-    </section>
-
-    {/* WHO THIS IS FOR */}
-    <SanctuarySection className="bg-[#111D0F]" eyebrow="Who This Initiation Is For" title={<>See Yourself<br /><em className="font-serif italic text-[#C8A030] text-[1.1em]">In This Initiation</em></>}>
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-[#0B140A]/85 via-[#0B140A]/70 to-[#0B140A]/90 pointer-events-none" />
+      <div className="relative z-10">
+      <SanctuarySection className="bg-transparent" eyebrow="Who This Initiation Is For" title={<>See Yourself<br /><em className="font-serif italic text-[#C8A030] text-[1.1em]">In This Initiation</em></>}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-[rgba(200,160,48,0.06)] mt-16">
         {whoCards.map((card) => (
           <div key={card.num} className="bg-[#0B140A] p-12 border-b-[3px] border-transparent hover:bg-[rgba(11,20,10,0.9)] hover:border-[#C8A030] transition-all">
@@ -187,10 +186,12 @@ const Level5Ceremony = () => (
           </div>
         ))}
       </div>
-    </SanctuarySection>
+      </SanctuarySection>
+      </div>
+    </div>
 
-    {/* Cinematic Band B */}
-    <section className="relative w-full overflow-hidden bg-[#050804]">
+    {/* RITUAL MAP · second cinematic video sits behind the typography */}
+    <div className="relative overflow-hidden bg-[#0B140A]">
       <video
         src={level5VideoB}
         autoPlay
@@ -198,14 +199,13 @@ const Level5Ceremony = () => (
         loop
         playsInline
         preload="auto"
-        className="w-full h-[55vh] md:h-[70vh] object-cover"
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-screen pointer-events-none"
         style={{ filter: "saturate(0.9) brightness(0.85)" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050804]/40 via-transparent to-[#050804]/80 pointer-events-none" />
-    </section>
-
-    {/* RITUAL MAP */}
-    <SanctuarySection className="bg-[#0B140A]" eyebrow="The Arc of the Day" title={<><span className="text-[hsl(40,30%,90%)]">The Ritual</span> <em className="font-serif italic text-[#C8A030]">Map</em></>}>
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-[#0B140A]/85 via-[#0B140A]/70 to-[#0B140A]/90 pointer-events-none" />
+      <div className="relative z-10">
+      <SanctuarySection className="bg-transparent" eyebrow="The Arc of the Day" title={<><span className="text-[hsl(40,30%,90%)]">The Ritual</span> <em className="font-serif italic text-[#C8A030]">Map</em></>}>
       <div className="mt-16 relative">
         <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-[#C8A030] via-[#5BA84A] to-transparent" />
         {ritualSteps.map((step, i) => (
@@ -221,7 +221,9 @@ const Level5Ceremony = () => (
           </div>
         ))}
       </div>
-    </SanctuarySection>
+      </SanctuarySection>
+      </div>
+    </div>
 
     {/* FINAL CTA */}
     <section className="text-center py-44 px-6 md:px-[60px] relative overflow-hidden bg-[#050804]">

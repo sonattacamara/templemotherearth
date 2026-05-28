@@ -59,7 +59,32 @@ Deno.serve(async (req) => {
       );
     }
 
-    const data = await resp.json();
+    let data = await resp.json();
+
+    // Self-healing: if this event is in the past and belongs to a recurring
+    // series, swap to the next future occurrence so the site never shows a
+    // stale date.
+    const startUtc = data.start?.utc ? new Date(data.start.utc).getTime() : null;
+    const seriesId: string | null = data.series_id ?? null;
+    if (seriesId && startUtc !== null && startUtc < Date.now()) {
+      try {
+        const seriesUrl = `https://www.eventbriteapi.com/v3/series/${seriesId}/events/?order_by=start_asc&status=live&time_filter=current_future&expand=ticket_classes,venue`;
+        const seriesResp = await fetch(seriesUrl, { headers: { Authorization: `Bearer ${token}` } });
+        if (seriesResp.ok) {
+          const seriesJson = await seriesResp.json();
+          const nextEvent = Array.isArray(seriesJson.events)
+            ? seriesJson.events.find((e: any) =>
+                e.start?.utc && new Date(e.start.utc).getTime() > Date.now(),
+              )
+            : null;
+          if (nextEvent) {
+            data = nextEvent;
+          }
+        }
+      } catch (_) {
+        // fall through with original data
+      }
+    }
 
     const tickets = Array.isArray(data.ticket_classes)
       ? data.ticket_classes.map((t: any) => ({

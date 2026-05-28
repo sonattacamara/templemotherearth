@@ -1,75 +1,68 @@
-## Goal
-Three problems to solve, in order of effort:
-1. Immediate cleanup (small edits)
-2. Standardize every ceremony "ticket" CTA to go straight to its Eventbrite checkout (the Forest Circle pattern)
-3. Pull the language/details from each Eventbrite event page into the matching sanctuary page so the site is a richer mirror of Eventbrite
+## What's wrong right now
+
+1. **Stale Eventbrite snippet** (your screenshot: "MON, APR 14 · 7:00 PM · FREE · $22.00") — the live widget pulls a single hardcoded `eventId`. When that event passes, it keeps showing the old date. This is the "putt look" / potluck page snippet you flagged.
+2. **Hapé page** still says "The Forest Has Been Waiting" at the bottom (belongs on the Forest Circle page only).
+3. **Hapé page** body copy uses "Rapé administration" once — inconsistent with the rest of the page.
+4. **Hapé date** shows July in the snippet but the next Hapé is in June.
+5. **Level 5** has two cinematic videos sitting as separate bands above/below "Who This Initiation Is For" instead of living behind the typography as a watermark.
+6. No sitewide rule guaranteeing consistency (terminology, CTA naming, "next event" accuracy, NLP voice).
 
 ---
 
-## 1. Immediate cleanup edits
+## The plan
 
-**`src/pages/sanctuary/HapeCeremony.tsx`** — replace "Enter the Forest Circle" (2 places: hero `primaryCTA` line 47 and `EventbriteCheckout` label line 109) with "Enter the Hapé Circle." The Eventbrite URL stays the same (Hapé · The Silencer).
+### 1. Replace stale snippets with a live "Next Upcoming" event component
 
-**`src/pages/SacredSeries.tsx`** — remove the `MidScrollCommitment` block (lines 655–670, "You Are Not Reading By Accident" red card). The Step 1–4 application flow further down already covers intent.
+Upgrade the Eventbrite integration so snippets always show the **next future occurrence** (or hide themselves if none):
 
-**`src/pages/Membership.tsx`** — remove the `MidImageBanner` "Belonging Is Built One Circle at a Time" block (lines 464–471) and its `midMembershipImg` import if it becomes unused.
+- Extend `supabase/functions/fetch-eventbrite-event` to accept either:
+  - a numeric `eventId` (current behavior), OR
+  - a `seriesId` / `organizerId` + `eventSlug` — and return the **soonest `start.utc` > now** from `/series/{id}/events/` or `/organizations/{org}/events/?status=live&order_by=start_asc`.
+- Add a new shared component `src/components/sanctuary/NextEventStrip.tsx` that:
+  - Calls the function on mount, shows `WEEKDAY, MON DD · TIME · PRICE` once data lands.
+  - Renders **nothing** (returns `null`) if no upcoming event exists — no stale dates ever.
+  - Uses sanctuary tokens (cream text, gold dot separators) — matches the dark Hapé hero, not red.
+- Swap the existing stale strip on the **Potluck** page (and every page using the old single-event fetch) for `<NextEventStrip />`.
 
----
+### 2. Hapé page fixes (`src/pages/sanctuary/HapeCeremony.tsx`)
 
-## 2. Ticket CTAs · route directly to Eventbrite
+- Remove the entire bottom "The Forest Has Been Waiting" section (lines ~92–119). Replace with a Hapé-native closing band:
+  > **The Breath Is Waiting** / *for the silence it already knows.*
+  > "Take your place. Bring your breath. Let the forest's most direct transmission meet you where you are."
+  > CTA stays: **Enter the Hapé Circle** → same Eventbrite URL.
+- Line 79: change "**Rapé** administration" → "**Hapé** administration". Lock in: Hapé everywhere on this page, no exceptions.
+- Drop in `<NextEventStrip eventId="946929721287" />` under the hero so the June date appears automatically (and updates itself going forward).
 
-Audit shows most hero CTAs already link to Eventbrite. The gaps to fix:
+### 3. Level 5 watermark layering (`src/pages/sanctuary/Level5Ceremony.tsx`)
 
-- **KamboCeremony.tsx** — hero anchors to `#choose`, which is fine (two different Eventbrite tickets below). Keep. But the mid-page "Begin the Sacred Intake" CTA (`ctaHref="/ceremony-intake"`, line 257) should become two Eventbrite buttons (Co-ed + Women's Only) so the path to checkout is always one click.
-- **HapeCeremony.tsx** — already routes to Eventbrite, no further change beyond #1.
-- **SacredTeaCeremony.tsx** — mid-page intake CTA (line 114) → swap for "Take Your Seat at the Table" linking to the Sacred Tea Eventbrite URL already defined at top of file.
-- **SacredYinYoga.tsx** — mid-page intake CTA (line 99) → swap for the two existing Eventbrite URLs (The Softening + Art of Surrender) as side-by-side buttons.
-- **SacredSeries.tsx** — Sacred Series is *application-only* (no single Eventbrite ticket). Confirm below whether you want to keep the application flow or break it into individual Eventbrite events.
+- Merge "Cinematic Band A" (video, lines 163–176) **into** the "Who This Initiation Is For" section (line 179):
+  - Wrap `SanctuarySection` in a `relative` container.
+  - Video becomes `absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-screen` behind the section.
+  - Add a dark gradient overlay (`bg-gradient-to-b from-[#0B140A]/85 via-[#0B140A]/70 to-[#0B140A]/90`) so the rainbow tones read as a watermark, not a feature.
+  - Typography sits in front with `relative z-10`.
+- Apply the same pattern to Cinematic Band B → wrap it behind the "Ritual Map" section so both videos become watermarks under typography.
 
-All other sanctuary pages (Cacao, Women's Circle, Men's Circle, Sacred Tea House, Frequency Fungi Flow, Inner Alchemy Spa, Community Potluck, Level 5, Sacred Art Expo) already point primary CTAs straight to Eventbrite — no changes needed.
+### 4. Sitewide consistency standard (the doc you've been asking for)
 
----
+Create `mem://style/page-consistency-standard` and add to the memory index. Rules every ceremony page must follow:
 
-## 3. Eventbrite content sync (the bigger lift)
+- **Terminology lock**: each ceremony has ONE canonical spelling (Hapé, Kambo, Cacao, Sacred Tea, Sacred Series, Level 5). No alternates anywhere — no "Rapé", no "Rape", no "Level Five".
+- **CTA naming**: "Enter the [Ceremony] Circle" — the noun always matches the page. No "Forest Circle" on a Hapé page.
+- **Closing band**: each page gets its OWN closing band copy keyed to that ceremony's metaphor (Hapé = breath, Kambo = burn, Cacao = heart, Forest = forest, Tea = stillness, Level 5 = initiation). Forest metaphor lives only on `/forest-circle`.
+- **Dates**: never hardcoded — always via `<NextEventStrip />` so a past event hides itself.
+- **NLP voice**: every section opens with the avatar's felt state ("You already know…", "The one who…", "If you are reading this…") before any logistics.
+- **Visual rhythm**: hero → felt-sense paragraph → "Who this is for" cards → what happens → logistics → closing band → RFRA footer. No exceptions.
 
-For each ceremony page, fetch the live Eventbrite event page and merge anything richer than what we have today into the site copy:
-- "About this event" body
-- Schedule / what to expect
-- What to bring
-- Refund / policy notes
-- Date+time pattern (kept evergreen · no hardcoded specific dates per the memory rule)
+### 5. QA pass after changes
 
-Pages to enrich (one Eventbrite source each, except Kambo and Yin which have two):
-- Kambo (co-ed + women's)
-- Hapé
-- Cacao
-- Sacred Tea Ceremony
-- Sacred Tea House
-- Sacred Yin (The Softening + Art of Surrender)
-- Frequency, Fungi & Flow
-- Inner Alchemy Spa
-- Community Potluck
-- Women's Wellness Wednesdays
-- The Cove (Men's Circle)
-- Level 5
-- Sacred Art Expo
-
-The merge is content-only · no layout changes. Existing sanctuary section structure is preserved.
+- Load `/hape`, `/level-5`, `/potluck`, `/forest-circle` in preview and confirm: correct ceremony name in every CTA, no past dates, videos behind typography on Level 5, "forest" metaphor only on Forest page.
 
 ---
 
-## Technical notes
-- Eventbrite fetching during build is read-only and uses `EVENTBRITE_PRIVATE_TOKEN` (already configured and just refreshed). I'll pull each event via the API in one batched script, then hand-edit the corresponding TSX file with the merged copy. No new runtime calls are added · the site stays static.
-- All replaced CTAs use the same `external: true` pattern that Forest Circle uses, so behavior is identical to what already works.
-- Removed components: `MidScrollCommitment` block on SacredSeries, `MidImageBanner` block on Membership. Imports cleaned up if unused.
+## Technical summary
 
----
-
-## One clarification before I build
-
-For the **Sacred Series page**, you said remove the red "You Are Not Reading By Accident" box (done) and route every ticket directly to Eventbrite. Sacred Series is currently an *application-only* path (Step 1–4 with Sacred Intake → discernment call). Two options:
-
-- **A.** Keep the application flow exactly as-is · Sacred Series remains by-application, and the page just links *out* to each Eventbrite event for any individual day-experience tickets that exist.
-- **B.** Replace the application flow entirely with direct Eventbrite ticket buttons (would need URLs for each Sacred Series ticket on Eventbrite).
-
-I'll proceed with **A** unless you say otherwise.
+- **Edge fn**: extend `fetch-eventbrite-event` with `?next=true&seriesId=…` branch returning soonest future occurrence.
+- **New component**: `NextEventStrip.tsx` (replaces hardcoded date strips, returns `null` when empty).
+- **Edited files**: `src/pages/sanctuary/HapeCeremony.tsx`, `src/pages/sanctuary/Level5Ceremony.tsx`, the Potluck page, `supabase/functions/fetch-eventbrite-event/index.ts`.
+- **New memory**: `mem://style/page-consistency-standard` + index update.
+- **No layout regressions**: existing `EventbriteDetails` component stays as-is (it's static content, not dated).

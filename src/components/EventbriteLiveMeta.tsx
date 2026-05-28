@@ -41,6 +41,12 @@ const EventbriteLiveMeta = ({ eventId, className }: Props) => {
 
   if (isLoading || isError || !data) return null;
 
+  // Never display a past event's date — protects against stale Eventbrite data
+  // for events that aren't part of a series (where the edge function can't
+  // auto-resolve a future occurrence).
+  const startMs = data.start?.utc ? new Date(data.start.utc).getTime() : null;
+  if (startMs !== null && startMs < Date.now()) return null;
+
   const date = formatDate(data.start?.local);
   const time = formatTime(data.start?.local);
   const prices = (data.ticket_classes ?? [])
