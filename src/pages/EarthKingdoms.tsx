@@ -54,6 +54,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "mineral", num: "One", name: "MINERAL", subtitle: "you are the temple",
     lead: "You are not separate from the Earth. You are made of it. The calcium in your bones is the same calcium in limestone. The iron in your blood is the same iron in the Earth's core.",
+    bgImage: bgMineral,
     titleColor: "#C4B8E8", eyebrowColor: "#7B6FA0", factBg: "#1A1625", factLabelColor: "#9B8FCC",
     cardBg: "#1A1625", cardNameColor: "#C4B8E8", statNumColor: "#C4B8E8", quoteColor: "#C4B8E8", quoteCite: "#7B6FA0",
     sections: [
@@ -83,6 +84,7 @@ const kingdoms: KingdomData[] = [
   {
     id: "plant", num: "Two", name: "PLANT", subtitle: "the oldest pharmacy on earth",
     lead: "The Plant Kingdom is the bridge between the mineral world and the animal world · rooted in Earth, reaching toward light. Plants are alchemists.",
+    bgImage: bgPlant,
     titleColor: "#8FD67A", eyebrowColor: "#3D7835", factBg: "#0A140A", factLabelColor: "#5BA84A",
     cardBg: "#0A140A", cardNameColor: "#8FD67A", statNumColor: "#8FD67A", quoteColor: "#8FD67A", quoteCite: "#3D7835",
     sections: [
