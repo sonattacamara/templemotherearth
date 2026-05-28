@@ -1,58 +1,53 @@
-# Plan
+# Plan — Video Placements + Level 5 Copy
 
-## 1. Replace "Secure Your Place" everywhere
-Not spiritual. Swap to a sanctuary-aligned phrase across all 8 occurrences:
-- `src/pages/sanctuary/HapeCeremony.tsx` (3x), `src/pages/sanctuary/SacredTeaCeremony.tsx` (1x), `src/components/sanctuary/SacredSeriesLayout.tsx` (1x), `src/components/EventbriteCheckout.tsx` (default label + docs, 3x).
+Reusing existing `FooterVideoBanner` component (video bg + text/CTA on top, dark overlay) for all 4 video placements. No new components.
 
-New wording (context-sensitive):
-- Button label: **"Reserve Your Seat in the Circle"** (or short: **"Hold My Seat"**)
-- Sentence form: **"The circle is forming. Hold your seat and let your preparation begin."**
+## 1. Kambo · "Take Your Seat" footer video
+- File: `src/pages/sanctuary/KamboCeremony.tsx`
+- Copy `user-uploads://takeaseat.mp4` → `src/assets/video-kambo-takeaseat.mp4`
+- Replace the existing closing "Take Your Seat" / Eventbrite CTA section with `<FooterVideoBanner>`:
+  - Eyebrow: "The Frog Is Calling"
+  - Headline: "Take Your Seat"
+  - Body: existing invitation copy
+  - CTA: keep current Co-ed Eventbrite link (Sundays 8 AM) as primary; Women's Only link stays in the cards section above
 
-## 2. Home page — footer video removed
-In `src/pages/Index.tsx`, delete the `<FooterVideoBanner>` block (lines ~1068-1075), the `FooterVideoBanner` import (line 15), and the `footerHomeVideoAsset` import (line 17). The `MidImageBanner` ("The Door Is Open · Walk In") above it stays as the closing visual moment before `<EventbriteCTA />`. No new video generated.
+## 2. Hapé · "The Forest Has Been Waiting" footer video
+- File: `src/pages/sanctuary/HapeCeremony.tsx`
+- Copy `user-uploads://forest1.mp4` → `src/assets/video-hape-forest.mp4`
+- Replace the existing closing `<section>` ("The Forest Has Been Waiting" + EventbriteCheckout) with `<FooterVideoBanner>` using the forest video as background:
+  - Eyebrow: "Recurring Offering · Washington, DC"
+  - Headline: "The Forest Has Been Waiting"
+  - Body: existing copy
+  - CTA: "Reserve Your Seat in the Circle" → existing Eventbrite URL
+- Keep the RFRA + Sacred Access disclosure block below it untouched
 
-## 3. Home page — "Upcoming Ceremonies & Offerings" section
-Current section duplicates the dedicated Immersions area and only lists 2 of 6 immersions. For higher conversion, **simplify, don't duplicate**:
+## 3. Inner Alchemy Spa · "You Have Earned This Day" footer video
+- File: `src/pages/sanctuary/InnerAlchemySpa.tsx`
+- Copy `user-uploads://relax.mp4` → `src/assets/video-spa-footer.mp4`
+- Replace the closing `<SanctuaryCTA>` with `<FooterVideoBanner>`:
+  - Eyebrow: "Recurring Offering · Full Day Experience"
+  - Headline: "You Have Earned This Day"
+  - Body: existing copy
+  - CTA: "Reserve Your Day of Restoration" → existing Eventbrite URL
 
-- **Remove** the two immersion cards (Costa Rica + Sayulita) from this section. Immersions live in their own section + nav already.
-- **Keep** the "Important Information" age/membership/intake panel (high-trust gate copy).
-- **Keep & elevate** the single Eventbrite CTA card — make it the primary action of the section: "Browse This Week's Sacred Gatherings" → "See Upcoming Ceremonies →".
-- Update subhead from "ceremonies, community gatherings, and international immersions" → "Earth Medicine ceremonies and community gatherings here in Washington, DC."
+## 4. Sacred Art Expo · "Calling All Artists" video
+- File: `src/pages/sanctuary/SacredArtExpo.tsx`
+- Copy `user-uploads://artist.mp4` → `src/assets/video-art-expo-artists.mp4`
+- Locate the "Calling All Artists" section and replace its current static visual (image or flat panel) with `<FooterVideoBanner>` (or inline video bg variant if the section sits mid-page rather than at footer — will use `FooterVideoBanner` for consistency since it accepts arbitrary headline/body/CTA)
+- Preserve existing eyebrow/headline/body/CTA copy and link to the artist application
 
-Result: one section = one action = higher conversion. Immersions stay in their dedicated section only.
+## 5. Level 5 · copy update only (no video)
+- File: `src/pages/sanctuary/Level5Ceremony.tsx`
+- Update the page's primary message/lead to center the theme **"Connecting You to the God Within"**:
+  - Eyebrow stays
+  - Headline / hero subline reworded to evoke meeting the divine that already lives inside the seeker
+  - Adjust 1–2 body paragraphs in the opening section to reinforce this (sovereign divinity, the God within, no external authority) while preserving RFRA-safe language
+- No layout changes, no new sections
 
-## 4. Sacred Yin Yoga page — add footer video
-File: `src/pages/sanctuary/SacredYinYoga.tsx`. The existing bottom CTA block (`<section>` "Two Containers · One Practice / Your Body Is Ready to Rest") is currently flat dark green. Replace it with a `<FooterVideoBanner>` using the uploaded `yoga3.mp4`:
-- Copy `user-uploads://yoga3.mp4` → `src/assets/video-yin-footer.mp4`
-- Eyebrow: "Two Containers · One Practice"
-- Headline: "Your Body Is Ready to Rest"
-- Body: existing italic line ("You don't need experience…")
-- Single primary CTA: **"Fourth Tuesday · In Person"** → Softening Eventbrite (drops the dual-button layout since `FooterVideoBanner` is single-CTA; the two offerings are already shown in the cards section above)
-
-## 5. Frequency, Fungi & Flow page
-File: `src/pages/sanctuary/FrequencyFungiFlow.tsx`.
-
-**a) New "Ways to Move" section** before the final CTA, explaining the dance styles welcomed on the floor:
-- **Static Stand** — feet rooted, eyes closed, let the frequency move you from the inside. No choreography. No floor travel. Just presence in the body.
-- **Contact Dance** — slow, consensual partner-led movement. Shoulder, palm, back. Listening through the skin.
-- **Free Flow** — your own rhythm, full floor, no rules. The body leads.
-- **Stillness as Movement** — sit, lie, breathe. The frequency does the work. Stillness is sacred on this floor.
-
-Rendered as a `<SanctuaryColCards>` grid (matches existing page pattern).
-
-**b) Replace final CTA with footer video banner**
-- Copy `user-uploads://dance_footer.mp4` → `src/assets/video-fff-footer.mp4`
-- Swap the current `<SanctuaryCTA>` ("Your Soul Is Already on the Floor") for `<FooterVideoBanner>` with the uploaded dance video as background and the existing eyebrow/headline/body/CTA layered on top.
-
-## 6. Contact video — note only
-`user-uploads://contact_us.mp4` was attached but the user did not give it a placement instruction in this message. **Holding it unused** until directed. Will copy to `src/assets/video-contact-hero.mp4` if/when assigned a spot.
-
-## 7. Out of scope
-- No analytics/pixel/webhook work
-- No emoji sweep continuation
-- No other page rewrites
+## 6. Held / not placed
+- `user-uploads://sacred_tea_house-2.mp4` — no placement instruction given; holding unused until directed (will not copy into repo)
 
 ## Technical notes
-- All copy follows RFRA + no em/en dash + no emoji rules.
-- Reuses existing `FooterVideoBanner` and `SanctuaryColCards` — no new components.
-- Old `video-footer-home-threshold.mp4` asset stays in repo unreferenced (cheap).
+- All copy follows RFRA rules · no em/en dashes · no emojis
+- `FooterVideoBanner` already provides the dark overlay so text remains readable on top of the video
+- No changes to data, routes, or business logic — presentation only
