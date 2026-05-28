@@ -372,10 +372,21 @@ const VeteransTransformation = () => {
           className="mx-auto max-w-6xl"
         >
           <motion.div variants={fadeUp} className="text-center mb-16">
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">Alternative PTSD Treatment for Veterans</p>
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-[#B8860B]">If You're Reading This</p>
             <h2 className="mt-4 font-display text-3xl font-bold text-[#F5F0E6] md:text-5xl">
-              We Know What You Are Carrying
+              We Know · Because We've Been There
             </h2>
+            <div className="mx-auto mt-8 max-w-2xl font-body text-[#F5F0E6]/80 leading-relaxed space-y-4 text-left md:text-center">
+              <p>
+                You've sat in the VA waiting room until the chairs felt like part of you. You've watched the pill bottles multiply on the counter. You've answered the same intake questions for the tenth provider who doesn't remember your name.
+              </p>
+              <p>
+                You came home, but the war didn't. It lives in your shoulders. In the way you scan a parking lot. In the silence at the dinner table you used to fill with stories. In the brothers and sisters whose faces still visit you at 3 AM.
+              </p>
+              <p className="text-[#B8860B] font-semibold">
+                This isn't another program. It's a sanctuary. And it was built by a 22-year retired veteran · King James · who walked this path before he started holding it for others.
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2">
