@@ -316,6 +316,30 @@ const Membership = () => {
         </motion.div>
       </section>
 
+      {/* ───── AVATAR MIRROR · Where Are You on the Path? ───── */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-background via-card to-background px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="font-body text-[10px] uppercase tracking-[0.4em] text-primary mb-6">A Mirror, Not a Menu</p>
+          <h2 className="font-display text-3xl md:text-5xl font-light text-foreground leading-tight mb-8">
+            Where Are You<br /><em className="font-serif italic text-primary">on the Path?</em>
+          </h2>
+          <div className="space-y-5 text-left md:text-center mb-4">
+            <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed">
+              Maybe you're the one who has been quietly searching, reading, listening, and waiting for a space that finally feels like home.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed">
+              Maybe you're the one who has already done deep work and is ready for a circle that can hold the weight of who you're becoming.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed">
+              Maybe you're the one being called to train, to serve, to embody what you've learned in the world.
+            </p>
+            <p className="font-serif text-lg md:text-xl text-primary leading-relaxed font-semibold pt-2">
+              Wherever you are, there is a seat for you. Read the descriptions below and trust the one that says <em className="not-italic">"this is me."</em>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ───── THE PATHWAY (Sequential, not grid) ───── */}
       <section className="bg-gradient-warm px-4 py-24 md:py-32">
         <motion.div
