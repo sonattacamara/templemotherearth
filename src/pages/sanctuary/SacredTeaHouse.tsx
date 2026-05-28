@@ -6,6 +6,7 @@ import { Leaf, Flower2, Moon, Sun, Sprout, Sparkles, Coffee } from "lucide-react
 import type { LucideIcon } from "lucide-react";
 import teaHouseVideoUrl from "@/assets/video-teahouse-hero-v2.mp4?url";
 const teaHouseVideo = { url: teaHouseVideoUrl };
+import teaFooterVideoUrl from "@/assets/video-teahouse-footer.mp4?url";
 
 const teaMenu: { icon: LucideIcon; name: string; properties: string; desc: string }[] = [
   { icon: Leaf, name: "Ceremonial Cacao", properties: "Heart Opening · Entheogenic", desc: "High-ceremony grade cacao, prepared with intention. The original heart sacrament of the Americas." },
@@ -140,19 +141,32 @@ const SacredTeaHouse = () => (
       </div>
     </section>
 
-    {/* CTA */}
-    <section className="bg-gradient-to-br from-[hsl(120,26%,12%)] to-[hsl(108,28%,8%)] py-24 px-6 md:px-10 text-center border-t border-[hsla(45,70%,49%,0.1)]">
-      <h2 className="font-display text-[clamp(22px,3vw,40px)] text-[hsl(40,30%,90%)] mb-4 font-normal">The Tea House Awaits</h2>
-      <p className="text-[hsl(40,24%,78%)] font-serif italic text-xl mb-10">A monthly sanctuary of slowness and sacred sacrament</p>
-      <a
-        href="https://www.eventbrite.com/e/sacred-tea-house-tea-stillness-community-tickets-1989410295748?aff=ebdsoporgprofile"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(108,28%,8%)] px-12 py-4.5 font-display text-[13px] tracking-[3px] uppercase font-bold border-2 border-[hsl(45,70%,49%)] hover:bg-transparent hover:text-[hsl(45,70%,49%)] transition-all"
-      >
-        Reserve Your Seat
-      </a>
-      <p className="mt-6 text-[12px] font-display tracking-[2px] text-[hsl(40,30%,90%)] opacity-40">Temple Mother Earth · Monthly Offering</p>
+    {/* CTA · Video Footer */}
+    <section className="relative overflow-hidden border-t border-[hsla(45,70%,49%,0.1)]">
+      <video
+        src={teaFooterVideoUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsla(108,28%,5%,0.78)] via-[hsla(108,28%,5%,0.68)] to-[hsla(108,28%,5%,0.88)]" />
+      <div className="relative z-10 py-28 px-6 md:px-10 text-center" style={{ minHeight: "clamp(420px, 65vh, 680px)" }}>
+        <p className="font-display text-[10px] tracking-[5px] uppercase text-[hsl(45,70%,49%)] mb-5">Monthly Offering · Washington, DC</p>
+        <h2 className="font-display text-[clamp(34px,5vw,68px)] text-[hsl(40,30%,90%)] mb-5 font-normal leading-tight">The Tea House Awaits</h2>
+        <p className="text-[hsl(40,24%,90%)] font-serif italic text-xl mb-10 max-w-2xl mx-auto">A monthly sanctuary of slowness and sacred sacrament</p>
+        <a
+          href="https://www.eventbrite.com/e/sacred-tea-house-tea-stillness-community-tickets-1989410295748?aff=ebdsoporgprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[hsl(45,70%,49%)] text-[hsl(108,28%,8%)] px-12 py-4 font-display text-[13px] tracking-[3px] uppercase font-bold border-2 border-[hsl(45,70%,49%)] hover:bg-transparent hover:text-[hsl(45,70%,49%)] transition-all"
+        >
+          Reserve Your Seat
+        </a>
+        <p className="mt-6 text-[12px] font-display tracking-[2px] text-[hsl(40,30%,90%)] opacity-60">Temple Mother Earth · Monthly Offering</p>
+      </div>
     </section>
   </SacredSeriesLayout>
 );
