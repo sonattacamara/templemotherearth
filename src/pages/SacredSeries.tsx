@@ -10,7 +10,6 @@ import {
 import SacredSeriesLayout from "@/components/sanctuary/SacredSeriesLayout";
 import { Helmet } from "react-helmet-async";
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
-import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import MonthlyThemeCard from "@/components/sanctuary/MonthlyThemeCard";
 import sanctuaryDay1CacaoPods from "@/assets/sanctuary-day1-cacao-pods.png";
 import sanctuaryDay2HapeCeremony from "@/assets/sanctuary-day2-hape-ceremony.png";

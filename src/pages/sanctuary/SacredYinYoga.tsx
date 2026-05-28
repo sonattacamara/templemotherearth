@@ -6,7 +6,6 @@ const yogaVideo = { url: yogaVideoUrl };
 import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
-import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import yinFooterVideo from "@/assets/video-yin-footer.mp4?url";
 
 const EVENTBRITE_WEDNESDAY = "https://www.eventbrite.com/e/yin-yoga-the-art-of-surrender-virtual-restorative-experience-with-chaka-tickets-1830988739609";

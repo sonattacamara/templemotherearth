@@ -6,7 +6,6 @@ import SanctuarySection from "@/components/sanctuary/SanctuarySection";
 import SanctuaryColCards from "@/components/sanctuary/SanctuaryColCards";
 import SanctuaryPullQuote from "@/components/sanctuary/SanctuaryPullQuote";
 import FooterVideoBanner from "@/components/story/FooterVideoBanner";
-import MidScrollCommitment from "@/components/sanctuary/MidScrollCommitment";
 import teaSeekerVideoUrl from "@/assets/video-teahouse-seeker.mp4?url";
 import { Helmet } from "react-helmet-async";
 
