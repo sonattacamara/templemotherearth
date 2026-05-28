@@ -348,7 +348,7 @@ const KamboCeremony = () => (
           <PathCard
             eyebrow="Co-ed Circle"
             title="Co-ed Kambo with King James"
-            description="Sundays · 8:00 AM. A mixed-gender circle held by King James, our High Priest. For seekers of any path who are ready to meet the frog in shared sacred space."
+            description="Sundays · 8:00 AM. A mixed-gender circle held by King James, our Kambo facilitator. For seekers of any path who are ready to meet the frog in shared sacred space."
             url={COED_URL}
             icon={Users}
           />
