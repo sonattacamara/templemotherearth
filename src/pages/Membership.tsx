@@ -484,62 +484,6 @@ const Membership = () => {
         </motion.div>
       </section>
 
-      {/* ───── FAQ ───── */}
-      <section className="px-4 py-24 md:py-32 bg-gradient-sanctuary">
-        <motion.div
-          className="mx-auto max-w-2xl"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={stagger}
-        >
-          <motion.h2
-            variants={fadeUp}
-            className="text-center font-display text-2xl font-bold text-foreground md:text-3xl"
-          >
-            Common Questions
-          </motion.h2>
-
-          <div className="mt-12 space-y-6">
-            {[
-              {
-                q: "Is there really a free option?",
-                a: "Yes! Our Welcome Circle gives you 30 days to explore the Temple, attend a community gathering, and feel whether this space is right for you. No payment required · just an open heart.",
-              },
-              {
-                q: "How does ceremony preparation work?",
-                a: "Earth Medicine ceremonies are deeply sacred and require preparation for your safety and wellbeing. After three months in the Preparation Path, you'll have a conversation with a facilitator to ensure you feel truly ready. This isn't a test · it's a caring check-in to support your experience.",
-              },
-              {
-                q: "What is the 3-month journey?",
-                a: "The Preparation Path and Temple Immersion Path include a 3-month guided container. This time allows your nervous system to build the capacity for deeper work. Think of it as tending a garden · you plant seeds, nurture them, and trust the timing of the bloom.",
-              },
-              {
-                q: "Can I change my membership level?",
-                a: "Absolutely. You can move forward whenever you feel called. If you step into the Preparation Path or Temple Immersion Path, the 3-month journey begins from that point. You can also adjust at any time · changes take effect at your next billing cycle.",
-              },
-              {
-                q: "Are contributions tax-deductible?",
-                a: "Temple Mother Earth is a 508(c)(1)(A) sacred ceremony church. Portions of your membership that exceed the fair market value of benefits received may be tax-deductible. We recommend consulting your tax advisor.",
-              },
-              {
-                q: "What if I'm not sure where to start?",
-                a: "Start with the Welcome Circle · it's free and gives you space to explore without any pressure. Join our community circles and we'll help you find the right fit for where you are right now.",
-              },
-            ].map((item) => (
-              <motion.div
-                key={item.q}
-                variants={fadeUp}
-                className="rounded-xl border border-border bg-card p-6"
-              >
-                <h3 className="font-display text-base font-semibold text-foreground">{item.q}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.a}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
       {/* ───── BOTTOM CTA ───── */}
       <section className="relative overflow-hidden px-4 py-24 md:py-32">
         <div
