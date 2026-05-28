@@ -28,7 +28,7 @@ const CommunityCare = () => (
           <em className="font-serif italic text-[hsl(45,70%,62%)] text-[1.1em]">Reciprocity</em>
         </h1>
         <p className="font-serif italic text-[clamp(19px,2vw,24px)] text-[hsl(40,30%,88%)] max-w-[640px] mx-auto leading-relaxed mb-6">
-          This is not a pricing page. This is a philosophy of energy · yours, ours, and the unseen current that flows between us.
+          This is a philosophy of energy · yours, ours, and the unseen current that moves between us. What you offer here becomes the door someone else will one day walk through.
         </p>
         <p className="text-[16px] text-[hsl(40,25%,80%)] max-w-[600px] mx-auto leading-relaxed font-serif">
           Time is energy. Money is energy. Prayer is energy. Presence is energy. The temple is held by the careful, sacred circulation of all of it.
@@ -72,7 +72,7 @@ const CommunityCare = () => (
           Your time is energy. Your money is energy. Your prayers are energy. Your presence in the circle is energy. When any of these flow toward the temple, they ripple back out to the next soul who needs what you needed.
         </p>
         <p className={BODY_SOFT}>
-          This is not transactional. This is ceremonial. The same way a river only stays alive because water keeps moving · sacred community only stays alive because energy keeps moving through it.
+          This is ceremonial. The way a river only stays alive because water keeps moving, sacred community only stays alive because energy keeps moving through it.
         </p>
         <div className="mt-10 p-8 md:p-10 border border-[hsla(45,70%,49%,0.3)] rounded-2xl bg-[hsla(45,70%,49%,0.06)]">
           <p className="text-[20px] text-[hsl(45,70%,72%)] italic leading-relaxed font-serif">
@@ -91,10 +91,10 @@ const CommunityCare = () => (
     >
       <div className="max-w-[760px] mx-auto text-center space-y-6">
         <p className={BODY}>
-          Temple Mother Earth is not a business. We are a village. And every village needs guardians · people whose energy keeps the fire lit, the doors open, and the table set.
+          Temple Mother Earth is a village. Every village needs guardians · souls whose presence keeps the fire lit, the doors open, and the table set.
         </p>
         <p className={BODY_SOFT}>
-          Your offering does not buy you a seat. It sustains the energy that made your seat possible. When you give as a Sustainer, you are holding the door open for the soul who comes behind you. When you receive a scholarship, someone before you held that door open for you.
+          Your offering sustains the energy that made your seat possible. When you give as a Sustainer, you hold the door open for the one walking behind you. When you receive a scholarship, someone before you held that door open for you.
         </p>
         <p className={BODY_SOFT}>
           This is the Guardian energy. Not charity. Not sympathy. Sacred responsibility, passed from one soul to the next, like a torch around the fire circle.
@@ -136,7 +136,7 @@ const CommunityCare = () => (
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(45,70%,49%)] text-[hsl(105,30%,5%)] font-sans text-[8px] tracking-[2px] uppercase px-3 py-1">Sacred Anchor</span>
           <Shield className="h-6 w-6 text-[hsl(45,70%,60%)] mb-4" />
           <p className="font-sans text-2xl font-extralight text-[hsl(45,70%,68%)] mb-2">Sustainer</p>
-          <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,25%,75%)] mb-2">The True Cost Of The Ceremony</p>
+          <p className="font-sans text-[9px] tracking-[2px] uppercase text-[hsl(40,25%,75%)] mb-2">What The Ceremony Truly Asks</p>
           <p className="text-[12px] text-[hsl(45,60%,60%)] mb-5 italic font-serif">e.g. Cacao at $44</p>
           <p className="text-[15px] text-[hsl(40,30%,88%)] leading-relaxed font-serif mb-6 flex-1">
             This is the actual energy required to hold one seat · the buildings and grounds, the facilitators, the sacred earth offerings, the integration support. When you give here, you cover yourself fully and honor the sacred infrastructure.
