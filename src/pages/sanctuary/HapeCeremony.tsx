@@ -101,11 +101,11 @@ const HapeCeremony = () => (
           Recurring Offering · Washington, DC
         </p>
         <h2 className="font-display text-3xl md:text-5xl text-[hsl(40,30%,95%)] mb-5 leading-tight">
-          The Forest<br />
-          <em className="font-serif italic text-[hsl(35,65%,55%)] text-[1.1em]">Has Been Waiting</em>
+          The Breath<br />
+          <em className="font-serif italic text-[hsl(35,65%,55%)] text-[1.1em]">Is Waiting for the Silence It Already Knows</em>
         </h2>
         <p className="max-w-[640px] mx-auto text-[hsl(40,25%,85%)] font-serif text-lg leading-relaxed mb-8">
-          You already know if this is for you. Take your place beneath the canopy and let your preparation begin. The forest holds what arrives.
+          You already know if this is for you. Take your place. Bring your breath. Let the forest's most direct transmission meet you where you are.
         </p>
         <EventbriteCheckout
           eventId="946929721287"
