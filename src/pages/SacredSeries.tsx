@@ -93,8 +93,8 @@ const timelineDays: TimelineDay[] = [
   {
     day: 2, date: "", weekday: "", name: "Hapé Community Ceremony",
     subtitle: "The Noise Stops. You Remember.",
-    description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The forest has been waiting for you.",
-    icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Forest"],
+    description: "Sacred Amazonian snuff ceremony for grounding, mental clarity, and purification. The breath remembers what the noise made you forget.",
+    icon: <Leaf className="h-5 w-5" />, tags: ["Grounding", "Clarity", "Breath"],
     ctaLabel: "Reserve Your Place", ctaHref: SACRED_SERIES_EVENTBRITE, ctaReady: true,
     slug: "/hape", image: sanctuaryDay2HapeCeremony, imagePosition: "center 38%",
     phase: "The Opening",
