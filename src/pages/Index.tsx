@@ -1056,6 +1056,24 @@ const Index = () => {
         buttonLabel="Offerings & Tithes"
       />
 
+      <MidImageBanner
+        image={midHomeImg}
+        eyebrow="The Threshold"
+        headline={<>The Door Is Open · <em className="font-serif italic text-primary">Walk In</em></>}
+        body="You did not arrive here by accident. Something in you has been listening for this. Cross the threshold when you are ready."
+        ctaLabel="Begin Your Journey"
+        ctaHref="/ceremony-intake"
+      />
+
+      <FooterVideoBanner
+        video={footerHomeVideoAsset.url}
+        eyebrow="Your Seat Is Waiting"
+        headline={<>Come Home to<br /><em className="font-serif italic text-primary">Mother Earth</em></>}
+        body="The fire is lit. The circle is forming. Take the first step and the rest will be held for you."
+        ctaLabel="Begin Your Journey"
+        ctaHref="/ceremony-intake"
+      />
+
       <EventbriteCTA />
 
       {/* ───── FOOTER ───── */}
